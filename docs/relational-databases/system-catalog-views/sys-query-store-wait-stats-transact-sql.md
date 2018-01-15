@@ -12,10 +12,8 @@ ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- SYS.QUERY_STORE_WAIT_STATS_TSQL
-- QUERY_STORE_WAIT_STATS_TSQL
-- SYS.QUERY_STORE_WAIT_STATS
-- QUERY_STORE_WAIT_STATS
+- sys.query_store_wait_stats
+- query_store_wait_stats
 dev_langs: TSQL
 helpviewer_keywords:
 - query_store_wait_stats catalog view
@@ -26,11 +24,11 @@ author: AndrejsAnt
 ms.author: AndrejsAnt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a75e00467fbee053a05144d67f9d9a68469daeed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bed8035413a61c2bc5e4e644874bec9115c07d68
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -43,10 +41,10 @@ ms.lasthandoff: 11/17/2017
 |**plan_id**|**bigint**|Chave estrangeira. Une a [query_store_plan &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
 |**runtime_stats_interval_id**|**bigint**|Chave estrangeira. Une a [sys.query_store_runtime_stats_interval &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**wait_category**|**tinyint**|Tipos de espera são categorizados usando a tabela a seguir e, em seguida, o tempo de espera é agregado entre essas categorias de espera. Categorias de espera diferentes exigem um acompanhamento de análise diferente para resolver o problema, mas os tipos de espera da mesma categoria levam a experiências de solução de problemas muito semelhantes e fornecer a consulta afetada com base nas esperas seria a peça que faltava para concluir a maioria dessas investigações de com êxito.|
-|**wait_category_desc**|**nvarchar (128)**|Para obter uma descrição textual do campo de categoria de espera, verifique a tabela a seguir.|
+|**wait_category_desc**|**nvarchar(128)**|Para obter uma descrição textual do campo de categoria de espera, verifique a tabela a seguir.|
 |**execution_type**|**tinyint**|Determina o tipo de execução de consulta:<br /><br /> 0 – execução regular (concluída com êxito)<br /><br /> 3 – cliente iniciado anulou a execução<br /><br /> 4 - exceção anulou a execução|  
-|**execution_type_desc**|**nvarchar (128)**|Descrição textual do campo de tipo de execução:<br /><br /> 0 – regular<br /><br /> 3 – anulada<br /><br /> 4 - exceção|  
-|**total_query_wait_time_ms**|**bigint**|Total de CPU tempo de espera para o plano de consulta dentro do intervalo de agregação e categoria (relatada em microssegundos) de espera.|
+|**execution_type_desc**|**nvarchar(128)**|Descrição textual do campo de tipo de execução:<br /><br /> 0 – regular<br /><br /> 3 – anulada<br /><br /> 4 - exceção|  
+|**total_query_wait_time_ms**|**bigint**|Total de CPU tempo de espera para o plano de consulta dentro do intervalo de agregação e categoria (relatada em milissegundos) de espera.|
 |**avg_query_wait_time_ms**|**float**|Média de duração para o plano de consulta por execução dentro da categoria de espera e de intervalo de agregação (relatada em milissegundos) de espera.|
 |**last_query_wait_time_ms**|**bigint**|Última duração da espera para o plano de consulta dentro do intervalo de agregação e categoria (relatada em milissegundos) de espera.|
 |**min_query_wait_time_ms**|**bigint**|CPU mínima tempo de espera para o plano de consulta dentro do intervalo de agregação e categoria (relatada em milissegundos) de espera.|

@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: user-defined tables [SQL Server]
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7155a66d912f4cb854d23cca3bf8babd2ae1deef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 44a2706d60ff1b6b2935c9c5e5251adece1c33f8
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-user-defined-tables"></a>Usando tabelas definidas pelo usuário
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Tabelas definidas pelo usuário representam informações tabulares. Elas são usadas como parâmetros quando você transmite dados tabulares em procedimentos armazenados ou em funções definidas pelo usuário. Tabelas definidas pelo usuário não podem ser usadas para representar colunas em uma tabela de banco de dados.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Tabelas definidas pelo usuário representam informações tabulares. Elas são usadas como parâmetros quando você transmite dados tabulares em procedimentos armazenados ou em funções definidas pelo usuário. Tabelas definidas pelo usuário não podem ser usadas para representar colunas em uma tabela de banco de dados.  
   
  O objeto <xref:Microsoft.SqlServer.Management.Smo.Database> tem uma propriedade <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> que referencia um objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Cada <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> objeto coleção tem um **colunas** propriedade que faz referência a uma coleção de <xref:Microsoft.SqlServer.Management.Smo.Column> objetos que lista as colunas na tabela definida pelo usuário. Use o método Adicionar para adicionar colunas à tabela definida pelo usuário.  
   
@@ -257,7 +259,7 @@ $udf.TextBody = "BEGIN RETURN (GETDATE());end"
 $udf.Create()           
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.SqlServer.Management.Smo.FileGroup>   
  [Arquivos e grupos de arquivos do banco de dados](../../../relational-databases/databases/database-files-and-filegroups.md)   
   

@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: indexes [SMO]
 ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2175136e512a6c1e4c4759f073445f5ca5234a0e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d20eca4b6c27aee5f19b2b15cf51c374874d4415
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Criando, alterando e removendo índices
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hierarquia Management Objects (SMO), os índices são representados pelo <xref:Microsoft.SqlServer.Management.Smo.Index> objeto. As colunas indexadas são representadas por uma coleção de objetos <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> representada pela propriedade <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A>.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Na hierarquia do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), os índices são representados pelo objeto <xref:Microsoft.SqlServer.Management.Smo.Index>. As colunas indexadas são representadas por uma coleção de objetos <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> representada pela propriedade <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A>.  
   
  Você pode criar um índice em uma coluna de XML especificando a propriedade <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> do objeto <xref:Microsoft.SqlServer.Management.Smo.Index>.  
   
@@ -364,7 +366,7 @@ $i.IndexedColumns.Add($ic)
 $i.Create()  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.SqlServer.Management.Smo.Index>  
   
   

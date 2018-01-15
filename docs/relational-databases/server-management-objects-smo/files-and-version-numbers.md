@@ -19,25 +19,27 @@ helpviewer_keywords:
 - versions [SMO]
 ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
 caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a81f6f2228ac9f91dbc5fd401fcda16fb249989d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a23f5abd57fdf723382671b82d6078cbb2c7b8d5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="files-and-version-numbers"></a>Arquivos e números de versão
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Todos os necessários componentes do SQL Server Management Object (SMO) estão incluídos no pacote do Microsoft.SqlServer.SqlManagementObjects NuGet. SMO é implementado em vários assemblies gerenciados. Você pode desenvolver aplicativos SMO em um cliente ou um servidor.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Todos os necessários componentes do SQL Server Management Object (SMO) estão incluídos no pacote do Microsoft.SqlServer.SqlManagementObjects NuGet. SMO é implementado em vários assemblies gerenciados. Você pode desenvolver aplicativos SMO em um cliente ou um servidor.  
 
 >>[!Important]
 A versão do arquivo dos assemblies do SMO é exibida como principal. **0**. Build.Revision. Mas a versão de assembly inserido é o principal. **100**. Build.Revision. Isso é feito para manter a versão do SMO usado em todos os aplicativos separados para atualizações para um não afeta outras.
 >>
 >>Por isso, você deve **não** instalar essas versões dos assemblies para o Cache de Assembly Global (GAC). Isso pode fazer com que outros aplicativos, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, para interromper. 
   
-|Arquivo|Description|  
+|Arquivo|Descrição|  
 |-----------|-----------------|  
 |Microsoft.SqlServer.ConnectionInfo.dll|Contém suporte para conexão a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |Microsoft.SqlServer.ServiceBrokerEnum.dll|Contém suporte para programação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Service Broker. Só é necessário em programas que acessam o Service Broker.|  

@@ -22,18 +22,20 @@ helpviewer_keywords:
 - service master key [SMO]
 ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a5069931c6e144dc574664e71c8f2a5d8964403
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ad74e5242702ace386fb8c14a034a56886f27191
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-encryption"></a>Usando a criptografia
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]No SMO, a chave mestra de serviço é representada pelo <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> objeto. Isso é referenciado pelo <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> propriedade o <xref:Microsoft.SqlServer.Management.Smo.Server> objeto. Ele pode ser regenerado usando o <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> método.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  No SMO, a chave mestra de serviço é representada pelo <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> objeto. Isso é referenciado pelo <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> propriedade o <xref:Microsoft.SqlServer.Management.Smo.Server> objeto. Ele pode ser regenerado usando o <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> método.  
   
  A chave mestra de banco de dados é representada pelo <xref:Microsoft.SqlServer.Management.Smo.MasterKey> objeto. O <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> propriedade indica se a chave mestra de banco de dados é criptografada pela chave mestra de serviço. A cópia criptografada no banco de dados mestre é atualizada automaticamente sempre que a chave mestra do banco de dados é alterada.  
   
@@ -96,7 +98,7 @@ $c.Create("pGFD4bb925DGvbd2439587y")
   
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Usando chaves de criptografia](../../../relational-databases/server-management-objects-smo/tasks/using-encryption.md)  
   
   

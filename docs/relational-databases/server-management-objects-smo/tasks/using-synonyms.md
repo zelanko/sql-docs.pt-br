@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: synonyms [SMO]
 ms.assetid: db0a9022-9549-43e5-b6b3-deb236f05fb8
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf13a234a187b9da168cc77c26794131c8c32222
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7babb8b9bfb95e964cda26324813b1f7da81953a
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-synonyms"></a>Usando sinônimos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Um sinônimo é um nome alternativo para um objeto no escopo do esquema. No SMO, os sinônimos são representados pelo <xref:Microsoft.SqlServer.Management.Smo.Synonym> objeto. O objeto <xref:Microsoft.SqlServer.Management.Smo.Synonym> é um filho do objeto <xref:Microsoft.SqlServer.Management.Smo.Database>. Isso significa que sinônimos só são válidos dentro do escopo do banco de dados no qual eles são definidos. No entanto, o sinônimo pode se referir a objetos em outro banco de dados, ou em uma instância remota do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Um sinônimo é um nome alternativo de um objeto com escopo de esquema. No SMO, os sinônimos são representados pelo <xref:Microsoft.SqlServer.Management.Smo.Synonym> objeto. O objeto <xref:Microsoft.SqlServer.Management.Smo.Synonym> é um filho do objeto <xref:Microsoft.SqlServer.Management.Smo.Database>. Isso significa que sinônimos só são válidos dentro do escopo do banco de dados no qual eles são definidos. No entanto, o sinônimo pode se referir a objetos em outro banco de dados, ou em uma instância remota do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  O objeto que recebe um nome alternativo é conhecido como o objeto base. A propriedade do nome do objeto <xref:Microsoft.SqlServer.Management.Smo.Synonym> é o nome alternativo fornecido ao objeto base.  
   
@@ -83,7 +85,7 @@ $syn.BaseServer = $srv.Name
 $syn.Create()  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [CREATE SYNONYM &#40;Transact-SQL&#41;](../../../t-sql/statements/create-synonym-transact-sql.md)  
   
   

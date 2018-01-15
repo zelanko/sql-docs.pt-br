@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: foreign keys [SMO]
 ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf86a8be5f18bd64cb6f632e22a246317927e3e8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 015a01acc3316e4eccc1c4b93ec77388d0b057ab
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>Criando, alterando e removendo chaves estrangeiras
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), chaves estrangeiras são representadas pelo <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> objeto.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), chaves estrangeiras são representadas pelo objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>.  
   
  Para criar uma chave estrangeira no SMO, você deve especificar a tabela na qual a chave estrangeira é definida no construtor do <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> objeto. Na tabela, selecione pelo menos uma coluna como chave estrangeira. Para fazer isso, crie uma variável de objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> e especifique o nome da coluna que é a chave estrangeira. Em seguida, especifique a tabela e a coluna referenciadas. Use o <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> método para adicionar a coluna de **colunas** propriedade de objeto.  
   

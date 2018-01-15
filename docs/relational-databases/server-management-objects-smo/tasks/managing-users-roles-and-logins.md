@@ -17,18 +17,20 @@ helpviewer_keywords:
 - users [SMO]
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0400fbda2bbd512bdceefba78cde24dbf7dd0000
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 47c2cf548bdc703f86a7ff90f2e32e44fceb9a7f
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="managing-users-roles-and-logins"></a>Gerenciando usuários, funções e logons
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]No SMO, os logons são representados pelo <xref:Microsoft.SqlServer.Management.Smo.Login> objeto. Quando o logon existir no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ele poderá ser adicionado a uma função de servidor. A função de servidor é representada pelo <xref:Microsoft.SqlServer.Management.Smo.ServerRole> objeto. A função de banco de dados é representada pelo objeto <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> e a função de aplicativo é representada pelo objeto <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole>.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  No SMO, os logons são representados pelo objeto <xref:Microsoft.SqlServer.Management.Smo.Login>. Quando o logon existir no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ele poderá ser adicionado a uma função de servidor. A função de servidor é representada pelo <xref:Microsoft.SqlServer.Management.Smo.ServerRole> objeto. A função de banco de dados é representada pelo objeto <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> e a função de aplicativo é representada pelo objeto <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole>.  
   
  Privilégios associados ao nível de servidor são listados como propriedades do <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> objeto. Os privilégios em nível de servidor podem ser concedidos a, negados a ou revogados de contas de logon individuais.  
   

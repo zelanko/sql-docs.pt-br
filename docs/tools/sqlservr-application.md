@@ -29,11 +29,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 52fb7eaebe655c2be06b23522e434a2e08950b62
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 345977aa442e8b2a646c2c13caaf71d946ee1a93
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sqlservr-application"></a>Aplicativo sqlservr
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O **sqlservr** aplicativo inicia, interrompe, pausa e continua uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em um prompt de comando.  
@@ -76,9 +76,9 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  Indica para iniciar uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em modo de usuário único. Somente um único usuário pode conectar quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é iniciado em modo de usuário único. O mecanismo de CHECKPOINT, que garante que transações concluídas sejam gravadas regularmente do cache de disco para o dispositivo de banco de dados, não foi iniciado. (Normalmente, esta opção será usada se você experimentar problemas com bancos de dados do sistema que devem ser corrigidos.) Habilita a opção **sp_configure allow updates**. Por padrão, a opção **allow updates** está desabilitada.  
   
  **-n**  
- Permite iniciar uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sem o parâmetro **-s** definido, a instância padrão tenta a inicialização. Você deve passar para o diretório BINN apropriado da instância em um prompt de comando antes de iniciar o **sqlservr.exe**. Por exemplo, se Instance1 tiver de usar \mssql$Instance1 para seus binários, o usuário deverá estar no diretório \mssql$Instance1\binn para iniciar **sqlservr.exe -s instance1**. Caso você inicie uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com a opção **-n** , recomendamos usar também a opção **-e** ou os eventos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não serão registrados.  
+ Permite iniciar uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sem o parâmetro **-s** definido, a instância padrão tenta a inicialização. Você deve passar para o diretório BINN apropriado da instância em um prompt de comando antes de iniciar o **sqlservr.exe**. Por exemplo, se Instance1 tiver de usar \mssql$Instance1 para seus binários, o usuário deverá estar no diretório \mssql$Instance1\binn para iniciar **sqlservr.exe -s instance1**. Se você iniciar uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com o  **-n**  opção, é recomendável usar o **-e** opção muito, ou [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eventos não são registrados.  
   
- **-T** *trace #*  
+ **-T** *trace#*  
  Indica que uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deve ser iniciada com um sinalizador de rastreamento especificado (*trace#*) em vigor. São usados sinalizadores de rastreamento para iniciar o servidor com comportamento fora do padrão. Para obter mais informações, veja, [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
 > [!IMPORTANT]  
@@ -101,17 +101,17 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
   
 -   “Falha nos bytes virtuais alocados: FAIL_VIRTUAL_COMMIT \<size>”  
   
- Essas mensagens podem indicar que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está tentando liberar partes do pool de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para encontrar espaço para itens como arquivos .dll de procedimento armazenado estendido ou objetos de automação. Nesse caso, considere aumentar a quantidade de memória reservada pela opção **-g**.  
+ Essas mensagens podem indicar que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está tentando liberar partes do pool de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para encontrar espaço para itens como arquivos .dll de procedimento armazenado estendido ou objetos de automação. Nesse caso, considere aumentar a quantidade de memória reservada pela opção **-g** .  
   
  Usando um valor menor que o padrão aumentará a quantidade de memória disponível para o pool do buffer e pilhas de thread; isso pode, por sua vez, fornecer algum benefício de desempenho a cargas de trabalho de memória intensiva em sistemas que não usam muitos procedimentos armazenados estendidos, consultas distribuídas ou objetos de automação.  
   
-## <a name="remarks"></a>Remarks  
- Na maioria dos casos, o programa sqlservr.exe é usado somente para solução de problemas ou manutenção importante. Quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é iniciado do prompt de comando sqlservr.exe, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não inicia como um serviço e, desse modo, você pode interromper o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando comandos **net** . Os usuários podem conectar-se ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mas as ferramentas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mostram o status do serviço, para que o Gerenciador de Configuração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] indique corretamente que o serviço está interrompido. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pode se conectar ao servidor, mas ele também indica que o serviço está interrompido.  
+## <a name="remarks"></a>Comentários  
+ Na maioria dos casos, o programa sqlservr.exe é usado somente para solução de problemas ou manutenção importante. Quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é iniciado do prompt de comando sqlservr.exe, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não inicia como um serviço e, desse modo, você pode interromper o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando comandos **net** . Os usuários podem conectar-se ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mas as ferramentas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mostram o status do serviço, para que o Gerenciador de Configuração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] indique corretamente que o serviço está interrompido. O [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pode se conectar ao servidor, mas ele também indica que o serviço está interrompido.  
   
 ## <a name="compatibility-support"></a>Suporte de compatibilidade  
  Não há suporte para o parâmetro **-h**  no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Este parâmetro foi usado em versões anteriores de instâncias de 32 bits do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para reservar espaço de endereço de memória virtual para metadados de inclusão de memória a quente quando AWE é habilitado. Para obter mais informações, veja [Recursos descontinuados do SQL Server no SQL Server 2016](http://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).  
   
-## <a name="see-also"></a>Consulte Também  
- [Opções de inicialização do serviço Mecanismo de Banco de Dados](../database-engine/configure-windows/database-engine-service-startup-options.md)  
+## <a name="see-also"></a>Consulte também  
+ [Opções de inicialização do serviço de mecanismo de banco de dados](../database-engine/configure-windows/database-engine-service-startup-options.md)  
   
   

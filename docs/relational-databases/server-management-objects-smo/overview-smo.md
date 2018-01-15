@@ -13,18 +13,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 caps.latest.revision: "69"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 96293d1bf121ac3697d494f1c5a6fc22f4dffb64
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8121a42034c748e6acd1265dee06f1552cae1cc0
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="overview-smo"></a>Visão geral (SMO)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) são objetos criados para o gerenciamento programático do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode usar os SMO para compilar aplicativos de gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizados. Embora o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] seja um aplicativo extenso e abrangente para o gerenciamento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pode haver vezes em que um aplicativo SMO funcione melhor.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO) são objetos criados para o gerenciamento programático do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode usar os SMO para compilar aplicativos de gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizados. Embora o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] seja um aplicativo extenso e abrangente para o gerenciamento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pode haver vezes em que um aplicativo SMO funcione melhor.  
   
  Por exemplo, pode ser necessário simplificar os aplicativos de usuário que controlam as tarefas de gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atender as necessidades dos novos usuários e reduzir custos de treinamento. Pode ser necessário criar bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizados ou criar um aplicativo para criar e monitorar a eficiência de índices. Um aplicativo de SMO também pode ser usado para incluir hardware ou software de terceiros de modo homogêneo no aplicativo de gerenciamento de banco de dados.  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 01/08/2018
   
  O SMO também representa como objetos ou propriedades novos muitos recursos e componentes que foram introduzidos no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Esses novos recursos e componentes incluem:  
   
--   Tabela e particionamento de índice para armazenamento de dados em um esquema de partição. Para saber mais, confira [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+-   Tabela e particionamento de índice para armazenamento de dados em um esquema de partição. Para obter mais informações, consulte [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
 -   Pontos de extremidade de HTTP para o gerenciamento de solicitações de SOAP. Para obter mais informações, consulte [implementar pontos de extremidade](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md).  
   
@@ -175,7 +177,7 @@ ms.lasthandoff: 01/08/2018
   
  Os aprimoramentos de índice do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são representados por propriedades novas no objeto <xref:Microsoft.SqlServer.Management.Smo.Index>.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Conceitos de objetos de gerenciamento de replicação](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
   
   

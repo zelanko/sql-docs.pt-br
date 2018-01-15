@@ -17,18 +17,20 @@ helpviewer_keywords:
 - SMO [SQL Server], capture mode
 ms.assetid: ace29bf0-705a-434f-82e4-db99d01c5008
 caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76f407dc02ff95535c456f21debe3d208ff475e4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6452457dfb60a0a99f405907fb2ae01658b30412
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-capture-mode"></a>Usando modo de captura
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Programas SMO podem capturar e registrar o equivalente [!INCLUDE[tsql](../../../includes/tsql-md.md)] declarações emitidas pelo programa no lugar de ou além de instruções que são executadas pelo programa. Você habilita o modo de captura usando o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> ou a propriedade <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> do objeto <xref:Microsoft.SqlServer.Management.Smo.Server>.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Os programas SMO podem capturar e registrar as instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] equivalentes emitidas pelo programa no lugar das, ou além das, instruções executadas pelo programa. Você habilita o modo de captura usando o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> ou a propriedade <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> do objeto <xref:Microsoft.SqlServer.Management.Smo.Server>.  
   
 ## <a name="example"></a>Exemplo  
 Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C &#35; Projeto SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

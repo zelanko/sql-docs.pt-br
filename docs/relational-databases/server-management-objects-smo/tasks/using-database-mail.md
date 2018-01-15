@@ -17,18 +17,20 @@ helpviewer_keywords:
 - mail [SMO]
 ms.assetid: 7605390f-b485-48cc-8d97-e364a066067b
 caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28082a9c402700a17c7072ed6d7dcd3a87c92bd9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6e8dfdbf86d296c7780b12551808dcd45a0631fe
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-database-mail"></a>Usando o Database Mail
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]No SMO, o subsistema Database Mail é representado pelo <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> que é referenciado pelo objeto de <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A> propriedade. Através do objeto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> do SMO, você pode configurar o subsistema Database Mail e gerenciar perfis e contas de email. O SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> objeto pertence a **Server** objeto, o que significa que o escopo das contas de email está no nível do servidor.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  No SMO, o subsistema Database Mail é representado pelo objeto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> que é referenciado pela propriedade <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A>. Através do objeto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> do SMO, você pode configurar o subsistema Database Mail e gerenciar perfis e contas de email. O SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> objeto pertence a **Server** objeto, o que significa que o escopo das contas de email está no nível do servidor.  
   
 ## <a name="examples"></a>Exemplos  
  Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C &#35; Projeto SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

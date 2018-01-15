@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: endpoints [SMO]
 ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76a3dee0b7df584ae5bf08923f6b0b8c88289e59
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a1d8ce479654f80d54c1a5aef6fb63138e13dbc6
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="implementing-endpoints"></a>Implementando pontos de extremidade
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Um ponto de extremidade é um serviço que pode escutar nativamente solicitações. O SMO dá suporte a vários tipos de pontos de extremidade usando o <xref:Microsoft.SqlServer.Management.Smo.Endpoint> objeto. Para criar um serviço de ponto de extremidade que manipula um tipo específico de carga, que usa um protocolo específico, crie uma instância de um objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint> e defina suas propriedades.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Um ponto de extremidade é um serviço que pode escutar nativamente solicitações. O SMO dá suporte a vários tipos de pontos de extremidade usando o <xref:Microsoft.SqlServer.Management.Smo.Endpoint> objeto. Para criar um serviço de ponto de extremidade que manipula um tipo específico de carga, que usa um protocolo específico, crie uma instância de um objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint> e defina suas propriedades.  
   
  O <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A> propriedade o <xref:Microsoft.SqlServer.Management.Smo.Endpoint> objeto pode ser usado para especificar sobre os seguintes tipos de carga:  
   
@@ -134,7 +136,7 @@ $ep.Start()
 $ep.EndpointState;  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   

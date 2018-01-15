@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: full-text search [SMO]
 ms.assetid: 9ce9ad9c-f671-4760-90b5-e0c8ca051473
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0db7400457bb39daa082650a73f5fbdc9689a16d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fe4843e762233eae4e85be8662b1291b794c59a7
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="implementing-full-text-search"></a>Implementando a pesquisa de texto completo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Pesquisa de texto completo está disponível por instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e é representada no SMO, o <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A> objeto. O <xref:Microsoft.SqlServer.Management.Smo.FullTextService> objeto reside sob o **Server** objeto. Ele é usado para gerenciar as opções de configuração do serviço de Pesquisa de Texto Completo da [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. O objeto <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> pertence ao objeto <xref:Microsoft.SqlServer.Management.Smo.Database> e é uma coleção de objetos <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> que representam catálogos de texto completo definidos para o banco de dados. Você só pode ter um índice de texto completo definido para cada tabela, diferente de índices normais. Isso é representado por um objeto <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> no objeto <xref:Microsoft.SqlServer.Management.Smo.Table>.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  A pesquisa de texto completo está disponível por instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e é representada no SMO pelo objeto <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A>. O <xref:Microsoft.SqlServer.Management.Smo.FullTextService> objeto reside sob o **Server** objeto. Ele é usado para gerenciar as opções de configuração do serviço de Pesquisa de Texto Completo da [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. O objeto <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> pertence ao objeto <xref:Microsoft.SqlServer.Management.Smo.Database> e é uma coleção de objetos <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> que representam catálogos de texto completo definidos para o banco de dados. Você só pode ter um índice de texto completo definido para cada tabela, diferente de índices normais. Isso é representado por um objeto <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> no objeto <xref:Microsoft.SqlServer.Management.Smo.Table>.  
   
  Para criar uma serviço de pesquisa de texto completo, você precisa ter um catálogo de texto completo definido no banco de dados e um índice de pesquisa de texto completo definido em uma das tabelas do banco de dados.  
   

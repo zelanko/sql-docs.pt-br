@@ -17,25 +17,27 @@ helpviewer_keywords:
 - properties [SMO]
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 625b34647312ffb31fbe3821ed8e893d883f3298
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cd919d2a53a2731e348c1570ef80ffe1714ff0e5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="setting-properties---smo"></a>Definindo propriedades - SMO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Propriedades são valores que armazenam informações descritivas sobre o objeto. Por exemplo, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] opções de configuração são representadas pelo <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> propriedades do objeto. As propriedades podem ser acessadas direta ou indiretamente por meio da coleção de propriedades. O acesso direto às propriedades usa a seguinte sintaxe:  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Propriedades são valores que armazenam informações descritivas sobre o objeto. Por exemplo, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] opções de configuração são representadas pelo <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> propriedades do objeto. As propriedades podem ser acessadas direta ou indiretamente por meio da coleção de propriedades. O acesso direto às propriedades usa a seguinte sintaxe:  
   
  `objInstance.PropertyName`  
   
  Um valor de propriedade pode ser modificado ou recuperado dependendo do tipo de acesso que tem a propriedade, ou seja, acesso de leitura/gravação ou acesso somente leitura. Também é necessário definir certas propriedades antes que um objeto possa ser criado. Para obter mais informações, consulte a referência SMO para o objeto em particular.  
   
 > [!NOTE]  
->  Coleções de objetos filho aparecem como a propriedade de um objeto. Por exemplo, a coleção **Tables** é uma propriedade de um objeto **Server** . Para obter mais informações, consulte [usando coleções](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md).  
+>  Coleções de objetos filho aparecem como a propriedade de um objeto. Por exemplo, a coleção **Tables** é uma propriedade de um objeto **Server** . Para obter mais informações, consulte [Using Collections](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md).  
   
  As propriedades de um objeto são membros da coleção Properties. A coleção Properties pode ser usada para iterar por cada propriedade de um objeto.  
   
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
 -   A versão do servidor não suporta a propriedade, como se você tentasse acessar uma propriedade que representasse um novo recurso do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma versão mais antiga do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   O servidor não dá suporte a dados para a propriedade, como se você tentasse acessar uma propriedade que representa um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] componente que não está instalado.  
+-   O servidor não dá suporte a dados para a propriedade, como se você tentasse acessar uma propriedade que representasse um componente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que não está instalado.  
   
  Você pode lidar com essas situações capturando as exceções do SMO <xref:Microsoft.SqlServer.Management.Smo.UnknownPropertyException> e <xref:Microsoft.SqlServer.Management.Smo.PropertyCannotBeRetrievedException>.  
   

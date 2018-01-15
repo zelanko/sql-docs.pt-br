@@ -16,18 +16,20 @@ helpviewer_keywords:
 - configuration options [SMO]
 ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4746c91a18a593bc911bb4f2f000635c5cfdd042
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f64bb51a733898d89f4c1cd67c2615fce6266a69
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="configuring-sql-server-in-smo"></a>Configurando o SQL Server no SMO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]No SMO, o <xref:Microsoft.SqlServer.Management.Smo.Information> objeto, o <xref:Microsoft.SqlServer.Management.Smo.Settings> objeto, o <xref:Microsoft.SqlServer.Management.Smo.UserOptions> objeto e o <xref:Microsoft.SqlServer.Management.Smo.Configuration> contêm configurações e informações para a instância de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  No SMO, o <xref:Microsoft.SqlServer.Management.Smo.Information> objeto, o <xref:Microsoft.SqlServer.Management.Smo.Settings> objeto, o <xref:Microsoft.SqlServer.Management.Smo.UserOptions> objeto e o <xref:Microsoft.SqlServer.Management.Smo.Configuration> contêm configurações e informações para a instância de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tem várias propriedades que descrevem o comportamento da instância instalada. As propriedades descrevem opções de inicialização, os padrões do servidor, arquivos e diretórios, informações sobre o sistema e o processador, produtos e versões, informações sobre conexões, opções de memória, seleções de linguagem e agrupamento, e o modo de autenticação.  
   

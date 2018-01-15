@@ -21,18 +21,20 @@ helpviewer_keywords:
 - SMO [SQL Server], tasks
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fb3927a735f0dddfa753bb939947e8d40b6ef88
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7c9e3323e743360d3a6ce2a340c87ab7dac7720b
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="programming-specific-tasks"></a>Tarefas específicas de programação
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Tarefas específicas de programação usando objetos do SMO incluem assuntos complexos que apenas serão exigidos por programas com uma função específica, como backup, monitoramento de estatísticas, replicação, gerenciamento de objetos de instância e opções de configuração.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  As tarefas específicas de programação que usam objetos SMO incluem assuntos complexos que apenas serão exigidos por programas com uma função específica, como backup, monitoramento de estatísticas, replicação, gerenciamento de objetos de instância e definição de opções de configuração.  
   
 |Tópico|Description|  
 |-----------|-----------------|  
