@@ -26,6 +26,7 @@
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
 ## [7_Implantar um Pacemaker cluster](sql-server-linux-deploy-pacemaker-cluster.md)
 ## [8_Criar e configurar grupos de disponibilidade](sql-server-linux-create-availability-group.md)
+## [9_Configurar no Kubernetes para alta disponibilidade](tutorial-sql-server-containers-kubernetes.md)
 
 # Conceitos
 ## Instalar
