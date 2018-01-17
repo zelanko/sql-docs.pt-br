@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0af6c90954aff66d17d7fafb3115138e7d71708f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77f8e1c2faa9900f8b41f356e3dd7411f12ff6c0
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ RETCODE bcp_control (
   
  Um erro de sequência também ocorrerá se você chamar `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)` depois de chamar `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)` e bcp_writefmt.  
   
- Para obter mais informações, consulte [descoberta de metadados](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Para obter mais informações, consulte [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   
  BCPFILECP  
  *iValue* contém o número da página de código para o arquivo de dados. Você pode especificar o número da página de código, como 1252 ou 850, ou como um destes valores:  
@@ -116,7 +116,7 @@ RETCODE bcp_control (
  É o número de erros permitido antes de ocorrer uma falha na operação de cópia em massa. O padrão é 10; um valor menor que 1 redefine essa opção para seu padrão. A cópia em massa impõe um máximo de 65.535 erros. Uma tentativa de definir esta opção como um valor maior que 65.535 resulta na definição da opção como 65.535.  
   
  BCPODBC  
- Especifica que, quando for verdadeiro, **datetime** e **smalldatetime** valores salvos em formato de caractere irá usar o prefixo de sequência de escape de carimbo de hora ODBC e o sufixo. A opção BCPODBC só se aplica a BCP_OUT.  
+ Especifica que, quando for verdadeiro, **datetime** e **smalldatetime** valores salvos em formato de caractere irá usar o prefixo de sequência de escape de carimbo de hora ODBC e o sufixo. A opção BCPODBC só se aplica a DB_OUT.  
   
  Quando for falso, um **datetime** valor que representa 1 de janeiro de 1997 é convertido para a cadeia de caracteres: 1997-01-01 00:00:00.000. Quando TRUE, o mesmo **datetime** valor é representado como: {ts ' 00:00:00.000 1997-01-01'}.  
   
@@ -135,7 +135,7 @@ RETCODE bcp_control (
 ## <a name="returns"></a>Retorna  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esta função define vários parâmetros de controle para operações de cópia em massa, incluindo o número de erros permitido antes do cancelamento de uma cópia em massa, os número da primeira e da última linhas a serem copiadas de um arquivo de dados e o tamanho do lote.  
   
  Esta função é usada também para especificar a instrução SELECT durante uma operação de cópia em massa de saída do conjunto de resultados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma SELECT. Definir *eOption* como BCPHINTS e defina *iValue* para ter um ponteiro para uma cadeia de caracteres SQLTCHAR que contém a instrução SELECT.  
