@@ -24,11 +24,11 @@ ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: 5e0705c480157e7958b18ff8bdb6d996ae2f94ff
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: c69295e84e5bd6ef1162bb007c206b0addd8656c
+ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>Diretrizes para operações de índice online
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,8 +95,7 @@ Para obter mais informações, consulte [Disk Space Requirements for Index DDL O
 ## <a name="resumable-index-rebuild-considerations"></a>Considerações de recompilação de índice retomáveis
 
 > [!NOTE]
-> Consulte [Alterar Índice](../../t-sql/statements/alter-index-transact-sql.md). 
->
+> A opção de índice retomável aplica-se ao SQL Server (Começando com o SQL Server 2017) e Banco de Dados SQL. Consulte [Alterar Índice](../../t-sql/statements/alter-index-transact-sql.md). 
 
 As diretrizes a seguir se aplicam ao executar a recompilação de índice online retomável:
 -   Gerenciamento, planejamento e extensão das janelas de manutenção de índice. Você pode pausar e reiniciar uma operação de recompilação de índice várias vezes para adequar-se às janelas de manutenção.
@@ -108,7 +107,6 @@ As diretrizes a seguir se aplicam ao executar a recompilação de índice online
 
 > [!IMPORTANT]
 > A recompilação retomável não exige que você mantenha aberta uma transação de longa execução, permitindo o truncamento de log durante essa operação e um melhor gerenciamento do espaço de log. Com o novo design, conseguimos manter os dados necessários em um banco de dados junto com todas as referências necessárias para reiniciar a operação retomável.
->
 
 Em geral, não há nenhuma diferença de desempenho entre a recompilação de índice online retomável e não retomável. Quando você atualiza um índice retomável enquanto uma operação de recompilação de índice está em pausa:
 - Para cargas de trabalho primariamente de leitura, o impacto no desempenho é irrisório. 

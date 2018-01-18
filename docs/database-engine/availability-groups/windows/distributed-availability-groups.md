@@ -1,7 +1,7 @@
 ---
 title: "Grupos de disponibilidade distribuídos (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 01/12/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -18,11 +18,11 @@ author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 245eb466e756017c3ae70a5fc408d4ce876370d4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: efa0ea34a2b5432f3c7059d98cee4cbd35fa18ab
+ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="distributed-availability-groups"></a>Grupos de disponibilidade distribuídos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Grupos de disponibilidade distribuídos são um novo recurso introduzido no SQL Server 2016, como uma variação do recurso de grupos de disponibilidade Always On existente. Este artigo explica alguns aspectos dos grupos de disponibilidade distribuídos e complementa a [documentação existente do SQL Server](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation).
@@ -147,7 +147,11 @@ A figura a seguir mostra o AG 1 como a réplica primária para dois grupos de di
 
 Nos dois exemplos anteriores, pode haver até 27 réplicas no total nos três grupos de disponibilidade, que podem ser usados para consultas somente leitura. 
 
-Atualmente, o [roteamento somente leitura]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) não funciona com grupos de disponibilidade distribuídos. Todas as consultas, caso usem o ouvinte para se conectar, vão para a réplica primária. Caso contrário, você precisará configurar cada réplica para permitir todas as conexões como uma réplica secundária e acessá-las diretamente. Esse comportamento pode ser alterado em uma atualização para o SQL Server 2016 ou em uma versão futura do SQL Server.
+O [roteamento de somente leitura]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) não funciona totalmente com Grupos de Disponibilidade Distribuídos. Mais especificamente,
+
+1. o Roteamento de Somente Leitura pode ser configurado e funcionará no grupo de disponibilidade primária do grupo de disponibilidade distribuída. 
+2. O Roteamento de Somente Leitura pode ser configurado, mas não funcionará no grupo de disponibilidade secundária do grupo de disponibilidade distribuída. Todas as consultas, se usarem o ouvinte para se conectar ao grupo de disponibilidade secundária, vão para a réplica primária do grupo de disponibilidade secundária. Caso contrário, você precisará configurar cada réplica para permitir todas as conexões como uma réplica secundária e acessá-las diretamente. No entanto, o roteamento somente leitura funcionará se o grupo de disponibilidade secundária se tornar primário após um failover. Esse comportamento pode ser alterado em uma atualização para o SQL Server 2016 ou em uma versão futura do SQL Server.
+
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>Inicializar grupos de disponibilidade secundários em um grupo de disponibilidade distribuído
 

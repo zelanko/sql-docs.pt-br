@@ -18,17 +18,20 @@ helpviewer_keywords:
 - transaction log guidance
 - vlfs
 - virtual log files
+- virtual log size
+- vlf size
+- transaction log internals
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 caps.latest.revision: "3"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d98d7d65ebfa88ca9bdaa620c136f78dfe6c339c
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: dcc274dcde55b2910b96404c2c3a06c647518dc5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guia de arquitetura e gerenciamento do log de transações do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,9 +80,10 @@ O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] divide cada arquivo
 > [!NOTE]
 > A criação de VLF (arquivos de log virtuais) segue este método:
 > - Se o próximo crescimento for menor que 1/8 do tamanho físico do log atual, crie 1 VLF que abranja o tamanho do crescimento (começando com [!INCLUDE[ssSQL14](../includes/sssql14-md.md)])
-> - Se o crescimento for menor que 64 MB, crie 4 VLFs que abranjam o tamanho do crescimento (por exemplo, para um crescimento de 1 MB, crie quatro VLFs de 256 KB)
-> - Se o crescimento for de 64 MB a 1 GB, crie 8 VLFs que abranjam o tamanho do crescimento (por exemplo, para um crescimento de 512 MB, crie oito VLFs de 64 MB)
-> - Se o crescimento for maior que 1 GB, crie 16 VLFs que abranjam o tamanho do crescimento (por exemplo, para um crescimento de 8 GB, crie dezesseis VLFs de 512 MB)
+> - Se o próximo crescimento for maior que 1/8 do tamanho atual do log, use o método pré-2014:
+>    -  Se o crescimento for menor que 64 MB, crie 4 VLFs que abranjam o tamanho do crescimento (por exemplo, para um crescimento de 1 MB, crie quatro VLFs de 256 KB)
+>    -  Se o crescimento for de 64 MB a 1 GB, crie 8 VLFs que abranjam o tamanho do crescimento (por exemplo, para um crescimento de 512 MB, crie oito VLFs de 64 MB)
+>    -  Se o crescimento for maior que 1 GB, crie 16 VLFs que abranjam o tamanho do crescimento (por exemplo, para um crescimento de 8 GB, crie dezesseis VLFs de 512 MB)
 
 Se os arquivos de log ficarem grandes por causa de diversos incrementos pequenos, eles terão muitos arquivos de log virtuais. **Isso pode reduzir a velocidade de inicialização do banco de dados e também das operações de backup e restauração de log.** Recomendamos que você atribua aos arquivos de log um valor de *size* próximo ao tamanho final necessário e também que tenha um valor de *growth_increment* relativamente grande. Consulte a dica abaixo para determinar a distribuição ideal de VLF para o tamanho atual do log de transações.
  - O valor *size*, conforme definido pelo argumento `SIZE` de `ALTER DATABASE`, é o tamanho inicial do arquivo de log.

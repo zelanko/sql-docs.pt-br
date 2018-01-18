@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7b5587d6def935cf31d4bf96056b21cfd2c263a1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 492a21e51a6bdc1dbcf0a39451a81caee737dba4
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>Revisar e gerar scripts de log suplementares
   Use a guia **Scripts** para executar ou executar novamente um script no banco de dados de origem Oracle que configura o registro em log suplementar.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Quando você executa os scripts de log suplementares, a caixa de diálogo Oracle Credentials for Running Script abre e você fornece um nome de usuário e senha do Oracle válidos. Para obter informações sobre como fornecer as credenciais corretas do Oracle, consulte [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md).  
   
- Você também pode executar os scripts manualmente usando o SQL * Plus, se necessário.  
+ Você também pode executar os scripts manualmente usando o SQL\*Plus, se necessário.  
   
 ### <a name="to-run-the-scripts-manually"></a>Para executar os scripts manualmente  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Dê ao arquivo um nome e clique em **Salvar** para salvar o arquivo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Como editar as propriedades de instância CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [Credenciais Oracle para executar scripts](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   

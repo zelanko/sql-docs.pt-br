@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 835b2c27dfaf8e4003cd009e3c20146af32d2bca
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 559847d392fa744b32fc2aa0cdb70eeb9b2c4ebd
+ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="index-json-data"></a>Indexar dados JSON
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-No SQL Server 2016, o JSON não é um tipo de dados interno e o SQL Server não tem índices JSON personalizados. No entanto, você pode otimizar suas consultas em documentos JSON usando índices padrão. 
+No SQL Server e no Banco de Dados SQL, o JSON não é um tipo de dados interno e o SQL Server não tem índices JSON personalizados. No entanto, você pode otimizar suas consultas em documentos JSON usando índices padrão. 
 
 Índices de bancos de dados melhoram o desempenho das operações de filtragem e classificação. Sem índices, o SQL Server precisa executar uma verificação de tabela completa sempre que você consultar dados.  
   
@@ -69,7 +69,7 @@ A coluna computada não é persistente. Ela é computada apenas quando o índice
   
 É importante criar a coluna computada com a mesma expressão que você planeja usar em suas consultas – neste exemplo, a expressão é `JSON_VALUE(Info, '$.Customer.Name')`.  
   
-Não é preciso reescrever as consultas. Se você usar expressões com a função `JSON_VALUE`, como mostrado na consulta de exemplo acima, o SQL Server observa que há um equivalente da coluna computada com a mesma expressão e aplica um índice, se possível.
+Não é preciso reescrever as consultas. Se você usar expressões com a função `JSON_VALUE`, como mostrado na consulta de exemplo anterior, o SQL Server observará que existe um equivalente da coluna computada com a mesma expressão e aplica um índice, se possível.
 
 ### <a name="execution-plan-for-this-example"></a>Plano de execução para este exemplo
 Este é o plano de execução para a consulta no exemplo.  
@@ -79,7 +79,7 @@ Este é o plano de execução para a consulta no exemplo.
 Em vez de uma verificação completa, o SQL Server usa uma busca de índice no índice não clusterizado e localiza as linhas que atendem às condições especificadas. Em seguida, ele usa uma pesquisa de chave na tabela `SalesOrderHeader` para buscar outras colunas referenciadas na consulta — neste exemplo, `SalesOrderNumber` e `OrderDate`.  
  
 ### <a name="optimize-the-index-further-with-included-columns"></a>Otimizar ainda mais o índice com colunas incluídas
-Você pode evitar essa pesquisa adicional na tabela se adicionar as colunas necessárias ao índice. É possível adicionar essas colunas como colunas incluídas padrão, conforme mostrado no exemplo a seguir, que expande o exemplo `CREATE INDEX` mostrado acima.  
+Se adicionar as colunas necessárias ao índice, você poderá evitar essa pesquisa adicional na tabela. É possível adicionar essas colunas como colunas incluídas padrão, conforme mostrado no exemplo a seguir, que expande o exemplo `CREATE INDEX` anterior.  
   
 ```sql  
 CREATE INDEX idx_soh_json_CustomerName
@@ -87,12 +87,12 @@ ON Sales.SalesOrderHeader(vCustomerName)
 INCLUDE(SalesOrderNumber,OrderDate)
 ```  
   
-Nesse caso, o SQL Server não precisa ler dados adicionais da tabela `SalesOrderHeader`, pois tudo que ele precisa está incluído no índice JSON não clusterizado. Essa é uma boa maneira de combinar dados JSON e de colunas em consultas e criar índices otimizados para sua carga de trabalho.  
+Nesse caso, o SQL Server não precisa ler dados adicionais da tabela `SalesOrderHeader`, pois tudo que ele precisa está incluído no índice JSON não clusterizado. Este tipo de índice é uma boa maneira de combinar dados JSON e de colunas em consultas e criar índices otimizados para sua carga de trabalho.  
   
 ## <a name="json-indexes-are-collation-aware-indexes"></a>Os índices JSON são índices com reconhecimento de agrupamento  
 Um recurso importante do índices sobre dados JSON é que os índices têm reconhecimento de agrupamento. O resultado da função `JSON_VALUE` usada ao criar uma coluna computada é um valor de texto que herda seu agrupamento da expressão de entrada. Portanto, os valores no índice são ordenados usando as regras de agrupamento definidas nas colunas de origem.  
   
-Para demonstrar isso, o exemplo a seguir cria uma tabela de agrupamento simples com uma chave primária e conteúdo JSON.  
+Para demonstrar que os índices têm reconhecimento de agrupamento, o exemplo a seguir cria uma tabela de agrupamento simples com uma chave primária e conteúdo JSON.  
   
 ```sql  
 CREATE TABLE JsonCollection
@@ -146,7 +146,7 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  Embora a consulta tenha uma cláusula `ORDER BY`, o plano de execução não usa um operador Sort. O índice JSON já é ordenado de acordo com a regras do Sérvio Cirílico. Portanto, o SQL Server pode usar o índice não clusterizado nos quais os resultados já estão classificados.  
   
- No entanto, se alterarmos o agrupamento da expressão `ORDER BY` (por exemplo, se colocarmos `COLLATE French_100_CI_AS_SC` após a função `JSON_VALUE`), obtemos um plano de execução de consulta diferente.  
+ No entanto, se alterar o agrupamento da expressão `ORDER BY` (por exemplo, se adicionar `COLLATE French_100_CI_AS_SC` após a função `JSON_VALUE`), você obterá um plano de execução de consulta diferente.  
   
  ![Plano de execução](../../relational-databases/json/media/jsonindexblog3.png "Plano de execução")  
   
