@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: "1"
 author: shkale-msft
-ms.author: shkale
+ms.author: shkale;barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4ca6de15012a8fb929c207ab1a79a41607bd74cc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 30748d9c5cf8a53b7e04c9897ba2fe70fa32972e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-graph-architecture"></a>Arquitetura do gráfico do SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -104,20 +104,20 @@ A tabela a seguir lista os valores válidos para `graph_type` coluna
 Colunas implícitas em uma tabela de nó  
 |Nome da coluna    |Tipo de Dados  |is_hidden  |Comentário  |
 |---  |---|---|---  |
-|graph_id_\<hex_string > |bigint |1  |coluna graph_id interno  |
-|$node_id_\<hex_string > |NVARCHAR   |0  |Coluna de id do nó externo  |
+|graph_id_\<hex_string> |bigint |1  |coluna graph_id interno  |
+|$node_id_\<hex_string> |NVARCHAR   |0  |Coluna de id do nó externo  |
 
 Colunas implícitas em uma tabela de borda  
 |Nome da coluna    |Tipo de Dados  |is_hidden  |Comentário  |
 |---  |---|---|---  |
-|graph_id_\<hex_string > |bigint |1  |coluna graph_id interno  |
-|$edge_id_\<hex_string > |NVARCHAR   |0  |coluna de id da borda externa  |
-|from_obj_id_\<hex_string >  |INT    |1  |interno da id de objeto de nó  |
-|from_id_\<hex_string >  |bigint |1  |Internos do nó graph_id  |
-|$from_id_\<hex_string > |NVARCHAR   |0  |externa da id de nó  |
-|to_obj_id_\<hex_string >    |INT    |1  |a id de objeto de nó interno  |
-|to_id_\<hex_string >    |bigint |1  |Nó graph_id interno  |
-|$to_id_\<hex_string >   |NVARCHAR   |0  |externos ao id do nó  |
+|graph_id_\<hex_string> |bigint |1  |coluna graph_id interno  |
+|$edge_id_\<hex_string> |NVARCHAR   |0  |coluna de id da borda externa  |
+|from_obj_id_\<hex_string>  |INT    |1  |interno da id de objeto de nó  |
+|from_id_\<hex_string>  |bigint |1  |Internos do nó graph_id  |
+|$from_id_\<hex_string> |NVARCHAR   |0  |externa da id de nó  |
+|to_obj_id_\<hex_string>    |INT    |1  |a id de objeto de nó interno  |
+|to_id_\<hex_string>    |bigint |1  |Nó graph_id interno  |
+|$to_id_\<hex_string>   |NVARCHAR   |0  |externos ao id do nó  |
  
 ### <a name="system-functions"></a>Funções de sistema
 As seguintes funções internas são adicionadas. Eles ajudarão os usuários extrair informações de colunas geradas. Observe que, esses métodos não validará a entrada do usuário. Se o usuário Especifica um inválido `sys.node_id` o método extrairá parte apropriada e retorná-la. Por exemplo, OBJECT_ID_FROM_NODE_ID terão um `$node_id` como entrada e retorna o object_id da tabela, este nó pertence. 
@@ -142,7 +142,7 @@ Aprenda a [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensões introduzidas
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE `Agora é estendida para dar suporte à criação de uma tabela como nó ou como borda. Observe que uma tabela de borda pode ou pode não ter qualquer atributos definidos pelo usuário.  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Tabelas de nó e de borda podem ser alteradas da mesma forma que uma tabela relacional, usando o `ALTER TABLE`. Os usuários podem adicionar ou modificar colunas definidas pelo usuário, índices ou restrições. No entanto, como a alteração de colunas do gráfico interno, `$node_id` ou `$edge_id`, resultará em erro.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Os usuários podem criar índices em colunas pseudo e colunas definidas pelo usuário nas tabelas de nó e borda. Todos os tipos de índice têm suporte, incluindo índices columnstore clusterizados e não clusterizados.  |
-|DROP TABLE |[Remover tabela &#40; Transact-SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Tabelas de nó e de borda podem ser descartadas da mesma forma que uma tabela relacional, usando o `DROP TABLE`. No entanto, nesta versão, não há restrições para garantir que não há bordas apontam para um nó excluído e não há suporte para a exclusão em cascata de bordas, após a exclusão de um nó ou uma tabela de nó. É recomendável que, se um nó de tabela for descartado, usuários descartar qualquer Bordas conectadas a nós nessa tabela nó manualmente para manter a integridade do gráfico.  |
+|DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Tabelas de nó e de borda podem ser descartadas da mesma forma que uma tabela relacional, usando o `DROP TABLE`. No entanto, nesta versão, não há restrições para garantir que não há bordas apontam para um nó excluído e não há suporte para a exclusão em cascata de bordas, após a exclusão de um nó ou uma tabela de nó. É recomendável que, se um nó de tabela for descartado, usuários descartar qualquer Bordas conectadas a nós nessa tabela nó manualmente para manter a integridade do gráfico.  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>Instruções do Data Manipulation Language (DML)
@@ -158,7 +158,7 @@ Aprenda a [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensões introduzidas
 |Tarefa   |Tópico relacionado  |Observações
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|Nós e bordas são armazenadas como tabelas internamente, portanto, a maioria das operações de suporte em uma tabela no SQL Server ou banco de dados do SQL Azure têm suporte nas tabelas de nó e borda  |
-|MATCH  | [COINCIDIR &#40; Transact-SQL &#41;](../../t-sql/queries/match-sql-graph.md)|CORRESPONDÊNCIA interna é apresentada para dar suporte a correspondência de padrões e passagem por meio de graph.  |
+|MATCH  | [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|CORRESPONDÊNCIA interna é apresentada para dar suporte a correspondência de padrões e passagem por meio de graph.  |
 
 
 

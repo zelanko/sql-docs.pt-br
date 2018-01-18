@@ -15,13 +15,13 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: f80ae6bfb7b6c9b2aea60e3e929b1cc7202dacb2
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 23eedac40aff1fcab50c2e05406d3c87b988e392
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="operate-ha-availability-group-for-sql-server-on-linux"></a>Operar o grupo de disponibilidade de alta disponibilidade para o SQL Server no Linux
+# <a name="operate-always-on-availability-groups-on-linux"></a>Sempre operam em grupos de disponibilidade no Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
@@ -188,21 +188,21 @@ Quando as réplicas de grupo de disponibilidade em instâncias do SQL Server no 
 1. Antes de começar, fazer backup de cada banco de dados.
 2. Atualize instâncias do SQL Server que hospedam réplicas de secundário.
 
-    a. Atualize primeiro réplicas secundárias assíncronas.
+    A. Atualize primeiro réplicas secundárias assíncronas.
 
-    b. Atualize as réplicas secundárias síncronas.
+    B. Atualize as réplicas secundárias síncronas.
 
    >[!NOTE]
    >Se um grupo de disponibilidade tiver apenas assíncrona réplicas - para evitar a perda de dados altere uma réplica de síncrona e aguarde até que ele é sincronizado. Em seguida, atualize esta réplica.
    
-   b. 1. Parar o recurso no nó que hospeda a réplica secundária de destino para atualização
+   b.1. Parar o recurso no nó que hospeda a réplica secundária de destino para atualização
    
    Antes de executar o comando Atualizar, pare o recurso para que o cluster não monitorá-lo e fazer failover desnecessariamente. O exemplo a seguir adiciona uma restrição de local no nó que resultará no recurso deve ser interrompida. Atualização `ag_cluster-master` com o nome do recurso e `nodeName1` com o nó que hospeda a réplica de destino para atualização.
 
    ```bash
    pcs constraint location ag_cluster-master avoids nodeName1
    ```
-   b. 2. Atualize o SQL Server na réplica secundária
+   b.2. Atualize o SQL Server na réplica secundária
 
    O exemplo seguinte atualiza `mssql-server` e `mssql-server-ha` pacotes.
 
@@ -210,7 +210,7 @@ Quando as réplicas de grupo de disponibilidade em instâncias do SQL Server no 
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
    ```
-   b. 3. Remover a restrição de local
+   b.3. Remover a restrição de local
 
    Antes de executar o comando Atualizar, pare o recurso para que o cluster não monitorá-lo e fazer failover desnecessariamente. O exemplo a seguir adiciona uma restrição de local no nó que resultará no recurso deve ser interrompida. Atualização `ag_cluster-master` com o nome do recurso e `nodeName1` com o nó que hospeda a réplica de destino para atualização.
 
@@ -232,13 +232,13 @@ Quando as réplicas de grupo de disponibilidade em instâncias do SQL Server no 
    >As etapas a seguir se aplicam somente aos grupos de disponibilidade que não têm um Gerenciador de cluster.  
    Se o tipo de cluster do grupo de disponibilidade é `NONE`, manualmente o failover. Conclua as seguintes etapas nesta ordem:
 
-      a. O comando a seguir define a réplica primária para o secundário. Substituir `AG1` com o nome do seu grupo de disponibilidade. Execute o comando Transact-SQL na instância do SQL Server que hospeda a réplica primária.
+      A. O comando a seguir define a réplica primária para o secundário. Substituir `AG1` com o nome do seu grupo de disponibilidade. Execute o comando Transact-SQL na instância do SQL Server que hospeda a réplica primária.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      b. O comando a seguir define uma réplica secundária síncrona como primário. Execute o seguinte comando Transact-SQL na instância de destino do SQL Server - a instância que hospeda a réplica secundária síncrona.
+      B. O comando a seguir define uma réplica secundária síncrona como primário. Execute o seguinte comando Transact-SQL na instância de destino do SQL Server - a instância que hospeda a réplica secundária síncrona.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;

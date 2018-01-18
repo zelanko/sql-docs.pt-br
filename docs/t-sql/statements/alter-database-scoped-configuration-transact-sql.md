@@ -28,30 +28,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cc17063b8f74e296562a460677121c5ef1c85016
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 9638d94c2bd6f461650b15f96c7a75c95eaeb861
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="alter-database-scoped-configuration-transact-sql"></a>ALTERAR a configuração de escopo do banco de dados (Transact-SQL)
+# <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Essa instrução permite que várias definições de configuração de banco de dados no **banco de dados individual** nível. Essa instrução está disponível em [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e no SQL Server a partir [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Essas configurações são:  
+  Essa instrução permite que várias definições de configuração de banco de dados no **banco de dados individual** nível. Essa instrução está disponível em [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Essas configurações são:  
   
 - Limpar o cache de procedimento.  
-  
 - Definir o parâmetro MAXDOP para um valor arbitrário (1,2,...) para o banco de dados primário com base no que funciona melhor para desse banco de dados e define um valor diferente (por exemplo, 0) para todos os banco de dados secundário usado (por exemplo, para consultas de relatórios).  
-  
 - Defina o modelo de estimativa de cardinalidade do otimizador de consulta independente do nível de compatibilidade do banco de dados.  
-  
 - Habilitar ou desabilitar a detecção de parâmetro no nível do banco de dados.
-  
 - Habilitar ou desabilitar hotfixes de otimização de consulta no nível do banco de dados.
-
 - Habilitar ou desabilitar o cache de identidade no nível de banco de dados.
-
-- Habilitar ou desabilitar um stub de plano compilado para ser armazenado em cache quando um lote é compilado pela primeira vez. 
+- Habilitar ou desabilitar um stub de plano compilado para ser armazenado em cache quando um lote é compilado pela primeira vez.    
   
  ![ícone de link](../../database-engine/configure-windows/media/topic-link.gif "ícone de link") [convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -83,8 +77,8 @@ PARA SECUNDÁRIO
  
 Especifica as definições de bancos de dados secundários (todos os bancos de dados secundários devem ter os valores idênticos).  
   
-MAXDOP  **=**  {\<valor > | PRIMÁRIO}  
-**\<valor >**  
+MAXDOP **=** {\<value> | PRIMARY }  
+**\<value>**  
   
 Especifica o padrão MAXDOP configuração deve ser usada para instruções. 0 é o valor padrão e indica que a configuração do servidor será usada. Substituições de MAXDOP no escopo do banco de dados (a menos que ele é definido como 0) a **grau máximo de paralelismo** definido no nível do servidor por sp_configure. Dicas de consulta ainda podem substituir o banco de dados no escopo MAXDOP para ajustar consultas específicas que precisam de uma configuração diferente. Todas essas configurações são limitadas pelo MAXDOP definido para o grupo de carga de trabalho.   
 
@@ -145,7 +139,7 @@ Habilita ou desabilita o cache de identidade no nível de banco de dados. O padr
 > [!NOTE] 
 > Essa opção só pode ser definida para o primário. Para obter mais informações, consulte [colunas de identidade](create-table-transact-sql-identity-property.md).  
 
-OPTIMIZE_FOR_AD_HOC_WORKLOADS  **=**  {ON | **OFF** }  
+OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }  
 
 **Aplica-se ao**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
@@ -163,6 +157,8 @@ no banco de dados. Essa permissão pode ser concedida por um usuário com permis
  Para consultas de nome de parte 3, as configurações para a conexão de banco de dados atual para a consulta é cumpridas diferente para os módulos SQL (como procedimentos, funções e gatilhos) que são compilados no contexto atual do banco de dados e, portanto, usa as opções das o banco de dados no qual residem.  
   
  O evento ALTER_DATABASE_SCOPED_CONFIGURATION é adicionado como um evento DDL que pode ser usado para acionar um gatilho DDL. Este é um filho do grupo ALTER_DATABASE_EVENTS gatilho.  
+ 
+ As configurações serão transferidas com o banco de dados de configuração com escopo de banco de dados. Isso significa que quando um determinado banco de dados é restaurado ou anexado, as definições de configuração existentes permanecem.
   
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições  
 **MAXDOP**  
@@ -207,7 +203,7 @@ para o usuário [Joe].
 GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;  
 ```  
   
-### <a name="b-set-maxdop"></a>B. Definir MAXDOP  
+### <a name="b-set-maxdop"></a>B. Set MAXDOP  
 
 Este exemplo define MAXDOP = 1 para um banco de dados primário e MAXDOP = 4 para um banco de dados secundário em um cenário de replicação geográfica.  
   
@@ -282,7 +278,7 @@ Este exemplo desabilita o cache de identidade.
 ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ; 
 ```
 
-### <a name="h-set-optimizeforadhocworkloads"></a>H. Definir OPTIMIZE_FOR_AD_HOC_WORKLOADS
+### <a name="h-set-optimizeforadhocworkloads"></a>H. Set OPTIMIZE_FOR_AD_HOC_WORKLOADS
 
 **Aplica-se ao**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
@@ -311,8 +307,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 * [SQL Server query optimizer hotfix rastreamento sinalizador 4199 modelo de serviço](https://support.microsoft.com/en-us/kb/974006)
 
 ## <a name="more-information"></a>Mais informações  
- [sys. database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
- [Configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
+ [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [Exibições de catálogo de arquivos e bancos de dados](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [Opções de configuração de servidor](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [Configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
  

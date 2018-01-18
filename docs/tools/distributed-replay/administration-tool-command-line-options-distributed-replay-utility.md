@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c01b0ed3-67e4-4561-92d2-a8fbb086aca8
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05d85792c13b7163257e6838a078b876969241b4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ac0fe5fe3686e60ef16d95899c69ecd72742e850
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>Opções de linha de comando da ferramenta de administração (Distributed Replay Utility)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ferramenta de administração do Distributed Replay, **DReplay.exe**, é uma ferramenta de linha de comando para se comunicar com o controlador de reprodução distribuída. Use a ferramenta de administração para iniciar, monitorar e cancelar operações no controlador.  
@@ -65,13 +65,13 @@ Usage:
   
  Para obter informações detalhadas de sintaxe, incluindo argumentos e exemplos de comandos, consulte os seguintes tópicos:  
   
--   [Opção Pré-processamento &#40;Ferramenta de administração de reprodução distribuída&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)  
+-   [Pré-processar opção &#40; ferramenta de administração de reprodução distribuída &#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)  
   
--   [Opção Reprodução &#40;Ferramenta de administração de reprodução distribuída&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)  
+-   [Opção replay &#40; ferramenta de administração de reprodução distribuída &#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)  
   
--   [Opção Status &#40;Ferramenta de administração de reprodução distribuída&#41;](../../tools/distributed-replay/status-option-distributed-replay-administration-tool.md)  
+-   [Opção de status &#40; ferramenta de administração de reprodução distribuída &#41;](../../tools/distributed-replay/status-option-distributed-replay-administration-tool.md)  
   
--   [Opção Cancelamento &#40;Ferramenta de administração de reprodução distribuída&#41;](../../tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md)  
+-   [Opção cancelamento &#40; ferramenta de administração de reprodução distribuída &#41;](../../tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md)  
   
  Os RPCs são executados novamente como RPCs e não como eventos de idioma.  
   

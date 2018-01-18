@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: traces [SQL Server], defaults
 ms.assetid: d471aaed-c40c-4c55-a993-835e6394b5d2
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80fe4bde3fdbd2aad03ca328f4efcbffbecba183
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ea66415c239ddceeb7ee75997b3052a3f34a472f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>Definir padrões de exibição de rastreamento (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Este tópico descreve como definir opções de ferramenta que especificam os tipos de fonte, tamanho e estilo que [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] usa para exibir rastreamentos na janela de rastreamento. Também é possível especificar que o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exiba todas as datas e horas com as configurações regionais definidas para seu sistema operacional.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 6.  Clique em **OK** para fechar a caixa de diálogo **Opções Gerais** .  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

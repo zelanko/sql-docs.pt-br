@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: 25fc141818d0e0d638cf463990da8d44955fef17
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: e75ae9a6f3c48f0ece0c95be9f3836c8205a1b8c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-always-on-availability-group-for-sql-server-on-linux"></a>Configurar o grupo de disponibilidade do AlwaysOn para SQL Server no Linux
 
@@ -33,7 +33,7 @@ Configurações que garantem alta disponibilidade e proteção de dados necessit
 
 Todos os servidores devem ser físicos ou virtuais e servidores virtuais devem ter a mesma plataforma de virtualização. Esse requisito é como os agentes de isolamento são específicas à plataforma. Consulte [políticas para Clusters convidados](https://access.redhat.com/articles/29440#guest_policies).
 
-## <a name="roadmap"></a>Roteiro
+## <a name="roadmap"></a>Roadmap
 
 As etapas para criar um grupo de disponibilidade em servidores Linux para alta disponibilidade são diferentes das etapas em um cluster de failover do Windows Server. A lista a seguir descreve as etapas de alto níveis: 
 
@@ -92,7 +92,7 @@ Executar **apenas um** dos scripts a seguir:
 
 - [Criar grupo de disponibilidade com réplicas síncronas três](#threeSynch).
 - [Criar grupo de disponibilidade com duas réplicas síncronas e uma réplica de configuração](#configOnly)
-- [Criar grupo de disponibilidade com réplicas síncronas três](#readScale).
+- [Criar grupo de disponibilidade com duas réplicas síncronas](#readScale).
 
 <a name="threeSynch"></a>
 

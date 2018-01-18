@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: 501fd7eac7f7905a03a2861a462d4c1179beb15c
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 797cc24d46fc5a51f514508dd35226d07cda74f4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurar o Cluster Ubuntu e recursos do grupo de disponibilidade
 
@@ -32,7 +32,7 @@ Este documento explica como criar um cluster de três nós no Ubuntu e adicionar
 
 As seções a seguir percorrer as etapas para configurar uma solução de cluster de failover. 
 
-## <a name="roadmap"></a>Roteiro
+## <a name="roadmap"></a>Roadmap
 
 As etapas para criar um grupo de disponibilidade em servidores Linux para alta disponibilidade são diferentes das etapas em um cluster de failover do Windows Server. A lista a seguir descreve as etapas de alto níveis: 
 
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. Crie o cluster. 
 
    >[!WARNING]
-   >Devido a um problema conhecido que o fornecedor do cluster está investigando, iniciando o cluster ('início de cluster de computadores') falhará com erro abaixo. Isso ocorre porque o arquivo de log configurado no /etc/corosync/corosync.conf é incorreto. Para solucionar esse problema, altere o arquivo de log: /var/log/corosync/corosync.log. Como alternativa, você pode criar o arquivo /var/log/cluster/corosync.log.
+   >Devido a um problema conhecido que o fornecedor do cluster está investigando, iniciando o cluster ('início de cluster de computadores') falhará com erro abaixo. Isso ocorre porque o arquivo de log configurado no /etc/corosync/corosync.conf que é criado quando o comando de instalação de cluster é executado, é incorreto. Para solucionar esse problema, altere o arquivo de log: /var/log/corosync/corosync.log. Como alternativa, você pode criar o arquivo /var/log/cluster/corosync.log.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 

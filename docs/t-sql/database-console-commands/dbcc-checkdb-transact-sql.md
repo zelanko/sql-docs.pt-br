@@ -40,41 +40,36 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c4a5ab88b068d32e9a40f4556564018a5f806608
-ms.sourcegitcommit: 27f1143cf9b52dd27acf81234a516c32a239a320
+ms.openlocfilehash: 15c991ba9e987d5dc7ed39b2b8edb8bf6b428956
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Verifica a integridade lógica e física de todos os objetos do banco de dados especificado com a execução das seguintes operações:    
-    
-> **Observação:** DBCC CHECKDB tem suporte em bancos de dados que contêm tabelas com otimização de memória, mas a validação ocorre somente em tabelas baseadas em disco. No entanto, como parte do backup e recuperação de banco de dados, uma validação de CHECKSUM é feita para arquivos em grupos de arquivos com otimização de memória.    
->     
->  Como as opções de reparo de DBCC não estão disponíveis para tabelas com otimização de memória, você deverá fazer o backup de seus bancos de dados regularmente e testar os backups. Se ocorrerem problemas de integridade de dados em uma tabela com otimização de memória, você deverá restaurar o último backup válido.    
+Verifica a integridade lógica e física de todos os objetos do banco de dados especificado com a execução das seguintes operações:    
     
 -   Executa [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) no banco de dados.    
-    
 -   Executa [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) em cada tabela e o modo de exibição no banco de dados.    
-    
 -   Executa [DBCC CHECKCATALOG](../../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md) no banco de dados.    
-    
 -   Valida o conteúdo de toda exibição indexada do banco de dados.    
-    
 -   Valida consistência em nível de link entre arquivos e diretórios do sistema de arquivo e os metadados de tabela ao armazenar **varbinary (max)** dados no sistema de arquivos usando FILESTREAM.    
-    
 -   Valida os dados [!INCLUDE[ssSB](../../includes/sssb-md.md)] no banco de dados.    
     
- Isso significa que os comandos DBCC CHECKALLOC, DBCC CHECKTABLE ou DBCC CHECKCATALOG não precisam ser executados separadamente do DBCC CHECKDB. Para obter informações mais detalhadas sobre as verificações executadas, consulte as descrições desses comandos.    
-    
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+Isso significa que os comandos DBCC CHECKALLOC, DBCC CHECKTABLE ou DBCC CHECKCATALOG não precisam ser executados separadamente do DBCC CHECKDB. Para obter informações mais detalhadas sobre as verificações executadas, consulte as descrições desses comandos.    
+ 
+> [!NOTE]
+> DBCC CHECKDB tem suporte em bancos de dados que contêm tabelas com otimização de memória, mas a validação ocorre apenas em tabelas baseadas em disco. No entanto, como parte do backup e recuperação de banco de dados, uma validação de CHECKSUM é feita para arquivos em grupos de arquivos com otimização de memória.    
+>     
+> Como as opções de reparo de DBCC não estão disponíveis para tabelas com otimização de memória, você deverá fazer o backup de seus bancos de dados regularmente e testar os backups. Se ocorrerem problemas de integridade de dados em uma tabela com otimização de memória, você deverá restaurar o último backup válido.    
+
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>Sintaxe    
     
 ```    
-    
 DBCC CHECKDB     
     [ ( database_name | database_id | 0    
         [ , NOINDEX     
@@ -95,62 +90,61 @@ DBCC CHECKDB
 ```    
     
 ## <a name="arguments"></a>Argumentos    
- *Database_Name* | *database_id* | 0  
+ *database_name* | *database_id* | 0  
  É o nome ou a ID do banco de dados para o qual executar verificações de integridade. Se não for especificado ou se 0 for especificado, o banco de dados atual será usado. Nomes de banco de dados devem estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
     
- NOINDEX  
+NOINDEX  
  Especifica que não devem ser executadas verificações intensivas de índices não clusterizados de tabelas de usuário. Isto reduz o tempo de execução geral. NOINDEX não afeta tabelas do sistema porque as verificações de integridade sempre são executadas em todos os índices de tabela do sistema.  
     
- REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD  
+REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD  
  Especifica que DBCC CHECKDB repara os erros encontrados. Use as opções REPAIR apenas como um último recurso. O banco de dados especificado deve estar em modo de usuário único para usar uma das opções de reparo a seguir.  
     
- REPAIR_ALLOW_DATA_LOSS  
+REPAIR_ALLOW_DATA_LOSS  
  Tenta reparar todos os erros relatados. Esses reparos podem provocar alguma perda de dados.  
     
 > [!WARNING]
-> - A opção REPAIR_ALLOW_DATA_LOSS é um recurso com suporte, mas não pode ser sempre a melhor opção para colocar um banco de dados em um estado fisicamente consistente. 
-> -Se for bem-sucedido, a opção REPAIR_ALLOW_DATA_LOSS pode resultar em perda de dados. Na verdade, ela pode resultar em mais dados perdidos do que se um usuário restaurar o banco de dados por meio do último backup válido. 
+> A opção REPAIR_ALLOW_DATA_LOSS é um recurso com suporte, mas não pode ser sempre a melhor opção para colocar um banco de dados em um estado fisicamente consistente. Se for bem-sucedida, a opção REPAIR_ALLOW_DATA_LOSS poderá resultar em alguma perda de dados. Na verdade, ela pode resultar em mais dados perdidos do que se um usuário restaurar o banco de dados por meio do último backup válido. 
 >
-> - [!INCLUDE[msCoName](../../includes/msconame-md.md)] sempre recomenda uma restauração de usuário do último backup válido como o principal método de recuperação de erros relatados pelo DBCC CHECKDB. A opção REPAIR_ALLOW_DATA_LOSS não é uma alternativa para restaurar por meio de um backup válido. É uma opção emergencial de "último recurso" recomendada para uso somente se não for possível restaurar de um backup.    
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] sempre recomenda uma restauração de usuário do último backup válido como o principal método de recuperação de erros relatados pelo DBCC CHECKDB. A opção REPAIR_ALLOW_DATA_LOSS não é uma alternativa para restaurar por meio de um backup válido. É uma opção emergencial de "último recurso" recomendada para uso somente se não for possível restaurar de um backup.    
 >     
->  - Determinados erros, que só podem ser reparados usando a opção REPAIR_ALLOW_DATA_LOSS, podem envolver o deslocamento de uma linha, página ou série de páginas para limpar os erros. Qualquer dado desalocado não é mais acessível nem recuperável pelo usuário e o conteúdo exato dos dados desalocados não pode ser determinado. Portanto, a integridade referencial pode não ser precisa após a desalocação de linhas ou páginas porque as restrições de chave estrangeira não estão marcadas nem mantidas como parte da operação de reparo. O usuário deve verificar a integridade referencial do banco de dados (usando DBCC CHECKCONSTRAINTS) depois de usar a opção REPAIR_ALLOW_DATA_LOSS.    
+> Determinados erros, que só podem ser reparados usando a opção REPAIR_ALLOW_DATA_LOSS, podem envolver o deslocamento de uma linha, página ou série de páginas para limpar os erros. Qualquer dado desalocado não é mais acessível nem recuperável pelo usuário e o conteúdo exato dos dados desalocados não pode ser determinado. Portanto, a integridade referencial pode não ser precisa após a desalocação de linhas ou páginas porque as restrições de chave estrangeira não estão marcadas nem mantidas como parte da operação de reparo. O usuário deve verificar a integridade referencial do banco de dados (usando DBCC CHECKCONSTRAINTS) depois de usar a opção REPAIR_ALLOW_DATA_LOSS.    
 >     
->  - Antes de executar o reparo, crie cópias físicas dos arquivos que pertencem a esse banco de dados. Isso inclui o arquivo de dados primário (.mdf), quaisquer arquivos de dados secundários (.ndf), todos os arquivos de log de transação (.ldf) e outros contêineres que formam o banco de dados incluindo catálogos de texto completo, pastas de fluxo de arquivos, dados de otimização de memória, etc.    
+> Antes de executar o reparo, crie cópias físicas dos arquivos que pertencem a esse banco de dados. Isso inclui o arquivo de dados primário (.mdf), quaisquer arquivos de dados secundários (.ndf), todos os arquivos de log de transação (.ldf) e outros contêineres que formam o banco de dados incluindo catálogos de texto completo, pastas de fluxo de arquivos, dados de otimização de memória, etc.    
 >     
->  - Antes de executar o reparo, considere alterar o estado do banco de dados para o modo de EMERGÊNCIA e tentar extrair o máximo possível de informações das tabelas críticas e salvar esses dados.    
+> Antes de executar o reparo, considere alterar o estado do banco de dados para o modo de EMERGÊNCIA e tentar extrair o máximo possível de informações das tabelas críticas e salvar esses dados.    
     
- REPAIR_FAST  
+REPAIR_FAST  
  Mantém a sintaxe apenas para compatibilidade com versões anteriores. Nenhuma ação de reparo é executada.  
     
- REPAIR_REBUILD  
+REPAIR_REBUILD  
  Executa reparos que não têm nenhuma possibilidade de perda de dados. Isso pode incluir reparos rápidos, como reparo de linhas perdidas em índices não clusterizados e reparos mais demorados, como a recriação de um índice.  
  Esse argumento não repara erros que envolvem dados FILESTREAM.  
     
 > [!IMPORTANT] 
 > Como DBCC CHECKDB com qualquer uma das opções REPAIR são completamente registrados e recuperáveis, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda sempre que um usuário use CHECKDB com quaisquer opções REPAIR em uma transação (execute BEGIN TRANSACTION antes de executar o comando) para que o usuário possa decidir se quer aceitar os resultados da operação. Em seguida, o usuário pode executar COMMIT TRANSACTION para confirmar todo o trabalho feito pela operação de reparo. Se o usuário não quiser aceitar os resultados da operação, ele poderá executar uma ROLLBACK TRANSACTION para desfazer os efeitos das operações de reparo.    
 >     
->  Para reparar erros, recomendamos restaurar de um backup. Operações de reparo não consideram nenhuma das restrições que podem existir em tabelas ou entre tabelas. Se a tabela especificada estiver envolvida em uma ou mais restrições, recomendamos executar DBCC CHECKCONSTRAINTS após uma operação de reparo. Se for necessário usar REPAIR, execute DBCC CHECKDB sem uma opção de reparo para localizar o nível de reparo a ser usado. Se você usar o nível de REPAIR_ALLOW_DATA_LOSS, recomendamos fazer backup do banco de dados antes de executar DBCC CHECKDB com essa opção.    
+> Para reparar erros, recomendamos restaurar de um backup. Operações de reparo não consideram nenhuma das restrições que podem existir em tabelas ou entre tabelas. Se a tabela especificada estiver envolvida em uma ou mais restrições, recomendamos executar DBCC CHECKCONSTRAINTS após uma operação de reparo. Se for necessário usar REPAIR, execute DBCC CHECKDB sem uma opção de reparo para localizar o nível de reparo a ser usado. Se você usar o nível de REPAIR_ALLOW_DATA_LOSS, recomendamos fazer backup do banco de dados antes de executar DBCC CHECKDB com essa opção.    
     
- ALL_ERRORMSGS  
+ALL_ERRORMSGS  
  Exibe todos os erros relatados por objeto. Todas as mensagens de erro são exibidas por padrão. Especificar ou omitir esta opção não têm nenhum efeito. Mensagens de erro são classificadas por ID de objeto, exceto as mensagens geradas de [banco de dados tempdb](../../relational-databases/databases/tempdb-database.md).     
 
- EXTENDED_LOGICAL_CHECKS  
+EXTENDED_LOGICAL_CHECKS  
  Se o nível de compatibilidade for 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) ou superior, executará verificações de consistência lógica em uma exibição indexada, índices XML e índices espaciais, quando presentes.  
- Para obter mais informações, consulte "Executando verificações de consistência lógica em índices" na seção "Comentários" deste tópico.  
+ Para obter mais informações, consulte *executar lógica verificações de consistência em índices*, além de [comentários](#remarks) seção mais adiante neste tópico.  
     
- NO_INFOMSGS  
+NO_INFOMSGS  
  Suprime todas as mensagens informativas.  
     
- TABLOCK  
+TABLOCK  
  Faz com que DBCC CHECKDB obtenha bloqueios em vez de usar um instantâneo do banco de dados interno. Isso inclui um bloqueio exclusivo (X) de curto prazo no banco de dados. TABLOCK faz com que DBCC CHECKDB seja executado com mais rapidez em um banco de dados sob carga pesada, mas reduz a simultaneidade disponível no banco de dados durante sua execução.  
     
 > [!IMPORTANT] 
 > TABLOCK limita as verificações executadas, DBCC CHECKCATALOG não é executado no banco de dados e os dados do [!INCLUDE[ssSB](../../includes/sssb-md.md)] não são validados.
     
- ESTIMATEONLY  
+ESTIMATEONLY  
  Exibe a quantidade estimada de espaço em tempdb necessária para executar o DBCC CHECKDB com todas as outras opções especificadas. A verificação real do banco de dados não é executada.  
     
- PHYSICAL_ONLY  
+PHYSICAL_ONLY  
  Limita a verificação à integridade da estrutura física da página e dos cabeçalhos de registros e a consistência da alocação do banco de dados. Essa verificação foi desenvolvida para fornecer uma pequena verificação de sobrecarga da consistência física do banco de dados, mas ela também pode detectar páginas interrompidas, falhas de soma de verificação e falhas comuns de hardware que podem comprometer os dados de um usuário.  
  A conclusão de uma execução completa de DBCC CHECKDB pode levar consideravelmente mais tempo do que em versões anteriores. Esse comportamento ocorre porque:  
  -   As verificações lógicas são mais abrangentes.  
@@ -162,7 +156,7 @@ Este argment sempre implica em NO_INFOMSGS e não é permitida com qualquer uma 
 > [!WARNING] 
 > A especificação de PHYSICAL_ONLY faz com que DBCC CHECKDB ignore todas as verificações de dados FILESTREAM.
     
- DATA_PURITY  
+DATA_PURITY  
  Faz com que o DBCC CHECKDB verifique valores de colunas no banco de dados que não são válidos ou estão fora do intervalo. Por exemplo, o DBCC CHECKDB detecta colunas com valores de data e hora que são maiores ou menores do que o intervalo aceitável para o **datetime** tipo de dados; ou **decimal** ou tipo de dados numérico aproximado colunas com valores de escala ou precisão que não são válidos.  
  Verificações de integridade de valor de coluna são habilitadas por padrão e não exigem a opção DATA_PURITY. Para bancos de dados atualizados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verificações de valores de colunas não são habilitadas por padrão até que o DBCC CHECKDB WITH DATA_PURITY tenha sido executado sem erros no banco de dados. Depois disso, DBCC CHECKDB verifica a integridade de valores de coluna por padrão. Para obter mais informações sobre como o CHECKDB pode ser afetado com a atualização de banco de dados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte a seção Comentários, posteriormente neste tópico.  
     
@@ -180,10 +174,13 @@ Este argment sempre implica em NO_INFOMSGS e não é permitida com qualquer uma 
 > Se MAXDOP estiver definido como zero, em seguida, SQL Server escolherá o grau máximo de paralelismo a ser usado.    
 
 ## <a name="remarks"></a>Remarks    
-O DBCC CHECKDB não examina índices desabilitados. Para obter mais informações sobre índices desabilitados, consulte [desabilitar índices e restrições](../../relational-databases/indexes/disable-indexes-and-constraints.md).
-Se um tipo definido pelo usuário estiver marcado como sendo ordenado por byte, deverá existir apenas uma serialização do tipo definido pelo usuário. Se não houver uma serialização consistente de tipos definidos pelo usuário ordenados por byte, o erro 2537 ocorrerá quando DBCC CHECKDB for executado. Para obter mais informações, consulte [requisitos de tipo definido pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md).
-Porque o [banco de dados do recurso](../../relational-databases/databases/resource-database.md) pode ser modificado somente no modo de usuário único, o comando não pode ser executado diretamente do DBCC CHECKDB. No entanto, quando DBCC CHECKDB é executado em relação a [banco de dados mestre](../../relational-databases/databases/master-database.md), um segundo CHECKDB também é executado internamente no banco de dados do recurso. Isso significa que DBCC CHECKDB pode retornar resultados extras. O comando retorna conjuntos de resultados extras quando nenhuma opção está definida ou quando a opção PHYSICAL_ONLY ou ESTIMATEONLY está definida.
-Em versões do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] anteriores ao SP2, a execução de DBCC CHECKDB limpa o cache do plano para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache do plano gera uma recompilação de todos os planos de execução posteriores e pode provocar uma queda repentina e temporária no desempenho da consulta. No SP2 e posterior, a execução de DBCC CHECKDB não limpa o cache do plano.
+O DBCC CHECKDB não examina índices desabilitados. Para obter mais informações sobre índices desabilitados, consulte [desabilitar índices e restrições](../../relational-databases/indexes/disable-indexes-and-constraints.md).    
+
+Se um tipo definido pelo usuário estiver marcado como sendo ordenado por byte, deverá existir apenas uma serialização do tipo definido pelo usuário. Se não houver uma serialização consistente de tipos definidos pelo usuário ordenados por byte, o erro 2537 ocorrerá quando DBCC CHECKDB for executado. Para obter mais informações, consulte [requisitos de tipo definido pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md).    
+
+Porque o [banco de dados do recurso](../../relational-databases/databases/resource-database.md) pode ser modificado somente no modo de usuário único, o comando não pode ser executado diretamente do DBCC CHECKDB. No entanto, quando DBCC CHECKDB é executado em relação a [banco de dados mestre](../../relational-databases/databases/master-database.md), um segundo CHECKDB também é executado internamente no banco de dados do recurso. Isso significa que DBCC CHECKDB pode retornar resultados extras. O comando retorna conjuntos de resultados extras quando nenhuma opção está definida ou quando a opção PHYSICAL_ONLY ou ESTIMATEONLY está definida.    
+
+Começando com [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2, a execução de DBCC CHECKDB **não** limpa o cache de plano para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Antes de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2, execução de DBCC CHECKDB limpa o cache de plano. A limpeza do cache do plano gera uma recompilação de todos os planos de execução posteriores e pode provocar uma queda repentina e temporária no desempenho da consulta. 
     
 ## <a name="performing-logical-consistency-checks-on-indexes"></a>Executando verificações de consistência lógica em índices    
 A verificação de consistência lógica em índices varia de acordo com o nível de compatibilidade do banco de dados, da seguinte maneira:
@@ -231,12 +228,14 @@ Depois que o comando DBCC CHECKDB é concluído, uma mensagem é gravada no log 
 |5|Ocorreu um erro desconhecido que finalizou o comando DBCC.|    
     
 ## <a name="error-reporting"></a>Relatório de Erros    
-Um arquivo de despejo (SQLDUMP*nnnn*. txt) é criado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diretório de LOG sempre que DBCC CHECKDB detecta um erro de dano. Quando os recursos de coleta de dados Uso de Recursos e Relatório de Erros são habilitados para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o arquivo é encaminhado automaticamente à [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Os dados coletados são usados para aprimorar a funcionalidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-O arquivo de despejo contém os resultados do comando DBCC CHECKDB e saídas de diagnóstico adicionais. O acesso é limitado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] membros da função sysadmin e conta de serviço. Por padrão, a função de sysadmin contém todos os membros do grupo BUILTIN\Administradores do Windows e o grupo de administradores locais. O comando DBCC não falhará se o processo de coleta de dados falhar.
+Um arquivo de despejo (`SQLDUMP*nnnn*.txt`) é criado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diretório de LOG sempre que DBCC CHECKDB detecta um erro de dano. Quando o *de uso de recurso* coleta de dados e *relatório de erros* recursos estão habilitados para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o arquivo é encaminhado automaticamente à [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Os dados coletados são usados para aprimorar a funcionalidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+O arquivo de despejo contém os resultados do comando DBCC CHECKDB e saídas de diagnóstico adicionais. O acesso é limitado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] membros da função sysadmin e conta de serviço. Por padrão, a função de sysadmin contém todos os membros do Windows `BUILTIN\Administrators` grupo e o grupo de administradores locais. O comando DBCC não falhará se o processo de coleta de dados falhar.
     
 ## <a name="resolving-errors"></a>Resolvendo erros    
-Se qualquer erro for relatado pelo DBCC CHECKDB, é recomendável restaurar o banco de dados do backup em vez de executar REPAIR com uma das opções de REPAIR. Se não existir nenhum backup, a execução de REPAIR corrigirá os erros relatados. A opção de reparo a ser usada é especificada no fim da lista de erros relatados. No entanto, a correção de erros usando a opção REPAIR_ALLOW_DATA_LOSS pode exigir que algumas páginas e, portanto, alguns dados, sejam excluídos.
-Em determinadas circunstâncias, podem ser inseridos valores no banco de dados que são inválidos ou estão fora do intervalo baseado no tipo de dados da coluna. O DBCC CHECKDB pode detectar valores de coluna inválidos para todos os tipos de dados de colunas. Portanto, a execução de DBCC CHECKDB com a opção DATA_PURITY em bancos de dados que foram atualizados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode revelar erros preexistentes de valores de colunas. Como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode reparar estes erros automaticamente, o valor da coluna deve ser atualizado manualmente. Se o CHECKDB detectar esse tipo de erro, ele retornará um aviso, o erro número 2570 e informações para identificar a linha afetada e corrigir o erro manualmente.
+Se qualquer erro for relatado pelo DBCC CHECKDB, é recomendável restaurar o banco de dados do backup em vez de executar REPAIR com uma das opções de REPAIR. Se não existir nenhum backup, a execução de REPAIR corrigirá os erros relatados. A opção de reparo a ser usada é especificada no fim da lista de erros relatados. No entanto, a correção de erros usando a opção REPAIR_ALLOW_DATA_LOSS pode exigir que algumas páginas e, portanto, alguns dados, sejam excluídos.    
+
+Em determinadas circunstâncias, podem ser inseridos valores no banco de dados que são inválidos ou estão fora do intervalo baseado no tipo de dados da coluna. O DBCC CHECKDB pode detectar valores de coluna inválidos para todos os tipos de dados de colunas. Portanto, a execução de DBCC CHECKDB com a opção DATA_PURITY em bancos de dados que foram atualizados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode revelar erros preexistentes de valores de colunas. Como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode reparar estes erros automaticamente, o valor da coluna deve ser atualizado manualmente. Se o CHECKDB detectar esse tipo de erro, ele retornará um aviso, o erro número 2570 e informações para identificar a linha afetada e corrigir o erro manualmente.    
+
 O reparo pode ser executado sob uma transação do usuário para permitir que o usuário reverta as alterações feitas. Se reparos forem revertidos, o banco de dados ainda conterá erros e deverá ser restaurado de um backup. Depois de concluir os reparos, faça um backup do banco de dados.
     
 ## <a name="resolving-errors-in-database-emergency-mode"></a>Resolvendo erros no modo de emergência do banco de dados    
@@ -251,7 +250,7 @@ Quando o banco de dados está em modo de emergência e DBCC CHECKDB com a cláus
 -   Se, devido a danos no log de transações, a recuperação do banco de dados não tiver êxito, o log de transações será reconstruído. A reconstrução do log de transações pode resultar na perda de consistência transacional.    
     
 > [!WARNING]
-> A opção REPAIR_ALLOW_DATA_LOSS é um recurso com suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No entanto, não sempre é a melhor opção para colocar um banco de dados em um estado fisicamente consistente. Se for bem-sucedida, a opção REPAIR_ALLOW_DATA_LOSS poderá resultar em alguma perda de dados. Na verdade, ela pode resultar em mais dados perdidos do que se um usuário restaurar o banco de dados por meio do último backup válido. [!INCLUDE[msCoName](../../includes/msconame-md.md)] sempre recomenda uma restauração de usuário do último backup válido como o principal método de recuperação de erros relatados pelo DBCC CHECKDB. A opção REPAIR_ALLOW_DATA_LOSS não é uma alternativa para restaurar por meio de um backup válido. É uma opção emergencial de "último recurso" recomendada para uso somente se não for possível restaurar de um backup.    
+> A opção REPAIR_ALLOW_DATA_LOSS é um recurso com suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No entanto, não sempre é a melhor opção para colocar um banco de dados em um estado fisicamente consistente. Se for bem-sucedida, a opção REPAIR_ALLOW_DATA_LOSS poderá resultar em alguma perda de dados. Na verdade, ela pode resultar em mais dados perdidos do que se um usuário restaurar o banco de dados por meio do último backup válido. [!INCLUDE[msCoName](../../includes/msconame-md.md)] sempre recomenda uma restauração de usuário do último backup válido como o principal método de recuperação de erros relatados pelo DBCC CHECKDB. A opção REPAIR_ALLOW_DATA_LOSS é **não** uma alternativa para a restauração de um backup válido. É uma opção emergencial de "último recurso" recomendada para uso somente se não for possível restaurar de um backup.    
 >     
 >  Depois de recriar o log, não há nenhuma garantia ACID completa.    
 >     
@@ -280,7 +279,7 @@ Se você precisar executar o comando DBCC CHECKDB com a opção REPAIR_ALLOW_DAT
 ## <a name="result-sets"></a>Conjuntos de resultados    
 O DBCC CHECKDB retorna o conjunto de resultados a seguir. Os valores podem variar exceto quando as opções ESTIMATEONLY, PHYSICAL_ONLY ou NO_INFOMSGS estiverem especificadas:
     
-```sql
+```
  DBCC results for 'model'.    
     
  Service Broker Msg 9675, Level 10, State 1: Message Types analyzed: 13.    
@@ -334,13 +333,13 @@ O DBCC CHECKDB retorna o conjunto de resultados a seguir. Os valores podem varia
 
 O DBCC CHECKDB retorna o conjunto de resultados (mensagem) a seguir quando NO_INFOMSGS está especificado:
     
-```sql
+```
  The command(s) completed successfully.
  ```
  
 O DBCC CHECKDB retorna o conjunto de resultados a seguir quando PHYSICAL_ONLY está especificado:
     
-```sql
+```
  DBCC results for 'model'.    
     
  CHECKDB found 0 allocation errors and 0 consistency errors in database 'master'.  
@@ -350,7 +349,7 @@ O DBCC CHECKDB retorna o conjunto de resultados a seguir quando PHYSICAL_ONLY es
  
 O DBCC CHECKDB retorna o conjunto de resultados a seguir quando ESTIMATEONLY está especificado.
     
-```sql
+```
  Estimated TEMPDB space needed for CHECKALLOC (KB)    
     
  -------------------------------------------------  
@@ -395,9 +394,9 @@ DBCC CHECKDB WITH NO_INFOMSGS;
 GO    
 ```    
     
-## <a name="see-also"></a>Consulte Também    
+## <a name="see-also"></a>Consulte também    
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [Exibir o tamanho do arquivo esparso de um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
-[sp_helpdb &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
-[Tabelas do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+[sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
+[System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
 

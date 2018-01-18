@@ -29,12 +29,12 @@ helpviewer_keywords:
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 caps.latest.revision: "155"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 44464415177cffc2e09c5218ecd9440801be7d96
-ms.sourcegitcommit: 0c6d858a507bd38b9b06eb7676736de5d38a1c87
+ms.openlocfilehash: 78bad0a1dfd518bb29c8bbdc5f04d0c173756e9f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
@@ -704,7 +704,7 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
  **:Serverlist**  
  Lista os servidores configurados localmente e os nomes dos servidores que estão transmitindo na rede.  
   
- **: Conectar***nome_do_servidor*[**\\* nome_da_instância*] [-l *timeout*] [-U *user_name* [-P *senha*]]    
+ **: Conectar***nome_do_servidor*[**\\* nome_da_instância*] [-l *timeout*] [-U *user_name* [-P *senha*]]  
  Conecta-se a uma instância do SQL Server. Além disso fecha a conexão atual.  
   
  Opções de tempo limite:  

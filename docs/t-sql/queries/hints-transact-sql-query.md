@@ -60,11 +60,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c678854df4be6f4d228ad3c02edd8ee29bc9d0e8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: b394e34eaf3a8389f4aae97e2676e07ece301c2d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="hints-transact-sql---query"></a>Dicas (Transact-SQL) - consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -158,7 +158,7 @@ ms.lasthandoff: 01/02/2018
   
  Esta dica de consulta desabilita o uso direto de exibições indexadas e índices em exibições indexadas no plano de consulta.  
   
- A exibição indexada não será expandida apenas se a exibição receber referência direta na parte SELECT da consulta e WITH (NOEXPAND) ou WITH (NOEXPAND, INDEX ( *index_value* [ **,***... n*])) é especificado. Para obter mais informações sobre a dica de consulta WITH (NOEXPAND), consulte [FROM](../../t-sql/queries/from-transact-sql.md).  
+ A exibição indexada não será expandida apenas se a exibição receber referência direta na parte SELECT da consulta e WITH (NOEXPAND) ou WITH (NOEXPAND, INDEX ( *index_value* [**, *... n* ])) é especificado. Para obter mais informações sobre a dica de consulta WITH (NOEXPAND), consulte [FROM](../../t-sql/queries/from-transact-sql.md).  
   
  Apenas as exibições na parte SELECT das instruções, inclusive aquelas nas instruções INSERT, UPDATE, MERGE e DELETE são afetadas pela dica.  
   
@@ -185,23 +185,23 @@ ms.lasthandoff: 01/02/2018
   
  Impede que a consulta usando um índice de columnstore otimizado de memória não clusterizado. Se a consulta contiver a dica de consulta para evitar o uso do índice columnstore e uma dica de índice para usar um índice columnstore, as dicas entrarão em conflito e a consulta retornará um erro.  
   
- MAX_GRANT_PERCENT = *por cento*  
+ MAX_GRANT_PERCENT = *percent*  
  O máximo de memória concedida tamanho em porcentagem. A consulta é garantida para não exceder esse limite. O limite real pode ser menor se o administrador de recursos definindo é menor do que isso. Os valores válidos são entre 0.0 e 100.0.  
   
 **Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- MIN_GRANT_PERCENT = *por cento*  
+ MIN_GRANT_PERCENT = *percent*  
  Tamanho em porcentagem de conceder o mínimo de memória = % de limite padrão. A consulta é garantida para obter o máximo (memória necessária, grant min) porque necessário pelo menos a memória é necessária para iniciar uma consulta. Os valores válidos são entre 0.0 e 100.0.  
   
 **Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- MAXDOP *número*  
+ MAXDOP *number*  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Substitui o **grau máximo de paralelismo** opção de configuração de **sp_configure** e administrador de recursos para a consulta especificar essa opção. A dica de consulta MAXDOP pode exceder o valor configurado com sp_configure. Se MAXDOP exceder o valor configurado com o administrador de recursos, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa o valor de MAXDOP Resource Governor, descrito em [ALTER WORKLOAD GROUP &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-workload-group-transact-sql.md). Todas as regras semânticas usadas com o **grau máximo de paralelismo** opção de configuração são aplicáveis quando você usar a dica de consulta MAXDOP. Para obter mais informações, veja [Configurar a opção max degree of parallelism de configuração de servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 > [!WARNING]  
->  Se MAXDOP estiver definido como 0, o servidor escolherá o max degree of parallelism.  
+> Se MAXDOP estiver definido como 0, o servidor escolherá o max degree of parallelism.  
   
  MAXRECURSION *número*  
  Especifica o número máximo de recursões permitidas para esta consulta. *número* é um inteiro não negativo entre 0 e 32767. Quando 0 é especificado, nenhum limite é aplicado. Se essa opção não for especificada, o limite padrão para o servidor será de 100.  
@@ -240,7 +240,7 @@ ms.lasthandoff: 01/02/2018
  Especifica as regras de parametrização que o otimizador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplica à consulta quando ela é compilada.  
   
 > [!IMPORTANT]  
->  A dica de consulta PARAMETERIZATION só pode ser especificada dentro de um guia de plano. Ela não pode ser especificada diretamente dentro de uma consulta.  
+> A dica de consulta PARAMETERIZATION só pode ser especificada dentro de um guia de plano. Ela não pode ser especificada diretamente dentro de uma consulta.  
   
  SIMPLE instrui o otimizador de consulta a tentar parametrização simples. FORCED instrui o otimizador de consulta a tentar parametrização forçada. A dica de consulta PARAMETERIZATION é usada para substituir a configuração atual da opção SET do banco de dados PARAMETERIZATION dentro de um guia de plano. Para obter mais informações, consulte [especificar comportamento de parametrização de consulta por guias de plano usando](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
   
@@ -254,11 +254,10 @@ ms.lasthandoff: 01/02/2018
   
  Se tal plano não for possível, o otimizador de consulta retornará um erro, em vez de adiar a detecção de erros para a execução da consulta. Linhas podem conter colunas de tamanho variável. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] permite definir linhas com o tamanho potencial máximo para além da capacidade de processamento do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Geralmente, apesar do tamanho potencial máximo, um aplicativo armazena linhas cujos tamanhos reais estão dentro dos limites de processamento do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] encontrar uma linha longa demais, será retornado um erro de execução.  
  
- Dica de uso ( **'***hint_name***'** )  
- **Aplica-se a**: aplica-se ao SQL Server (começando com 2016 SP1) e o banco de dados do SQL Azure.
+<a name="use_hint"></a>Dica de uso ( **'***hint_name***'** )  
+ **Aplica-se a**: aplica-se a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
  
  Fornece uma ou mais dicas adicionais para o processador de consulta conforme especificado por um nome de dica **dentro de aspas simples**. 
-  **Aplica-se a**: começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
  Há suporte para os seguintes nomes de dica:
  
@@ -291,7 +290,7 @@ ms.lasthandoff: 01/02/2018
  USE PLAN N**'***xml_plan***'**  
  Força o otimizador de consulta para usar um plano de consulta existente para uma consulta que é especificada pelo **'***xml_plan***'**. USE PLAN não pode ser especificado com instruções INSERT, UPDATE, MERGE ou DELETE.  
   
-Dica de tabela **(***exposed_object_name* [ **,** \<table_hint > [[**,** ]...  *n*  ]] **)** Aplica-se a dica de tabela especificada para a tabela ou exibição que corresponde ao *exposed_object_name*. É recomendável usar uma dica de tabela como uma dica de consulta apenas no contexto de um [guia de plano](../../relational-databases/performance/plan-guides.md).  
+Dica de tabela  **(* exposed_object_name* [ **,** \<table_hint > [[* *,**]...  *n*  ]] **)** Aplica-se a dica de tabela especificada para a tabela ou exibição que corresponde ao *exposed_object_name*. É recomendável usar uma dica de tabela como uma dica de consulta apenas no contexto de um [guia de plano](../../relational-databases/performance/plan-guides.md).  
   
  *exposed_object_name* pode ser uma das seguintes referências:  
   
@@ -301,7 +300,7 @@ Dica de tabela **(***exposed_object_name* [ **,** \<table_hint > [[**,** ]...  *
   
  Quando *exposed_object_name* é especificado sem especificar uma dica de tabela, quaisquer índices especificados na consulta como parte de uma dica de tabela para o objeto é desconsiderado e o uso de índice é determinado pelo otimizador de consulta. Você pode usar essa técnica para eliminar o efeito de uma dica de tabela INDEX quando não puder modificar a consulta original. Consulte o exemplo J.  
   
-**\<table_hint >:: =** {[NOEXPAND] {índice ( *index_value* [,... *n* ] ) | ÍNDICE = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**...] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZÁVEL | INSTANTÂNEO | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK} é a dica de tabela para aplicar à tabela ou exibição que corresponde ao *exposed_object_name* como uma dica de consulta. Para obter uma descrição dessas dicas, consulte [dicas de tabela &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<table_hint >:: =** {[NOEXPAND] {índice ( *index_value* [,... *n* ] ) | ÍNDICE = ( *index_value* ) | FORCESEEK [**(***index_value***(* index_column_name* [**,**...] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZÁVEL | INSTANTÂNEO | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK} é a dica de tabela para aplicar à tabela ou exibição que corresponde ao *exposed_object_name* como uma dica de consulta. Para obter uma descrição dessas dicas, consulte [dicas de tabela &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Dicas de tabela diferentes de INDEX, FORCESCAN e FORCESEEK não são permitidas como dicas de consulta, a não ser que a consulta possua uma cláusula WITH que especifique a dica de tabela. Para obter mais informações, consulte Comentários.  
   
@@ -320,7 +319,7 @@ Dica de tabela **(***exposed_object_name* [ **,** \<table_hint > [[**,** ]...  *
   
 -   Tabelas  
   
--   exibições  
+-   Exibições  
   
 -   Exibições indexadas  
   
@@ -553,10 +552,10 @@ OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DIS
 GO  
 ```  
     
-## <a name="see-also"></a>Consulte Também  
- [Dicas de &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
+## <a name="see-also"></a>Consulte também  
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [sp_control_plan_guide &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
+ [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
  [Sinalizadores de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   

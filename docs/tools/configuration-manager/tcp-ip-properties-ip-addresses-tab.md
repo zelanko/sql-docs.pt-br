@@ -16,15 +16,15 @@ helpviewer_keywords:
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9db69a0432f5f9f85001c4443e27c5b08a272f5c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6f40f56dcf2f46f78ebad2e8095e21cd5e012b3c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Propriedades do TCP/IP (Guia Endereços IP)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use o **propriedades de TCP/IP (guia de endereços IP)** caixa de diálogo para configurar as opções de protocolo TCP/IP para um endereço IP específico. Somente as **Portas TCP Dinâmicas** e a **Porta TCP** podem ser configuradas para todos os endereços de uma só vez com a seleção de **IP Tudo**.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="additional-topics-in-books-online"></a>Tópicos adicionais nos Manuais Online  
  Pesquise no MSDN tópicos como **Configurar um servidor para escuta em uma porta TCP específica (SQL Server Configuration Manager)** e **Configurar o Mecanismo de Banco de Dados para escuta em várias portas TCP**.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Escolhendo um protocolo de rede](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
  [Criando uma cadeia de Conexão válida usando TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)   
  [Serviço Navegador do SQL Server](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  

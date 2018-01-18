@@ -1,7 +1,7 @@
 ---
-title: sys. database_scoped_configurations (Transact-SQL) | Microsoft Docs
+title: sys.database_scoped_configurations (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 06/29/2016
+ms.date: 01/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -23,31 +23,33 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 70b0f5c2ecb1f15828d5ac1c219033c337bb3a8f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e9df8c18b3ca7556b10e3e2d453c41735a07e52
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys. database_scoped_configurations (Transact-SQL)
+# <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Contém uma linha por configuração. 
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**configuration_id**|**int**|ID da opção de configuração.|  
-|**name**|**nvarchar (60)**|O nome da opção de configuração. Para obter informações sobre as configurações possíveis, consulte [ALTER DATABASE SCOPED CONFIGURATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
-|**valor**|**SqlVariant**|O valor definido para essa opção de configuração para a réplica primária.|  
-|**value_for_secondary**|**SqlVariant**|O valor definido para essa opção de configuração para as réplicas secundárias.|  
+|**configuration_id**|**Int**|ID da opção de configuração.|  
+|**name**|**nvarchar(60)**|O nome da opção de configuração. Para obter informações sobre as configurações possíveis, consulte [ALTER DATABASE SCOPED CONFIGURATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
+|**value**|**sqlvariant**|O valor definido para essa opção de configuração para a réplica primária.|  
+|**value_for_secondary**|**sqlvariant**|O valor definido para essa opção de configuração para as réplicas secundárias.|  
   
 ##  <a name="Permissions"></a> Permissões  
  Requer associação à função **pública** .  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando NULL é retornado como o valor para **value_for_secondary**, isso significa que o secundário é definido como primário.  
+ 
+ As configurações serão transferidas com o banco de dados de configuração com escopo de banco de dados. Isso significa que quando um determinado banco de dados é restaurado ou anexado, as definições de configuração existentes permanecem.
   
 ## <a name="see-also"></a>Consulte também  
- [ALTER DATABASE SCOPED CONFIGURATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
+ [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
   
   
