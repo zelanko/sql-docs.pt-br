@@ -17,15 +17,15 @@ helpviewer_keywords:
 - filters [SQL Server], traces
 ms.assetid: 8b317813-4918-4485-b930-77b1951aa00c
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d8d48e66b041d09dbcbbe47ec7702656e250bdf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 00c0ae3a725e90e0a0827e6b49dde9041099eab4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>Modificar um filtro (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Você pode adicionar filtros para modelos de rastreamento, que contêm as definições de rastreamento, para limitar o número de eventos que são coletados por um rastreamento. Limitar o número de eventos coletados pode reduzir os efeitos do desempenho do rastreamento. Se definir filtros para um modelo de rastreamento e achar que o rastreamento não está coletando o tipo de informações de que necessita, você poderá editar o filtro.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
 6.  Clique em **OK** e salve o modelo.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

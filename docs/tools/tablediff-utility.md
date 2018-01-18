@@ -21,15 +21,15 @@ helpviewer_keywords:
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ce5fef28718d257baad0c48f9a0c753bc8b4e25
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b397ef06f491da3d7b74de11c21f0f64dc7f5814
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tablediff-utility"></a>utilitário tablediff
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]O **tablediff** utilitário é usado para comparar os dados em duas tabelas para não convergência e é particularmente útil para solução de problemas não convergência em uma topologia de replicação. Esse utilitário pode ser usado no prompt de comando ou em um arquivo em lotes para executar as seguintes tarefas:  
@@ -170,9 +170,9 @@ tablediff
   
 ## <a name="return-value"></a>Valor de retorno  
   
-|Valor|Description|  
+|Value|Descrição|  
 |-----------|-----------------|  
-|**0**|Êxito|  
+|**0**|Success|  
 |**1**|Erro crítico|  
 |**2**|Diferenças de tabela|  
   
@@ -187,14 +187,14 @@ tablediff
 |----------------------|---------------------------|  
 |**tinyint**|**smallint**, **int**ou **bigint**|  
 |**smallint**|**int** ou **bigint**|  
-|**int**|**bigint**|  
+|**Int**|**bigint**|  
 |**timestamp**|**varbinary**|  
 |**varchar(max)**|**text**|  
 |**nvarchar(max)**|**ntext**|  
-|**varbinary(max)**|**imagem**|  
+|**varbinary(max)**|**image**|  
 |**text**|**varchar(max)**|  
 |**ntext**|**nvarchar(max)**|  
-|**imagem**|**varbinary(max)**|  
+|**image**|**varbinary(max)**|  
   
  Use a opção **-strict** para desabilitar esses mapeamentos e executar uma validação rigorosa.  
   
@@ -216,7 +216,7 @@ tablediff
   
 -   **ntext**  
   
--   **imagem**  
+-   **image**  
   
 ## <a name="permissions"></a>Permissões  
  Para comparar tabelas, é preciso ter permissões SELECT ALL nos objetos de tabela que são comparados.  
@@ -227,7 +227,7 @@ tablediff
   
  Para usar as opções **-o** ou **-f** , é preciso ter permissão de gravação para o local de diretório de arquivos especificado.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Comparar tabelas replicadas para descobrir diferenças &#40;Programação de replicação&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

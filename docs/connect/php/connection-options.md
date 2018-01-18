@@ -15,13 +15,13 @@ ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
 caps.latest.revision: "37"
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3fdc9277c24dc7fdec267c593862aa8ca45802b8
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+ms.openlocfilehash: b90819fbed37aa41a23a257caf287fd563da6ffa
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="connection-options"></a>Opções de conexão
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,9 +34,9 @@ Este tópico lista as opções que são permitidas na matriz associativa (ao usa
 |ApplicationIntent|Cadeia de caracteres|Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. Os valores possíveis são ReadOnly e ReadWrite.<br /><br />Para obter mais informações sobre o suporte do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] para [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], consulte [PHP Driver for SQL Server Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)(Driver do PHP para o suporte do SQL Server para alta disponibilidade e recuperação de desastre).|ReadWrite|  
 |AttachDBFileName|Cadeia de caracteres|Especifica qual arquivo de banco de dados o servidor deve anexar.|Nenhum valor definido.|  
 |Autenticação|Uma das seguintes cadeias de caracteres:<br /><br />'SqlPassword'<br /><br />'ActiveDirectoryPassword'|Especifica o modo de autenticação.|Não definido.|  
-|CEKeystoreProvider<br />CEKeystoreName<br />CEKeystoreEncryptKey|Cadeia de caracteres|Especifique o caminho, o nome e a chave de criptografia para um provedor de armazenamento de chaves personalizado para o recurso sempre criptografado. Todos os três valores devem ser definidos para configurar corretamente o provedor de armazenamento de chaves personalizado ao fazer uma conexão. Para obter mais informações, consulte [habilitando sempre criptografado em um aplicativo PHP](../../connect/php/enabling-always-encrypted-php-application.md).|Nenhum valor definido.|
+|CEKeystoreProvider<br />CEKeystoreName<br />CEKeystoreEncryptKey|Cadeia de caracteres|Especifique o caminho, o nome e a chave de criptografia para um provedor de armazenamento de chaves personalizado para o recurso sempre criptografado. Todos os três valores devem ser definidos para configurar corretamente o provedor de armazenamento de chaves personalizado ao fazer uma conexão. |Nenhum valor definido.|
 |CharacterSet<br /><br />(sem suporte no driver PDO_SQLSRV)|Cadeia de caracteres|Especifica o conjunto de caracteres usado para enviar dados ao servidor.<br /><br />Os valores possíveis são SQLSRV_ENC_CHAR e UTF-8. Para obter mais informações, consulte [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
-|ColumnEncryption|**Habilitado** ou **desabilitado**|Especifica se o recurso sempre criptografado está habilitado ou não. Para obter mais informações, consulte [habilitando sempre criptografado em um aplicativo PHP](../../connect/php/enabling-always-encrypted-php-application.md).|Desabilitado|  
+|ColumnEncryption|**Habilitado** ou **desabilitado**|Especifica se o recurso sempre criptografado está habilitado ou não. |Desabilitado|  
 |ConnectionPooling|1 ou **true** para pool de conexões ativado.<br /><br />0 ou **false** para pool de conexões desativado.|Especifica se a conexão é atribuída de um pool de conexão (1 ou **true**) ou não (0 ou **false**).<sup> 1</sup>|**True** (1)|  
 |banco de dados|Cadeia de caracteres|Especifica o nome do banco de dados em uso para a conexão que está sendo estabelecida<sup>2</sup>.|O banco de dados padrão para o logon que está sendo usado.|  
 |Driver|Cadeia de caracteres|Especifica o Microsoft ODBC driver usado para se comunicar com o SQL Server.<br /><br />Os valores possíveis são:<br />17 de Driver ODBC para SQL Server<br />ODBC Driver 13 para SQL Server<br />Driver ODBC 11 para SQL Server (somente Windows).|Quando a palavra-chave Driver não for especificada, os Drivers da Microsoft para PHP para SQL Server tenta localizar a existência do driver ODBC da Microsoft com suporte no sistema, começando com a versão mais recente do ODBC e assim por diante.|  

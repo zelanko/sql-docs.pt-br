@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15243df46fad807a3078c9dfcd2c9043670ab05f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 91141f2ae083baf9792e4de9248de488b4146d07
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propriedades do SQL Server (guia Parâmetros de Inicialização)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use essa caixa de diálogo para adicionar ou remover parâmetros de inicialização para o [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Os parâmetros de inicialização podem ter um grande efeito no desempenho do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Antes de adicionar ou alterar os parâmetros de inicialização, consulte o tópico "Usando as opções de inicialização do Serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/21/2017
  Para remover um parâmetro, selecione um parâmetro e clique em **Remover**.  
   
 ## <a name="parameter-format"></a>Formato do parâmetro  
- Não insira um separador entre parâmetros. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager adiciona o separador automaticamente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager impõe os seguintes requisitos de parâmetros.  
+ Não insira um separador entre parâmetros. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager adiciona o separador automaticamente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager impõe os seguintes requisitos de parâmetro.  
   
 -   Espaços à direita e à esquerda são cortados de qualquer parâmetro de inicialização.  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
 |Parâmetro|Descrição breve|  
 |---------------|-----------------------|  
-|-M|Inicia uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em modo de usuário único.|  
+|-m|Inicia uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em modo de usuário único.|  
 |-T1204|Retorna os recursos e tipos de bloqueios que participam de um deadlock e também o comando atual afetado.|  
 |-T1224|Desabilita o escalonamento de bloqueios com base no número de bloqueios.|  
 |-T3608|Impede que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicie ou recupere automaticamente qualquer banco de dados, exceto o banco de dados mestre.|  

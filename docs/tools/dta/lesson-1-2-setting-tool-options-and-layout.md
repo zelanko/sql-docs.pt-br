@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: Database Engine [SQL Server], tutorials
 ms.assetid: 43e97ce0-97bc-4a27-9485-5bbeb7190b85
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc759f4beb67d96abad27dc5bdbe0a4e322f330a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 68a4c894fb4defe848b146c59b3ad159ac3da287
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-2---setting-tool-options-and-layout"></a>Lição 1-2-Layout e opções da ferramenta de configuração
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Você pode definir opções que configuram o que a interface gráfica do usuário (GUI) orientador de otimização do mecanismo de banco de dados exibe na inicialização, a fonte usada, e outra ferramenta de funcionalidade para melhor suporte como usá-lo. As práticas nesta página irão familiarizá-lo com as opções de definição e como defini-las.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/21/2017
     -   Por padrão, **Perguntar antes de parar a análise da sessão** está marcada para evitar parar uma sessão de ajuste acidentalmente antes que o Orientador de Otimização do Mecanismo de Banco de Dados termine de analisar uma carga de trabalho.  
   
 ## <a name="next-lesson"></a>Próxima lição  
-[Lição 2: usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[Lição 2: Usando o orientador de otimização do mecanismo de banco de dados](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   

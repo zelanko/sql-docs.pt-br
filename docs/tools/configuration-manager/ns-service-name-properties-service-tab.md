@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d326c1a962efbfc66a4e69ac1c4c6508006b33c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 23e82062abc0441e70fd8e97b3c2adcb37eeb83e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>NS$&lt;nome do serviço&gt; propriedades (guia serviço)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Esse serviço é o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] service. Os valores de propriedade em cinza claro não podem ser alterados com o uso deste aplicativo.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/21/2017
  **Código de Saída**  
  Quando ocorre um erro, o número do erro é exibido nesta caixa. Use esse número para solucionar problemas de falhas procurando-o na Base de Dados de Conhecimento [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou forneça o número à sua equipe de suporte técnico.  
   
- **Nome do Host**  
+ **Host Name**  
  Exibe o nome do computador ou cluster que está executando a pesquisa de texto completo.  
   
  **Nome**  

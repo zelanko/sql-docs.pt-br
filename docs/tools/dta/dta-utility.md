@@ -23,15 +23,15 @@ helpviewer_keywords:
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 caps.latest.revision: "58"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 21deb8edf30db7281ebacfd7b1176070ce13cc6e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e003329968d6ebd960f66c56051a20ac91523e47
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dta-utility"></a>utilitário dta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O **dta** utilitário é a versão do prompt de comando do Orientador de otimização do mecanismo de banco de dados. O utilitário **dta** foi projetado para permitir o uso da funcionalidade do Orientador de Otimização do Mecanismo de Banco de Dados em aplicativos e scripts.  
@@ -158,7 +158,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|-------------|  
 |*database_name*|*database_name* especificado com a opção **–D**||  
 |*owner_name*|**dbo**|*owner_name* deve ser **dbo**. Se qualquer outro valor for especificado, a execução de **dta** falhará e retornará um erro.|  
-|*table_name*|Nenhum||  
+|*table_name*|Nenhuma||  
   
  Se um arquivo for usado, especifique .xml como sua extensão. Por exemplo, TuningLog.xml.  
   
@@ -171,7 +171,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  Especifica que tipos de estruturas de design físico **dta** deve incluir na recomendação. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento. Quando nenhum valor é especificado, **dta** usa o padrão **-fa****IDX**.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |IDX_IV|Índices e exibições indexadas.|  
 |IDX|Somente índices.|  
@@ -192,7 +192,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  Especifica quais estruturas de design físico **dta** deve reter ao gerar sua recomendação. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Nenhuma|Nenhuma estrutura existente|  
 |ALL|Todas as estruturas existentes|  
@@ -203,7 +203,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  Especifica se as novas estruturas de design físico (índices e exibições indexadas) propostas por **dta** devem ser particionadas e como particioná-las. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Nenhuma|Nenhum particionamento|  
 |FULL|Particionamento completo (escolha para melhorar o desempenho).|  
@@ -220,7 +220,7 @@ dta -d AdventureWorks2012 ...
  **-ip**  
  Especifica que o cache de plano seja usado como a carga de trabalho. Os primeiros 1.000 eventos de cache de plano para bancos de dados selecionados explicitamente são analisados. Esse valor pode ser alterado usando a opção **–n** .  
  
-**-QI**  
+**-iq**  
  Especifica que o repositório de consultas seja usado como a carga de trabalho. Os primeiros 1.000 eventos do repositório de consultas para bancos de dados selecionados explicitamente são analisados. Esse valor pode ser alterado usando a opção **–n** .  Consulte [repositório de consultas](../../relational-databases/performance/how-query-store-collects-data.md) e [ajuste de banco de dados usando cargas de trabalho do repositório de consultas](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) para obter mais informações.
  ||  
 |-|  
@@ -231,7 +231,7 @@ dta -d AdventureWorks2012 ...
  Especifica o caminho e o nome do arquivo de carga de trabalho a ser usado como entrada para ajuste. O arquivo deve estar em um destes formatos: .trc (arquivo de rastreamento do SQL Server Profiler), .sql (arquivo de SQL) ou .log (arquivo de rastreamento do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Um arquivo de carga de trabalho ou uma tabela de carga de trabalho deve ser especificada.  
   
  **-it** *workload_trace_table_name*  
- Especifica o nome de uma tabela que contém o rastreamento de carga de trabalho para ajuste. O nome é especificado no formato: [*database_name*]**.**[*owner_name*]**.***table_name*.  
+ Especifica o nome de uma tabela que contém o rastreamento de carga de trabalho para ajuste. O nome é especificado no formato: [*database_name*]**.** [*owner_name*] **. * * * table_name*.  
   
  A tabela a seguir mostra os valores padrão de cada um:  
   
@@ -239,7 +239,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|  
 |*database_name*|*database_name* especificado com a opção **–D** .|  
 |*owner_name*|**dbo**.|  
-|*table_name*|Nenhum.|  
+|*table_name*|Nenhuma.|  
   
 > [!NOTE]  
 >  *owner_name* deve ser **dbo**. Se qualquer outro valor for especificado, a execução de **dta** falhará e um erro será retornado. Também observe que uma tabela de carga de trabalho ou um arquivo de carga de trabalho deve ser especificado.  
@@ -253,7 +253,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  Especifica se são criadas estruturas de design físico online. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |OFF|Nenhuma estrutura de design físico recomendada pode ser criada online.|  
 |ON|Todas as estruturas de design físico recomendadas podem ser criadas online.|  
@@ -306,7 +306,7 @@ Nesse caso, DTA será usar o repositório de consultas como a fonte de carga de 
  **-rl** *analysis_report_list*  
  Especifica a lista de relatórios de análise a serem gerados. A seguinte tabela lista os valores que podem ser especificados para esse argumento:  
   
-|Valor|Relatório|  
+|Value|Relatório|  
 |-----------|------------|  
 |ALL|Todos os relatórios de análise|  
 |STMT_COST|Relatório de custo da instrução|  
@@ -420,7 +420,7 @@ AdventureWorks2012.Production.Product  2000000
 dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.txt  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de utilitários de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](../../tools/command-prompt-utility-reference-database-engine.md)   
  [Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   

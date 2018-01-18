@@ -17,15 +17,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb73030cc1a2788a30deea03da2892351e614d2c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e4f82ff987d465b6dc765d06b83652e398069274
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="issue-element-ssbdiagnose"></a>Elemento Issue (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Reporta um problema que foi encontrado o **ssbdiagnose** utilitário. O arquivo de saída XML de **ssbdiagnose** tem um elemento Issue por problema reportado.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|attribute|Description|  
+|Atributo|Description|  
 |---------------|-----------------|  
 |**type**|Identifica qual categoria de problema o elemento Issue está reportando:<br /><br /> **"Diagnóstico"** reporta um problema de configuração encontrado durante a análise da configuração de um [!INCLUDE[ssSB](../../includes/sssb-md.md)] .<br /><br /> **"Problema"** reporta um problema que impediu o **ssbdiagnose** de concluir sua análise. Corrija o problema e execute o **ssbdiagnose**novamente.<br /><br /> **"Evento"** reporta um evento [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] encontrado quando você executa uma verificação de **-RUNTIME** . Os eventos só serão reportados se **-SHOWEVENTS** for especificado.|  
 |**código**|Identifica o número de erro da mensagem.|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**string**, tamanho é ilimitado.|  
 |**Value**|Retorna o texto da mensagem de erro.|  
@@ -66,8 +66,8 @@ ms.lasthandoff: 12/21/2017
   
 |Relação|Elementos|  
 |------------------|--------------|  
-|**Elemento pai**|[Elemento DiagnosticInformation &#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
-|**Elementos filho**|Nenhum|  
+|**Elemento pai**|[Elemento DiagnosticInformation &#40; ssbdiagnose &#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
+|**Elementos filho**|Nenhuma|  
   
 ## <a name="example"></a>Exemplo  
  Este elemento reporta um erro 1102 para um banco de dados que não tenha uma chave mestra e o erro foi encontrado durante a análise de uma configuração do [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
@@ -76,7 +76,7 @@ ms.lasthandoff: 12/21/2017
 <Issue type="Diagnosis" code="1102" server="TestComputer" database="TargetDB" object="TargetDB">The master key was not found</diagnostic>  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [Utilitário ssbdiagnose &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
+## <a name="see-also"></a>Consulte também  
+ [Utilitário ssbdiagnose &#40; O Service Broker &#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
   

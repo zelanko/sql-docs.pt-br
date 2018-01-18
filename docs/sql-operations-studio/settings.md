@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2edea069c05e7ac0316042250f336f1a8c455af0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6e87461fb2973bec630ed21975a80cdbc17cd1cd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="user-and-workspace-settings"></a>Configurações do usuário e espaço de trabalho
 
@@ -47,12 +47,22 @@ Alterações nas configurações serão recarregadas por [!INCLUDE[name-sos](../
 
 Dependendo de sua plataforma, o arquivo de configurações do usuário está localizado aqui:
 
-* **Windows**`%APPDATA%\sqlops\User\settings.json`
-* **Mac**`$HOME/Library/Application Support/sqlops/User/settings.json`
-* **Linux**`$HOME/.config/sqlops/User/settings.json`
+* **Windows** `%APPDATA%\sqlops\User\settings.json`
+* **Mac** `$HOME/Library/Application Support/sqlops/User/settings.json`
+* **Linux** `$HOME/.config/sqlops/User/settings.json`
 
 O arquivo de configuração do espaço de trabalho está localizado sob o `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` pasta em seu projeto.
 
+## <a name="hot-exit"></a>Saída ativa
+
+Operações de SQL Studio será Lembre-se de alterações não salvas arquivos quando você sair por padrão. Isso é o mesmo que o recurso de saída ativa no código do Visual Studio.
+
+Por padrão, a saída ativa está desativado. Habilitar acesso saída editando o `files.hotExit` configuração. Para obter detalhes, consulte [Hot Exit (na documentação do Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
+
+
+## <a name="tab-color"></a>Cor da guia
+
+Para simplificar a identificar quais conexões que você está trabalhando com guias abertas no editor podem ter suas cores definidas para corresponder a cor do grupo de servidores, a conexão pertence. Por padrão, as cores de guia são desativados por padrão. Habilitar cores guia editando o `sql.tabColorMode` configuração.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 

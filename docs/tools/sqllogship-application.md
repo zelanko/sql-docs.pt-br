@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d98cbf2e1e18538fe20fd4ff76319b8b69d1e05
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ec4a757306f0e63e2e85b70526a211667a70f6e6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqllogship-application"></a>Aplicativo sqllogship
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O **sqllogship** aplicativo executa um backup, cópia, ou operação de restauração e tarefas de limpeza associadas para uma configuração de envio de log. A operação é realizada em uma instância específica do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para um banco de dados específico.  
@@ -67,10 +67,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |4|Emite todas as mensagens de depuração e de rastreamento.|  
   
  **–logintimeout** *timeout_value*  
- Especifica o tempo designado para tentar efetuar o login à instância do servidor antes da tentativa expirar. O padrão é 15 segundos. *timeout_value* é **int***.*  
+ Especifica o tempo designado para tentar efetuar o login à instância do servidor antes da tentativa expirar. O padrão é 15 segundos. *timeout_value* é **int *.*  
   
  **-querytimeout** *timeout_value*  
- Especifica o tempo designado para iniciar a operação especificada antes da tentativa expirar. O padrão é sem período de expiração. *timeout_value* é **int***.*  
+ Especifica o tempo designado para iniciar a operação especificada antes da tentativa expirar. O padrão é sem período de expiração. *timeout_value* é **int *.*  
   
 ## <a name="remarks"></a>Remarks  
  Recomendamos a utilização das opções de backup, copiar e restaurar para realizar as tarefas de backup, copiar e restaurar quando for possível. Para iniciar esses trabalhos em uma operação em lote ou em outro aplicativo, chame o procedimento armazenado [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) .  
@@ -91,13 +91,13 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 > [!NOTE]  
 >  Para encontrar os caminhos dos diretórios de backup e cópia, execute o procedimento armazenado **sp_help_log_shipping_secondary_database** ou exiba a tabela **log_shipping_secondary** no **msdb**. Os caminhos dos diretórios de backup e de destino estão nas colunas **backup_source_directory** e **backup_destination_directory** , respectivamente.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [log_shipping_primary_databases &#40; Transact-SQL &#41;](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)   
- [log_shipping_secondary &#40; Transact-SQL &#41;](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md)   
- [sp_cleanup_log_shipping_history &#40; Transact-SQL &#41;](../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
- [sp_help_log_shipping_primary_database &#40; Transact-SQL &#41;](../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)   
- [sp_help_log_shipping_secondary_database &#40; Transact-SQL &#41;](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)   
+ [log_shipping_primary_databases &#40;Transact-SQL&#41;](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)   
+ [log_shipping_secondary &#40;Transact-SQL&#41;](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md)   
+ [sp_cleanup_log_shipping_history &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
+ [sp_help_log_shipping_primary_database &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)   
+ [sp_help_log_shipping_secondary_database &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)   
  [sp_start_job &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)  
   
   

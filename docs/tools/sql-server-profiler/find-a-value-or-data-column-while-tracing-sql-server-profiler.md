@@ -17,15 +17,15 @@ helpviewer_keywords:
 - traces [SQL Server], searching while trace running
 ms.assetid: fa5212af-1f49-4227-9d80-58003062146f
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe703bd160d698de591cad5ce321c0cdf4b544a8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 30ee97e1dc5dceb6ecc9b5ac3deef0e7d065344b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>Localizar um valor ou coluna de dados durante um rastreamento (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Este tópico descreve como pesquisar uma coluna de dados ou valor específico na saída de rastreamento em execução usando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
      A pesquisa é iniciada na linha selecionada na Etapa 1.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [Modelos e permissões do SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   

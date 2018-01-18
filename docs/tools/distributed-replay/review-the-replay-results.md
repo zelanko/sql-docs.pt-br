@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad034ad1cd4bc4f2c2945365e186262d500a6776
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ffcc2c8b5a8eb97acea95e841b24ca800b87df9d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="review-the-replay-results"></a>Revisar os resultados da reprodução
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Após o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recurso Distributed Replay conclui uma reprodução distribuída, a atividade de reprodução para cada cliente pode ser capturada e salva em arquivos de rastreamento de resultado em cada cliente. Para capturar essa atividade, você deve usar o parâmetro **-o** ao executar a ferramenta de administração com a opção **reproduzir** . Para obter mais informações sobre a opção de reprodução, consulte [Opção Reprodução &#40;Ferramenta de administração de reprodução distribuída&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="column-descriptions-for-result-trace"></a>Descrições de coluna para rastreamento de resultado  
  A tabela a seguir descreve as colunas dos dados de rastreamento de resultado.  
   
-|Nome da coluna de dados|Tipo de Dados|Description|ID da coluna|  
+|Nome da coluna de dados|Tipo de Dados|Descrição|ID da coluna|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|**nvarchar**|O nome da classe de evento.|1|  
 |EventSequence|**bigint**|Para erros de provedor, e erros e avisos internos, esta é a sequência de eventos de captura que corresponde ao erro ou aviso.<br /><br /> Para todas as outras classes de eventos, esta é a sequência do evento nos dados de rastreamento originais.|2|  
@@ -70,22 +70,22 @@ ms.lasthandoff: 12/21/2017
 |TextData|**ntext**|O conteúdo de TextData depende da EventClass.<br /><br /> Para Audit Login e ExistingConnection, este é a opção definida para a conexão.<br /><br /> Para SQL:BatchStarting, este é o corpo da solicitação de lote.<br /><br /> Para RPC:Starting, este é o procedimento armazenado que foi chamado.<br /><br /> Para Replay Settings Event, esta coluna contém as configurações que são definidas no arquivo de configuração de reprodução.<br /><br /> Para Replay Statistics Event, ela contém as seguintes informações:<br /><br /> -O SQL Server de destino da reprodução<br /><br /> -Número total de eventos reproduzíveis<br /><br /> -O número de erros de provedor<br /><br /> -O número de erros internos<br /><br /> -Avisos internos<br /><br /> -Número total de erros<br /><br /> -Taxa de passagem global<br /><br /> -A hora da reprodução (HH:MM:SS:MMM)<br /><br /> Para Replay Result Set Event, mostra a lista de cabeçalhos da coluna de resultados de retorno.<br /><br /> Para Replay Result Row Event, mostra o valor de retorno de todas as colunas dessa linha.<br /><br /> Para Replay Internal Warning e Replay Provider Error, esta coluna contém os avisos ou erros de provedor.|4|  
 |Attention|**bigint**|A duração da atenção (em microssegundos) para o evento. Isso é calculado a partir do evento Attention do rastreamento de captura. Se não havia nenhum tempo limite de consulta especificado para o evento, esta coluna não será populada (null).|5|  
 |SubmitTime|**datetime**|A hora em que o evento foi enviado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|6|  
-|IsSuccessful|**int**|Um sinalizador booliano que indica se um evento específico foi executado com êxito, e se conjuntos de resultados foram retornados ao cliente.<br /><br /> Um evento que gera um aviso (como quando um evento é cancelado devido a Attention ou um tempo limite especificado pelo usuário) é considerado bem-sucedido.<br /><br /> IsSuccessful pode ter um dos seguintes valores:<br /><br /> 1 = êxito<br /><br /> 0 = falha|7|  
+|IsSuccessful|**Int**|Um sinalizador booliano que indica se um evento específico foi executado com êxito, e se conjuntos de resultados foram retornados ao cliente.<br /><br /> Um evento que gera um aviso (como quando um evento é cancelado devido a Attention ou um tempo limite especificado pelo usuário) é considerado bem-sucedido.<br /><br /> IsSuccessful pode ter um dos seguintes valores:<br /><br /> 1 = êxito<br /><br /> 0 = falha|7|  
 |Duration [microsec]|**bigint**|A duração do tempo de resposta (em microssegundos) para o evento. A medição começa quando o evento logon/log off/RPC/Language é enviado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Se o evento obtiver êxito, a medição terminará quando o conjunto de resultados completo tiver sido consumido.<br /><br /> Se o evento não obtiver êxito, a medição terminará na hora da falha ou do cancelamento do evento.|8|  
 |RowCount|**bigint**|Populado de acordo com o valor de `<RecordRowCount>` no arquivo de configuração de reprodução:<br /><br /> Se `<RecordRowCount>` for igual a Yes, esta célula conterá o número de linhas do conjunto de resultados que são retornadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Se `<RecordRowCount>` for igual a No, esta célula não será populada (null).|9|  
-|CaptureSPID|**int**|A ID da sessão de captura do evento.|10|  
-|ConnectionID|**int**|A ID da conexão de captura do evento.|11|  
-|ReplaySPID|**int**|A ID da sessão de reprodução do evento.|12|  
+|CaptureSPID|**Int**|A ID da sessão de captura do evento.|10|  
+|ConnectionID|**Int**|A ID da conexão de captura do evento.|11|  
+|ReplaySPID|**Int**|A ID da sessão de reprodução do evento.|12|  
 |DatabaseName|**nvarchar**|O nome do banco de dados no qual a instrução do usuário está sendo executada.|13|  
 |LoginName|**nvarchar**|O nome de logon do usuário. Pode ser um logon de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou as credenciais de logon do Microsoft Windows no formato *nome_do_domínio*\\*nome_do_usuário*.|14|  
 |CaptureHostName|**nvarchar**|O nome do computador no qual o serviço cliente está sendo executado durante a captura.|15|  
 |ReplayHostName|**nvarchar**|O nome do computador em que o aplicativo cliente está sendo executado durante a reprodução.|16|  
 |ApplicationName|**nvarchar**|O nome do aplicativo cliente que criou a conexão com a conexão com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante a captura.|17|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurar o Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [Requisitos do Distributed Replay](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Opções de linha de comando da ferramenta de administração &#40; Distributed Replay Utility &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

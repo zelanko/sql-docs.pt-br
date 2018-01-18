@@ -27,15 +27,15 @@ helpviewer_keywords:
 - logs [SQL Server], Windows application logs
 ms.assetid: e250336b-0695-44f6-a42f-23222f94e377
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f4d0ddce880cbb3ba3ca2cd422543ced125c08f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dad9cc5bae465697932b88986e4eb45deabb3bc9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="monitoring-the-error-logs"></a>Monitorando os logs de erros
 O [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registra certos eventos de sistema e eventos definidos pelo usuário ao log de erros [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e no log do aplicativo do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Ambos os logs registram automaticamente todos os eventos com carimbos de hora. Use as informações do log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para solucionar problemas relacionados ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -49,7 +49,7 @@ O [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx
   
 |Tópico|Description|  
 |-----------|-----------------|  
-|[Exibindo o log de erros do SQL Server](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)|Contém informações sobre o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e como exibi-lo.|  
-|[Exibindo o log do aplicativo do Windows](../../tools/configuration-manager/viewing-the-windows-application-log.md)|Contém informações sobre o log do aplicativo do Windows e como exibi-lo.|  
+|[Exibindo o Log de erros do SQL Server](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)|Contém informações sobre o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e como exibi-lo.|  
+|[Exibindo o Log de aplicativo do Windows](../../tools/configuration-manager/viewing-the-windows-application-log.md)|Contém informações sobre o log do aplicativo do Windows e como exibi-lo.|  
   
   
