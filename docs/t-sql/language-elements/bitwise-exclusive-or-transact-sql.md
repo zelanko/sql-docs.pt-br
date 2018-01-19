@@ -26,15 +26,15 @@ helpviewer_keywords:
 - bitwise exclusive OR (^)
 ms.assetid: f38f0ad4-46d0-40ea-9851-0f928fda5293
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4923d20bdeb7e625157a47c0f70e685895c41550
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 897e37f19765ac43c881f2646e0bf0cc91d3205a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="-bitwise-exclusive-or-transact-sql"></a>^ (OR exclusivo bit a bit) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,10 +63,10 @@ expression ^ expression
   
  **tinyint** se os valores de entrada são **tinyint**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O  **^**  operador bit a bit executa um lógica OR exclusivo bit a bit entre as duas expressões, usando cada bit para ambas as expressões correspondente. Os bits no resultado são definidos como 1 se um dos dois bits  (mas não ambos) para o bit atual a ser resolvido nas expressões de entrada tiver o valor de 1. Se os dois bits forem 0 ou 1, o bit no resultado será limpo com o valor 0.  
   
- Se as expressões de esquerda e direita têm tipos de dados inteiros diferentes (por exemplo, à esquerda *expressão* é **smallint** e *expressão* é  **int**), o argumento do tipo de dados menor é convertido para o tipo de dados maior. Nesse caso, o **smallint***expressão* é convertido em um **int**.  
+ Se as expressões de esquerda e direita têm tipos de dados inteiros diferentes (por exemplo, à esquerda *expressão* é **smallint** e *expressão* é  **int**), o argumento do tipo de dados menor é convertido para o tipo de dados maior. Nesse caso, o **smallint * expressão* é convertido em um **int**.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma tabela usando o **int** dados de tipo para armazenar os valores originais e insere os dois valores em uma linha.  
@@ -112,8 +112,8 @@ GO
 
   
 ## <a name="see-also"></a>Consulte também  
- [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Operadores bit a bit &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
  [^ = &#40; Bit a bit exclusivo ou atribuição &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)   
  [Composta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  

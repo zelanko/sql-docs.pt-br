@@ -24,15 +24,15 @@ helpviewer_keywords:
 - INTERSECT operator
 ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e3580ace2c5b4295c0fecbfd7239a988137f8949
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 706aeaab949399ab6d235a368fa354c32cc54d98
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>Definir operadores - exceto e INTERSECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- \<*query_specification*> | ( \< *query_expression*>)  
+ \<*query_specification*> | ( \<*query_expression*> )  
  É uma especificação ou expressão de consulta que retorna dados a serem comparados com os dados de outra especificação ou expressão de consulta. As definições das colunas que fazem parte de uma operação EXCEPT ou INTERSECT não precisam ser iguais, mas devem ser compatíveis na conversão implícita. Quando tipos de dados diferem, o tipo que é usado para executar a comparação e retornar resultados é determinado com base nas regras de [precedência de tipo de dados](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
  Quando os tipos são iguais mas diferem em precisão, escala ou extensão, o resultado é determinado com base nas mesmas regras para expressões de combinação. Para obter mais informações, consulte [Precisão, escala e comprimento &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
  INTERSECT  
  Retorna qualquer valor distinto retornado pela consulta à esquerda e à direita do operador INTERSECT.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando os tipos de dados de colunas comparáveis retornadas pelas consultas à esquerda e à direita do EXCEPT ou INTERSECT operadores são os tipos de dados de caractere com agrupamentos diferentes, a comparação necessária é executada de acordo com as regras de [ precedência de agrupamento](../../t-sql/statements/collation-precedence-transact-sql.md). Se essa conversão não puder ser executada, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retornará um erro.  
   
  Ao comparar valores de colunas para determinar linhas DISTINTAS, dois valores NULL são considerados iguais.  

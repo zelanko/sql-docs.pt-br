@@ -23,15 +23,15 @@ helpviewer_keywords:
 - expressions [SQL Server], predicates
 ms.assetid: ddbc530c-f44d-4551-9ca3-3430258eb6c0
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: df3ed2d88551928b239ff69ecdb86e2a3332f204
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fc7daaa6e29ca0f250db83838f29cfda6148cc1c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="predicates"></a>Predicados
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ ms.lasthandoff: 11/17/2017
 |-|  
 |[CONTAINS](../../t-sql/queries/contains-transact-sql.md)|  
 |[FREETEXT](../../t-sql/queries/freetext-transact-sql.md)|  
-|[FOR &#91; NÃO &#93; NULL](../../t-sql/queries/is-null-transact-sql.md)|  
+|[IS &#91;NOT&#93; NULL](../../t-sql/queries/is-null-transact-sql.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [ENTRE &#40; Transact-SQL &#41;](../../t-sql/language-elements/between-transact-sql.md)   
- [EXISTE &#40; Transact-SQL &#41;](../../t-sql/language-elements/exists-transact-sql.md)   
- [IN &#40; Transact-SQL &#41;](../../t-sql/language-elements/in-transact-sql.md)   
- [COMO &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [BETWEEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/between-transact-sql.md)   
+ [EXISTS &#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md)   
+ [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [Critério de pesquisa &#40; Transact-SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md)  
   
   

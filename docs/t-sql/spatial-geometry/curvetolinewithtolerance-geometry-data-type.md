@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: CurveToLineWithTolerance method (geometry)
 ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: caa3a00f6ed962122288fa0d71a4f2d2f92bd6f7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2f7429f54395b5a765c84939aac2ce7fe0a94c08
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ Retorna uma aproximação poligonal de uma **geometria** instância que contém 
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *tolerância*  
+ *tolerance*  
  É um **duplo** expressão que define o erro máximo entre o segmento de arco circular original e sua aproximação linear.  
   
- *relativo*  
+ *relative*  
  É um **bool** expressão que indica se deve usar um máximo relativo para o desvio. Quando o relativo é definido como falso (0), um máximo absoluto é definido para o desvio que um aproximado linear poderá ter. Quando o relativo é definido como verdadeiro (1), a tolerância é calculada como um produto do parâmetro de tolerância e do diâmetro da caixa delimitadora do objeto espacial.  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -52,7 +52,7 @@ Retorna uma aproximação poligonal de uma **geometria** instância que contém 
 ## <a name="exceptions"></a>Exceções  
  A definição da tolerância <= 0 lança uma exceção `ArgumentOutOfRange`.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método pode especificar um valor de tolerância de erro para o resultante **LineString**.  
   
  A tabela a seguir mostra o tipo de instância retornado por `CurveToLineWithTolerance()`para vários tipos.  

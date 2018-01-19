@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: STNumCurves method (geometry)
 ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 26d949643c6af926b96ea1239f75226c470d5a08
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3cdd2b7f3cf7b5edac7da88320fbffd80abb149c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ Esse método retorna o número de curvas em uma **geometria** instância quando 
   
  Tipo de retorno CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Vazio unidimensional **geometria** instância retorna 0. **NULO** é retornado quando o **geometria** instância não é uma instância unidimensional ou é uma instância não inicializada.  
   
 ## <a name="examples"></a>Exemplos  

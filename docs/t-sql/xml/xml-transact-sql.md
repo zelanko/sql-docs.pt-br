@@ -1,5 +1,5 @@
 ---
-title: XML (Transact-SQL) | Microsoft Docs
+title: xml (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: xml data type [SQL Server], about xml data type
 ms.assetid: 9198f671-8e61-4ca4-9c3a-859f84020e62
 caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7dd987cd38c6f4b15e965b2510f7ae91b667a43a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b738180bbf6b2f3f18bbd38ebfe7139736f33cee
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-transact-sql"></a>xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
  *xml_schema_collection*  
  É o nome de uma coleção de esquema XML. Para criar um tipo **xml** coluna ou variável, você pode opcionalmente especificar o nome de coleção de esquema XML. Para obter mais informações sobre digitados e não tipados XML, consulte [comparar XML digitado com XML não digitado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A representação armazenada de **xml** instâncias de tipo de dados não podem exceder 2 gigabytes (GB) de tamanho.  
   
  As facetas CONTENT e DOCUMENT se aplicam apenas a XML com tipo. Para obter mais informações, consulte [comparar XML digitado com XML não digitado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
@@ -73,7 +73,7 @@ GO
 ## <a name="see-also"></a>Consulte também  
  [Conversão de tipo de dados &#40; mecanismo de banco de dados &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Métodos de tipos de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [Métodos de tipo de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Referência de linguagem XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
   
   

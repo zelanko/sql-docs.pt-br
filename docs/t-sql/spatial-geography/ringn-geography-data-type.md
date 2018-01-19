@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: RingN method
 ms.assetid: 30f47275-2727-4d22-bbec-c0c54bcb3ac2
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2dd2ac2bdfc1778a0091ea7ce2e232c81d4b3c1e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dec2dcb3ee06eddc71d0063d6e1de3fd1626858f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ringn-geography-data-type"></a>RingN (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  Tipo de retorno CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se o valor do índice de anéis  **n**  é menor que 1, este método lança um **ArgumentOutOfRangeException.** O valor de índice de anéis deve ser maior que ou igual a 1 e deve ser menor ou igual ao número retornado por `NumRings()`.  
   
 ## <a name="examples"></a>Exemplos  

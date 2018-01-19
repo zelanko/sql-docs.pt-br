@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: Reduce method
 ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 65b9276d3feea6e72f5404fa8f4d7eef963dbe78
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e1932373b11b10724bbbb4e05863428012eb23eb
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="reduce-geography-data-type-"></a>Reduce (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ ms.lasthandoff: 11/17/2017
 |||  
 |-|-|  
 |Termo|Definição|  
-|*tolerância*|É um valor do tipo **float**. *tolerância* é a tolerância de entrada para o algoritmo de Douglas-Peucker. *tolerância* deve ser um número positivo.|  
+|*tolerance*|É um valor do tipo **float**. *tolerância* é a tolerância de entrada para o algoritmo de Douglas-Peucker. *tolerância* deve ser um número positivo.|  
   
 ## <a name="return-types"></a>Tipos de retorno  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
   
  Tipo de retorno CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para tipos de coleção, esse algoritmo funciona independentemente em cada **geografia** contidos na instância. Esse algoritmo não modifica **ponto** instâncias.  
   
  Esse método tentará preservar os pontos de extremidade de **LineString** instâncias, mas pode falhar ao fazer isso para preservar um resultado válido.  

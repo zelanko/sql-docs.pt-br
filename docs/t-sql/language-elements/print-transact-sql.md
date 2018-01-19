@@ -24,15 +24,15 @@ helpviewer_keywords:
 - conditionally returning messages [SQL Server]
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: bc40ee58fe6037d7ad29ced76232f84fe91c2c15
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 320c54c81b8c4bdb782d4b685816f10150a075e0
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,13 +51,13 @@ PRINT msg_str | @local_variable | string_expr
  *msg_str*  
  É uma cadeia de caracteres ou uma constante de cadeia de caracteres Unicode. Para obter mais informações, consulte [constantes &#40; Transact-SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).  
   
- **@***local_variable*  
- É uma variável de qualquer tipo de dados de caractere válido. **@***local_variable* devem ser **char**, **nchar**, **varchar**, ou **nvarchar**, ou deve ser capaz de ser implicitamente convertido para esses tipos de dados.  
+ **@** *local_variable*  
+ É uma variável de qualquer tipo de dados de caractere válido. **@ * local_variable* devem ser **char**, **nchar**, **varchar**, ou **nvarchar**, ou deve ser capaz de ser implicitamente convertido para esses tipos de dados.  
   
  *string_expr*  
  É uma expressão que retorna uma cadeia de caracteres. Pode incluir valores literais, funções e variáveis concatenadas. Para obter mais informações, veja [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Uma cadeia de caracteres de mensagem pode ter até 8.000 caracteres se for uma cadeia de caracteres não Unicode e 4.000 caracteres se for uma cadeia de caracteres Unicode. Cadeias de caracteres mais longas são truncadas. O **varchar (max)** e **nvarchar (max)** tipos de dados são truncados para tipos de dados que são maiores do que **varchar(8000)** e **nvarchar (4000)**.  
   
  RAISERROR também pode ser usado para retornar mensagens. RAISERROR tem estas vantagens sobre PRINT:  

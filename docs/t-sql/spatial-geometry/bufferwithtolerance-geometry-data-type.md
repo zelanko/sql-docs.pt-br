@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: BufferWithTolerance (geometry Data Type)
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a6a932ffe43e978bdc9e06f96cac300d45a035b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d929476cd48275249c5ac78a75ed22d6822fb21a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,17 +41,17 @@ Retorna valores de um objeto geométrico que representa a união de todos os pon
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *distância*  
+ *distance*  
  É um **float** expressão que especifica a distância entre o **geometria** instância em torno da qual calcular o buffer.  
   
- *tolerância*  
+ *tolerance*  
  É um **float** expressão que especifica a tolerância da distância do buffer.  
   
  *Tolerância* refere-se à variação máxima na distância ideal do buffer para a aproximação linear retornada.  
   
  Por exemplo, a distância ideal de buffer de um ponto é um círculo, mas deve ser aproximado por um polígono. Quanto menor a tolerância, mais pontos o polígono terá, o que aumenta a complexidade do resultado, mas diminui o erro.  
   
- *relativo*  
+ *relative*  
  É um **bit** especificando se o *tolerância* valor é relativo ou absoluto. Se 'TRUE' ou 1, em seguida, tolerância será relativa e calculada como o produto do *tolerância* parâmetro e o diâmetro da caixa delimitadora da instância. Se 'FALSE' ou 0, tolerância será absoluta e o *tolerância* valor é a variação máxima absoluta na distância ideal do buffer para a aproximação linear retornada.  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -65,7 +65,7 @@ Retorna valores de um objeto geométrico que representa a união de todos os pon
 > [!NOTE]  
 >  Como *tolerância* é um **float** tipo, um `System.Runtime.InteropServices.COMException` pode ser gerada se o valor atribuído à tolerância for muito pequeno devido a problemas de arredondamento com tipos de ponto flutuante.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando *distância* > 0, uma um **polígono** ou **MultiPolygon** instância será retornada.  
   
 > [!NOTE]  

@@ -1,5 +1,5 @@
 ---
-title: DE (Transact-SQL) | Microsoft Docs
+title: FROM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -35,15 +35,15 @@ helpviewer_keywords:
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 caps.latest.revision: "97"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cafa4381c52b3b884883f61e6e5f232ac894ee8a
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 9ddc3ee291d4e3b498dd6dfd9bbb49ca4299bea6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -161,7 +161,7 @@ FROM { <table_source> [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-\<table_source >  
+\<table_source>  
  Especifica uma tabela, exibição, variável de tabela ou origem de tabela derivada, com ou sem um alias, a ser usada na instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. Até 256 origens da tabela podem ser usadas em uma instrução, embora o limite varie de acordo com a memória disponível e a complexidade de outras expressões na consulta. Consultas individuais podem não aceitar até 256 origens de tabela.  
   
 > [!NOTE]  
@@ -206,7 +206,7 @@ FROM { <table_source> [ ,...n ] }
  *user_defined_function*  
  Especifica uma função com valor de tabela.  
   
- OPENXML \<openxml_clause >  
+ OPENXML \<openxml_clause>  
 
 **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
@@ -228,7 +228,7 @@ FROM { <table_source> [ ,...n ] }
   
  Especifica que uma versão específica de dados é retornada da tabela temporal especificada e sua tabela de histórico de versão do sistema vinculado  
   
-\<tablesample_clause >  
+\<tablesample_clause>  
  Especifica que uma amostra de dados da tabela é retornada. A amostra pode ser aproximada. Esta cláusula pode ser usada em qualquer tabela primária ou unida em uma instrução SELECT, UPDATE ou DELETE. TABLESAMPLE não pode ser especificado com exibições.  
   
 > [!NOTE]  
@@ -252,10 +252,10 @@ FROM { <table_source> [ ,...n ] }
  *repeat_seed*  
  É uma expressão de inteiro constante usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para gerar um número aleatório. *repeat_seed* é **bigint**. Se *repeat_seed* não for especificado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui um valor aleatório. Para um determinado *repeat_seed* valor, o resultado da amostragem é sempre o mesmo se nenhuma alteração tiverem sido aplicadas à tabela. O *repeat_seed* expressão deve ser avaliada como um inteiro maior que zero.  
   
- \<joined_table >  
+ \<joined_table>  
  É um conjunto de resultados que é o produto de duas ou mais tabelas. Para várias junções, use parênteses para alterar a ordem natural das junções.  
   
-\<join_type >  
+\<join_type>  
  Especifica o tipo de operação de junção.  
   
  **INTERNA**  
@@ -270,7 +270,7 @@ FROM { <table_source> [ ,...n ] }
  RIGHT [OUTER]  
  Especifica que todas as linhas da tabela direita que não atendem à condição de junção sejam incluídas no conjunto de resultados, e as colunas de saída que correspondem à outra tabela sejam definidas como NULL, além de todas as linhas retornadas pela junção interna.  
   
-\<as dicas join_hint >  
+\<join_hint>  
  Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)], especifica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consulta otimizador usar uma dica de junção ou algoritmo de execução, por associação especificada na cláusula FROM da consulta. Para obter mais informações, consulte [dicas de junção &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-join.md).  
   
  Para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], aplicam essas dicas de junção para junções INNER em duas colunas incompatíveis de distribuição. Eles podem melhorar o desempenho da consulta, restringindo a quantidade de movimentação de dados que ocorre durante o processamento de consulta. Dicas de junção permitida para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] são da seguinte maneira:  
@@ -287,7 +287,7 @@ FROM { <table_source> [ ,...n ] }
  JOIN  
  Indica que a operação de junção especificada deve acontecer entre as origens de tabela ou exibições especificadas.  
   
- ON \<search_condition >  
+ ON \<search_condition>  
  Especifica o critério no qual a junção se baseia. Os critérios podem especificar qualquer predicado, embora colunas e operadores de comparação sejam frequentemente usados, por exemplo:  
   
 ```sql
@@ -337,7 +337,7 @@ ON (p.ProductID = v.ProductID);
  *value_column*  
  É a coluna de valor do operador PIVOT. Quando usado com UNPIVOT, *value_column* não pode ser o nome de uma coluna existente na entrada *table_source*.  
   
- PARA *pivot_column*  
+ FOR *pivot_column*  
  É a coluna dinâmica do operador PIVOT. *pivot_column* deve ser de um tipo implicitamente ou explicitamente conversível em **nvarchar()**. Esta coluna não pode ser **imagem** ou **rowversion**.  
   
  Quando UNPIVOT é usado, *pivot_column* é o nome da coluna de saída que é restrita a partir de *table_source*. Não é possível haver uma coluna existente na *table_source* com esse nome.  
@@ -853,13 +853,13 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
     ON dp.ProductKey = fis.ProductKey;  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [OPENQUERY &#40; Transact-SQL &#41;](../../t-sql/functions/openquery-transact-sql.md)   
+ [INSERIR &#40;O Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [ONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

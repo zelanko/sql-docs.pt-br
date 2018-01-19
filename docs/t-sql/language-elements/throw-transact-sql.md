@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: THROW statement
 ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 67c842da8894bc7fe33be69a35a88949c6e441b7
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: bed4670dc0d683eea4920ddd39aec781177f7cc5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -45,7 +45,7 @@ THROW [ { error_number | @local_variable },
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *ERROR_NUMBER*  
+ *error_number*  
  É uma constante ou uma variável que representa a exceção. *ERROR_NUMBER* é **int** e deve ser maior ou igual a 50000 e menor ou igual a 2147483647.  
   
  *message*  
@@ -144,8 +144,8 @@ THROW 60000, @msg, 1;
  This is a test message with one numeric parameter (500), one string parameter (First string), and another string parameter (second string).
  ```  
   
-## <a name="see-also"></a>Consulte Também  
- [FORMATMESSAGE &#40; Transact-SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
+## <a name="see-also"></a>Consulte também  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
  [Severidade de erro do mecanismo de banco de dados](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
@@ -155,10 +155,10 @@ THROW 60000, @msg, 1;
  [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
- [Ir para &#40; Transact-SQL &#41;](../../t-sql/language-elements/goto-transact-sql.md)   
- [BEGIN... FINAL &#40; Transact-SQL &#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [XACT_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/xact-state-transact-sql.md)   
- [SET XACT_ABORT &#40; Transact-SQL &#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
+ [GOTO &#40;Transact-SQL&#41;](../../t-sql/language-elements/goto-transact-sql.md)   
+ [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)   
+ [SET XACT_ABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
   
   
 

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - + (string concatenation)
 ms.assetid: 35cb3d7a-48f5-4b13-926c-a9d369e20ed7
 caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3b6f87a8fabe4c96e59e1296434bf625cfbdf7ca
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 470d7b02654964b70edc22745140e4b4db49840a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (Concatenação de cadeias de caracteres) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ## <a name="result-types"></a>Tipos de resultado  
  Retorna o tipo de dados do argumento com a precedência mais alta. Para obter mais informações, veja [Precedência de tipo de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O operador + (Concatenação de cadeias de caracteres) se comporta de maneira diferente ao trabalhar com uma cadeia de caracteres vazia de comprimento zero do que ao trabalhar com valores NULL ou desconhecidos. Uma cadeia de caracteres de comprimento zero pode ser especificada como duas aspas simples sem nenhum caractere dentro das aspas. Uma cadeia de caracteres binária de comprimento zero pode ser especificada como 0x sem nenhum valor de byte especificado na constante hexadecimal. A concatenação de uma cadeia de caracteres de comprimento zero sempre concatena as duas cadeias de caracteres especificadas. Quando você trabalhar com cadeias de caracteres com um valor nulo, o resultado da concatenação dependerá das configurações da sessão. Assim como as operações aritméticas que são executadas em valores nulos, quando um valor nulo é adicionado a um valor conhecido, o resultado normalmente será um valor desconhecido, uma operação de concatenação de cadeias de caracteres executada com um valor nulo também deve produzir um resultado nulo. No entanto, você pode alterar esse comportamento alterando a configuração de `CONCAT_NULL_YIELDS_NULL` para a sessão atual. Para obter mais informações, veja [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
   
  Se o resultado da concatenação de cadeias de caracteres exceder o limite de 8.000 bytes, o resultado será truncado. Entretanto, se pelo menos uma das cadeias de caracteres concatenadas for um tipo de valor grande, não ocorrerá truncamento.  
@@ -184,12 +184,12 @@ Welcker, B.        Vice President of Sales
 ## <a name="see-also"></a>Consulte também  
  [+ = &#40; Atribuição de concatenação de cadeia de caracteres &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [CAST e CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Conversão de tipo de dados &#40; mecanismo de banco de dados &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
   

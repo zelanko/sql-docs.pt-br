@@ -28,15 +28,15 @@ helpviewer_keywords:
 - timing executions
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: a434aeca7601637ae5e0231497ad07293d6d83ca
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 75a3c1d272d39d17fbd35f10a797ce52a9310241
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ WAITFOR
 > [!IMPORTANT]  
 >  A especificação de WAITFOR com TIMEOUT só é aplicável a mensagens do [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Para obter mais informações, consulte [RECEIVE &#40; Transact-SQL &#41; ](../../t-sql/statements/receive-transact-sql.md) e [GET CONVERSATION GROUP &#40; Transact-SQL &#41; ](../../t-sql/statements/get-conversation-group-transact-sql.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Ao executar a instrução WAITFOR, a transação está em execução e nenhuma outra solicitação pode executar sob a mesma transação.  
   
  O atraso de tempo real pode variar da hora especificada em *time_to_pass*, *time_to_execute*, ou *tempo limite* e depende do nível de atividade do servidor. A contador de tempo inicia quando o thread associado à instrução WAITFOR estiver agendado. Se o servidor estiver ocupado, o thread pode não ser agendado imediatamente; portanto, o atraso de tempo pode ser maior que o tempo especificado.  
@@ -175,7 +175,7 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [Linguagem de controle de fluxo &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
- [Data e hora &#40; Transact-SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)   
+ [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   

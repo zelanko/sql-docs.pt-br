@@ -40,17 +40,17 @@ helpviewer_keywords:
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 caps.latest.revision: "68"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e718c2d35b1627abee53c3214294372fb23d61a8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 322bca602925cd959ca5de076fcbbdeacd7ba63a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="select---order-by-clause-transact-sql"></a>Selecione - a cláusula ORDER BY (Transact-SQL)
+# <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Classifica dados retornados por uma consulta no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use esta cláusula para:  
@@ -104,12 +104,12 @@ ORDER BY order_by_expression
  Os nomes de coluna referenciados na cláusula ORDER BY devem corresponder a uma coluna na lista de seleção ou a uma coluna definida em uma tabela especificada na cláusula FROM sem nenhuma ambiguidade.  
   
  COLLATE *collation_name*  
- Especifica que a operação ORDER BY deve ser executada de acordo com o agrupamento especificado em *collation_name*e não de acordo com o agrupamento da coluna conforme definido na tabela ou exibição. *collation_name* pode ser um nome de agrupamento do Windows ou um nome de agrupamento do SQL. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE é aplicável somente para colunas do tipo **char**, **varchar**, **nchar**, e **nvarchar**.  
+ Especifica que a operação ORDER BY deve ser executada de acordo com o agrupamento especificado em *collation_name*e não de acordo com o agrupamento da coluna conforme definido na tabela ou exibição. *collation_name* pode ser um nome de agrupamento do Windows ou um nome de agrupamento do SQL. Para obter mais informações, consulte [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE é aplicável somente para colunas do tipo **char**, **varchar**, **nchar**, e **nvarchar**.  
   
  **ASC** | DESC  
  Define que os valores na coluna especificada devem ser classificados em ordem crescente ou decrescente. ASC classifica do valor mais baixo para o valor mais alto. DESC classifica do valor mais alto para o valor mais baixo. ASC é a ordem de classificação padrão. Valores nulos são tratados como os menores valores possíveis.  
   
- DESLOCAMENTO { *integer_constant* | *offset_row_count_expression* } {linha | LINHAS}  
+ OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  Especifica o número de linhas que devem ser ignoradas antes de começar a retornar linhas da expressão de consulta. O valor pode ser uma expressão ou constante inteira que seja maior que ou igual a zero.  
   
 **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. s  
@@ -546,15 +546,15 @@ WHERE LastName LIKE 'A%'
 ORDER BY LastName, FirstName;  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>Consulte também  
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [Classificação de funções &#40; Transact-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
- [TOP &#40; Transact-SQL &#41;](../../t-sql/queries/top-transact-sql.md)   
+ [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)   
  [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)   
  [EXCEÇÃO INTERSECT &#40; e Transact-SQL &#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
- [União &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
+ [UNION &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   
   

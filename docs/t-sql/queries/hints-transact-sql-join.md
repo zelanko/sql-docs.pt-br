@@ -1,5 +1,5 @@
 ---
-title: "Dicas (Transact-SQL) de junção | Microsoft Docs"
+title: Join Hints (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -24,17 +24,17 @@ helpviewer_keywords:
 - hints [SQL Server], join
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 44b5dde989c0c40c2afc9202921d5a80c33fdc99
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 84f00c9acef803cd84be1c2be2fadf417d3b9bff
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="hints-transact-sql---join"></a>Dicas (Transact-SQL) - Join
+# <a name="hints-transact-sql---join"></a>Hints (Transact-SQL) - Join
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Dicas de junção especificam que o otimizador de consulta força uma estratégia de junção entre duas tabelas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter informações gerais sobre junções e a sintaxe de junção, consulte [FROM &#40; Transact-SQL &#41; ](../../t-sql/queries/from-transact-sql.md).  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
  REMOTE poderá ser usado somente para operações de INNER JOIN.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Dicas de junção são especificadas na cláusula FROM de uma consulta. Dicas de Junção forçam uma estratégia de junção entre duas tabelas. Se uma dica de junção for especificada para qualquer uma das duas tabelas, o otimizador de consulta forçará a ordem de junção automaticamente para todas as tabelas associadas na consulta, com base na posição das palavras-chave ON. Quando CROSS JOIN for usado sem a cláusula ON, poderão ser usados parênteses para indicar a ordem da junção.  
   
 ## <a name="examples"></a>Exemplos  
@@ -113,6 +113,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Dicas de &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)  
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)  
   
   

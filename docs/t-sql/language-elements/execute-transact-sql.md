@@ -32,15 +32,15 @@ helpviewer_keywords:
 - EXECUTE statement
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 caps.latest.revision: "104"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 52a896293ad991509884b45979be0129bd56f287
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5c9081d53346bda14d507688547f37589bd153da
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -206,12 +206,12 @@ Execute a character string
   
  Quando usado para invocar uma função valor escalar definida pelo usuário, o @*return_status* variável pode ser de qualquer tipo de dados escalares.  
   
- *nome_de_módulo*  
+ *module_name*  
  É o nome totalmente qualificado do procedimento armazenado ou do valor escalar da função a ser chamada, definida pelo usuário. Nomes de módulo devem estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md). Os nomes de procedimentos armazenados estendidos sempre têm diferenciação entre maiúsculas e minúsculas, independentemente do agrupamento do servidor.  
   
  Um módulo que tenha sido criado em outro banco de dados poderá ser executado se o usuário que estiver executando o módulo for o proprietário ou se tiver permissão apropriada para executá-lo no referido banco de dados. Um módulo poderá ser executado em outro servidor que executa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se o usuário que estiver executando o módulo tiver a permissão apropriada para usar esse servidor (acesso remoto) e executar o módulo no referido banco de dados. Se você especificar um nome de servidor mas não especificar um nome de banco de dados, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] procurará o módulo no banco de dados padrão do usuário.  
   
- ; *número*  
+ ;*number*  
 **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  É um inteiro opcional usado para agrupar procedimentos do mesmo nome. Esse parâmetro não é usado para procedimentos armazenados estendidos.  
@@ -226,7 +226,7 @@ Execute a character string
   
  Isso pode ser uma variável que contém o nome de uma função definida pelo usuário escalares.  
   
- @*parâmetro*  
+ @*parameter*  
  É o parâmetro para *nome_de_módulo*, conforme definido no módulo. Os nomes de parâmetro devem ser precedidos pelo sinal de arroba (@). Quando usado com o @*parameter_name*=*valor* formulário, os nomes de parâmetro e constantes não precisam ser fornecidos na ordem em que eles são definidos no módulo. No entanto, se a @*parameter_name*=*valor* formulário é usado para qualquer parâmetro, ele deve ser usado para todos os parâmetros subsequentes.  
   
  Por padrão, os parâmetros são anuláveis.  
@@ -242,7 +242,7 @@ Execute a character string
   
  O padrão também pode ser NULL. Geralmente, a definição de módulo especificará a ação a ser tomada se um valor de parâmetro for NULL.  
   
- @*variável*  
+ @*variable*  
  É a variável que armazena um parâmetro ou um parâmetro de retorno.  
   
  OUTPUT  
@@ -265,7 +265,7 @@ Execute a character string
  [N] '*tsql_string*'  
  É uma cadeia de caracteres constante. *tsql_string* pode ser qualquer **nvarchar** ou **varchar** tipo de dados. Se N for incluído, a cadeia de caracteres será interpretada como **nvarchar** tipo de dados.  
   
- AS \<context_specification >  
+ AS \<context_specification>  
  Especifica o contexto no qual a instrução é executada.  
   
  Logon  
@@ -279,7 +279,7 @@ Execute a character string
 > [!IMPORTANT]  
 >  Enquanto a opção de contexto para o usuário do banco de dados estiver ativa, qualquer tentativa de acessar os recursos fora do banco de dados causará a falha da instrução. Isso inclui usar *banco de dados* instruções, consultas distribuídas e consultas que fazem referência a outro banco de dados usando identificadores em três ou quatro partes.  
   
- '*nome*'  
+ '*name*'  
  É um usuário ou nome de logon válido. *nome* deve ser um membro da função de servidor fixa sysadmin ou existir como uma entidade no [database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) ou [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md), respectivamente.  
   
  *nome* não pode ser uma conta interna, como NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService ou NT authority\localsystem.  
@@ -292,7 +292,7 @@ Execute a character string
  [?]  
  Indica parâmetros para os quais os valores são fornecidos no \<arg-list > de comandos de passagem que são usados em um EXEC('...', \<arg-list>) em \<linkedsrv > instrução.  
   
- EM *linked_server_name*  
+ AT *linked_server_name*  
 **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Especifica que *command_string* é executada em *linked_server_name* e resultados, se houver, são retornados ao cliente. *linked_server_name* devem se referir a uma definição de servidor vinculado existente no servidor local. Servidores vinculados são definidos usando [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
@@ -305,7 +305,7 @@ Execute a character string
 |RECOMPILE|Força a compilação, a utilização e o descarte de um novo plano após a execução do módulo. Se houver um plano de consulta existente para o módulo, esse plano permanecerá no cache.<br /><br /> Use essa opção se o parâmetro sendo fornecido for atípico ou se os dados tiverem sido alterados significativamente. Ela não é usada para procedimentos armazenados estendidos. É aconselhável usar essa opção se realmente for necessário porque ela é expansiva.<br /><br /> **Observação:** não é possível usar WITH RECOMPILE ao chamar um procedimento armazenado que usa a sintaxe OPENDATASOURCE. A opção WITH RECOMPILE será ignorada quando um nome de objeto de quatro partes for especificado.<br /><br /> **Observação:** RECOMPILE não é suportado com funções escalares definidas pelo usuário. Se você precisar recompilar, use [sp_recompile &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
 |**CONJUNTOS DE RESULTADOS INDEFINIDOS**|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Esta opção não fornece nenhuma garantia de quais resultados, se houver, serão retornados. Além disso, não é fornecida nenhuma definição. A instrução é executada sem erro se algum resultado for retornado ou se nenhum resultado for retornado. RESULT SETS UNDEFINED será o comportamento padrão se não for fornecido result_sets_option.<br /><br /> Para interpretada funções escalares definidas pelo usuário e compiladas nativamente funções escalares definidas pelo usuário, essa opção não está operacional porque as funções não retornam um conjunto de resultados.|  
 |RESULT SETS NONE|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Garante que a instrução execute não retornará nenhum resultado. Se algum resultado for retornado, o lote será anulado.<br /><br /> Para interpretada funções escalares definidas pelo usuário e compiladas nativamente funções escalares definidas pelo usuário, essa opção não está operacional porque as funções não retornam um conjunto de resultados.|  
-|*\<result_sets_definition >*|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Fornece uma garantia de que o resultado voltará como especificado em result_sets_definition. Para instruções que retornam vários conjuntos de resultados, forneça várias *result_sets_definition* seções. Inclua cada *result_sets_definition* entre parênteses, separados por vírgulas. Para obter mais informações, consulte \<result_sets_definition > mais adiante neste tópico.<br /><br /> Essa opção sempre resulta em um erro para funções escalares definidas pelo usuário porque as funções não retornam um conjunto de resultados.|
+|*\<result_sets_definition>*|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Fornece uma garantia de que o resultado voltará como especificado em result_sets_definition. Para instruções que retornam vários conjuntos de resultados, forneça várias *result_sets_definition* seções. Inclua cada *result_sets_definition* entre parênteses, separados por vírgulas. Para obter mais informações, consulte \<result_sets_definition > mais adiante neste tópico.<br /><br /> Essa opção sempre resulta em um erro para funções escalares definidas pelo usuário porque as funções não retornam um conjunto de resultados.|
   
 \<result_sets_definition > **aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
@@ -313,7 +313,7 @@ Execute a character string
   
 |Termo|Definição|  
 |----------|----------------|  
-|{<br /><br /> column_name<br /><br /> data_type<br /><br /> [ COLLATE collation_name]<br /><br /> [NULL &#124; NÃO NULO]<br /><br /> }|Consulte a tabela a seguir.|  
+|{<br /><br /> column_name<br /><br /> data_type<br /><br /> [ COLLATE collation_name]<br /><br /> [NULL &#124; NOT NULL]<br /><br /> }|Consulte a tabela a seguir.|  
 |db_name|O nome do banco de dados que contém a tabela, a exibição ou a função com valor de tabela.|  
 |schema_name|O nome do esquema proprietário da tabela, da exibição ou da função com valor de tabela.|  
 |table_name &#124; view_name &#124; table_valued_function_name|Especifica que as colunas retornadas serão as especificadas na tabela, exibição ou função com valor de tabela nomeada. Não há suporte para variáveis de tabela, tabelas temporárias e sinônimos na sintaxe de objetos do AS.|  
@@ -325,7 +325,7 @@ Execute a character string
 |column_name|Os nomes de cada coluna. Se o número de colunas for diferente do conjunto de resultados, ocorrerá um erro e o lote será anulado. Se o nome de uma coluna for diferente do conjunto de resultados, o nome de coluna retornado será definido como o nome definido.|  
 |data_type|Os tipos de dados de cada coluna. Se os tipos de dados forem diferentes, será executada uma conversão implícita para o tipo de dados definido. Se a conversão falhar, o lote será anulado|  
 |COLLATE collation_name|O agrupamento de cada coluna. Se houver uma incompatibilidade de agrupamento, será tentado um agrupamento implícito. Se isso falhar, o lote será anulado.|  
-|NULL &#124; NÃO NULO|A nulidade de cada coluna. Se a nulidade definida for NOT NULL e os dados retornados contiver NULLs, ocorrerá um erro e o lote será anulado. Se não especificado, o valor padrão se conforma à configuração das opções do ANSI_NULL_DFLT_ON e ANSI_NULL_DFLT_OFF.|  
+|NULL &#124; NOT NULL|A nulidade de cada coluna. Se a nulidade definida for NOT NULL e os dados retornados contiver NULLs, ocorrerá um erro e o lote será anulado. Se não especificado, o valor padrão se conforma à configuração das opções do ANSI_NULL_DFLT_ON e ANSI_NULL_DFLT_OFF.|  
   
  O conjunto de resultados real retornado durante execução pode diferir do resultado definido usando a cláusula WITH RESULT SETS de uma das seguintes maneiras: número de conjuntos de resultados, número de colunas, nome de coluna, nulidade e tipo de dados. Se o número de conjuntos de resultados for diferente, ocorrerá um erro e o lote será anulado.  
   
@@ -726,20 +726,20 @@ EXEC ProcWithParameters @color = N'Black', @name = N'%arm%';
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [@@NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [Cláusula EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   
  [Utilitário osql](../../tools/osql-utility.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [REVERTER &#40; Transact-SQL &#41;](../../t-sql/statements/revert-transact-sql.md)   
+ [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [Utilitário sqlcmd](../../tools/sqlcmd-utility.md)   
- [SUSER_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/suser-name-transact-sql.md)   
+ [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [User_name &#40; Transact-SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)   
- [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
+ [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)   
+ [OPENDATASOURCE &#40; Transact-SQL &#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [Funções escalares definidas pelo usuário para OLTP in-memory](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)  
   
   

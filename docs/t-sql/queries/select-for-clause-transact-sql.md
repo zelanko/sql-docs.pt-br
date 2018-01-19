@@ -23,15 +23,15 @@ helpviewer_keywords:
 - FOR clause [Transact-SQL]
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 caps.latest.revision: "54"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0cb4b3936aa78f22958c28351d2dad523a6d9932
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 51924cf8a6715e8966911b33c4c1cf691326322c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select---for-clause-transact-sql"></a>Selecione - a cláusula FOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -218,7 +218,7 @@ JSON
  TYPE  
  Especifica que a consulta retorna resultados como **xml** tipo. Para obter mais informações, consulte [Diretiva TYPE em consultas FOR XML](../../relational-databases/xml/type-directive-in-for-xml-queries.md).  
   
- RAIZ [ **('***RootName***')** ]  
+ ROOT [ **('***RootName***')** ]  
  Especifica que um único elemento de nível superior seja adicionado ao XML resultante. Opcionalmente, é possível especificar o nome do elemento raiz a ser gerado. Se o nome raiz opcional não for especificado, o padrão \<raiz > elemento é adicionado.  
   
  Para obter mais informações, consulte [FOR XML &#40; SQL Server &#41; ](../../relational-databases/xml/for-xml-sql-server.md).  
@@ -253,7 +253,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
  INCLUDE_NULL_VALUES  
  Incluir valores nulos na saída JSON, especificando o **INCLUDE_NULL_VALUES** opção com o **FOR JSON** cláusula. Se você não especificar essa opção, a saída não inclui propriedades JSON para valores nulos nos resultados da consulta. Para obter mais informações e exemplos, consulte [incluir valores nulos na saída JSON com a opção INCLUDE_NULL_VALUES &#40; SQL Server &#41; ](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md).  
   
- RAIZ [ **('***RootName***')** ]  
+ ROOT [ **('***RootName***')** ]  
  Adicionar um único elemento de nível superior à saída JSON, especificando o **raiz** opção com o **FOR JSON** cláusula. Se você não especificar a opção **ROOT** , a saída JSON não terá um elemento raiz. Para obter mais informações e exemplos, consulte [adicionar um nó raiz à saída JSON com a opção ROOT &#40; SQL Server &#41; ](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md).  
   
  WITHOUT_ARRAY_WRAPPER  

@@ -25,15 +25,15 @@ helpviewer_keywords:
 - data updates [SQL Server], WRITETEXT statement
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 534fa1494ec97efb8258222f512902d15efa1f36
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d8c66e4a785fd1d731bd55730a8439f5e796b01f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ WRITETEXT [BULK]
 > [!IMPORTANT]  
 >  Nós recomendamos que a opção de BULK não seja usada em aplicativos baseados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa opção deve ser alterada ou removida em uma futura versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *tabela* **.column**  
+ *table* **.column**  
  É o nome da tabela e **texto**, **ntext**, ou **imagem** coluna para atualizar. Nomes de tabela e coluna devem estar de acordo com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md). A especificação do nome do banco de dados e de nomes de proprietários é opcional.  
   
  *text_ptr*  
@@ -70,10 +70,10 @@ WRITETEXT [BULK]
  WITH LOG  
  Ignorado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A criação de log é determinada pelo modelo de recuperação em vigor para o banco de dados.  
   
- *dados*  
+ *data*  
  É o valor real **texto**, **ntext** ou **imagem** dados serão armazenados. *dados* pode ser um literal ou um parâmetro. O comprimento máximo do texto que pode ser inserido interativamente com WRITETEXT é aproximadamente 120 KB para **texto**, **ntext**, e **imagem** dados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use WRITETEXT para substituir **texto**, **ntext**, e **imagem** dados e UPDATETEXT para modificar **texto**, **ntext**, e **imagem** dados. UPDATETEXT é mais flexível porque altera somente uma parte de um **texto**, **ntext**, ou **imagem** coluna em vez da coluna inteira.  
   
  Para melhor desempenho, recomendamos que **texto**, **ntext**, e **imagem** dados sejam inseridos ou atualizados em tamanhos de bloco que sejam múltiplos de 8040 bytes.  

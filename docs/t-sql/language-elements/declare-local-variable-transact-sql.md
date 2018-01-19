@@ -1,5 +1,5 @@
 ---
-title: DECLARAR @local_variable (Transact-SQL) | Microsoft Docs
+title: DECLARE @local_variable (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -22,17 +22,17 @@ helpviewer_keywords:
 - declaring variables
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 caps.latest.revision: "76"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 182e3443a9baf73fdbda096c11b4320feb53edda
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 70bfea2777f5f96769d4296c8fbb7f2acbd20e4f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="declare-localvariable-transact-sql"></a>DECLARAR @local_variable (Transact-SQL)
+# <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   As variáveis são declaradas no corpo de um lote ou procedimento com a instrução DECLARE e valores são atribuídos com uma instrução SET ou SELECT. As variáveis de cursor podem ser declaradas com essa instrução e usadas com outras instruções relacionadas ao cursor. Depois da declaração, todas as variáveis são inicializadas como NULL, a menos que um valor seja fornecido como parte da declaração.  
@@ -95,7 +95,7 @@ DECLARE
   
  Para obter mais informações sobre tipos de dados do sistema, consulte [tipos de dados &#40; Transact-SQL &#41; ](../../t-sql/data-types/data-types-transact-sql.md). Para obter mais informações sobre tipos de dados de alias ou tipos CLR definidos pelo usuário, consulte [CREATE TYPE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-type-transact-sql.md).  
   
- =*valor*  
+ =*value*  
  Atribui um valor à variável embutida. O valor pode ser uma constante ou uma expressão, mas deve corresponder ao tipo de declaração de variável ou ser convertido implicitamente nesse tipo. Para obter mais informações, veja [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 @*cursor_variable_name*  
@@ -115,7 +115,7 @@ Define o **tabela** tipo de dados. A declaração de tabela inclui definições 
  *n*  
  É um espaço reservado que indica que várias variáveis podem ser especificadas e valores podem ser atribuídos. Ao declarar **tabela** variáveis, o **tabela** variável deve ser a única variável declarada na instrução DECLARE.  
   
- *nome da coluna*  
+ *column_name*  
  É o nome da coluna na tabela.  
   
  *scalar_data_type*  
@@ -124,7 +124,7 @@ Define o **tabela** tipo de dados. A declaração de tabela inclui definições 
  *computed_column_expression*  
  Uma expressão é definir o valor de uma coluna computada. Essa coluna é computada a partir de uma expressão que usa outras colunas na mesma tabela. Por exemplo, uma coluna computada pode ter a definição **custo** AS **preço \* qty**. A expressão pode ser o nome de uma coluna não computada, constante, função interna, variável ou qualquer combinação dessas, conectada por um ou mais operadores. A expressão não pode ser uma subconsulta ou uma função definida pelo usuário. A expressão não pode fazer referência a um tipo de dados CLR definido pelo usuário.  
   
- [COLLATE *collation_name*]  
+ [ COLLATE *collation_name*]  
  Especifica o agrupamento da coluna. *collation_name* pode ser um nome de agrupamento do Windows ou um nome de agrupamento do SQL e é aplicável somente para colunas do **char**, **varchar**, **texto** , **nchar**, **nvarchar**, e **ntext** tipos de dados. Se não for especificado, à coluna será atribuído o agrupamento do tipo de dados definido pelo usuário (se a coluna for de um tipo de dados definido pelo usuário) ou o agrupamento do banco de dados atual.  
   
  Para obter mais informações sobre os nomes de agrupamento do Windows e do SQL, consulte [COLLATE &#40; Transact-SQL &#41; ](~/t-sql/statements/collations.md).  
@@ -138,10 +138,10 @@ Define o **tabela** tipo de dados. A declaração de tabela inclui definições 
  IDENTITY  
  Indica que a nova coluna é uma coluna de identidade. Quando uma nova linha é adicionada à tabela, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um valor incremental exclusivo para a coluna. As colunas de identidade, em geral, são usadas juntamente com restrições PRIMARY KEY para servir de identificador exclusivo de linha para a tabela. A propriedade de identidade pode ser atribuída a **tinyint**, **smallint**, **int**, **decimal(p,0)**, ou **numeric(p,0)** colunas. Apenas uma coluna de identidade pode ser criada por tabela. Padrões associados e restrições DEFAULT não podem ser usados com uma coluna de identidade. Você deve especificar a semente e o incremento, ou nenhum dos dois. Se nenhum for especificado, o padrão será (1,1).  
   
- *semente*  
+ *seed*  
  É o valor usado para a primeira linha carregada na tabela.  
   
- *incremento*  
+ *increment*  
  É o valor de incremento adicionado ao valor de identidade da linha anterior que foi carregado.  
   
  ROWGUIDCOL  
@@ -159,10 +159,10 @@ Define o **tabela** tipo de dados. A declaração de tabela inclui definições 
  CHECK  
  É uma restrição que impõe a integridade de domínio limitando os possíveis valores que podem ser inseridos em uma ou mais colunas.  
   
- *Logical_Expression*  
+ *logical_expression*  
  É uma expressão lógica que retorna TRUE ou FALSE.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As variáveis geralmente são usadas em um lote ou procedimento como contadores para WHILE, LOOP ou para um bloco IF...ELSE.  
   
  Variáveis podem ser usadas somente em expressões, não no lugar de nomes de objeto ou palavras-chave. Para construir instruções SQL dinâmicas, use EXECUTE.  
@@ -321,7 +321,7 @@ WHERE LastName LIKE @lastName AND FirstName LIKE @firstName;
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [tabela &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [Comparar XML tipado com XML não tipado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)  
   
   

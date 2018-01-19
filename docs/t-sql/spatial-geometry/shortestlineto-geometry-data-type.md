@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: ShortestLineTo method (geometry)
 ms.assetid: 39a2d0e4-4f93-4e94-a27e-6ad9537cfe74
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a2dad1bff4bfb240bf112a4906c57910a6e1c5dc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 53d9b061c8007db287f7738349e21f74d3bbbced
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ Retorna um **LineString** instância com dois pontos que representam a distânci
   
  Tipo de retorno CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O método retorna um **LineString** instância com pontos de extremidade nas bordas dos dois sem interseção **geometria** instâncias que estão sendo comparadas. O comprimento do **LineString** é igual a distância mais curta entre as duas **geometria** instâncias. Vazio **LineString** instância é retornada quando as duas **geometria** instâncias se cruzam entre si.  
   
 ## <a name="examples"></a>Exemplos  
@@ -70,7 +70,7 @@ Retorna um **LineString** instância com dois pontos que representam a distânci
  ```  
   
 ## <a name="see-also"></a>Consulte também  
- [ShortestLineTo &#40; tipo de dados geography &#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
+ [ShortestLineTo &#40;geography Data Type&#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
   
   
 

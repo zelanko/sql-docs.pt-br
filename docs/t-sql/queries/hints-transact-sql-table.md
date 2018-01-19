@@ -38,15 +38,15 @@ helpviewer_keywords:
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 caps.latest.revision: "174"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 92740f196f2bd0c79a84eb43826f764e93930e67
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2ca76e248bc8f3fe0c3b0edff73254e05a6f4f26
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="hints-transact-sql---table"></a>Dicas (Transact-SQL) - tabela
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  NOEXPAND  
  Especifica que qualquer exibição indexada não será expandida para acessar tabelas subjacentes quando o otimizador de consulta processar a consulta. O otimizador de consulta trata a exibição como uma tabela com índice clusterizado. NOEXPAND aplica-se apenas a exibições indexadas. Para obter mais informações, consulte Comentários.  
   
- ÍNDICE **(***index_value* [**,**... *n* ] ) | ÍNDICE = ( *index_value***)**  
+ INDEX  **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
  A sintaxe de INDEX() especifica os nomes ou as IDs de um ou mais índices a serem usados pelo otimizador de consulta ao processar a instrução. A alternativa INDEX = sintaxe especifica um único valor de índice. Apenas uma dica de índice por tabela pode ser especificada.  
   
  Se existir um índice clusterizado, INDEX(0) forçará uma verificação de índice clusterizado e INDEX(1) forçará uma verificação ou busca de índice clusterizado. Na ausência de índices clusterizados, INDEX(0) forçará uma verificação de tabela e INDEX(1) será interpretado como um erro.  
@@ -499,9 +499,9 @@ WHERE h.TotalDue > 100
 AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Dicas de &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [Query Hints &#40;Transact-SQL&#41; [Dicas de consulta (Transact-SQL)]](../../t-sql/queries/hints-transact-sql-query.md)  
   
   

@@ -25,15 +25,15 @@ helpviewer_keywords:
 - rotating columns
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4555a892c55ae8ef40e8fd0c3658412e3641d973
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5ee91826fe19979d411c10baf2ab4c60f225d0bb
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="from---using-pivot-and-unpivot"></a>DE - usando PIVOT e UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +65,7 @@ FOR
 <optional ORDER BY clause>;  
 ```  
 
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Os identificadores de coluna no `UNPIVOT` cláusula siga o agrupamento de catálogo. Para [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], o agrupamento é sempre `SQL_Latin1_General_CP1_CI_AS`. Para [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] bancos de dados parcialmente independentes, o agrupamento é sempre `Latin1_General_100_CI_AS_KS_WS_SC`. Se a coluna for combinada com outras colunas e, em seguida, uma cláusula collate (`COLLATE DATABASE_DEFAULT`) é necessária para evitar conflitos.  
 
   
@@ -210,7 +210,7 @@ VendorID    Employee    Orders
  O `Sales.vSalesPersonSalesByFiscalYears` exibir no [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] usa do banco de dados de exemplo `PIVOT` para retornar o total de vendas de cada vendedor em cada ano fiscal. Para o modo de exibição de script [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no **Pesquisador de objetos**, localize a exibição sob o **modos de exibição** pasta para o [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] banco de dados. O nome de exibição e, em seguida, selecione **exibição de Script como**.  
   
 ## <a name="see-also"></a>Consulte também  
- [DE (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
- [CASO (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
+ [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
+ [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
   
   

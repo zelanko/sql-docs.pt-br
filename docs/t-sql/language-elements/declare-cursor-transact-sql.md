@@ -26,15 +26,15 @@ helpviewer_keywords:
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0641f87c36d3dbed886dc7bb81aa1f179148a8cd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1f09a8eb025af56d5edee0a3a4d0861b7edb515f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  READ ONLY  
  Previne atualizações feitas por este cursor. O cursor não pode ser referenciado em uma cláusula WHERE CURRENT OF em uma instrução UPDATE ou DELETE. Essa opção anula a funcionalidade padrão de um cursor para ser atualizado.  
   
- ATUALIZAÇÃO [OF *column_name* [**,**... *n*]]  
+ UPDATE [OF *column_name* [**,**...*n*]]  
  Define colunas atualizáveis em um cursor. Se OF *column_name* [**,**... *n*] for especificado, somente as colunas listadas permitirão modificações. Se a UPDATE for especificada sem uma lista de colunas, todas as colunas poderão ser atualizadas.  
   
  *cursor_name*  
@@ -142,7 +142,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  ATUALIZAÇÃO [OF *column_name* [**,**... *n*]]  
  Define colunas atualizáveis em um cursor. Se OF *column_name* [**,**...  *n* ] for fornecido, somente as colunas listadas permitirão modificações. Se UPDATE for especificada sem uma lista de colunas, todas as colunas poderão ser atualizadas, a não ser que a opção de simultaneidade READ_ONLY seja especificada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  DECLARE CURSOR define os atributos de um cursor de servidor [!INCLUDE[tsql](../../includes/tsql-md.md)], como seu comportamento de rolagem e a consulta usada para construir o conjunto de resultados no qual o cursor funciona. A instrução OPEN popula o conjunto de resultados e FETCH retorna uma linha do conjunto de resultados. A instrução CLOSE libera o conjunto de resultados atual associado com o cursor. A instrução DEALLOCATE libera os recursos usados pelo cursor.  
   
  O primeiro formulário da instrução DECLARE CURSOR usa a sintaxe ISO para declarar comportamentos do cursor. O segundo formulário do DECLARE CURSOR usa extensões [!INCLUDE[tsql](../../includes/tsql-md.md)] que lhe permitem definir cursores com os mesmos tipos de cursor usados nas funções do cursor de API do banco de dados de ODBC ou ADO.  
@@ -256,10 +256,10 @@ DEALLOCATE vendor_cursor;
   
 ## <a name="see-also"></a>Consulte também  
  [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)   
- [Fechar &#40; Transact-SQL &#41;](../../t-sql/language-elements/close-transact-sql.md)   
+ [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [Cursores &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
- [DESALOCAR &#40; Transact-SQL &#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
- [Busca &#40; Transact-SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   

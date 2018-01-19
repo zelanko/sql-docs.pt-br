@@ -26,15 +26,15 @@ helpviewer_keywords:
 - OVER clause
 ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 caps.latest.revision: "75"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3bb439adf4e60fec1eeda76d2fefce440b9d8700
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d70183e7c52c4fb9eabed51a8df5acc68625397d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select---over-clause-transact-sql"></a>Selecione - a cláusula OVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -125,7 +125,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Especifica uma coluna ou expressão na qual ordenar. *order_by_expression* só podem fazer referência a colunas disponibilizadas pela cláusula FROM. Um número inteiro não pode ser especificado para representar um nome de coluna ou alias.  
   
  COLLATE *collation_name*  
- Especifica que a operação ORDER BY deve ser executada de acordo com o agrupamento especificado em *collation_name*. *collation_name* pode ser um nome de agrupamento do Windows ou um nome de agrupamento do SQL. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE é aplicável somente para colunas do tipo **char**, **varchar**, **nchar**, e **nvarchar**.  
+ Especifica que a operação ORDER BY deve ser executada de acordo com o agrupamento especificado em *collation_name*. *collation_name* pode ser um nome de agrupamento do Windows ou um nome de agrupamento do SQL. Para obter mais informações, consulte [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE é aplicável somente para colunas do tipo **char**, **varchar**, **nchar**, e **nvarchar**.  
   
  **ASC** | DESC  
  Define que os valores na coluna especificada devem ser classificados em ordem crescente ou decrescente. ASC é a ordem de classificação padrão. Valores nulos são tratados como os menores valores possíveis.  
@@ -547,7 +547,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  SO43659      229      2    16     18.75  
  ```
  
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Funções de agregação &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [Funções analíticas &#40; Transact-SQL &#41;](../../t-sql/functions/analytic-functions-transact-sql.md)   
  [Excelente postagem de blog sobre funções de janela e failover, em sqlmag.com, Itzik Ben-Gan](http://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  

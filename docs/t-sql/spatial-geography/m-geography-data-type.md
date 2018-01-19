@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: M method
 ms.assetid: cdba04f0-4e17-48f6-bafb-b1f918c5a501
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: df8a2eb38891ba584d6ffee666b4df5312996b44
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c4041419bb4e0dd0c662fa120a9c8c68d8c32286
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="m-geography-data-type"></a>M (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
  Tipo CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O valor dessa propriedade é null se o **geografia** instância não é um **ponto**, bem como para qualquer **ponto** instância para que ele não está definido.  
   
  Esta propriedade é somente leitura.  

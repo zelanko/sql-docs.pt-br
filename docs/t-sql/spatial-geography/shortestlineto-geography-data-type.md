@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: ShortestLineTo method (geography)
 ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0558b68946a77baf2000c451c15f9248a7acc0c4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 13bd076d08bae105e66756dc53092d0032384b86
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  Tipo de retorno CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O método retorna um **LineString** instância com pontos de extremidade nas bordas dos dois sem interseção **geografia** instâncias que estão sendo comparadas. O comprimento do **LineString** é igual a distância mais curta entre as duas **geografia** instâncias. Vazio **LineString** instância é retornada quando as duas **geografia** instâncias se cruzam entre si.  
   
 ## <a name="examples"></a>Exemplos  

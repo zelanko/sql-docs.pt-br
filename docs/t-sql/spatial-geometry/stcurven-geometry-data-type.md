@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: STCurveN method (geometry)
 ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e748684c640ce804c75e071a64af598fac079d69
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c48fcaa75233ecc6fa14b8e1e0323078d8574379
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN (Tipo de Dados de geometria)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ Retorna a curva especificada de um **geometria** instância que é um **LineStri
 ## <a name="exceptions"></a>Exceções  
  Se *curve_index* < 1, em seguida, um `ArgumentOutOfRangeException` é gerada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **NULO** é retornado quando ocorrer qualquer uma das seguintes opções:  
   
 -   o **geometria** instância é declarada, mas não criar uma instância  

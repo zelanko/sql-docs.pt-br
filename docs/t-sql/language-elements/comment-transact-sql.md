@@ -23,15 +23,15 @@ helpviewer_keywords:
 - comments [SQL Server]
 ms.assetid: 676ea8c2-52c1-4ef6-9354-320f1a091153
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a5615aa149b6f7a36b962550fa6094d3badae0a2
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 132d4dc19112858df5fbab33961b5ad99c70dd1c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="---comment-transact-sql"></a>-- (Comentário) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/18/2017
  *text_of_comment*  
  É a cadeia de caracteres que contém o texto do comentário.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use dois hífens (--) para comentários de uma linha ou aninhados. Comentários inseridos com -- são finalizados pelo caractere de nova linha. Não há comprimento máximo para comentários. A tabela a seguir lista os atalhos do teclado que podem ser usados para comentar ou remover comentários do texto.  
   
 |Ação|Standard|  
@@ -79,6 +79,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Linguagem de controle de fluxo &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)  
+ [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   

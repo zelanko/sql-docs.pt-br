@@ -14,15 +14,15 @@ ms.topic: language-reference
 dev_langs: TSQL
 ms.assetid: d1822f1b-c1dd-4f2f-ab7c-6617c05a2b6c
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7311f69807392786bd99b72e6c08734dc355d941
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d5d417cdedcce73fd2fc233e9b2279e2f588110c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="extended-methods-on-geography-instances"></a>Métodos estendidos em instâncias geography
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [EnvelopeCenter](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
   
--   [Filter](../../t-sql/spatial-geography/filter-geography-data-type.md)  
+-   [Filtro](../../t-sql/spatial-geography/filter-geography-data-type.md)  
   
 -   [HasM &#40; tipo de dados geography &#41;](../../t-sql/spatial-geography/hasm-geography-data-type.md)  
   
@@ -67,9 +67,9 @@ ms.lasthandoff: 11/17/2017
   
 -   [IsValidDetailed &#40; tipo de dados geography &#41;](../../t-sql/spatial-geography/isvaliddetailed-geography-data-type.md)  
   
--   [LAT](../../t-sql/spatial-geography/lat-geography-data-type.md)  
+-   [Lat](../../t-sql/spatial-geography/lat-geography-data-type.md)  
   
--   [Longas](../../t-sql/spatial-geography/long-geography-data-type.md)  
+-   [Longo](../../t-sql/spatial-geography/long-geography-data-type.md)  
   
 -   [M](../../t-sql/spatial-geography/m-geography-data-type.md)  
   
@@ -79,13 +79,13 @@ ms.lasthandoff: 11/17/2017
   
 -   [NumRing](../../t-sql/spatial-geography/numrings-geography-data-type.md)  
   
--   [Reduzir](../../t-sql/spatial-geography/reduce-geography-data-type.md)  
+-   [Reduce](../../t-sql/spatial-geography/reduce-geography-data-type.md)  
   
 -   [ReorientObject](../../t-sql/spatial-geography/reorientobject-geography-data-type.md)  
   
 -   [RingN](../../t-sql/spatial-geography/ringn-geography-data-type.md)  
   
--   [ShortestLineTo &#40; tipo de dados geography &#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
+-   [ShortestLineTo &#40;geography Data Type&#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
   
 -   [ToString](../../t-sql/spatial-geography/tostring-geography-data-type.md)  
   

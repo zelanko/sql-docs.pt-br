@@ -1,5 +1,5 @@
 ---
-title: = (Igual a) (Transact-SQL) | Microsoft Docs
+title: = (Equals) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - = (equals operator)
 ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d985df87124a7d682673e92fd92ebf6b54629563
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5a5d95986bdf4000682790113c9558ff5102f2cd
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="-equals-transact-sql"></a>= (É igual a) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ expression = expression
 ## <a name="result-types"></a>Tipos de resultado  
  Booliano  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando você compara duas expressões NULL, o resultado depende de `ANSI_NULLS` configuração:  
   
 -   Se `ANSI_NULLS` está definida como ON, o resultado será NULL, seguindo a convenção ANSI que um valor nulo (ou desconhecido) não é igual a outro valor NULL ou desconhecido.  
@@ -226,7 +226,7 @@ NULL
   
 ## <a name="see-also"></a>Consulte também  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

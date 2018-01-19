@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STPointN (geometry Data Type)
 ms.assetid: 8f0bb3b7-5cd9-42c2-b9f8-f04628653bd0
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e35a1bc7b4466a688274a825de3a34081149207
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fb3933aee8f8880b23bb4883753acb85d83ddb1e
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stpointn-geometry-data-type"></a>STPointN (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ Retorna um ponto especificado em uma **geometria** instância.
   
  Abra o tipo Geospatial Consortium (OGC): **ponto**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se um **geometria** instância é criado, `STPointN()` retorna o ponto especificado por *expressão* ordenando os pontos na ordem em que eles foram originalmente de entrada.  
   
  Se um **geometria** instância foi criada pelo sistema, `STPointN()` retorna o ponto especificado por *expressão* ordenando todos os pontos na mesma ordem, eles seriam saída: primeiro por geometria, em seguida, pelo anel na geometria (se apropriado) e, em seguida, pelo ponto dentro do anel. Essa ordem é determinística.  

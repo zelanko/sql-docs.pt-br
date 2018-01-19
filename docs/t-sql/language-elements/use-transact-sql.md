@@ -22,15 +22,15 @@ helpviewer_keywords:
 - modifying database context
 ms.assetid: c05acac8-c063-4770-8e36-d7f71d500b10
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 835266562ca4a3f81e92c02ff4abbf7948a36f82
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 67d9cdc11488ff2536e984bcf7d216a507a4112b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-transact-sql"></a>USE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -52,7 +52,7 @@ USE { database_name }
   
  Em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], o parâmetro de banco de dados só pode se referir ao banco de dados atual. Se um banco de dados que não seja o banco de dados atual é fornecido, o `USE` instrução não alterna entre bancos de dados e código de erro 40508 é retornado. Para alterar os bancos de dados, você deve conectar-se diretamente ao banco de dados. A instrução de uso está marcada como não se aplica ao banco de dados SQL na parte superior desta página, porque, embora você pode ter o `USE` instrução em um lote, ele não faz nada.
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conecta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele é automaticamente conectado ao seu banco de dados padrão e adquire o contexto de segurança de um usuário de banco de dados. Se nenhum usuário de banco de dados foi criado para o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o logon se conectará como convidado. Se o usuário de banco de dados não tiver permissão CONNECT no banco de dados, a instrução USE falhará. Se nenhum banco de dados padrão foi atribuído ao logon, seu banco de dados padrão será definido como mestre.  
   
  USE é executado em tempo de compilação e de execução e entra em vigor imediatamente. Portanto, as instruções exibidas em um lote depois da instrução USE são executadas no banco de dados especificado.  

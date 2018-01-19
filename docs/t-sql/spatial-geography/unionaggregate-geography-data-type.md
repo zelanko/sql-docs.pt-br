@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: UnionAggregate method (geography)
 ms.assetid: 1a3aeef1-5b0e-4ae8-aeb7-c4aab22f42ab
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c4341142b5238fe4a8377cf052710b753f8a68c1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 24e2504d9b3ab79ac6abec7ea3a21452928e255f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="unionaggregate-geography-data-type"></a>UnionAggregate (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ UnionAggregate ( geography_operand )
 ## <a name="return-types"></a>Tipos de retorno  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de retorno: **geografia**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Método retornará **nulo** se a entrada tiver SRIDs diferentes. Consulte [Spatial Reference Identifiers &#40; SRIDs &#41; ](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
  Método ignora **nulo** entradas.  

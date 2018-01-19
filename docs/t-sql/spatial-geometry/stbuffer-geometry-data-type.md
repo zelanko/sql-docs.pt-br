@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STBuffer (geometry Data Type)
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cb93bd550570b94b1a924a20d6243e808209adec
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c7d46b002eec2a8437234c89cf03dd1c29b3fc27
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Retorna um objeto geométrico que representa a união de todos os pontos cuja di
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *distância*  
+ *distance*  
  É um valor do tipo **float** (**duplo** no .NET Framework) Especifica a distância da instância geometry ao redor do qual o buffer será calculado.  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -49,7 +49,7 @@ Retorna um objeto geométrico que representa a união de todos os pontos cuja di
   
  Tipo de retorno CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  `STBuffer()`calcula um buffer, como [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), especificando *tolerância* = distância \* .001 e *relativo*  =   **False**.  
   
  Quando *distância* > 0, uma um **polígono** ou **MultiPolygon** instância será retornada.  

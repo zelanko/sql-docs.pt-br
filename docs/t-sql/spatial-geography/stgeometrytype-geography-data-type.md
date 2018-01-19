@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STGeometryType method
 ms.assetid: 3e169ead-a98e-44af-8d33-fd59a955cae4
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 814958f4cafd98266529e9ee237aaf3375ea6a4b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7d77afb909987ce56d7922116a954c4f94751bea
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stgeometrytype-geography-data-type"></a>STGeometryType (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
  Tipo de retorno CLR: **SqlString**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os nomes de tipo OGC que podem ser retornados por `STGeometryType()` são **ponto**, **LineString**, **CircularString**, **CompoundCurve**, **Polígono**, **CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString**, e **MultiPolygon**.  
   
 ## <a name="examples"></a>Exemplos  

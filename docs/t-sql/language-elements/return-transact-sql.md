@@ -1,5 +1,5 @@
 ---
-title: RETORNO (Transact-SQL) | Microsoft Docs
+title: RETURN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - RETURN statement
 ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 66b8ed9a2fdb4868ef22cd89642d7bad75079842
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 63a1e71631a334589de1951802ee7dcd45c037fe
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="return-transact-sql"></a>RETURN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ RETURN [ integer_expression ]
 > [!NOTE]  
 >  A menos que seja documentado o contrário, todos os procedimentos armazenados de sistema retornam o valor 0. Isto indica sucesso e um valor diferente de zero indica falha.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando usado com um procedimento armazenado, RETURN não pode retornar um valor nulo. Se um procedimento tentar retornar um valor nulo (por exemplo, usando @status quando @status for NULL), será gerada uma mensagem de aviso, e o valor 0 será retornado.  
   
  O valor do status de retorno pode ser incluído em instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] subsequentes no lote ou no procedimento que executou o procedimento atual, mas ele deve ser inserido no seguinte formato: `EXECUTE @return_status = <procedure_name>`.  

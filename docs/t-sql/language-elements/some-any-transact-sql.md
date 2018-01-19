@@ -1,5 +1,5 @@
 ---
-title: ALGUNS | QUALQUER (Transact-SQL) | Microsoft Docs
+title: SOME | ANY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - single-column set of values [SQL Server]
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f962702faec170262f50c3c2ca5c328af3bc266d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0f99a9d507b74dfd12bbdaf273683f857ceec881
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,16 +61,16 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  SOME | ANY  
  Especifica que uma comparação deve ser feita.  
   
- *subconsulta*  
+ *subquery*  
  É uma subconsulta que tem um conjunto de resultados de uma coluna. O tipo de dados da coluna retornada deve ser o mesmo tipo de dados *scalar_expression*.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  **Booliano**  
   
 ## <a name="result-value"></a>Valor do resultado  
- SOME ou ANY retornará **TRUE** quando a comparação especificada for TRUE para qualquer par (*scalar_expression***,***x*) onde *x* é um valor no conjunto de coluna única; caso contrário, retornará **FALSE**.  
+ SOME ou ANY retornará **TRUE** quando a comparação especificada for TRUE para qualquer par (*scalar_expression***,***x*) onde *x* é um valor na conjunto de coluna única. Caso contrário, retornará **FALSE**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  SOME exige o *scalar_expression* seja comparada positivamente com pelo menos um valor retornado pela subconsulta. Para instruções que requerem o *scalar_expression* seja comparada positivamente a cada valor que é retornado pela subconsulta, consulte [todos os &#40; Transact-SQL &#41; ](../../t-sql/language-elements/all-transact-sql.md). Por exemplo, se a subconsulta retornar os valores 2 e 3, *scalar_expression* = algumas (a subconsulta) será avaliada como TRUE para um *scalar_express* de 2. Se a subconsulta retornar os valores 2 e 3, *scalar_expression* = ALL (a subconsulta) seria avaliada como FALSE, porque alguns dos valores da subconsulta (o valor de 3) não atende aos critérios da expressão.  
   
 ## <a name="examples"></a>Exemplos  
@@ -148,12 +148,12 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
  `At least one item for this order cannot be manufactured in specified number of days.`  
   
 ## <a name="see-also"></a>Consulte também  
- [Todos os &#40; Transact-SQL &#41;](../../t-sql/language-elements/all-transact-sql.md)   
- [Caso &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [ONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [IN &#40; Transact-SQL &#41;](../../t-sql/language-elements/in-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  
   
   

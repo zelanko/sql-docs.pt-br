@@ -1,7 +1,7 @@
 ---
 title: ALTER SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 05/01/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bcbc6cf4ed18bef5d4736375dd7eddaaa1167a33
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 30ef553ccfba1f30be9b75f8d0290115be395925
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,13 +67,13 @@ ALTER SCHEMA schema_name
  *schema_name*  
  É o nome de um esquema no banco de dados atual para o qual o protegível será movido. Não pode ser SYS nem INFORMATION_SCHEMA.  
   
- \<entity_type >  
+ \<entity_type>  
  É a classe da entidade para a qual o proprietário está sendo alterado. Objeto é o padrão.  
   
  *securable_name*  
- É o nome de uma parte ou de duas partes de um protegível contido em esquema a ser movido para o esquema.  
+ É o nome de uma parte ou de duas partes de um escopo de esquema protegível a ser movido para o esquema.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os usuários e esquemas são completamente separados.  
   
  ALTER SCHEMA só pode ser usado para mover protegíveis entre esquemas no mesmo banco de dados. Para alterar ou descartar um protegível dentro de um esquema, use a instrução ALTER ou DROP específica para esse protegível.  
@@ -82,7 +82,11 @@ ALTER SCHEMA schema_name
   
  Todas as permissões associadas ao protegível serão descartadas quando o protegível for movido para o novo esquema. Se o proprietário do protegível tiver sido definido explicitamente, o proprietário permanecerá inalterado. Se o proprietário do protegível tiver sido definido como SCHEMA OWNER, o proprietário permanecerá como SCHEMA OWNER; entretanto, após a movimentação, SCHEMA OWNER reconhecerá o proprietário do novo esquema. O principal_id do novo proprietário será NULL.  
   
- Para alterar o esquema de uma tabela ou exibição usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no Pesquisador de objetos, clique com botão direito da tabela ou exibição e, em seguida, clique em **Design**. Pressione **F4** para abrir a janela Propriedades. No **esquema** , selecione um novo esquema.  
+ Mover um procedimento armazenado, função, exibição ou gatilho não alterará o nome do esquema, se presente, do objeto na coluna de definição do [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) exibição do catálogo ou obtido usando o [ OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) função interna. Portanto, é recomendável que ALTER SCHEMA não ser usado para mover esses tipos de objetos. Em vez disso, descartar e recriar o objeto em seu novo esquema.  
+  
+ Movimentação de um objeto como uma tabela ou um sinônimo não atualizará automaticamente as referências a esse objeto. Você deve modificar todos os objetos que fazem referência o objeto transferido manualmente. Por exemplo, se você mover uma tabela e essa tabela for referenciada em um gatilho, você deve modificar o gatilho para refletir o novo nome de esquema. Use [sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) para listar as dependências do objeto antes de movê-lo.  
+
+ Para alterar o esquema de uma tabela usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no Pesquisador de objetos, clique na tabela e, em seguida, clique em **Design**. Pressione **F4** para abrir a janela Propriedades. No **esquema** , selecione um novo esquema.  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
@@ -90,7 +94,7 @@ ALTER SCHEMA schema_name
 ## <a name="permissions"></a>Permissões  
  Para transferir um protegível de outro esquema, o usuário atual deve ter permissão CONTROL sobre o protegível (não esquema) e permissão ALTER sobre o esquema de destino.  
   
- Se o protegível tiver uma especificação EXECUTE AS OWNER e o proprietário estiver definido como SCHEMA OWNER, o usuário deverá ter também permissão IMPERSONATION sobre o proprietário do esquema de destino.  
+ Se o protegível tem uma especificação EXECUTE AS OWNER e o proprietário é definido como proprietário do esquema, o usuário também deve ter a permissão IMPERSONATE o proprietário do esquema de destino.  
   
  Todas as permissões associadas ao protegível que estão sendo transferidas serão descartadas após o deslocamento.  
   
@@ -155,8 +159,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar esquema &#40; Transact-SQL &#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [DROP SCHEMA &#40; Transact-SQL &#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
+ [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+ [DROP SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STOverlaps (geometry Data Type)
 ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 800073a5f38869967cec42b00c762cd29cdffd09
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e2e6864bef784944d2b08bbf3b043046e99c7173
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ Retornará 1 se uma **geometria** instância sobrepõe outra **geometria** inst�
   
  Tipo de retorno CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Dois **geometria** instâncias se sobrepõem se a região que representa a interseção entre elas tiver a mesma dimensão que as instâncias e a região não é igual a qualquer instância.  
   
  `STOverlaps()`sempre retorna 0 se os pontos onde o **geometria** instâncias se cruzam não são da mesma dimensão.  

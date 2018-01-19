@@ -26,15 +26,15 @@ helpviewer_keywords:
 - local variables [SQL Server]
 ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 56303a563bce3def564fe3b92067eb6f4c6a2177
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 0c86742889f3ff486aaa533e0f865e0a404d595c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select-localvariable-transact-sql"></a>Selecione @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ Operador de atribuição composto:
  *expressão*  
  É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md). Isso inclui uma subconsulta escalar.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Selecione @*local_variable* normalmente é usado para retornar um único valor para a variável. No entanto, quando *expressão* é o nome de uma coluna, ele pode retornar vários valores. Se a instrução SELECT retornar mais de um valor, à variável será atribuído o último valor retornado.  
   
  Se a instrução SELECT não retornar nenhuma linha, a variável reterá seu valor atual. Se *expressão* for uma subconsulta escalar que não retorna nenhum valor, a variável é definido como NULL.  
@@ -133,7 +133,7 @@ NULL
   
 ## <a name="see-also"></a>Consulte também  
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Composta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "ATUALIZAÇÃO (Transact-SQL) | Microsoft Docs"
+title: UPDATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
@@ -39,15 +39,15 @@ helpviewer_keywords:
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 caps.latest.revision: "91"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1a739b230d39726367d54a64e7b2327f6a80f9ca
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d30edc04b6b78ae1ccff83028433c4a25e25ca33
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -124,7 +124,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  Expressões de tabela comuns também podem ser usadas com as instruções SELECT, INSERT, DELETE e CREATE VIEW. Para obter mais informações, consulte [com common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- SUPERIOR **(** *expressão***)** [%]  
+ SUPERIOR **(** *expressão *)** [%]  
  Especifica o número ou porcentagem de linhas que são atualizadas. *expression* pode ser um número ou uma porcentagem das linhas.  
   
  As linhas referenciadas na expressão TOP usada com INSERT, UPDATE ou DELETE não são organizadas em qualquer ordem.  
@@ -172,9 +172,9 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  { **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
  Operador de atribuição composto:  
- + = Somar e atribuir  
+ += Somar e atribuir  
  -= Subtrair e atribuir  
- * = Multiplicar e atribuir  
+ *= Multiplicar e atribuir  
  / = Dividir e atribuir  
  % = Módulo e atribuir  
  & = AND bit a bit e atribuir  
@@ -184,13 +184,13 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *udt_column_name*  
  É uma coluna de tipo definido pelo usuário.  
   
- *Property_Name* | *nome_do_campo*  
+ *property_name* | *field_name*  
  É uma propriedade pública ou membro de dados público de um tipo definido pelo usuário.  
   
  *nome_do_método* **(** *argumento* [ **,**... *n*] **)**  
  É um método modificador público não estático de *udt_column_name* que usa um ou mais argumentos.  
   
- **.** Gravar **(***expressão***,***@Offset***,** *@Length***)**  
+ **.** Gravar **(***expressão***,***@Offset***,***@Length***)**  
  Especifica que uma seção do valor de *column_name* deve ser modificada. *expressão* substitui  *@Length*  unidades a partir  *@Offset*  de *column_name*. Somente colunas do **varchar (max)**, **nvarchar (max)**, ou **varbinary (max)** podem ser especificadas com esta cláusula. *nome da coluna* não pode ser nulo e não pode ser qualificado com um nome de tabela ou alias de tabela.  
   
  *expressão* é o valor que é copiado para *column_name*. *expressão* deve ser avaliada ou poder ser implicitamente convertido para o *column_name* tipo. Se *expressão* é definido como NULL,  *@Length*  é ignorado e o valor na *column_name* é truncado no local especificado  *@Offset* .  
@@ -201,12 +201,12 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  Para obter mais informações, consulte Comentários.  
   
- **@***variável*  
+ **@** *variable*  
  É uma variável declarada é definida como o valor retornado por *expressão*.  
   
- DEFINIR  **@**  *variável* = *coluna* = *expressão* define a variável com o mesmo valor da coluna. Isso é diferente do conjunto  **@**  *variável* = *coluna*, *coluna*  =  *expressão*, que define a variável como o valor de pré-atualização da coluna.  
+ DEFINIR **@ * variável* = *coluna* = *expressão* define a variável com o mesmo valor que a coluna. Isso é diferente do conjunto **@ * variável* = *coluna*, *coluna* = *expressão*, que define o variável para o valor de pré-atualização da coluna.  
   
- \<OUTPUT_Clause >  
+ \<OUTPUT_Clause>  
  Retorna dados atualizados ou expressões com base neles, como parte da operação UPDATE. A cláusula OUTPUT não tem suporte em nenhuma instrução DML destinada a exibições ou tabelas remotas. Para obter mais informações, consulte [cláusula OUTPUT &#40; Transact-SQL &#41; ](../../t-sql/queries/output-clause-transact-sql.md).  
   
  DE \<table_source >  
@@ -226,7 +226,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
 -   Atualizações posicionadas usam a cláusula CURRENT OF para especificar um cursor. A operação de atualização ocorre na posição atual do cursor.  
   
-\<search_condition >  
+\<search_condition>  
  Especifica o critério a ser atendido para as linhas a serem atualizadas. O critério de pesquisa também pode ser o critério no qual uma junção é baseada. Não há nenhum limite para o número de predicados que podem ser incluídos em um critério de pesquisa. Para obter mais informações sobre predicados e condições de pesquisa, consulte [critério de pesquisa &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
   
 CURRENT OF  
@@ -243,7 +243,7 @@ GLOBAL
 *cursor_variable_name*  
  É o nome de uma variável de cursor. *cursor_variable_name* deve fazer referência a um cursor que permite atualizações.  
   
-OPÇÃO **(** \<query_hint > [ **,**... *n* ] **)**  
+OPTION **(** \<query_hint> [ **,**... *n* ] **)**  
  Especifica que dicas de otimização são usadas para personalizar a maneira como o [!INCLUDE[ssDE](../../includes/ssde-md.md)] processa a instrução. Para obter mais informações, veja [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="best-practices"></a>Práticas recomendadas  
@@ -334,7 +334,7 @@ GO
 >  O **ntext**, **texto**, e **imagem** tipos de dados serão removidos em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses tipos de dados em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que os utilizam atualmente. Em vez disso, use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)e [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
   
 ### <a name="updating-large-value-data-types"></a>Atualizando tipos de dados de valor grande  
- Use o **.** GRAVAR (*expressão***,**  *@Offset*  **,***@Length*) cláusula para executar uma atualização parcial ou completa do **varchar (max)**, **nvarchar (max)**, e **varbinary (max)** tipos de dados. Por exemplo, uma atualização parcial de um **varchar (max)** coluna pode excluir ou modificar somente os 200 primeiros caracteres da coluna, enquanto uma atualização completa exclui ou modifica todos os dados na coluna. **.** ESCREVER atualizações que inserem ou acrescentam novos dados serão registradas minimamente se o modelo de recuperação do banco de dados é definido como bulk-logged ou simples. A criação mínima de log não é usada quando valores existentes são atualizados. Para obter mais informações, consulte [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ Use o **.** GRAVAR (*expressão *** *@Offset***,***@Length*) cláusula para executar uma atualização parcial ou completa do  **varchar (max)**, **nvarchar (max)**, e **varbinary (max)** tipos de dados. Por exemplo, uma atualização parcial de um **varchar (max)** coluna pode excluir ou modificar somente os 200 primeiros caracteres da coluna, enquanto uma atualização completa exclui ou modifica todos os dados na coluna. **.** ESCREVER atualizações que inserem ou acrescentam novos dados serão registradas minimamente se o modelo de recuperação do banco de dados é definido como bulk-logged ou simples. A criação mínima de log não é usada quando valores existentes são atualizados. Para obter mais informações, veja [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
  O [!INCLUDE[ssDE](../../includes/ssde-md.md)] converte uma atualização parcial em uma atualização completa quando a instrução UPDATE provoca uma destas ações:  
 -   Altera uma coluna de chave da exibição ou tabela particionada.  
@@ -346,7 +346,7 @@ Não é possível usar o **.** Cláusula WRITE para atualizar uma coluna NULL ou
   
 Para obter melhor desempenho, é recomendável que os dados sejam inseridos ou atualizados em tamanhos de blocos que sejam múltiplos de 8040 bytes.  
   
-Se a coluna modificada pelo **.** GRAVAR a cláusula for referenciada em uma cláusula OUTPUT, o valor completo da coluna, ou a imagem anterior em **excluído.** *column_name* ou a imagem posterior em **inserido.** *column_name*, será retornado à coluna especificada na variável de tabela. Consulte o exemplo R que segue.  
+Se a coluna modificada pelo **.** WRITE cláusula for referenciada em uma cláusula OUTPUT, o valor completo da coluna, ou a imagem anterior em **excluído. * * * column_name* ou a imagem posterior em **inserido. * * * column_name*, é retornado a coluna especificada na variável de tabela. Consulte o exemplo R que segue.  
   
 Para obter a mesma funcionalidade de **.** ESCREVER com outro caractere ou tipos de dados binários, use o [coisas &#40; Transact-SQL &#41; ](../../t-sql/functions/stuff-transact-sql.md).  
   
@@ -481,7 +481,7 @@ ID     Value
 |[Especificando objetos de destino que não sejam de tabelas padrão](#TargetObjects)|exibições • variáveis de tabela • aliases de tabela|  
 |[Atualizando dados com base em dados de outras tabelas](#OtherTables)|FROM|  
 |[Atualizando linhas em uma tabela remota](#RemoteTables)|servidor vinculado • OPENQUERY • OPENDATASOURCE|  
-|[Atualizando tipos de dados de objeto grande](#LOBValues)|. GRAVAR • OPENROWSET|  
+|[Atualizando tipos de dados de objeto grande](#LOBValues)|.WRITE • OPENROWSET|  
 |[Atualizando tipos definidos pelo usuário](#UDTs)|tipos definidos pelo usuário|  
 |[Substituindo o comportamento padrão do otimizador de consulta usando dicas](#TableHints)|dicas de tabela • dicas de consulta|  
 |[Capturando os resultados da instrução UPDATE](#CaptureResults)|cláusula OUTPUT|  
@@ -1036,7 +1036,7 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-#### <a name="ac-using-update-in-a-trycatch-block"></a>CA. Usando UPDATE em um bloco TRY…CATCH  
+#### <a name="ac-using-update-in-a-trycatch-block"></a>AC. Usando UPDATE em um bloco TRY…CATCH  
  O exemplo a seguir usa uma instrução UPDATE em um bloco TRY... CATCH para tratar erros de execução que podem ocorrer durante a operação de atualização.  
   
 ```sql  
@@ -1114,7 +1114,7 @@ WHERE ProductKey = 313
 OPTION (LABEL = N'label1');  
 ```  
   
-### <a name="ag-using-the-update-statement-with-information-from-another-table"></a>GRUPO DE DISPONIBILIDADE. Usando uma instrução UPDATE com informações de outra tabela  
+### <a name="ag-using-the-update-statement-with-information-from-another-table"></a>AG. Usando uma instrução UPDATE com informações de outra tabela  
  Este exemplo cria uma tabela para armazenar o total de vendas por ano. Ele atualiza o total de vendas do ano de 2004, executando uma instrução SELECT na tabela FactInternetSales.  
   
 ```sql  
@@ -1216,12 +1216,12 @@ DROP TABLE CTAS_acs
 ;
 ```
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Cursores &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERIR &#40;O Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [Funções de imagem e texto &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
  [COM common_table_expression &#40; Transact-SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  

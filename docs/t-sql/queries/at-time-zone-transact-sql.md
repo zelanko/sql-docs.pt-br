@@ -1,5 +1,5 @@
 ---
-title: "NO FUSO horário (Transact-SQL) | Microsoft Docs"
+title: AT TIME ZONE (Transact-SQL) | Microsoft Docs
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
@@ -17,17 +17,17 @@ f1_keywords:
 helpviewer_keywords: AT TIME ZONE function
 ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2265efe9fab240d25d03e3e1ef16009d294166af
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b9fc240d76c2939e0ed96d87fdbfee35ec8208ce
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="at-time-zone-transact-sql"></a>NO FUSO horário (Transact-SQL)
+# <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Converte um *inputdate* para correspondente *datetimeoffset* valor no fuso horário de destino. Se *inputdate* é fornecido sem informação de deslocamento, a função aplicará o deslocamento do fuso horário, supondo que *inputdate* valor é fornecido no fuso horário de destino. Se *inputdate* é fornecido como um *datetimeoffset* valor, que **AT TIME ZONE** cláusula converte-o para o fuso horário de destino usando regras de conversão de fuso horário.  
@@ -46,7 +46,7 @@ inputdate AT TIME ZONE timezone
  *inputdate*  
  É uma expressão que pode ser resolvida para um **smalldatetime**, **datetime**, **datetime2**, ou **datetimeoffset** valor.  
   
- *fuso horário*  
+ *timezone*  
  Nome da zona de tempo de destino. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]se baseia em fusos horários que são armazenados no registro do Windows. Todos os fusos horários instalados no computador são armazenados no hive do registro a seguir: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. Uma lista de fusos horários instalados também é exposta por meio de [time_zone_info &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) exibição.  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -55,7 +55,7 @@ inputdate AT TIME ZONE timezone
 ## <a name="return-value"></a>Valor de retorno  
  O **datetimeoffset** valor no fuso horário de destino.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **NO FUSO horário** aplica regras específicas para converter valores de entrada na **smalldatetime**, **datetime** e **datetime2** tipos de dados, que se encaixam em uma intervalo é afetado pela alteração DST:  
   
 -   Quando o relógio está definido em frente e há uma lacuna na hora local, duração da qual depende a duração do ajuste de relógio (geralmente 1 hora, mas ele pode ser 30 ou 45 minutos, dependendo de fuso horário). Nesse caso, os pontos no tempo que pertencem a essa lacuna são convertidos com deslocamento *depois* alteração do horário de verão.  

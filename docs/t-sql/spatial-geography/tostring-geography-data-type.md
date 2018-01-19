@@ -16,15 +16,15 @@ dev_langs: TSQL
 helpviewer_keywords: ToString method
 ms.assetid: 045c12fa-8fc6-441a-9500-7021cb4ff13e
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 26affe3f63d15d92ed672ef2f9dd083ca658cb44
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5f69036b448772e102f05ba657aa15f73c86c5c5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="tostring-geography-data-type"></a>ToString (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
  Tipo de retorno CLR: **SqlString**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método retorna a cadeia de caracteres "Null" quando chamado em instâncias nulas. Em [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o conjunto de resultados possíveis no servidor foi estendido para **FullGlobe** instâncias. Esse método retornará o mesmo valor que `AsTextZM()`.  
   
  Esse método não é preciso.  
