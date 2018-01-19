@@ -3,8 +3,8 @@ title: Solucionar problemas do SQL Server no Linux | Microsoft Docs
 description: "Fornece dicas de solução de problemas para usar o SQL Server 2017 no Linux."
 author: annashres
 ms.author: anshrest
-manager: jhubbard
-ms.date: 05/08/2017
+manager: craigg
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,17 +15,17 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: a65ee3607cb2bbe2a1a30135950e611e4456f8ba
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: da16bc7126d39bcdf86152b3ae8b21d7b58805eb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Solucionar problemas do SQL Server no Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Este documento descreve como solucionar problemas de Microsoft SQL Server em execução no Linux ou em um contêiner do Docker. Ao solucionar problemas do SQL Server no Linux, lembre-se revisar os recursos com suporte e as limitações conhecidas no [Linux notas de versão do SQL Server](sql-server-linux-release-notes.md).
+Este documento descreve como solucionar problemas de Microsoft SQL Server em execução no Linux ou em um contêiner do Docker. Ao solucionar problemas do SQL Server no Linux, lembre-se de examinar os recursos com suporte e as limitações conhecidas no [Linux notas de versão do SQL Server](sql-server-linux-release-notes.md).
 
 ## <a id="connection"></a>Solucionar problemas de falhas de conexão
 Se você estiver tendo dificuldade para se conectar ao seu SQL Server do Linux, há algumas coisas para verificar. 
@@ -51,7 +51,7 @@ Se você estiver tendo dificuldade para se conectar ao seu SQL Server do Linux, 
 
 - Verifique se o nome de usuário e a senha não contém quaisquer erros de digitação ou espaços adicionais ou incorretova maiusculas e minúsculas.
 
-- Tente definir explicitamente o número de porta e protocolo com o nome do servidor com o seguinte: **tcp:servername, 1433**.
+- Tente definir explicitamente o número de porta e protocolo com o nome do servidor com o seguinte exemplo: **tcp:servername, 1433**.
 
 - Problemas de conectividade de rede também podem causar tempos limite e erros de conexão. Depois de verificar as informações de conexão e a conectividade de rede, tente novamente a conexão.
 
@@ -61,7 +61,7 @@ As seções a seguir mostram como iniciar, parar, reiniciar e verificar o status
 
 ### <a name="manage-the-mssql-server-service-in-red-hat-enterprise-linux-rhel-and-ubuntu"></a>Gerenciar o serviço mssql server no Red Hat Enterprise Linux (RHEL) e no Ubuntu 
 
-Verifique o status do status do serviço do SQL Server usando este comando:
+Verifique o status do serviço do SQL Server usando este comando:
 
    ```bash
    sudo systemctl status mssql-server
@@ -77,7 +77,7 @@ Você pode parar, iniciar ou reiniciar o serviço SQL Server conforme necessári
 
 ### <a name="manage-the-execution-of-the-mssql-docker-container"></a>Gerenciar a execução do contêiner Docker mssql
 
-Você pode obter a ID de status e o contêiner do contêiner do Docker do SQL Server mais recente criado executando o comando a seguir (a ID será sob a coluna "ID do CONTÊINER"):
+Você pode obter a ID de status e o contêiner do contêiner do Docker do SQL Server mais recente criado executando o comando a seguir (a ID está sob o **ID de CONTÊINER** coluna):
 
    ```bash
    sudo docker ps -l
@@ -151,7 +151,7 @@ Inicie o SQL Server no modo de usuário único com SQLCMD
 > [!WARNING]  
 >  Inicie o SQL Server no Linux com o usuário “mssql” para evitar problemas futuros de inicialização. Exemplo: “sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]” 
 
-Se você acidentalmente iniciou do SQL Server com outro usuário, você precisará alterar a propriedade de arquivos de banco de dados do SQL Server para o usuário 'mssql' antes de iniciar o SQL Server com systemd. Por exemplo, para alterar a propriedade de todos os arquivos de banco de dados em /var/opt/mssql para o usuário 'mssql', execute o seguinte comando
+Se você acidentalmente iniciou do SQL Server com outro usuário, você deve alterar a propriedade dos arquivos de banco de dados do SQL Server para o usuário 'mssql' antes de iniciar o SQL Server com systemd. Por exemplo, para alterar a propriedade de todos os arquivos de banco de dados em /var/opt/mssql para o usuário 'mssql', execute o seguinte comando
 
    ```bash
    chown -R mssql:mssql /var/opt/mssql/
@@ -161,7 +161,7 @@ Se você acidentalmente iniciou do SQL Server com outro usuário, você precisar
 
 1. Você não pode se conectar à instância do SQL Server remota.
 
-   Consulte a seção solução de problemas do tópico, [conectar-se ao SQL Server no Linux](#connection).
+   Consulte a seção solução de problemas do artigo, [conectar-se ao SQL Server no Linux](#connection).
 
 2. Erro: O nome do host deve ter 15 caracteres ou menos.
 
@@ -172,7 +172,7 @@ Se você acidentalmente iniciou do SQL Server com outro usuário, você precisar
    Se você tiver esquecido a senha de administrador do sistema ou precisa redefini-la por algum outro motivo, siga estas etapas.
 
    > [!NOTE]
-   > Siga estas etapas temporariamente interromperá o serviço do SQL Server.
+   > As etapas a seguir parar temporariamente o serviço do SQL Server.
 
    Faça logon no terminal host, execute os seguintes comandos e siga os prompts para redefinir a senha de SA:
 
@@ -183,7 +183,7 @@ Se você acidentalmente iniciou do SQL Server com outro usuário, você precisar
 
 4. Usar caracteres especiais na senha.
 
-   Se você usar alguns caracteres na senha de logon do SQL Server, você precisará reservá-los quando usá-los no terminal Linux. Você precisará de escape de $ a qualquer momento usando o caractere de barra invertida é usado em um script de shell de comando/terminal:
+   Se você usar alguns caracteres na senha de logon do SQL Server, você precisará reservá-los quando usá-los no terminal Linux. Você deve escapar a $ a qualquer momento usando o caractere de barra invertida é usado em um script de shell de comando/terminal:
 
    Não funciona:
 
@@ -207,5 +207,5 @@ O suporte está disponível por meio da comunidade e monitorados pela equipe de 
 - [DBA pilha Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): faça perguntas de administração de banco de dados
 - [Estouro de pilha](http://stackoverflow.com/questions/tagged/sql-server): faça perguntas de desenvolvimento
 - [Fóruns do MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): questões técnicas
-- [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): relatório de bugs e o recurso de solicitação
+- [Enviar comentários](https://feedback.azure.com/forums/908035-sql-server): relatório de bugs e o recurso de solicitação
 - [Reddit](https://www.reddit.com/r/SQLServer/): discutir do SQL Server

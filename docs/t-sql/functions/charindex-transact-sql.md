@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 898016ca9940dfa587e57e18ac1c8516f5c2bc64
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ed2f5334c0c76288ca31cf07857a87f2d1c72033
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
 ## <a name="return-types"></a>Tipos de retorno
 **bigint** se *expressionToSearch* é o **varchar (max)**, **nvarchar (max)**, ou **varbinary (max)** dados tipos; Caso contrário, **int**.
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Se qualquer um dos *expressionToFind* ou *expressionToSearch* é de um tipo de dados Unicode (**nvarchar** ou **nchar**) e o outro não, o outra será convertida em um tipo de dados Unicode. CHARINDEX não pode ser usado com **texto**, **ntext**, e **imagem** tipos de dados.
   
 Se qualquer um dos *expressionToFind* ou *expressionToSearch* for NULL, CHARINDEX retornará NULL.
@@ -72,7 +72,7 @@ A posição inicial retornada é com base em 1, não com base em 0.
 0x0000 (**char(0)**) é um caractere indefinido em agrupamentos do Windows e não pode ser incluído em CHARINDEX.
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)  
-Ao usar agrupamentos SC, ambos *start_location* e o valor de retorno contam pares substitutos como um caractere, não dois. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
+Ao usar agrupamentos SC, ambos *start_location* e o valor de retorno contam pares substitutos como um caractere, não dois. Para obter mais informações, consulte [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
   
 ## <a name="examples"></a>Exemplos  
   
@@ -238,9 +238,11 @@ SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-[+ &#40; Concatenação de cadeia de caracteres &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
-[Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)
+ [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
+ [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)  
+ [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [+ &#40;String Concatenation&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+ [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
 

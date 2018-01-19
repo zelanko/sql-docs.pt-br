@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b73433578de0f3f0f0311778e10569a26b84ce0a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7d7932c1887c82b2a10702f9054706e4cf9bce71
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ argument1 argument2, argumento*N*
 ## <a name="return-types"></a>Tipos de retorno
 Cadeia de caracteres. O comprimento e tipo dependem da entrada.
 
-## <a name="remarks"></a>Comentários   
+## <a name="remarks"></a>Remarks   
 `CONCAT_WS`aceita um número variável de argumentos e os concatena em uma única cadeia de caracteres usando o primeiro argumento como separador. Ele requer um separador e um mínimo de dois argumentos; Caso contrário, ocorrerá um erro. Todos os argumentos são implicitamente convertidos em tipos de cadeia de caracteres e, em seguida, são concatenados. 
 
 A conversão implícita em cadeias de caracteres segue as regras existentes para conversões de tipo de dados. Para obter mais informações sobre conversões de tipo de dados e comportamento, consulte [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md).
@@ -127,6 +127,14 @@ FROM sys.databases;
 ```
 
 ## <a name="see-also"></a>Consulte também
-[Funções de cadeia de caracteres (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
-[CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)      
+ [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
 

@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 71b8ce296640f1d205335be7d5f58d8c8e22b7c4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5dd3a4f8b6fd308560ddcf2db3c6940625dc6ee3
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,16 +56,16 @@ CHAR ( integer_expression )
 É um número inteiro de 0 a 255. `NULL`é retornado se a expressão de inteiro não estiver nesse intervalo.
   
 ## <a name="return-types"></a>Tipos de retorno
-**char (1)**
+**char(1)**
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 `CHAR`pode ser usado para inserir caracteres de controle em cadeias de caracteres. A tabela a seguir mostra alguns caracteres de controle usados com frequência.
   
-|Caractere de controle|Valor|  
+|Caractere de controle|Value|  
 |---|---|
 |Tab|**char(9)**|  
-|Alimentação de linha|**char (10)**|  
-|Retorno de carro|**char (13)**|  
+|Alimentação de linha|**char(10)**|  
+|Retorno de carro|**char(13)**|  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -172,8 +172,11 @@ AdventureWorksPDW2012    is currently  ONLINE
 ```
   
 ## <a name="see-also"></a>Consulte também
-[+ &#40; Concatenação de cadeia de caracteres &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
-[Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)
+ [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
+ [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
+ [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
+ [+ &#40;String Concatenation&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+ [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)
   
   
 

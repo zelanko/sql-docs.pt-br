@@ -23,15 +23,15 @@ helpviewer_keywords:
 - GOTO statement
 ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9dbabcc0fe5f9573554384549023ab8395b87762
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6958a7b472f8837f9fc0b9c83548474d61dab17a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="goto-transact-sql"></a>GOTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ GOTO label
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *rótulo*  
+ *label*  
  É o ponto após o qual o processamento inicia se o destino de um GOTO for esse rótulo. Os rótulos devem seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md). Um rótulo pode ser usado como um método de comentário se GOTO for usado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  GOTO pode existir em instruções de controle de fluxo condicional, blocos de instruções ou procedimentos, mas não pode ir para um rótulo fora do lote. A ramificação de GOTO pode ir para um rótulo definido antes ou depois de GOTO.  
   
 ## <a name="permissions"></a>Permissões  
@@ -84,11 +84,11 @@ Branch_Three:
   
 ## <a name="see-also"></a>Consulte também  
  [Linguagem de controle de fluxo &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
- [BEGIN... FINAL &#40; Transact-SQL &#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [QUEBRA &#40; Transact-SQL &#41;](../../t-sql/language-elements/break-transact-sql.md)   
- [Continuar &#40; Transact-SQL &#41;](../../t-sql/language-elements/continue-transact-sql.md)   
- [IF... OUTRA &#40; Transact-SQL &#41;](../../t-sql/language-elements/if-else-transact-sql.md)   
- [WAITFOR &#40; Transact-SQL &#41;](../../t-sql/language-elements/waitfor-transact-sql.md)   
+ [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [BREAK &#40;Transact-SQL&#41;](../../t-sql/language-elements/break-transact-sql.md)   
+ [CONTINUE &#40;Transact-SQL&#41;](../../t-sql/language-elements/continue-transact-sql.md)   
+ [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)   
+ [WAITFOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/waitfor-transact-sql.md)   
  [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)  
   
   

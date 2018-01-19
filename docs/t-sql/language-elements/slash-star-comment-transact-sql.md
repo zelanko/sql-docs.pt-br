@@ -23,15 +23,15 @@ helpviewer_keywords:
 - comments [SQL Server]
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 60ae52af725a065a8319a2fde1e87e1b8bb52e02
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b82dd750c41038c6e526b4f3c3db2583198a0091
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>Barra de estrela (bloco de comentário) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ text_of_comment
  *text_of_comment*  
  É o texto do comentário. É composto de uma ou mais cadeias de caracteres.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os comentários podem ser inseridos em uma linha separada ou dentro de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. Comentários de várias linhas devem ser indicados por / * e \*/. Uma convenção de estilo frequentemente usada para comentários de várias linhas é começar a primeira linha com /\*, subsequentes linhas com \* \*e terminar com \*/.  
   
  Não há comprimento máximo para comentários.  
@@ -107,8 +107,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [– &#40; Comentário &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/comment-transact-sql.md)   
- [Linguagem de controle de fluxo &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)  
+ [-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
+ [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   
 

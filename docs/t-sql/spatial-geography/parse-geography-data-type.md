@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Parse (geography Data Type)
 ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 932a65d59e0083463533493071987f6af79be54c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 32d8925fdf53a1d0bcac33719348138b354376c2
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="parse-geography-data-type"></a>Parse (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ Parse ( 'geography_tagged_text' )
   
  Tipo de retorno CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O tipo OGC do **geografia** instância retornada por `Parse()` é definido como a entrada WKT correspondente.  
   
  A cadeia de caracteres 'Nulo' será interpretado como um valor nulo **geografia** instância.  

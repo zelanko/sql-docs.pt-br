@@ -19,15 +19,15 @@ f1_keywords:
 helpviewer_keywords: DBCC FLUSHAUTHCACHE
 ms.assetid: 681ef31d-ceb9-4da5-86bf-bf1240df950f
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 18fe9c70a774bce85bfdb8a59b54b57064e6c1ad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: da396237660d76c837a3dcadd84253d44ce28479
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ DBCC FLUSHAUTHCACHE [ ; ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-Nenhum.
+Nenhuma.
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 O cache de autenticação faz uma cópia de logons e as regras de firewall de servidor que são armazenadas no mestre e os coloca na memória no banco de dados do usuário.  Como informações sobre usuários de banco de dados independente já são armazenados no banco de dados de usuário, os usuários de banco de dados independente não fazem parte do cache de autenticação.
 Conexões ativas continuamente [!INCLUDE[ssSDS](../../includes/sssds-md.md)] exigir autorização (executadas pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)]) pelo menos a cada 10 horas. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] tentativas de autorização usando a senha originalmente enviada e nenhum usuário de entrada é necessária. Por motivos de desempenho, quando uma senha é redefinida no [!INCLUDE[ssSDS](../../includes/sssds-md.md)], a conexão não será autenticado novamente, mesmo se a conexão for redefinida devido ao pooling de conexão. Isso é diferente do comportamento do local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se a senha foi alterada desde que a conexão foi autorizado inicialmente, a conexão deve ser terminada e uma nova conexão feita usando a nova senha. Um usuário com a permissão KILL DATABASE CONNECTION explicitamente pode encerrar uma conexão para [!INCLUDE[ssSDS](../../includes/sssds-md.md)] usando o [KILL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/kill-transact-sql.md) comando.
   

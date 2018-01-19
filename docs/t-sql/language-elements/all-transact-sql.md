@@ -1,5 +1,5 @@
 ---
-title: Todas as (Transact-SQL) | Microsoft Docs
+title: ALL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - ALL (Transact-SQL)
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b6ea6be0d745ca5ce61a540e9a1e299671d8c7fd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2e65fc9cacbcfe868c072713f282c42c95839e48
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  { = | <> | != | > | >= | !> | < | <= | !< }  
  É um operador de comparação.  
   
- *subconsulta*  
+ *subquery*  
  É uma subconsulta que retorna um conjunto de resultados com uma coluna. O tipo de dados da coluna retornada deve ser o mesmo tipo de dados como o tipo de dados de *scalar_expression*.  
   
  É uma instrução SELECT restrita, na qual a cláusula ORDER BY e a palavra-chave INTO não são permitidas.  
@@ -63,9 +63,9 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Booliano**  
   
 ## <a name="result-value"></a>Valor do resultado  
- Retorna verdadeiro quando a comparação especificada é verdadeiro para todos os pares (*scalar_expression***,***x)*, quando *x* é um valor na conjunto de coluna única. Caso contrário, retornará FALSE.  
+ Retorna verdadeiro quando a comparação especificada é verdadeiro para todos os pares (*scalar_expression***,***x)*, quando *x* é um valor no conjunto de coluna única; caso contrário, retorna FALSE.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  ALL requer o *scalar_expression* seja comparada positivamente com todo valor retornado pela subconsulta. Por exemplo, se a subconsulta retornar os valores 2 e 3, *scalar_expression* < = ALL (a subconsulta) será avaliada como TRUE para um *scalar_expression* de 2. Se a subconsulta retornar os valores 2 e 3, *scalar_expression* = ALL (a subconsulta) seria avaliada como FALSE, porque alguns dos valores da subconsulta (o valor de 3) não atende aos critérios da expressão.  
   
  Para instruções que requerem o *scalar_expression* seja comparada positivamente a somente um valor que é retornado pela subconsulta, consulte [alguns &#124; QUALQUER &#40; Transact-SQL &#41; ](../../t-sql/language-elements/some-any-transact-sql.md).  
@@ -114,13 +114,13 @@ EXECUTE DaysToBuild 49080, 1 ;
  `Some items for this order cannot be manufactured in specified number of days or less.`  
   
 ## <a name="see-also"></a>Consulte também  
- [Caso &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [COMO &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [ONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [IN &#40; Transact-SQL &#41;](../../t-sql/language-elements/in-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  
   
   

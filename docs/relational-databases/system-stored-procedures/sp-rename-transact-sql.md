@@ -1,7 +1,7 @@
 ---
 title: sp_rename (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eb402624e8b25f43a1969a91df85cfe5fa85d9af
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 158974d93e031d689318ea22f3bd0ba8189553ee
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,10 +62,10 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 > [!NOTE]  
 >  Os nomes de gatilhos não podem começar com # ou ##.  
   
- [ @objtype =] '*object_type*'  
+ [ @objtype = ] '*object_type*'  
  É o tipo do objeto que está sendo renomeado. *object_type* é **varchar(13)**, com um padrão NULL, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |COLUMN|Uma coluna a ser renomeada.|  
 |DATABASE|Um banco de dados definido pelo usuário. Esse tipo de objeto é necessário quando um banco de dados é renomeado.|  
@@ -77,16 +77,16 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número diferente de zero (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você só pode alterar o nome de um objeto ou tipo de dados no banco de dados atual. Os nomes da maioria dos tipos de dados do sistema e objetos do sistema não podem ser alterados.  
   
  sp_rename renomeia automaticamente o índice associado sempre que uma restrição PRIMARY KEY ou UNIQUE é renomeada. Se um índice renomeado for vinculado a uma restrição PRIMARY KEY, a restrição PRIMARY KEY também será renomeada automaticamente através de sp_rename.  
   
  sp_rename pode ser usado para renomear índices XML primários e secundários.  
   
- Renomear um procedimento armazenado, função, exibição ou gatilho não alterará o nome do objeto correspondente na coluna de definição do [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) exibição do catálogo. Portanto, é recomendável que sp_rename não seja usado para renomear esses tipos de objetos. Em vez disso, cancele e recrie o objeto com o nome novo.  
+ Renomear um procedimento armazenado, função, exibição ou gatilho não alterará o nome do objeto correspondente na coluna de definição do [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) exibição do catálogo ou obtido usando o [Object _ DEFINIÇÃO](../../t-sql/functions/object-definition-transact-sql.md) função interna. Portanto, é recomendável que sp_rename não seja usado para renomear esses tipos de objetos. Em vez disso, cancele e recrie o objeto com o nome novo.  
   
- A renomeação de um objeto, como uma tabela ou coluna, não renomeará automaticamente as referências a esse objeto. É necessário modificar manualmente todos os objetos que fazem referência ao objeto renomeado. Por exemplo, se você renomear uma coluna de tabela e aquela coluna for referenciada em um gatilho, será necessário modificar o gatilho para que ele reflita o nome novo da coluna. Use[sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) para listar as dependências do objeto antes de renomeá-lo.  
+ A renomeação de um objeto, como uma tabela ou coluna, não renomeará automaticamente as referências a esse objeto. É necessário modificar manualmente todos os objetos que fazem referência ao objeto renomeado. Por exemplo, se você renomear uma coluna de tabela e aquela coluna for referenciada em um gatilho, será necessário modificar o gatilho para que ele reflita o nome novo da coluna. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) para listar as dependências do objeto antes de renomeá-lo.  
   
 ## <a name="permissions"></a>Permissões  
  Para renomear objetos, colunas e índices, a permissão ALTER é necessária no objeto. Para renomear tipos de usuário, a permissão CONTROL é necessária no tipo. Para renomear um banco de dados, a associação é necessária nas funções de servidor fixas sysadmin ou dbcreator.  

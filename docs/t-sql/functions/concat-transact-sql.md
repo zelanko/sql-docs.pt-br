@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a924bb7f9eb521e3c9637e69aeb5055c69bfeb11
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1f3a1ef2b55b2f67b6b2e01ceb1965a5076e8476
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -42,13 +42,13 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-*String_value*  
+*string_value*  
 Um valor de cadeia de caracteres para concatenação com outros valores.
   
 ## <a name="return-types"></a>Tipos de retorno
 Cadeia de caracteres, comprimento e tipo dos quais a entrada depende.
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 **CONCAT** usa um número variável de argumentos de cadeia de caracteres e os concatena em uma única cadeia de caracteres. Exige um mínimo de dois valores de entrada; caso contrário, é gerado um erro. Todos os argumentos são convertidos implicitamente em tipos de cadeia de caracteres e depois concatenados. Os valores nulos são convertidos implicitamente em uma cadeia de caracteres vazia. Se todos os argumentos são null, uma cadeia de caracteres vazia do tipo **varchar**(1) será retornado. A conversão implícita em cadeias de caracteres segue as regras existentes para conversões de tipo de dados. Para obter mais informações sobre conversões de tipo de dados, consulte [CAST e CONVERT &#40; Transact-SQL &#41; ](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
 O tipo de retorno depende do tipo dos argumentos. A tabela a seguir ilustra o mapeamento.
@@ -57,7 +57,7 @@ O tipo de retorno depende do tipo dos argumentos. A tabela a seguir ilustra o ma
 |---|---|
 |Se qualquer argumento for um tipo do sistema SQL-CLR, um SQL-CLR UDT ou um `nvarchar(max)`|**nvarchar(max)**|  
 |Caso contrário, se qualquer argumento for **varbinary (max)** ou **varchar (max)**|**varchar (max)** , a menos que um dos parâmetros é um **nvarchar** de qualquer comprimento. Se assim, em seguida, o resultado é **nvarchar (max)**.|  
-|Caso contrário, se qualquer argumento for **nvarchar**(< = 4000)|**nvarchar**(< = 4000)|  
+|Caso contrário, se qualquer argumento for **nvarchar**(< = 4000)|**nvarchar**(<= 4000)|  
 |Caso contrário, em todos os outros casos|**varchar**(< = 8000), a menos que um dos parâmetros seja um nvarchar de qualquer comprimento. Se assim, em seguida, o resultado é **nvarchar (max)**.|  
   
 Quando os argumentos forem < = 4000 para **nvarchar**, ou < = 8000 para **varchar**, conversões implícitas poderão afetar o comprimento do resultado. Outros tipos de dados têm comprimentos diferentes quando eles são convertidos implicitamente em cadeias de caracteres. Por exemplo, um **int** (14) tem um comprimento de cadeia de caracteres de 12, enquanto um **float** tem um comprimento de 32. Portanto, o resultado da concatenação de dois inteiros tem um comprimento não menor que 24.
@@ -108,8 +108,16 @@ NameLastname
 ```  
   
 ## <a name="see-also"></a>Consulte também
-[Funções de cadeia de caracteres (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
-[CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)   
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)   
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
 
 

@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d8792951add2462067bc21ed22ef1e5ce005c0f0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 04386cd8dafb69d08c72b460f3794963c8b6da36
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
  *float_expression*  
  É uma expressão de numérico aproximado (**float**) tipo de dados com um ponto decimal.  
   
- *length*  
+ *comprimento*  
  É o comprimento total. Isso inclui ponto decimal, sinal, dígitos e espaços. O padrão é 10.  
   
  *decimal*  
@@ -58,7 +58,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
 ## <a name="return-types"></a>Tipos de retorno  
  **varchar**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se for fornecido, os valores para *comprimento* e *decimal* parâmetros para STR devem ser positivos. O número é arredondado para um número inteiro por padrão ou se o parâmetro decimal for 0. O comprimento especificado deve ser maior ou igual à parte do número antes do ponto decimal mais o sinal do número (se houver). Uma breve *float_expression* é justificado à direita no comprimento especificado e um longo *float_expression* são truncados para o número especificado de casas decimais. Por exemplo, STR (12**,**10), o resultado de 12. É justificado à direita no conjunto de resultados. No entanto, STR (1223**,**2) trunca o conjunto de resultados para * *. As funções de cadeia de caracteres podem ser aninhadas.  
   
 > [!NOTE]  
@@ -114,6 +114,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
+ [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
  [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   

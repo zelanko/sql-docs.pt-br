@@ -29,11 +29,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7c554f15df3eae68ea3b5cda1ba5bb316f5dcc17
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1b1608f86abf8605b707f8b72e7baac3b9b794e7
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 DBCC CHECKCATALOG   
 [   
     (   
@@ -56,13 +55,13 @@ DBCC CHECKCATALOG
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Database_Name* | *database_id* | 0  
+ *database_name* | *database_id* | 0  
  É o nome ou ID do banco de dados para o qual verificar consistência do catálogo. Se não for especificado ou se 0 for especificado, o banco de dados atual será usado. Nomes de banco de dados devem estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  WITH NO_INFOMSGS  
  Suprime todas as mensagens informativas.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Depois que o comando DBCC CATALOG termina, uma mensagem é gravada no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o comando DBCC for executado com êxito, a mensagem indicará uma conclusão bem-sucedida e o tempo de execução do comando. Se o comando DBCC parar antes de concluir a verificação devido a um erro, a mensagem indica que o comando foi finalizado, um valor de estado e a quantidade de tempo de execução do comando. A tabela a seguir lista e descreve os valores de estado que podem ser incluídos na mensagem.
   
 |Estado|Description|  
@@ -78,23 +77,23 @@ DBCC CHECKCATALOG executa vários testes de consistência entre tabelas de metad
 Se um instantâneo não puder ser criado, DBCC CHECKCATALOG obterá um bloqueio de banco de dados exclusivo para adquirir a consistência exigida. Se qualquer inconsistência for detectada, não poderá ser reparada e o banco de dados deverá ser restaurado a partir de um backup.
   
 > [!NOTE]  
->  Execução de DBCC CHECKCATALOG contra **tempdb** não executa nenhuma verificação. Isso ocorre porque, por motivos de desempenho, instantâneos de banco de dados não estão disponíveis em **tempdb**. Isso significa que não é possível obter a consistência transacional exigida. Recicle o servidor para resolver qualquer **tempdb** problemas de metadados.  
+> Execução de DBCC CHECKCATALOG contra **tempdb** não executa nenhuma verificação. Isso ocorre porque, por motivos de desempenho, instantâneos de banco de dados não estão disponíveis em **tempdb**. Isso significa que não é possível obter a consistência transacional exigida. Recicle o servidor para resolver qualquer **tempdb** problemas de metadados.  
   
 > [!NOTE]  
->  DBCC CHECKCATALOG não verifica dados FILESTREAM. FILESTREAM armazena BLOBS (objetos binários grandes) no sistema de arquivos.  
+> DBCC CHECKCATALOG não verifica dados FILESTREAM. FILESTREAM armazena BLOBS (objetos binários grandes) no sistema de arquivos.  
   
 DBCC CHECKCATALOG também é executado como parte do [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
 Se nenhum banco de dados for especificado, DBCC CHECKCATALOG retornará:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
 Se [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] for especificado como nome do banco de dados, DBCC CHECKCATALOG retornará:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
@@ -115,5 +114,5 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[Tabelas do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
+[System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
   

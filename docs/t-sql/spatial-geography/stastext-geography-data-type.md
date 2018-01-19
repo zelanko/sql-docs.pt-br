@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STAsText method
 ms.assetid: d3d2635d-ca6c-4205-9d6c-eb939ee314fd
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 164809adbc58d2aef1d27168f5b775117a2634f1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5069255ee49eb78356135f5537cfee434f58c573
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stastext-geography-data-type"></a>STAsText (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
  Tipo de retorno CLR: **SqlChars**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O tipo OGC de uma **geografia** instância pode ser determinada invocando [stgeometrytype ()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
   
  Em [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o conjunto de possíveis resultados retornados no servidor foi estendido para **FullGlobe** instâncias.  

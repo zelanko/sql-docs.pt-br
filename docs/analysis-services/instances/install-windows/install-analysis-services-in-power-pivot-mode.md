@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7c958feff44c2947c74f51eaec94abcd4ca8e543
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7528721b65101ee32285d57f18f93f98eeec9dae
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Instale o Analysis Services no modo do Power Pivot.
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Os procedimentos neste tópico guiá-lo por meio de uma instalação de servidor único de um [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] servidor [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modo de implantação do SharePoint. As etapas incluem a execução do assistente de instalação do SQL Server, bem como as tarefas de configuração que usam a Administração Central do SharePoint.  
@@ -306,13 +306,13 @@ ms.lasthandoff: 01/08/2018
   
  **Redundância e carga do servidor:** instalar um segundo ou mais servidores do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] fornecerá a redundância da funcionalidade do servidor do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Os servidores adicionais também distribuirão a carga entre os servidores. Para obter mais informações, consulte o seguinte:  
   
--   [Configurar o Analysis Services para processar modelos de dados nos Serviços do Excel (SharePoint 2013)](http://technet.microsoft.com/library/jj614437\(v=office.15\)) (http://technet.microsoft.com/library/jj614437(v=office.15)).  
+-   [Configurar o Analysis Services para processar modelos de dados nos serviços do Excel (SharePoint 2013)](http://technet.microsoft.com/library/jj614437(v=office.15)).  
   
--   [Gerenciar as configurações de modelo de dados dos Serviços do Excel (SharePoint 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\)) (http://technet.microsoft.com/library/jj219780(v=office.15)).  
+-   [Gerenciar configurações de modelo de dados de serviços do Excel (SharePoint 2013)](http://technet.microsoft.com/library/jj219780(v=office.15)).  
   
- ![Configurações do SharePoint](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") [Envie comentários e informações de contato pelo Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ ![Configurações do SharePoint](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "configurações SharePoint") [enviar comentários e informações de contato por meio do SQL Server Feedback](https://feedback.azure.com/forums/908035-sql-server).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Migrar o Power Pivot para o SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [Instalar ou desinstalar o suplemento do Power Pivot para SharePoint &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [Atualizar pastas de trabalho e atualização de dados agendada &#40; SharePoint 2013 &#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  

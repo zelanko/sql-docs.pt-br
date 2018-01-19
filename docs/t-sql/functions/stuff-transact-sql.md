@@ -1,5 +1,5 @@
 ---
-title: COISAS (Transact-SQL) | Microsoft Docs
+title: STUFF (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/17/2017
 ms.prod: sql-non-specified
@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: db5876abd95b4eb9b21d91deeeb6bc0f1a242303
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 10edb8b1b1e3008321bc03e2e65419dca8956f86
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,10 +52,10 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  *character_expression*  
  É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de dados de caracteres. *character_expression* pode ser uma constante, variável ou coluna de caracteres ou dados binários.  
   
- *Iniciar*  
+ *start*  
  É um valor de inteiro que especifica o local para iniciar a exclusão e a inserção. Se *iniciar* for negativo ou zero, uma cadeia de caracteres nula será retornada. Se *iniciar* é maior do que o primeiro *character_expression*, uma cadeia de caracteres nula será retornada. *Iniciar* pode ser do tipo **bigint**.  
   
- *length*  
+ *comprimento*  
  É um inteiro que especifica o número de caracteres a serem excluídos. Se *comprimento* é negativo, uma cadeia de caracteres nula será retornada. Se *comprimento* é maior do que o primeiro *character_expression*, exclusão ocorrerá até para o último caractere na última *character_expression*.  Se *comprimento* for zero, a inserção ocorre antes do primeiro caractere na cadeia de caracteres. *comprimento* pode ser do tipo **bigint**.
 
  *replaceWith_expression*  
@@ -64,7 +64,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna dados de caractere se *character_expression* é um dos tipos de dados de caracteres com suporte. Retorna dados binários se *character_expression* é um dos tipos de dados binários com suporte.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se a posição inicial ou o comprimento forem negativos, ou se a posição inicial for maior do que o comprimento da primeira cadeia de caracteres, uma cadeia nula será retornada. Se a posição de início for 0, um valor nulo será retornado. Se o comprimento a ser excluído for maior que a primeira cadeia de caracteres, a exclusão ocorrerá no primeiro caractere da primeira cadeia.  
 
 Um erro será gerado se o valor resultante for maior que o máximo suportado pelo tipo de retorno.  
@@ -90,5 +90,14 @@ aijklmnef
 ```  
   
 ## <a name="see-also"></a>Consulte também  
+ [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  

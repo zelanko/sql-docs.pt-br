@@ -21,15 +21,15 @@ helpviewer_keywords:
 - logical operators [SQL Server], Transact-SQL
 ms.assetid: edd92f08-76fb-4fd7-a4b6-8520d6a81df1
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e65c03b034c211d80b79db045985284245c6ccbb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 66aa9c665de5becebac476d0d5b73e041e75eb56
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="logical-operators-transact-sql"></a>Operadores lógicos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 |[IN](../../t-sql/language-elements/in-transact-sql.md)|TRUE se o operando for igual a um de uma lista de expressões.|  
 |[LIKE](../../t-sql/language-elements/like-transact-sql.md)|TRUE se o operando corresponder a um padrão.|  
 |[NOT](../../t-sql/language-elements/not-transact-sql.md)|Inverte o valor de qualquer outro operador booliano.|  
-|[OR](../../t-sql/language-elements/or-transact-sql.md)|TRUE se qualquer expressão booliana for TRUE.|  
+|[OU](../../t-sql/language-elements/or-transact-sql.md)|TRUE se qualquer expressão booliana for TRUE.|  
 |[ALGUNS](../../t-sql/language-elements/some-any-transact-sql.md)|TRUE se algum conjunto de comparações for TRUE.|  
   
 ## <a name="see-also"></a>Consulte também  

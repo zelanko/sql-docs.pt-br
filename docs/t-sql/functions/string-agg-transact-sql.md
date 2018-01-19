@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5eab0444f036b05f23982b6f21455bfc5ab408a8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f2bcc8b02b0228dc403fffc4ef1c6b82557872a4
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -45,19 +45,19 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 
 ## <a name="arguments"></a>Argumentos 
 
-*separador*  
+*separator*  
 É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de `NVARCHAR` ou `VARCHAR` concatenados de tipo que é usado como separador de cadeias de caracteres. Ele pode ser literal ou variável. 
 
 *expressão*  
 É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de qualquer tipo. Expressões são convertidas em `NVARCHAR` ou `VARCHAR` tipos durante a concatenação. Tipos de cadeia de caracteres não são convertidos em `NVARCHAR` tipo.
 
 
-< order_clause >   
+<order_clause>   
 Opcionalmente, especificar a ordem dos resultados concatenados usando `WITHIN GROUP` cláusula:
 ```
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
-< order_by_expression_list >   
+<order_by_expression_list>   
  
   Uma lista de não constante [expressões](../../t-sql/language-elements/expressions-transact-sql.md) que pode ser usada para classificar os resultados. Apenas um `order_by_expression` é permitida por consulta. A ordem de classificação padrão é crescente.   
   
@@ -70,14 +70,14 @@ Tipo de retorno é depende do primeiro argumento (expressão). Se o argumento de
 |-------|-------|
 |NVARCHAR(MAX) |NVARCHAR(MAX) |
 |VARCHAR(MAX) |VARCHAR(MAX) |
-|NVARCHAR (1... 4000) |NVARCHAR (4000) |
-|VARCHAR (1... 8000) |VARCHAR(8000) |
-|int, bigint, smallint, tinyint, numérico, float, real, bit, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR (4000) |
+|NVARCHAR(1…4000) |NVARCHAR(4000) |
+|VARCHAR(1…8000) |VARCHAR(8000) |
+|int, bigint, smallint, tinyint, numérico, float, real, bit, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR(4000) |
 
 
 ## <a name="remarks"></a>Remarks  
  
-`STRING_AGG`agregação usa todas as expressões de linhas e os concatena em uma única cadeia de caracteres. Valores de expressão são implicitamente convertidos em tipos de cadeia de caracteres e depois concatenados. A conversão implícita em cadeias de caracteres segue as regras existentes para conversões de tipo de dados. Para obter mais informações sobre conversões de tipo de dados, consulte [CAST e CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
+`STRING_AGG`é uma função de agregação que usa todas as expressões de linhas e os concatena em uma única cadeia de caracteres. Valores de expressão são implicitamente convertidos em tipos de cadeia de caracteres e depois concatenados. A conversão implícita em cadeias de caracteres segue as regras existentes para conversões de tipo de dados. Para obter mais informações sobre conversões de tipo de dados, consulte [CAST e CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
 Se a expressão de entrada é o tipo `VARCHAR`, o separador não pode ser um tipo `NVARCHAR`. 
 
@@ -115,9 +115,9 @@ FROM Person.Person;
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
  
 
-|CSV | 
+|Csv | 
 |--- |
-|John, n/d, Mike, Peter, n/d, n/d, Alice, Bob |  
+|John,N/A,Mike,Peter,N/A,N/A,Alice,Bob |  
 
 
 ### <a name="c-generate-comma-separated-values"></a>C. Gerar valores separados por vírgula 
@@ -132,7 +132,7 @@ FROM Person.Person;
 
 |nomes | 
 |--- |
-|Ken Sánchez (8 de fevereiro de 2003 12:00 AM) <br />Terri Duffy (24 de fevereiro de 2002 12:00 AM) <br />Roberto Tamburello (5 de dez de 2001 12:00 AM) <br />Rob Walters (29 de dez de 2001 12:00 AM) <br />... |
+|Ken Sánchez (Feb  8 2003 12:00AM) <br />Terri Duffy (24 de fevereiro de 2002 12:00 AM) <br />Roberto Tamburello (Dec  5 2001 12:00AM) <br />Rob Walters (29 de dez de 2001 12:00 AM) <br />... |
 
 > [!NOTE]  
 >  Se usar o Editor de consulta do Management Studio, o **resultados em grade** opção não pode implementar o retorno de carro. Alternar para **resultados em texto** ver o resultado definido corretamente.   
@@ -193,7 +193,16 @@ GROUP BY town;
 |LA |hazem0@adventure-works.com;sam1@adventure-works.com |
 
 
-## <a name="see-also"></a>Consulte Também  
-
-[Funções de cadeia de caracteres (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
+## <a name="see-also"></a>Consulte também  
+ [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [Funções de agregação &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+ [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
 

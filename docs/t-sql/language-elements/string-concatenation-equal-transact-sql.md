@@ -18,17 +18,17 @@ helpviewer_keywords:
 - += (concatenate operator)
 ms.assetid: 4aaeaab7-9b2b-48e0-8487-04ed672ebcb1
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6c1716e014de1c99e4b3560d55674f0d82797c03
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 70f37ef6816f5288c1d50240bf813a20ff33fae7
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="-string-concatenation-assignment-transact-sql"></a>+ = (Atribuição de concatenação de cadeia de caracteres) (Transact-SQL)
+# <a name="-string-concatenation-assignment-transact-sql"></a>+= (String Concatenation Assignment) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Concatena duas cadeias de caracteres e define a cadeia de caracteres como o resultado da operação. Por exemplo, se uma variável @x é igual a 'Adventure', em seguida, @x + = 'Works' assumirá o valor original de @x, adiciona 'Works' à cadeia de caracteres e define @x para esse novo valor 'AdventureWorks'.  
@@ -49,7 +49,7 @@ expression += expression
 ## <a name="result-types"></a>Tipos de resultado  
  Retorna o tipo de dados definido para a variável.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  DEFINIR @v1 + = 'expression' é equivalente ao conjunto @v1 = @v1 + ('expression'). Além disso, defina @v1 = @v2 + @v3 + @v4 é equivalente ao conjunto @v1 = (@v2 + @v3) + @v4.  
   
  O operador + = não pode ser usado sem uma variável. Por exemplo, o código a seguir provoca um erro:  
@@ -128,8 +128,8 @@ GO
   ```   
    
 ## <a name="see-also"></a>Consulte também  
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [+ = &#40; Adicionar atribuição &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
- [+ &#40; Concatenação de cadeia de caracteres &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [+= &#40;Add Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
+ [+ &#40;String Concatenation&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
   
   

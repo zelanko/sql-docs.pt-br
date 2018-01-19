@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5481957e399f072e400a042825c2966f06d2e782
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9ce2b79b12af1ae4894cd33867bccc27b2354185
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40; Erro (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipos de retorno  
  inteiro  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Retornará 0 se a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] anterior não tiver encontrado nenhum erro.  
   
  Retornará um número de erro se a instrução anterior encontrar um erro. Se o erro foi um dos erros na exibição do catálogo sys. messages, em seguida,@ERROR contém o valor da coluna message_id para esse erro. Você pode exibir o texto associado com um @@ERROR número do erro em sys. messages.  
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. Usando @@ERROR para sair de um procedimento condicionalmente  
- O exemplo a seguir usa `IF...ELSE` instruções para testar `@@ERROR` após um `INSERT` instrução em um procedimento armazenado. O valor da variável `@@ERROR` determina o código de retorno enviado ao programa que está chamando, indicando o sucesso ou a falha do procedimento.  
+ O exemplo a seguir usa `IF...ELSE` instruções para testar `@@ERROR` após um `DELETE` instrução em um procedimento armazenado. O valor da variável `@@ERROR` determina o código de retorno enviado ao programa que está chamando, indicando o sucesso ou a falha do procedimento.  
   
 ```  
 USE AdventureWorks2012;  

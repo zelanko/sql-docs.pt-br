@@ -19,15 +19,15 @@ helpviewer_keywords:
 - + (string concatenation)
 ms.assetid: ee4e715d-d8f1-4d0e-81b3-04573ec9f13c
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0b59fd1684371e3b05920a3cb8b438487bf7628d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b51c79632a53c8789acdda4d82ad95c2d10614fa
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="string-operators-transact-sql"></a>Operadores de cadeia de caracteres (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.lasthandoff: 11/18/2017
 ## <a name="section-heading"></a>Cabeçalho da seção  
  [+ (Concatenação de cadeias de caracteres)](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
   
- [+ = (Atribuição de concatenação de cadeia de caracteres)](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
+ [+= (Concatenação de cadeia de caracteres)](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
   
- [% (Curinga – caracteres a serem correspondidos)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
+ [% (Curinga – Caracteres para corresponder)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
  [&#91; &#93; (Curinga – caracteres a serem correspondidos)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
   

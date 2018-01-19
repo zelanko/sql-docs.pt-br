@@ -28,15 +28,15 @@ helpviewer_keywords:
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: dfc99736884d458bdbce890bfcc4f80185115b29
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f7cb61a12af903aa444462a7a67c9c71231b96fa
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenções da sintaxe Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,23 +48,23 @@ ms.lasthandoff: 01/09/2018
 |UPPERCASE|Palavras-chave [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |*italic*|Parâmetros de sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] fornecidos pelo usuário.|  
 |**bold**|Nomes de banco de dados, nomes de tabela, nomes de coluna, nomes de índice, procedimentos armazenados, utilitários, nomes de tipo de dados e texto que devem ser digitados exatamente como aparecem.|  
-|**sublinhado**|Indica o valor padrão aplicado quando a cláusula que contém o valor sublinhado é omitida da instrução.|  
+|**underline**|Indica o valor padrão aplicado quando a cláusula que contém o valor sublinhado é omitida da instrução.|  
 |&#124; (barra vertical)|Separa itens de sintaxe que se encontram entre colchetes ou entre chaves. Você pode usar só um dos itens.|  
 |`[ ]` (colchetes)|Itens de sintaxe opcionais. Não digite os colchetes.|  
 |{ } (chaves)|Itens de sintaxe exigidos. Não digite as chaves.|  
 |[**,**...*n*]|Indica que o item precedente pode ser repetido  *n*  número de vezes. As ocorrências são separadas por vírgulas.|  
 |[...*n*]|Indica que o item precedente pode ser repetido  *n*  número de vezes. As ocorrências são separadas por espaços em branco.|  
 |;|Terminador de instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. Embora o sinal de ponto-e-vírgula não seja obrigatório na maioria das instruções nesta versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele será necessário em uma versão futura.|  
-|\<Rótulo >:: =|O nome de um bloco de sintaxe. Essa convenção é usada para agrupar e rotular seções de sintaxe extensa ou uma unidade de sintaxe que pode ser usada em mais de um local dentro de uma instrução. Cada local no qual o bloco de sintaxe pode ser usado é indicado com o rótulo entre divisas: \<rótulo >.<br /><br /> Um conjunto é uma coleção de expressões, por exemplo \<conjunto de agrupamentos >; e uma lista é uma coleção de conjuntos, por exemplo \<lista de elementos composta >.|  
+|\<label> ::=|O nome de um bloco de sintaxe. Essa convenção é usada para agrupar e rotular seções de sintaxe extensa ou uma unidade de sintaxe que pode ser usada em mais de um local dentro de uma instrução. Cada local no qual o bloco de sintaxe pode ser usado é indicado com o rótulo entre divisas: \<rótulo >.<br /><br /> Um conjunto é uma coleção de expressões, por exemplo \<conjunto de agrupamentos >; e uma lista é uma coleção de conjuntos, por exemplo \<lista de elementos composta >.|  
   
 ## <a name="multipart-names"></a>Nomes de partes múltiplas  
  A menos que especificado de outra forma, todas as referências [!INCLUDE[tsql](../../includes/tsql-md.md)] ao nome de um objeto de banco de dados podem ser um nome de quatro partes, do seguinte modo:  
   
- *server_name* **.** [*database_name*]**.** [*schema_name*]**.** *object_name*  
+ *server_name* **.**[*database_name*]**.**[*schema_name*]**.***object_name*  
   
- | *Database_Name***.** [*schema_name*]**.** *object_name*  
+ | *database_name***.**[*schema_name*]**.***object_name*  
   
- | *schema_name***.** *object_name*  
+ | *schema_name***.***object_name*  
   
  *| object_name*  
   
@@ -89,13 +89,13 @@ ms.lasthandoff: 01/09/2018
   
 |Formato de referência de objeto|Description|  
 |-----------------------------|-----------------|  
-|*servidor* **.** *banco de dados* **.** *esquema* **.** *objeto*|Nome de quatro partes.|  
-|*servidor* **.** *banco de dados* **...** *objeto*|O nome do esquema é omitido.|  
-|*servidor* **...** *esquema* **.** *objeto*|O nome do banco de dados é omitido.|  
+|*server* **.** *database* **.** *schema* **.** *objeto*|Nome de quatro partes.|  
+|*server* **.** *database* **..** *objeto*|O nome do esquema é omitido.|  
+|*server* **..** *schema* **.** *objeto*|O nome do banco de dados é omitido.|  
 |*servidor* **...**  *objeto*|Os nomes do banco de dados e do esquema são omitidos.|  
-|*banco de dados* **.** *esquema* **.** *objeto*|O nome do servidor é omitido.|  
-|*banco de dados* **...** *objeto*|Os nomes do servidor e do esquema são omitidos.|  
-|*esquema* **.** *objeto*|Os nomes do servidor e do banco de dados são omitidos.|  
+|*database* **.** *schema* **.** *objeto*|O nome do servidor é omitido.|  
+|*database* **..** *objeto*|Os nomes do servidor e do esquema são omitidos.|  
+|*schema* **.** *objeto*|Os nomes do servidor e do banco de dados são omitidos.|  
 |*objeto*|Os nomes do servidor, do banco de dados e do esquema são omitidos.|  
   
 ## <a name="code-example-conventions"></a>Convenções de exemplo de código  

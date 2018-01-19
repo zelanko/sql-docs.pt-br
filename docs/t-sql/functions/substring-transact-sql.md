@@ -1,5 +1,5 @@
 ---
-title: Subcadeia de caracteres (Transact-SQL) | Microsoft Docs
+title: SUBSTRING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/21/2016
 ms.prod: sql-non-specified
@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4407538e956f268f4d9bb868c1fcb70c2447cf6b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2c78c77953dc60bdcd73ec29ba542a12478783fb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,10 +52,10 @@ SUBSTRING ( expression ,start , length )
  *expressão*  
  É um **caracteres**, **binário**, **texto**, **ntext**, ou **imagem**[deexpressão](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- *Iniciar*  
+ *start*  
  É um número inteiro ou **bigint** expressão que especifica onde os caracteres retornados devem iniciar. (A numeração é 1 com base, significando que o primeiro caractere da expressão é 1). Se *iniciar* é menor que 1, a expressão retornada começará no primeiro caractere que é especificado em *expressão*. Nesse caso, o número de caracteres que são retornados é o maior valor de soma de *iniciar* + *comprimento*- 1 ou 0. Se *iniciar* é maior que o número de caracteres na expressão de valor, uma expressão de comprimento zero será retornada.  
   
- *length*  
+ *comprimento*  
  É um inteiro positivo ou **bigint** que especifica quantos caracteres da expressão de *expressão* será retornado. Se *comprimento* é negativo, um erro será gerado e a instrução é encerrada. Se a soma de *iniciar* e *comprimento* é maior que o número de caracteres em *expressão*, a expressão de valor inteiro, começando no *iniciar*será retornado.  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -63,17 +63,17 @@ SUBSTRING ( expression ,start , length )
   
 |Expressão especificada|Tipo de retorno|  
 |--------------------------|-----------------|  
-|**char**/**varchar**/**texto**|**varchar**|  
+|**char**/**varchar**/**text**|**varchar**|  
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
-|**binário**/**varbinary**/**imagem**|**varbinary**|  
+|**binary**/**varbinary**/**image**|**varbinary**|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os valores para *iniciar* e *comprimento* deve ser especificado em número de caracteres para **ntext**, **char**, ou **varchar**  tipos de dados e de bytes para **texto**, **imagem**, **binário**, ou **varbinary** tipos de dados.  
   
  O *expressão* devem ser **varchar (max)** ou **varbinary (max)** quando o *iniciar* ou *comprimento* contém um valor maior que 2147483647.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)  
- Ao usar agrupamentos de caracteres suplementares (SC), ambos *iniciar* e *comprimento* contarão cada par substituto *expressão* como um único caractere. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Ao usar agrupamentos de caracteres suplementares (SC), ambos *iniciar* e *comprimento* contarão cada par substituto *expressão* como um único caractere. Para obter mais informações, consulte [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -94,7 +94,7 @@ WHERE database_id < 5;
 |mestre  |m  |ST |
 |tempdb  |t  |pacote de gerenciamento |
 |modelo   |m  |de |
-|msdb    |m  |banco de dados |
+|msdb    |m  |db |
 
 
   
@@ -222,6 +222,12 @@ bcd
 ```  
   
 ## <a name="see-also"></a>Consulte também  
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
  [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   

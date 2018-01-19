@@ -1,5 +1,5 @@
 ---
-title: Substituir (Transact-SQL) | Microsoft Docs
+title: REPLACE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a50c0b7220eba654df21349e2fd3cd57b9a0d7d3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 330a3d79893bd24e3253eced054fa029b7f8d1d9
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,10 +50,10 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  *string_expression*  
  É a cadeia de caracteres [expressão](../../t-sql/language-elements/expressions-transact-sql.md) a ser pesquisada. *string_expression* pode ser de um tipo de dados caractere ou binário.  
   
- *string_*padrão  
+ *string_*pattern  
  É a subcadeia de caracteres a ser localizada. *string_pattern* pode ser de um tipo de dados caractere ou binário. *string_pattern* não pode ser uma cadeia de caracteres vazia (") e não deve exceder o número máximo de bytes que cabe em uma página.  
   
- *string_*substituição  
+ *string_*replacement  
  É a cadeia de caracteres de substituição. *string_replacement* pode ser de um tipo de dados caractere ou binário.  
   
 ## <a name="return-types"></a>Tipos de retorno  
@@ -63,7 +63,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
   
  Se *string_expression* não é do tipo **varchar (max)** ou **nvarchar (max), REPLACE** trunca o valor de retorno em 8.000 bytes. Para retornar valores maiores que 8.000 bytes, *string_expression* devem ser convertidos explicitamente a um tipo de dados de valor grande.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  REPLACE efetua comparações com base no agrupamento da entrada. Para realizar uma comparação em um agrupamento especificado, você pode usar [COLLATE](~/t-sql/statements/collations.md) para aplicar um agrupamento explícito à entrada.  
   
  0x0000 (**char(0)**) é um caractere indefinido em agrupamentos do Windows e não pode ser incluído em REPLACE.  
@@ -102,6 +102,15 @@ This is a desk
 
   
 ## <a name="see-also"></a>Consulte também  
+ [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   

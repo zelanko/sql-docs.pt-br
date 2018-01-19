@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STMLineFromText (geometry Data Type)
 ms.assetid: 39fe8559-c4c2-4d61-8508-86eb0a103807
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cab5d93e78488327368c06935c201370fb188744
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b02e61030c60e2df91d17b593eecb585896ade86
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stmlinefromtext-geometry-data-type"></a>STMLineFromText (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
   
  Tipo OGC: **MultiLineString**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método lançará um **FormatException** se a entrada não for bem formatada.  
   
 ## <a name="examples"></a>Exemplos  
