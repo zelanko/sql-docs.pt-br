@@ -17,11 +17,11 @@ ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: 307c9e4774037560884c7e2da43c1fed1c405a14
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
+ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Use sempre criptografado com o Driver ODBC para SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -378,7 +378,7 @@ Para permitir que o driver usar CMKs armazenados em AKV para criptografia de col
 
 As cadeias de conexão a seguir mostram como autenticar para o Cofre de chaves do Azure com os dois tipos de credencial:
 
-**ClientID/Secret**:
+**ClientID/segredo**:
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
@@ -492,7 +492,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |`ConnectionHandle`| [Entrada] Identificador de Conexão. Deve ser um identificador de conexão válido, mas provedores carregados por meio do identificador de uma conexão são acessíveis de qualquer outro no mesmo processo.|
 |`Attribute`|[Entrada] Atributo a ser definido: o `SQL_COPT_SS_CEKEYSTOREDATA` constante.|
 |`ValuePtr`|[Entrada] Ponteiro para uma estrutura CEKeystoreData. O campo nome da estrutura de identifica o provedor para o qual os dados se destina.|
-|`StringLength`|[Input] SQL_IS_POINTER constant|
+|`StringLength`|[Entrada] Constante SQL_IS_POINTER|
 
 Informações de erro detalhadas adicionais podem ser obtidas por meio de [SQLGetDiacRec](https://msdn.microsoft.com/library/ms710921(v=vs.85).aspx).
 
@@ -511,7 +511,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |`ConnectionHandle`|[Entrada] Identificador de Conexão. Deve ser um identificador de conexão válido, mas provedores carregados por meio do identificador de uma conexão são acessíveis de qualquer outro no mesmo processo.|
 |`Attribute`|[Entrada] Atributo recuperar: o `SQL_COPT_SS_CEKEYSTOREDATA` constante.|
 |`ValuePtr`|[Saída] Um ponteiro para uma estrutura CEKeystoreData em que a leitura do provedor de dados são colocados.|
-|`BufferLength`|[Input] SQL_IS_POINTER constant|
+|`BufferLength`|[Entrada] Constante SQL_IS_POINTER|
 |`StringLengthPtr`|[Saída] Um ponteiro para um buffer no qual retornar BufferLength. Se * ValuePtr é um ponteiro nulo, nenhum comprimento é retornado.|
 
 O chamador deve garantir que um buffer de tamanho suficiente seguindo a estrutura CEKEYSTOREDATA está alocado para o provedor gravar no. No retorno, o campo dataSize é atualizado com o comprimento real da leitura do provedor de dados. Informações de erro detalhadas adicionais podem ser obtidas por meio de [SQLGetDiacRec](https://msdn.microsoft.com/library/ms710921(v=vs.85).aspx).
@@ -526,7 +526,7 @@ Para obter um exemplo de como implementar seu próprio provedor de armazenamento
 Enquanto o driver ODBC permitirá o uso de [operações assíncronas](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md) com sempre criptografado, há um impacto de desempenho nas operações de quando sempre criptografado está habilitado. A chamada para `sys.sp_describe_parameter_encryption` para determinar os metadados de criptografia para a instrução está bloqueando e fará com que o driver de espera para o servidor retornar os metadados antes de retornar `SQL_STILL_EXECUTING`.
 
 ### <a name="retrieve-data-in-parts-with-sqlgetdata"></a>Recuperar dados em partes com SQLGetData
-Antes de 17 do Driver ODBC para SQL Server, criptografada colunas binárias e caractere não podem ser recuperadas em partes com SQLGetData. Pode ser feita apenas uma chamada SQLGetData com um buffer de tamanho suficiente para conter os dados da coluna inteira. 17 de Driver ODBC para SQL Server, criptografado **varbinary (max)** colunas não podem ser recuperadas em partes com SQLGetData e um tipo C de SQL_C_BINARY.
+Antes de 17 do Driver ODBC para SQL Server, criptografada colunas binárias e caractere não podem ser recuperadas em partes com SQLGetData. Pode ser feita apenas uma chamada SQLGetData com um buffer de tamanho suficiente para conter os dados da coluna inteira.
 
 ### <a name="send-data-in-parts-with-sqlputdata"></a>Enviar dados em partes com SQLPutData
 Não não possível enviar dados para uma comparação ou inserção em partes com SQLPutData. Pode ser feita apenas uma chamada para SQLPutData com um buffer que contém todos os dados. Para inserir dados longos em colunas criptografadas, use a API de cópia em massa, descrito na próxima seção, com um arquivo de dados de entrada.
@@ -577,8 +577,8 @@ Consulte [migrar dados confidenciais protegidos pelo sempre criptografado](../..
 |Nome|Tipo|Description|  
 |----------|-------|----------|  
 |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Pré-conexão|`SQL_COLUMN_ENCRYPTION_DISABLE`(0) – desabilitar sempre criptografado <br>`SQL_COLUMN_ENCRYPTION_ENABLE`(1)-- habilitar sempre criptografado|
-|`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Post-connect|[Set] Tentativa de carregar CEKeystoreProvider<br>[Get] Retorna um nome de CEKeystoreProvider|
-|`SQL_COPT_SS_CEKEYSTOREDATA`|Post-connect|[Set] Gravação de dados CEKeystoreProvider<br>[Get] Ler dados de CEKeystoreProvider|
+|`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Após conectar-se|[Set] Tentativa de carregar CEKeystoreProvider<br>[Get] Retorna um nome de CEKeystoreProvider|
+|`SQL_COPT_SS_CEKEYSTOREDATA`|Após conectar-se|[Set] Gravação de dados CEKeystoreProvider<br>[Get] Ler dados de CEKeystoreProvider|
 
 ### <a name="statement-attributes"></a>Atributos de instrução
 
