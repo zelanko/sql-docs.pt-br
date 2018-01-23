@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: dec2c20c2450f4db1d0671f365714647c47c7db6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd263b08584b0ba13f6486e72bcf6c9f083ca896
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="recordset-object-ado"></a>Objeto de conjunto de registros (ADO)
 Representa todo o conjunto de registros de uma tabela base ou os resultados de um comando executado. A qualquer momento, o **registros** objeto se refere a um único registro dentro do conjunto de como o registro atual.  
@@ -54,7 +54,7 @@ Representa todo o conjunto de registros de uma tabela base ou os resultados de u
   
  Você pode usar o [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), **MoveLast**, **MoveNext**, e **MovePrevious** métodos; o [mover](../../../ado/reference/ado-api/move-method-ado.md) método; e o [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), e [filtro](../../../ado/reference/ado-api/filter-property.md) propriedades para reposicionar o registro atual, supondo que o provedor oferece suporte a relevantes funcionalidade. Somente avanço **registros** objetos oferecem suporte apenas a [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) método. Quando você usa o **mover** métodos para visitar cada registro (ou enumerar o **registros**), você pode usar o **BOF** e **EOF** propriedades para determinar se você tiver movido para fora o início ou término do **registros**.  
   
- Antes de usar qualquer funcionalidade de um **registros** do objeto, você deve chamar o **suporta** método no objeto para verificar se a funcionalidade está disponível ou com suporte. Você não deve usar a funcionalidade quando o **suporta** método retornará false. Por exemplo, você pode usar o **MovePrevious** somente se do método `Recordset.Supports(adMovePrevious)` retorna **True**. Caso contrário, você obterá um erro, porque o **registros** objeto fechado e a funcionalidade fique indisponível na instância. Se não há suporte para um recurso que lhe interessam, **suporta** retornará false também. Nesse caso, você deve evitar chamando o método ou propriedade correspondente no **Recrodset** objeto.  
+ Antes de usar qualquer funcionalidade de um **registros** do objeto, você deve chamar o **suporta** método no objeto para verificar se a funcionalidade está disponível ou com suporte. Você não deve usar a funcionalidade quando o **suporta** método retornará false. Por exemplo, você pode usar o **MovePrevious** somente se do método `Recordset.Supports(adMovePrevious)` retorna **True**. Caso contrário, você obterá um erro, porque o **registros** objeto fechado e a funcionalidade fique indisponível na instância. Se não há suporte para um recurso que lhe interessam, **suporta** retornará false também. Nesse caso, você deve evitar chamando o método ou propriedade correspondente no **registros** objeto.  
   
  **Conjunto de registros** objetos podem dar suporte a dois tipos de atualização: imediatas e em lotes. Em atualização imediata, todas as alterações de dados são gravadas imediatamente para a fonte de dados depois de você chamar o [atualização](../../../ado/reference/ado-api/update-method.md) método. Você também pode passar matrizes de valores como parâmetros com o [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) e **atualizar** métodos e atualizar simultaneamente vários campos em um registro.  
   
@@ -80,7 +80,7 @@ Debug.Print objRs(0)              '  the Value of Item(0).
   
 -   [Eventos, métodos e propriedades do objeto de conjunto de registros](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Objeto de Conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Coleção de campos (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Coleção de propriedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

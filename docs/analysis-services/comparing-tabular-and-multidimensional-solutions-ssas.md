@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 876c15beb1fc62e805a4c86718da0590c19244bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 969a3952f113521b5f584533fd0676b33b873b53
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Comparando soluções tabulares e multidimensionais
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services fornece várias abordagens para criar um modelo semântico do business intelligence: Tabular, Multidimensional e PowerPivot para SharePoint.
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  SQL Server Analysis Services fornece várias abordagens para criar um modelo semântico do business intelligence: Tabular, Multidimensional e PowerPivot para SharePoint.
   
  Ter mais de uma abordagem permite uma experiência de modelagem adaptada para diferentes negócios e requisitos de usuário. A abordagem multidimensional é uma tecnologia madura criada em padrões abertos, adotada por vários fornecedores de software de BI, mas pode ser difícil de dominar. A tabular oferece uma abordagem de modelagem relacional que muitos desenvolvedores consideram mais intuitiva. O Power Pivot é ainda mais simples, oferecendo modelagem de dados visuais no Excel, com suporte do servidor fornecido por meio do SharePoint.  
   
@@ -77,11 +79,11 @@ ms.lasthandoff: 01/08/2018
 |Hierarquias desbalanceadas|Sim|Sim<sup>1</sup>|  
 |Hierarquias pai-filho|Sim|Sim (por DAX)|
 |Partições|Sim|Sim| 
-|perspectivas|Sim|Sim|
+|Perspectivas|Sim|Sim|
 |Segurança em nível de linha|Sim|Sim| 
 |Segurança em nível de objeto|Sim|Sim<sup>1</sup>|
 |Medidas semiaditivas|Sim|Sim| 
-|Translations|[Sim](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Sim| 
+|Traduções|[Sim](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Sim| 
 |Hierarquias definidas pelo usuário|Sim|Sim|
 |Write-back|Sim|não| 
   
@@ -174,7 +176,7 @@ ms.lasthandoff: 01/08/2018
  
   
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Gerenciamento de instância do Analysis Services](../analysis-services/instances/analysis-services-instance-management.md)   
  [Novidades do Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)     
 

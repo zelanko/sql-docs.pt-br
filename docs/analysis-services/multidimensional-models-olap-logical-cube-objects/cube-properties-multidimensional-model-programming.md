@@ -39,11 +39,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 47a4d008318277ff684e1c627549187d9aca797a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0d22d6fd46939b435cc0a8a6f25268aea0a192d6
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>Programação de modelo de propriedades de cubo - Multidimensional
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cubos têm várias propriedades que você pode definir para afetar o comportamento de todo o cubo. Essas propriedades são resumidas na tabela a seguir.  
@@ -71,13 +71,13 @@ ms.lasthandoff: 01/08/2018
 |**ScriptErrorHandlingMode**|Determina o tratamento de erros. Opções são **IgnoreNone** ou **IgnoreAll**|  
 |**Origem**|Mostra a exibição da fonte de dados usada para o cubo.|  
 |**StorageLocation**|Especifica o local de armazenamento do sistema de arquivos para o cubo. Se nenhum for especificado, o local será herdado do banco de dados que contém o objeto de cubo.|  
-|**StorageMode**|Especifica o modo de armazenamento para o cubo. Os valores são **MOLAP**, **ROLAP**, ou **HOLAP.**|  
+|**StorageMode**|Especifica o modo de armazenamento para o cubo. Os valores são **MOLAP**, **ROLAP**, ou **HOLAP**.|  
 |**Visível**|Determina a visibilidade do cubo.|  
   
 > [!NOTE]  
 >  Para obter mais informações sobre como definir valores para a propriedade ErrorConfiguration ao trabalhar com valores nulos e outros problemas de integridade de dados, consulte [Handling Data Integrity Issues in Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [O cache pró-ativo &#40; Partições &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)  
   
   

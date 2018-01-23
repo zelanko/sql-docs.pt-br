@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2c9d71ea7710736a17a404a997e43e6683894cd7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 77b8a5621b71eec40546d79d73ab1672dfff6a7e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>4-6-especificando relações de atributo na hierarquia definida pelo usuário
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Como você já aprendeu neste tutorial, você pode organizar hierarquias de atributo em níveis nas hierarquias de usuário para fornecer caminhos de navegação para os usuários em um cubo. Uma hierarquia de usuário pode representar uma hierarquia natural, como cidade, estado e país, ou um caminho de navegação, como nome do funcionário, cargo e nome do departamento. Para o usuário que navega pela hierarquia, esses dois tipos de hierarquias de usuário são os mesmos.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Como você já aprendeu neste tutorial, é possível organizar as hierarquias de atributo em níveis dentro das hierarquias de usuário para fornecer caminhos de navegação aos usuários em um cubo. Uma hierarquia de usuário pode representar uma hierarquia natural, como cidade, estado e país, ou um caminho de navegação, como nome do funcionário, cargo e nome do departamento. Para o usuário que navega pela hierarquia, esses dois tipos de hierarquias de usuário são os mesmos.  
   
 Em uma hierarquia natural, ao definir relações de atributo entre os atributos que criam os níveis, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pode usar a agregação de um atributo para obter resultados a partir de um atributo relacionado. Se não houver nenhuma relação definida entre atributos, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] agregará todos os atributos que não forem atributos de chave do atributo de chave. Portanto, se os dados subjacentes permitirem, você também poderá definir relações de atributo entre atributos. Definir as relações de atributo melhora a dimensão, a partição e o desempenho do processamento de consulta. Para obter mais informações, consulte [Definir relações de atributo](../analysis-services/multidimensional-models/attribute-relationships-define.md) e [Relações de atributo](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
@@ -188,9 +190,9 @@ Nas tarefas deste tópico, você definirá relações de atributo para os atribu
 14. No menu **Compilar** do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], clique em **Implantar Tutorial do Analysis Services**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
-[Definindo o membro desconhecido e as propriedades de processamento nulo](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+[Definir o membro desconhecido e propriedades de processamento nulo](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Definir relações de atributo](../analysis-services/multidimensional-models/attribute-relationships-define.md)  
 [Propriedades da hierarquia de usuário](../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   

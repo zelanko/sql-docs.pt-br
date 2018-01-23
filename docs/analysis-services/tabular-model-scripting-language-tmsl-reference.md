@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3e1a38f2d4466c70259d9f58787b88c939459f59
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: de637476cd0aa2577c850062dffebc0e4fc66238
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="tabular-model-scripting-language-tmsl-reference"></a>Referência de linguagem (TMSL) de script de modelo de tabela
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Linguagem de script de modelo tabular (TMSL) é a sintaxe de definição de modelo de comando e o objeto para bancos de dados do Analysis Services modelo de tabela no nível de compatibilidade 1200 ou superior. O TMSL se comunica com o Analysis Services por meio do protocolo XMLA, onde o [XMLA. Executar](../analysis-services/xmla/xml-elements-methods-execute.md) método aceita com base em JSON **instrução** scripts em TMSL, bem como os scripts tradicionais baseado em XML em [Analysis Services Scripting Language &#40; ASSL para XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  Linguagem de script de modelo tabular (TMSL) é a sintaxe de definição de modelo de comando e o objeto para bancos de dados do Analysis Services modelo de tabela no nível de compatibilidade 1200 ou superior. O TMSL se comunica com o Analysis Services por meio do protocolo XMLA, onde o [XMLA. Executar](../analysis-services/xmla/xml-elements-methods-execute.md) método aceita com base em JSON **instrução** scripts em TMSL, bem como os scripts tradicionais baseado em XML em [Analysis Services Scripting Language &#40; ASSL para XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
   
  Os principais elementos da TMSL incluem o seguinte:  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/08/2018
 
 ||||||  
 |-|-|-|-|-|  
-|**Versão**|**Multidimensional**|**Tabulares 110x**|**Tabela 1200**| **Tabela 1400** |
+|**Versão**|**Multidimensional**|**Tabulares 110x**|**Tabela 1200**| **Tabular 1400** |
 |Azure Analysis Services|NA|NA|TMSL|TMSL| 
 |SQL Server 2017|ASSL|ASSL|TMSL|TMSL| 
 |SQL Server 2016|ASSL|ASSL|TMSL|TMSL| 
@@ -76,7 +78,7 @@ ms.lasthandoff: 01/08/2018
 |SQL Server 2012|ASSL|ASSL|NA|NA|  
 
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Nível de compatibilidade para modelos de tabela no Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Analysis Services Scripting Language &#40; ASSL para XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [Determina o Modo de Servidor de uma instância do Analysis Services](../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  

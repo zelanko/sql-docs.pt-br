@@ -18,26 +18,28 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b08ad3c2373234688e70633298f474e4c8254fb4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ed03cf00101a8e36760571a89c9bfe25dff98bca
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>Lição 10: Definindo funções administrativas
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Nesta lição, você aprenderá a definir funções de segurança para tarefas administrativas.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Nesta lição, você aprenderá a definir funções de segurança para tarefas administrativas.  
   
 > [!NOTE]  
 > Projetos concluídos de todas as lições deste tutorial estão disponíveis online. Você pode avançar para qualquer lição com o uso do projeto concluído na lição anterior como um ponto de partida. [Clique aqui](http://go.microsoft.com/fwlink/?LinkID=221866) para baixar os projetos de exemplo fornecidos com este tutorial.  
   
 Esta lição contém a seguinte tarefa:  
   
-[Concedendo permissões ao banco de dados do processo](../analysis-services/lesson-10-granting-process-database-permissions.md)  
+[Concedendo permissões de banco de dados de processo](../analysis-services/lesson-10-granting-process-database-permissions.md)  
 Nesta tarefa, você definirá uma função de segurança que possui permissões para processar o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e, em seguida, testará essa função.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Cenário do tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modelagem multidimensional &#40; Tutorial do Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   
   

@@ -19,14 +19,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a401073a7bcf0d7e8559c65ab6b05d25bd2a681e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 38db9eddac7c7b753b680714f53d6ad01a49ea00
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="data-mining-programming"></a>Programação de mineração de dados
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Se você considerar que as ferramentas e visualizadores internos em [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não atenderem às suas necessidades, você pode ampliar a capacidade de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] codificando suas próprias extensões. Nessa abordagem, você tem duas opções:  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  Se você considerar que ferramentas e visualizadores internos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não atendem às suas necessidades, poderá ampliar a capacidade do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] codificando suas próprias extensões. Nessa abordagem, você tem duas opções:  
   
 -   **XMLA**  
   
@@ -70,7 +72,7 @@ ms.lasthandoff: 01/08/2018
  [Desenvolvendo com o Analysis Services Scripting Language &#40; ASSL &#41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  Apresenta o XML for Analysis (XMLA) e suas extensões.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Documentação do desenvolvedor do Analysis Services](../analysis-services/analysis-services-developer-documentation.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Referência](../dmx/data-mining-extensions-dmx-reference.md)  
   

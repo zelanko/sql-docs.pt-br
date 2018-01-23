@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8d19ec8f11ae314dd4c420ba8b72689169e5e29b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3b2aad11610a23c3686e279daa60c57bf7c8154f
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 SET STATISTICS IO { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando STATISTICS IO está ON, as informações de estatística são exibidas. Quando está OFF, as informações não são exibidas.  
   
  Depois que essa opção é definida como ON, todas as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] subsequentes retornam a informações de estatística até que a opção seja definida como OFF.  
@@ -61,7 +61,7 @@ SET STATISTICS IO { ON | OFF }
 |Item de saída|Significado|  
 |-----------------|-------------|  
 |**Table**|Nome da tabela.|  
-|**Contagem de exame**|Número de buscas/exames iniciados depois de alcançar o nível folha em qualquer direção para recuperar todos os valores para construir o conjunto de dados final para a saída.<br /><br /> A contagem de exame será 0 se o índice usado for um índice exclusivo ou índice clusterizado em uma chave primária e se você estiver buscando somente um valor. Por exemplo, `WHERE Primary_Key_Column = <value>`.<br /><br /> A contagem de exame será 1 quando você estiver procurando um valor usando um índice clusterizado não exclusivo que é definido em uma coluna de chave não primária. Isto é feito para verificar se há valores duplicados para o valor de chave para o qual você está pesquisando. Por exemplo, `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> A contagem de exame será N quando N for o número de busca/exame diferente iniciado para a esquerda ou para a direita no nível folha depois de localizar um valor de chave usando a chave de índice.|  
+|**Contagem de exame**|Número de buscas/exames iniciados depois de alcançar o nível folha em qualquer direção para recuperar todos os valores para construir o conjunto de dados final para a saída.<br /><br /> A contagem de exame será 0 se o índice usado for um índice exclusivo ou índice clusterizado em uma chave primária e se você estiver buscando somente um valor. Por exemplo, `WHERE Primary_Key_Column = <value>`.<br /><br /> Contagem de exame será 1 quando você está procurando um valor usando um índice clusterizado não exclusivo que é definido em uma coluna de chave não primária. Isto é feito para verificar se há valores duplicados para o valor de chave para o qual você está pesquisando. Por exemplo, `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> A contagem de exame será N quando N for o número de busca/exame diferente iniciado para a esquerda ou para a direita no nível folha depois de localizar um valor de chave usando a chave de índice.|  
 |**leituras lógicas**|Número de páginas lidas do cache de dados.|  
 |**Leituras físicas**|Número de páginas lidas do disco.|  
 |**Leituras read-ahead**|Número de páginas colocadas no cache para a consulta.|  
@@ -103,7 +103,7 @@ lob read-ahead reads 0.
   
 ## <a name="see-also"></a>Consulte também  
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [Definir STATISTICS TIME &#40; Transact-SQL &#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET STATISTICS TIME &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)  
   
   

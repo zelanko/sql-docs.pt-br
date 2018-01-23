@@ -18,22 +18,24 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3d535cf6f8bc65ef44393527a46441332fd5aea0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6a2578633c1ccce72d866c40882eaf4c95669d6c
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Tutoriais do Analysis Services (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Esta seção contém tutoriais para SQL Server Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Esta seção contém tutoriais para SQL Server Analysis Services.  
   
 [Modelagem de tabela &#40;Tutorial do Adventure Works&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
 Este tutorial fornece lições sobre como criar um modelo de tabela básico do Analysis Services para a empresa fictícia, Adventure Works, usando o SQL Server Data Tools (SSDT).  
   
-[Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modelagem multidimensional &#40; Tutorial do Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 Este tutorial ensina as habilidades básicas e conceitos por trás da modelagem multidimensional do SSDT. Quando você terminar, você terá um banco de dados de cubo com base nos dados do Adventure Works que você pode acessar no Excel, Reporting Services ou qualquer outro aplicativo de cliente que se conecta ao Analysis Services.  
   
-[Mineração de Dados](../analysis-services/data-mining-tutorials-analysis-services.md)  
+[Mineração de dados](../analysis-services/data-mining-tutorials-analysis-services.md)  
 Esta coleção de tutoriais descreve como criar soluções de mineração de dados usando os assistentes e as visualizações integradas.  
   
   

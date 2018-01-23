@@ -25,14 +25,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3c2d9626ff12593f6192ab6b3a6bec1bb6ab4a7b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b454d405b6175c200d8be9426fafb7e79be25e70
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="currency-conversions-analysis-services"></a>Conversões de moeda (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[applies](../includes/applies-md.md)] Multidimensional somente  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  [!INCLUDE[applies](../includes/applies-md.md)] Somente multidimensional  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa uma combinação de recursos, orientada por scripts de linguagem Multidimensional Expressions (MDX), para dar suporte em conversão de moedas, em cubos, com suporte para várias moedas.  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="defining-currency-conversions"></a>Definindo conversões de moeda  
  Você pode usar o Assistente de Business Intelligence para definir a funcionalidade de conversão de moeda de um cubo ou pode definir manualmente as conversões de moeda usando scripts MDX.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Pré-requisitos  
  Antes de você poder definir uma conversão de moedas em um cubo, usando o Assistente de Business Intelligence, será necessário definir, primeiro, pelo menos uma dimensão de moeda, uma dimensão temporal e, pelo menos, um grupo de medidas de taxa. A partir desses objetos, o Assistente de Business Intelligence pode recuperar os dados e os metadados usados para criar a dimensão de moeda de relatório e script MDX que são necessários para fornecer a funcionalidade de conversão de moedas.  
   
 ### <a name="decisions"></a>Decisões  
@@ -190,7 +192,7 @@ ms.lasthandoff: 01/08/2018
   
  Você pode alterar os comandos de script contidos em uma conversão de moeda conforme necessário. Se você substituir a conversão de moedas, porém, suas alterações serão perdidas.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Cenários de globalização para o Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)  
   
   

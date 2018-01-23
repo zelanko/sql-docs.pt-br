@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 25f648f53ca3af33b846711076eb91b3548174a6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0a6a1056c4b778dbc4cb71faa4e7b05111512285
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-1---defining-a-dimension"></a>Lição 2-1-definir uma dimensão
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]A tarefa a seguir, você usará o Assistente para dimensões para criar uma dimensão de data.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Na tarefa a seguir, você usará o Assistente para Dimensões para criar uma dimensão Data.  
   
 > [!NOTE]  
 > Esta lição requer a conclusão de todos os procedimentos da Lição 1.  
@@ -81,7 +83,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Definindo um cubo](../analysis-services/lesson-2-2-defining-a-cube.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Dimensões em modelos multidimensionais](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
 [Criar uma dimensão usando uma tabela existente](../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
 [Criar uma dimensão usando o Assistente para Dimensões](../analysis-services/multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  
