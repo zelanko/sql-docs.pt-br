@@ -25,15 +25,15 @@ helpviewer_keywords:
 - wizard [DAC], deploy
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d65afb41e160671afa9466f648a08e49937e3b6e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4fc9229e01d07d9932d0ae61ad60dc06d5855141
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="deploy-a-data-tier-application"></a>Implantar um aplicativo da camada de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Implante um DAC (aplicativo da camada de dados) de um pacote de DAC em uma instância existente do mecanismo de banco de dados ou do Banco de dados SQL do Azure usando um assistente ou um script do PowerShell. 
@@ -180,7 +180,7 @@ $fileStream.Close()
 ```  
   
 ## <a name="more-information"></a>Mais informações 
- [Aplicativos da camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [Aplicativos da Camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Extrair um DAC de um banco de dados](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)   
  [Identificadores de banco de dados](../../relational-databases/databases/database-identifiers.md)  
   

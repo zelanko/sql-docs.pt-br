@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.articles.f1
 ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8f1f5acb1fb43efa5c0f973e264ed7a57160ff8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4d49b4d4004781301ffe7e25d83b12104ab95121
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="articles"></a>Artigos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Na página **Artigos**, você especifica quais objetos de banco de dados incluir como artigos na publicação. Se você estiver publicando um objeto de banco de dados que depende de outros objetos de banco de dados, terá de publicar todos os objetos referenciados. Por exemplo, se você publicar uma exibição que depende de uma tabela, terá de publicar a tabela também.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/17/2017
  **Mostrar somente os artigos marcados na lista**  
  Marque essa caixa de seleção para mostrar somente os artigos selecionados no painel de objeto.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Criar uma publicação](../../relational-databases/replication/publish/create-a-publication.md)   
  [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  

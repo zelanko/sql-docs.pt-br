@@ -30,13 +30,13 @@ ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 caps.latest.revision: "65"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0ee7521e7b1e43a0e37c6dfdf87e744eee86dd99
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5ab35997e2241e7ef2c788308c56c6b532852517
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="about-log-shipping-sql-server"></a>Sobre o envio de logs (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite o envio automático de backups do log de transações de um *banco de dados primário* em uma instância do *servidor primário* para um ou mais *bancos de dados secundários* em instâncias separadas de *servidor secundário*. Os backups de logs de transação são aplicados individualmente aos bancos de dados secundários. Uma terceira instância de servidor opcional, conhecida como *servidor monitor*, registra o histórico e o status das operações de backup e restauração e, opcionalmente, emite alertas se essas operações não forem executadas como foram agendadas.  
@@ -165,7 +165,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Gerenciamento de logons e trabalhos após a troca de funções &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

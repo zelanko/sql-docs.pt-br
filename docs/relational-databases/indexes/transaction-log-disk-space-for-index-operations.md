@@ -19,15 +19,15 @@ helpviewer_keywords:
 - space [SQL Server], transaction logs
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9b1a0e72a794e702428cbadc9a813cca17447c5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 964e94f9eed81eabd86cf56c781ae1defde0303b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>Espaço em disco de log de transações para operações de índice
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Operações de índice de larga escala podem gerar carregamentos de dados grandes que podem fazer com que o log da transação seja preenchido rapidamente. Para assegurar a reversão da operação de índice, o log da transação não pode ser truncado até que a operação de índice se complete. Durante a operação, no entanto, poderá ser feito backup do log. Portanto, o log de transações deve ter espaço suficiente para armazenar as transações da operação de índice e todas as transações simultâneas de usuário pelo período da operação de índice. Isso é verdade para operações de índice offline e online. Como as tabelas subjacentes não podem ser acessadas durante a operação de índice offline, pode haver poucas transações de usuário e o log pode não crescer na mesma proporção. As operações de índice online não impedem atividades simultâneas de usuário. Por isso, as operações de índice online de larga escala, combinadas com transações simultâneas significativas de usuário, podem causar o crescimento contínuo do log de transações sem opção para truncar o log.  

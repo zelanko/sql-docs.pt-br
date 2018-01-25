@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0286acff20f85bab5df5bc0d85cb23daf9c92dd1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 78a6640acab112d547ef882dbf405e6561a8a063
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="examples-using-path-mode"></a>Exemplos: Usando modo PATH
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Os exemplos a seguir ilustram o uso do modo PATH para gerar XML por meio de uma consulta SELECT. Muitas dessas consultas são especificadas em relação a documentos XML de instruções da fabricação de bicicletas que são armazenados na coluna Instructions da tabela ProductModel.  
@@ -469,7 +469,7 @@ FOR XML PATH('ProductModelData'), root('root');
   
  `</root>`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar o modo PATH com FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

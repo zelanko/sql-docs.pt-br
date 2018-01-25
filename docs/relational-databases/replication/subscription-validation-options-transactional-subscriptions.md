@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.validate.options.f1
 helpviewer_keywords: Subscription Validation Options dialog box
 ms.assetid: fd66ad1f-df01-4240-9e89-8f41bff12c1e
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77e1e620f4adc3fc44a937a12b2ab74dc3302bc0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1f6945e61fb5d5d530a4a147259cbc7347020517
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-validation-options-transactional-subscriptions"></a>Opções de Validação de Assinatura (assinaturas transacionais)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Use a caixa de diálogo **Opções de Validação de Assinatura** para especificar se a validação deve usar somente uma contagem de linha ou uma contagem de linhas e uma soma de verificação binária.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
  **Interromper o Distribution Agent após a conclusão da validação**  
  Por padrão, o Distribution Agent executa continuamente. Selecione essa opção para interromper o agente depois que validação for executada. Isso permite verificar se validação teve êxito antes de continuar replicando dados para o Assinante.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Validar dados no assinante](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [Validar os dados replicados](../../relational-databases/replication/validate-replicated-data.md)  
   

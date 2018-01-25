@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 64ae91e5-b420-44b4-af1a-f8bca83d7f41
 caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a14b7101f0aaab288f205d1de11df8fd6f5d042
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7586018babe172065e701a8ade9be56593fd6af8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-xtp-garbage-collection"></a>Coleta de Lixo de XTP do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
   
  Esta tabela descreve os contadores de **Coleta de Lixo de XTP do SQL Server** .  
   
-|Contador|Descrição|  
+|Contador|Description|  
 |-------------|-----------------|  
 |**Tentativas de verificação de canto sujo/s (emitido pelo GC)**|O número de tentativas de digitalização devido a conflitos de gravação durante as varreduras de canto sujo emitidas pelo coletor de lixo (em média), por segundo. Este é um contador de nível muito baixo, não planejado para uso do cliente.|  
 |**Itens principais do trabalho do GC/s**|O número de itens de trabalho processados pelo thread principal do GC.|  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 |**Linhas varridas tocadas/s**|O número de linhas tocadas durante varreduras de canto sujo (em média), por segundo.|  
 |**Verificações de varredura iniciadas/s**|O número de verificações de varredura de canto sujo iniciadas (em média), por segundo.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Contadores de desempenho XTP &#40;OLTP in-memory&#41; do SQL Server](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   

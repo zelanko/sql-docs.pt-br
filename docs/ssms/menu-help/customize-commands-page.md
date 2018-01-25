@@ -18,13 +18,13 @@ ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d748b147c19031f5f304f0233c772dbd91798b8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fca3838ebce7827c6f44fbffe21f3ed05d17d024
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="customize-commands-page"></a>Personalizar (página Comandos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Esta caixa de diálogo permite adicionar e remover comandos em barras de ferramentas e menus, além de alterar as imagens usadas nos botões das barras de ferramentas ou nos comandos de menu. Você pode acessar a página **Comandos** clicando em **Personalizar** no menu **Ferramentas** e, em seguida, em **Comandos**.  

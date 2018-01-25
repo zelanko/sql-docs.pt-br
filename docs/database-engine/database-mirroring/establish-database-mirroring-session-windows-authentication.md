@@ -16,13 +16,13 @@ ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 caps.latest.revision: "58"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cd38308eb0e3b02b331b8b6503138f942f6c113b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5e4fc8470f88e41444f4d30578c32c3f5c2c32ad
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>Estabelecer a sessão de espelhamento de banco de dados – Autenticação do Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/20/2017
   
 -   O banco de dados espelho deve existir e ser atual.  
   
-     A criação de um banco de dados espelho requer a restauração de um backup recente do banco de dados principal (usando WITH NORECOVERY) na instância do servidor espelho. Requer também que, depois do backup completo, um ou mais backups de log sejam restaurados em sequência para o banco de dados espelho (usando WITH NORECOVERY). Para obter mais informações, consulte [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+     A criação de um banco de dados espelho requer a restauração de um backup recente do banco de dados principal (usando WITH NORECOVERY) na instância do servidor espelho. Requer também que, depois do backup completo, um ou mais backups de log sejam restaurados em sequência para o banco de dados espelho (usando WITH NORECOVERY). Para obter mais informações, veja [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 -   Se as instâncias do servidor estiverem sendo executadas em contas de usuário de domínio diferentes, cada uma exigirá um logon no banco de dados **mestre** da outra. Se o logon não existir, você deverá criá-lo antes de configurar o espelhamento. Para obter mais informações, consulte [Permitir o acesso à rede a um ponto de extremidade de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
     |Opção|Testemunha?|Explicação|  
     |------------|--------------|-----------------|  
     |**Alto desempenho (assíncrono)**|Nulo (se existir; não usado, mas a sessão requer um quorum)|Para maximizar o desempenho, o banco de dados espelho fica sempre um pouco atrás do banco de dados principal, nunca se aproximando muito. Porém, a lacuna entre os bancos de dados é geralmente pequena. A perda de um parceiro tem o seguinte efeito:<br /><br /> Se a instância do servidor espelho ficar indisponível, o principal continuará.<br /><br /> Se a instância do servidor principal ficar indisponível, o espelho irá parar; mas se a sessão não tiver um servidor testemunha (como recomendado) ou se o servidor testemunha estiver conectado ao servidor espelho, o servidor espelho ficará acessível como espera passiva e o proprietário do banco de dados poderá forçar o serviço para a instância do servidor espelho (com possível perda de dados).<br /><br /> <br /><br /> Para obter mais informações, consulte [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).|  
-    |**Alta segurança sem failover automático (síncrono)**|Não|Todas as transações confirmadas têm a garantia de serem gravadas em disco no servidor espelho.<br /><br /> O failover manual é possível quando os parceiros estão conectados um ao outro e o banco de dados está sincronizado.<br /><br /> A perda de um parceiro tem o seguinte efeito:<br /><br /> Se a instância do servidor espelho ficar indisponível, o principal continuará.<br /><br /> Se a instância do servidor principal ficar indisponível o espelho irá parar, mas ficará acessível como espera passiva e o proprietário de banco de dados poderá forçar o serviço para a instância do servidor espelho (com possível perda de dados).<br /><br /> <br /><br /> Para obter mais informações, consulte [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).|  
+    |**Alta segurança sem failover automático (síncrono)**|não|Todas as transações confirmadas têm a garantia de serem gravadas em disco no servidor espelho.<br /><br /> O failover manual é possível quando os parceiros estão conectados um ao outro e o banco de dados está sincronizado.<br /><br /> A perda de um parceiro tem o seguinte efeito:<br /><br /> Se a instância do servidor espelho ficar indisponível, o principal continuará.<br /><br /> Se a instância do servidor principal ficar indisponível o espelho irá parar, mas ficará acessível como espera passiva e o proprietário de banco de dados poderá forçar o serviço para a instância do servidor espelho (com possível perda de dados).<br /><br /> <br /><br /> Para obter mais informações, consulte [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).|  
     |**Alta segurança com failover automático (síncrono)**|Sim (obrigatório)|Todas as transações confirmadas têm a garantia de serem gravadas em disco no servidor espelho.<br /><br /> A disponibilidade é maximizada incluindo uma instância do servidor testemunha para dar suporte ao failover automático. Observe que você só poderá selecionar a opção **Alta segurança com failover automático (síncrono)** se tiver especificado antes um endereço de um servidor testemunha.<br /><br /> O failover manual é possível quando os parceiros estão conectados um ao outro e o banco de dados está sincronizado.<br /><br /> Na presença de um servidor testemunha, a perda de um parceiro tem o seguinte efeito:<br /><br /> Se a instância do servidor principal ficar indisponível, ocorrerá failover automático. A instância do servidor espelho é alternada para a função principal e oferece seu banco de dados como banco de dados principal.<br /><br /> Se a instância do servidor espelho ficar indisponível, o principal continuará.<br /><br /> <br /><br /> Para obter mais informações, consulte [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> **\*\* Importante \*\*** Se o servidor testemunha estiver desconectado, os parceiros deverão estar conectados entre si para que o banco de dados fique disponível. Para obter mais informações, consulte [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).|  
   
 7.  Quando todas as seguintes condições existirem, clique em **Iniciar Espelhamento** para iniciar o espelhamento:  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  Para remover o servidor testemunha, exclua seu endereço de rede do campo **Testemunha** . Se você mudar do modo de alta segurança com failover automático para o modo de alto desempenho, o campo **Testemunha** será desmarcado automaticamente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [Propriedades do banco de dados &#40;página Espelhamento&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   

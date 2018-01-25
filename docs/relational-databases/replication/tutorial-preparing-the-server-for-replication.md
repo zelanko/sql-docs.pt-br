@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: replication [SQL Server], tutorials
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8f877e3e5a9fe50f03ab9588de7c5882dfe8b61e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ff54e23da202e1161c7cc34502f79481cd3a1534
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>Tutorial: Preparando o servidor para replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] É importante planejar a segurança antes de configurar a topologia de replicação. Este tutorial mostra a melhor forma de garantir a segurança de uma topologia de replicação e também como configurar a distribuição, que é a primeira etapa na replicação de dados. É preciso concluir este tutorial antes de qualquer outro.  
@@ -53,7 +53,7 @@ Para que você possa usar esse tutorial, os seguintes componentes devem estar in
   
 [Inicie o tutorial](../../relational-databases/replication/lesson-1-creating-windows-accounts-for-replication.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Configurar a distribuição](../../relational-databases/replication/configure-distribution.md)  
 [Segurança e proteção &#40;Replicação&#41;](../../relational-databases/replication/security/security-and-protection-replication.md)  
   

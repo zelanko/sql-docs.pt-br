@@ -17,15 +17,15 @@ helpviewer_keywords:
 - non-SQL Server Subscribers, subscriptions
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c2de231ff458d52de6aa4caf4ecda59eb6785490
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 528537bd5cf2e1b0d3020b8a22fe532e5c616cbb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Criar uma assinatura para um Assinante não SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como criar uma assinatura para um Assinante não SQL Server no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Dados de publicação de suporte a replicação transacional e de instantâneo para Assinantes não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre plataformas de Assinantes com suporte, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-enable-a-publication-for-non-sql-server-subscribers"></a>Para habilitar uma publicação para Assinantes não SQL Server  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e expanda o nó do servidor.  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e expanda o nó de servidor.  
   
 2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .  
   
@@ -147,7 +147,7 @@ ms.lasthandoff: 11/17/2017
   
  Quando o Agente de Instantâneo terminar de gerar o instantâneo, uma mensagem será exibida, como "[100%] Um instantâneo de 17 artigos foi gerado".  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Crie assinaturas push para Assinantes não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma programática, usando procedimentos armazenados de replicação.  
   
 > [!IMPORTANT]  
@@ -188,7 +188,7 @@ ms.lasthandoff: 11/17/2017
     > [!IMPORTANT]  
     >  Ao criar uma assinatura push em um Publicador com um Distribuidor remoto, os valores especificados para todos os parâmetros, inclusive *job_login* e *job_password*são enviados para o Distribuidor como texto sem-formatação. Você deve criptografar a conexão entre o Publicador e seu Distribuidor remoto antes de executar esse procedimento armazenado. Para obter mais informações, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   
  [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md)   
  [Outros assinantes não SQL Server](../../relational-databases/replication/non-sql/other-non-sql-server-subscribers.md)   

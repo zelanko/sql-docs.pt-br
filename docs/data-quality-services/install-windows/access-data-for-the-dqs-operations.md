@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bb59f0303f904426d3077af2fa96edd5ebea67f8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bf4ccaec030d6db0db4b3e83b8051e4ca97b5b2f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Acessar dados para as operações do DQS
   Para usar seus dados de origem para operações do [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) e exportar seus dados processados, você pode adotar um destes procedimentos:  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Use seu próprio banco de dados como os dados de origem em operações do DQS e destino para exportar os dados processados. Para fazer isso, verifique se o banco de dados está na mesma instância do SQL Server que os bancos de dados do Data Quality Server. Caso contrário, o banco de dados não estará disponível no cliente Data Quality para operações do DQS. Além disso, sua conta de usuário do Windows deve ter acesso ao banco de dados DQS_STAGING_DATA para exportar os resultados compatíveis porque eles são exportados em duas fases: primeiro, os resultados compatíveis são exportados para as tabelas temporárias no banco de dados DQS_STAGING_DATA e, em seguida, são movidos para a tabela no banco de dados de destino.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   Você precisa ter concluído a instalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] executando o arquivo DQSInstaller.exe. Para obter mais informações, consulte [Executar o DQSInstaller.exe para concluir a instalação do Data Quality Server](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
@@ -56,10 +56,10 @@ ms.lasthandoff: 11/20/2017
   
 6.  Na caixa de diálogo **Propriedades** , clique em **OK** para aplicar as alterações.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
  Tente realizar operações do DQS que acessam o banco de dados como fonte de dados para a operação DQS e, em seguida, exportam os dados processados para o banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instalar o Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)  
   
   

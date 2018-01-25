@@ -16,13 +16,13 @@ ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 caps.latest.revision: "3"
 author: dagiro
 ms.author: v-dagir
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 226256c110ae18881ec980d95e6979bb1b5b9ece
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fa4b8d6262311f68e0833366c4f0f2c5b6d71c53
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-xtp-databases"></a>Bancos de dados XTP do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,5 +70,5 @@ Esta tabela descreve os contadores **Bancos de dados XTP do SQL Server** .
 |**Pico de Contagem de Páginas da Parte Final do Cache**|Maior número de páginas alocadas na Parte Final do Cache. Este é um contador de nível muito baixo, não planejado para uso do cliente.|
 
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Contadores de desempenho XTP &#40;OLTP in-memory&#41; do SQL Server](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)

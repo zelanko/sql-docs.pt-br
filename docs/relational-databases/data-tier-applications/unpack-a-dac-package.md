@@ -18,15 +18,15 @@ helpviewer_keywords:
 - unpack DAC
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 caps.latest.revision: "11"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5599ea686d99afa78e0ef12f89765e889746f723
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 84728faa46ca75d50b44e8047ce962bda4d415fc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="unpack-a-dac-package"></a>Desempacotar um pacote de DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a caixa de diálogo Desempacotar Aplicativo da Camada de Dados para descompactar os scripts e arquivos de um pacote de DAC (aplicativo da camada de dados). Os scripts e arquivos são colocados em uma pasta onde podem ser examinados antes do pacote ser usado para implantar o DAC em um sistema de produção. O conteúdo de um DAC também pode ser comparado com o conteúdo de outro pacote desempacotado em outra pasta.  
@@ -88,8 +88,8 @@ ms.lasthandoff: 11/17/2017
   
  Para obter mais informações, consulte [Validate a DAC Package](../../relational-databases/data-tier-applications/validate-a-dac-package.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Aplicativos da Camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Implantar um aplicativo da camada de dados](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [Atualizar um aplicativo da camada de dados](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  
   

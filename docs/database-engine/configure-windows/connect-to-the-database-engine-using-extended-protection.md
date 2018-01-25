@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cdc286f5ab945e2897e69dcfe7f1a98dec1c4b8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d5bf850e985baccb1d16d77697ea7cd2611af222
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar-se ao mecanismo de banco de dados usando proteção estendida
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à **Proteção Estendida** desde o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. A**Proteção Estendida para Autenticação** é um recurso dos componentes de rede implementado pelo sistema operacional. Há suporte para a**Proteção Estendida** no Windows 7 e no Windows Server 2008 R2. **Proteção Estendida** é incluída em pacotes de serviço para sistemas operacionais [!INCLUDE[msCoName](../../includes/msconame-md.md)] mais antigos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é mais seguro quando as conexões são efetuadas usando a **Proteção Estendida**.  
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/20/2017
   
  Ao usar o IIS para acessar dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando uma conexão HTTP ou HTTPS, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode aproveitar a Proteção Estendida fornecida pelo IIS. Para obter mais informações sobre como configurar o IIS para usar a Proteção Estendida, consulte [Configure Extended Protection in IIS 7.5](http://go.microsoft.com/fwlink/?LinkId=181105)(em inglês).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configuração de rede do servidor](../../database-engine/configure-windows/server-network-configuration.md)   
  [Configuração de rede do cliente](../../database-engine/configure-windows/client-network-configuration.md)   
  [Visão geral sobre a Proteção Estendida para Autenticação](http://go.microsoft.com/fwlink/?LinkID=177943)   

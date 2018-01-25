@@ -16,22 +16,22 @@ helpviewer_keywords:
 - SQLServer:SQL Errors
 ms.assetid: 6e5273ca-29cb-4618-88a2-70b9b8d6cf76
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4415bf2a4774dac543ef87be5376a549695111b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5a61338c9ea2ba16e88d2b71bacedbd382a7bf49
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-sql-errors-object"></a>SQL Server, objeto SQL Errors
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto **SQLServer:SQL Errors** no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar **Erros SQL**.  
   
  Esta tabela descreve os contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Erros SQL** .  
   
-|Contadores de Erros SQL do SQL Server|Descrição|  
+|Contadores de Erros SQL do SQL Server|Description|  
 |------------------------------------|-----------------|  
 |**Erros/s**|Número de erros/segundo.|  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |**Erros de Eliminação de Conexão**|Rastreia erros severos que fazem com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elimine a conexão atual.|  
 |**Erros de Usuário**|Informações sobre erros de usuário.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

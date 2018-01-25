@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.pubproperties.articles.f1
 ms.assetid: bdeea318-a153-44b8-9e51-9155f3bad18b
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d3b75391bacc62e7d1b38743f8ab83db78d1e5a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d9c3cb3eab7b2145f9f49b8a340cf2215278dbd1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-properties-articles"></a>Propriedades de Publicação, Artigos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A página **Artigos** da caixa de diálogo **Propriedades de Publicação** contém informações sobre os artigos de uma publicação e permite adicionar e remover artigos de publicações existentes, bem como alterar propriedades do artigo e filtragem de colunas.  
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/17/2017
  **Mostrar somente os artigos marcados na lista**  
  Marque essa caixa de seleção para mostrar somente os artigos selecionados no painel de objeto.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Criar e aplicar o instantâneo inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   

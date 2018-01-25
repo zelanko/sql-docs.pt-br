@@ -15,13 +15,13 @@ ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 caps.latest.revision: "72"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9e2f0d6a57d890eaeb673d213c48245e84e5624
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a960b0862617027d77f28a7acc247312f461a78f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>Auditoria local da coleta de comentários sobre o uso do SSMS
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O SSMS (SQL Server Management Studio) contém recursos habilitados para Internet que podem coletar e enviar os dados anônimos de uso de recursos à Microsoft. O SSMS pode coletar informações padrão do computador e informações de uso e desempenho que podem ser transmitidas à Microsoft e analisadas com a finalidade de aprimorar a qualidade, a segurança e a confiabilidade do SSMS. Não coletamos dados como o seu nome, endereço ou outras informações de contato. Para obter detalhes, consulte a [Política de Privacidade do SQL Server](https://www.microsoft.com/en-us/privacystatement/SQLServer/Default.aspx).

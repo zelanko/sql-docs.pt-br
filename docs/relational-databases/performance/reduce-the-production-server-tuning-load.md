@@ -21,15 +21,15 @@ helpviewer_keywords:
 - offload tuning overhead [SQL Server]
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
 caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0da94113a0d79705e95790584302e6c17e6f9970
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 17d4f6a412677dbdfa580baeec777ed069cdc7d1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Reduzir a carga de ajuste do servidor de produção
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] O Orientador de Otimização usa o otimizador de consulta para analisar uma carga de trabalho e fazer recomendações de ajuste. Executar essa análise no servidor de produção aumenta a carga do servidor e pode prejudicar o desempenho do servidor durante a sessão de ajuste. É possível diminuir o impacto na carga do servidor durante uma sessão de ajuste usando um servidor de teste além do servidor de produção.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 </DTAXML>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Considerações para usar servidores de teste](../../relational-databases/performance/considerations-for-using-test-servers.md)   
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   

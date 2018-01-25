@@ -22,13 +22,13 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d945149c7bb6dc583f378c0d8823e2eff0e925b0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b73573c8fb57c50bbca5e74587952e7ed50fa307
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Sobre Acesso de conexão de cliente a réplicas de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Em um grupo de disponibilidade Always On, você pode configurar uma ou mais réplicas de disponibilidade para permitir conexões somente leitura quando elas estiverem sendo executadas na função secundária (ou seja, executando como uma réplica secundária). Você também pode configurar cada réplica de disponibilidade para permitir ou excluir conexões somente leitura quando ela estiver sendo executada na função primária (ou seja, em execução como uma réplica primária).  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
  Permitir qualquer conexão somente leitura  
  Todos os bancos de dados secundários estão disponíveis para conexões de acesso de leitura. Essa opção permite a conexão de clientes com versão inferior.  
   
- Para obter mais informações, veja [Configurar o acesso somente leitura em uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
+ Para obter mais informações, consulte [Configurar o acesso somente leitura em uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
 ##  <a name="ConnectAccessForPrimary"></a> Tipos de acesso de conexão com suporte da função primária  
  A função primária dá suporte a duas alternativas para conexões de cliente, da seguinte maneira:  
@@ -86,13 +86,13 @@ ms.lasthandoff: 11/20/2017
   
 |Função da réplica|Acesso de conexão com suporte na réplica|Tentativa de conexão|Resultado da tentativa de conexão|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|Secundário|Todos|Intenção de leitura, leitura/gravação ou nenhuma intenção de conexão especificada|Success|  
+|Secundário|Todos|Intenção de leitura, leitura/gravação ou nenhuma intenção de conexão especificada|Êxito|  
 |Secundário|Nenhum (este é o comportamento padrão da função secundária).|Intenção de leitura, leitura/gravação ou nenhuma intenção de conexão especificada|Failure|  
-|Secundário|Tentativa de leitura somente|Intenção de leitura|Success|  
+|Secundário|Tentativa de leitura somente|Intenção de leitura|Êxito|  
 |Secundário|Tentativa de leitura somente|Intenção de leitura/gravação ou nenhuma intenção de conexão especificada|Failure|  
-|Primária|Tudo (esse é o comportamento padrão da função primária).|Intenção de somente leitura, leitura/gravação ou nenhuma intenção de conexão especificada|Success|  
+|Primária|Tudo (esse é o comportamento padrão da função primária).|Intenção de somente leitura, leitura/gravação ou nenhuma intenção de conexão especificada|Êxito|  
 |Primária|Leitura-gravação|Tentativa de leitura somente|Failure|  
-|Primária|Leitura-gravação|Intenção de leitura/gravação ou nenhuma intenção de conexão especificada|Success|  
+|Primária|Leitura-gravação|Intenção de leitura/gravação ou nenhuma intenção de conexão especificada|Êxito|  
   
  Para obter informações sobre como configurar um grupo de disponibilidade para aceitar conexões de cliente às suas réplicas, consulte [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
@@ -103,8 +103,8 @@ ms.lasthandoff: 11/20/2017
   
 |Réplica|Modo de confirmação|Função inicial|Acesso de conexão para a função secundária|Acesso de conexão para a função primária|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|Síncrona|Primária|Nenhuma|Leitura-gravação|  
-|Replica2|Síncrona|Secundário|Nenhuma|Leitura-gravação|  
+|Replica1|Síncrona|Primária|Nenhum|Leitura-gravação|  
+|Replica2|Síncrona|Secundário|Nenhum|Leitura-gravação|  
 |Replica3|Assíncrona|Secundário|Somente tentativa de leitura|Leitura-gravação|  
 |Replica4|Assíncrona|Secundário|Tentativa de leitura somente|Leitura-gravação|  
   
@@ -128,7 +128,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Estatísticas](../../../relational-databases/statistics/statistics.md)  

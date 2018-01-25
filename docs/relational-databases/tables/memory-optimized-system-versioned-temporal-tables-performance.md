@@ -15,13 +15,13 @@ ms.assetid: 2e110984-7703-4806-a24b-b41e8c3018c6
 caps.latest.revision: "14"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 189e02f375faeadd3875ab384423abea559f5889
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0cc7a8ac4a47a479e87702ddd429a95ca00b8336
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="memory-optimized-system-versioned-temporal-tables-performance"></a>Desempenho de tabelas temporais com controle de versão do sistema e otimização de memória
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="did-this-article-help-you-were-listening"></a>Este artigo foi útil para você? Estamos atentos  
  Quais são as informações que você está procurando? Você as localizou? Estamos atentos aos seus comentários para aprimorar o conteúdo. Envie seus comentários para [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Performance%20Considerations%20with%20Memory-Optimized%20System-Versioned%20Temporal%20Tables%20page)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tabelas temporais com controle da versão do sistema com tabelas com otimização de memória](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
  [Criação de uma tabela temporal com controle da versão do sistema com otimização de memória](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)   
  [Trabalho com tabelas temporais com controle da versão do sistema com otimização de memória](../../relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md)   

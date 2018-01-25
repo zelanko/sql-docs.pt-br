@@ -21,13 +21,13 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 74b2beeb4f74afab2dc7300e51093d3e271f58e4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 25e9efc5d7ffb6d4d0c09cc88e19671ed7f7b043
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Transações – grupos de disponibilidade e espelhamento de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ No SQL Server 2016 e anterior, não há suporte para transações entre bancos d
 Também não há suporte para transações entre bancos de dados para espelhamento de banco de dados.  
   
 ##  <a name="dtcsupport"></a> SQL Server 2016: Suporte para transações distribuídas  
-Há suporte para transações distribuídas com grupos de disponibilidade. Isso se aplica a transações distribuídas entre bancos de dados hospedados por duas instâncias do SQL Server diferentes. Isso também se aplica a transações distribuídas entre o SQL Server e outro servidor compatível com o DTC.  
+Há suporte para transações distribuídas com grupos de disponibilidade. Isso se aplica a transações distribuídas entre bancos de dados hospedados por duas instâncias do SQL Server diferentes. Isso também se aplica a transações distribuídas entre o SQL Server e outro servidor em conformidade com o DTC.  
  
 O DTC ou MSDTC (Coordenador de Transações Distribuídas da Microsoft) é um serviço Windows que fornece a infraestrutura de transação para sistemas distribuídos. O MSDTC permite que aplicativos clientes incluam várias fontes de dados em uma transação que é então confirmada em todos os servidores incluídos na transação. Por exemplo, você pode usar o MSDTC para coordenar transações que abrangem vários bancos de dados em servidores diferentes.
 

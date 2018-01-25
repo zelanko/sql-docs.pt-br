@@ -16,13 +16,13 @@ ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 caps.latest.revision: "3"
 author: dagiro
 ms.author: v-dagir
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c996bd6928750d77960e3ff35a01ed9829195580
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 57a16709c701e8754446287f9d0b74b6e94581b3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-filetable-object"></a>SQL Server, objeto FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto de desempenho **SQLServer:FileTable** fornece contadores para estatísticas associadas a FileTable e ao acesso não transacionado.
@@ -61,5 +61,5 @@ A tabela a seguir descreve os objetos de desempenho **FileTable** do SQL Server.
 |**Tempo para obter um item FileTable BASE**|Somente para uso interno.|
 |**Tempo para atualizar um item FileTable BASE**|Somente para uso interno.| 
  
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Monitorar o uso de recursos (Monitor do Sistema)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)

@@ -18,13 +18,13 @@ ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e334ba23daa658900e6977811d1305a1ad0b16e8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bf344815c90bbabcab08d75880fb2605f6683a36
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Adicionar ou substituir uma testemunha de espelhamento de banco de dados (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Se os pontos de extremidade do espelhamento de banco de dados usar Autenticação do Windows, você poderá usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para adicionar ou substituir uma testemunha. Ao adicionar uma testemunha ao [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] isso também altera o modo operacional para modo de segurança alta com failover automático.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/20/2017
   
      Para habilitar a testemunha e alterar a sessão para o modo de segurança alta com failover automático, clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Testemunha de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Propriedades do banco de dados &#40;página Espelhamento&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   

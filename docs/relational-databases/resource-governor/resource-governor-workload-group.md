@@ -17,15 +17,15 @@ helpviewer_keywords:
 - workload groups [SQL Server], overview
 ms.assetid: a84c3c3f-55b6-4a30-9c42-13f082d9281e
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1c4082e1620729a964eafad177bedca55ce6506a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 98ea3ac1fe7d21249f1293e6d0eb8e668e25d98a
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="resource-governor-workload-group"></a>Grupos de carga de trabalho do Administrador de Recursos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor, o grupo de carga de trabalho funciona como um contêiner para as solicitações de sessão que têm critérios de classificação similares. Uma carga de trabalho permite o monitoramento de agregação de sessões e define políticas para as sessões. Cada grupo de carga de trabalho está em um pool de recursos, que representa um subconjunto dos recursos físicos de uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Quando uma sessão é iniciada, o classificador do Administrador de Recursos atribui a sessão a um grupo de carga de trabalho específico e a sessão deve ser executada, usando as políticas atribuídas ao grupo de carga de trabalho e os recursos definidos para o pool de recursos.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 |Descreve como alterar as configurações de um grupo de cargas de trabalho.|[Alterar as configurações de grupo de carga de trabalho](../../relational-databases/resource-governor/change-workload-group-settings.md)|  
 |Descreve como excluir um grupo de cargas de trabalho.|[Excluir um grupo de carga de trabalho](../../relational-databases/resource-governor/delete-a-workload-group.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Habilitar Administrador de Recursos](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Pool de recursos do Administrador de Recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

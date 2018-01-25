@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eb2c2415a8cbe1af6d1cef51f5d9253171dd7bea
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c321ea317846b43f2c69d4a64f4bc3daeff9048c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-cross-domain-rule"></a>Criar uma regra de domínio cruzado
   Este tópico descreve como criar uma regra de domínio cruzado para um domínio composto em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Uma regra de domínio cruzado testa a relação entre valores de domínios únicos que são incluídos em um domínio composto. A regra de domínio cruzado deve se repetir em um domínio composto para que os valores do domínio sejam considerados precisos e em conformidade com os requisitos comerciais. Uma regra de domínio cruzado é usada para validar, corrigir e unificar valores de domínio.  

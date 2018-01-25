@@ -20,13 +20,13 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 caps.latest.revision: "75"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d521b60320fc490d2ba7e824e85bb2eabe1e9bb3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5e688f4c428df93491b2f6e449022a447504b5e3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover e modos de failover (Grupos de Disponibilidade AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/20/2017
 -   [Conteúdo relacionado](#RelatedContent)  
   
 ##  <a name="TermsAndDefinitions"></a> Termos e definições  
- Failover automático  
+ failover automático  
  Um failover que ocorre automaticamente na perda da réplica primária. Há suporte para o failover automático apenas quando a réplica primária atual e uma réplica secundária estão configuradas como modo de failover definido como AUTOMATIC e a réplica secundária está sincronizada no momento.  Se o modo de failover da réplica primária ou secundária for MANUAL, o failover automático não poderá ocorrer.  
   
  Failover manual planejado (sem perda de dados)  
@@ -87,8 +87,8 @@ ms.lasthandoff: 11/20/2017
   
 ||Modo de confirmação assíncrona|Modo de confirmação síncrona com modo de failover manual|Modo de confirmação síncrona com modo de failover automático|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|Failover automático|Não|Não|Sim|  
-|Failover manual planejado|Não|Sim|Sim|  
+|failover automático|não|não|Sim|  
+|Failover manual planejado|não|Sim|Sim|  
 |failover forçado|Sim|Sim|Sim**\***|  
   
  **\***Se você emitir um comando de failover forçado em uma réplica secundária sincronizada, a réplica secundária se comportará da mesma forma que um failover manual.  
@@ -264,9 +264,9 @@ ms.lasthandoff: 11/20/2017
   
 |Modo de disponibilidade de réplica secundária|O bancos de dados é sincronizado?|É possível haver perda de dados?|  
 |--------------------------------------------|-------------------------------|----------------------------|  
-|Synchronous-commit|Sim|Não|  
-|Synchronous-commit|Não|Sim|  
-|Asynchronous-commit|Não|Sim|  
+|Synchronous-commit|Sim|não|  
+|Synchronous-commit|não|Sim|  
+|Asynchronous-commit|não|Sim|  
   
  Os bancos de dados secundários acompanham apenas duas bifurcações de recuperação, portanto, se você executar vários failovers forçados, nenhum banco de dados secundário que iniciou a sincronização de dados com o failover forçado anterior poderá ser retomado. Se isso ocorrer, qualquer banco de dados secundário que não pode ser retomado precisará ser removido do grupo de disponibilidade e unido novamente depois de ser restaurado para o período correto e reunido para o grupo de disponibilidade. Uma restauração não funcionará em várias bifurcações de recuperação, portanto, certifique-se de executar um backup do log depois de executar mais de um failover forçado.  
   
@@ -346,7 +346,7 @@ ms.lasthandoff: 11/20/2017
   
  **Para definir a configuração de quorum do WSFC**  
   
--   [Definir configurações de NodeWeight de quorum de cluster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
+-   [Definir configurações de NodeWeight de quorum do cluster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
 -   [Exibir configurações de NodeWeight de quorum de cluster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
@@ -358,7 +358,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Modos de disponibilidade &#40;Grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [WSFC &#40;Windows Server Failover Clustering&#41; com o SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   

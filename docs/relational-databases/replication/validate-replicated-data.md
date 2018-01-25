@@ -22,15 +22,15 @@ helpviewer_keywords:
 - validating replicated data
 ms.assetid: f7500a2b-61cb-41b5-816d-27609a6c58e7
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9834f7c0d65ab05a7dda5f68b05438760abef21
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 65c3d00ab7ebdfdf99b6ad52f5b9b5460ef6c29f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="validate-replicated-data"></a>Validar os dados replicados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A replicação transacional e de mesclagem permitem validar os dados no Assinante que correspondem aos dados no Publicador. A validação pode ser executada para assinaturas específicas ou para todas as assinaturas em uma publicação. Especifique um dos seguintes tipos de validação e o Distribution Agent ou o Merge Agent validarão os dados na próxima vez que executarem:  
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
   
  Quando as somas de verificação binárias são usadas, ocorre uma verificação de redundância (CRC) de 32 bits coluna a coluna, em vez de uma CRC na linha física da página de dados. Isso permite que as colunas da tabela estejam em qualquer ordem física na página de dados, mas sejam calculadas no mesmo CRC da linha. A validação de soma de verificação binária pode ser usada quando há filtros de linha ou de coluna na publicação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Best Practices for Replication Administration](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - modifying subscriptions, SQL Server Management Studio
 ms.assetid: 1601e54f-86f0-49e8-b023-87a5d1def033
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a33ec3a63c7dcc88349afafb40a5284db37a91a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c43213314ab7853215e953743bc5c2e946b547ae
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>Exibir e modificar propriedades de assinatura pull
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como exibir e modificar propriedades de assinatura pull no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] ou RMO (Replication Management Objects).  
@@ -77,12 +77,12 @@ ms.lasthandoff: 11/17/2017
   
 4.  Exiba as propriedades. Em seguida, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  As assinaturas pull podem ser modificadas e suas propriedades acessadas programaticamente usando procedimentos armazenados de replicação. Os procedimentos armazenados usados dependem do tipo de publicação ao qual a assinatura pertence.  
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Para visualizar as propriedades de uma assinatura pull para um instantâneo ou publicação transacional  
   
-1.  No Assinante, execute [sp_helppullsubscription](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md). Especifique **@publisher**, **@publisher_db**, e **@publication**. Isso retorna informações sobre a assinatura que é armazenada em tabelas do sistema no Assinante.  
+1.  No Assinante, execute [sp_helppullsubscription](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md). Especifique **@publisher**, o **@publisher_db**, e **@publication**. Isso retorna informações sobre a assinatura que é armazenada em tabelas do sistema no Assinante.  
   
 2.  No Assinante, execute [sp_helpsubscription_properties](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md). Especifique **@publisher**, **@publisher_db**, **@publication**, e um dos seguintes valores para **@publication_type**:  
   
@@ -164,9 +164,9 @@ ms.lasthandoff: 11/17/2017
   
 8.  Feche todas as conexões.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir informações e realizar tarefas para uma assinatura &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
  [Melhores práticas de segurança da replicação](../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Assinar Publicações](../../relational-databases/replication/subscribe-to-publications.md)  
+ [Assinar publicações](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

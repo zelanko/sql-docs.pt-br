@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.generatefilters.f1
 ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3e86760f99dd98a405ec4e0efcdf0516485a09b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: caab625c0f783290f1206c832a3243d498eae349
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="generate-filters"></a>Gerar Filtros
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A caixa de diálogo **Gerar Filtros** permite definir um filtro de linha em uma tabela em uma publicação de mesclagem; a replicação, então, estende automaticamente o filtro para outras tabelas relacionadas por relações de chave estrangeira. Por exemplo, se você definir um filtro em uma tabela de cliente para que contenha apenas dados de clientes franceses, a replicação estenderá esse filtro para que as tabelas de pedidos relacionadas e detalhes do pedidos contenham somente informações relacionadas aos clientes franceses.  
@@ -53,11 +53,11 @@ ms.lasthandoff: 11/17/2017
   
  Depois que a instrução é analisada, a replicação cria os filtros de junção necessários. Se você ainda não tiver configurado o Distribuidor para o Publicador no qual este assistente está sendo executado, será solicitado a fazê-lo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filtrar os dados publicados](../../relational-databases/replication/publish/filter-published-data.md)   
- [Filtros de junção](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

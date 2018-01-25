@@ -19,13 +19,13 @@ ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a6237b8211c04cf9c0fbb1f098856f1043fcb19d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: db1c0902b2de0a761e1a7558e9bbb71c946afe5b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>Espelhamento de banco de dados e instantâneos de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você pode tirar proveito de um banco de dados espelho que você está mantendo para fins de disponibilidade para descarregar relatórios. Para usar um banco de dados espelho para relatórios, você pode criar um instantâneo do banco de dados no banco de dados espelho e direcionar as solicitações de conexão de clientes para o instantâneo mais recente. Um instantâneo do banco de dados é um instantâneo consistente de transações, estático e somente leitura de seu banco de dados de origem tal como ele estava no momento da criação do instantâneo. Para criar um instantâneo do banco de dados em um banco de dados espelho, o banco de dados precisa estar no estado de espelhamento sincronizado.  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/20/2017
 -   [Remover um instantâneo do banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instantâneos de banco de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [Conectar clientes a uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)  
   

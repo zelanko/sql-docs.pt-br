@@ -16,15 +16,15 @@ helpviewer_keywords:
 - hiding instances of Database Engine
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 343740304ad02460baea28da74e65b4298d8c0ba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c82fb16bf871164502317768070d18b339120bd0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>Ocultar uma instância do Mecanismo de Banco de Dados do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como ocultar uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SQL Server Configuration Manager. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa o serviço de navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para enumerar instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] instaladas no computador. Isso permite que aplicativos cliente naveguem por um servidor e ajuda os clientes a distinguirem entre várias instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no mesmo computador. Você pode usar o procedimento a seguir para evitar que o serviço SQL Server Browser exponha uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] a computadores cliente que tentam localizar a instância usando o botão **Procurar** .  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Na guia **Sinalizadores** , na caixa **Ocultar Instância** , selecione **Sim**e clique em **OK** para fechar a caixa de diálogo. A alteração entra em vigor imediatamente para conexões novas.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se você ocultar uma instância nomeada, terá de fornecer o número da porta na cadeia de conexão para se conectar à instância oculta, mesmo se o navegador estiver em execução. Recomendamos que use uma porta estática em vez de uma porta dinâmica para a instância oculta nomeada.  
   Para obter mais informações, veja [Configurar um servidor para escuta em uma porta TCP específica &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/20/2017
  Se você ocultar uma instância nomeada clusterizada, o serviço de cluster poderá não se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se a chave do Registro **LastConnect** (**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI11.0\LastConnect**) tiver uma porta diferente da porta de escuta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o serviço de cluster não puder fazer uma conexão com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você poderá ver um erro semelhante ao seguinte:  
 **ID do evento: 1001: Nome do evento: deadlock de recursos de clustering de failover.**  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configuração de rede do servidor](../../database-engine/configure-windows/server-network-configuration.md)   
  [Descrição das conexões de cliente do Servidor Virtual SQL](https://support.microsoft.com/kb/273673)   
  [Como atribuir uma porta estática a uma instância nomeada do SQL Server – e evitar uma armadilha comum](http://blogs.msdn.com/b/arvindsh/archive/2012/09/08/how-to-assign-a-static-port-to-a-sql-server-named-instance-and-avoid-a-common-pitfall.aspx)  

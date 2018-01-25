@@ -18,19 +18,19 @@ helpviewer_keywords:
 - viewing system database data
 ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.openlocfilehash: fac90b998c51feb54a0fe496e6d09b3bf59c1129
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7985a4fa9d1fa3dd4fc11553d640c4ef0ad0c6a2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="system-databases"></a>Bancos de dados do sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui os bancos de dados do sistema a seguir.  
   
-|Banco de dados do sistema|Descrição|  
+|Banco de dados do sistema|Description|  
 |---------------------|-----------------|  
 |[Banco de dados mestre](../../relational-databases/databases/master-database.md)|Registra toda a informações de nível de sistema por uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Banco de dados msdb](../../relational-databases/databases/msdb-database.md)|É usado pelo SQL Server Agent para programar alertas e trabalhos.|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimentos armazenados do sistema e funções internas.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
  [Ocultar objetos do sistema no Pesquisador de Objetos](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)  

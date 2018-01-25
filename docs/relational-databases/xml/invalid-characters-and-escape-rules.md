@@ -16,15 +16,15 @@ helpviewer_keywords:
 - FOR XML clause, escape rules
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 403d2431769b8e19b0b80ce41473d0b2db6baa13
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b6a9ee0756ac9e1bfaed51412f82cb9c99c88c3e
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="invalid-characters-and-escape-rules"></a>Caracteres inválidos e regras de escape
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Este tópico descreve como caracteres XML inválidos são tratados pela cláusula FOR XML e lista as regras de escape para caracteres inválidos em nomes XML.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
   
      Observe que WITH XMLNAMESPACES é a maneira recomendada para adicionar namespaces XML.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

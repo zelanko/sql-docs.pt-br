@@ -17,15 +17,15 @@ f1_keywords:
 helpviewer_keywords: Value for Extended Property dialog box
 ms.assetid: cf0ba215-cf83-48e0-bd98-a8ddc8810eab
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c4026b3c17f333e8fead6bcb75717dbfe78c4e50
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fe5c8d996b80021758a9a29f207a5c3bdb9eac2e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="value-for-extended-property-dialog-box"></a>Caixa de diálogo Valor da Propriedade Estendida
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Use a caixa de diálogo **Valor de** *\<nome da propriedade>* para inserir ou exibir um valor. Essa é uma caixa de diálogo comum que pode ser aberta em vários locais.  

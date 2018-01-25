@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dc8ffd4436d18c0b46b1dbeaa9b1d034c13117ca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 75c8ba6edd0aed89854e62f66b2011927fb4879e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>Publicar um banco de dados (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você pode usar o **Assistente para Gerar e Publicar Scripts** para publicar um banco de dados inteiro ou objetos de banco de dados individuais em um provedor de hospedagem Web.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Na página **Salvar ou Publicar Scripts** , monitore o progresso da publicação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerar scripts &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)   
  [Copiar bancos de dados em outros servidores](../../relational-databases/databases/copy-databases-to-other-servers.md)  
   

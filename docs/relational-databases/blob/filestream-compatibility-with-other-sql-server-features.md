@@ -16,15 +16,15 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], limitations
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0fa07febaa2096db25b4b29152a089462deccae1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bb4b3143fb09733fcedf8bc36a3f744577ff7553
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilidade do FILESTREAM com outros recursos do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Como dados FILESTREAM estão no sistema de arquivos, este tópico fornece algumas considerações, diretrizes e limitações para o uso de FILESTREAM com os seguintes recursos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
@@ -125,7 +125,7 @@ ms.lasthandoff: 11/17/2017
   
  Você poderá definir a retenção de banco de dados como PARTIAL se desejar usar determinados recursos de bancos de dados contidos, como usuários contidos. Neste caso, no entanto, você deve estar atento que algumas das configurações de banco de dados não estão contidas no banco de dados e não são movidos automaticamente quando o banco de dados é movido.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto binário grande &#40;Blob&#41; Dados &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - full recovery model [SQL Server], planning restore sequences
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aeaff84574eaa0f535596efe8c03b2b14b640ba1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: df70e2b5fce0983fa3501b6bd53376f75d10d900
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Planejar e executar sequências de restauração (modelo de recuperação completa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="restarting-a-restore-sequence"></a>Reinicializando uma sequência de restauração  
  Se você encontrar um problema com o resultado de uma sequência de restauração, pode encerrá-la e reiniciar a sequência de restauração desde o início. Por exemplo, se você restaurar muitos backups de log acidentalmente e exceder o ponto de recuperação pretendido, reinicialize a sequência de restauração até o backup de log que contém o ponto de recuperação desejado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral do backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Visão geral de restauração e recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Restaurações completas de banco de dados &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

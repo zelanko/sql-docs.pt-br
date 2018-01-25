@@ -17,15 +17,15 @@ helpviewer_keywords:
 - permissions [SQL Server], file system
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c3c16fe40753700a0f8e6d89c403b7a96324d366
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4f656b30d3ef8eca1f9af1c80d9659630d45f908
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Configurar permissões do sistema de arquivos para acesso ao mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como conceder ao sistema de arquivos [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] acesso ao local em que os arquivos de banco de dados estão armazenados. O serviço do [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve ter a permissão do sistema de arquivos do Windows para acessar a pasta onde os arquivos de banco de dados são armazenados. A permissão para o local padrão é configurada durante a instalação. Se você colocar seus arquivos de banco de dados em um local diferente, poderá precisar seguir estas etapas para conceder ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] a permissão de controle total para esse local.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/20/2017
   
 7. Clique em **Aplicar**e em **OK** duas vezes para sair.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciar os serviços do Mecanismo de Banco de Dados](../../database-engine/configure-windows/manage-the-database-engine-services.md)   
  [Mover bancos de dados do sistema](../../relational-databases/databases/move-system-databases.md)   
  [Mover bancos de dados de usuário](../../relational-databases/databases/move-user-databases.md)  

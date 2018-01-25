@@ -26,15 +26,15 @@ helpviewer_keywords:
 - checksums [SQL Server]
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8bf78aac25b2d9ab927dfe822f140c8dac7bcb9d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7422aabdffd7985332c669964f0eb518a210ec07
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Erros de mídia possíveis durante backup e restauração (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá a você a opção de recuperar um banco de dados apesar dos erros detectados. Um novo mecanismo de detecção de erros importante é a criação opcional de uma soma de verificação do backup que pode ser criada por uma operação de backup e validada por uma operação de restauração. Você pode controlar se uma operação verifica os erros e se a operação é interrompida ou continua ao encontrar um erro. Se um backup contiver uma soma de verificação de backup, as instruções RESTORE e RESTORE VERIFYONLY poderão verificar os erros.  
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Especificar se uma operação de backup ou restauração continua ou é interrompida após um erro &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [conjunto de backup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   

@@ -19,13 +19,13 @@ ms.assetid: 4ecf9c63-b3a4-4c54-b553-5bc37973232b
 caps.latest.revision: "32"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4000d8f7c14b3a3a2cf601411117b1c6479a4ba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 59ef0f8eae527598c8ba08e236a1916c5454ab05
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>Realizar failover manualmente de uma sessão de espelhamento de banco de dados (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando o banco de dados espelho for sincronizado (ou seja, quando o banco de dados estiver no estado SYNCHRONIZED), o proprietário do banco de dados poderá iniciar failover manual para o servidor espelho.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
 |`SQLDBENGINE0_1`|PRINCIPAL|MIRROR|  
 |`SQLDBENGINE0_2`|MIRROR|PRINCIPAL|  
   
- Observe que as funções do servidor para outras sessões de espelhamento de banco de dados não são afetadas. Para obter mais informações, veja [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
+ Observe que as funções do servidor para outras sessões de espelhamento de banco de dados não são afetadas. Para obter mais informações, consulte [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
 ### <a name="to-manually-fail-over-database-mirroring"></a>Para realizar failover manualmente de espelhamento de banco de dados  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/20/2017
   
      A caixa de diálogo é fechada automaticamente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades do banco de dados &#40;página Espelhamento&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Fazer failover manual de uma sessão de espelhamento de banco de dados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md)   

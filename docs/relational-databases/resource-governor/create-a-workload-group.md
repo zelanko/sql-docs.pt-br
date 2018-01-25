@@ -16,28 +16,28 @@ helpviewer_keywords:
 - workload groups [SQL Server], create
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7974e3a9bb83302791b9e98e0fcd39a1a52a5a8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 91b5af4b33e069b60f3a4b542ac9734c278e1e62
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-workload-group"></a>Criar um grupo de carga de trabalho
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Você pode criar um grupo de cargas de trabalho usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
--   **Antes de começar:**  [Limitações e restrições](#LimitationsRestrictions), [Permissões](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Para criar um grupo de cargas de trabalho, usando:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
+-   **To create a workload group, using:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
   
  A memória consumida pela criação de índice na tabela particionada desalinhada é proporcional ao número de partições envolvidas. Se a memória total necessária exceder o limite por consulta (REQUEST_MAX_MEMORY_GRANT_PERCENT) imposto pela configuração de grupo de cargas de trabalho, poderá ocorrer uma falha na criação do índice. Como o grupo de cargas de trabalho padrão permite que uma consulta exceda o limite por consulta com o mínimo de memória requerida para iniciar, para compatibilidade com o SQL Server 2005, o usuário talvez possa executar a mesma criação de índice no grupo de cargas de trabalho padrão caso o pool de recursos padrão tenha memória total suficiente configurada para executar tal consulta.  
@@ -82,7 +82,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Habilitar Administrador de Recursos](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Criar um pool de recursos](../../relational-databases/resource-governor/create-a-resource-pool.md)   

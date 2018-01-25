@@ -23,15 +23,15 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], configuring distribution
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2aa81e571c53a0271b1c795198f206735abb3f32
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dfc635f07a64fdb9c4055e402407b7a70bf3329d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-distribution"></a>Configurar a distribuição
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Distribuidor é um servidor que contém o banco de dados de distribuição, que armazena metadados e dados de histórico para todos os tipos de replicação e transações para replicação transacional. Para configurar a replicação, deve-se configurar um Distribuidor. Cada Publicador pode ser atribuído a uma única instância do Distribuidor, mas vários publicadores podem compartilhar um Distribuidor. O Distribuidor usa esses recursos adicionais no servidor onde fica localizado:  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
  Para modificar propriedades de Publicador e Distribuidor, consulte [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Proteger o Distribuidor](../../relational-databases/replication/security/secure-the-distributor.md)  
   

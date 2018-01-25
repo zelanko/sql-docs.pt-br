@@ -16,13 +16,13 @@ ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 caps.latest.revision: "3"
 author: dagiro
 ms.author: v-dagir
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50091709b44fe3314368c9ebfd18aea74216809e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 95ca0cdfcfe13e5176e205b6168a6e5117b35c09
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQLServer, Objeto Batch Resp Statistics
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto de desempenho **SQLServer:Batch Resp Statistics** fornece contadores para acompanhar os tempos de resposta de lote do SQL Server.
@@ -59,6 +59,6 @@ Cada contador no objeto contém as seguintes instâncias:
 |**Tempo Decorrido:Solicitações**|O tempo decorrido da solicitação.|  
 |**Tempo Decorrido:Total(ms)**|O tempo decorrido do lote.|  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 [SQL Server, objeto Cache de planos](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)  
 [Monitorar o uso de recursos (Monitor do Sistema)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

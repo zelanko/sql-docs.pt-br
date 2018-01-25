@@ -23,12 +23,12 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 caps.latest.revision: "47"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: b5a8152042d85f7e3025c0f1cdfc5acc534bfbad
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 58b7a7ba954159974f60e58ff6b8bbbd07017fef
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manually-prepare-a-database-for-an-availability-group-sql-server"></a>Preparar um banco de dados manualmente para um grupo de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como preparar um banco de dados para um grupo de disponibilidade Always On no [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell. A preparação de um banco de dados exige duas etapas: 
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Restaurar um banco de dados em um novo local &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para preparar um banco de dados secundário**  
   
 > [!NOTE]  

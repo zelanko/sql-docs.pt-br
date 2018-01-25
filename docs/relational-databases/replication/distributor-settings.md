@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.monitor.DistributorSettings.f1
 helpviewer_keywords: Distributor Settings dialog box
 ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70367b69beb543b6d43b28ebbd6e5e15891b074e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 29a5ba0a5fa0d731938c8d62fc53e209ab979b95
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor-settings"></a>Configurações de distribuidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A caixa de diálogo **Configurações do Distribuidor** permite alterar configurações para Distribuidores que foram adicionados ao painel esquerdo no Replication Monitor.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
  **Novo grupo**  
  Clique para criar um novo grupo de Publicadores. Um grupo de Publicadores é um modo conveniente de organizar Publicadores no Replication Monitor. Grupos não afetam a replicação de dados ou a relação entre servidores em uma topologia de replicação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar o Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Monitorando a Replicação](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   

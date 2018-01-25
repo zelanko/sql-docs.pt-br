@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: HierarchyID
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9c72f77d11dbc52f29d503b03624e2d3503cc616
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2650a8b35801747ae9a3b84fb048bcbeab724121
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Lição 2: Criando e gerenciando dados em uma tabela hierárquica
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Na Lição 1, você modificou uma tabela existente para usar o tipo de dados **hierarchyid** e populou a coluna **hierarchyid** com a representação dos dados existentes. Nesta lição, você iniciará com uma tabela nova, e inserindo dados usando os métodos hierárquicos. Em seguida, você vai consultar e manipular os dados usando os métodos hierárquicos.  
@@ -43,7 +43,7 @@ Eis os tópicos desta lição:
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Criando uma tabela por meio de um tipo de dados hierarchyid](../../relational-databases/tables/lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Lição 1: Convertendo uma tabela em uma estrutura hierárquica](../../relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
   
   

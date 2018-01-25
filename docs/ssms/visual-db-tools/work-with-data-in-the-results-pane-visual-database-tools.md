@@ -24,13 +24,13 @@ ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ac0861f7c9d1a5f30efbfeb7466ed320f346191
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 506bb355413caeac330509853278f667bf73ee49
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Trabalhar com dados no painel de resultados (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Depois que você executa ou exibe uma consulta, os resultados são mostrados no painel Resultados. Em seguida, você pode trabalhar com esses resultados. Por exemplo, você pode adicionar e excluir linhas, inserir ou alterar dados e navegar facilmente por grandes conjuntos de resultados.  

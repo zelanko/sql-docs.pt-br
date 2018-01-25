@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.logshipping.settings.dest.f1
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d64722c817bda6fd5f940371506b3737a80323c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 16e7f118afae0ca2f33ca8852ee4ac71e156fe52
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secondary-database-settings"></a>Configurações do Banco de Dados Secundário.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use essa caixa de diálogo para configurar e modificar as propriedades de um banco de dados secundário na configuração de envio de logs.  
@@ -120,7 +120,7 @@ ms.lasthandoff: 11/17/2017
  **Desabilitar este trabalho**  
  Suspenda operações de restauração para o banco de dados secundário.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fazer backup e restaurar bancos de dados do SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

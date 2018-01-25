@@ -28,15 +28,15 @@ helpviewer_keywords:
 - calculating table size
 ms.assetid: 15c17c92-616f-402e-894b-907a296efe5f
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 91d77c9df5d9f3de6428928ae6b9cca09f47a983
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7adc1ecdbfa4ebcd55c905fae800d8d6301f1463
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="estimate-the-size-of-a-table"></a>Estimar o tamanho de uma tabela
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode usar as etapas a seguir para estimar a quantidade de espaço necessária para armazenar dados em uma tabela:  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Some os valores calculados nas etapas 1 e 2.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Estimar o tamanho de um banco de dados](../../relational-databases/databases/estimate-the-size-of-a-database.md)   
  [Estimar o tamanho de um heap](../../relational-databases/databases/estimate-the-size-of-a-heap.md)   
  [Estimar o tamanho de um índice clusterizado](../../relational-databases/databases/estimate-the-size-of-a-clustered-index.md)   

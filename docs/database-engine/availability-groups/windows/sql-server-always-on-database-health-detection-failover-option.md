@@ -22,13 +22,13 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 caps.latest.revision: "4"
 author: JasonWHowell
 ms.author: jasonh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c9f10162900579bcf871b2a1bf63d8aa5cc4ac6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fe422c7445debc085f9d610550f365ccc4f1b8f2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Opção de failover de detecção de integridade no nível do banco de dados do grupo de disponibilidade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Do SQL Server 2016 em diante, a opção (DB_FAILOVER) de detecção de integridade no nível do banco de dados está disponível ao configurar um grupo de disponibilidade Always On. A detecção de integridade no nível do banco de dados informa quando um banco de dados não está mais no status online e quando algo deu errado e disparará o failover automático do grupo de disponibilidade. 
@@ -102,7 +102,7 @@ select name, db_failover from sys.availability_groups
 
 Saída de DMV de exemplo:
 
-name  |  db_failover  
+NAME  |  db_failover  
 ---------|---------
 | Contoso-ag |  1  |
 
@@ -182,7 +182,7 @@ Nesta saída de exemplo, o fault_type mostra que ocorreu um evento crítico no g
 |database_replica_id | 39971379-8161-4607-82E7-098590E5AE00
 |failover_ready_replicas |  1
 |fault_type |   2
-|is_critical    | Verdadeiro
+|is_critical    | True
 
 
 ### <a name="related-references"></a>Referências relacionadas

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - single-user mode [SQL Server]
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2dc9ad96d59f89b4ba63ebba6111528288b91f9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6e809d7098ed244ddf14331c310de8ce92f77fb7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Iniciar o SQL Server no modo de usuário único
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Em determinadas circunstâncias, pode ser necessário iniciar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no modo de usuário único usando a **opção de inicialização -m**. Por exemplo, você pode querer mudar as opções de configuração de servidor ou recuperar um banco de dados mestre danificado ou outro banco de dados do sistema. As duas ações exigem iniciar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no modo de usuário único.  
@@ -70,7 +70,7 @@ Por exemplo, **-m"SQLCMD"** limita as conexões a uma única conexão e essa con
   
 6.  Quando a operação for concluída, feche o prompt de comando, e coloque o SQL e os outros recursos online novamente através do administrador do cluster.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar, parar ou pausar o serviço do SQL Server Agent](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)   
  [Conexão de diagnóstico para administradores de banco de dados](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)   
  [Utilitário sqlcmd](../../tools/sqlcmd-utility.md)   

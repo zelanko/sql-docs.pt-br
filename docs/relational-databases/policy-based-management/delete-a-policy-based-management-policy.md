@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Policy-Based Management, delete policies
 ms.assetid: 488f0305-190c-4223-aa5c-e9bd43b520eb
 caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3bcf3e99255f5474462d071f811b559843cbacb7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0152154d83930ab677a29fc70fa605a61ae5ead0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="delete-a-policy-based-management-policy"></a>Excluir uma política do Gerenciamento Baseado em Políticas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como excluir uma política de Gerenciamento Baseado em Políticas do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

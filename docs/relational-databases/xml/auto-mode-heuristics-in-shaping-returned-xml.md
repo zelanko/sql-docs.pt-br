@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: AUTO FOR XML mode, heuristics in shaping returned XML
 ms.assetid: 6c5cb6c1-2921-4ba1-8100-0bf8074f9103
 caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2a4949451ee4fbbd2cf1248f9952020d9ddc7825
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 24ac186b1dc571b30686174cd43ed927f6fe522c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="auto-mode-heuristics-in-shaping-returned-xml"></a>Heurística de modo AUTO na formação do XML retornado
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] O modo AUTO determina a forma do XML retornado com base na consulta. Para determinar como os elementos devem ser aninhados, a heurística do modo AUTO compara valores da coluna em linhas adjacentes. São comparadas colunas de todos os tipos, menos **ntext**, **text**, **image**e **xml**. São comparadas colunas do tipo **(n)varchar(max)** e **varbinary(max)** .  
@@ -75,7 +75,7 @@ T1.Id  T1.Name  T2.Id
 </T1>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar o modo AUTO com FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)  
   
   

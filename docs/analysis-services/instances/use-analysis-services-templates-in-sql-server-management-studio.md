@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2ad2bc8a5d6d440f9f8c06f17d2857e5343adfce
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2b13acc5ac8947e4e97509764f648f8c31da1fa6
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Usar modelos do Analysis Services no SQL Server Management Studio
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece um conjunto de modelos para ajudá-lo a criar rapidamente scripts XMLA, consultas DMX ou MDX, criar KPIs em um cubo ou modelo de tabela, backup de script e operações de restauração e executar muitas outras tarefas. Os modelos estão localizados no **Gerenciador de Modelos** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece um conjunto de modelos para ajudá-lo a criar rapidamente scripts XMLA, consultas DMX ou MDX, criar KPIs em um cubo ou modelo de tabela, backup de script e operações de restauração e executar muitas outras tarefas. Os modelos estão localizados no **Gerenciador de Modelos** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  Este tópico inclui uma lista de modelos multidimensionais e de tabela, e fornece exemplos de como criar uma consulta MDX e instrução XMLA usando o Gerenciador de metadados e o Gerenciador de Modelos.  
   
@@ -214,14 +216,14 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 |XMLA\Gerenciamento|Backup|Demonstra como usar o comando XMLA **Backup** para fazer backup de um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em arquivo.|  
 ||Cancelar|Demonstra como usar o comando XMLA **Cancel** para cancelar todas as operações em execução na sessão (para usuários que não são administradores ou administradores de servidor), no banco de dados (para administradores) ou na instância (para administradores de servidor).|  
 ||Criar banco de dados de partição remota|Demonstra como usar o comando XMLA **Create** com o elemento de banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language (ASSL) para criar um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e uma fonte de dados para armazenar partições remotas.|  
-||DELETE|Demonstra como usar o comando XMLA **Delete (excluir)** para excluir um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existente.|  
+||Delete (excluir)|Demonstra como usar o comando XMLA **Delete (excluir)** para excluir um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existente.|  
 ||Processar Dimensão|Demonstra como usar o comando XMLA **Batch** combinado com o elemento **Parallel** e o comando **Process** para atualizar os atributos de uma dimensão usando uma operação em lote paralela.|  
 ||Processar Partição|Demonstra como usar o comando XMLA **Batch** combinado com o elemento **Parallel** e o comando **Process** para processar completamente uma partição usando uma operação em lote paralela.|  
 ||Restaurar|Demonstra como usar o comando XMLA **Restaurar** comando para restaurar um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a partir de um arquivo de backup.|  
 ||Sincronizar|Demonstra como usar o comando XMLA **Sincronizar** para sincronizar outro banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] com o banco de dados atual do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database using the SkipMembership option for the SincronizarSecurity tag.|  
 |XMLA\Conjuntos de linhas do esquema|Descobrir conjuntos de linhas de esquema|Demonstra como usar o método XMLA **Discover** para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_SCHEMA_ROWSETS.|  
 |XMLA\Status do servidor|Conexões|Demonstra como usar o método XMLA **Discover** para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_CONNECTIONS.|  
-||trabalhos|Demonstra como usar o método XMLA **Discover** para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_JOBS.|  
+||Trabalhos|Demonstra como usar o método XMLA **Discover** para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_JOBS.|  
 ||Locais|Demonstra como usar o método XMLA **Discover** para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_LOCATIONS, especificando o caminho dos arquivos de backup da localização.|  
 ||Locks|Demonstra como usar o método XMLA **Discover** para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_LOCKS.|  
 ||Concessão de Memória|Demonstra como usar o método XMLA **Discover** para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_MEMORYGRANT.|  
@@ -230,9 +232,9 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Rastreamentos|Demonstra como usar o método XMLA **Discover** para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_TRACES.|  
 ||Transactions|Demonstra como usar o método XMLA **Discover** para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_TRANSACTIONS.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de expressões multidimensionais &#40;MDX&#41;](../../mdx/multidimensional-expressions-mdx-reference.md)   
- [Referência de DMX &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Extensões de mineração de dados &#40; DMX &#41; Referência](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Linguagem de script do Analysis Services &#40;ASSL para XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [Analysis Services Scripting Language &#40; ASSL para XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   

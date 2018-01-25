@@ -20,15 +20,15 @@ helpviewer_keywords:
 - modifying subscriptions, SQL Server Management Studio
 ms.assetid: 801d2995-7aa5-4626-906e-c8190758ec71
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6038a289310288b4ff9e12715cdc799d961a127b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a33861140deef4dff36789af55d71a92f7cd3a68
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>Exibir e modificar propriedades de assinatura push
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Este tópico descreve como exibir e modificar propriedades de assinatura push no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)] ou o RMO (Replication Management Objects).  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Modifique propriedades, se necessário, depois clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  As assinaturas push podem ser modificadas e suas propriedades acessadas programaticamente usando procedimentos armazenados de replicação. Os procedimentos armazenados usados dependem do tipo de publicação ao qual a assinatura pertence.  
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Para exibir as propriedades de uma assinatura push de um instantâneo ou publicação transacional  
@@ -145,9 +145,9 @@ ms.lasthandoff: 11/17/2017
   
 7.  (Opcional) Para exibir as novas configurações, chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> para recarregar as propriedades para a assinatura.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir informações e realizar tarefas para uma assinatura &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
  [Melhores práticas de segurança da replicação](../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Assinar Publicações](../../relational-databases/replication/subscribe-to-publications.md)  
+ [Assinar publicações](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

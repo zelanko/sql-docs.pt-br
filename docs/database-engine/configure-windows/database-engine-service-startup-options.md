@@ -28,15 +28,15 @@ helpviewer_keywords:
 - starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 caps.latest.revision: "80"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7b603e31a37884e7c436a184767f8572412e2ec3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2d73b39465c5f0f05244cd4d1d20b3e2fad6eac9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-engine-service-startup-options"></a>Opções de inicialização do serviço Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] As opções de inicialização designam certos locais de arquivos necessários durante a inicialização e especificam algumas condições que abrangem o servidor. A maioria dos usuários não precisa especificar opções de inicialização a menos que você esteja solucionando problemas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou tenha um problema incomum e é instruído a usar uma opção de inicialização pelo Suporte de Cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -85,12 +85,12 @@ ms.lasthandoff: 11/27/2017
 ## <a name="compatibility-support"></a>Suporte de compatibilidade  
  Não há suporte para o parâmetro **-h**  no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Este parâmetro foi usado em versões anteriores de instâncias de 32 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para reservar espaço de endereço de memória virtual para metadados de inclusão de memória a quente quando AWE é habilitado. Para obter mais informações, veja [Recursos descontinuados do SQL Server no SQL Server 2016](http://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
 [Configurar a opção de configuração do servidor scan for startup procs](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)  
 [Iniciar, parar, pausar, retomar, reiniciar o Mecanismo de Banco de Dados, o SQL Server Agent ou o serviço SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)
 [Configurar opções de inicialização do servidor &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
  [Aplicativo sqlservr](../../tools/sqlservr-application.md)  
   

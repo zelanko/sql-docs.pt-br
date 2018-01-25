@@ -17,15 +17,15 @@ helpviewer_keywords:
 - logical records [SQL Server replication]
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a73b246595630e1f0a35a977bc439dbc8829920
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: baebe314605badced365be3c30212e2f20262737
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Definir uma relação de registro lógico entre artigos da tabela de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como definir uma relação de registro lógico entre artigos de tabela de mesclagem no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o RMO (Replication Management Objects).  
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/17/2017
   
     -   Na página **Filtrar Linhas** do Assistente para Nova Publicação ou na caixa de diálogo **Propriedades da Publicação – \<Publicação>**, selecione um filtro no painel **Tabelas Filtradas** e, em seguida, clique em **Excluir**. Caso o próprio filtro excluído seja estendido por outras junções, essas junções também serão excluídas.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  É possível especificar relações de registro lógico de forma programática entre artigos que usem procedimentos armazenados de replicação.  
   
 #### <a name="to-define-a-logical-record-relationship-without-an-associated-join-filter"></a>Para definir uma relação de registro lógico sem filtro de junção associado  
@@ -176,7 +176,7 @@ ms.lasthandoff: 11/17/2017
   
     -   Nome da publicação para <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>.  
   
-    -   (Opcional) Se o artigo for filtrado horizontalmente, especifique a cláusula do filtro da linha para a propriedade <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> . Use essa propriedade para especificar um filtro de linha estático ou com parâmetros. Para obter mais informações, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+    -   (Opcional) Se o artigo for filtrado horizontalmente, especifique a cláusula do filtro da linha para a propriedade <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> . Use essa propriedade para especificar um filtro de linha estático ou com parâmetros. Para obter mais informações, consulte [Filtros de linha com parâmetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
      Para obter mais informações, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
@@ -207,7 +207,7 @@ ms.lasthandoff: 11/17/2017
   
  [!code-vb[HowTo#rmo_vb_CreateLogicalRecord](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createlogicalrecord)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Definir e modificar um filtro de linha parametrizado para um artigo de mesclagem](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Definir e modificar um filtro de linha estático](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   

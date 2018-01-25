@@ -15,12 +15,12 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 caps.latest.revision: "27"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 1b9a66523d0d56a8e357ef31ee29545ec2fea3c0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 58b90e91e05c20716faa72063090696f88af4076
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Fazer upgrade para outra edição do SQL Server (Instalação)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A instalação do 
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 > **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância de cluster de failover:** a execução do upgrade da edição em um de nós da instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é suficiente. Esse nó pode ser ativo ou passivo e o mecanismo não coloca os recursos offline durante o upgrade da edição. Após a atualização da edição, será necessário reiniciar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou executar o failover em um nó diferente.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 Para instalações locais, você deve executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura no compartilhamento remoto.  
   
 > [!IMPORTANT]  
@@ -82,7 +82,7 @@ Para instalações locais, você deve executar a Instalação como um administra
   
 -   Os bancos de dados modelo permanecem no computador após a atualização.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fazer upgrade do SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Compatibilidade com versões anteriores_excluída](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   

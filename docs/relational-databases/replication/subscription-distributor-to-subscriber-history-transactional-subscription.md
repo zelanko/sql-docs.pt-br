@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.subscription.disttosub.f1
 ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b916eccd05ff75d8809c6f3934af7db9b0eab242
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e975b4d43532fe7f9aa8219570c9e8869dab4805
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>Assinatura , Histórico do Distribuidor para o Assinante (assinatura transacional)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A guia **Histórico do Distribuidor para o Assinante** exibe informações detalhadas sobre o Agente de Distribuição, incluindo status, histórico, mensagens informativas e qualquer mensagem de erro.  
@@ -65,10 +65,10 @@ ms.lasthandoff: 11/17/2017
  **Detalhes ou mensagem de erro da sessão selecionada**  
  Exibido somente se a sessão selecionada exibir um valor de **Erro** na coluna **Status** . Essa área de texto exibe informações de erro detalhadas e o comando tentado no momento do erro. Também inclui links para conteúdo adicional relacionado ao erro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar o Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Exibir informações e realizar tarefas para os agentes associados a uma assinatura &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
  [Monitorando a Replicação](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Visão geral dos agentes de replicação](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

@@ -20,18 +20,18 @@ ms.assetid: e402f996-c1fb-484a-b804-45c49972f2e0
 caps.latest.revision: "25"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc4dcd3455fad661db47fd4935fb9d9c37fcd213
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f57bdb7b9ffdcd908d593a2c0ac0ad464bf03b3e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-availability-replica"></a>SQL Server, Réplica de Disponibilidade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto de desempenho **SQLServer:Availability Replica** contém contadores de desempenho que relatam informações sobre as réplicas de disponibilidade em grupos de disponibilidade Always On no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Todos os contadores de desempenho de réplica de disponibilidade aplicam-se às réplicas primária e secundárias, com contadores de envio/recebimento refletindo a réplica local. Para a maior parte, a réplica primária envia a maioria dos dados e as réplicas secundárias recebem os dados. Porém, as réplicas secundárias enviam ACKs e algum outro tráfego em segundo plano para as réplicas primárias. Observe que, em uma determinada réplica de disponibilidade, alguns contadores mostrarão um valor igual a zero, dependendo da função atual, primária ou secundária, da réplica local.  
   
-|Nome do contador|Descrição|  
+|Nome do contador|Description|  
 |------------------|-----------------|  
 |**Bytes Recebidos da Réplica/s**|O número de bytes recebidos da réplica de disponibilidade por segundo. Pings e atualizações de status gerarão tráfego de rede mesmo em bancos de dados sem atualizações de usuário.|  
 |**Bytes Enviados à Réplica/s**|O número de bytes enviados à réplica de disponibilidade remota por segundo. Na réplica primária, esse é o número de bytes enviados à réplica secundária. Na réplica secundária, esse é o número de bytes enviados à réplica primária.|  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 |**Envios à Réplica/s**|Número de mensagens AlwaysOn enviadas a essa réplica de disponibilidade por segundo.|  
 |**Envios ao Transporte/s**|O número real de mensagens AlwaysOn enviadas por segundo pela rede à réplica de disponibilidade remota. Na réplica primária, esse é o número de mensagens enviadas à réplica secundária. Na réplica secundária, esse é o número de mensagens enviadas à réplica primária.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Réplica de banco de dados](../../relational-databases/performance-monitor/sql-server-database-replica.md)   
  [Grupos de Disponibilidade AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  

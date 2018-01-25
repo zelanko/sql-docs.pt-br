@@ -28,15 +28,15 @@ helpviewer_keywords:
 - XML [SQL Server], SQL Server Native Client
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 10a39e672cee4bb1bdc9d4bad1f72a822a1287e6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 28958e5fe0b27f5ff7739a2d6f626d6916dc4bd5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-xml-data-in-applications"></a>Usar dados XML em aplicativos
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Este tópico descreve as opções disponíveis para trabalhar com o tipo de dados **xml** em seu aplicativo. O tópico contém informações sobre o seguinte:  
@@ -160,7 +160,7 @@ Row 2
   
  Para obter mais informações e um código de exemplo, confira “Valores XML como parâmetros de comando” na documentação do SDK do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dados XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

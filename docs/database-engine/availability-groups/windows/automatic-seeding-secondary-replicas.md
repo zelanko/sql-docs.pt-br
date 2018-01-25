@@ -18,12 +18,12 @@ ms.assetid:
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 2dc72a3874e9742b3bf73d0bdaf2b3d0e00f33c4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 86282a01e4c9027d9dc340d348a814f61c0f4b3b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Propagação automática para réplicas secundárias
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -249,7 +249,7 @@ GO
 
 A tabela a seguir lista os eventos estendidos relacionados à propagação automática.
 
-|Nome|Descrição|
+|Nome|Description|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|Mensagem de solicitação de propagação.|
 |hadr_physical_seeding_backup_state_change|Alteração de estado lateral de backup da propagação física.|

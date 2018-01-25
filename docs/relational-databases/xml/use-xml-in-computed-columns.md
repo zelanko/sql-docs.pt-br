@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML [SQL Server], computed columns
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 65a30335d23497b2af1d8a075d84873b565abe79
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 825a0a87683ec6913a6985804c6111af0543dc79
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-xml-in-computed-columns"></a>Usar XML em colunas computadas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Instâncias XML podem ser exibidas como uma origem de uma coluna computada ou como um tipo de coluna computada. Os exemplos neste tópico mostram como usar XML com colunas computadas.  
@@ -91,7 +91,7 @@ FROM T
   
 ### <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|Description|  
 |-----------|-----------------|  
 |[Promover valores XML frequentemente usados com colunas computadas](../../relational-databases/xml/promote-frequently-used-xml-values-with-computed-columns.md)|Descreve como usar promoção de propriedades com colunas computadas e tabelas de propriedades.|  
   

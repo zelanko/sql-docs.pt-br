@@ -20,15 +20,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], adding
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a201328c865edd9c6e644a9944c543d5f4fded09
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cf8776f00a46f96668d4a776073877cdec73dc32
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="define-an-article"></a>Defina um Artigo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como definir um artigo no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou RMO (Replication Management Objects).  
@@ -103,14 +103,14 @@ ms.lasthandoff: 11/17/2017
   
     -   Especifique um nome para a publicação.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
- Após a criação da publicação, artigos poderão ser criados de forma programática, usando os procedimentos armazenados da replicação. Os procedimentos armazenados usados para criar um artigo dependem do tipo de publicação para o qual o artigo é definido. Para obter mais informações, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+ Após a criação da publicação, artigos poderão ser criados de forma programática, usando os procedimentos armazenados da replicação. Os procedimentos armazenados usados para criar um artigo dependem do tipo de publicação para o qual o artigo é definido. Para obter mais informações, consulte [Criar uma assinatura](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>Para definir um artigo para um instantâneo ou publicação transacional  
   
 1.  No Publicador do banco de dados de publicação, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Especifique o nome da publicação à qual o artigo pertence para **@publication**; um nome para o artigo para **@article**; um objeto de banco de dados sendo publicado para **@source_object**, e qualquer outro parâmetro opcional. Use **@source_owner** para especificar a propriedade de esquema do objeto; do contrário, use **dbo**. Se o artigo não for um artigo de tabela baseado em log, especifique o tipo de artigo para **@type**; para obter mais informações, consulte [Especificar tipos de artigo &#40;Programação Transact-SQL de replicação&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md).  
   
-2.  Para filtrar linhas horizontalmente em uma tabela ou exibir um artigo, use [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) para definir a cláusula de filtro. Para obter mais informações, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
+2.  Para filtrar linhas horizontalmente em uma tabela ou exibir um artigo, use [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) para definir a cláusula de filtro. Para obter mais informações, consulte [Definir e modificar um filtro de linha estático](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
 3.  Para filtrar colunas verticalmente em uma tabela ou exibir um artigo, use [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md). Para obter mais informações, consulte [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
@@ -156,12 +156,12 @@ ms.lasthandoff: 11/17/2017
   
  [!code-vb[HowTo#rmo_vb_CreateMergeArticles](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergearticles)]  
   
-## <a name="see-also"></a>Consulte também  
- [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md)   
- [Conceitos dos procedimentos armazenados no sistema de replicação](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)   
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Adicionar e remover artigos de publicações existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [Filtrar os dados publicados](../../../relational-databases/replication/publish/filter-published-data.md)   
  [Publicar dados e objetos de banco de dados](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Conceitos dos procedimentos armazenados no sistema de replicação](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
   
   

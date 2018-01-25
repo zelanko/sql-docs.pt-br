@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: xsd:simpleType declarations
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4498afda2b296cf0b535244fcfa1ea90931dd578
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3fd1182ac6932e1ba85d2c23c41430912d6b0c9e
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>Valores para declarações &lt;xsd:simpleType&gt;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] A tabela a seguir descreve as restrições aplicadas com base em todas as enumerações de tipo simples XSD reconhecidas.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |**cadeia de caracteres**|Valores desse tipo devem estar de acordo com o formato do tipo **nvarchar(max)** do SQL.|  
 |**anyURI**|Valores deste tipo não podem ter mais que 4000 caracteres Unicode de comprimento.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Requisitos e limitações de uso de coleções de esquema XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

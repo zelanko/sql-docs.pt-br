@@ -19,15 +19,15 @@ helpviewer_keywords:
 - XML [SQL Server], system stored procedures
 ms.assetid: e60c7f85-6823-4d28-93d6-b053d08cc830
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0462ecc3003e2e6330957cb790f0c659273875f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3c1c1927af5850eaed93430ce47e45ef9eb71b24
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-system-stored-procedures"></a>Procedimentos armazenados do sistema XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] O SQL Server fornece os seguintes procedimentos armazenados do sistema que são usados junto com o OPENXML:  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
  A representação interna de um documento XML pode ser removida da memória chamando o procedimento armazenado do sistema **sp_xml_removedocument** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   
  [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)  
   

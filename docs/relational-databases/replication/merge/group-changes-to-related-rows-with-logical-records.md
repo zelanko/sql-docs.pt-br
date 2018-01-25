@@ -17,15 +17,15 @@ helpviewer_keywords:
 - logical records [SQL Server replication]
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 026199b68479b9219984123bcc5958b037474986
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d2ae5beed7a724e7baa9783e411f8b2f656e3f8a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Agrupar alterações a linhas relacionadas com registros lógicos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
   
     -   **text** e **ntext**  
   
-    -   **image**  
+    -   **imagem**  
   
     -   **XML**  
   
@@ -147,7 +147,7 @@ ms.lasthandoff: 11/17/2017
   
  Se registros lógicos forem usados, o Merge Agent deverá processar as alterações para cada registro lógico inteiro, de forma conjunta. Isto tem um efeito no tempo necessário para o Merge Agent replicar as linhas. Adicionalmente, como o agente abre uma transação separada para cada registro lógico, os requisitos de bloqueio podem aumentar.  
   
-## <a name="see-also"></a>Consulte também  
- [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Opções de artigos para a replicação de mesclagem](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
   
   

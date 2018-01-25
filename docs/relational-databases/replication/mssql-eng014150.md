@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: MSSQL_ENG014150 error
 ms.assetid: c3dd3109-abf3-4b38-a4e9-ef48d0235656
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9b676d523fb7ca60f1e8f1de742c117e3db02e8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f55abe74f8e2be5cd829eee53f9a22265f2e8772
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="mssqleng014150"></a>MSSQL_ENG014150
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="user-action"></a>Ação do usuário  
  O Log Reader Agent, o Queue Reader Agent e o Distribution Agent são, em geral, executados continuamente, diferente de outros agentes, que são, em geral, executados sob demanda ou de forma programada. Se você não esperar que um agente tenha concluído a sua execução, verifique o estado do agente. Para obter mais informações, consulte [Monitor Replication Agents](../../relational-databases/replication/monitor/monitor-replication-agents.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administração do agente de replicação](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Referência de erros e eventos &#40;Replicação&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [Agente de Distribuição de Replicação](../../relational-databases/replication/agents/replication-distribution-agent.md)   

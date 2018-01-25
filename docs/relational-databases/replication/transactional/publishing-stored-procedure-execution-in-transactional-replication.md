@@ -17,15 +17,15 @@ helpviewer_keywords:
 - transactional replication, publishing stored procedure execution
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 935ef9f319559ee9e021e9cedbb6150c7334d1f6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c55bc119e70be951807a9abd2ee37712d14aa46
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Publicando execução de procedimento armazenado em replicação transacional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Caso haja um ou mais procedimentos armazenados que sejam executados no Publicador e afetem as tabelas publicadas, considere excluir esses procedimentos armazenados na publicação como artigos de execução de procedimentos armazenados. A definição do procedimento (instrução CREATE PROCEDURE) será replicada para o Assinante quando a inscrição for inicializada. Quando o procedimento armazenado for executado no Publicador, a replicação executará o procedimento correspondente no Assinante. Isso pode fornecer um desempenho significativamente melhor nos casos em que são executadas grandes operações em lote, pois apenas a execução do procedimento é replicada, ignorando-se a necessidade de replicar as alterações individuais de cada linha. Por exemplo, supondo que o procedimento armazenado a seguir seja criado no banco de dados de publicação:  
@@ -99,7 +99,7 @@ COMMIT TRANSACTION T2
   
  Se a configuração de XACT_ABORT OFF for necessária, especifique o parâmetro **-SkipErrors** do Agente de Distribuição. Isto permitirá que o agente continue a aplicar alterações no Assinante, ainda que um erro seja encontrado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   

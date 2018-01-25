@@ -18,13 +18,13 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 caps.latest.revision: "39"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3c54a32f33bb5c74218f597c04451bd4d194a980
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3e4757ca79a259ac4d7ddbc554954d139828f0f9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Espelhamento e replicação de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O espelhamento do banco de dados pode ser usado junto com a replicação para aprimorar a disponibilidade ao banco de dados de publicação. O espelhamento do banco de dados compreende duas cópias de um único banco de dados que geralmente reside em computadores diferentes. Em determinado momento, apenas uma cópia do banco de dados está atualmente disponível aos clientes. Essa cópia é conhecida como o banco de dados principal. As atualizações realizadas pelos clientes no banco de dados principal são aplicadas à outra cópia do banco de dados, conhecida como banco de dados espelho. O espelhamento envolve a aplicação do log de transações de cada inserção, atualização ou exclusão efetuada no banco de dados principal, para o banco de dados espelho.  
@@ -166,7 +166,7 @@ ms.lasthandoff: 11/20/2017
 |Modo de alto desempenho|Se o espelho estiver indisponível, o banco de dados principal estará em execução exposto (isto é, sem-espelho). Porém, o Log Reader Agent só replica as transações que estão intensificadas no espelho. Caso o serviço seja forçado e o servidor espelho assumir a função do principal, o Log Reader Agent funcionará no espelho e iniciará a seleção de novas transações.<br /><br /> Fique ciente de que a latência de replicação aumentará, se o espelho ficar atrás do principal.|  
 |Modo de segurança alta sem failover automático|Todas as transações confirmadas têm a garantia de serem intensificadas em disco, no servidor espelho. O Log Reader Agent só replica as transações que estão intensificadas no espelho. Se o espelho estiver indisponível, o principal proíbe qualquer atividade adicional no banco de dados; portanto, o Log Reader Agent não terá nenhuma transação a ser replicada.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos e tarefas de replicação](../../relational-databases/replication/replication-features-and-tasks.md)   
  [Replicação e envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)  
   

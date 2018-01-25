@@ -16,22 +16,22 @@ helpviewer_keywords:
 - data types [SQL Server], FOR XML clause
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 67e16ca8e87ddc1938697a0c468ce0b883ce4f67
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7ade1aafd3a1a164f7daf3c27aac99a7029b4f76
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>Suporte a FOR XML para vários tipos de dados SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Os tópicos desta seção descrevem o suporte a FOR XML para tipos de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|Description|  
 |-----------|-----------------|  
 |[Suporte a FOR XML para o tipo de dados xml](../../relational-databases/xml/for-xml-support-for-the-xml-data-type.md)|Descreve como o FOR XML funciona com o tipo de dados **xml** .|  
 |[Suporte a FOR XML para tipos de dados de cadeia de caracteres](../../relational-databases/xml/for-xml-support-for-string-data-types.md)|Descreve como o FOR XML funciona com tipos de dados de cadeia de caracteres como **varchar** e **nvarchar**.|  

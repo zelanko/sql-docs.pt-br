@@ -16,15 +16,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 204c9ecf128f9aea3b520a63f4d001c09e9e9b19
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 71657218912add2fd3b44297e0a4b82cb7b655a5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Criar variáveis e colunas de tipo de dados XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] O tipo de dados **xml** é interno no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e tem algumas semelhanças com outros tipos internos, como **int** e **varchar**. Assim como ocorre com outros tipos internos, é possível usar o tipo de dados **xml** como um tipo de coluna quando você cria uma tabela como um tipo variável, um tipo de parâmetro, um tipo de retorno de função, ou em [CAST e CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md).  

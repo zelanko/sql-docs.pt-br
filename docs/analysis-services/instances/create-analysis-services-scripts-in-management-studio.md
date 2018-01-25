@@ -21,14 +21,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e424279e5136d8334d37de754f5e3b5a087296b8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 62c23859b14e9c9fc3e4663a0ec813c8dca25ff1
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Criar scripts do Analysis Services no Management Studio
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] inclui recursos de geração de script, modelos e editores que você pode usar para criar o script de tarefas e objetos do Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  O [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] inclui recursos de geração de script, modelos e editores que você pode usar para gerar scripts de objetos e tarefas do Analysis Services.  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>Gerar scripts de tarefas do Analysis Services no Management Studio  
  Para gerar scripts de tarefas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , é preciso clicar em uma das opções de Script em uma caixa de diálogo orientada por tarefas. Todas as caixas de diálogo usadas para executar tarefas, como fazer backup ou restaurar banco de dados, processar um objeto ou criar uma agregação, incluem uma opção de Script na parte superior da caixa de diálogo. Selecionar um dessas opções gera um script XMLA baseado nas informações e configurações da caixa de diálogo.  
@@ -70,7 +72,7 @@ ms.lasthandoff: 01/08/2018
     > [!NOTE]  
     >  Normalmente, você selecionaria **Arquivo** se quisesse criar várias versões diferentes do arquivo.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Editor de consultas XMLA &#40; Analysis Services - dados multidimensionais &#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
   
   

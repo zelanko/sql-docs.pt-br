@@ -17,15 +17,15 @@ helpviewer_keywords:
 - administering replication, publications
 ms.assetid: d5bf7340-2b0b-4593-965c-de04ae628344
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53e7f5b47fbe23aa1604c3e37ea2a03866622463
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7b142d0cc01a48871c48f4298ec742a9b980b11a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintain-publications"></a>Manter publicações
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Depois de criar uma publicação, poderá ser necessário adicionar ou remover artigos, ou alterar as propriedades da publicação e do artigo. A maioria das alterações é permitida após a criação de uma publicação, mas em alguns casos, é necessário gerar um novo instantâneo para a publicação e/ou reinicializar as assinaturas para uma publicação.

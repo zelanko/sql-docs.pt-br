@@ -18,15 +18,15 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: e298dea0-b5ef-4907-a745-cfad9793653f
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0078d10e26fab9155aea608e623712a982eee8cb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e77a1e179e6f7d442a24789ac35e9762f4c0460f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-interactive-conflict-resolution-for-merge-articles"></a>Especificar a resolução interativa de conflitos para artigos de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como especificar a resolução de conflitos interativa para artigos de mesclagem no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  É possível especificar de forma programada se um Assinante usará essa interface gráfica para resolver conflitos de artigos quando uma assinatura pull para uma publicação de mesclagem é criada. Só conflitos em artigos que têm suporte para esta opção serão exibidos no Resolvedor Interativo.  
   
 #### <a name="to-create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>Para criar uma assinatura pull de mesclagem que usa o Resolvedor Interativo  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
   
     -   Se este valor for **0**, você deverá primeiro habilitar o Resolvedor Interativo de cada artigo. Para tanto, execute o [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), especificando **@publication**, **@article**, um valor de **allow_interactive_resolver** para **@property**, e um valor de **true** para **@value**.  
   
-2.  No Assinante, no banco de dados de assinatura, execute o [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Para obter mais informações, confira [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).  
+2.  No Assinante, no banco de dados de assinatura, execute o [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Para obter mais informações, consulte [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
 3.  No Publicador do banco de dados de assinatura, execute o [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md), especificando os seguintes parâmetros:  
   
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  No Publicador do banco de dados de publicação, execute o [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Especifique o nome da publicação à qual o artigo pertence, para **@publication**; um nome para o artigo para **@article**, um objeto de banco de dados sendo publicado para **@source_object**, e um valor de **true** para **@allow_interactive_resolver**. Para obter mais informações, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir e resolver conflitos de dados em publicações de mesclagem &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   

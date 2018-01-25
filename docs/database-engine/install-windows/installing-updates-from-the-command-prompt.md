@@ -15,12 +15,12 @@ ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: c04481fbe3cb71606509483e542747140b565ca8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: cbbd9d7008457009925f20a74fd2a80866bc6419
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>Instalando atualizações no prompt de comando
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Teste e modifique os scripts de instalação para atender às necessidades da sua organização. 
@@ -33,7 +33,7 @@ O nome do pacote de atualização pode variar e incluir um componente de process
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance
     ```
-    ou 
+    ou em 
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<Instance ID>. 
     ```
@@ -76,7 +76,7 @@ O nome do pacote de atualização pode variar e incluir um componente de process
 > [!IMPORTANT] 
 > Quando possível, forneça credenciais de segurança em tempo de execução. Se você precisar armazenar credenciais em um arquivo de script, proteja o arquivo para evitar acesso não autorizado. 
  
-|Opção|Descrição| 
+|Opção|Description| 
 |------------|-----------------| 
 |**/?**|Exibe a ajuda do prompt de comando da instalação autônoma| 
 |**/action=Patch ou /action=RemovePatch**|Especifica a ação da instalação: Patch ou RemovePatch.| 

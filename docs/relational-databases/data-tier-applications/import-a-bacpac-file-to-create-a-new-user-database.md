@@ -29,15 +29,15 @@ helpviewer_keywords:
 - DAC
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b105471806865b78a07c5478f08d7a1bf6cf49f6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d92da3c51843ee10b0c781bb400109abf04fefab
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar um arquivo BACPAC para criar um novo banco de dados de usuário
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Importar um arquivo DAC (aplicativo da camada de dados) – um arquivo .bacpac – para criar uma cópia do banco de dados original, com os dados, em uma nova instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou então para [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. As operações de importação-exportação podem ser combinadas para migrar um DAC ou banco de dados entre instâncias ou para criar um backup lógico, como criar uma cópia no local de um banco de dados implantado no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições  
  Um DAC pode ser importado para o [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que executa o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior. Se você exportar um DAC de uma versão superior, o DAC poderá conter objetos sem suporte do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Você não pode implantar esses DACs nas instâncias do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Recomendamos que você não importe um arquivo de exportação do DAC de fontes desconhecidas ou não confiáveis. Esses arquivos podem conter código mal-intencionado que possivelmente executarão códigos Transact-SQL inesperados ou provocarão erros ao modificar o esquema. Antes de usar um arquivo de exportação de uma fonte desconhecida ou não confiável, desempacote o DAC e examine o código, como procedimentos armazenados e outro código definido pelo usuário. Para obter mais informações sobre como executar essas verificações, consulte [Validar um pacote de DAC](https://msdn.microsoft.com/library/ee633948(SQL.130).aspx).  
   
 ## <a name="security"></a>Segurança  
@@ -148,9 +148,9 @@ ms.lasthandoff: 11/17/2017
   
  Clique em **Fechar** para fechar o assistente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Importar um arquivo BACPAC para criar um novo banco de dados SQL do Azure](https://azure.microsoft.com/en-us/documentation/articles/sql-database-import/)  
- [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [Aplicativos da Camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Exportar um aplicativo da camada de dados](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
   
   

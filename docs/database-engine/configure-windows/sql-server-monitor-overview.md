@@ -15,15 +15,15 @@ f1_keywords: sql13.swb.sqlservermonitor.main.f1
 helpviewer_keywords: SQL Server Monitor [SQL Server]
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c14f4123656819308d0dd8e6b197e880f5dc9f37
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7799381dbbcaf57dd0d02d01bc4c27a5c21f624c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-monitor-overview"></a>Visão geral do SQL Server Monitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O SQL Server Monitor não realiza funções de monitoramento, mas hospeda módulos que as realizam. Os módulos do SQL Server Monitor incluem o Replication Monitor e o Monitor de Espelhamento de Banco de Dados.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/20/2017
   
  As opções de menu a seguir pertencem ao SQL Server Monitor.  
   
- **Arquivo**  
+ **File**  
  Esse menu contém o comando **Sair** .  
   
  **Ação**  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/20/2017
  **Ir**  
  Contém uma lista de componentes de monitoramento:  
   
--   Espelhamento de Banco de Dados  
+-   Espelhamento de banco de dados  
   
 -   Replicação  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Iniciar o Monitor de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   
   

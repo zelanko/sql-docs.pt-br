@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: tables [XML]
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1773816e8d536415d83a09afc0995f46ceb0b17a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6ad32b6c56b01be8b31d6be358faf158248b3fa4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>Converter colunas existentes em colunas XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] A instrução ALTER TABLE dá suporte ao tipo de dados **xml**. Por exemplo, é possível alterar qualquer coluna de tipo cadeia de caracteres para o tipo de dados **xml** . Observe que nesses casos os documentos contidos na coluna devem estar bem formados. Além disso, se você estiver alterando o tipo da coluna de cadeia de caracteres para xml com tipo, os documentos da coluna serão validados em relação aos esquemas XSD especificados.  

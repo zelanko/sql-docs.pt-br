@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Database Engine Tuning Advisor, Query Store
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4184dc4785b7d53d32c64069d53aef8c6a1e2fa1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8d43a90f7c4bebef8bb9753dd02b29b46a2f30b8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Ajustando o banco de dados usando a carga de trabalho do repositório de consulta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ Consulte [Utilitário dta](../../tools/dta/dta-utility.md) para obter mais infor
 --- 
 A diferença entre as opções de Repositório de Consultas e de Cache de Planos é que o primeiro contém um histórico maior de consultas que foram executadas no banco de dados, persistidas entre as reinicializações do servidor. Por outro lado, o Cache de Planos contém apenas um subconjunto de consultas recém-executadas cujos planos são armazenados em cache na memória. Quando o servidor for reiniciado, as entradas no Cache de Planos serão descartadas.
 
-<a name="see-also"></a>Consulte também 
+<a name="see-also"></a>Consulte Também 
 --- 
 [Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md)     
 [Tutorial: Orientador de Otimização do Mecanismo de Banco de Dados](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)     

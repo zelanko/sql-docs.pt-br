@@ -16,13 +16,13 @@ ms.assetid: 010a4cab-d878-4889-8ac8-7d91db6345d6
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c82dade335a85425ea3bcee535dd10a6b6ad1be
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c6395efb0dfcb041e9ae47329d348c617df499e4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="target-servers-target-server-status-tab"></a>Servidores de Destino (Guia do Status do Servidor de Destino)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use essa página para exibir o status dos servidores de destino para esse servidor mestre.  

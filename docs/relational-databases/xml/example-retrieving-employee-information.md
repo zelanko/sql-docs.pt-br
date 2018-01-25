@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c818d77760101fd289deb97d519b61c565adf9ac
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 069bf210891435de0cdd60e5c715ebbdd16ecc19
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="example-retrieving-employee-information"></a>Exemplo: Recuperando informações de funcionários
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Este exemplo recupera uma ID e um nome de funcionário para cada funcionário. No banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , a employeeID pode ser obtida na coluna BusinessEntityID da tabela Employee. Nomes de funcionários podem ser obtidos da tabela Person. A coluna BusinessEntityID pode ser usada para unir as tabelas.  
@@ -134,7 +134,7 @@ FOR XML EXPLICIT;
   
  Esse processo é repetido para o restante das linhas do conjunto de linhas. Observe a importância de ordenar as linhas na tabela universal de forma que FOR XML EXPLICIT possa processar o conjunto de linhas em ordem e gerar o XML desejado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar o modo EXPLICIT com FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

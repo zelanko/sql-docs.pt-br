@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 caps.latest.revision: "8"
-author: MightyPen
-ms.author: genemi
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb251e8c5305d6ee4acc8cfaff61ee1f9d01864f
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4b1f6ccfb9fdcf2fa3022864159fb87e589844df
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurar opções avançadas de backup gerenciado do SQL Server para o Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O tutorial a seguir descreve como definir opções avançadas para o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Esses procedimentos só serão necessários se você precisar dos recursos que oferecem. Caso contrário, você pode habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] e depender do comportamento padrão.  

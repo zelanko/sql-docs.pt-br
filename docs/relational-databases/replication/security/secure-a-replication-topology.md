@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: replication [SQL Server], security
 ms.assetid: d7292121-1c8e-4b8e-ac44-8eea36ae27fe
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7e832901034529888457e021d753e0c3fb2e11a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2f5883fe3b649b2ad21deb3e9fde14c153df5416
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secure-a-replication-topology"></a>Proteger uma topologia de replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Contas de segurança, logons e senhas necessárias à replicação são fornecidas quando a replicação é configurada e quando as publicações e as assinaturas são criadas. Essas configurações de segurança podem ser alteradas depois usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], procedimentos armazenados de replicação e RMO (Replication Management Objects). Os tópicos a seguir descrevem como modificar as configurações de segurança da replicação.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Replicar dados em colunas criptografadas &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/security/replicate-data-in-encrypted-columns-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Segurança e proteção &#40;Replicação&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
  [Gerenciar logons e senhas na replicação](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)  
   

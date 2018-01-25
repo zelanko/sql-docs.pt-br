@@ -19,12 +19,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 caps.latest.revision: "62"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 49b515f9a46e0d6196762181f19500d2d06e4b33
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 02c161b78ee291d30cfad1861138743369cba037
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrade-database-engine"></a>Atualizar o Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Os tópicos nesta seção ajudarão você a atualizar o mecanismo de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para a versão [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

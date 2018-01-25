@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: replication [SQL Server], tutorials
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71c17f687aa2cd8fb83dba65c91d4b049f19e220
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 445e2016c22123ecce9e12ded3688fddec63ba38
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tutorial-replicating-data-with-mobile-clients"></a>Tutorial: Replicando dados com clientes móveis
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A replicação é uma boa solução para o problema de mover dados entre um servidor central e clientes móveis que são conectados apenas ocasionalmente. Usando os assistentes de replicação, você pode configurar e administrar uma topologia de replicação facilmente. Este tutorial mostra como você deve configurar uma topologia de replicação para clientes móveis.  
@@ -62,7 +62,7 @@ Para que você possa usar esse tutorial, os seguintes componentes devem estar in
   
 [Inicie o tutorial](../../relational-databases/replication/lesson-1-publishing-data-using-merge-replication.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Conceitos de programação de replicação](../../relational-databases/replication/concepts/replication-programming-concepts.md)  
   
   

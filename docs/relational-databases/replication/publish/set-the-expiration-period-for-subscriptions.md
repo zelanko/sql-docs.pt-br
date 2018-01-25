@@ -18,15 +18,15 @@ helpviewer_keywords:
 - deactivating subscriptions
 ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 993e134191a48522e84b7fc123e9e8fa56c27d8d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3730f50066325ca6c27d4b194c97a607ba432d05
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>Definir o período de validade da assinatura
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como definir o período de validade para assinaturas no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. O período de validade das assinaturas determina o período de tempo antes de uma assinatura expirar e ser removida. Para obter mais informações, consulte [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Caso devam vencer, especifique um período de tempo para o vencimento.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Você pode usar os procedimentos armazenados de replicação para definir este valor quando uma publicação é criada ou para modificar este valor posteriormente.  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Para definir o período de validade de uma assinatura de um instantâneo ou publicação transacional  
@@ -103,8 +103,8 @@ ms.lasthandoff: 11/17/2017
   
 3.  (Opcional) No Editor, execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Especifique a **retention_period_unit** para **@property** e uma nova unidade para o período de validade da assinatura para **@value**.  
   
-## <a name="see-also"></a>Consulte também  
- [Conceitos dos procedimentos armazenados no sistema de replicação](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
   

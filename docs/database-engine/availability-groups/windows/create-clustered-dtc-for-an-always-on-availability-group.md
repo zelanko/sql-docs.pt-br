@@ -15,13 +15,13 @@ ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 caps.latest.revision: "2"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76913433e0cfe08d316c668a79d452959ebbee3b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a6d456f5197522bdd9f936f468645f1cbd9bc377
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Criar DTC clusterizado para um Grupo de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve uma configuração completa de um recurso DTC clusterizado para o Grupo de Disponibilidade Always On do SQL Server. A configuração completa pode levar até uma hora para ser concluída. 

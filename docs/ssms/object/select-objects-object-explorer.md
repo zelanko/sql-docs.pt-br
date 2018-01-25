@@ -16,13 +16,13 @@ ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27a9e701bc4dede53db94d2f9ab3260e3d305d81
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0d0caa751a54dba0f3e6d36f1d757d440c24d3ec
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="select-objects-object-explorer"></a>Selecionar objetos (Pesquisador de Objetos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use a caixa de diálogo **Selecionar Objetos** para adicionar um objeto a uma lista em outra caixa de diálogo. O título da caixa de diálogo e as opções disponíveis na caixa de diálogo dependem de como foram abertos. Aparecerão somente opções disponíveis; por exemplo, só estão disponíveis logons quando você está selecionando um proprietário para um objeto novo.  

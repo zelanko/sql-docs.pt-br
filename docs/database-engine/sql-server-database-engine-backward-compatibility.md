@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Database Engine [SQL Server], backward compatibility
 ms.assetid: 10de5ec6-d3cf-42ef-aa62-1bdf3fbde841
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b457c021a4692a2e29becf690b684215f860c77d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 86369f3a423be60c73ed2024e1490e7de9c97c30
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-database-engine-backward-compatibility"></a>Compatibilidade com versões anteriores do Mecanismo de Banco de Dados do SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] Os tópicos da seção de compatibilidade com versões anteriores descrevem alterações no comportamento entre versões do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

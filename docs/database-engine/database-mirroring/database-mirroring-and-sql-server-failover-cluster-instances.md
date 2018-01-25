@@ -19,13 +19,13 @@ ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 caps.latest.revision: "42"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4a180fe2ed117c92207a768745dd86a99fd39661
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e1ae46bb5ff40113cb61d27882c86f84c87ef546
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Espelhamento de banco de dados e instâncias de cluster de failover do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Um cluster de failover é uma combinação de um ou mais discos físicos em um grupo de clusters do MSCS ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Service), conhecido como um grupo de recursos, que são nós participantes do cluster. O grupo de recursos é configurado como uma instância clusterizada de failover que hospeda uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Uma instância clusterizada de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aparece na rede como se fosse um único computador, mas tem funções que fornecerão failover de um nó para outro se um nó se tornar disponível. Para obter mais informações, consulte [Instâncias do cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
@@ -69,9 +69,9 @@ ms.lasthandoff: 11/20/2017
   
 -   [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Modos de operação de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
- [Instâncias do cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
+ [Instâncias do cluster de failover AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
   

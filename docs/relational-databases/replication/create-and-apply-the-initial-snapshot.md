@@ -16,18 +16,18 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], initial snapshots
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d9be4d647441a82413c908a5207adec8efdf3e4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 982f9d9f347e664e72363d13c6e10fa016162d59
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Criar e aplicar o instantâneo inicial
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como criar e aplicar o instantâneo inicial no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)] ou o RMO (Replication Management Objects). Publicações de mesclagem que usam filtros com parâmetros exigem um instantâneo de duas partes. Para obter mais informações, consulte [Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como criar e aplicar o instantâneo inicial no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)] ou o RMO (Replication Management Objects). Publicações de mesclagem que usam filtros com parâmetros exigem um instantâneo de duas partes. Para obter mais informações, consulte [Create a Snapshot for a Merge Publication with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
  **Neste tópico**  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
   
      Para obter mais informações sobre assinaturas de sincronização, consulte [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md) e [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Instantâneos iniciais podem ser criados de forma programada criando e executando um trabalho do Agente de Instantâneo ou executando o arquivo executável do Agente de Instantâneo de um arquivo em lote. Depois da geração de um instantâneo inicial, ele é transferido para e aplicado no Assinante quando a assinatura é sincronizada pela primeira vez. Se o Agente de Instantâneo for executado de um prompt de comando ou um arquivo em lote, será preciso executar novamente o agente sempre que o instantâneo existente se tornar inválido.  
   
 > [!IMPORTANT]  
@@ -248,15 +248,15 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
  [!code-vb[HowTo#rmo_vb_GenerateSnapshot_WithJob](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_generatesnapshot_withjob)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [Criar uma assinatura pull](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)   
  [Criar e aplicar o instantâneo](../../relational-databases/replication/create-and-apply-the-snapshot.md)   
  [Inicializar uma assinatura com um instantâneo](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
- [Melhores práticas de segurança da replicação](../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Usar sqlcmd com variáveis de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
   

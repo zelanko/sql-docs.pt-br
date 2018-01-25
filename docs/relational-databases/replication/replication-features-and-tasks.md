@@ -17,15 +17,15 @@ helpviewer_keywords:
 - replication [SQL Server], interoperability
 ms.assetid: 47c613e4-7fe9-462a-89b4-659b14825b70
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fff6d14c8303b4f627492c258177331f8d7db2a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5a1b9183f8a9cf1c60bd399baf43825c4a3949f6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-features-and-tasks"></a>Recursos e tarefas de replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Encontra informações que qualquer profissional (designer, desenvolvedor, analista ou administrador) precisa para projetar e implementar soluções de replicação.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
 ##  <a name="Interoperability"></a> Interoperabilidade de replicação e recursos de alta disponibilidade  
   
--   [Configurar a replicação para grupos de disponibilidade Sempre Ativo &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
+-   [Configurar a replicação para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
   
 -   [Mantendo um banco de dados de publicação AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Espelhamento e replicação de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Replicação do SQL Server](../../relational-databases/replication/sql-server-replication.md)   
  [Referência técnica &#40;Replicação&#41;](../../relational-databases/replication/technical-reference-replication.md)  
   

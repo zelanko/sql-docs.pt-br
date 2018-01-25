@@ -16,18 +16,18 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 caps.latest.revision: "40"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 406ae798a766e1eb22c51e8c34da1661acd71627
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 63b740d38d52feb7e29b724560c0d6f29023057b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrade-sql-server"></a>Atualizar o SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você pode fazer upgrade de instâncias do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou [!INCLUDE[ss2016](../../includes/sssql15-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Antes de executar a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atualizar para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], revise os tópicos a seguir sobre o processo de atualização e as notas da versão.  
   
    - Para saber mais sobre a atualização do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], veja [Você está atualizando do SQL Server 2005?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md).  
-   - [Notas de Versão do SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md) 
+   - [Notas de Versão do SQL Server 2016.](../../sql-server/sql-server-2016-release-notes.md) 
    - [Notas de Versão do SQL Server 2017.](../../sql-server/sql-server-2017-release-notes.md) 
   
 ## <a name="in-this-section"></a>Nesta seção  
@@ -48,7 +48,7 @@ Esta seção contém os seguintes tópicos:
 -   [Fazer upgrade do SQL Server usando o Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
 -   [Fazer upgrade para outra edição do SQL Server &#40;Instalação&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atualizar o Mecanismo de Banco de Dados](../../database-engine/install-windows/upgrade-database-engine.md)   
  [Atualizar o Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)   
  [Atualizar e migrar o Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   

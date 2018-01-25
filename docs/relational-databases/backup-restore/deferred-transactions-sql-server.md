@@ -18,15 +18,15 @@ helpviewer_keywords:
 - modifying transaction deferred state
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ac062d5ba0e12162aa6872f57e90780b1d7c4d0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 990768fa64b5da13d633c28ae64a0ab0c95e78b7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="deferred-transactions-sql-server"></a>Transações adiadas (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise, uma transação corrompida poderá ser adiada se os dados necessários na reversão (desfazer) estiverem offline durante a inicialização do banco de dados. Uma *transação adiada* é uma transação que não está confirmada no término da fase de roll forward e que encontrou um erro que impede a reversão. Como a transação não pode ser revertida, é adiada.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |Ação|Resolução (se ocorrerem problemas de E/S ou se os dados exigidos estiverem offline)|  
 |------------|-----------------------------------------------------------------------|  
 |Inicialização do servidor|transação adiada|  
-|Restaurar|transação adiada|  
+|Restaurar|Transações adiadas|  
 |Anexar|Falha ao anexar|  
 |Reinicialização automática|transação adiada|  
 |Criar banco de dados ou instantâneo do banco de dados|Falha ao criar|  
@@ -94,7 +94,7 @@ ms.lasthandoff: 11/17/2017
   
          Quando a DBCC encontra a página corrompida, anula sua alocação e repara qualquer erro relacionado. Essa abordagem permite que o banco de dados seja colocado novamente online, em um estado fisicamente consistente. Porém, dados adicionais também podem ser perdidos; portanto essa abordagem deve ser usada como último recurso.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral de restauração e recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Remover grupos de arquivos expirados &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)   
  [Restaurações de arquivo &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   

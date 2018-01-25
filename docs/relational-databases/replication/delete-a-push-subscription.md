@@ -18,15 +18,15 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], push
 ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a1e4f6f5ba879008c9a390846b35a829d62c687
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3b551fe093df2bbb838b63f54a013b670f054eae
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="delete-a-push-subscription"></a>Excluir uma assinatura push
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como excluir uma assinatura push no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] ou RMO (Replication Management Objects).  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Na caixa de diálogo de confirmação, selecione se deseja se conectar ao Publicador para excluir as informações de assinatura. Se você desmarcar a caixa de seleção **Conectar-se ao Publicador** , será necessário se conectar ao Publicador posteriormente para excluir as informações.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  As assinaturas push podem ser excluídas programaticamente, usando procedimentos armazenados de replicação. Os procedimentos armazenados usados dependem do tipo de publicação ao qual a assinatura pertence.  
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Para excluir uma assinatura push de um instantâneo ou publicação transacional  
@@ -128,7 +128,7 @@ ms.lasthandoff: 11/17/2017
   
  [!code-vb[HowTo#rmo_vb_DropTranPushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_droptranpushsub)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Assinar Publicações](../../relational-databases/replication/subscribe-to-publications.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   

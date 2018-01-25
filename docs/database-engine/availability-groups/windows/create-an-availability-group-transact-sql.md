@@ -16,13 +16,13 @@ ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 caps.latest.revision: "52"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 446a47fcf08111ba390f17c1a2844b639a4678f9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3f35c284eea57bff3eb97a85575f08d8663aee51
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-an-availability-group-transact-sql"></a>Criar um grupo de disponibilidade (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] para criar e configurar um grupo de disponibilidade em instâncias de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] nas quais o recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] está habilitado. Um *grupo de disponibilidade* define um conjunto de bancos de dados de usuários que realizará o failover como uma única unidade e um conjunto de parceiros de failover, conhecido como *réplicas de disponibilidade*, que oferece suporte a failover.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="PrerequisitesRestrictions"></a> Pré-requisitos, restrições e recomendações  
   
--   Antes de criar um grupo de disponibilidade, verifique se as instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedam réplicas de disponibilidade residem em um nó diferente do WSFC (Windows Server Failover Clustering), dentro do mesmo cluster de failover do WSFC. Também verifique se cada instância de servidor atende todos os outros pré-requisitos de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Para obter mais informações, é altamente recomendável que você leia [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+-   Antes de criar um grupo de disponibilidade, verifique se as instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedam réplicas de disponibilidade residem em um nó diferente do WSFC (Windows Server Failover Clustering), dentro do mesmo cluster de failover do WSFC. Também verifique se cada instância de servidor atende todos os outros pré-requisitos de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Para obter mais informações, é altamente recomendável que você leia [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -315,7 +315,7 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="CompleteCodeExample"></a> Concluir o exemplo de código para procedimento de configuração de exemplo  
  O exemplo a seguir mescla os exemplos de código de todas as etapas do procedimento de configuração de exemplo. A tabela a seguir resumiu os valores de espaço reservado usados neste exemplo de código. Para obter mais informações sobre as etapas deste exemplo de código, consulte [Pré-requisitos para usar o procedimento de configuração de exemplo](#PrerequisitesForExample) e [Procedimento de configuração de exemplo](#SampleProcedure), anteriormente neste tópico.  
   
-|Espaço reservado|Descrição|  
+|Espaço reservado|Description|  
 |-----------------|-----------------|  
 |\\\\*FILESERVER*\\*SQLbackups*|Compartilhamento de backup ficcional.|  
 |\\\\*FILESERVER*\\*SQLbackups\MyDb1.bak*|Arquivo de backup de MyDb1.|  
@@ -551,7 +551,7 @@ GO
   
      [White papers da equipe de consultoria do cliente do SQL Server](http://sqlcat.com/)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   

@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.replicationutilities.administrativepassword.f1
 ms.assetid: d43bebc8-e83a-457a-b7f4-a61a735f1904
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e197fb3bcaee9bba96de0dc6dd6519a01e5a13b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 245f9a2a668bfadb293c27bcd9f4ca5eb170c4fb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="administrative-password"></a>Senha Administrativa
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Se na página **Distribuidores** deste assistente você selecionou um Distribuidor remoto para esse Publicador, terá de inserir uma senha para a conexão que a replicação faz entre o Publicador e o Distribuidor, usando o logon **distributor_admin**. A senha deve corresponder à senha especificada na página **Senha do Distribuidor** do Assistente para Configurar Distribuição ou da página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor** .  
@@ -34,10 +34,10 @@ ms.lasthandoff: 11/17/2017
  **Confirmar Senha**  
  Reinsira a senha para confirmar que ela foi inserida corretamente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Configurar a publicação e a distribuição](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Criar uma publicação](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Exibir e modificar propriedades de Publicador e Distribuidor](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [Exibir e modificar propriedades de Publicador e Distribuidor](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)  
   

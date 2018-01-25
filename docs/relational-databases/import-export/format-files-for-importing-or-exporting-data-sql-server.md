@@ -17,15 +17,15 @@ helpviewer_keywords:
 - format files [SQL Server]
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7c37783bc1baedf61b61553ad46066b0730b2f18
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dbc0e4d2b87b277479796aa99235dc1f47921db6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>Arquivos de formato para importação ou exportação de dados (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Na importação de dados em massa para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou na exportação em massa de dados de uma tabela, você pode usar um *arquivo de formato* para armazenar todas as informações necessárias para exportar ou importar dados em massa. Isso inclui informações de formato para cada campo em um arquivo de dados relativo para essa tabela.  
@@ -129,7 +129,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 -   [Usar um arquivo de formato para mapear colunas de uma tabela para campos de arquivo de dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Arquivos de formato não XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   
  [Arquivos de formato XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)   
  [Formatos de dados para importação ou exportação em massa &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)  

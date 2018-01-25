@@ -1,7 +1,7 @@
 ---
 title: "Propriedades de memória | Microsoft Docs"
 ms.custom: 
-ms.date: 11/17/2016
+ms.date: 01/23/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -30,18 +30,20 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8aa2f5f5c3e39680a9b0fe41e1b92443db4c8509
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 15e0fc6fa123fd4d9ca71f35804d2f06d0342b5a
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="memory-properties"></a>Propriedades de memória
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] preallocates uma pequena quantidade de memória no início do backup para que as solicitações podem ser controladas imediatamente. Mais memória é alocada como consulta e as cargas de trabalho de processamento aumentam. 
   
   Ao especificar definições de configuração, você pode controlar os limites nos quais a memória é liberada. Por exemplo, a configuração **HardMemoryLimit** especifica uma condição de falta de memória imposta automaticamente (por padrão, esse limite não é habilitado), em que novas solicitações são rejeitadas totalmente até que mais recursos estejam disponíveis.
+
+Para saber mais sobre memória máxima utilizada por instância do Analysis Services por edição, consulte [edições e os recursos com suporte do SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits).
   
- **Aplica-se a:** modo de servidor multidimensional e de tabela, a menos que especificado o contrário.  
+ As configurações a seguir se aplicam a ambos os modo de servidor multidimensional e tabular, a menos que indicado em contrário.  
  
 ## <a name="default-memory-configuration"></a>Configuração de memória padrão
 
@@ -143,8 +145,6 @@ Quando definido como 1, o processamento apresenta menor probabilidade de falhar 
  **WaitCountIfHighMemory**  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Propriedades do servidor no Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Determina o Modo de Servidor de uma instância do Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
-  [Guia de Operações do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)
-  

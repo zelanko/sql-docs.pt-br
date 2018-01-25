@@ -17,15 +17,15 @@ helpviewer_keywords:
 - viewing database snapshots
 ms.assetid: 123f19b2-0850-4033-8507-59ebdfb368ee
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 03c9b9bac4bc4ec50aad8f64099bcbf5a60710e4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 67296406f14351c16800a50ff1f5d74d05e362f9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-a-database-snapshot-sql-server"></a>Exibir um instantâneo de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico explica como exibir um instantâneo do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Expanda o **Instantâneo do Banco de Dados**e selecione o instantâneo que você quer exibir.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para exibir um instantâneo do banco de dados**  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Remover um instantâneo do banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instantâneos de banco de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   

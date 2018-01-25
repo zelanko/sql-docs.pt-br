@@ -17,15 +17,15 @@ helpviewer_keywords:
 - filters [SQL Server replication], parameterized
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6f2cbe04cf18cb3b649993c1349645900a56aa8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba5139f4e42806e2cee949a626acf75a9e3de181
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como criar um instantâneo para uma publicação de mesclagem com filtros parametrizados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)] ou o RMO (Replication Management Objects).  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   Ao gerar um instantâneo para uma publicação de mesclagem usando filtros com parâmetros, você deve, primeiro, gerar um instantâneo padrão (esquema), que contenha todos os dados publicados e os metadados do Assinante para a assinatura. Para obter mais informações, consulte [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md). Após ter criado um instantâneo de esquema, você poderá gerar o instantâneo que contém a partição Assinante específica dos dados publicados.  
+-   Ao gerar um instantâneo para uma publicação de mesclagem usando filtros com parâmetros, você deve, primeiro, gerar um instantâneo padrão (esquema), que contenha todos os dados publicados e os metadados do Assinante para a assinatura. Para obter mais informações, consulte [Criar e aplicar o instantâneo inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md). Após ter criado um instantâneo de esquema, você poderá gerar o instantâneo que contém a partição Assinante específica dos dados publicados.  
   
 -   Se a filtragem para um ou mais artigos da publicação gerar partições não sobrepostas, exclusivas de cada assinatura, os metadados serão limpos sempre que o Agente de Mesclagem for executado. Isso significa que o instantâneo particionado irá expirar mais rapidamente. Ao usar essa opção, considere permitir que os Assinantes possam iniciar a geração e a entrega do instantâneo. Para obter mais informações sobre opções de filtragem, consulte a seção Setting "Setting 'partition options'" (Definindo opções de partição) de [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md) (Instantâneos para publicações de mesclagem com filtros parametrizados).  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Ao usar os procedimentos armazenados e o Agente de Instantâneo, será possível realizar o seguinte:  
   
 -   Permita que os Assinantes solicitem geração e aplicação de instantâneos na primeira vez que eles sincronizarem.  
@@ -329,7 +329,7 @@ PAUSE
   
 3.  Se o valor de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> for **false**, chame <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> para criar o trabalho do Snapshot Agent para essa publicação.  
   
-4.  Chame o método <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> do objeto <xref:Microsoft.SqlServer.Replication.MergePublication> criado na etapa 1. Esse método inicia o trabalho do agente que gera o instantâneo inicial. Para obter mais informações sobre como gerar um instantâneo inicial e definir uma agenda personalizada para o Snapshot Agent, consulte [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+4.  Chame o método <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> do objeto <xref:Microsoft.SqlServer.Replication.MergePublication> criado na etapa 1. Esse método inicia o trabalho do agente que gera o instantâneo inicial. Para obter mais informações sobre como gerar um instantâneo inicial e definir uma agenda personalizada para o Snapshot Agent, consulte [Criar e aplicar o instantâneo inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 5.  (Opcional) Procure um valor de **true** para a propriedade <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> a fim de determinar quando o instantâneo inicial está pronto para ser usado.  
   
@@ -414,7 +414,7 @@ PAUSE
   
  [!code-vb[HowTo#rmo_vb_GenerateFilteredSnapshot](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_generatefilteredsnapshot)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Instantâneos para publicações de mesclagem com filtros parametrizados](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)   

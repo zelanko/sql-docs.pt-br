@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Oracle publishing [SQL Server replication], configuring
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57b1971bbd25071242b35f32b25ffebbaf4fe6f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 674e78687e89e01126205971a3a070924c6e664f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurar um publicador Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] As publicações dos Editores Oracle são criadas da mesma forma que são criados os instantâneos e as publicações transacionais mas, antes de criar uma publicação de um Publicador Oracle, você deverá completar as etapas a seguir (etapas um, três e quatro que estão detalhadamente descritas neste tópico):  
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
   
  No Instalador Universal Oracle, você deverá fornecer as seguintes informações:  
   
-|Informações|Descrição|  
+|Informações|Description|  
 |-----------------|-----------------|  
 |Oracle Home|Esse é o caminho para diretório de instalação do software Oracle. Aceite o padrão (C:\oracle\ora90 ou semelhante) ou digite outro caminho. Para obter mais informações sobre o Oracle Home, consulte a seção "Considerações sobre o Oracle Home" mais adiante neste tópico.|  
 |Nome do Oracle home|Um alias para o caminho do Oracle home.|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/17/2017
   
  Após a conclusão do Instalador Universal Oracle, use o Assistente de Configuração Net para configurar a conectividade da rede. Você deve fornecer quatro informações para configurar a conectividade de rede. O administrador do banco de dados Oracle configura a configuração de rede quando define o banco de dados e o ouvinte e, se você não tiver essas informações, elas deverão ser fornecidas pelo administrador. Você deve fazer o seguinte:  
   
-|Ação|Descrição|  
+|Ação|Description|  
 |------------|-----------------|  
 |Identificar o banco de dados|Há dois métodos para identificar o banco de dados. O primeiro método usa o Sistema Identificador Oracle (SID) e está disponível em todas as versões do Oracle. O segundo método usa o nome de serviço, que está disponível a partir da versão 8.0 do Oracle. Ambos os métodos usam um valor que é configurado quando o banco de dados é criado, e é importante que a configuração de rede cliente use o mesmo método de nomenclatura que o administrador usou ao configurar o ouvinte para o banco de dados.|  
 |Identificar um alias de rede para o banco de dados|Você deve especificar um alias de rede que será usado para acessar o banco de dados Oracle. Você também fornece esse alias quando identifica o banco de dados Oracle como um Publicador no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor. O alias de rede é essencialmente um ponteiro para o SID remoto ou o nome de serviço que foi configurado quando o banco de dados foi criado, ele foi referenciado por diversos nomes em diferentes versões e produtos Oracle, incluindo o nome de serviço Net e o alias TNS. O SQL*Plus solicita esse alias como o parâmetro "Cadeia de caracteres de Host" ao efetuar logon.|  
@@ -146,10 +146,10 @@ ms.lasthandoff: 11/17/2017
   
  Para configurar um Publicador Oracle e criar uma publicação, consulte [Create a Publication from an Oracle Database](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Considerações administrativas sobre Publicadores Oracle](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   
  [Mapeamento de tipo de dados para Publicadores Oracle](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Glossário de termos para publicações Oracle](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Visão geral da publicação do Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

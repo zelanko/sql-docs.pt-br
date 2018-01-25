@@ -22,15 +22,15 @@ helpviewer_keywords:
 - parameterized queries [SQL Server]
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f6b291b99b40b320872ccbe8939fbd73699de5b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 300fd06c7de6889cf8198aeb803d67398a0776e9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>Especificar comportamento de parametrização de consulta usando guias de plano
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando a opção de banco de dados PARAMETERIZATION está definida como SIMPLE, o otimizador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode optar por parametrizar as consultas. Isso significa que qualquer valor literal contido em uma consulta é substituído por parâmetros. Esse processo é denominado parametrização simples. Quando a parametrização SIMPLE está em vigor, você não pode controlar quais consultas são parametrizadas e quais não são. No entanto, você pode especificar que todas as consultas em um banco de dados sejam parametrizadas definindo a opção de banco de dados PARAMETERIZATION como FORCED. Esse processo é denominado parametrização forçada.  

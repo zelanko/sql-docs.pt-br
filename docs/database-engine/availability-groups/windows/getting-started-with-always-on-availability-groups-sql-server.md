@@ -18,13 +18,13 @@ ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 caps.latest.revision: "53"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 32004cf90c0e9847b91b144629ab1c093e495bf1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ad3286b87c3b0db9804a64291a4d30b8ab216e6a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="getting-started-with-always-on-availability-groups-sql-server"></a>Introdução aos Grupos de Disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ Este tópico apresenta as etapas para configurar instâncias do [!INCLUDE[ssCurr
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|**Preparar bancos de dados secundários.** Em cada instância de servidor que está hospedando uma réplica secundária, restaure os backups dos bancos de dados primários usando RESTORE WITH NORECOVERY.|[Prepare manualmente um banco de dados secundário](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)<br /><br /> Dica: o Assistente de Novo Grupo de Disponibilidade pode preparar os bancos de dados secundários para você. Para obter mais informações, consulte “Pré-requisitos para o uso da sincronização de dados inicial completa” em [Página Selecionar Sincronização de Dados Inicial &#40;Assistentes do Grupo de Disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md).|  
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|**Unir bancos de dados secundários ao grupo de disponibilidade.** Em cada instância de servidor que está hospedando uma réplica secundária, una cada banco de dados secundário local ao grupo de disponibilidade. Ao unir o grupo de disponibilidade, um determinado banco de dados secundário inicia a sincronização de dados com o banco de dados primário correspondente.|[Unir um banco de dados secundário a um grupo de disponibilidade](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)<br /><br /> Dica: o Assistente de Novo Grupo de Disponibilidade poderá executar esta etapa se cada banco de dados secundário existir em cada réplica secundária.|  
 ||**Criar um ouvinte de grupo de disponibilidade.**  Esta etapa é necessária a menos que você já tenha criado o ouvinte do grupo de disponibilidade enquanto criou o grupo de disponibilidade.|[Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
-|![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|**Dê o nome de host DNS do ouvinte aos desenvolvedores de aplicativos.**  Desenvolvedores precisam especificar esse nome de DNS nas cadeias de conexão para direcionar solicitações de conexão para o ouvinte do grupo de disponibilidade. Para obter mais informações, consulte [Ouvintes de grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).|"Acompanhamento: depois de criar um ouvinte de grupo de disponibilidade" em [Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
+|![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|**Dê o nome de host DNS do ouvinte aos desenvolvedores de aplicativos.**  Desenvolvedores precisam especificar esse nome de DNS nas cadeias de conexão para direcionar solicitações de conexão para o ouvinte do grupo de disponibilidade. Para obter mais informações, consulte [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).|"Acompanhamento: depois de criar um ouvinte de grupo de disponibilidade" em [Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|**Configurar onde estão os trabalhos de backup.**  Para executar backups em bancos de dados secundários, você deverá criar um script de trabalho de backup que leva em conta a preferência de backup automatizado. Criar um script para cada banco de dados no grupo de disponibilidade em cada instância de servidor que hospeda uma réplica de disponibilidade para o grupo de disponibilidade.|“Acompanhamento: depois de configurar o backup em réplicas secundárias” em [Configurar backup em réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)|  
   
 ##  <a name="ManageAGsEtc"></a> Managing Availability Groups, Replicas, and Databases  
@@ -101,7 +101,7 @@ Este tópico apresenta as etapas para configurar instâncias do [!INCLUDE[ssCurr
   
 -   **Blogs:**  [Blog da equipe do SQL Server AlwaysOn: o blog oficial da equipe do SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlAlwaysOn/)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Configuração de uma instância de servidor para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)   

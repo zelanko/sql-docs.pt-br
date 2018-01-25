@@ -16,13 +16,13 @@ ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da5a68bfb9a0a984c7d43b1f2c3c1de01b83c7af
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 389caca69e621c979c53e45d4289d72fe17fb3ff
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-wmi-event-alert"></a>Criar um alerta de eventos WMI
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como criar um alerta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent a ser emitido mediante a ocorrência de um evento específico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] monitorado pelo Provedor WMI para Eventos de Servidor no [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ou [!INCLUDE[tsql](../../includes/tsql_md.md)].  

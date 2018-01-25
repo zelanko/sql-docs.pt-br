@@ -16,15 +16,15 @@ f1_keywords:
 - swb.backupdatabase.options.f1
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 caps.latest.revision: "62"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f1d587759b7c57accdc4836346446e181f7df60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b476e0436b392d2b3c093a6a4424dc3445d8e27e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-database-backup-options-page"></a>Backup de Banco de Dados (página Opções de Backup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a página **Opções de Backup** da caixa de diálogo **Backup de Banco de Dados** para exibir ou modificar opções de backup de banco de dados.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
  Para obter informações sobre conjuntos de backup, consulte [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
- **Description**  
+ **Descrição**  
  Insira uma descrição do conjunto de backup.  
   
  **O conjunto de backup vai expirar**  
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
 >   
 >  Há suporte somente para as chaves que residem no EKM (Gerenciamento Extensível Chaves).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Fazer backup de arquivos e de grupos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

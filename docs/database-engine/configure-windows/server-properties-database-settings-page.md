@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.serverproperties.databasesettings.f1
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0c02cc5137e018b41cd5220a4bbe84046d39e19
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6219f83025b6e2fdaceaa36958582f6c7ba73544
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---database-settings-page"></a>Propriedades do servidor – página Configurações do Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta página para exibir ou modificar suas configurações de banco de dados.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
 -   Se a caixa **Compactar backup** estiver marcada, novos backups serão compactados por padrão.  
   
     > [!IMPORTANT]  
-    >  Por padrão, a compactação aumenta consideravelmente o uso da CPU, e o consumo adicional da CPU por parte do processo de compactação pode afetar negativamente as operações simultâneas. Portanto, é recomendável criar backups compactados de baixa prioridade em uma sessão cujo uso da CPU é limitado pelo [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md). Para obter mais informações, consulte [Usar o Administrador de Recursos para limitar o uso de CPU por meio de compactação de backup &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).  
+    >  Por padrão, a compactação aumenta consideravelmente o uso da CPU, e o consumo adicional da CPU por parte do processo de compactação pode afetar negativamente as operações simultâneas. Portanto, é recomendável criar backups compactados de baixa prioridade em uma sessão cujo uso da CPU é limitado pelo [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md). Para obter mais informações, consulte [Usar o Resource Governor para limitar o uso de CPU por meio de compactação de backup &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).  
   
  Se você for membro da função de servidor fixa **sysadmin** ou **serveradmin** , será possível alterar a configuração clicando na caixa **Compactar backup** .  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/20/2017
  **Intervalo de recuperação (minutos)**  
  Define o número máximo de minutos por banco de dados para a recuperação de bancos de dados. O padrão é 0, que indica configuração automática pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Na prática, isso significa um tempo de recuperação inferior a um minuto e um ponto de verificação a cada um minuto aproximadamente para bancos de dados ativos. Para obter mais informações, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).  
   
- **Dados**  
+ **Data**  
  Especifica o local padrão para arquivos de dados. Clique no botão Procurar para navegar para um novo local padrão. As alterações não entrarão em vigor até que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seja reinicializado.  
   
  **Log**  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/20/2017
  **Executando Valores**  
  Exiba os valores que estão sendo executados para as opções neste painel. Esses valores são somente leitura.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Especificar o fator de preenchimento para um índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
   

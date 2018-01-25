@@ -28,15 +28,15 @@ helpviewer_keywords:
 - server performance [SQL Server], resource usage
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7a12b51227ee9c3fd3c98877acb3f7a564f51322
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e30f2d0f47d856cdb3c8732d6f4ab553b43d6393
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Monitorar o uso de recursos (Monitor do Sistema)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Se estiver executando o sistema operacional Microsoft Windows Server, use a ferramenta gráfica Monitor do Sistema para avaliar o desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. É possível visualizar objetos, contadores de desempenho e o comportamento de outros objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como processadores, memória, cache, threads e processos. Cada um desses objetos possui um conjunto de contadores associado para medir o uso de dispositivos, o comprimento de filas, demoras e outros indicadores da taxa de transferência e do congestionamento interno.  

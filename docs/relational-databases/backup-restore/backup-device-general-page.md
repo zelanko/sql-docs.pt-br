@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.backupdevice.general.f1
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7aff7cfef8a57056964cc688c563edce84cbe92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 783ec3d28cac152932ffd2088d0aa53c92f9dcb7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-device-general-page"></a>Dispositivo de backup (página Geral)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a página **Geral** para especificar ou exibir as propriedades gerais de um dispositivo de backup lógico.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Dispositivos de backup em fita em computadores remotos não são destinos de backup válidos.  
   
- **Arquivo**  
+ **File**  
  Exibe o arquivo de destino de um dispositivo de backup lógico existente ou especifica um arquivo de destino para um novo dispositivo de backup lógico.  
   
 -   O caminho do arquivo de backup é exibido para um dispositivo de backup lógico existente. O campo **Arquivo** não é editável e o botão Procurar está indisponível.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
     > [!IMPORTANT]  
     >  Backups de dados em uma rede podem estar sujeitos a erros de rede; assim, recomendamos que você verifique a operação de backup quando ela estiver concluída. Para obter mais informações, consulte [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os backups em um conjunto de um ou mais dispositivos de backup compõem um único conjunto de mídias. Um *conjunto de mídias* é uma coleção ordenada de mídias de backup, fitas ou arquivos de disco, em que uma ou mais operações de backup foram gravadas, usando um número e tipo fixo de dispositivos de backup. Para obter informações sobre conjuntos de mídias, consulte [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
  O dispositivo de backup físico, que corresponde a um dispositivo de backup lógico, é inicializado quando o primeiro backup no conjunto de mídia é escrito ao dispositivo de backup lógico. Se o dispositivo de backup físico for um arquivo que ainda não existe, ele será criado nesse momento.  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Restaurar um backup de um dispositivo &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

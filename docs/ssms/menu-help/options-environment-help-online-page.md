@@ -16,13 +16,13 @@ ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 864a8798e9778b16eb49592c8f4e2b801ed1749d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1a985f6e2796708bcea47178380974d18895218d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-environment---help---online-page"></a>Opções (Ambiente – Ajuda – página Online)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A caixa de diálogo **Opções** permite especificar as fontes de Ajuda a serem usadas para as pesquisas do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], incluindo a ajuda de F1. No menu **Ferramentas** , clique em **Opções**, expanda a pasta **Ambiente** , selecione **Ajuda**e, então, clique em **Online**. Se a página **Online** não aparecer na lista, marque a caixa de seleção **Exibir todas as configurações** , na caixa de diálogo **Opções** .  

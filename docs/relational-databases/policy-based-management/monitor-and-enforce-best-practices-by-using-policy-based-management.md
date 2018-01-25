@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31cd1294590d81c25a0a09d67a7746ea7dee49ea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f48c7d177acea6812a7b10610a2ab67930b3e9e2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Gerenciamento Baseado em Políticas permite que você monitore as práticas recomendadas para o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um conjunto de arquivos de políticas que você pode importar como políticas de práticas recomendadas e avaliar essas políticas em relação a um conjunto de destino que inclui instâncias, objetos de instância, bancos de dados ou objetos de bancos de dados. Avalie as políticas manualmente, defina-as para avaliar um conjunto de destino de acordo para um agendamento ou defina-as para avaliar um conjunto de destino de acordo com um evento. Para obter mais informações sobre o gerenciamento baseado em políticas, veja [Administrar servidores usando o gerenciamento baseado em políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
 |Erro de Tempo Limite de I_O do Sistema de Armazenamento do Log de Eventos do Windows|[Tempo limite de entrada e saída dd sistema de armazenamento](../../relational-databases/policy-based-management/storage-system-input-output-time-out.md)|  
 |Erro de Falha do Sistema do Log de Eventos do Windows|[Falhas inesperadas do sistema](../../relational-databases/policy-based-management/unexpected-system-failures.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Trabalhando com facetas do Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
   
   

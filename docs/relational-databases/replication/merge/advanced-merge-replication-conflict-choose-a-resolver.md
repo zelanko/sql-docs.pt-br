@@ -17,15 +17,15 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 02e8f1043c8b3337953dd300c67ad0d94343eb88
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1312413f12476c9be36ed3595fed82a75fd375fb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>Replicação de mesclagem avançada – escolher um resolvedor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ao escolher um resolvedor, considere a importância da resolução de conflitos em seu aplicativo e se você pode usar o resolvedor padrão baseado em prioridades ou se precisa usar um resolvedor de artigo.  
@@ -47,9 +47,9 @@ ms.lasthandoff: 11/17/2017
 |Sinalize múltiplas alterações para qualquer valor em um registro lógico como um conflito.|Use o resolvedor padrão com controle em nível de registro lógico (o recurso registro lógico não oferece suporte a resolvedores de cliente ou manipuladores de lógica de negócios).|  
 |Os dados de resultado de conflito precisam ser diferentes dos dados de conflito originais.|Use um resolvedor de artigo que calcule valores novos.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Detectando e solucionando conflitos em registros lógicos](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
- [Detecção e resolução de conflito de replicação de mesclagem avançada](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Republicar dados](../../../relational-databases/replication/republish-data.md)  
   
   

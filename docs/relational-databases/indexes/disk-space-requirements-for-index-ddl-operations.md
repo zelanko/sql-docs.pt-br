@@ -19,17 +19,17 @@ helpviewer_keywords:
 - temporary disk space [SQL Server]
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ddf19430350de7403cc3c9d46416cbc6cfa409c1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5479835a035a5a70a58463c3ed04f5540fdb1554
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="disk-space-requirements-for-index-ddl-operations"></a>Requisitos de espaço em disco para operações de índice DDL
+# <a name="disk-space-requirements-for-index-ddl-operations"></a>Disk Space Requirements for Index DDL Operations
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   O espaço em disco é uma consideração importante ao criar, recriar ou cancelar índices. Um espaço em disco inadequado pode degradar o desempenho ou até mesmo provocar falha na operação de índice. Este tópico fornece informações gerais que poderão lhe ajudar a determinar a quantidade de espaço em disco necessária para operações DDL (Linguagem de Definição de Dados) de índice.  
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/17/2017
   
  As operações de índice online utilizam o controle de versão de linha para isolar a operação de índice dos efeitos das modificações feitas por outras transações. Isso evita a necessidade de solicitar bloqueios de compartilhamento de linhas já lidas. As operações simultâneas de atualização e exclusão de usuários durante operações de índice online precisam de espaço para os registros de versão no **tempdb**. Para obter mais informações, consulte [Executar operações de índice online](../../relational-databases/indexes/perform-index-operations-online.md) .  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Index Disk Space Example](../../relational-databases/indexes/index-disk-space-example.md)  
   
  [Espaço em disco de log de transações para operações de índice](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
@@ -107,6 +107,6 @@ ms.lasthandoff: 11/17/2017
   
  [Especificar fator de preenchimento para um índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
   
- [Reorganizar e recriar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
+ [Reorganizar e recompilar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
   
   

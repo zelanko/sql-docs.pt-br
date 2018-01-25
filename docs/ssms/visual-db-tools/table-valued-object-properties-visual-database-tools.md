@@ -16,13 +16,13 @@ ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 090fd11012ac76b5651170fa05b73ff08cf17dce
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 59393ef73eb121fced9a2c7d0232c49d707d1efd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Propriedades de objeto com valor de tabela (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Essas propriedades aparecem na janela Propriedades quando você seleciona um objeto com valor de tabela no **Designer de Exibição e Consulta**. O objeto com valor de tabela pode ser uma exibição, sinônimo, tabela derivada ou função com valor de tabela. A menos que indicado em contrário, essas propriedades são somente leitura na janela **Propriedades** .  

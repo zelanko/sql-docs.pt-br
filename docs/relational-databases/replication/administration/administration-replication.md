@@ -19,15 +19,15 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], administering
 ms.assetid: a3d4e7c6-feb5-411b-8bb9-70b6d943420c
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86a4e432940b36b3ebb8a8dfec58d768b2a036fd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a93507645a081f1e0fdc245eae439cf932a44360
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="administration-replication"></a>Administração (Replicação)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Esta seção contém informações sobre como administrar topologias de replicação. Recomendamos que você leia primeiro o tópico de práticas recomendadas e, então, siga os links desse tópico para obter informações mais detalhadas nesta seção e em outras.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
  [Validar os dados replicados](../../../relational-databases/replication/validate-replicated-data.md)  
  Fornece informações sobre como validar dados em Assinantes para determinar se os dados correspondem aos dados no Publicador.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitoramento &#40;replicação&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

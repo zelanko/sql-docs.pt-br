@@ -17,15 +17,15 @@ helpviewer_keywords:
 - locked out [SQL Server]
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a9291c06a2e21ab760e68874d7bd584b2d56571a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: abf07c71d02103153a968bcbb102a25e563387a4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Conectar-se ao SQL Server quando os administradores do sistema estão bloqueados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como você pode recuperar o acesso ao [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] como administrador do sistema. Um administrador do sistema pode perder o acesso a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devido a um dos seguintes motivos:  
@@ -121,7 +121,7 @@ ms.lasthandoff: 11/20/2017
   
  Você poderá se conectar normalmente a uma das contas, que agora é membro da função de servidor fixa de **sysadmin** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar o SQL Server no modo de usuário único](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)   
  [Opções de inicialização do serviço Mecanismo de Banco de Dados](../../database-engine/configure-windows/database-engine-service-startup-options.md)  
   

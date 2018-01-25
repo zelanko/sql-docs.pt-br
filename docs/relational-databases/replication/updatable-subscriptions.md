@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newsubwizard.updatablesubscriptions.f1
 ms.assetid: 8e9a13a0-6b24-47c6-9d83-3cbaf08f673d
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 139c6e956eb8f54df670f9c913988d80b05d14b4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bc0506ee6e924be3d3587855e5b57d4e743a2a26
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="updatable-subscriptions"></a>Assinaturas Atualizáveis
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Com a replicação transacional, os dados replicados devem ser tratados como somente leitura; no entanto, podem ser modificados em um Assinante do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando assinaturas atualizáveis. Se for necessário modificar dados no Assinante, escolha um das opções a seguir, dependendo de seus requisitos.  
@@ -40,10 +40,10 @@ ms.lasthandoff: 11/17/2017
   
 -   Selecione **Enfileirar alterações e confirmar quando possível** para uma assinatura de atualização em fila.  
   
-## <a name="see-also"></a>Consulte também  
- [Criar uma assinatura pull](../../relational-databases/replication/create-a-pull-subscription.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Assinar Publicações](../../relational-databases/replication/subscribe-to-publications.md)   
- [Assinaturas atualizáveis para replicação transacional](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

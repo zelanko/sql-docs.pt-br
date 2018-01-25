@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Browser service
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0965646dc2f9c645006f2ad014a383af1d077953
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cf94cff3e764a7079eb5166a6a204453fd217ce3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Serviço SQL Server Browser (Mecanismo de Banco de Dados e SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O programa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser é executado como um serviço Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta as solicitações de entrada de recursos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornece informações sobre as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas no computador. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser contribui para as seguintes ações:  
@@ -133,7 +133,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="using-a-firewall"></a>Usando um firewall  
  Para comunicar-se com o serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um servidor por trás de um firewall, abra a porta UDP 1434, além da porta TCP usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, 1433). Para obter informações sobre como trabalhar com um firewall, consulte "Como configurar um firewall para acessar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Protocolos de rede e bibliotecas de rede](../../sql-server/install/network-protocols-and-network-libraries.md)  
   
   

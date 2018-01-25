@@ -18,15 +18,15 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de1f189ac1868be1e2e4bcdbd49d9966a1f94dfb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ac710301841953674c6c9237fde6d87fb8309379
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Restaurar um banco de dados para uma transação marcada (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando um banco de dados está no estado de restauração, é possível usar a caixa de diálogo **Restaurar Log de Transações** para restaurar o banco de dados para uma transação marcada nos backups de log disponíveis.  
@@ -50,17 +50,17 @@ ms.lasthandoff: 11/17/2017
   
      A tabela a seguir lista os cabeçalhos de coluna da grade e descreve seus valores.  
   
-    |Cabeçalho|Value|  
+    |Cabeçalho|Valor|  
     |------------|-----------|  
     |\<em branco>|Exibe uma caixa de seleção para selecionar a marca.|  
     |**Transaction Mark**|Nome da transação marcada especificado pelo usuário quando a transação foi confirmada.|  
-    |**Data**|Data e hora de confirmação da transação. A data e hora da transação são exibidas como registradas na tabela **msdbgmarkhistory** , não a data e hora do computador cliente.|  
+    |**Date**|Data e hora de confirmação da transação. A data e hora da transação são exibidas como registradas na tabela **msdbgmarkhistory** , não a data e hora do computador cliente.|  
     |**Descrição**|Descrição da transação marcada especificada pelo usuário quando a transação foi confirmada (se houver).|  
     |**LSN**|Número de sequência de log da transação marcada.|  
     |**Backup de banco de dados**|Nome do banco de dados em que a transação marcada foi confirmada.|  
     |**Nome do Usuário**|Nome do usuário do banco de dados que confirmou a transação marcada.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
  [Restaurar um backup de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

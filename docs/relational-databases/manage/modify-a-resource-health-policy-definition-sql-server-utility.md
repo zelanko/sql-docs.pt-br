@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.SWB.UE.UTILITY.ADMINISTRATION.F1
 ms.assetid: 27bec0b6-92e9-448e-8c70-fe36802cf128
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b97f349ee9f4a6fa45f6201b9f8630f44eeb5b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cec210a329c442240451cce7cec04dba9fafd9c0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>Modificar uma definição de política de integridade de recursos (Utilitário do SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como modificar uma definição de política de integridade de recursos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Antes de modificar uma política de utilização de recursos no Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você deve criar um UCP (ponto de controle de utilitário). Para obter mais informações, consulte [Recursos e tarefas do utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
@@ -63,8 +63,8 @@ ms.lasthandoff: 11/17/2017
   
 8.  Para atualizar dados, clique com o botão direito do mouse no nó **Aplicativos da Camada de Dados Implantados** no painel de navegação do Gerenciador do Utilitário e selecione **Atualizar**.  
   
-## <a name="see-also"></a>Consulte também  
- [Recursos e tarefas do utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Recursos e tarefas do Utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Exibir resultados da política de integridade de recursos &#40;Utilitário do SQL Server&#41;](../../relational-databases/manage/view-resource-health-policy-results-sql-server-utility.md)  
   
   

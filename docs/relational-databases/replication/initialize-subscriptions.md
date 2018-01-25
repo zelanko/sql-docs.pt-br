@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newsubwizard.initializesubscriptions.f1
 ms.assetid: 7b170e4e-470d-4828-a9ed-7435b0b03514
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7207993940a0875513e095f61cb21be74d60ff87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 11573e80fe10775fd567d4ef11eb3e139421ab2f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="initialize-subscriptions"></a>Inicializar Assinaturas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Os Assinantes devem ser inicializados antes que possam começar a receber dados replicados. Um conjunto de dados inicial não é requerido, mas o Assinante deve ter pelo menos o esquema para cada objeto replicado e todas as tabelas de metadados e procedimentos requeridos pela replicação.  
@@ -36,10 +36,10 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  O assistente pode solicitar uma conexão com o Distribuidor para iniciar o trabalho apropriado para o Agente de Distribuição ou Agente de Mesclagem.  
   
-## <a name="see-also"></a>Consulte também  
- [Criar uma assinatura pull](../../relational-databases/replication/create-a-pull-subscription.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Inicializar uma assinatura](../../relational-databases/replication/initialize-a-subscription.md)   
- [Assinar Publicações](../../relational-databases/replication/subscribe-to-publications.md)  
+ [Assinar publicações](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

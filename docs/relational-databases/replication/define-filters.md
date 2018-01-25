@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.replconflictviewer.definefilters.f1
 helpviewer_keywords: Define Filters dialog box
 ms.assetid: 1fa71d22-ce5a-4aae-ba05-4d755842aeac
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ed038bc82b44c55ca7e97beb8f4edee1fb5a32d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d8165cea64c9057b30f316cd6fee6117f3de0f97
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="define-filters"></a>Definir Filtros
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A caixa de diálogo **Definir Filtros** permite que você defina filtros que são aplicados em conflitos de dados para consultar um subconjunto dos conflitos na grade. Para definir um filtro, escolha um operador na caixa de listagem suspensa **Operador** e então insira em um valor. Por exemplo, para mostrar somente conflitos onde o perdedor do conflito é o servidor **ReplTest1**, selecione **Igual a** na caixa de lista suspensa **Operador** e insira **ReplTest1** na primeira coluna **Valor** .  
@@ -32,13 +32,13 @@ ms.lasthandoff: 11/17/2017
  **Operador**  
  Selecione um operador para o filtro, como **Menor que ou Igual a**.  
   
- **Valor**  
+ **Value**  
  Insira um valor para o filtro. A maioria dos operadores só exige um valor na primeira coluna **Valor** , mas os operadores **Entre** e **Não Entre** requerem um valor em ambas as coluna **Valor** .  
   
  **Liberada**  
  Clique nesse botão para limpar todos os filtros anteriormente definidos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visualizador de Conflitos de Replicação da Microsoft &#40;replicação de mesclagem&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)   
  [Visualizador de Conflitos de Replicação da Microsoft &#40;replicação transacional&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-transactional-replication.md)  
   

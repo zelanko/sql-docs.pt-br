@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: single-user mode [SQL Server], database option
 ms.assetid: fb5254eb-b635-4b39-8361-136fd36f2b1f
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ef9771cb0d6bdf63ddc51602f316f7cf3081e118
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d5ba3d5ec7a1c5dee7ef6e437a18dbbef421ad7b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="set-a-database-to-single-user-mode"></a>Definir um banco de dados como modo de usuário único
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como configurar um banco de dados definido pelo usuário no modo de usuário único no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O modo de usuário único especifica que apenas um usuário pode acessar o banco de dados por vez e, normalmente é usado para ações de manutenção.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/17/2017
   
  Também é possível definir o banco de dados como acesso múltiplo ou restrito usando esse procedimento. Para obter mais informações sobre as opções de Restringir o Acesso, veja [Propriedades de banco de dados &#40;Página Opções&#41;](../../relational-databases/databases/database-properties-options-page.md).  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-set-a-database-to-single-user-mode"></a>Para definir um banco de dados como modo de usuário único  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/17/2017
   
  [!code-sql[DatabaseDDL#AlterDatabase8](../../relational-databases/databases/codesnippet/tsql/set-a-database-to-single_1.sql)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   
   

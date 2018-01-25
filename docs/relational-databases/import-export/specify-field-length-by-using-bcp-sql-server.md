@@ -19,15 +19,15 @@ helpviewer_keywords:
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a59b93a9877eb6e58c34fc1aeb54795aaee52d3c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 779cd2f34ae30c2e21d632e3359861452c4f652a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Especificar tamanho do campo usando bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O tamanho do campo indica o número máximo de caracteres que são exigidos para representar dados em formato de caractere. O tamanho do campo já será conhecido se os dados forem armazenados no formato nativo; por exemplo, o tipo de dados **int** usa 4 bytes. Se você especificar 0 para o comprimento do prefixo, o comando **bcp** solicitará o tamanho do campo, os tamanhos de campo padrão e o impacto do tamanho de campo no armazenamento de dados em arquivos de dados que contêm dados **char** .  
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/17/2017
 |**bit**|1|  
 |**binary**|Duas vezes o comprimento definido para a coluna + 1|  
 |**varbinary**|Duas vezes o comprimento definido para a coluna + 1|  
-|**image**|0|  
+|**imagem**|0|  
 |**datetime**|24|  
 |**smalldatetime**|24|  
 |**float**|30|  
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/17/2017
 |**bit**|1|  
 |**binary**|Comprimento definido para a coluna|  
 |**varbinary**|Comprimento definido para a coluna|  
-|**image**|0|  
+|**imagem**|0|  
 |**datetime**|8|  
 |**smalldatetime**|4|  
 |**float**|8|  
@@ -126,7 +126,7 @@ ms.lasthandoff: 11/17/2017
   
  Em todos os casos anteriores, para criar um arquivo de dados para recarregar posteriormente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que mantenha o espaço de armazenamento em um mínimo, use um prefixo de comprimento com o tipo de armazenamento de arquivo padrão e o tamanho do campo padrão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Utilitário bcp](../../tools/bcp-utility.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Especificar terminadores de campo e linha &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)   

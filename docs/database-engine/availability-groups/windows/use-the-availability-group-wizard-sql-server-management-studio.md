@@ -22,13 +22,13 @@ ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 caps.latest.revision: "46"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4f10c84f2d58da54327ae954ef189dfd3562aab3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b9f3578c769071d948cc2efda2a8b67e8617cabe
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Usar a caixa de diálogo Assistente de Grupo de Disponibilidade (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como usar o **Assistente de Novo Grupo de Disponibilidade** no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para criar e configurar um grupo de disponibilidade Always On no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Um *grupo de disponibilidade* define um conjunto de bancos de dados de usuários que realizará o failover como uma única unidade e um conjunto de parceiros de failover, conhecido como *réplicas de disponibilidade*, que oferece suporte a failover.  
@@ -79,7 +79,7 @@ Na maioria dos casos, você pode usar o Assistente de Novo Grupo de Disponibilid
   
 1.  No Pesquisador de Objetos, conecte-se à instância do servidor que hospeda a réplica de disponibilidade primária.  
   
-2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade** .  
+2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade**.  
   
 3.  Para iniciar o Assistente de Novo Grupo de Disponibilidade, selecione o comando **Assistente de Novo Grupo de Disponibilidade** .  
   
@@ -126,7 +126,7 @@ Na maioria dos casos, você pode usar o Assistente de Novo Grupo de Disponibilid
   
     -   **Ignorar sincronização de dados inicial**  
   
-         Selecione esta opção se desejar usar seus próprios backups de banco de dados e de log de seus bancos de dados primários. Para obter mais informações, veja [Iniciar movimentação de dados em um banco de dados secundário AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+         Selecione esta opção se desejar usar seus próprios backups de banco de dados e de log de seus bancos de dados primários. Para obter mais informações, veja [Iniciar movimentação de dados em um banco de dados secundário &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 9. A página **Validação** verifica se os valores especificados neste Assistente atendem aos requisitos do Assistente de Novo Grupo de Disponibilidade. Para fazer uma alteração, clique em **Anterior** para retornar a uma página anterior do assistente para alterar um ou mais valores. Clique em **Avançar** para retornar à página **Validação** e clique em **Executar Novamente a Validação**.  
   
@@ -211,7 +211,7 @@ Na maioria dos casos, você pode usar o Assistente de Novo Grupo de Disponibilid
 Como alternativa ao uso do Assistente de Novo Grupo de Disponibilidade, você pode usar os cmdlets PowerShell [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obter mais informações, veja [Criar um grupo de disponibilidade &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md) ou [Criar um grupo de disponibilidade &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md).  
 
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  

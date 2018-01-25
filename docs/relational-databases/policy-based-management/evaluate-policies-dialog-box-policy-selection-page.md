@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.runnow.f1
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae9ad1ff6540bbb33c204e7f7f26013d335ff812
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1d055c8d7ea11a36f5fadb5065c29995d13b55b0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Caixa de diálogo Avaliar Políticas, página Seleção de Políticas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta caixa de diálogo para avaliar políticas do gerenciamento baseado em políticas. Ao selecionar a página **Resultados da Avaliação** , você pode aplicar políticas aos itens em um conjunto de destino que não esteja em conformidade com as políticas.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
   
     -   O tipo de servidor de destino é diferente do tipo de servidor no qual a política é avaliada. Por exemplo, no [!INCLUDE[ssDE](../../includes/ssde-md.md)], se você tentar avaliar uma política criada para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], receberá um conjunto de destino vazio.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrar servidores com Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Caixa de diálogo Avaliar Políticas, página Resultados da Avaliação](../../relational-databases/policy-based-management/evaluate-policies-dialog-box-evaluation-results-page.md)  
   

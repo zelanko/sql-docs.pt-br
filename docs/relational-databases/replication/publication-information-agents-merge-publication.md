@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.publicationinfo.downlevelagents.merge.f1
 ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7b8338fb5c58ba7ebf0a100b0f25a9bd6117991
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 70827d7aff090787f25f0cc8966e2647a51f9a9a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-information-agents-merge-publication"></a>Informações da Publicação, Agentes (publicação de mesclagem)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A guia **Agentes** exibe informações resumidas sobre o Agente de Instantâneo para a publicação selecionada.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/17/2017
  **Última Ação**  
  A última ação executada durante a execução mais recente do agente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar o Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Exibir informações e executar tarefas para uma publicação &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
  [Exibir informações e executar tarefas para os agentes associados a uma publicação &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   

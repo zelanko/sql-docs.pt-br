@@ -28,13 +28,13 @@ ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e53a9ff4593a24820c6ff8f4ab0cb1540ba02a95
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 868c16ecea52d24010ca2012756cfc00e7cdd15a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Ajuda F1 da janela Propriedades (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use a janela **Propriedades** para exibir as propriedades dos elementos selecionados. Você também pode usar a janela **Propriedades** para exibir o arquivo, o projeto e as propriedades da solução. A janela **Propriedades** está disponível ao clicar em **Janela de Propriedades** no menu **Exibir** .  

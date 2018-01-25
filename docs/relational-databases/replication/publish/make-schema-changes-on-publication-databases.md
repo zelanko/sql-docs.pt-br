@@ -20,15 +20,15 @@ helpviewer_keywords:
 - publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 caps.latest.revision: "73"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8ef239563e768ee5044e07e8bca666bdd4169158
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: b37e7cc96300a3bba0e83f2458820afd20d1b004
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Fazer alterações de esquema em bancos de dados de publicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A replicação dá suporte a um amplo intervalo de alterações de esquema para objetos publicados. Ao fazer qualquer uma das seguintes alterações de esquema no objeto publicado adequado em um Publicador do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , a alteração é propagada por padrão a todos os Assinantes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -164,7 +164,7 @@ ms.lasthandoff: 12/05/2017
   
 -   A replicação de mesclagem leva os procedimentos armazenados a ignorar alterações de esquema durante a solução de problemas. Para obter mais informações, consulte [sp_markpendingschemachange &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md) e [sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER VIEW &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-view-transact-sql.md)   
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-procedure-transact-sql.md)   

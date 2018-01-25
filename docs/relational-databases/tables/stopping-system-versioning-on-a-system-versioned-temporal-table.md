@@ -15,13 +15,13 @@ ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
 caps.latest.revision: "10"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d28ca8dcaae23e9e7c6548dd0c6bc0dcc05d06ac
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2fc598778c154fa0439fc3534243ff4cb2a7f0b1
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>Parando o controle de versão do sistema de uma tabela temporal com versão do sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ COMMIT ;
 ## <a name="did-this-article-help-you-were-listening"></a>Este artigo foi útil para você? Estamos atentos  
  Quais são as informações que você está procurando? Você as localizou? Estamos atentos aos seus comentários para aprimorar o conteúdo. Envie seus comentários para [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Stopping%20System-Versioning%20on%20a%20System-Version%20Temporal%20Table%20page)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tabelas temporais](../../relational-databases/tables/temporal-tables.md)   
  [Introdução a Tabelas Temporais com Controle da Versão do Sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Gerenciar a Retenção de Dados Históricos em Tabelas Temporais com Versão do Sistema](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)   

@@ -23,13 +23,13 @@ ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6bf7fdbd0c791ae6302774116769b91fcd4a6ee3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8798c67cc730cef471e28de51ae27213bc04565d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="object-explorer-details-pane"></a>Painel Detalhes do Pesquisador de Objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Detalhes do Pesquisador de Objetos, um componente do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], fornece uma exibição tabular de todos os objetos no servidor e apresenta uma interface do usuário para gerenciá-los. Os recursos do Pesquisador de Objetos variam ligeiramente, dependendo do tipo de servidor, mas normalmente incluem recursos de desenvolvimento de bancos de dados e recursos de gerenciamento para todos os tipos de servidor.  

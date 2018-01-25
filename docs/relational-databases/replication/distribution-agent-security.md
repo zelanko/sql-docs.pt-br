@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.security.DA.f1
 helpviewer_keywords: Distribution Agent Security dialog box
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 708baa252fdde4493c515be65f80229618e65508
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 55a2550c50737ac6d1d4f405c9e9417861f2ef49
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distribution-agent-security"></a>Segurança do Distribution Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A caixa de diálogo **Segurança do Agente de Distribuição** permite especificar a conta do Windows na qual o Distribution Agent é executado. O Distribution Agent é executado no Distribuidor para assinaturas push e no Assinante para assinaturas pull. A conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows é também referida como *conta do processo*, porque o processo do agente é executado nessa conta. Opções adicionais disponíveis na caixa de diálogo dependem de como você a acessa:  
@@ -97,11 +97,11 @@ Persist Security Info=False;Connection Pooling=True;
   
  A maioria das opções na cadeia de caracteres é específica do servidor DB2 que você está configurando, mas a opção **Processar Binário como Caractere** sempre deve ser definida como **False**. Um valor é necessário para a opção **Catálogo Inicial** para identificar o banco de dados de assinatura. Para obter mais informações, consulte [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciar logons e senhas na replicação](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
  [Modelo de segurança do agente de replicação](../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Visão geral dos agentes de replicação](../../relational-databases/replication/agents/replication-agents-overview.md)   
- [Melhores práticas de segurança da replicação](../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Assinar Publicações](../../relational-databases/replication/subscribe-to-publications.md)  
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [Assinar publicações](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

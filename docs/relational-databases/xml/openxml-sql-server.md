@@ -26,15 +26,15 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 493e78f36abc0e45c74278407f607a56b1572d88
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fd801f6a94a10e43432fc650b689ffccf88ced7b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] OPENXML, uma palavra-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)], fornece um conjunto de linhas em documentos XML na memória que é semelhante a uma tabela ou exibição. OPENXML permite acesso a dados XML ainda que ele seja um conjunto de linhas relacional. Ele faz isso fornecendo uma exibição do conjunto de linhas da representação interna de um documento XML. Os registros no conjunto de linhas podem ser armazenados em tabelas do banco de dados.  
@@ -143,7 +143,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  A tabela a seguir descreve a estrutura da tabela de borda.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|É a ID exclusiva do nó do documento.<br /><br /> O elemento raiz tem um valor de ID igual a 0. Os valores negativos da ID são reservados.|  
 |**parentid**|**bigint**|Identifica o pai do nó. O pai identificado por esse ID necessariamente não é o elemento pai. No entanto isso depende do Tipo do Nó cujo o pai é identificado por esse ID. Por exemplo, se o nó for um nó de texto, seu pai poderá ser um nó de atributo.<br /><br /> Se o nó estiver no nível superior no documento XML, seu **ParentID** será NULL.|  
@@ -202,7 +202,7 @@ EXEC sp_xml_removedocument @docHandle;
   
 -   Para vários subelementos com o mesmo nome, o primeiro nó é retornado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
  [sp_xml_removedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   

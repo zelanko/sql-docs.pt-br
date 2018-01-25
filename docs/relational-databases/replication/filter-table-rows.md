@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.filtertablerows.f1
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b78b311ea716abd5ca52a1f561f648a29a27199
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7917c67c302800a23ed20c974115641f644b513f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filter-table-rows"></a>Filtrar Linhas da Tabela
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A página **Filtrar Linhas da Tabela** permite:  
@@ -81,14 +81,14 @@ ms.lasthandoff: 11/17/2017
   
  Selecione um nó de atalho no painel e clique em **Localizar Tabela**. O painel é expandido e a tabela é destacada. Se você clicar em **Localizar Tabela** sem um nó de atalho selecionado, uma caixa de diálogo **Localizar Tabela** será ativada.  
   
- **Filtro**  
+ **Filter**  
  Contém a definição [!INCLUDE[tsql](../../includes/tsql-md.md)] para o filtro selecionado no painel de filtro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filtrar os dados publicados](../../relational-databases/replication/publish/filter-published-data.md)   
- [Filtros de junção](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

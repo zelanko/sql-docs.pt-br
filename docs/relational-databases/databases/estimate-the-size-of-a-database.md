@@ -22,15 +22,15 @@ helpviewer_keywords:
 - designing databases [SQL Server], estimating size
 ms.assetid: 5b240161-eba4-44b0-946c-61a8fc00fc8c
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: babdffb8ddb8bddcb017b65a713b0cfd5aaf0964
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1fd8ebd7223c44cdfb5b830ae0f9fc5ea08f3266
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="estimate-the-size-of-a-database"></a>Estimar o tamanho de um banco de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Ao projetar um banco de dados, você terá de estimar o quão grande ele ficará quando estiver preenchido com os dados. A estimativa do tamanho do banco de dados pode ajudá-lo a determinar a configuração de hardware que será necessária para fazer o seguinte:  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|Description|  
 |-----------|-----------------|  
 |[Estimar o tamanho de uma tabela](../../relational-databases/databases/estimate-the-size-of-a-table.md)|Define as etapas e cálculos necessários para estimar a quantidade de espaço exigida para armazenar os dados em uma tabela e índices associados.|  
 |[Estimando o tamanho de um heap](../../relational-databases/databases/estimate-the-size-of-a-heap.md)|Define as etapas e cálculos necessários para estimar a quantidade de espaço exigida para armazenar os dados em um heap. Um heap é uma tabela que não tem um índice clusterizados.|  

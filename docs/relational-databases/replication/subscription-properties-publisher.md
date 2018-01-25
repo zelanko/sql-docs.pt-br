@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.newsubwizard.subproperties.publisher.f1
 helpviewer_keywords: Subscription Properties dialog box
 ms.assetid: d4b2bc8b-0431-4331-8305-8992c96d0d34
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f971a24eaa58022a12a139bc6a6bd960b0dec76
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: baba517b574179be16ef1376d0b1eff113c6338d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-properties---publisher"></a>Propriedades da Assinatura - Publicador
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A caixa de diálogo **Propriedades da Assinatura** no Publicador permite exibir e definir propriedades para assinaturas push. Você também pode exibir algumas propriedades de assinaturas pull, mas a caixa de diálogo **Propriedades da Assinatura** no Assinante exibe propriedades adicionais e permite que elas sejam modificadas.  
@@ -61,11 +61,11 @@ ms.lasthandoff: 11/17/2017
  Se você selecionou um tipo de assinatura de servidor no Assistente para Nova Assinatura, o Assinante receberá uma prioridade que será usada durante resolução de conflito.  
   
  **Resolver conflitos interativamente**  
- Determina se o Resolver Interativo deve usar a interface do usuário para resolver conflitos durante a sincronização de mesclagem. Isso requer um valor de **Habilitar** para **Usar Gerenciador de Sincronização do Windows**. Para obter mais informações, confira [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
+ Determina se o Resolver Interativo deve usar a interface do usuário para resolver conflitos durante a sincronização de mesclagem. Isso requer um valor de **Habilitar** para **Usar Gerenciador de Sincronização do Windows**. Para obter mais informações, consulte [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar propriedades de assinatura pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [Exibir e modificar propriedades de assinatura push](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
- [Assinar Publicações](../../relational-databases/replication/subscribe-to-publications.md)  
+ [Assinar publicações](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

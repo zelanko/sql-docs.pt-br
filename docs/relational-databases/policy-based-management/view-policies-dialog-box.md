@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.managepolicies.general.f1
 ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa7dfabe97a531dc69302cc30b0c42a6d3cd09f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6e339d3fa4719aac58023a62a1d858b6a98dfe5d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-policies-dialog-box"></a>Caixa de diálogo Exibir Políticas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta caixa de diálogo para exibir as políticas efetivas para esse destino. Esta caixa de diálogo mostra as políticas relevantes, bem como suas categorias e informações.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
  **Última Execução**  
  A data e a hora em que a política foi executada pela última vez.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrar servidores com Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

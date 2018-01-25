@@ -17,15 +17,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], tasks in Replication Monitor
 ms.assetid: 2a420da2-66f4-4650-9bdd-1992221ed3fd
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6dbe419ea1a8042a607045d60873794252378406
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f23a88fa322ef64be50c02c5c1b73eb685163fb4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-information-and-perform-tasks-for-publication-agents"></a>Exibir informações e executar tarefas para agentes de publicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Replication Monitor fornece a guia **Agentes**, que inclui informações sobre os agentes associados com a publicação selecionada. Para Agente de Distribuição e Agente de Mesclagem, consulte [Exibir informações e executar tarefas para os agentes associados a uma assinatura &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
     -   Para interromper um agente que está sendo executado, clique com o botão direito do mouse no agente e então clique em **Interromper Agente**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definir limites e avisos no Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)   
  [Exibir informações e executar tarefas para uma publicação &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
  [Administração do agente de replicação](../../../relational-databases/replication/agents/replication-agent-administration.md)   

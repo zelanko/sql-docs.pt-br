@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.selectbackupdest.f1
 ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ddf5610c86220c08a17f6d830959623d9c80775d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 08a629ac319f874312d6bb3878c721d783a5fe12
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="select-backup-destination"></a>Selecionar destino do backup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |**Unidade de fita**|Escolha esta opção para selecionar uma unidade de fita como destino de backup da lista de unidades de fita conectadas fisicamente ao computador que está executando a instância do servidor.<br /><br /> Observação: dispositivos de backup em fita em computadores remotos não são destinos de backup válidos.|  
 |**Dispositivo de backup**|Escolha esta opção para selecionar um dispositivo de backup lógico existente. Esses dispositivos de backup lógicos correspondem a unidades de fita conectadas fisicamente ao computador que está executando a instância do servidor.<br /><br /> Observação: para obter informações sobre como criar um dispositivo de backup em fita, consulte [Definir um dispositivo de backup lógico para uma unidade de fita &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md).|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

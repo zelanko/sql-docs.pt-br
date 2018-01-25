@@ -23,13 +23,13 @@ ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 caps.latest.revision: "59"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 69059bd6bc4a095b8f046d58c63762b5af4deba9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 16801b4bcf5cfbaf01090d716d4e77f0fbdd1e41
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Possíveis falhas durante espelhamento de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Problemas físicos, do sistema operacional ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem causar uma falha em uma sessão de espelhamento de banco de dados. O espelhamento de banco de dados não verifica regularmente os componentes dos quais o Sqlservr.exe depende para verificar se estão funcionando corretamente ou se houve falha. Porém, para alguns tipos de falhas, o componente afetado informa um erro ao Sqlservr.exe. Um erro informado por outro componente é chamado um *erro de hardware*. Para detectar outras falhas que de outra forma passariam despercebidas, o espelhamento de banco de dados implementa seu próprio mecanismo de tempo limite. Quando ocorre um tempo limite de espelhamento, o espelhamento de banco de dados assume que ocorreu uma falha e declara um *erro de software*. Porém, algumas falhas que acontecem no nível da instância do SQL Server não causam espelhamento para tempo limite e podem não ser detectadas.  
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="responding-to-an-error"></a>Respondendo a um erro  
  Independentemente do tipo de erro, uma instância do servidor que detecta um erro responde adequadamente com base na função da instância, no modo de operação da sessão e no estado de qualquer outra conexão na sessão. Para obter informações sobre o que ocorre na perda de um parceiro, consulte [Modos de operação de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Estimar a interrupção do serviço durante troca de função &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
  [Modos de operação de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   

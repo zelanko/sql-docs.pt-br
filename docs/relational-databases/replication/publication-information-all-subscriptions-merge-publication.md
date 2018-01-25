@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.publicationinfo.allsubscriptions.merge.f1
 ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 499f21ad8898604c09ce19b464ebd54c4787b645
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 33942916f81e3a6849a354cc44846ed5d60931d7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>Informações da Publicação, Todas as Assinaturas (publicação de mesclagem)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A guia **Todas as Assinaturas** exibe informações sobre todas as assinaturas na publicação de mesclagem selecionada.  
@@ -106,11 +106,11 @@ ms.lasthandoff: 11/17/2017
  **Conexão**  
  Somente o[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. O tipo de conexão entre o Assinante e o Editor. Os valores possíveis são **LAN**, **Discada**e **Internet**. O valor **Internet** será exibido se a assinatura usar sincronização da Web.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar o Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Exibir informações e realizar tarefas para uma assinatura &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
  [Exibir informações e realizar tarefas para os agentes associados a uma assinatura &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
  [Monitorando a Replicação](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
+ [Sincronização da Web para replicação de mesclagem](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

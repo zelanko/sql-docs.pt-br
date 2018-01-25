@@ -16,15 +16,15 @@ helpviewer_keywords:
 - stored procedures [SQL Server replication], publishing
 ms.assetid: 1d3a3525-0bc5-466f-b097-5359dc74432d
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cd29554f7301368b8e58e47e73622365d5f273c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 475af0dd026d8e3f5820e1678f4033856af2b0b5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publish-execution-of-stored-procedure-in-transactional-publication"></a>Publicar a execução do procedimento armazenado na publicação transacional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Especifique que a execução de um procedimento armazenado (em vez de apenas sua definição) deve ser publicada na caixa de diálogo **Propriedades do Artigo – \<Artigo>**. Essa caixa de diálogo está disponível no Assistente para Nova Publicação e na caixa de diálogo **Propriedades da Publicação – \<Publicação>**. Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md) e [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Se você estiver na caixa de diálogo **Propriedades da Publicação – \<Publicação>**, clique em **OK** para salvar e fechar a caixa de diálogo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)  
   
   

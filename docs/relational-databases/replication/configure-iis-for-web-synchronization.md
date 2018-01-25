@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 caps.latest.revision: "88"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5c661e39ca7e011e185b68867be5955e2cfc280
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c524b1ad61453b835402816102a8f428adfe42d1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurar IIS para sincronização da Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Os procedimentos neste tópico compõem a segunda etapa para configurar a sincronização da Web para replicação de mesclagem. Esta etapa é executada depois que você habilita uma publicação para sincronização da Web. Para obter uma visão geral do processo de configuração, consulte [Configurar Sincronização da Web](../../relational-databases/replication/configure-web-synchronization.md). Depois de concluir os procedimentos neste tópico, continue na terceira etapa, configurando uma assinatura para usar a sincronização da Web. A terceira etapa é descrita nos seguintes tópicos:  
@@ -163,7 +163,7 @@ ms.lasthandoff: 11/17/2017
   
     2.  Na caixa **Caminho** , digite um caminho para o diretório virtual. Por exemplo, se você digitou **websync1** na caixa **Alias** , digite **C:\Inetpub\wwwroot\websync1** na caixa **Caminho** . Clique em **Avançar**.  
   
-    3.  Nas duas caixas de diálogo, clique em **Sim**. Isso especifica que você deseja criar uma nova pasta e deseja copiar o Internet Server API (ISAPI) DLL do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . .  
+    3.  Nas duas caixas de diálogo, clique em **Sim**. Isso especifica que você deseja criar uma nova pasta e deseja copiar o Internet Server API (ISAPI) DLL do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . para obter informações sobre a ferramenta de configuração e recursos adicionais.  
   
 7.  Na página **Acesso Autenticado** :  
   
@@ -363,7 +363,7 @@ ms.lasthandoff: 11/17/2017
   
     2.  Conecte ao servidor em modo diagnóstico. Se o certificado estiver instalado corretamente, a caixa de diálogo **Alerta de Segurança** não aparecerá. Se a caixa de diálogo aparecer, o Merge Agent apresentará falha quando tentar se conectar ao computador que está executando o IIS. Você deve certificar-se de que o certificado para o servidor que você está acessando foi adicionado ao repositório de certificados no Assinante como um certificado confiável. Para obter mais informações sobre exportação de certificados, consulte a documentação do IIS.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar Sincronização da Web](../../relational-databases/replication/configure-web-synchronization.md)  
   
   

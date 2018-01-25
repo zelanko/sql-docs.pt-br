@@ -17,15 +17,15 @@ helpviewer_keywords:
 - hierarchyid [Database Engine], tutorial
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ed9d79b4dacf83513a41b4d33cd13ed7852be184
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 668177022a6032c906a97c1787ddac3b9a6771dc
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>Tutorial: Usando o tipo de dados hierarchyid
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Este tutorial se destina a usuários com experiência no [!INCLUDE[tsql](../../includes/tsql-md.md)], mas não familiarizados com o tipo de dados **hierarchyid**.  
@@ -33,10 +33,10 @@ ms.lasthandoff: 11/17/2017
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
 Este tutorial é dividido em duas lições:  
   
-[Lição 1: Convertendo uma tabela em uma estrutura hierárquica](../../relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
+[Lição 1: convertendo uma tabela em uma estrutura hierárquica](../../relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
 Nesta lição, você aprenderá a usar uma tabela de funcionário existente que foi estruturada como uma hierarquia pai/filho e move os dados para uma nova tabela que representa a hierarquia, usando o tipo de dados **hierarchyid** . Esta lição exige o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-[Lição 2: Criando e gerenciando dados em uma tabela hierárquica](../../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
+[Lição 2: criando e gerenciando dados em uma tabela hierárquica](../../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
 Nesta lição, você aprenderá a criar uma tabela usando o tipo de dados **hierarchyid** para representar a estrutura da hierarquia. Em seguida, você manipula os dados da tabela usando os métodos hierárquicos.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -48,7 +48,7 @@ O sistema deverá ter o seguinte instalado:
   
 -   Internet Explorer 6 ou versão posterior.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Tutorial: introdução ao Mecanismo de Banco de Dados](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 [Tutorial: Gravando instruções Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
 [Referência de método de tipo de dados hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  

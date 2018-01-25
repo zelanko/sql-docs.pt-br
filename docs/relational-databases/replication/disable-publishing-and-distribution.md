@@ -21,15 +21,15 @@ helpviewer_keywords:
 - disabling distribution
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2f3723cb4a252dba4652696ee9873e226ee83bb4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a7c86d721917d489824ef593f5bbad4ec2cd98ba
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="disable-publishing-and-distribution"></a>Desabilitar publicação e distribuição
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como desabilitar a publicação e a distribuição no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)] ou o RMO (Replication Management Objects).  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Complete as etapas no Assistente para Desabilitar Publicação e Distribuição.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  A publicação e a distribuição podem ser desabilitadas programaticamente usando procedimentos armazenados de replicação.  
   
 #### <a name="to-disable-publishing-and-distribution"></a>Para desabilitar a publicação e a distribuição  
@@ -137,8 +137,8 @@ ms.lasthandoff: 11/17/2017
   
  [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
   
-## <a name="see-also"></a>Consulte também  
- [Conceitos de objetos de gerenciamento de replicação](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Conceitos dos procedimentos armazenados no sistema de replicação](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
   
   

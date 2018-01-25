@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1ec4e5b55560085a0de3036bbc877b2dc7425467
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 50e25190819d71c8972613c1e31879fdffaf16ff
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="examples-using-auto-mode"></a>Exemplos: Usando modo AUTO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Os exemplos a seguir ilustram o uso do modo AUTO. Muitas dessas consultas são especificadas em relação a documentos XML de instruções da fabricação de bicicletas que são armazenados na coluna da tabela ProductModel no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
@@ -274,7 +274,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   Se os valores dos elementos e atributos contiverem qualquer caractere especial da URL com significado especial na URL, eles serão codificados apenas no valor da URL DBOBJECT e apenas quando o caractere especial fizer parte de um nome de tabela ou coluna. No resultado, o caractere `#` que faz parte do nome da tabela `Col#&2` é codificado como `_x0023_ in the DBOJBECT URL`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar o modo AUTO com FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)  
   
   

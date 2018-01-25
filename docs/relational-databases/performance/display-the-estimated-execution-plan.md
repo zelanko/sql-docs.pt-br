@@ -22,15 +22,15 @@ helpviewer_keywords:
 - custom zoom [SQL Server]
 ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c559446e933893547306252d0efe05ecab75f479
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 915070ff7213c042af429d291547202aa727314c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="display-the-estimated-execution-plan"></a>Exibir o plano de execução estimado
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Este tópico descreve como gerar planos de execução gráfica estimados usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Quando são gerados planos de execução estimados, as consultas ou lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] não são executadas. Por isso, um plano de execução estimado não contém informações de tempo de execução, como avisos de tempo de execução ou métricas de uso real do recurso. Em vez disso, o plano de execução gerado exibirá o plano de execução de consulta que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] teria maior probabilidade de usar se as consultas fossem executadas, e exibirá a estimativa de linhas que passam por vários operadores no plano.  

@@ -27,15 +27,15 @@ helpviewer_keywords:
 - SQL Server services
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 77501642cb7f3cf7067d8ea51bcb5a7beed9eaa0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5de386c4e2e8525205078627bb2d3e50e0beddd3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-the-database-engine-services"></a>Gerenciar os serviços do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado nos sistemas operacionais como um serviço. Um serviço é um tipo de aplicativo executado em segundo plano no sistema. Os serviços normalmente fornecem recursos essenciais de sistema operacional, como fornecimento de Web, registro de eventos ou fornecimento de arquivos. Serviços podem ser executados sem exibir uma interface de usuário na área de trabalho do computador. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e diversos outros componentes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são executados como serviços. Estes serviços normalmente são iniciados quando o sistema operacional inicia. Isto depende do que é especificado durante a instalação; alguns serviços não são iniciados por padrão. Esta seção descreve o gerenciamento de diversos serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Antes de você fazer o logon em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você precisa saber iniciar, interromper, pausar, retomar e reinicializar uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Depois que você fizer logon, você pode executar tarefas como administrar o servidor ou fazer consultas em um banco de dados.  

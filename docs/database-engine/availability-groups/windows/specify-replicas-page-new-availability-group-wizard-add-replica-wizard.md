@@ -19,13 +19,13 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 caps.latest.revision: "35"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9e6deec0c8993271ec1c5bf02101516585faeaf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7fc2b166d0e56bb1590e3da1705553ffab2b6ac0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Página Especificar Réplicas (Assistente de Novo Grupo de Disponibilidade: Assistente para Adicionar Réplica)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve as opções da página **Especificar Réplicas**. Essa página aplica-se ao **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** e ao **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**. Use a página **Especificar Réplicas** para especificar e configurar uma ou mais réplicas de disponibilidade para adicionar o grupo de disponibilidade. Essa página contém quatro guias que são apresentadas na tabela a seguir. Clique no nome de uma guia na tabela para ir para a seção correspondente, mais adiante neste tópico.  
@@ -214,7 +214,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Criar um ponto de extremidade de espelhamento de banco de dados para grupos de disponibilidade AlwaysOn &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)   
  [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  

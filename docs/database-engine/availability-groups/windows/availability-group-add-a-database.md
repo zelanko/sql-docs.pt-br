@@ -19,13 +19,13 @@ ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9b60a27e5ec79b4f9d73546d1a379ddc2ba2fe5a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4f529dde783f53e5bafd46c729ea8660eb546949
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group---add-a-database"></a>Grupo de disponibilidade – adicionar um banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como adicionar um banco de dados a um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Você deve estar conectado à instância do servidor que hospeda a réplica primária.  
   
--   O banco de dados deve residir na instância do servidor que hospeda a réplica primária e atender aos pré-requisitos e restrições para bancos de dados de disponibilidade. Para obter mais informações, consulte [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+-   O banco de dados deve residir na instância do servidor que hospeda a réplica primária e atender aos pré-requisitos e restrições para bancos de dados de disponibilidade. Para obter mais informações, veja [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  No Pesquisador de Objetos, conecte-se à instância de servidor que hospeda a réplica primária e expanda a árvore de servidores.  
   
-2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade** .  
+2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade**.  
   
 3.  Clique com o botão direito do mouse no grupo de disponibilidade e selecione um dos comandos a seguir:  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/20/2017
   
          Depois que você usar a caixa de diálogo **Propriedades do Grupo de Disponibilidade** para adicionar um banco de dados a um grupo de disponibilidade, configure o banco de dados secundário correspondente em cada instância de servidor que hospeda uma réplica secundária. Para obter mais informações, veja [Iniciar movimentação de dados em um banco de dados secundário &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para adicionar um banco de dados a um grupo de disponibilidade**  
   
 1.  Conecte-se à instância de servidor que hospeda a instância do servidor que hospeda a réplica primária.  
@@ -149,7 +149,7 @@ Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Criação e configuração de grupos de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   

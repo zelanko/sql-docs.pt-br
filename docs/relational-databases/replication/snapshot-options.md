@@ -16,15 +16,15 @@ helpviewer_keywords:
 - snapshots [SQL Server replication], options
 ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b5c6fc564df5fef3034b6ed7cb9d32734ce5fcc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9a370c14b000a7afc9c9917c0e7adcc43063f68e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="snapshot-options"></a>Opções de instantâneo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Há várias opções disponíveis ao inicializar uma assinatura com um instantâneo:  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Transfira arquivos de instantâneo usando o Protocolo de Transferência de Arquivo (FTP). Para obter mais informações, consulte [Transferir instantâneos pelo FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Inicializar uma assinatura com um instantâneo](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
   
   

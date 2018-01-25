@@ -16,13 +16,13 @@ ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bbb3f4310dfedc47615f47ba07d95ed44a9416e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3a74c0a9090936fc172642e06d3608c407718712
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Páginas de propriedades no SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] As caixas de diálogo de página de propriedades no [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] usam um formato comum que exibe informações com categorias que podem ser expandidas e recolhidas. Os campos mostrados dependem da propriedade em particular. As propriedades mostradas em cinza são somente leitura. Os botões Categorizado e Alfabético estão na parte superior de cada página de propriedades.  

@@ -17,22 +17,22 @@ helpviewer_keywords:
 - activity monitoring
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 73bc05ebd57a2e530dd98988824544238e7ba141
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7edd36b5b50eabac2cfa609a06aef2638d5b6dfd
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="monitor-dqs-activities"></a>Monitorar atividade do DQS
   Este tópico descreve como monitorar as seguintes atividades de modo centralizado no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): descoberta de conhecimento, gerenciamento de domínio, política de correspondência, limpeza de dados, correspondência de dados e limpeza do SSIS.  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
  Somente os usuários com a função dqs_administrator no banco de dados DQS_Main podem encerrar uma atividade ou interromper um processo em uma atividade.  
   
 ###  <a name="Security"></a> Segurança  
@@ -138,7 +138,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Você é solicitado a especificar um nome e local para o arquivo do Excel a ser salvo. O arquivo do Excel exportado contém as seguintes planilhas:  
   
-    |Nome da planilha|Descrição|  
+    |Nome da planilha|Description|  
     |----------------|-----------------|  
     |Atividade|Contém informações (colunas) sobre a atividade como na grade de atividade.|  
     |Processos|Contém informações (colunas) sobre os processos da atividade como na guia **Etapas da Atividade** .|  

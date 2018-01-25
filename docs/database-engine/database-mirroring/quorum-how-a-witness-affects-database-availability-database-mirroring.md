@@ -26,13 +26,13 @@ ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dae91182bc6cbfc48f06ebfa8b079969a088e86b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2f01ca52594ddf49dc65f48099822b2a61a92f11
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum: como uma testemunha afeta a disponibilidade do banco de dados (Espelhamento de Banco de Dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Sempre que uma testemunha é definida para uma sessão de espelhamento de banco de dados, é necessário usar o *quorum*. Quorum é a relação criada quando duas ou mais instâncias do servidor na sessão de espelhamento de banco de dados são conectadas entre si. Normalmente, o quorum envolve três instâncias do servidor interconectadas. Quando uma testemunha é definida, o quorum é exigido para tornar o banco de dados disponível. Desenvolvido para o modo de segurança alta com failover automático, o quorum verifica o banco de dados pertence a somente um parceiro por vez.  
@@ -107,7 +107,7 @@ ms.lasthandoff: 11/20/2017
   
  No cenário 2, a testemunha perde quorum, enquanto os parceiros, **Partner_A** e **Partner_B**, retêm quorum entre si e o banco de dados permanece online. Então, os parceiros também perdem quorum e o banco de dados fica offline. Mais tarde, o servidor principal, **Partner_A**, reconecta-se à testemunha, recuperando quorum. A testemunha confirma se **Partner_A** ainda detém a função principal, e **Partner_A** coloca o banco de dados online.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Modos de operação de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Testemunha de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-witness.md)   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - indexes [full-text search]
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 60ab43fc16b75b4031b1f73ba6850dd835d7f2a9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6d4e56503d8e833be40b151800dbf574764dd38f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>Usar a pesquisa de texto completo com colunas XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] É possível criar um índice de texto completo em colunas de XML que indexa o conteúdo dos valores de XML, mas ignora a marcação XML. Marcas de elemento são usadas como limites do token. Os seguintes itens são indexados:  
@@ -68,7 +68,7 @@ WHERE  CONTAINS(xCol,'run')
   
  Quando o XML é decomposto em colunas relacionais usando AXSD que são indexadas por texto completo, as consultas XPath que ocorrem sobre a exibição em XML não executam pesquisa de texto completo nas tabelas subjacentes.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Índices XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   

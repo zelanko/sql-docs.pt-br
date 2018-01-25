@@ -13,19 +13,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
-ms.openlocfilehash: a9b01209583c35c9ee6be01193f78c9577c20bac
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35b865e4bcc27039a3591a8151335de8f663dbd6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="install-data-quality-services"></a>Instalar o Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) contém os dois componentes a seguir: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** e **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**.  
   
-|Componente DQS|Descrição|  
+|Componente DQS|Description|  
 |-------------------|-----------------|  
 |[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|O [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] é instalado sobre o Mecanismo de Banco de Dados do [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] e inclui três bancos de dados: DQS_MAIN, DQS_PROJECTS e DQS_STAGING_DATA. O DQS_MAIN contém procedimentos armazenados do DQS, o mecanismo DQS e bases de dados de conhecimento publicadas. O DQS_PROJECTS contém as informações sobre o projeto de qualidade de dados. DQS_STAGING_DATA é a área de preparo onde você pode copiar seus dados de origem para executar operações de DQS e, depois, exportar os dados processados.|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] é um aplicativo autônomo que o habilita a se conectar ao [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. Ele fornece uma interface gráfica do usuário altamente intuitiva para executar operações de qualidade de dados e outras tarefas administrativas relacionadas ao DQS.|  
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/20/2017
      Para obter mais informações, consulte  
                     [Acessar dados para as operações do DQS](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Vídeo: Instalar e configurar o DQS](http://go.microsoft.com/fwlink/?LinkId=238241)   
  [Atualizar assemblies SQLCLR após atualizar o .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [Exportar e importar bases de dados de conhecimento DQS usando o DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   

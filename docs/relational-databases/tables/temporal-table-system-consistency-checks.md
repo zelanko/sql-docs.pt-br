@@ -15,13 +15,13 @@ ms.assetid: ec081d42-57e4-43c7-9e1c-317ba8f23437
 caps.latest.revision: "10"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06a8476e912888e799969af1e8f867bcfcc3fdc1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cc854ba076a5f5a831beb5009bdd5c0e25f654c5
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="temporal-table-system-consistency-checks"></a>Verificações de consistência do sistema de tabela temporal
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="did-this-article-help-you-were-listening"></a>Este artigo foi útil para você? Estamos atentos  
  Quais são as informações que você está procurando? Você as localizou? Estamos atentos aos seus comentários para aprimorar o conteúdo. Envie seus comentários para [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20System%20Consistency%20Checks%20page)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tabelas temporais](../../relational-databases/tables/temporal-tables.md)   
  [Introdução a Tabelas Temporais com Controle da Versão do Sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Particionamento de Tabelas Temporais](../../relational-databases/tables/partitioning-with-temporal-tables.md)   

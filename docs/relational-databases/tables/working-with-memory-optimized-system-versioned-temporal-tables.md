@@ -15,13 +15,13 @@ ms.assetid: 691d4f80-6754-43f5-8b43-d4facf08f6fc
 caps.latest.revision: "12"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 062d09f13c7d28eb84686a007b9cb9a589f6ac65
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6ea705b42888012fada9d9c17ee9db7282455731
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="working-with-memory-optimized-system-versioned-temporal-tables"></a>Trabalho com tabelas temporais com controle da versão do sistema com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -79,9 +79,9 @@ GO ;
 ```  
   
 ## <a name="did-this-article-help-you-were-listening"></a>Este artigo foi útil para você? Estamos atentos  
- Quais são as informações que você está procurando? Você as localizou? Estamos atentos aos seus comentários para aprimorar o conteúdo. Envie seus comentários para [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Working%20with%20Memory-Optimized%20System-Versioned%20Temporal%20Tables%20page)  
+ Quais são as informações que você está procurando? Você as localizou? Estamos atentos aos seus comentários para aprimorar o conteúdo. Envie seus comentários a [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Working%20with%20Memory-Optimized%20System-Versioned%20Temporal%20Tables%20page)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tabelas temporais com controle da versão do sistema com tabelas com otimização de memória](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
  [Criação de uma tabela temporal com controle da versão do sistema com otimização de memória](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)   
  [Monitorando tabelas temporais com controle da versão do sistema com otimização de memória](../../relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md)   

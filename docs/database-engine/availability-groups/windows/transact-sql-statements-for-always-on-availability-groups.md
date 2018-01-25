@@ -18,13 +18,13 @@ ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 caps.latest.revision: "23"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7a8a544ff4082d7d4159a4281edd4c8a25e2f71
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d6afc6c135135d53230d8ddcc9aae846e7d21a92
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="transact-sql-statements-for-always-on-availability-groups"></a>Instruções Transact-SQL para Grupos de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Se uma instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)] for executada enquanto outra recuperação ou ação do grupo de disponibilidade estiver em andamento, a instrução retornará um erro. Espere a conclusão da ação ou da recuperação e repita a instrução, se necessário.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

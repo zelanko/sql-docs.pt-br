@@ -19,15 +19,15 @@ helpviewer_keywords:
 - logging in [SQL Server]
 ms.assetid: f67c11e3-c519-40c9-82c1-07efa9d9985e
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 83299c28085e1445790338ecdeec3316c0425760
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 00b2a66c23d60597c3a2c4c0f66a660788b3c0af
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="log-in-to-an-instance-of-sql-server-command-prompt"></a>Fazer logon em uma instância do SQL Server (prompt de comando)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como testar a conectividade com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; use o utilitário **SQLCMD**.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Utilitário sqlcmd](../../tools/sqlcmd-utility.md)   
  [Utilitário osql](../../tools/osql-utility.md)  
   

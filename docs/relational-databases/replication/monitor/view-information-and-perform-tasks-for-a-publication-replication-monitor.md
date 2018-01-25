@@ -17,15 +17,15 @@ helpviewer_keywords:
 - publications [SQL Server replication], Replication Monitor tasks
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8566d4cb576035140d4662ae4d3279408e6532f6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d9d4501a7a4b6e9c734a38bec7b3c9261187ebd2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-information-and-perform-tasks-for-a-publication-replication-monitor"></a>Exibir informações e executar tarefas para uma publicação (Replication Monitor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Replication Monitor fornece as seguintes guias que incluem informações sobre a publicação selecionada:  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  Para exibir informações sobre tokens de rastreamento, clique na guia **Tokens de Rastreamento** . Para obter mais informações sobre como usar tokens de rastreamento, consulte [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Monitorando a Replicação](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   

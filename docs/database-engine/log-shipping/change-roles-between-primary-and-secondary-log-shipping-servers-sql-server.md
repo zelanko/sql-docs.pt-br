@@ -22,13 +22,13 @@ ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 caps.latest.revision: "20"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1db9a711e770bc21c3917816010e3810da240d9a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b8208251edaeccba14b4da06e44f053893d0c5aa
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Alterar funções entre servidores de envio de log primários e secundários (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Depois de fazer failover em uma configuração de log de envio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um servidor secundário, você pode configurar seu banco de dados secundário para agir como um banco de dados primário. Então, você poderá trocar os bancos de dados primários e secundários como necessário.  
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Gerenciamento de logons e trabalhos após a troca de funções &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tabelas de envio de log e procedimentos armazenados](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   

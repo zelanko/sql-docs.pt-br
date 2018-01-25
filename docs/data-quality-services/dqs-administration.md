@@ -17,15 +17,15 @@ helpviewer_keywords:
 - dqs,adminstration
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2d4b4f34938bd72e325394d12bdf0c955d480c14
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7c9c8c5a3098e03da579f2bd043ec9675a8c1adb
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dqs-administration"></a>administração do dqs
   O DQS ([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) permite administrar e gerenciar várias atividades de DQS executadas no [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], configurar propriedades do nível de servidor relacionadas a atividades de DQS, definir as configurações de Serviço de Dados de Referência e definir configurações de log de DQS. Estas coisas são feitas pelo recurso **Administração** no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Dependendo de seu acesso de segurança (função) no DQS, você recebe acesso ou tem o acesso negado a determinadas funcionalidades nesta área.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/20/2017
   
  Para obter mais informações, consulte [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md).  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/20/2017
 |Descreve como fazer backup e restaurar bancos de dados do DQS.|[Fazer backup e restaurar banco de dados do DQS](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |Descreve como desanexar e anexar bancos de dados DQS.|[Desanexar e anexar bancos de dados do DQS](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Serviços de Dados de Referência no DQS](../data-quality-services/reference-data-services-in-dqs.md)   
  [Gerenciar arquivos de log do DQS](../data-quality-services/manage-dqs-log-files.md)   
  [Gerenciar bancos de dados do DQS](../data-quality-services/manage-dqs-databases.md)  

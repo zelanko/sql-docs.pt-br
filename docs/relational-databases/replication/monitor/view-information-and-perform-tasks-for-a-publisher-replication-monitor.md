@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Publishers [SQL Server replication], viewing information
 ms.assetid: 1e777e95-377a-4de3-b965-867464aadaaf
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad1d0890185e7e9e8066885057742870f48b1acc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea8e2cca0de14fff51a284f2cc4c119c0d7bb8ff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-information-and-perform-tasks-for-a-publisher-replication-monitor"></a>Exibir informações e executar tarefas para um Publicador (Replication Monitor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Replication Monitor fornece as seguintes guias que exibem informações sobre o Publicador selecionado:  
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/17/2017
   
     -   Para interromper um agente que está sendo executado, clique com o botão direito do mouse no agente e então clique em **Interromper Agente**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar propriedades de Publicador e Distribuidor](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [Monitorando a Replicação](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   

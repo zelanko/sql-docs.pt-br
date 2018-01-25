@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.security.QRA.f1
 helpviewer_keywords: Queue Reader Agent Security dialog box
 ms.assetid: 77938da0-2afd-4455-8826-f4a6a9440cb3
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd778ee9b955092f535ae577ff5e85afd888a9b4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 79c2a826056a05b5a2e35806f5b45cf44e95f609
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="queue-reader-agent-security"></a>Segurança do Agente de Leitor de Fila
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A caixa de diálogo **Segurança do Queue Reader Agent** permite que você especifique a conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o Queue Reader Agent executa e faz conexões locais com o Distribuidor. O agente se conecta ao Publicador usando a conta especificada na caixa de diálogo **Propriedades do Publicador** (disponível na caixa de diálogo **Propriedades do Distribuidor** ); o agente se conecta ao Assinante usando o mesmo contexto do Agente de Distribuição para a assinatura. Para obter mais informações, consulte [View and Modify Replication Security Settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
@@ -34,10 +34,10 @@ ms.lasthandoff: 11/17/2017
  **Conta do processo**  
  Insira uma conta do Windows na qual o Agente de Leitor de Fila seja executado no Distribuidor. A conta do Windows especificada deve ser, no mínimo, um membro da função de banco de dados fixa **db_owner** no banco de dados de distribuição.  
   
- **Senha** e **Confirmar senha**  
+ **Senha** e **Confirmar Senha**  
  Insira a senha para a conta do Windows.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciar logons e senhas na replicação](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
  [Modelo de segurança do agente de replicação](../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Visão geral dos agentes de replicação](../../relational-databases/replication/agents/replication-agents-overview.md)   

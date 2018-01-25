@@ -16,13 +16,13 @@ ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
 caps.latest.revision: "26"
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 611d94675e29ae28938bf4051721a6551d06e90f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 95c4039cd1baeeea2d3d3039e069d97126cecba5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-1---create-the-finance-name-policy"></a>Lição 2-1 – Criar a política Nome Financeiro
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Nessa tarefa, você criará um banco de dados chamado Finance e uma condição que exige que todas as tabelas comecem com as letras **fintbl**. Em seguida, você criará uma política e uma categoria de políticas para impor um padrão de nomenclatura para as tabelas no banco de dados Finanças.  

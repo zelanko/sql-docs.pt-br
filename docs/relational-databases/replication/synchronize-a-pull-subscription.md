@@ -17,15 +17,15 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], pull
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 51a3cfa29ba214585f490c397af368b6f1b39bab
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fb2902fc5b2e1c380ce9d31dab8a5f50f5ec8a2c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="synchronize-a-pull-subscription"></a>Sincronizar uma assinatura pull
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como sincronizar uma assinatura pull no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agentes de replicação](../../relational-databases/replication/agents/replication-agents-overview.md) ou RMO (Replication Management Objects).  
@@ -833,7 +833,7 @@ Finally
 End Try  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Sincronizar dados](../../relational-databases/replication/synchronize-data.md)   
  [Criar uma assinatura pull](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  

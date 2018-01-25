@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.subscription.downlevelsynchhistory.f1
 ms.assetid: 0a0deab2-1c08-4371-9681-d9403e0236cc
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66c6a085eb2879d9ad9d7ee19036d64af553fea5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0462e11db4e712fb9e0b5b37494dacc0924e60a1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2000"></a>Assinatura, Histórico de Sincronização (assinatura de mesclagem, SQL Server 2000)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A guia **Histórico de Sincronização** exibe informações detalhadas do Agente de Mesclagem, inclusive status, histórico, mensagens informativas e eventuais mensagens de erro.  
@@ -65,10 +65,10 @@ ms.lasthandoff: 11/17/2017
  **Detalhes ou mensagem de erro da sessão selecionada**  
  Exibido somente se a sessão selecionada exibir um valor de **Erro** na coluna **Status** . Essa área de texto exibe informações de erro detalhadas e o comando tentado no momento do erro. Também inclui links para conteúdo adicional relacionado ao erro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar o Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Exibir informações e realizar tarefas para os agentes associados a uma assinatura &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
  [Monitorando a Replicação](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Visão geral dos agentes de replicação](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

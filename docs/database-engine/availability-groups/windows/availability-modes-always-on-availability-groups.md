@@ -22,13 +22,13 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 095b40c8525e83a6d686a0d40d1f6aa1974a3442
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f7f1e90e1892eae4763b8afd1af575cc6b3ef16a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Modos de disponibilidade (grupos de disponibilidade AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,8 +74,8 @@ ms.lasthandoff: 11/20/2017
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
 |01|02|02 e 03|04|Sim|  
 |02|01|01 e 03|04|Sim|  
-|03||01 e 02|04|Não|  
-|04|||01, 02 e 03|Não|  
+|03||01 e 02|04|não|  
+|04|||01, 02 e 03|não|  
   
  Normalmente, o Nó 04 como uma réplica de confirmação assíncrona é implantado em um site de recuperação de desastre. A permanência dos Nós 01, 02 e 03 no modo de confirmação assíncrona depois do failover no Nó 04 impede a degradação de desempenho potencial em seu grupo de disponibilidade devido à alta latência da rede entre os dois sites.  
   
@@ -156,9 +156,9 @@ ms.lasthandoff: 11/20/2017
   
  **Para ajustar votos de quorum**  
   
--   [Exibir configurações de NodeWeight de quorum de cluster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
+-   [Exibir configurações de NodeWeight de quorum do cluster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
--   [Definir configurações de NodeWeight de quorum de cluster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
+-   [Definir configurações de NodeWeight de quorum do cluster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
 -   [Forçar um cluster WSFC para iniciar sem um quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
@@ -184,7 +184,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Failover e modos de failover &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
  [WSFC &#40;Windows Server Failover Clustering&#41; com o SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  

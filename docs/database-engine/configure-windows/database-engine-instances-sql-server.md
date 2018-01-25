@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 906150705dabca37cfee4eae1d0e19cecc641e4c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 64065e9cf9ce2429ba98b8ca46bac3b000020d6b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-engine-instances-sql-server"></a>Instâncias do mecanismo de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] é uma cópia do executável **sqlservr.exe** que é executada como um serviço do sistema operacional. Cada instância gerencia vários bancos de dados do sistema e um ou mais bancos de dados de usuários. Cada computador pode executar várias instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Aplicativos conectam à instância para executar trabalhos em um banco de dados gerenciado pela instância.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
   
  Você pode executar várias instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em um computador. Uma instância pode ser a instância padrão. A instância padrão não tem nome. Se a solicitação de conexão especificar apenas o nome do computador, a conexão será feita para a instância padrão. Uma instância nomeada é um onde você especifica um nome de instância ao instalar a instância. Uma solicitação de conexão deve especificar o nome do computador e o nome da instância para a conexão à instância. Não há requisitos para instalar uma instância padrão; todas as instâncias executadas em um computador podem ser instâncias nomeadas.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/20/2017
 |Descreve os recursos do Service Broker para mensagens e enfileiramento de aplicativos e fornece ponteiros à documentação do Service Broker.|[Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)|  
 |Descreve como a extensão do pool de buffers pode ser usada para fornecer integração consistente de armazenamento de acesso aleatório (unidades de estado sólido) não volátil com o pool de buffers do Mecanismo de Banco de Dados para melhor significativamente a taxa de transferência de E/S.|[Arquivo de extensão do pool de buffers](../../database-engine/configure-windows/buffer-pool-extension.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Aplicativo sqlservr](../../tools/sqlservr-application.md)   
  [Recursos de banco de dados](../../relational-databases/database-features.md)   
  [Recursos entre instâncias do Mecanismo de Banco de Dados](../../relational-databases/database-engine-cross-instance-features.md)  

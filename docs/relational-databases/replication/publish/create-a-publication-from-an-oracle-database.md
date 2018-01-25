@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Oracle publishing [SQL Server replication], configuring
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f013f2302663b1ff21a87107e98ec372848bef68
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0ac9182378fb003f492e052318e9c5b42d613efc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Criar uma publicação de um banco de dados Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como criar uma publicação no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] com base em um banco de dados Oracle usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -111,7 +111,7 @@ ms.lasthandoff: 11/17/2017
   
 11. Na página **Concluir o Assistente** , especifique um nome para a publicação.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Após a configuração do banco de dados Oracle como um Publicador, é possível criar uma publicação transacional ou instantânea da mesma maneira como você faria de um Editor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , usando os procedimentos armazenados do sistema.  
   
 #### <a name="to-create-an-oracle-publication"></a>Para criar uma publicação Oracle  
@@ -147,7 +147,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  No Distribuidor no banco de dados de distribuição, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Especifique o nome da publicação usada na etapa 4 para **@publication** e as credenciais do Windows com as quais o Snapshot Agent será executado para **@job_name** e **@password**. Para usar a Autenticação Padrão Oracle ao se conectar ao Publicador, especifique também um valor **0** para **@publisher_security_mode** e as informações de logon do Oracle para **@publisher_login** e **@publisher_password**. Isso cria um trabalho do Agente de Instantâneo para a publicação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar um Publicador Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Publicar dados e objetos de banco de dados](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Configurar o trabalho do conjunto de transações para um Publicador Oracle &#40;programação Transact-SQL de replicação&#41;](../../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   

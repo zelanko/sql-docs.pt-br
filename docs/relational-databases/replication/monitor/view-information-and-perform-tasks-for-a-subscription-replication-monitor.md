@@ -17,15 +17,15 @@ helpviewer_keywords:
 - viewing subscription information
 ms.assetid: 54aac83b-6f29-40d7-8901-cf059749867f
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16c003c313d19db7597c309db9bceeda88719780
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4472b4fd63f2447e0ba8602c6bb2ae0cf59e2dd2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-information-and-perform-tasks-for-a-subscription-replication-monitor"></a>Exibir informações e realizar tarefas para uma assinatura (Replication Monitor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Replication Monitor fornece as seguintes guias que incluem informações sobre as assinaturas:  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Para exibir e modificar as propriedades da assinatura, clique com o botão direito do mouse na assinatura  e, então, clique em **Propriedades**. Também é possível acessar informações mais detalhadas e executar tarefas nessa guia. Para obter mais informações, consulte [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md) [Exibir informações e executar tarefas para os agentes associados a uma assinatura (Replication Monitor)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar propriedades de assinatura push](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
  [Exibir e modificar propriedades de assinatura pull](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [Monitorando a Replicação](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  

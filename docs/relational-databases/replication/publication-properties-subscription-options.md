@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5517df85eefa69980aa212e573165ef7cf0c1d5d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5272dd5ecda16685468431245c91b1c03c7296da
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-properties-subscription-options"></a>Propriedades da Publicação, Opções de Assinatura
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A página **Opções de Assinatura** da caixa de diálogo **Propriedades de Publicação** permite exibir e definir propriedades de nível de publicação associadas a assinaturas. As propriedades são agrupadas nas categorias seguintes:  
@@ -129,7 +129,7 @@ ms.lasthandoff: 11/17/2017
  **Máximo de processos simultâneos**  
  O número máximo de Agente de Mesclagems que podem executar ao mesmo tempo (requer **Limitar processos simultâneos**). Se o número máximo de agentes em sincronização exceder o máximo, os agentes serão enfileirados até que o número fique abaixo do máximo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

@@ -15,13 +15,13 @@ ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 caps.latest.revision: "8"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 23e504dd3b54b7cd2c2f2eced0cc9056b009e377
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9a9e18a7fb99785077d48df26f7ee40c19d45842
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>Modificando dados em uma tabela temporal com controle da versão do sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -194,7 +194,7 @@ WHEN NOT MATCHED THEN
 ## <a name="did-this-article-help-you-were-listening"></a>Este artigo foi útil para você? Estamos atentos  
  Quais são as informações que você está procurando? Você as localizou? Estamos atentos aos seus comentários para aprimorar o conteúdo. Envie seus comentários para [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Modifying%20Data%20in%20a%20System-Versioned%20Temporal%20Table%20page)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tabelas temporais](../../relational-databases/tables/temporal-tables.md)   
  [Como criar uma tabela temporal com controle da versão do sistema](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)   
  [Consultando dados em uma tabela temporal com controle da versão do sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)   

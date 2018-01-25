@@ -15,15 +15,15 @@ f1_keywords: sql13.swb.maint.historycleanup.f1
 helpviewer_keywords: History Cleanup Task dialog box
 ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d88b3e5b54b2ede47272d58717b7088f0e0825f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aeace432c78f5a8179997697e316e874767b57fb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>Tarefa limpeza de histórico (Plano de manutenção)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a caixa de diálogo **Tarefa Limpeza de Histórico** para descartar informações antigas de histórico de tabelas no banco de dados msdb. Essa tarefa oferece suporte a exclusão de backup e restauração de histórico, histórico de trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e histórico do plano de manutenção.  
@@ -74,13 +74,13 @@ ms.lasthandoff: 11/17/2017
  **Usar nome de usuário e senha específicos**  
  Conecte a uma instância do SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)] que usa a Autenticação do SQL Server. Essa opção não está disponível.  
   
- **Nome de usuário**  
+ **User name**  
  Forneça um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser usado na autenticação. Essa opção não está disponível.  
   
  **Senha**  
  Forneça uma senha a ser usada na autenticação. Essa opção não está disponível.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_purge_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [sp_delete_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)  
   

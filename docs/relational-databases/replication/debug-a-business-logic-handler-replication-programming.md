@@ -20,15 +20,15 @@ helpviewer_keywords:
 - BusinessLogicModule class
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83358d1d13961f3b2a4ffc9bdf7ce1d2f594ae6a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7b11b969602aaa5a300b38b943b29cd9f374a5b7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Depurar um manipulador de lógica de negócios (Programação de replicação)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use um manipulador de lógica de negócios para invocar a lógica de negócios personalizada quando uma assinatura de mesclagem for sincronizada. Para obter mais informações, consulte [Executar lógica de negócios durante a sincronizações de mesclagem](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
   
 11. Supondo que nenhum outro ponto de interrupção esteja definido e que os comandos tenham sido replicados, a execução para quando alcança o ponto de interrupção do manipulador de lógica de negócios.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

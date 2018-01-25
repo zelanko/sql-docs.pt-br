@@ -19,15 +19,15 @@ helpviewer_keywords:
 - merge replication data validation [SQL Server replication], SQL Server Management Studio
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d78ec0ec5dcbb0fa259cc26950a9de9742bfaa6c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 43528ddbe29580c30ca15d0588b5bd6d24d66a48
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="validate-data-at-the-subscriber"></a>Validar dados no assinante
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Este tópico descreve como validar os dados no Assinante no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)] ou RMO (Replication Management Objects).  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-validate-data-for-subscriptions-to-a-transactional-publication-management-studio"></a>Para validar dados para assinaturas para uma publicação transacional (Management Studio)  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e expanda o nó do servidor.  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e expanda o nó de servidor.  
   
 2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-validate-data-for-a-single-subscription-to-a-merge-publication-management-studio"></a>Para validar dados para uma única assinatura para uma publicação de mesclagem (Management Studio)  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e expanda o nó do servidor.  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e expanda o nó de servidor.  
   
 2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .  
   
@@ -118,7 +118,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-validate-data-for-all-subscriptions-to-a-merge-publication-management-studio"></a>Para validar dados para todas as assinaturas para uma publicação de mesclagem (Management Studio)  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e expanda o nó do servidor.  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e expanda o nó de servidor.  
   
 2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .  
   
@@ -206,7 +206,7 @@ ms.lasthandoff: 11/17/2017
   
     3.  Exiba informações na guia **Histórico de Sincronização** na área de texto **Última mensagem da sessão selecionada** .  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-validate-data-for-all-articles-in-a-transactional-publication"></a>Para validar dados para todos os artigos em uma publicação transacional  
   

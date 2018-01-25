@@ -23,13 +23,13 @@ ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1f516bb0add6bd1f415260f061b1de77bf2b22a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9d367f1a130f9bcdffa1ab28af8bac99fec00deb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Criar e anexar agendas para trabalhos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Agendar trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent significa definir as condições que fazem com que o trabalho comece a ser executado sem interação com o usuário. Você pode agendar um trabalho para execução automática criando uma nova agenda para ele ou anexando uma agenda existente para o trabalho.  

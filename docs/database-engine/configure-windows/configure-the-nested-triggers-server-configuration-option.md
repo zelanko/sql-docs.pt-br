@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: nested triggers option
 ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 56948a68f8e026882566072ddaa8dee9fb87a23e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 47c74bc3622b2c817736dcf316f5e332b1b780a4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-the-nested-triggers-server-configuration-option"></a>Configurar a opção de configuração de servidor nested triggers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Na página **Avançado** , defina a opção **Permitir que Gatilhos Disparem Outros Gatilhos** como **Verdadeiro** (o padrão) ou **Falso**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-nested-triggers-option"></a>Para configurar a opção nested triggers  
   
@@ -82,12 +82,12 @@ GO
   
 ```  
   
- Para obter mais informações, consulte [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 ##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção nested triggers  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar gatilhos aninhados](../../relational-databases/triggers/create-nested-triggers.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

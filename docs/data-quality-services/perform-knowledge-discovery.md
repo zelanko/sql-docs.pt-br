@@ -18,15 +18,15 @@ f1_keywords:
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2071dfc0ea042138a9f6b5f00261b81847f7f909
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9c9cb4fb01f38cf1a65069dbd41ccc4d5d0aa91b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="perform-knowledge-discovery"></a>Executar a descoberta da base de dados de conhecimento
   Este tópico descreve como criar uma base de dados de conhecimento através da descoberta da base de dados de conhecimento. No processo de descoberta, o [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) analisa os dados em uma fonte de dados de exemplo através de um processo assistido por computador e adiciona o conhecimento obtido na base de dados de conhecimento. Esse conhecimento pode ser modificado e aprimorado na etapa **Gerenciar Valores de Domínio** da atividade de descoberta da base de dados de conhecimento ou na atividade de gerenciamento de domínio.  

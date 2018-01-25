@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: refreshing data
 ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d1a2cd6083e3c3243d1a4930499851fc74b491e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 994079c72210858454dc9b649dda406ea57d6128
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="refresh-data-in-replication-monitor"></a>Atualizar dados no Replication Monitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] No Replication Monitor, a janela principal e a janela de detalhes (as janelas abertas na janela principal) podem ser atualizadas automaticamente e manualmente. Para atualizar uma janela manualmente, pressione F5. Por padrão, a janela principal é atualizada a cada cinco segundos automaticamente; a taxa pode ser personalizada para cada Publicador.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Na janela de detalhes **Assinatura \<SubscriptionName>**, clique em **Ação** e, em seguida, em **Atualização Automática**. A taxa de atualização é determinada pela configuração em **Taxa de atualização** , na caixa de diálogo **Configurações do Publicador** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorando a Replicação](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

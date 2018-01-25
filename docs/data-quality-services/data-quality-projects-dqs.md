@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9fffe98d01164f8af7ebe5c59153eb7c0b06c79a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6ee5c4c70581b275ce19b597f505a8d577ea88a0
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-quality-projects-dqs"></a>Projetos de qualidade de dados (DQS)
   Um projeto de qualidade de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) é uma forma de usar uma base de dados de conhecimento para melhorar a qualidade dos dados de origem, executando atividades de *limpeza de dados* e *correspondência de dados* e, depois, exportando os dados resultantes para um banco de dados do SQL Server ou um arquivo .csv. Você pode criar um projeto de qualidade de dados como um projeto de limpeza ou um projeto de correspondência para executar as respectivas atividades. Os projetos de limpeza e correspondência podem ser executados usando a mesma base de dados de conhecimento, pois o conhecimento para limpeza e correspondência de dados pode ser criado na mesma base de conhecimento.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="ProfilingNotification"></a> Perfil de dados e notificações  
  Ao executar as atividades de limpeza e correspondência em um projeto de qualidade de dados, você encontra estatísticas em tempo real e informações sobre os dados que estão sendo processados pelo DQS. A criação de perfil de dados o ajuda a avaliar a eficácia dos processos de limpeza e correspondência, e a potencialmente determinar até que ponto a limpeza ou a correspondência de dados ajudaram a melhorar a qualidade dos dados. A criação de perfil do DQS fornece duas dimensões de qualidade de dados: *integridade* (até que ponto os dados estão presentes) e *exatidão* (até que ponto os dados podem ser empregados para o uso pretendido). Além disso, com base nas informações de criação de perfil de dados, notificações são exibidas para o usuário nas ações que podem ser adotadas para aprimorar as operações de limpeza e correspondência de dados. Para obter informações detalhadas sobre a criação de perfil de dados e notificações, consulte [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
 |Descreve como abrir, desbloquear, renomear e excluir um projeto de qualidade de dados.|[Abrir, desbloquear, renomear e excluir um projeto do Data Quality](open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |Descreve como abrir um projeto do Integration Services no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|[Abrir projetos do Integration Services no Data Quality Client](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Bases de Dados de Conhecimento DQS e domínios](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

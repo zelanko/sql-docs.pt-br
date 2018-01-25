@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.jobactivitymon.filter.f1
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ff338e1a2fd9fa170d880d6f7719ce3a08ac599
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b03932c680b2f46485ec633ba31149b3e5d41235
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Monitor de atividade do trabalho (Configurações de Filtro)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta página para reduzir o número de linhas visíveis no Monitor de Atividade do Trabalho. Insira critérios em uma ou em várias das caixas disponíveis, para exibir apenas as linhas correspondentes aos valores especificados. Algumas das caixas, como **Status** ou **Tipo de Bloqueio** , oferecem um número limitado de valores possíveis em uma lista suspensa. Outras, como a caixa **Aplicativo,** permitem inserir qualquer valor e quantos valores você desejar em uma lista separada por vírgula. Ícones da barra de ferramentas permitem ordenar as caixas disponíveis por categoria ou em ordem alfabética. Clique nos critérios para mostrar uma breve descrição de cada um.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
  **Resultado da Última Execução**  
  Filtra trabalhos pelo status da última vez em que os trabalhos foram executados.  
   
- **Ativado**  
+ **Enabled**  
  Exibe apenas os trabalhos habilitados ou não habilitados.  
   
  **Categoria**  
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
  **Liberada**  
  Retorna as configurações de filtro para as configurações padrão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar Atividade do Trabalho](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
   
   

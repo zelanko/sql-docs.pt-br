@@ -18,15 +18,15 @@ helpviewer_keywords:
 - CPU affinity mask option
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fbb539201ac8566005913d9b45574aa7f261b089
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6ea44d12240c33bdc6cbab9b41ffa9489ce5e8a0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>Opção de configuração do servidor de máscara de Entrada-Saída de afinidade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/20/2017
 > [!CAUTION]  
 >  Não configure afinidade de CPU no sistema operacional Windows e também configure a máscara de afinidade em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essas definições estão tentando alcançar o mesmo resultado e se as configurações forem inconsistentes, você poderá ter resultados imprevisíveis. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Você poderá configurar melhor a afinidade de CPU no **com a opção** sp_configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

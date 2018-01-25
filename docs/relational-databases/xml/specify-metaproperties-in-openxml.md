@@ -19,15 +19,15 @@ helpviewer_keywords:
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e1d8a0a29b6d92aeab9c1c6e4afa01a2665add6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ffde4891d1481b628012a64d58b73f904e131f7e
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Especificar metapropriedades no OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Atributos de metapropriedades em um documento XML são atributos que descrevem as propriedades de um item XML, tal como elemento, atributo ou qualquer outro nó DOM. Esses atributos não existem fisicamente no documento de texto XML. No entanto o OPENXML fornece essas metapropriedades para todos os itens XML. Essas metapropriedades permitem extrair informações, como posicionamento local e informações de namespace, de nós XML. Essas informações fornecem mais detalhes do que os que estão aparentes na representação textual.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Não é possível fazer referência a essas metapropriedades em qualquer navegação XPath.  
   
-|Atributo de metapropriedade|Descrição|  
+|Atributo de metapropriedade|Description|  
 |----------------------------|-----------------|  
 |**@mp:id**|Fornece um identificador de todo o documento gerado pelo sistema do nó DOM. Desde que o documento não seja reanalisado, essa ID faz referência ao mesmo nó XML.<br /><br /> Uma ID de XML de **0** indica que o elemento é um elemento raiz. A ID de XML de seu pai é NULL.|  
 |**@mp:localname**|Armazena a parte local do nome do nó. Ele é usado com um URI de namespace e de prefixo para nomear nós de elementos ou atributos.|  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
  Essa tabela mostra as propriedades pai adicionais que são fornecidas e que permitem recuperar informações sobre a hierarquia.  
   
-|Atributo de metapropriedade pai|Descrição|  
+|Atributo de metapropriedade pai|Description|  
 |-----------------------------------|-----------------|  
 |**@mp:parentid**|Corresponde a **../@mp:id**|  
 |**@mp:parentlocalname**|Corresponde a **../@mp:localname**|  
@@ -217,7 +217,7 @@ O3    1999-07-14 00:00:00.000     <Order amount="100" note="Wrap it blue
 O4    1996-01-20 00:00:00.000     <Order amount="10000"/>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   
  [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)  
   

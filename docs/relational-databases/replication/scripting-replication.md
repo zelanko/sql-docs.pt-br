@@ -20,15 +20,15 @@ helpviewer_keywords:
 - transactional replication, scripting
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 14c94b31079539e93cb0d4a11293e0942f7b9070
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8e4748752f96591ef331f3740d3b4529f5e1f456
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="scripting-replication"></a>Replicação de script
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Todos os componentes de replicação em uma topologia devem ser incluídos no script como parte de um plano de recuperação de desastre e scripts também podem ser usados para automatizar tarefas repetitivas. Um script contém os procedimentos armazenados do sistema Transact-SQL necessários para implementar os componentes de replicação incluídos no script, como uma publicação ou assinatura. Os scripts podem ser criados em um assistente (como o Assistente para Nova Publicação) ou no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] depois de você criar um componente. É possível exibir, modificar e executar o script por meio do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou do **sqlcmd**. Os scripts podem ser armazenados com arquivos de backup para serem usados no caso de uma topologia de replicação precisar ser reconfigurada.  

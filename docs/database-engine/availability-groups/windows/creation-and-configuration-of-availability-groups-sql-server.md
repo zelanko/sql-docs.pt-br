@@ -19,13 +19,13 @@ ms.assetid: 7f89fab8-6ee2-4273-9de0-e594bfb9407f
 caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f6a4c245abda4f8c410a567876299cc747339a4c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c881c4c092ad7f65de48ed8bdfeff69d46440f39
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="creation-and-configuration-of-availability-groups-sql-server"></a>Criação e configuração de grupos de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Os tópicos desta seção explicam como implantar uma implementação do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] em instâncias do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] que residem nos diferentes nós WSFC (Windows Server Failover Clustering) em um único cluster de failover do WSFC.  
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/20/2017
   
      [White papers da equipe de consultoria do cliente do SQL Server](http://sqlcat.com/)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Administração de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
  [Políticas AlwaysOn para problemas operacionais com grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   

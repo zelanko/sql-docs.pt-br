@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.configdistwizard.distproperties.publishers.f1
 helpviewer_keywords: Distributor Properties dialog box
 ms.assetid: 31c81898-11ca-4d2f-afea-2fbc71e19ce4
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 03cebdfa0015a6d8413730644754e692391288c3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c917bfd8dc3094c5cea0a75027f3ebe9065d68bb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor-properties-publishers"></a>Propriedades do Distribuidor, Publicadores
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor** permite habilitar Publicadores a usarem esse Distribuidor. Você também pode definir propriedades associadas a esses Publicadores. Esteja ciente de que habilitar um Publicador a usar esse servidor como seu Distribuidor remoto não faz daquele servidor um Publicador. Você deve se conectar ao Publicador, configurá-lo para publicação e escolher esse servidor como o Distribuidor. Você pode configurar o Publicador e escolher um Distribuidor pelo Assistente para Nova Publicação.  
@@ -46,10 +46,10 @@ ms.lasthandoff: 11/17/2017
   
  Para mais informações sobre segurança de distribuidores, consulte [Proteger o distribuidor](../../relational-databases/replication/security/secure-the-distributor.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar Distribuição](../../relational-databases/replication/configure-distribution.md)   
  [Configurar a publicação e a distribuição](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Criar uma publicação](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Exibir e modificar propriedades de Publicador e Distribuidor](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)  
   
   

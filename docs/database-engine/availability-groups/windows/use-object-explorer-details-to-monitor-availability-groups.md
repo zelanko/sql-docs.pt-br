@@ -20,13 +20,13 @@ ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 caps.latest.revision: "28"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f83e241a5360b7edcdf6739d4d7bdbc96517cea7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dc0896ba691bac565cd116a2f5da6cc70951063d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Usar os detalhes do Pesquisador de Objetos para monitorar grupos de disponibilidade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como usar o painel **Detalhes do Pesquisador de Objetos** do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para monitorar e gerenciar grupos de disponibilidade Always On, réplicas de disponibilidade e bancos de dados de disponibilidade existentes.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  No Pesquisador de Objetos, conecte-se à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na qual você deseja monitorar um grupo de disponibilidade e clique no nome do servidor para expandir a árvore de servidores.  
   
-3.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade** .  
+3.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade**.  
   
 4.  O painel **Detalhes do Pesquisador de Objetos** exibe todos os grupos de disponibilidade para os quais a instância do servidor hospeda uma réplica. Para cada grupo de disponibilidade, a coluna **Instância do Servidor (Primária)** exibe o nome da instância do servidor que está hospedando a réplica primária.  Para exibir mais informações sobre um determinado grupo de disponibilidade, selecione-o no Pesquisador de Objetos.  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/20/2017
   
  Os valores possíveis são os seguintes:  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Não Permitir Conexões**|Nenhuma conexão direta é permitida para os bancos de dados de disponibilidade quando essa réplica de disponibilidade está agindo como uma réplica secundária. Os bancos de dados secundários não estão disponíveis para acesso de leitura.|  
 |**Permitir Somente Conexões de Intenção de Leitura**|Apenas conexões diretas somente leitura são permitidas quando essa réplica está agindo como uma réplica secundária. Todos os bancos de dados na réplica estão disponíveis para acesso de leitura.|  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/20/2017
  **Estado da Conexão**  
  Indica se uma réplica secundária está conectada atualmente à réplica primária. Os valores possíveis são os seguintes:  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Desconectado**|Para uma réplica de disponibilidade remota, indica que ela está desconectada da réplica de disponibilidade local. A resposta da réplica local ao estado Desconectado depende de sua função, da seguinte forma:<br /><br /> na réplica primária, se uma réplica secundária estiver desconectada, os bancos de dados secundários serão marcados como **Não Sincronizado** na réplica primária, e a réplica primária esperará que a secundária seja reconectada.<br /><br /> Na réplica secundária, ao detectar que está desconectada, a réplica secundária tentará reconectar-se à réplica primária.|  
 |**Conectado**|Uma réplica de disponibilidade remota que está conectada atualmente à réplica local.|  
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/20/2017
  **Estado da Sincronização**  
  Indica se uma réplica secundária está sincronizada no momento com a réplica primária. Os valores possíveis são os seguintes:  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Não Sincronizado**|O banco de dados não está sincronizado ou ainda não foi unido ao grupo de disponibilidade.|  
 |**Sincronizado**|O banco de dados está sincronizado com o banco de dados primário na réplica primária atual, se houver, ou na réplica primária mais recente.<br /><br /> Observação: em modo de desempenho, o banco de dados nunca está no estado Sincronizado.|  
@@ -130,7 +130,7 @@ ms.lasthandoff: 11/20/2017
   
  Os estados de sincronização possíveis são:  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Sincronizando|O banco de dados secundário recebeu os registros do log de transações do banco de dados primário que ainda não estão gravados no disco (protegidos).<br /><br /> Observação: no modo de confirmação assíncrona, o estado da sincronização é sempre **Sincronizando**.|  
 |||  
@@ -138,7 +138,7 @@ ms.lasthandoff: 11/20/2017
  **Suspenso**  
  Indica se o banco de dados de disponibilidade está online no momento. Os valores possíveis são os seguintes:  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Suspenso**|Esse estado indica que o banco de dados está suspenso localmente e precisa ser retomado manualmente.<br /><br /> Na réplica primária, o valor não é confiável para um banco de dados secundário. Para determinar com confiança se um banco de dados secundário está suspenso, consulte-o na réplica secundária que hospeda o banco de dados.|  
 |**Não Unido**|Indica que o banco de dados secundário não foi unido ao grupo de disponibilidade ou foi removido do grupo.|  
@@ -148,7 +148,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Para obter informações sobre contadores de desempenho para bancos de dados de disponibilidade, veja [SQL Server, Réplica de banco de dados](../../../relational-databases/performance-monitor/sql-server-database-replica.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
  [Exibir propriedades do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)   

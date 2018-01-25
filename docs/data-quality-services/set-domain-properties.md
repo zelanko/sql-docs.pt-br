@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 21943e484d690d0ff26cf9a93e0688e0804dd02c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5f67adedb0a54b35bb9ca5d4a27f42086e010d4b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="set-domain-properties"></a>Definir propriedades do domínio
   Este tópico descreve como definir propriedades de domínio no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Defina as propriedades em um novo domínio depois de criá-la conforme descrito em [Create a Domain](../data-quality-services/create-a-domain.md).  
   
-3.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+3.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Acompanhamento: após definir propriedades de domínio  
  Após definir propriedades de domínio, você poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  

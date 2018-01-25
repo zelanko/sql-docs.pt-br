@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.newpubwizard.articleproperties.f1
 helpviewer_keywords: Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e023115d959322e0e870d6ef43c7ffcdcc82f21f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bfb3322c176c068f37d2bd52a7f5721244d1d324
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="article-properties---ltarticlegt"></a>Propriedades do Artigo – &lt;Artigo&gt;
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A caixa de diálogo **Propriedades do Artigo** está disponível no Assistente para Nova Publicação e na caixa de diálogo **Propriedades de Publicação**. Ela permite exibir e definir propriedades para todos os tipos de artigos. Algumas propriedades só podem ser definidas quando a publicação é criada, e outras só podem ser definidas se a publicação não tiver assinaturas ativas. Propriedades que não podem ser definidas são exibidas como somente leitura.  
@@ -176,7 +176,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Para alguns tipos, é possível selecionar mais de uma opção. A[!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você use o mapeamento padrão, a menos que seu aplicativo exija um mapeamento diferente. Para obter mais informações, consulte [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Criar e aplicar o instantâneo inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   

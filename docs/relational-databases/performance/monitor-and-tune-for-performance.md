@@ -31,15 +31,15 @@ helpviewer_keywords:
 - monitoring server performance [SQL Server], about monitoring server performance
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f9825e46e8f39d8077df64a2e15b6a2eeec47c03
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 32bb41096ecb83b0a1bd5b9cd51f406788419b4d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-and-tune-for-performance"></a>Monitorar e ajustar o desempenho
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A meta do monitoramento de bancos de dados é avaliar o desempenho do servidor. Um monitoramento eficaz envolve a criação de instantâneos periódicos do desempenho atual para isolar processos que estão ocasionando problemas, e a coleta contínua de dados para o controle das tendências de desempenho.  
@@ -76,7 +76,7 @@ Mudanças nas condições resultam em alterações no desempenho. Em suas avalia
 |[Ferramentas para monitoramento e ajuste de desempenho](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)|Lista as ferramentas de monitoramento e ajuste disponíveis no SQL Server.|  
 |[Estabelecer uma linha de base de desempenho](../../relational-databases/performance/establish-a-performance-baseline.md)|Como estabelecer uma linha de base de desempenho.|  
 |[Isolar problemas de desempenho](../../relational-databases/performance/isolate-performance-problems.md)|Isole problemas de desempenho do banco de dados.|  
-|[Identificar afunilamentos](../../relational-databases/performance/identify-bottlenecks.md)|Monitorar e acompanhar o desempenho de servidor para identificar afunilamentos.|  
+|[Identificar afunilamentos](../../relational-databases/performance/identify-bottlenecks.md)|Monitorar e acompanhar o desempenho de servidor para identificar gargalos.|  
 |[Monitoramento de desempenho e atividade de servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|Usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as ferramentas de monitoramento de desempenho e atividades do Windows.|  
 |[Exibir e salvar planos de execução](../../relational-databases/performance/display-and-save-execution-plans.md)|Exiba e salve os planos de execução em um arquivo em formato XML.|  
 |[Estatísticas de consulta dinâmica](../../relational-databases/performance/live-query-statistics.md)|Exiba estatísticas em tempo real sobre as etapas de execução da consulta.|  

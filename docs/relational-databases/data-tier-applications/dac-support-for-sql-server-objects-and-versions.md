@@ -16,15 +16,15 @@ helpviewer_keywords:
 - objects [SQL Server], data-tier applications
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 939f92fab054aefc60c23500ed6207c3adef0e21
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 12b99446025274f0f3652a7552f53775283af7ac
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Suporte de DAC para objetos e versões do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Um aplicativo da camada de dados (DAC) dá suporte aos objetos do [!INCLUDE[ssDE](../../includes/ssde-md.md)] mais usados.  
@@ -121,7 +121,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Soluções alternativas** – as operações de extração e de exportação gravarão arquivos de dados BCP de fidelidade total nos arquivos .dacpac ou .bacpac. Para evitar limitações, use o utilitário de linha de comando BCP.exe do SQL Server para implantar dados de fidelidade total em um banco de dados de destino de um pacote de DAC.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   

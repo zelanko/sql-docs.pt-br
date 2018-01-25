@@ -17,13 +17,13 @@ ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
 caps.latest.revision: "7"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 097c5a707431a2293362e871e0d6249320e4ac79
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 84684e7c9327cce92add49ff44aa881b3af25023
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>Propriedades de grupo de disponibilidade: novo grupo de disponibilidade (página Preferências de Backup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta caixa de diálogo para exibir e alterar as preferências de backup do grupo de disponibilidade selecionado.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/20/2017
  **Excluir Réplica**  
  Selecione se desejar que esta réplica de disponibilidade nunca seja escolhida para executar backups. Isso é útil, por exemplo, para uma réplica de disponibilidade remota para a qual você nunca deseja que ocorra o failover de backups.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Secundárias ativas: backup em réplicas secundárias &#40;Grupos de Disponibilidade AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   

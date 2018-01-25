@@ -23,13 +23,13 @@ ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a1e427daff8ec555854db5173ca5d84a5a711cd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9d6227d55469f2b1b0688a814083336917a1c534
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Painel de Critérios (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O painel Critérios permite que sejam especificadas as opções de consulta – como colunas de dados a exibir, como ordenar os resultados e quais linhas selecionar – inserindo as seleções em uma grade de planilha. No painel Critérios você pode especificar o seguinte:  

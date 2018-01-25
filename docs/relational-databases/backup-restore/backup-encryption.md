@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c58756989760d56c2f7906c0493cefb2b30d2b0d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f4618510f90d373aaba8a602b3f473cd6ed3a4a7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-encryption"></a>Criptografia de backup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico fornece uma visão geral das opções de criptografia para backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele inclui detalhes do uso, benefícios e práticas recomendadas para criptografia durante o backup.  
@@ -138,12 +138,12 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
-|Tópico/tarefa|Descrição|  
+|Tópico/tarefa|Description|  
 |-----------------|-----------------|  
 |[Criar um backup criptografado](../../relational-databases/backup-restore/create-an-encrypted-backup.md)|Descreve as etapas básicas necessárias para criar um backup criptografado|  
 |[Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Fornece um exemplo de como criar um backup criptografado protegido por chaves no Azure Key Vault.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral do backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)  
   
   

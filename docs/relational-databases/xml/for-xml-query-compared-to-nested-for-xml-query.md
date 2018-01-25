@@ -16,15 +16,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c58715813c4369258d5244e517e2e1753a9046c7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6ca00676ee79264e5d4e6c46261ef21e1479e1e9
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Consulta FOR XML comparada com consulta FOR XML aninhada
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Este tópico compara uma consulta XML FOR de nível único com uma consulta XML FOR aninhada. Um dos benefícios do uso de consultas FOR XML aninhadas é que é possível especificar uma combinação de XML centrado em atributo e em elemento para resultados da consulta. O exemplo demonstra isso.  
@@ -206,7 +206,7 @@ FOR XML AUTO, TYPE
   
  Se você remover a diretiva `ELEMENTS` da consulta `FOR XML` aninhada que gera subcategorias de produtos, todo o resultado será centrado em atributo. Em seguida, você pode escrever esta consulta sem aninhamento. A adição de resultados de `ELEMENTS` em um XML que é parcialmente centrado em atributo e em elemento. Esse resultado não pode ser gerado por uma consulta FOR XML de nível único.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar consultas FOR XML aninhadas](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

@@ -27,15 +27,15 @@ helpviewer_keywords:
 - data-tier application [SQL Server], export
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3342065c2af974fffc5e4a6d33c338362deb4a55
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d4318ad30d660b9e04aa53100061fd6ed6036bc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="export-a-data-tier-application"></a>Exportar um aplicativo da camada de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A exportação de um banco de dados ou DAC (aplicativo da camada de dados) implantado cria um arquivo de exportação que contém as definições dos objetos no banco de dados e todos os dados contidos nas tabelas. O arquivo de exportação pode ser importado para outra instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], ou para [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. As operações de importação-exportação podem ser combinadas para migrar um DAC entre instâncias, criar um arquivo morto ou criar uma cópia local de um banco de dados implantado no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
  O processo de exportação define a versão de DAC como 1.0.0.0 e a descrição de DAC no arquivo de exportação para uma cadeia de caracteres vazia. Se o banco de dados foi implantado de um DAC, a definição do DAC no arquivo de exportação conterá o nome atribuído ao DAC original; caso contrário, o nome do DAC será definido como o nome do banco de dados.  
   
 
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
  Um DAC ou banco de dados só pode ser exportado de um banco de dados no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior.  
   
  Você não poderá exportar um banco de dados com objetos sem suporte em um DAC ou usuários contidos. Para obter mais informações sobre os tipos de objetos com suporte em um DAC, consulte [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
@@ -130,8 +130,8 @@ ms.lasthandoff: 11/17/2017
   
 3.  Use o método **Export** do tipo **Microsoft.SqlServer.Management.Dac.DacStore** para exportar o DAC. Especifique o nome do DAC a ser exportado e o caminho para a pasta onde o arquivo de exportação será colocado.  
   
-## <a name="see-also"></a>Consulte também  
- [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Aplicativos da Camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Extrair um DAC de um banco de dados](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)  
   
   

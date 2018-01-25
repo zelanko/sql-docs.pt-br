@@ -18,15 +18,15 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 501582405c40f5688514c9ce5fbcfe06ca2952c1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e081c0e361ac7c52a4afc52adcdd2207f3465781
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-tutorials"></a>Tutoriais de Replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A replicação engloba tutoriais que são utilizados para ensinar a configurar e a executar topologias de replicação usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -46,7 +46,7 @@ Aprenda a usar a replicação transacional para replicar dados entre servidores 
 [Replicando dados com clientes móveis](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)  
 Aprenda a usar a replicação de mesclagem para permutar dados entre um servidor e um ou mais clientes conectados apenas ocasionalmente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Segurança e proteção &#40;Replicação&#41;](../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   

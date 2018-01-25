@@ -19,13 +19,13 @@ ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 caps.latest.revision: "72"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8fecac050a6b6be1ff2605d1926d975647e84a3a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 81c8212ce3e85c15e6015e64474b50be394f7869
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-witness"></a>Testemunha de espelhamento de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para dar suporte a failover automático, a sessão de espelhamento de banco de dados deve ser configurada em modo de alta segurança e também deve ter uma terceira instância de servidor, conhecida como a *testemunha*. A testemunha é uma instância opcional do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite ao servidor espelho, em uma sessão de modo de alta segurança, reconhecer se um failover automático deve ser iniciado. Ao contrário dos dois parceiros, a testemunha não atende ao banco de dados. O suporte ao failover automático é a única função da testemunha.  
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Remover a testemunha de uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Modos de operação de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)   

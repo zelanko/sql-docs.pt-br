@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 caps.latest.revision: "65"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9db1fe5e47e062e2fa1a4563d54059b0ecfdc0af
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6fdf75cd720e6463a41475212beb07ee4a79819
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---advanced-page"></a>Propriedades do servidor – página Avançado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta página para exibir ou modificar as configurações avançadas do servidor.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Exibir ou alterar as propriedades de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)  
   
-## <a name="containment"></a>Contenção  
+## <a name="containment"></a>Containment  
  Habilitar bancos de dados independentes  
  Indica se esta instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite bancos de dados independentes. Quando definido como **True**, um banco de dados independente poderá ser criado, restaurado ou anexado. Quando definido como **False**, um banco de dados independente não pode ser criado, restaurado nem anexado a essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Alterar a propriedade de contenção pode ter um impacto na segurança do banco de dados. Habilitar bancos de dados independentes permite que proprietários de banco de dados concedam acesso a esse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Desabilitar bancos de dados independentes pode impedir que os usuários se conectem. Para entender o impacto da propriedade de contenção, veja [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md) e [Práticas recomendadas de segurança com bancos de dados independentes](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 11/20/2017
  **Espera da Consulta**  
  Especifica o tempo em segundos (de 0 a 2147483647) que uma consulta espera por recursos antes de acusar tempo limite. Se o valor padrão -1 for usado, o tempo limite será calculado como 25 vezes o custo estimado da consulta. Para obter mais informações, veja [Configurar a opção query wait de configuração de servidor](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - file size [SQL Server]
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 833d84c44f7c2ef9cae31cf1908cd5732518b469
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e0e765bcdaa052e2cf72c679ab0a6c913e137f79
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="shrink-a-file"></a>Reduzir um arquivo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como reduzir um arquivo de dados ou de log no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Aponte para **Tarefas**, aponte para **Reduzir**e, então, clique em **Arquivos**.  
   
-     **Banco de Dados**  
+     **Backup de banco de dados**  
      Exibe o nome do banco de dados selecionado.  
   
      **Tipo de arquivo**  
@@ -128,7 +128,7 @@ ms.lasthandoff: 11/17/2017
   
 9. Clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-shrink-a-data-or-log-file"></a>Para reduzir um arquivo de dados ou de log  
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 11/17/2017
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../relational-databases/databases/codesnippet/tsql/shrink-a-file_1.sql)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)   
  [Reduzir um banco de dados](../../relational-databases/databases/shrink-a-database.md)   
  [Excluir arquivos de dados ou de log de um banco de dados](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)   

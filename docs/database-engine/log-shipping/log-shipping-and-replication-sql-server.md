@@ -18,13 +18,13 @@ ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 074a97f74e322b75030d5a921ba4e2b453a59a49
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a80220d2c963dcf5879422ae9e754963a1bb287d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Replicação e envio de logs (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O envio de logs envolve duas cópias de um único banco de dados que, normalmente, residem em computadores diferentes. Em determinado momento, apenas uma cópia do banco de dados está atualmente disponível aos clientes. Essa cópia é conhecida como o banco de dados primário. As atualizações feitas pelos clientes no banco de dados primário são propagadas por meio do envio de logs para a outra cópia do banco de dados, conhecida como banco de dados secundário. O envio de logs envolve a aplicação de um log de transações de todas as inserções, atualizações ou exclusões feitas no banco de dados primário para o banco de dados secundário.  
@@ -119,7 +119,7 @@ ms.lasthandoff: 11/20/2017
   
      Se você sincronizar com um Assinante que está executando uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], a assinatura não poderá ser anônima; ela deverá ser a assinatura de um cliente ou de um servidor (referenciadas como assinaturas locais e assinaturas globais nas versões anteriores). Para obter mais informações, consulte [Sincronizar dados](../../relational-databases/replication/synchronize-data.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos e tarefas de replicação](../../relational-databases/replication/replication-features-and-tasks.md)   
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Espelhamento e replicação de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  

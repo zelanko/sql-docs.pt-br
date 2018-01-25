@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4aa8dd433a02aff0dbca1b2d6e3843b7f9cf64d5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1c8ff28a3194600f1783158deb5e56d96b036963
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="reference-data-services-in-dqs"></a>Serviços de Dados de Referência no DQS
   Os dados de referência se referem a um conjunto exato e completo de dados relacionados ou globais categorizados (além dos limites de uma empresa) que estão disponíveis para domínios públicos confiáveis ou de provedores de conteúdo comercial premium.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  **Usar os domínios mapeados para a atividade de limpeza em um projeto de qualidade de dados**: ao criar um projeto de qualidade de dados para a atividade **Limpeza** , selecione a base de dados de conhecimento que contém domínios/domínios compostos mapeados com serviços de dados de referência na etapa 2 e execute a atividade de limpeza.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

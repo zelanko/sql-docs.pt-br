@@ -16,13 +16,13 @@ ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
 caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10de1655781e7e19db0b5468294221da4ef11d93
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a56e8861cd256421962ef1728caabc325c0940bf
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-1---create-the-off-by-default-policy"></a>Lição 1-1 – Criar a política desativada por padrão
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Esta tarefa cria uma condição chamada Correio Desativado que é baseada na faceta Configuração da Área da Superfície. Então, cria uma política chamada Desativada por Padrão.  

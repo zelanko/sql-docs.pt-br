@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Lock Pages in Memory option
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b5758fcbb5e73e40a3022d5a97fb744b6735c7d2
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: ad766a982b180e6fad72ec0ca3314648be81315f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Habilitar a opção Bloquear Páginas na Memória (Windows)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Essa política do Windows determina quais contas podem usar um processo para manter dados na memória física, impedindo o sistema de paginar os dados para a memória virtual em disco.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/07/2017
   
 8.  Reinicie o serviço de Mecanismo de Dados do SQL Server para que esta configuração entre em vigor.
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções Server Memory de configuração do servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   
   

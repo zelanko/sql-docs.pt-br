@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Replication Monitor, refreshing
 ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a564b6b253365200f1cfeeee61750f945c84bc88
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2aa377789758d9a21eb07bf0c68edf8993454849
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>Cache, atualização e desempenho do Replication Monitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] O Replication Monitor é projetado para monitorar um número grande de computadores em um sistema de produção de forma eficaz. As consultas que o Replication Monitor usa para executar cálculos e reunir dados são armazenadas em cache e atualizadas periodicamente. O armazenamento em cache reduz o número de consultas e cálculos necessários conforme diferentes páginas são exibidas no Replication Monitor, e permite que a monitoração seja bem-escalonada para usuários múltiplos.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Evite registrar um número grande de Distribuidores e configurar o Replication Monitor para conectar-se automaticamente a todos eles.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Executar trabalhos de manutenção de replicação &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
  [Monitorando a Replicação](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   

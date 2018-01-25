@@ -17,13 +17,13 @@ ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be37bfdd42e267eddea76089e4c1bca2d94865b7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a45bef71e8b715e6c9967c3c050cefb2873e3fe9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>Exibir propriedades do ouvinte do grupo de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como exibir as propriedades de um *ouvinte do grupo de disponibilidade* Always On usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)] no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância de servidor que hospeda qualquer réplica de disponibilidade do grupo de disponibilidade cujo ouvinte você deseja exibir. Clique no nome do servidor para expandir a arvore de servidores.  
   
-2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade** .  
+2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade**.  
   
 3.  Expanda o nó do grupo de disponibilidade e expanda o nó **Ouvintes de Grupos de Disponibilidade** .  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/20/2017
   
  A grade exibe cada uma das sub-redes nas quais o ouvinte escuta, e o endereço IP associado àquela sub-rede.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para exibir as propriedades do ouvinte**  
   
  Para monitorar os ouvintes de disponibilidade, use as seguintes exibições:  
@@ -97,7 +97,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Remover um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Monitorar grupos de disponibilidade &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  

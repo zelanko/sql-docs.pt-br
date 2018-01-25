@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.validate.mergeoptions.f1
 helpviewer_keywords: Subscription Validation Options dialog box
 ms.assetid: 4958c4ab-2025-42ce-b836-6fb4e9e6f24d
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3f0ec8237e5c7ca3f7b2a344a44b45b37b918c3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 90c5d99900c05986e049546b376789db5963dab6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-validation-options-merge-subscriptions"></a>Opções de Validação de Assinatura (assinaturas de mesclagem)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Use a caixa de diálogo **Opções de Validação de Assinatura** para especificar se a validação deve usar somente uma contagem de linha ou uma contagem de linhas e uma soma de verificação binária.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
  **Verificar as contagens de linhas e comparar as somas de verificação para verificar os dados da linha**  
  Além de contar o número de linhas no Publicador e no Assinante, uma soma de verificação de todos os dados é calculada usando o algoritmo de soma de verificação binária. Se a contagem de linhas falhar, a soma de verificação não será executada. Essa opção não é válida para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Validar dados no assinante](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [Validar os dados replicados](../../relational-databases/replication/validate-replicated-data.md)  
   

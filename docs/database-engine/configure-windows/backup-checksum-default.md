@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: eef42653-85d0-4eaf-94bd-2ea1b024cd23
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44de6c161391446b2195cfbe4459d9d14014f01a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d097927f0000aeb577c103dd36521717bbcb693d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-checksum-default"></a>padrão de soma de verificação de backup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,13 +32,13 @@ ms.lasthandoff: 11/20/2017
   
 |||  
 |-|-|  
-|**Valor**|**Significado**|  
+|**Value**|**Significado**|  
 |0|Desabilitado. Essa é a configuração padrão.|  
 |1|Ativado|  
   
  A configuração é efetuada imediatamente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Habilitar ou desabilitar as somas de verificação de backup durante backup ou restauração &#40;SQL Server&#41;](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   
   

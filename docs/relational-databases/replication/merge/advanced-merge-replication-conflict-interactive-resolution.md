@@ -18,15 +18,15 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4afd19a16cfe32cfe3b0e71f097b75abb3b74cd7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0acc68329b1b9b07633c24db2521f5cf3502b38f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-merge-replication-conflict---interactive-resolution"></a>Conflito de replicação de mesclagem avançada – resolução interativa
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A replicação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece um Resolvedor Interativo, que permite a resolução de conflitos de forma manual durante a sincronização sob demanda no Gerenciador de Sincronização do Windows da [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Ativado em tempo de execução, o Resolvedor Interativo é uma interface gráfica que exibe dados para todas as linhas conflitantes e que fornece opções para visualização e edição de dados de conflito, resolvendo individualmente cada conflito.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
  Para usar o Resolvedor Interativo, consulte [Especificar resolução interativa de conflitos para artigos de mesclagem](../../../relational-databases/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md) e [Sincronizar uma assinatura usando o Gerenciador de sincronização do Windows &#40;Gerenciador de sincronização do Windows&#41;](../../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

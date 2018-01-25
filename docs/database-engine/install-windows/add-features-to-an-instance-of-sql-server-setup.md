@@ -19,19 +19,19 @@ ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 9dae46b18a46e4457bfe999f9cfdb71d60ec6651
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 9c95fa0d45f4d4734030e871e09acfe254ca2450
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Adicionar recursos a uma instância do SQL Server (Instalação)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico contém um procedimento passo a passo para adicionar recursos a uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Alguns componentes ou serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são específicos de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eles também são conhecidos como capazes de reconhecimento de instância. Eles compartilham a mesma versão que a instância que os hospeda e são usados exclusivamente para aquela instância. Você pode adicionar os componentes que reconhecem a instância a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], junto com os componentes compartilhados se eles ainda não estiverem instalados. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  Para adicionar recursos a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do prompt de comando, consulte [Instalar o SQL Server por meio do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Antes de continuar, examine os tópicos em [Planejando uma instalação do SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
   
 > [!NOTE]  
@@ -144,12 +144,12 @@ ms.lasthandoff: 11/20/2017
   
 26. Se você for instruído a reiniciar o computador, faça-o agora. É importante ler a mensagem do Assistente de Instalação ao concluir a Instalação. Para obter informações sobre os arquivos de log da Instalação, veja [Exibir e ler arquivos de log da Instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
  Configure a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Para reduzir a área da superfície sujeita a ataques de um sistema, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala e ativa serviços e recursos principais de maneira seletiva. Para obter mais informações, consulte [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir e ler arquivos de log da Instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Validar uma instalação do SQL Server](../../database-engine/install-windows/validate-a-sql-server-installation.md)   
  [Reparar uma instalação com falha do SQL Server 2016](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)   

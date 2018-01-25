@@ -28,15 +28,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 caps.latest.revision: "57"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cf2185ff9c0aa70c97b4d067f4d58d5360b70948
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: a3aaf70933f08d804c3a186c91177a63982aa0e5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparar XML digitado com XML não digitado
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] É possível criar variáveis, parâmetros e colunas do tipo **xml**. Opcionalmente, é possível associar uma coleção de esquemas XML a uma variável, parâmetro ou coluna de tipo **xml** . Nesse caso, a instância do tipo de dados **xml** é chamada *com tipo*. Caso contrário, a instância XML é chamada *sem-tipo*.  
@@ -161,9 +161,9 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
  Observe que você ainda pode usar uma instrução select SQL simples para recuperar o tipo de dados XML inteiro, mesmo que ele contenha anos negativos. É recomendável substituir anos negativos por um ano dentro do intervalo com suporte recente ou alterar o tipo do elemento ou atributo para **xs:string**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar instâncias de dados XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipo de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [Métodos de tipos de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Linguagem de modificação de dados XML &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   
  [Dados XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

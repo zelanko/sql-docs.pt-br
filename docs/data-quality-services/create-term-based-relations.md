@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55f89b361e4c210c252a0fc629f7b5664390c056
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fef7b422366598e1974a07e4ee36e0100157dfa2
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-term-based-relations"></a>Criar relações baseadas em termos
   Este tópico descreve como criar relações baseadas em termos para um domínio no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Uma relação baseada em termos permite que você faça uma correção em um termo que faz parte de um valor em um domínio. Elas permitem que diversos valores idênticos, exceto pela ortografia de uma parte comum deles, sejam considerados como sinônimos idênticos. Por exemplo, você pode configurar uma relação baseada em termos que altere o termo “Inc.” para “Incorporated”. O termo “Inc.” será alterado toda vez que ocorrer no domínio. Instâncias de "Contoso, Inc." serão alteradas para "Contoso, Incorporated", e os dois valores serão considerados sinônimos exatos.  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/20/2017
   
     6.  Localize um valor na tabela Relações inserindo um ou mais dígitos na caixa de texto **Localizar** . Correspondências para a cadeia de caracteres serão realçadas. Use as setas para cima e para baixo para se mover para instâncias diferentes da cadeia de caracteres na tabela.  
   
-    7.  **Verificador Ortográfico**: se um valor na coluna **Valor** ou **Corrigir para** tiver um sublinhado vermelho ondulado, o Verificador Ortográfico sugerirá uma correção para o valor. Clique com o botão direito do mouse no valor com sublinhado e selecione um dos valores propostos pelo Verificador Ortográfico. Como alternativa, você pode clicar em **Adicionar** no menu de atalho para continuar com o valor original. Para obter mais informações, consulte [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) e [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+    7.  **Verificador Ortográfico**: se um valor na coluna **Valor** ou **Corrigir para** tiver um sublinhado vermelho ondulado, o Verificador Ortográfico sugerirá uma correção para o valor. Clique com o botão direito do mouse no valor com sublinhado e selecione um dos valores propostos pelo Verificador Ortográfico. Como alternativa, você pode clicar em **Adicionar** no menu de atalho para continuar com o valor original. Para obter mais informações, consulte [Usar o verificador ortográfico DQS](../data-quality-services/use-the-dqs-speller.md) e [Definir propriedades de domínio](../data-quality-services/set-domain-properties.md).  
   
         > [!NOTE]  
         >  Para usar o Verificador Ortográfico, você pode habilitá-lo na página **Propriedades de Domínio** ou, se ele estiver desabilitado na página **Propriedades de Domínio** , você poderá clicar no ícone **Habilitar/Desabilitar o Verificador Ortográfico** na página **Relações Baseadas em Termos** para habilitá-lo nessa página.  

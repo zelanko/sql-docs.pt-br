@@ -19,17 +19,17 @@ helpviewer_keywords:
 - transactional replication, subscribing
 ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bca4071c25a248b235b59e71957f7ecbe0149de1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b05513645f78b39129d9d738c344e049f532a7ba
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="create-a-pull-subscription"></a>Criar uma assinatura pull
+# <a name="create-a-pull-subscription"></a>Create a Pull Subscription
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como criar uma assinatura pull no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)] ou RMO (Replication Management Objects).  
   
  A configuração de uma assinatura pull para a replicação de P2P é possível por script, mas não está disponível por meio do assistente.  
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  Complete as páginas no Assistente para Novas Assinaturas.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  As assinaturas pull podem ser criadas de forma programada, usando os procedimentos de replicação armazenados. Os procedimentos armazenados usados dependem do tipo de publicação ao qual a assinatura pertence.  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Para criar uma assinatura pull em um instantâneo ou em uma publicação transacional  
@@ -1125,11 +1125,11 @@ Finally
 End Try  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Conceitos de objetos de gerenciamento de replicação](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Exibir e modificar propriedades de assinatura pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
- [Assinar Publicações](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

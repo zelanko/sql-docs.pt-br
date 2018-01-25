@@ -18,15 +18,15 @@ helpviewer_keywords:
 - system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8c204e1ed53a4969b903d7821e151dd6cb183848
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c267615cb7970d7833821662cfd97662093a2edb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="rebuild-system-databases"></a>Recriar bancos de dados do sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Os bancos de dados do sistema devem ser recriados para corrigir problemas de corrupção nos bancos de dados do sistema [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md) ou [resource](../../relational-databases/databases/resource-database.md), ou então para modificar o agrupamento em nível de servidor padrão. Este tópico fornece instruções passo a passo para recriar bancos de dados do sistema no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/17/2017
   
      **Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName /SQLSYSADMINACCOUNTS=accounts [ /SAPWD= StrongPassword ] [ /SQLCOLLATION=CollationName]**  
   
-    |Nome do parâmetro|Descrição|  
+    |Nome do parâmetro|Description|  
     |--------------------|-----------------|  
     |/QUIET ou /Q|Especifica que a Instalação é executada sem nenhuma interface do usuário.|  
     |/ACTION=REBUILDDATABASE|Especifica que Instalação recria os bancos de dados do sistema.|  
@@ -204,7 +204,7 @@ ms.lasthandoff: 11/17/2017
   
  Depois que a operação de recriação é concluída, examine se há erros nos logs do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O local do log padrão é C:\Arquivos de Programas\Microsoft SQL Server\130\Setup Bootstrap\Logs. Para localizar o arquivo de log que contém os resultados do processo de recriação, altere os diretórios para a pasta Logs em um prompt de comando e execute `findstr /s RebuildDatabase summary*.*`. Essa pesquisa apontará para qualquer arquivo de log que contenha os resultados da recriação dos bancos de dados do sistema. Abra os arquivos de log e examine-os para verificar se há mensagens de erro relevantes.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Bancos de dados do sistema](../../relational-databases/databases/system-databases.md)  
   
   

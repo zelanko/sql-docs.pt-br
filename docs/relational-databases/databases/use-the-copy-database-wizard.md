@@ -28,15 +28,15 @@ helpviewer_keywords:
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 caps.latest.revision: "64"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 28f18fd090691e5aae6023fe7282ef235b12778c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 534d9cd96831bfc79475f99111580e36f3603add
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-the-copy-database-wizard"></a>Usar o Assistente para Copiar Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Assistente para Copiar Banco de Dados move ou copia bancos de dados e determinados objetos de servidor facilmente de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para outra instância, sem tempo de inatividade do servidor. Com esse assistente, é possível fazer o seguinte: 
@@ -121,7 +121,7 @@ Permite que um usuário se conecte por meio de uma conta de usuário do Microsof
 -    **Usar Autenticação do SQL Server**  
 Permite que um usuário se conecte fornecendo um nome de usuário e uma senha da Autenticação do SQL Server.
 
-     -    **Nome de usuário**  
+     -    **User name**  
 Usado para inserir o nome de usuário que será usado para se conectar. Esta opção só estará disponível se você tiver optado por conectar-se usando a **Autenticação do SQL Server**.
 
      -    **Senha**  
@@ -141,7 +141,7 @@ Permite que um usuário se conecte por meio de uma conta de usuário do Microsof
 -    **Usar Autenticação do SQL Server**  
 Permite que um usuário se conecte fornecendo um nome de usuário e uma senha da Autenticação do SQL Server.
 
-     -    **Nome de usuário**  
+     -    **User name**  
 Usado para inserir o nome de usuário que será usado para se conectar. Esta opção só estará disponível se você tiver optado por conectar-se usando a **Autenticação do SQL Server**.
 
      -    **Senha**  
@@ -241,7 +241,7 @@ Lista os objetos que serão transferidos para o servidor de destinos.  Para excl
 ###   <a name="location-of-source-database-files"></a>Local dos arquivos de banco de dados de origem
 Essa página está disponível apenas quando os servidores de origem e de destino forem diferentes.  Especifique um compartilhamento de sistema de arquivos que contém os arquivos de banco de dados no servidor de origem.
   
--    **Banco de Dados**  
+-    **Backup de banco de dados**  
      Exibe o nome de cada banco de dados que é movido.  
   
 -    **Local da pasta**  

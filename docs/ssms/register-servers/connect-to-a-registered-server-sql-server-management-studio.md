@@ -18,13 +18,13 @@ ms.assetid: e13f242e-33f4-4d8d-9b10-0652ef4d0156
 caps.latest.revision: "20"
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97847eb477589c5fa5c95df70cb8bb202f638cf3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: af7bc684ed329e7faa7531470ab0a4e66b8f195c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="connect-to-a-registered-server-sql-server-management-studio"></a>Conectar-se a um servidor registrado (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este tópico descreve como conectar-se a um servidor registrado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Se o servidor não estiver em execução ou não for encontrado na rede, os Servidores Registrados exibem um erro.  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - columns [SQL Server], copying
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3f4cad9d5695de70072694ddfae257dc2c7639d2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ab6c5c510e8f1d13c5212f316d27dabcdedd1009
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copiar colunas de uma tabela em outra (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/17/2017
 9.  Execute a consulta para inserir os dados da tabela de origem na tabela de destino.
 
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Para copiar definições de coluna de uma tabela para outra  
   

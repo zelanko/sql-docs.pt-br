@@ -16,13 +16,13 @@ ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 caps.latest.revision: "62"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d7056cfd99338221679acbb9eee74de203546a72
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 72ba23869786b5d1351279a586b51aa2ffc5d11f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Configurando o espelhamento de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Esta seção descreve os pré-requisitos, as recomendações e as etapas para configuração do espelhamento de banco de dados. Para obter uma introdução ao espelhamento de banco de dados, consulte [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/20/2017
   
     3.  Restaure todos os backups de log feitos desde o backup completo ou diferencial do banco de dados.  
   
-     Para obter mais informações, consulte [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+     Para obter mais informações, veja [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
     > [!IMPORTANT]  
     >  Conclua as etapas de configuração restantes o mais rápido possível depois de fazer o backup do banco de dados principal. Antes de iniciar o espelhamento nos parceiros, você deve criar um backup do log atual no banco de dados original e restaurá-lo no futuro banco de dados espelho.  
@@ -156,7 +156,7 @@ ms.lasthandoff: 11/20/2017
 -   [Solução de problemas de configuração de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Espelhamento de banco de dados: interoperabilidade e coexistência &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   

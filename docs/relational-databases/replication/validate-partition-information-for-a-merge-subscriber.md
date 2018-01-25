@@ -17,15 +17,15 @@ helpviewer_keywords:
 - validating partition information
 ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 263370412d485827bae3f62f1e433b8d8587fb4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cc42df9e9610c6deda9d2301b1a54d1a40d49888
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>Validar informações de partição para um assinante de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando você define um filtro de linha com parâmetros para uma publicação de mesclagem, você usa uma função que faz referência a informações do Assinante, tais como o nome de logon do Assinante. Por padrão, a replicação valida a informação do Assinante baseada nessa função, antes de cada sincronização e sempre que um instantâneo é aplicado ao Assinante. O processo de validação assegura que os dados são particionados corretamente para cada Assinante. O comportamento da validação é controlado pela propriedade de publicação **validate_subscriber_info**, que pode ser alterada usando [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) ou na página **Opções de Assinatura** da caixa de diálogo **Propriedades de Publicação**. Para obter mais informações sobre como alterar propriedades de publicação, consulte [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  Quando o Agente de Mesclagem valida uma partição, além de validar a partição comparando aos valores retornados por todas as funções usadas em expressões de filtragem, o agente também verifica se o instantâneo foi gerado antes das mudanças que o invalidem, como operações de limpeza de metadados ou mudanças de esquema. Se um instantâneo é muito antigo, o Agente de Mesclagem retornará um erro e você precisará gerar novamente um instantâneo particionado para esse Assinante, baseado em um instantâneo regular atual.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administração &#40;Replicação&#41;](../../relational-databases/replication/administration/administration-replication.md)   
  [Melhores práticas para a administração de replicação](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [Reinicializar as assinaturas](../../relational-databases/replication/reinitialize-subscriptions.md)   

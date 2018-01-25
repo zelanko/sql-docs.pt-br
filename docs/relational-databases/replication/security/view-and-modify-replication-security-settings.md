@@ -19,15 +19,15 @@ helpviewer_keywords:
 - security [SQL Server replication], modifying settings
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1982ed9a207dad495d6e9e8555785a9260498cc6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 811b1d9e9ccc5d561ddc45b9b3c9e9c87443a27d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Exibir e modificar configurações de segurança de replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como exibir e modificar configurações de segurança de replicação no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o RMO (Replication Management Objects). Por exemplo, você pode querer alterar a conexão do Agente de Leitor de Log com o Publicador de uma autenticação do SQL Server para uma autenticação integrada do Windows ou alterar as credenciais usadas para executar um trabalho do agente quando a senha do Windows foi alterada. Para obter informações sobre as permissões exigidas por cada agente, consulte [Modelo de segurança do agente de replicação](../../../relational-databases/replication/security/replication-agent-security-model.md).  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
      [RMO (Replication Management Objects)](#RMOProcedure)  
   
--   **Acompanhamento:**  [Depois de modificar configurações de segurança de replicação](#FollowUp)  
+-   **Follow Up:**  [After you modify replication security settings](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -247,7 +247,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 > [!IMPORTANT]  
 >  Em todos os procedimentos a seguir, quando possível, solicite aos usuários que digitem as credenciais de segurança em tempo de execução. Se armazenar credenciais em um arquivo de script, proteja o arquivo para evitar acesso não autorizado.  
@@ -575,8 +575,8 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="FollowUp"></a> Acompanhamento: depois de modificar configurações de segurança de replicação  
  Depois de alterar o logon ou a senha de um agente, você deve parar e reiniciar o agente antes que as alterações entrem em vigor.  
   
-## <a name="see-also"></a>Consulte também  
- [Conceitos de objetos de gerenciamento de replicação](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Atualizar scripts de replicação &#40;programação Transact-SQL de replicação&#41;](../../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
  [Gerenciar logons e senhas na replicação](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
  [Modelo de segurança do agente de replicação](../../../relational-databases/replication/security/replication-agent-security-model.md)   

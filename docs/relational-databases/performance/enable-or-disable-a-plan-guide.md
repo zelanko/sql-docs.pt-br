@@ -18,15 +18,15 @@ helpviewer_keywords:
 - disabling plan guides
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6bc2185e7ece0af55344e248abe8f3c6b6b591b5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1e3500c6ee0e6e4da1f96e0fb1784a6219e34449
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>Habilitar ou desabilitar um guia de plano
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você pode desabilitar e habilitar guias de plano no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um único ou todos os guias de plano de um banco de dados podem ser habilitados ou desabilitados.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Na caixa de diálogo **Desabilitar Todos os Guias de Plano** ou **Habilitar Todos os Guias de Plano** , verifique se a ação escolhida foi bem-sucedida e clique em **Fechar**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-disable-or-enable-a-plan-guide"></a>Para habilitar ou desabilitar um guia de plano  
   

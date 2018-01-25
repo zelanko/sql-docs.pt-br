@@ -17,15 +17,15 @@ helpviewer_keywords:
 - publishing [SQL Server replication], configuring
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 309d63222c4863c7a8a85fc7d36f1d19bcc2cc32
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fb54d609ebaafeab5c358d0cbf089d0d71194337
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurar a publicação e a distribuição
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como configurar publicação e distribuição no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] ou RMO (Replication Management Objects).  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
     -   Além disso, faça o script das definições de configuração. Para obter mais informações, consulte [Scripting Replication](../../relational-databases/replication/scripting-replication.md).  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Publicação e distribuição de replicação podem ser configuradas de forma programada, usando-se procedimentos de replicação armazenados.  
   
 #### <a name="to-configure-publishing-using-a-local-distributor"></a>Para configurar publicação usando um distribuidor local  
@@ -168,7 +168,7 @@ ms.lasthandoff: 11/17/2017
   
  [!code-vb[HowTo#rmo_vb_AddDistPub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_adddistpub)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar propriedades de Publicador e Distribuidor](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Configurar Distribuição](../../relational-databases/replication/configure-distribution.md)   

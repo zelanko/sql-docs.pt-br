@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 80347417-338d-4bea-8885-91fae5181cfe
 caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38cb373f87fe012ba9d3a16cc565e67a9e212859
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0fd60011006d595a7ff771c65ba0d3bbe3b7de75
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-and-run-traces-using-transact-sql-stored-procedures"></a>Criar e executar rastreamentos usando procedimentos armazenados de Transact-SQL.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O processo de rastrear com o Rastreamento do SQL varia dependendo de você estar criando e executando o rastreamento através do Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou de procedimentos armazenados de sistema.  
@@ -45,14 +45,14 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|Description|  
 |-----------|-----------------|  
 |[Otimizar o Rastreamento do SQL](../../relational-databases/sql-trace/optimize-sql-trace.md)|Contém informações sobre maneiras de reduzir os efeitos do rastreamento sobre o desempenho do sistema.|  
 |[Filtrar um rastreamento](../../relational-databases/sql-trace/filter-a-trace.md)|Contém informações sobre como usar filtros em rastreamentos.|  
 |[Limitar o tamanho de arquivos e tabelas de rastreamento](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)|Contém informações sobre como limitar o tamanho dos arquivos e tabelas nos quais são gravados os dados do rastreamento. Observe que só o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pode gravar informações de rastreamento em tabelas.|  
 |[Agendar rastreamentos](../../relational-databases/sql-trace/schedule-traces.md)|Contém informações sobre como definir a hora de início e a hora de término de um rastreamento.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   

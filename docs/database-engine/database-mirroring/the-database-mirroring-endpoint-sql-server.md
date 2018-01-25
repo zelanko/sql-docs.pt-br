@@ -21,13 +21,13 @@ ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 caps.latest.revision: "47"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c8d42834b9e77e626c860d54c2548eda64fba43e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5e4be5534091e37d58f56ee9928759dbdea22c62
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>O ponto de extremidade de espelhamento de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Participar do [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ou fazer o espelhamento de banco de dados de uma instância de servidor requer seu próprio *ponto de extremidade de espelhamento de banco de dados* dedicado. Esse ponto de extremidade é um ponto de extremidade com finalidade especial usado exclusivamente para receber conexões de outras instâncias de servidor. Em uma determinada instância de servidor, toda conexão de espelhamento do [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ou de banco de dados com qualquer outra instância de servidor usa um único ponto de extremidade de espelhamento de banco de dados.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/20/2017
 -   [sys.database_mirroring_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Segurança de transporte para espelhamento de banco de dados e Grupos de Disponibilidade AlwaysOn (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Solução de problemas de configuração de espelhamento de banco de dados (SQL Server)](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
  [sys.dm_hadr_availability_replica_states (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)   

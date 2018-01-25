@@ -23,15 +23,15 @@ helpviewer_keywords:
 - DPC
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f5c13f332469856a9467e1694e59024a3222d5b1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f7ba445a69a1bbb019b73676bf843a1dafc0884e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="affinity-mask-server-configuration-option"></a>Opção affinity mask de configuração de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ GO
 ### <a name="reconfigure"></a>Reconfiguração  
  Se uma máscara de afinidade especificada violar a política de licenciamento ao executar o comando RECONFIGURE de [!INCLUDE[tsql](../../includes/tsql-md.md)] , uma mensagem de erro será reportada à sessão do cliente e ao log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o administrador do banco de dados terá que reconfigurar a máscara de afinidade. Nenhum comando RECONFIGURE WITH OVERRIDE é aceito nesse caso.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

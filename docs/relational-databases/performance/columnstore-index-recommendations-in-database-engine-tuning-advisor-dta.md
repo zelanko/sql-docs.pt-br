@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor, columnstore and rowstore indexes
 ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c94bd59f4e383606c12aa90efc1fbff2f831d1cd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 887b3134a4c8dee933e46b9501e7622f678325fc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>Recomendações de índice columnstore no DTA (Orientador de Otimização do Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ Para habilitar as recomendações de columnstore ao usar o utilitário de linha 
 
 Para obter mais informações sobre o utilitário de linha de comando dta.exe, consulte [Utilitário dta](../../tools/dta/dta-utility.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 [Guia de Índices columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)       
 [Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md)      
 [Tutorial: Orientador de Otimização do Mecanismo de Banco de Dados](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)

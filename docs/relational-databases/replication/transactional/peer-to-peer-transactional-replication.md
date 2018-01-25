@@ -19,15 +19,15 @@ helpviewer_keywords:
 - peer-to-peer transactional replication
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 caps.latest.revision: "71"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7efa0d8d1176b1f58f798aed75969456e2ef998a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c7d2e0bedf8161b39323cf8260e154890032dfdb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Ponto a ponto – Replicação transacional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -184,7 +184,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Você não pode reinicializar assinaturas em uma topologia ponto a ponto. Se for necessário garantir que um nó tenha uma nova cópia dos dados, restaure o backup no nó.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrar uma topologia ponto a ponto &#40;programação Transact-SQL de replicação&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Estratégias para fazer backup e restaurar o instantâneo e a replicação transacional](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
  [Tipos de publicação para a Replicação Transacional](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)  

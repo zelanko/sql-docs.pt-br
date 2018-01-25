@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newsubwizard.subscriptiontype.f1
 ms.assetid: 9a50f588-ee45-4a87-826f-372ff0798587
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62cc8604ef818768c612fc144ec3510330292bcf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4618c40e494cd53f48b859a514976da3b29ea322
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-type"></a>Tipo de Assinatura
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A replicação de mesclagem oferece dois tipos de assinatura: servidor e cliente (referenciado em versões anteriores do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como global e local, respectivamente). Os Assinantes com uma assinatura de servidor podem:  
@@ -42,9 +42,9 @@ ms.lasthandoff: 11/17/2017
  **Propriedades da assinatura**  
  Para cada Assinante, selecione **Cliente** ou **Servidor** na caixa de listagem suspensa na coluna **Tipo de Assinatura** . Para Assinantes com assinaturas de servidor, insira um número entre 0 e 99.99 na coluna **Prioridade para a Resolução de Conflitos** (quanto mais alto for o número, mais alta será a prioridade para o Assinante).  
   
-## <a name="see-also"></a>Consulte também  
- [Criar uma assinatura pull](../../relational-databases/replication/create-a-pull-subscription.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Assinar Publicações](../../relational-databases/replication/subscribe-to-publications.md)  
+ [Assinar publicações](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

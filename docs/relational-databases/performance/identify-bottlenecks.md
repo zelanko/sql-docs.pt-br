@@ -24,20 +24,20 @@ helpviewer_keywords:
 - identifying bottlenecks [SQL Server]
 ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aa81294830ca1c87f7a4228239d6e200c3522acc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a98c591125dad32d9bdd9d77b62bacda8fe47750
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="identify-bottlenecks"></a>Identificar afunilamentos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] O acesso simultâneo a recursos compartilhados provoca afunilamentos. Em geral, os afunilamentos estão presentes em todo sistema de software e são inevitáveis. Porém, demandas excessivas em recursos compartilhados causam um tempo de resposta ruim e devem ser identificadas e ajustadas.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] O acesso simultâneo a recursos compartilhados provoca gargalos. Em geral, os gargalos estão presentes em todo sistema de software e são inevitáveis. Porém, demandas excessivas em recursos compartilhados causam um tempo de resposta ruim e devem ser identificadas e ajustadas.  
   
- São causas de afunilamentos:  
+ São causas de gargalos:  
   
 -   Recursos insuficientes, exigindo componentes adicionais ou atualizados.  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 -   Recursos incorretamente configurados.  
   
 ## <a name="analyzing-bottlenecks"></a>Analisando afunilamentos  
- Durações excessivas de diversos eventos são indicadores de afunilamentos que podem ser ajustados.  
+ Durações excessivas de diversos eventos são indicadores de gargalos que podem ser ajustados.  
   
  Por exemplo:  
   
@@ -56,9 +56,9 @@ ms.lasthandoff: 11/17/2017
   
 -   Solicitações de clientes podem levar mais tempo devido a congestionamento da rede.  
   
- A seguir, encontram-se cinco grandes áreas a monitorar, ao rastrear o desempenho do servidor, para identificar afunilamentos.  
+ A seguir, encontram-se cinco grandes áreas a monitorar, ao rastrear o desempenho do servidor, para identificar gargalos.  
   
-|Possível área de afunilamento|Efeitos no servidor|  
+|Possível área de gargalo|Efeitos no servidor|  
 |------------------------------|---------------------------|  
 |Uso de memória|Memória insuficiente alocado ou disponível para o Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] degrada o desempenho. Os dados têm que ser lidos do disco, em vez de diretamente do cache de dados. Sistemas operacionais Microsoft Windows executam paginação excessiva, permutando dados de e para o disco, segundo a necessidade de páginas.|  
 |Utilização de CPU|Uma taxa de utilização de CPU cronicamente alta pode indicar que as consultas do [!INCLUDE[tsql](../../includes/tsql-md.md)] precisam ser ajustadas ou que é necessário atualizar a CPU.|  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
 |Conexões de usuário|Muitos usuários podem estar acessando o servidor simultaneamente, provocando degradação do desempenho.|  
 |Bloqueios|Aplicativos incorretamente projetados podem causar bloqueios e obstruir a simultaneidade, causando tempos de resposta mais longos e taxas de transferência de transações mais baixas.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso da CPU](../../relational-databases/performance-monitor/monitor-cpu-usage.md)   
  [Monitorar o uso do disco](../../relational-databases/performance-monitor/monitor-disk-usage.md)   
  [Monitorar o uso da memória](../../relational-databases/performance-monitor/monitor-memory-usage.md)   

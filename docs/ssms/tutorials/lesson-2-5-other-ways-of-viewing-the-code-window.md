@@ -14,15 +14,15 @@ ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: d94f79ec-9f8f-4c06-b62b-3ed22a0f8971
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 027435e6ffe5fed7d62aac3b7a583872ca9f8fe0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cae5ffe9e604be6525010d5f595752d599e2ab2c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-2-5---other-ways-of-viewing-the-code-window"></a>Lição 2-5 – Outros modos de exibir a Janela de Código
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A janela de código pode ser configurada para exibir diversas janelas de código de vários modos.  

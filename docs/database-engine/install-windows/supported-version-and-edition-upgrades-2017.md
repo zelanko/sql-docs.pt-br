@@ -20,12 +20,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 caps.latest.revision: "148"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: cd0b3b84613720d825102f2676c2c07fb49a7cfc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 81810a418fd7f36dcadabdac5c535fa8bdaadcd3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>Upgrades de versão e edição com suporte do SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você pode atualizar do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]. Este tópico lista os caminhos de atualização com suporte dessas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as atualizações de edição com suporte para o [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
@@ -181,7 +181,7 @@ Para obter instruções passo a passo sobre como fazer um upgrade de edição, c
   
 -   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Evaluation para [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 
  [Edições e recursos com suporte do SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
  

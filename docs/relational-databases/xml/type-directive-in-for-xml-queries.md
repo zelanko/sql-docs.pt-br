@@ -16,15 +16,15 @@ helpviewer_keywords:
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e30226fae64fab358a113ba82abefca113b2a2ca
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7ade0766fd94e302d6df6204d64acd94b98522ed
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Diretiva TYPE em consultas FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] O suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) permite solicitar opcionalmente que o resultado de uma consulta XML FOR seja retornado como o tipo de dados **xml**, especificando a diretiva TYPE. Isso permite processar o resultado de uma consulta FOR XML no servidor. Por exemplo, é possível especificar um XQuery nela, atribuir o resultado a uma variável de tipo **xml** ou gravar [Consultas FOR XML aninhadas](../../relational-databases/xml/use-nested-for-xml-queries.md).  
@@ -153,7 +153,7 @@ SELECT (SELECT XmlCol.query('/Root')
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

@@ -21,13 +21,13 @@ ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
 caps.latest.revision: "20"
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89f9a409da7eede0af44d58d9d33a1105ec5b0e0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: acc83458670e254fcbbc25f683684621b513f08e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>Mover um servidor registrado ou grupo de servidores registrados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este tópico descreve como organizar os servidores em Servidores Registrados movendo um servidor registrado ou grupos de servidores no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Grupos de Servidores podem conter servidores registrados ou outros grupos de servidores. Tanto os servidores como os grupos de servidores podem ser movidos de um grupo de servidores para outro.  

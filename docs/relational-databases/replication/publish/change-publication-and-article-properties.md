@@ -19,22 +19,22 @@ helpviewer_keywords:
 - articles [SQL Server replication], properties
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d43da2c0314c2b724a7d5b04db3a56ff5ceb664f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2322ccf6cb2543f772aa72218ab0dcddce876223
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="change-publication-and-article-properties"></a>Alterar propriedades da publicação e do artigo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Depois que uma publicação foi criada, a maior parte das propriedades de publicação e do artigo podem ser alteradas, mas algumas requerem que um novo instantâneo seja gerado e/ou que as assinaturas sejam reinicializadas. Este tópico fornece informações sobre todas as propriedades que requerem uma ou ambas as ações, se forem alteradas.  
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>Propriedades de uma publicação de instantâneo ou de replicação transacional  
   
-|Descrição|Procedimento armazenado|Propriedades|Requisitos|  
+|Description|Procedimento armazenado|Propriedades|Requisitos|  
 |-----------------|----------------------|----------------|------------------|  
 |Alterar o formato de instantâneo.|**sp_changepublication**|**sync_method**|Novo instantâneo.|  
 |Alterar o local do instantâneo.|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Novo instantâneo.|  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>Propriedades de um artigo para instantâneo e replicação transacional  
   
-|Descrição|Procedimento armazenado|Propriedades|Requisitos|  
+|Description|Procedimento armazenado|Propriedades|Requisitos|  
 |-----------------|----------------------|----------------|------------------|  
 |Descartar um artigo|**sp_droparticle**|Todos os parâmetros.|Os artigos podem ser descartados antes que as assinaturas sejam criadas. Com os procedimentos armazenados, é possível descartar uma assinatura de um artigo, usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], a assinatura inteira deve ser descartada, recriada e sincronizada. Para obter mais informações, consulte [Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).|  
 |Alterar um filtro de coluna.|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="publication-properties-for-merge-replication"></a>Propriedades de publicação para a replicação de mesclagem  
   
-|Descrição|Procedimento armazenado|Propriedades|Requisitos|  
+|Description|Procedimento armazenado|Propriedades|Requisitos|  
 |-----------------|----------------------|----------------|------------------|  
 |Alterar o formato de instantâneo|**sp_changemergepublication**|**sync_mode**|Novo instantâneo.|  
 |Alterar o local do instantâneo.|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Novo instantâneo.|  
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="article-properties-for-merge-replication"></a>Propriedades do artigo para replicação de mesclagem  
   
-|Descrição|Procedimento armazenado|Propriedades|Requisitos|  
+|Description|Procedimento armazenado|Propriedades|Requisitos|  
 |-----------------|----------------------|----------------|------------------|  
 |Descartar um artigo, quando o artigo tem o último filtro com parâmetros na publicação.|**sp_dropmergearticle**|Todos os parâmetros|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Descartar um artigo, quando é um artigo pai em um filtro de junção ou em um registro lógico (isso tem como efeito colateral o descarte da junção).|**sp_dropmergearticle**|Todos os parâmetros|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 |Habilitar ou desabilitar assinaturas de somente download (alterar para ou de outras opções de carregamento não requer nenhuma ação especial).|**sp_changemergearticle**|Alterar para ou de um valor **2** para **subscriber_upload_options**|Reinicialize as assinaturas.|  
 |Alterar o proprietário da tabela de destino.|**sp_changemergearticle**|**destination_owner**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administração &#40;Replicação&#41;](../../../relational-databases/replication/administration/administration-replication.md)   
  [Criar e aplicar o instantâneo](../../../relational-databases/replication/create-and-apply-the-snapshot.md)   
  [Reinicializar as assinaturas](../../../relational-databases/replication/reinitialize-subscriptions.md)   

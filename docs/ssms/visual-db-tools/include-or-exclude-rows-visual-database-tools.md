@@ -26,13 +26,13 @@ ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8bf614a4620340212028e004aa73c1b8c7819379
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 020bbbcbae62267966e9fb020e3dc0f668cc977f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>Incluir ou excluir linhas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Para restringir o número de linhas que uma consulta SELECT deve retornar, crie critérios de pesquisa ou de filtro. No SQL, os critérios de pesquisa aparecem na cláusula WHERE da instrução, ou quando se está criando uma consulta de agregação na cláusula HAVING.  

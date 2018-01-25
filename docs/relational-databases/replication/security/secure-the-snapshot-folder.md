@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: snapshots [SQL Server replication], security
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7bfea98b84a87b9bd35a06f4ce2ae49a69a0105
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4816ea4f6e42fdcabb4fbbbdd8a58650a14b1448
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secure-the-snapshot-folder"></a>Proteger uma pasta de instantâneo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A pasta de instantâneos é um diretório que armazena arquivos de instantâneos e recomendamos que você dedique o diretório para esse fim. Conceda permissão de gravação ao Agente de Instantâneo para a pasta e assegure que a permissão de leitura seja fornecida somente para a conta do Windows usada pelo Agente de Distribuição ou Agente de Mesclagem para acessar a pasta. A conta do Windows associada com o agente deve ser uma conta de domínio para acessar uma pasta de instantâneo que está localiza em um computador remoto.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
  Para obter mais informações sobre a configuração e alteração de senha para acesso a instantâneos via FTP, consulte a seção "Entrega de instantâneo por FTP" neste tópico [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Locais da pasta de instantâneos alternativos](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
  [Inicializar uma assinatura com um instantâneo](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   

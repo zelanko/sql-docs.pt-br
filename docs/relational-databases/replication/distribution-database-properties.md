@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.configdistwizard.distdbproperties.f1
 helpviewer_keywords: Distribution Database Properties dialog box
 ms.assetid: 0f404ab9-1237-4936-8df5-888baab6a245
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6116c7ba186ca3f51172c46d60dd2bcc8ca96fe8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4c33a5730c910c0225a11a24b49313bc57d64e29
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distribution-database-properties"></a>Propriedades do Banco de Dados de Distribuição
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A caixa de diálogo **Propriedades do Banco de Dados de Distribuição** permite a exibição de várias propriedades e a definição do período de retenção da transação e do período de retenção do histórico para o banco de dados.  
@@ -54,9 +54,9 @@ ms.lasthandoff: 11/17/2017
   
  Para obter mais informações, consulte  [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar Distribuição](../../relational-databases/replication/configure-distribution.md)   
- [Criar uma assinatura pull](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Exibir e modificar propriedades de Publicador e Distribuidor](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)  
   

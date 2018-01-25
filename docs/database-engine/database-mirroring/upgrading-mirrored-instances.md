@@ -19,13 +19,13 @@ ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 caps.latest.revision: "44"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8b3e3b72900fe64a8925b6ebc9e8901b63e2dde
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 06f9d525bc46843dcf5456fc70db0cdd4bd78b74
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrading-mirrored-instances"></a>Atualização de Instâncias Espelhadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ao fazer o upgrade de uma instância espelhada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para uma nova versão do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], para um novo service pack ou uma atualização cumulativa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do Windows, você pode reduzir o tempo de inatividade para cada banco de dados espelhado para um único failover manual executando uma atualização sem interrupção (ou dois failovers manuais em caso de failback para o primário original). Uma atualização sem-interrupção consiste em um processo de várias etapas que, em sua forma mais simples, envolve atualizar a instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que funciona como o servidor espelho de uma sessão de espelhamento, executar o failover manual no banco de dados espelhado, atualizar a antiga instância principal do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e retomar o espelhamento. Na prática, o processo exato dependerá do modo de operação e do número e do layout de sessões de espelhamento em execução nas instâncias do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que você está atualizando.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Para saber mais sobre como usar o espelhamento de banco de dados com envio de log durante a migração, baixe este [white paper sobre Espelhamento de Banco de Dados e Envio de Log](https://t.co/RmO6ruCT4J).  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Antes de começar, examine as seguintes informações importantes:  
   
 -   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): verifique se você pode atualizar para o SQL Server 2016 de sua versão do sistema operacional Windows e da versão do SQL Server. Por exemplo, não é possível atualizar diretamente de uma instância do SQL Server 2005 para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -158,7 +158,7 @@ ms.lasthandoff: 11/20/2017
   
     -   [Adicionar uma testemunha de espelhamento de banco de dados usando a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atualizar para o SQL Server 2016 usando o Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Instalar o SQL Server 2016 do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Espelhamento de banco de dados ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   

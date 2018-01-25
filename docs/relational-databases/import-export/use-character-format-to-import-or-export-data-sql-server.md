@@ -16,15 +16,15 @@ helpviewer_keywords:
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 53a3bd656302c47c1ccd69fa484a4d87b050c41f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e9c15b0e22e91fb3a478a7b91a14292609b81a22
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Usar o formato de caractere para importar ou exportar dados (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Formato de caractere é recomendado quando você exporta dados em massa para um arquivo de texto que será usado em outro programa ou quando você importa dados em massa de um arquivo de texto que é gerado por outro programa.  
@@ -67,7 +67,7 @@ Você pode importar dados de formato de caractere em uma tabela que usa [bcp](..
   
 Formato de caractere tem suporte nas seguintes opções de comando:  
   
-|Comando|Opção|Descrição|  
+|Comando|Opção|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-c**|Faz com que o utilitário bcp use os dados de caractere.*|  
 |BULK INSERT|DATAFILETYPE **='char'**|Use o formato de caractere quando na importação em massa de dados.|  
@@ -222,7 +222,7 @@ Para usar formatos de dados para importação ou exportação em massa
   
 -   [Usar o formato nativo Unicode para importar ou exportar dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

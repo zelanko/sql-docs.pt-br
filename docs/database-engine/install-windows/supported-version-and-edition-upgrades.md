@@ -20,13 +20,13 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 caps.latest.revision: "148"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eda664aa9c3c69f8c4d515143b5aa38819ddc31a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ef0e3215cccf5cbece0036c79f73a10c25119c4e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Atualizações de versão e edição com suporte
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você pode atualizar do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Este tópico lista os caminhos de atualização com suporte dessas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as atualizações de edição com suporte para o [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
@@ -166,7 +166,7 @@ O SQL Server 2016 dá suporte à atualização das seguintes versões do SQL Ser
   
  \* Também se aplica ao [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express with Tools e ao [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express with Advanced Services.  
   
- ** A alteração da edição de um cluster de failover do [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] é limitada. Os cenários a seguir não têm suporte para clusters de failover do [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]:  
+ ** A alteração da edição de um cluster de failover do [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] é limitada. Os cenários a seguir não têm suporte para clusters de failover do [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] :  
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise para [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer, Standard ou Evaluation.  
   
@@ -176,7 +176,7 @@ O SQL Server 2016 dá suporte à atualização das seguintes versões do SQL Ser
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation para [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 
  [Edições e recursos com suporte para SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)
  

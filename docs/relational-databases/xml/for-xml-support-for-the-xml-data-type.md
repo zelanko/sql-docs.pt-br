@@ -16,15 +16,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 50918da12b1fbfffc12da9cd235a07fc490ab942
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 61690ceda202d6d9bd7a84e78328ae71c548e9e4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Suporte a FOR XML para o tipo de dados xml
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Se uma consulta XML FOR especificar uma coluna de tipo **xml** na cláusula SELECT, os valores da coluna serão mapeados como elementos no XML retornado, independentemente da diretiva ELEMENTS estar ou não especificada. Qualquer declaração XML na coluna de tipo **xml** não é serializada.  
@@ -209,7 +209,7 @@ SELECT @x= dbo.MyUDF4 (19) ;
 select @x;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Suporte a FOR XML para vários tipos de dados SQL Server](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   

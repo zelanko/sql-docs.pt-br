@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.newsubwizard.subproperties.subscriber.f1
 helpviewer_keywords: Subscription Properties dialog box
 ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5fe9f215218bc84d3b3f1d5bb5c22d1a2ee980d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b0983dafd2e95edbec342c7a885c1182f6dc053a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-properties---subscriber"></a>Propriedades da Assinatura - Assinante
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A caixa de diálogo **Propriedades da Assinatura** no Assinante permite exibir e definir propriedades para assinaturas pull.  
@@ -102,9 +102,9 @@ ms.lasthandoff: 11/17/2017
   
  Para obter mais informações sobre a configuração, consulte [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar propriedades de assinatura pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [Exibir e modificar propriedades de assinatura push](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
- [Assinar Publicações](../../relational-databases/replication/subscribe-to-publications.md)  
+ [Assinar publicações](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: f8f670c4eb380a5fb4a43d547133c64d616e1b54
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 87615ca4a3601ab92b37e97a8392b392accb1695
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="install-sql-server-with-sysprep"></a>Instalar o SQL Server com o SysPrep
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ações de configuração relacionadas ao 
@@ -32,7 +32,7 @@ Você também pode preparar e concluir uma instância do [!INCLUDE[ssNoVersion](
   
 - [Instalar o SQL Server usando um arquivo de configuração](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 Antes de instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], examine os tópicos em [Planejando uma instalação do SQL Server](../../sql-server/install/planning-a-sql-server-installation.md). 
   
 Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e os requisitos de hardware e software, consulte [Requisitos de hardware e software para a instalação do SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). 
@@ -307,7 +307,7 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
   
 - [Desinstalar uma instância existente do SQL Server &#40;instalação&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [O que é Windows SysPrep](http://go.microsoft.com/fwlink/?LinkId=143546)   
  [Como funciona o Windows SysPrepWork](http://go.microsoft.com/fwlink/?LinkId=143547)  
   

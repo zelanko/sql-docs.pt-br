@@ -17,13 +17,13 @@ ms.assetid: e58ed56e-4c30-42e6-a9fc-a8c401620e02
 caps.latest.revision: "11"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 012834679287eaba0a76d6b4f63b1d4a664ca679
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3c303ef171fecf9d6aac2c6e9462129ffc65606f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="some-synchronous-replicas-are-not-synchronized"></a>Algumas réplicas síncronas não são sincronizadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.lasthandoff: 11/20/2017
 |**Nome da Política**|Estado de sincronização de dados de réplicas síncronas|  
 |**Problema**|Algumas réplicas síncronas não são sincronizadas.|  
 |**Categoria**|**Aviso**|  
-|**Faceta**|Grupo de disponibilidade|  
+|**Faceta**|grupo de disponibilidade|  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>Description  
  Essa política acumula o estado de sincronização de dados de todas as réplicas de disponibilidade e verifica se há réplicas de disponibilidade que não estão no estado de sincronização esperado. A política está em um estado não íntegro quando o estado de qualquer réplica assíncrona não é SYNCHRONIZING e o estado de qualquer réplica síncrona não é SYNCHRONIZED. Caso contrário, o estado da política é íntegro.  
   
 > [!NOTE]  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="possible-solution"></a>Solução possível  
  Use o estado da política de réplica de disponibilidade para localizar a réplica de disponibilidade com o estado de sincronização incorreto e, depois, resolva o problema na réplica de disponibilidade.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   

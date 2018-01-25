@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Snapshot Agent, alerts
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e6eb5aeb5cf36a9c93259f6ee216a76c5ef4634
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 000b57b9e462be4babcf15d94017fec5b5422855
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Usar Alertas para eventos do agente de replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent proporcionam um modo de monitorar eventos, tais como eventos do agente de replicação, usando alertas. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent monitora o log do aplicativo do Windows para eventos que são associados com alertas. Se esse evento ocorrer, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent responderá automaticamente, executando uma tarefa que você definiu e/ou enviando uma mensagem de email ou pager a um operador especificado. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclui um conjunto de alertas predefinidos para agentes de replicação que você pode configurar para executar uma tarefa e/ou notificar um operador. Para obter mais informações sobre como definir uma tarefa a executar, consulte a seção “Automatizando uma resposta para um alerta” neste tópico.  
@@ -44,8 +44,8 @@ ms.lasthandoff: 11/17/2017
 |14150|**Replicação: êxito do agente**|Agente é encerrado com êxito.|Sim|  
 |14151|**Replicação: falha do agente**|Agente é desligado com um erro.|Sim|  
 |14152|**Replicação: repetição do agente**|O agente desliga após repetir uma operação sem-êxito (agente encontra erro, como servidor não disponível, deadlock, falha de conexão ou falha de tempo limite).|Sim|  
-|14157|**Replicação: assinatura expirada cancelada**|A assinatura expirada foi descartada.|Não|  
-|20572|**Replicação: assinatura reinicializada após falha de validação**|Trabalho de resposta 'Reinicializar assinatura em falha de validação de dados' reinicializa uma assinatura com êxito.|Não|  
+|14157|**Replicação: assinatura expirada cancelada**|A assinatura expirada foi descartada.|não|  
+|20572|**Replicação: assinatura reinicializada após falha de validação**|Trabalho de resposta 'Reinicializar assinatura em falha de validação de dados' reinicializa uma assinatura com êxito.|não|  
 |20574|**Replicação: falha na validação de dados do assinante**|O Agente de Distribuição ou Mesclagem falha na validação de dados.|Sim|  
 |20575|**Replicação: êxito na validação de dados do assinante**|Distribution ou Merge Agent passa na validação de dados.|Sim|  
 |20578|**Replicação: desligamento personalizado do agente**|||  
@@ -92,7 +92,7 @@ close hc
 deallocate hc  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administração do agente de replicação](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [Monitoramento &#40;replicação&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  

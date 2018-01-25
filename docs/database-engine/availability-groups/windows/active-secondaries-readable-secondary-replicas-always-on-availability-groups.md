@@ -22,13 +22,13 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 caps.latest.revision: "80"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9060efc7289f0bf8fd17ad52cd97f45abefc4bfc
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: e18fc38d0f5baa2c49a487a362dc8612bc61f404
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secundárias ativas: réplicas secundárias legíveis (Grupos de Disponibilidade AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -149,7 +149,7 @@ ms.lasthandoff: 01/02/2018
   
  A réplica primária envia registros de log de alterações no banco de dados primário para as réplicas secundárias. Em cada banco de dados secundário, um thread de restauração dedicado aplica os registros de log. Em um banco de dados secundário de acesso de leitura, uma determinada alteração de dados não aparece nos resultados da consulta até que o registro de log que contém a alteração seja aplicado ao banco de dados secundário e a transação seja confirmada no banco de dados primário.  
   
- Isso significa que há alguma latência, normalmente apenas uma questão de segundos, entre as réplicas primárias e secundárias. No entanto, em casos incomuns, como quando problemas de rede reduzem a taxa de transferência, a latência pode se tornar significativa. A latência aumenta quando ocorrem afunilamentos de E/S e quando a movimentação de dados é suspensa. Para monitorar a movimentação de dados suspensa, você pode usar o [Painel AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) ou a exibição de gerenciamento dinâmico [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) .  
+ Isso significa que há alguma latência, normalmente apenas uma questão de segundos, entre as réplicas primárias e secundárias. No entanto, em casos incomuns, como quando problemas de rede reduzem a taxa de transferência, a latência pode se tornar significativa. A latência aumenta quando ocorrem gargalos de E/S e quando a movimentação de dados é suspensa. Para monitorar a movimentação de dados suspensa, você pode usar o [Painel AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) ou a exibição de gerenciamento dinâmico [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) .  
   
 ####  <a name="bkmk_LatencyWithInMemOLTP"></a> Latência de dados em banco de dados com tabelas com otimização de memória  
  No [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], havia considerações especiais relativas à latência de dados em secundárias ativas – consulte [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Secundárias ativas: réplicas secundárias legíveis](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). A partir do [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] , não há considerações especiais em relação à latência de dados em tabelas com otimização de memória. A latência de dados esperada para tabelas com otimização de memória é comparável à latência para tabelas baseadas em disco.  

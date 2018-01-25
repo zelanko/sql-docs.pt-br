@@ -24,13 +24,13 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 caps.latest.revision: "151"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d54b7d77cb265f2ba8ee79ce993ce30ce8fdf441
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d127b3479e6bb38483d39556884d1498d9c662c2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>Pré-requisitos, restrições e recomendações – Grupos de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -156,7 +156,7 @@ ms.lasthandoff: 11/20/2017
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Habilite o recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] em cada instância de servidor que hospedará uma réplica de disponibilidade para qualquer grupo de disponibilidade. Em determinado computador, você pode habilitar quantas instâncias de servidor desejar para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , desde que tenham suporte da instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Habilitar e desabilitar Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> **\*\* Importante \*\*** Se você destruir e recriar um WSFC, deverá desabilitar e reabilitar o recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] em cada instância de servidor habilitada para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no cluster original.|  
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Cada instância de servidor exige um ponto de extremidade de espelhamento de banco de dados. Note que esse ponto de extremidade é compartilhado por todas as réplicas de disponibilidade e parceiros de espelhamento de banco de dados e testemunhas na instância de servidor.<br /><br /> Se uma instância de servidor selecionada para hospedar uma réplica de disponibilidade estiver sendo executada em uma conta de usuário de domínio e ainda não tiver um ponto de extremidade de espelhamento de banco de dados, o [Assistente de Novo Grupo de Disponibilidade](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) (ou o [Assistente para Adicionar Réplica ao Grupo de Disponibilidade](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) poderá criar o ponto de extremidade e conceder a permissão CONNECT à conta de serviço da instância de servidor. No entanto, se o serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estiver sendo executado como uma conta interna, como Sistema Local, Serviço Local ou Serviço de Rede, ou como uma conta que não pertença a um domínio, você deverá usar certificados para autenticação de ponto de extremidade, e o assistente não poderá criar um ponto de extremidade de espelhamento de banco de dados na instância de servidor. Nesse caso, é recomendável criar manualmente os pontos de extremidade de espelhamento de banco de dados antes de iniciar o assistente.<br /><br /> <br /><br /> **\*\* Observação de Segurança \*\*** A segurança de transporte para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] é a mesma do espelhamento de banco de dados.|[O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Se algum banco de dados que utilize o FILESTREAM for adicionado a um grupo de disponibilidade, verifique se o FILESTREAM está habilitado em cada instância de servidor que hospedará uma réplica de disponibilidade do grupo de disponibilidade.|[Habilitar e configurar o FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
-|![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Se algum banco de dados independente for adicionado a um grupo de disponibilidade, verifique se a opção de servidor **contained database authentication** está definida como **1** em cada instância de servidor que hospedará uma réplica de disponibilidade do grupo de disponibilidade.|[Opção de configuração de servidor contained database authentication](../../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [Opções de configuração do servidor &#40;SQL Server&#41;](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)|  
+|![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Se algum banco de dados independente for adicionado a um grupo de disponibilidade, verifique se a opção de servidor **contained database authentication** está definida como **1** em cada instância de servidor que hospedará uma réplica de disponibilidade do grupo de disponibilidade.|[Opção de configuração do servidor contained database authentication](../../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [Opções de configuração do servidor &#40;SQL Server&#41;](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)|  
   
 ###  <a name="ThreadUsage"></a> Uso de thread por grupos de disponibilidade  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] tem os seguintes requisitos para threads de trabalho:  
@@ -188,7 +188,7 @@ ms.lasthandoff: 11/20/2017
   
 |Tarefa|Permissões necessárias|  
 |----------|--------------------------|  
-|Criando o ponto de extremidade de espelhamento de banco de dados|Requer permissão CREATE ENDPOINT ou associação na função de servidor fixa **sysadmin** .  Também requer a permissão CONTROL ON ENDPOINT. Para obter mais informações, veja [Permissões GRANT do ponto de extremidade &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).|  
+|Criando o ponto de extremidade de espelhamento de banco de dados|Requer permissão CREATE ENDPOINT ou associação na função de servidor fixa **sysadmin** .  Também requer a permissão CONTROL ON ENDPOINT. Para obter mais informações, consulte [Permissões GRANT do ponto de extremidade &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).|  
 |Habilitando o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]|Exige a associação ao grupo **Administrador** no computador local e o controle total no WSFC.|  
   
 ###  <a name="RelatedTasksSI"></a> Tarefas relacionadas (instância de servidor)  
@@ -399,7 +399,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Série de aprendizado do AlwaysOn – HADRON: uso do pool de trabalho para bancos de dados habilitados para HADRON](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Clustering de failover e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
  [Conectividade de cliente AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)  

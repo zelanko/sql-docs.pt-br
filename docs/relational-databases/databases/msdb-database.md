@@ -18,15 +18,15 @@ helpviewer_keywords:
 - msdb database [SQL Server]
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d4f6256d3c0b3be70f32b246ef24b996d7545fc5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d749784b0a89d8307e0f2be23f25a836ba9a9c14
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="msdb-database"></a>Banco de dados msdb
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
 |Opção de banco de dados|Valor padrão|Pode ser modificado|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|Não|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|não|  
 |ANSI_NULL_DEFAULT|OFF|Sim|  
 |ANSI_NULLS|OFF|Sim|  
 |ANSI_PADDING|OFF|Sim|  
@@ -66,20 +66,20 @@ ms.lasthandoff: 11/17/2017
 |AUTO_SHRINK|OFF|Sim|  
 |AUTO_UPDATE_STATISTICS|ON|Sim|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sim|  
-|CHANGE_TRACKING|OFF|Não|  
+|CHANGE_TRACKING|OFF|não|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sim|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Sim|  
 |CURSOR_DEFAULT|GLOBAL|Sim|  
-|Opções de disponibilidade de banco de dados|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Não<br /><br /> Sim<br /><br /> Sim|  
+|Opções de disponibilidade de banco de dados|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|não<br /><br /> Sim<br /><br /> Sim|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sim|  
 |DB_CHAINING|ON|Sim|  
-|ENCRYPTION|OFF|Não|  
-|MIXED_PAGE_ALLOCATION|ON|Não|  
+|ENCRYPTION|OFF|não|  
+|MIXED_PAGE_ALLOCATION|ON|não|  
 |NUMERIC_ROUNDABORT|OFF|Sim|  
 |PAGE_VERIFY|CHECKSUM|Sim|  
 |PARAMETERIZATION|SIMPLE|Sim|  
 |QUOTED_IDENTIFIER|OFF|Sim|  
-|READ_COMMITTED_SNAPSHOT|OFF|Não|  
+|READ_COMMITTED_SNAPSHOT|OFF|não|  
 |RECOVERY|SIMPLE|Sim|  
 |RECURSIVE_TRIGGERS|OFF|Sim|  
 |Opções do Service Broker|ENABLE_BROKER|Sim|  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
   
  Para obter uma descrição dessas opções de banco de dados, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## <a name="restrictions"></a>Restrições  
+## <a name="restrictions"></a>Restrictions  
  As operações a seguir não podem ser executadas no banco de dados **msdb** :  
   
 -   Alteração de agrupamento. O agrupamento padrão é o agrupamento de servidor.  

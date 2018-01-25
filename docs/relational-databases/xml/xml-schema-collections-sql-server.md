@@ -24,15 +24,15 @@ helpviewer_keywords:
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 581c46bbb59d9339bc91712a4e100d922e76813f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e32ecad2ca9d89f31e7a6b7e05c650a66ffc8c3a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-schema-collections-sql-server"></a>Coleções de esquema XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Conforme descrito no tópico [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md), o SQL Server fornece armazenamento nativo de dados XML por meio do tipo de dados **xml**. Opcionalmente, é possível associar esquemas XSD a uma variável ou a uma coluna do tipo **xml** por meio de uma coleção de esquemas XML. A coleção de esquema XML armazena os esquemas XML importados e, em seguida, é usada para fazer o seguinte:  
@@ -211,9 +211,9 @@ N'http://www.microsoft.com/books')
   
 -   Crie uma tabela que contém uma coluna de tipo de dados **xml** para armazenar seus esquemas XML e também para carregá-los no sistema de tipo XML. É possível consultar a coluna XML usando os métodos de tipo de dados **xml** . Além disso, é possível construir um índice XML nessa coluna. No entanto, com essa abordagem, o aplicativo deve manter consistência entre os esquemas XML armazenados na coluna XML e no sistema de tipo XML. Por exemplo, se você descartar o namespace do esquema XML do sistema de tipo XML, também deverá descartá-lo da tabela para preservar a consistência.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir uma coleção de esquemas XML armazenados](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)   
  [Pré-processar um esquema para mesclar esquemas incluídos](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)   
- [Requisitos e limitações de uso de coleções de esquema XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Requisitos e limitações para o uso de Coleções de Esquemas XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

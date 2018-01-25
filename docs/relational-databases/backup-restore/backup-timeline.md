@@ -17,15 +17,15 @@ f1_keywords:
 helpviewer_keywords: Backup Timeline
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0bb6bf985317fc594ddf6feadf17c7beee857de1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d3a58978a14d96a772675db69ab2fe425608987e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-timeline"></a>Linha do tempo de backup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a caixa de diálogo **Linha do Tempo de Backup** para localizar e especificar backups para restaurar um banco de dados em um ponto específico. Acesse a caixa de diálogo **Linha do Tempo de Backup** clicando em **Linha do Tempo** no painel **Restaurar Banco de dados (Página Geral)** . Esta caixa de diálogo permite exibir uma linha do tempo das operações de restauração executadas no banco de dados.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
  **Data**  
  Insira ou selecione uma data na lista suspensa.  
   
- **Hora**  
+ **Time**  
  Insira ou selecione uma data para designar o ponto específico no tempo para a restauração parar.  
   
  **Intervalo na linha de tempo**  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
  Linha vermelha  
  Pode ser posicionada somente ao longo da linha do tempo onde a restauração é possível. A movimentação da linha vermelha ao longo da linha do tempo ajusta a data e a hora exibidas nas caixas **Data** e **Hora** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Restaurar banco de dados &#40;página Geral&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
   

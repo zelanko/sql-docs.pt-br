@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: examining the current structure of the employee
 ms.assetid: d546a820-105a-417d-ac35-44a6d1d70ac6
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 599385dfefc12252d03a3e532e3d084077f72464
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dac77c64b9ebb2c47fcaf399e6366964bfcee50c
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-1---examining-the-current-structure-of-the-employee-table"></a>Lição 1-1 – Examinando a estrutura atual da tabela Employee
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] O banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] contém uma tabela **Employee** no esquema **HumanResources**. Para evitar alterar a tabela original, este passo cria uma cópia da tabela **Employee** nomeada **EmployeeDemo**. Para simplificar o exemplo, você copia só cinco colunas da tabela original. Então, você consulta a tabela **HumanResources.EmployeeDemo** para revisar como os dados são estruturados em uma tabela sem usar o tipo de dados **hierarchyid** .  

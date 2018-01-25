@@ -24,12 +24,12 @@ ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 caps.latest.revision: "31"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: fdac38824bdab5723c42435e5321f1a124fc397c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: a6a5cbbe3366a14878086d24b1bddd52ec83ee13
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Renomear um computador que hospeda uma instância autônoma do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando você altera o nome do computador que está executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o novo nome é reconhecido durante a inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não é necessário executar novamente a Instalação para redefinir o nome do computador. Em vez disso, use as etapas a seguir para atualizar os metadados do sistema armazenados em sys.servers e relatados pela função de sistema @@SERVERNAME. Atualize os metadados do sistema para que reflitam as alterações de nome do computador de conexões remotas e aplicativos que usam @@SERVERNAME ou que consultam o nome do servidor em sys.servers.  

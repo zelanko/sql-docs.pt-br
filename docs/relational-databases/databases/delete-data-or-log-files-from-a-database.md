@@ -21,15 +21,15 @@ helpviewer_keywords:
 - deleting data
 ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1c5020fdcf04f15db3af797d377c261ac2e0f603
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d8378a8478c63cb34a2e9d10eda05160c1bcfffb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="delete-data-or-log-files-from-a-database"></a>Excluir arquivos de dados ou de log de um banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como excluir arquivos de dados ou de log no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-delete-data-or-log-files-from-a-database"></a>Para excluir arquivos de dados ou de log de um banco de dados  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
   
  Para obter mais exemplos, consulte [Opções de arquivo e grupos de arquivos ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Reduzir um banco de dados](../../relational-databases/databases/shrink-a-database.md)   
  [Adicionar arquivos de dados ou de log a um banco de dados](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
   

@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Best Practices [Database Engine]
 ms.assetid: 7e3bf9da-a436-433d-847a-47c30428cad3
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9725e3e0e00e22515b5a347a4a5267c78d6f2ec8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c6955ced9de05755a1846d69b5811c86efa26e76
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-login-password-expiration"></a>Vencimento da senha de logon do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Esta regra verifica se a "Expiração de senha" de cada logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está habilitada. Se a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver habilitada e a versão do sistema operacional for anterior ao [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], um invasor poderá explorar repetidamente uma senha conhecida de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="for-more-information"></a>Para obter mais informações  
  [Política de senha](../../relational-databases/security/password-policy.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 07d914dcef815b50aeafc6e278d025f28df09bb6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 878e82dc8b2b36922983511aeafa8c69138c4d26
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>Exemplo: Especificando as diretivas ID e IDREF
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Este exemplo é quase igual ao exemplo [Especificando a diretiva ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md). A única diferença é que a consulta especifica as diretivas **ID** e **IDREF** . Essas diretivas substituem os tipos do atributo **SalesPersonID** nos elementos <`OrderHeader`> e <`OrderDetail`>. Isso forma vínculos intradocumento. Você precisa do esquema para ver os tipos substituídos. Portanto, a consulta especifica a opção **XMLDATA** na cláusula FOR XML para recuperar o esquema.  
@@ -111,7 +111,7 @@ FOR XML EXPLICIT, XMLDATA
 ...  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar o modo EXPLICIT com FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

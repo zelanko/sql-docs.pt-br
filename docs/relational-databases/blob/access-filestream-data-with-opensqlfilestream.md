@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: OpenSqlFilestream
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7952076c536818d8a272a6eed35566c3e413ed21
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b9433d94683396ab9fbeb057c4af1b681a628cd4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>Acessar dados do FILESTREAM com OpenSqlFilestream
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A API OpenSqlFilestream obtém um identificador de arquivo compatível com Win32 para um objeto binário grande (BLOB) FILESTREAM armazenado no sistema de arquivos. O identificador pode ser passado para qualquer uma das APIs do Win32: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)ou [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). Se você passar esse identificador para qualquer outra API do Win32, o erro ERROR_ACCESS_DENIED será retornado. O identificador deve ser fechado passando-o para a API [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) do Win32 antes de a transação ser confirmada ou revertida. O não fechamento do identificador provocará vazamentos de recursos do servidor.  
@@ -99,10 +99,10 @@ HANDLE OpenSqlFilestream (
   
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../relational-databases/blob/codesnippet/cpp/access-filestream-data-w_0_3.cpp)]  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client deve ser instalado para usar essa API. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client é instalado com ferramentas de cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Instalando o SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto binário grande &#40;Blob&#41; Dados &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [Fazer atualizações parciais em dados do FILESTREAM](../../relational-databases/blob/make-partial-updates-to-filestream-data.md)   
  [Evitar conflitos com operações de banco de dados em aplicativos de FILESTREAM](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)  

@@ -16,13 +16,13 @@ ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3137ff6c86a40986f8788c391fa45b213ee06bca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1f997d0457ea5472328cd9b109d5f3f3224b462c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lição 2: Criar e aplicar uma política de nomeação de padrões
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Alguns tipos de políticas de Gerenciamento Baseado em Políticas podem criar gatilhos para impor conformidade futura com a política. Nesta lição, você cria uma política que aplica uma nomeação padrão para tabelas. Então, você testa a política tentando criar uma tabela que viola a política.  

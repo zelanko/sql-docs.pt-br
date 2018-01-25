@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 771047d7d21f79827c9ca073d22f2094f8603f0f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dfbbfd6ac0e746fc8165186745006a1834f5aebe
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, Objeto Métodos de Acesso
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto **Access Methods** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar como são acessados os dados lógicos dentro do banco de dados. O acesso físico às páginas do banco de dados no disco é monitorado usando os contadores do **Gerenciador de Buffer** . Monitorar os métodos usados para acessar os dados armazenados no banco de dados pode ajudá-lo a determinar se o desempenho da consulta pode ser melhorado, adicionando ou modificando índices, adicionando ou movendo partições, adicionando arquivos ou grupos de arquivo, desfragmentando índices ou regravando consultas. Os contadores dos **Métodos de Acesso** também podem ser usados para monitorar a quantidade de dados, índices e espaço livre dentro do banco de dados, indicando assim o volume e a fragmentação de dados para cada instância do servidor. A fragmentação excessiva do índice pode prejudicar o desempenho.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  Esta tabela descreve os contadores dos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Access Methods** .  
   
-|Contadores dos Métodos de Acesso do SQL Server|Descrição|  
+|Contadores dos Métodos de Acesso do SQL Server|Description|  
 |----------------------------------------|-----------------|  
 |**Lotes de limpeza de unidade de alocação/s**|O número de lotes por segundo concluídos com êxito pela tarefa em segundo plano responsável pela limpeza de unidades de alocação canceladas e adiadas.|  
 |**Limpezas de unidade de alocação/s**|O número de unidades de alocação por segundo descartadas com sucesso pela tarefa em segundo plano responsável pela limpeza das unidades de alocação canceladas e adiadas. Cada descarte de unidade de alocação requer vários lotes.|  
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
 |**Tabelas de Trabalho do Cache Base**|Somente para uso interno.|  
 |**Taxas de Tabela de Trabalho do Cache**|Porcentagem de tabelas de trabalho criadas em que as duas páginas iniciais de uma determinada tabela não estavam alocadas, mas estavam imediatamente disponíveis no cache de tabelas de trabalho. (Quando uma tabela de trabalho é descartada, duas páginas podem permanecer alocadas e são retornadas ao cache de tabelas de trabalho. Isto aumenta o desempenho.)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

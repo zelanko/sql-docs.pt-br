@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 caps.latest.revision: "68"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 83d6c271c6d346881f7d1e7fdc7a0c3e4e0a5c25
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0bdd383335126a36265bc917c1679dbd5ab0dc3e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-database-options-page"></a>Restaurar o banco de dados (página Opções)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a página **Opções** da caixa de diálogo **Restaurar Banco de Dados** para modificar o comportamento e o resultado da operação de restauração.  
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Se o backup seguinte for um backup de log, use a tarefa **Restaurar Log de Transações** . Para obter informações sobre como retomar uma sequência de restauração restaurando um log de transações, veja [Restaurar um backup de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurar um backup de um dispositivo &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)   
  [Restaurar um backup de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)   

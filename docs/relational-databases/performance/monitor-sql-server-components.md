@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cc1115ebc7142d49a8b0cda79cc6dee1d8f250f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e42a68231284071a38797fa76085123ab89e92fe
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-sql-server-components"></a>Monitorar componentes do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Monitorar é importante porque o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece serviço em um ambiente dinâmico. Os dados mudam no aplicativo. O tipo de acesso de que os usuários precisam muda. O modo de conexão dos usuários muda. Os tipos de aplicativos que acessam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem até mudar, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerencia automaticamente os recursos em nível de sistema, como a memória e o espaço em disco, a fim de minimizar a necessidade de ajustes manuais abrangentes em nível de sistema. O monitoramento permite aos administradores identificar tendências de desempenho para determinar se são necessárias alterações.  

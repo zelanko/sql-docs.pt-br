@@ -16,15 +16,15 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], article processing order
 ms.assetid: d151e2c5-cf50-4cb3-a829-8f32455dbd66
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cb9d8b566766e23bfb17bc93b53d9d222fa3895
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a4476f6aaa996dff5ed88258a2cb9430a62774cd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-the-processing-order-of-merge-articles"></a>Especificar a ordem de processamento dos artigos de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] em diante, é possível substituir a ordem padrão do processamento de artigos para publicações de mesclagem. Isso é útil, por exemplo, se você definir a integridade referencial por meio de gatilhos e esses gatilhos precisarem ser acionados em uma determinada ordem.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  Quando a integridade referencial é mantida por meio de gatilhos ou no nível do aplicativo, você deve especificar a ordem em que os artigos devem ser processados. No exemplo com gatilhos, você especificaria que a tabela **SalesOrderHeader** deve ser processada antes de **SalesOrderDetail**, porque a ordem dos artigos é baseada na ordem de inserção. A replicação de mesclagem inverterá a ordem automaticamente para as exclusões. A replicação de mesclagem não apresentará falha sem a ordenação de artigos, porque o Merge Agent continua a processar os artigos se houver uma violação de restrição; depois do processamento de todos os outros artigos, ele tenta novamente as operações que apresentaram falha. Especificar a ordem de artigos simplesmente evita as novas tentativas e o processamento adicional associado a elas. Se você especificar uma ordem incorreta (por exemplo, uma que faça com que os registros detalhados sejam processados antes dos registros do cabeçalho), a replicação de mesclagem irá tentar o processamento repetidamente, até obter êxito.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções de artigos para a replicação de mesclagem](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
  [Agrupar alterações em linhas relacionadas com registros lógicos](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)   
  [Join Filters](../../../relational-databases/replication/merge/join-filters.md)  

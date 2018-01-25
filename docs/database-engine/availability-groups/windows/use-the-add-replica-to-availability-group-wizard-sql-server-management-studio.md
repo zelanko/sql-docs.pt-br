@@ -19,13 +19,13 @@ ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 caps.latest.revision: "24"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57290f3cab0b9b2155246ef2437237ea89fab825
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 769bd6348bf2b9c49990009f6ff6b6545c299f43
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>Usar o Assistente para Adicionar Réplica ao Grupo de Disponibilidade (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use o **Assistente para Adicionar Réplica ao Grupo de Disponibilidade** para ajudá-lo a adicionar uma nova réplica secundária a um grupo de disponibilidade Always On existente.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  No Pesquisador de Objetos, conecte-se à instância do servidor que hospeda a réplica primária do grupo de disponibilidade e expanda a árvore de servidores.  
   
-2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade** .  
+2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade**.  
   
 3.  Clique com o botão direito do mouse no grupo de disponibilidade ao qual uma réplica secundária está sendo adicionada e selecione **Adicionar Réplica** . Isso inicia o Assistente para Adicionar Réplica ao Grupo de Disponibilidade.  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 11/20/2017
   
     -   **Ignorar sincronização de dados inicial**  
   
-         Selecione esta opção se desejar usar seus próprios backups de banco de dados e de log de seus bancos de dados primários. Para obter mais informações, veja [Iniciar movimentação de dados em um banco de dados secundário AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+         Selecione esta opção se desejar usar seus próprios backups de banco de dados e de log de seus bancos de dados primários. Para obter mais informações, veja [Iniciar movimentação de dados em um banco de dados secundário &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 8.  A página **Validação** verifica se os valores especificados neste Assistente atendem aos requisitos do Assistente para Adicionar Réplica ao Grupo de Disponibilidade. Para fazer uma alteração, clique em **Anterior** para retornar a uma página anterior do assistente para alterar um ou mais valores. Clique em **Avançar** para retornar à página **Validação** e clique em **Executar Novamente a Validação**.  
   
@@ -128,7 +128,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Adicionar uma réplica secundária a um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Adicionar uma réplica secundária a um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - partitioned indexes [SQL Server], about partitioned indexes
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 17eebdb3bfb3acdbdf7371ef5884f553e51dd19a
-ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
+ms.openlocfilehash: 6e5758702f60671b64fc97d9e9e98b89a80ccd6f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte ao particionamento de tabelas e índices. Os dados de tabelas e índices particionados são divididos em unidades que podem ser difundidas por mais de um grupo de arquivos em um banco de dados. Os dados são particionados horizontalmente, de forma que os grupos de linhas são mapeados em partições individuais. Todas as partições de um único índice ou de uma única tabela devem residir no mesmo banco de dados. A tabela ou o índice é tratado como uma única entidade lógica quando são executadas consultas ou atualizações nos dados. Antes do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, as tabelas e os índices particionados não estavam disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  

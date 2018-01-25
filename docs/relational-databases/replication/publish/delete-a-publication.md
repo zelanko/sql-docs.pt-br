@@ -18,15 +18,15 @@ helpviewer_keywords:
 - deleting publications
 ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6879c305c142c07038085dc7445357408892cdaa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 12b3d2fbee416c7368eaadfb0aeb8f8566916961
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="delete-a-publication"></a>Excluir uma publicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como excluir uma publicação no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou RMO (Replication Management Objects).  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Clique com o botão direito na publicação que você deseja excluir e clique em **Excluir**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  As publicações podem ser excluídas programaticamente usando procedimentos armazenados de replicação. Os procedimentos armazenados que você usar dependerão do tipo de publicação a ser excluída.  
   
 > [!NOTE]  
@@ -161,8 +161,8 @@ ms.lasthandoff: 11/17/2017
   
  [!code-vb[HowTo#rmo_vb_DropMergePub](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_dropmergepub)]  
   
-## <a name="see-also"></a>Consulte também  
- [Conceitos dos procedimentos armazenados no sistema de replicação](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Publicar dados e objetos de banco de dados](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

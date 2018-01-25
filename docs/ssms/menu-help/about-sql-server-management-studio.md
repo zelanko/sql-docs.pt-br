@@ -17,13 +17,13 @@ ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b01d46a1e304c4b549b042910e89b324716c13de
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6a2aa7db876c4b3d78cf14846cb3d7aed821cbeb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="about-sql-server-management-studio"></a>Sobre o SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use esta caixa de diálogo para exibir ou copiar informações sobre sua instalação do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. As edições do Evaluation listam o número de dias que restam até que o produto expire.  

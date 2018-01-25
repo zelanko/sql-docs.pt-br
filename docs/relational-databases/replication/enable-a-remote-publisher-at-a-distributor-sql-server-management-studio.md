@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Publishers [SQL Server replication]
 ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e8132de2283faa5880e64092cd3d03cf07c5bb4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: af6d21313b7e55c4b46f22a4fe4353be4fddedba
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>Habilitar um Publicador remoto em um Distribuidor (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Habilite um Publicador a usar um Distribuidor remoto na página **Publicadores**. Esta página está disponível no Assistente para Configurar Distribuição e na caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>**. Para mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Configurar publicação e distribuição](../../relational-databases/replication/configure-publishing-and-distribution.md) e [Exibir e modificar o distribuidor e as propriedades do publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar a publicação e a distribuição](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Configurar Distribuição](../../relational-databases/replication/configure-distribution.md)   
  [Proteger o Distribuidor](../../relational-databases/replication/security/secure-the-distributor.md)  

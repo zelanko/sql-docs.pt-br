@@ -19,12 +19,12 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 caps.latest.revision: "19"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: a230544eba53d9b506aae4bce6feb019820550e6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 0f4d36ec95ab9d6a1a714b597331bd4d24bb9e85
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="change-the-database-compatibility-mode-and-use-the-query-store"></a>Alterar o modo de compatibilidade do banco de dados e usar o repositório de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ No SQL Server 2016 e SQL Server 2017, algumas alterações são habilitadas some
   
 7.  Se houver planos de consulta que falham ao forçar ou se o desempenho ainda for insuficiente, considere reverter o nível de compatibilidade à configuração anterior e então contatar Suporte ao Cliente Microsoft.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir ou alterar o nível de compatibilidade de um banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)  
   
   

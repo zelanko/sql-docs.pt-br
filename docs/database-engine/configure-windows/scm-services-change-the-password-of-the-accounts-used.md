@@ -22,15 +22,15 @@ helpviewer_keywords:
 - modifying passwords
 ms.assetid: 5b6dcc03-6cae-45d3-acef-6f85ca6d615f
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 04193c3a06fd99a4f69cc4da9d4ae073315963cc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6ee1c96bf8a302f5451fe985aacae66a5fd768d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="scm-services---change-the-password-of-the-accounts-used"></a>Serviços SCM – alterar a senha das contas utilizadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como alterar a senha das contas usadas pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] e pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SQL Server Configuration Manager. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent são executados em um computador como um serviço usando credenciais fornecidas inicialmente durante a instalação. Se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver sendo executada na conta de domínio e a senha para aquela conta for alterada, a senha usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deverá ser atualizada para a senha nova. Se a senha não for atualizada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderá perder acesso a alguns recursos de domínio e se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parar, o serviço não será reinicializado até que a senha seja atualizada.  
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/20/2017
   
      Em uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a senha entra em vigor imediatamente, sem reinicializar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Em uma instância clusterizada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderia usar o recurso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offline, e exigir uma reinicialização.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções sobre gerenciamento de serviços &#40;SQL Server Configuration Manager&#41;](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
   
   

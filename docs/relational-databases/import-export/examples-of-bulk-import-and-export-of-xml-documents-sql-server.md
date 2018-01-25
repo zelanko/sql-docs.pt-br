@@ -21,15 +21,15 @@ helpviewer_keywords:
 - XML bulk load [SQL Server]
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 caps.latest.revision: "65"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3ead52966c2c827140d05877596f4275dea9bde4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 15e1fe1efcd8b2e0e1afc8ac4d64a26d7e274454
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemplos de importação e exportação em massa de documentos XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_BLOB) AS x;  
 ```  
   
-#### <a name="remarks"></a>Comentários  
+#### <a name="remarks"></a>Remarks  
  Usando SINGLE_BLOB nesse caso, você pode evitar uma desigualdade entre a codificação do documento XML (como especificado pela declaração de codificação XML) e a cadeia de caracteres da página de código implícita pelo servidor.  
   
  Se você usar tipos de dados NCLOB ou CLOB e executar em uma página de código ou conflito de código, você deve adotar um dos seguintes procedimentos:  
@@ -268,7 +268,7 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não salva a codificação XML quando os dados XML são persistentes no banco de dados. Portanto, a codificação original de campos XML não está disponível quando dados XML são exportados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa a codificação UTF-16 ao exportar dados XML.  
   
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [Cláusula SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-clause-transact-sql.md)   
  [Utilitário bcp](../../tools/bcp-utility.md)   

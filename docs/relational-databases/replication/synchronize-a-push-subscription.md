@@ -17,15 +17,15 @@ helpviewer_keywords:
 - push subscriptions [SQL Server replication], synchronizing
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41040dbb6c399f45f3aebdb961640910742162d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 00becd2c1e202ec06aa3f47b2d8bc2f9325c44ab
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="synchronize-a-push-subscription"></a>Sincronizar uma assinatura push
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Este tópico descreve como sincronizar uma assinatura push no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agentes de replicação](../../relational-databases/replication/agents/replication-agents-overview.md) ou RMO (Replication Management Objects).  
@@ -287,7 +287,7 @@ REM -- The following command must be supplied without line breaks.
   
  [!code-vb[HowTo#rmo_vb_SyncMergePushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_syncmergepushsub)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conceitos de objetos de gerenciamento de replicação](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Sincronizar dados](../../relational-databases/replication/synchronize-data.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  

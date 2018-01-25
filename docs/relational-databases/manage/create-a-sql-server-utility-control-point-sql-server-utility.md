@@ -23,20 +23,20 @@ helpviewer_keywords:
 - UCP
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eaf3148fba4a949d937b725fe4f860f1bb228674
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ff6b20dc866c6d4e7b7ebf9bf21ccf6ae883a474
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Criar um ponto de controle do Utilitário do SQL Server (Utilitário do SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Uma empresa pode ter vários Utilitários do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e cada Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode gerenciar várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aplicativos da camada de dados. Cada Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem apenas um UCP (ponto de controle do utilitário). Você deve criar um novo UCP para cada Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e cada aplicativo da camada de dados é membro somente de um Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , e é gerenciada por um único UCP.  
   
- O UCP coleta informações de configuração e de desempenho de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cada 15 minutos. Estas informações são armazenadas no UMDW (data warehouse de gerenciamento do utilitário) no UCP; o nome de arquivo UMDW é sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são comparados a políticas para ajudar a identificar afunilamentos no uso de recursos e oportunidades de consolidação.  
+ O UCP coleta informações de configuração e de desempenho de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cada 15 minutos. Estas informações são armazenadas no UMDW (data warehouse de gerenciamento do utilitário) no UCP; o nome de arquivo UMDW é sysutility_mdw. Dados de desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são comparados a políticas para ajudar a identificar gargalos no uso de recursos e oportunidades de consolidação.  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  Antes de criar um UCP, revise os seguintes requisitos e recomendações:  
@@ -99,7 +99,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  Um UCP é o ponto de raciocínio central do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Com o UCP, é possível exibir informações de configuração e desempenho coletadas de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e de aplicativos da camada de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e executar atividades gerais de planejamento da capacidade. O UCP é o ponto de inicialização para inscrição e remoção de instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
   
- Após a inscrição de instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , é possível monitorar a integridade dos recursos nas instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nos aplicativos da camada de dados para identificar oportunidades de consolidação e isolar afunilamentos de recursos. Para obter mais informações, consulte [Monitorar instâncias do SQL Server no Utilitário do SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md).  
+ Após a inscrição de instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, é possível monitorar a integridade dos recursos para instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e de aplicativos de associação de dados para identificar oportunidades de consolidação e isolar gargalos de recursos. Para obter mais informações, consulte [Monitorar instâncias do SQL Server no Utilitário do SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md).  
   
 > [!IMPORTANT]  
 >  O conjunto de coleta do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility tem suporte lado a lado com conjuntos de coleta não Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ou seja, uma instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser monitorada por outros conjuntos de coleta enquanto ainda é membro de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Observe, no entanto, que todos os conjuntos de coleta na instância gerenciada carregarão seus dados no data warehouse de gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, veja [Considerações sobre a execução de Conjuntos de Coleta do Utilitário e não Utilitário na mesma instância do SQL Server](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md) e [Configurar o data warehouse do ponto de controle do utilitário &#40;Utilitário do SQL Server&#41;](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md).  
@@ -231,8 +231,8 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Recursos e tarefas do utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Recursos e tarefas do Utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Solucionar problemas do Utilitário do SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   

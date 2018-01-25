@@ -18,13 +18,13 @@ ms.assetid: 89fef397-e0cf-4e08-b598-25b8d4170523
 caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 553a9c83583867987326cf1530b1b070f16b0446
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b4f96be2ba6ef11dec1da4bafccaa747ae3e60bb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>Espelhamento de banco de dados: interoperabilidade e coexistência (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O espelhamento de banco de dados pode ser usado com os seguintes recursos ou componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

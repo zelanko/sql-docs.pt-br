@@ -27,15 +27,15 @@ helpviewer_keywords:
 - How to [DAC], upgrade
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d374f66debb936b1b57cb631d9e1643cc923fdc4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8ea79fb1e120239f25cfab958e92fcd44b79423d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="upgrade-a-data-tier-application"></a>Atualizar um aplicativo da camada de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use o Assistente para Atualizar Aplicativo da Camada de Dados ou um script do Windows PowerShell para alterar o esquema e as propriedades de um DAC (aplicativo da camada de dados) implantado no momento para corresponder ao esquema e às propriedades definidas em uma nova versão do DAC.  
@@ -290,8 +290,8 @@ $dacstore.IncrementalUpgrade($dacName, $dacType, $upgradeProperties)
 $fileStream.Close()  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Aplicativos da Camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   

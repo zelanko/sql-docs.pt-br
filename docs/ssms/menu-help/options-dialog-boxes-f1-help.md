@@ -18,13 +18,13 @@ ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bdf5e5b420a413c49d64743b8241e70810e9b965
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 14a3f463d74000c9d7df7d089073f93fa00fc3f4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Ajuda de F1 das caixas de diálogo opções
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Esta seção contém a ajuda de F1 para as caixas de diálogo disponíveis quando se clica em **Opções** no menu **Ferramentas** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], adding
 ms.assetid: d5a3e536-62d2-4473-a178-877ba52f7d7f
 caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 11733df97dc31d0fa6542ce27e44052f4fabfe5f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0dd2bf4ce4685125def4c87e0fc33fe974f49817
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-articles-to-and-drop-articles-from-a-publication"></a>Adicionar e remover artigos de uma publicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Inicialmente, adicione os artigos a uma publicação ao criá-la no Assistente para Nova Publicação. Para obter mais informações sobre como usar esse assistente, consulte [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md).  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definir um Artigo](../../../relational-databases/replication/publish/define-an-article.md)   
  [Publicar dados e objetos de banco de dados](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

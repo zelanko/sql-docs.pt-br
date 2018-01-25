@@ -22,13 +22,13 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 caps.latest.revision: "53"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: adde08cc4584568c42d896b70ffbcc49689d6416
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 41d4c5d62d227f6ba5a89fcacb24e22ae27905db
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="soft-numa-sql-server"></a>soft-NUMA (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ SET PROCESS AFFINITY CPU=4 TO 7;
 > [!NOTE]
 > Embora seja possível exibir o valor de execução para o soft-NUMA automático usando [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), não é possível alterar seu valor usando **sp_configure**. É necessário usar a declaração [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) com o argumento SET SOFTNUMA.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Mapear portas TCP/IP para nós NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md)   
  [Opção máscara de afinidade de configuração de servidor](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)   
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)  

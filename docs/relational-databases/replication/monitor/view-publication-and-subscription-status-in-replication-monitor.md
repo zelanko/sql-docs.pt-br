@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Replication Monitor, publication and subscription status
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ea47f9f50242003e4aa933da2e5657bb7e2ed5f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ab769d9d4a6c5c311fa6695056ef503999455d8f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Exibir o status da publicação e da assinatura no Replication Monitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor exibe informações de status para publicações e assinaturas:  
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/17/2017
 |Sincronizando|![Ícone de interface do usuário: executando agente de replicação](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Ícone de interface do usuário: executando agente de replicação")|  
 |Não sincronizando|![Ícone de interface do usuário: parar agente de replicação](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Ícone de interface do usuário: parar agente de replicação")|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorando a Replicação](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2815c700005b9debb5ee02a675ad37b7e4444762
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8a691fe8063a6cfd62d8be010acf34244bd4d671
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Usar o formato nativo para importar ou exportar dados (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O formato nativo é recomendado quando você transfere dados em massa entre várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um arquivo de dados que não contém nenhum conjunto de caracteres estendidos ou DBCS (Conjunto de caracteres de byte duplo).  
@@ -90,7 +90,7 @@ Você pode importar dados de formato nativo para uma tabela usando [bcp](../../t
 
 O formato nativo tem suporte nas seguintes opções de comando:  
 
-|Comando|Opção|Descrição|  
+|Comando|Opção|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-n**|Faz com que o utilitário bcp use os tipos de dados nativos dos dados.*|  
 |BULK INSERT|DATAFILETYPE **='native'**|Usa o tipo de dados nativo ou nativo largo. Observe que DATAFILETYPE não será necessário se um arquivo de formato especificar os tipos de dados.|  
@@ -247,7 +247,7 @@ Para usar formatos de dados para importação ou exportação em massa
   
 -   [Usar o formato nativo Unicode para importar ou exportar dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

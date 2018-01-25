@@ -15,12 +15,12 @@ ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 caps.latest.revision: "13"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 760625b44f96422eabb6f753dab02c47da4f0750
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: a277fd883b517c238052ee0a328fbb0b4feb95ce
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="install-sql-server-servicing-updates"></a>Instalar as atualizações de manutenção do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico fornece informações sobre como instalar atualizações para o [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]. Esta seção fornece informações sobre o seguinte:  
@@ -55,7 +55,7 @@ As atualizações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e
   
 Quando você receber uma atualização por meio do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, atualizará todos os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para a versão mais recente em um modo autônomo. Se precisar de mais flexibilidade ou não tiver Internet ou acesso WSUS, você precisará obter as atualizações no Centro de Download da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Instalar o SQL Server por meio do Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
 [Adicionar recursos a uma instância do SQL Server &#40;instalação&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)   
 [Reparar uma instalação com falha do SQL Server](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  

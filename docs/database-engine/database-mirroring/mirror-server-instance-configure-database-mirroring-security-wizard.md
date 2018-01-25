@@ -16,13 +16,13 @@ ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 caps.latest.revision: "42"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f88d0c71337f7b4c4fc1e26c2c483b26723c073
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6440acda92e77b3558cf60ba3c54cb5b8b3c042
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>Instância de servidor espelho (Assistente para Configurar Segurança de Espelhamento de Banco de Dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta página para especificar informações sobre a instância de servidor com o banco de dados espelho.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Se uma porta do ouvinte não existir para a instância de servidor, o número da porta 5022 será exibido na caixa de texto **Porta** . Você pode usar qualquer número de porta disponível, como 7022.  
   
--   Quando o ponto de extremidade do espelhamento já existir, o número da porta daquele ponto de extremidade é exibido. Se for necessário alterar a porta, use um comando ALTER ENDPOINT. Para obter mais informações, veja [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+-   Quando o ponto de extremidade do espelhamento já existir, o número da porta daquele ponto de extremidade é exibido. Se for necessário alterar a porta, use um comando ALTER ENDPOINT. Para obter mais informações, consulte [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
     > [!NOTE]  
     >  É necessário um número de porta.  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/20/2017
   
  Para desabilitar a criptografia, desmarque a caixa de seleção. Para habilitar a criptografia novamente, marque a caixa de seleção.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Propriedades do banco de dados &#40;página Espelhamento&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   

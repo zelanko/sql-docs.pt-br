@@ -21,13 +21,13 @@ ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 caps.latest.revision: "51"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a6db5b2ab4f3992b286eb2b0faff37e3d91d4381
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1ca99d049a5df8788c220a2a582539426c6488f0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Suspender um banco de dados de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você pode suspender um banco de dados de disponibilidade no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Observe que um comando para suspender precisa ser emitido na instância do servidor que hospeda o banco de dados para ser suspenso ou retomado.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/20/2017
  Você deve estar conectado à instância de servidor que hospeda o banco de dados a ser suspenso. Para suspender um banco de dados primários e os bancos de dados secundários correspondentes, conecte-se à instância de servidor que hospeda a réplica primária. Para suspender um banco de dados secundário deixando o banco de dados primário disponível, conecte-se à réplica secundária.  
   
 ###  <a name="Recommendations"></a> Recomendações  
- Durante afunilamentos, a suspensão de um ou mais bancos de dados secundários brevemente poderá ser útil para melhorar temporariamente o desempenho na réplica primária. Desde que um banco de dados secundário permaneça suspenso, o log de transações do banco de dados primário correspondente não poderá ser truncado. Isso faz com que os registros de log sejam acumulados no banco de dados primário. Portanto, é recomendável retomar ou remover um banco de dados secundário suspenso rapidamente. Para obter mais informações, consulte [Acompanhamento: evitando um log de transações cheio](#FollowUp), posteriormente neste tópico.  
+ Durante gargalos, a suspensão de um ou mais bancos de dados secundários brevemente poderá ser útil para melhorar temporariamente o desempenho na réplica primária. Desde que um banco de dados secundário permaneça suspenso, o log de transações do banco de dados primário correspondente não poderá ser truncado. Isso faz com que os registros de log sejam acumulados no banco de dados primário. Portanto, é recomendável retomar ou remover um banco de dados secundário suspenso rapidamente. Para obter mais informações, consulte [Acompanhamento: evitando um log de transações cheio](#FollowUp), posteriormente neste tópico.  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  No Pesquisador de Objetos, conecte-se à instância de servidor que hospeda a réplica de disponibilidade na qual você deseja suspender um banco de dados e expanda a árvore de servidores. Para obter mais informações, consulte [Pré-requisitos](#Prerequisites)anteriormente neste tópico.  
   
-2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade** .  
+2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade**.  
   
 3.  Expanda o grupo de disponibilidade.  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Para suspender bancos de dados adicionais neste local de réplica, repita as etapas 4 e 5 para cada banco de dados.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para suspender um banco de dados**  
   
 1.  Conecte-se à instância do servidor que hospeda a réplica cujo banco de dados você deseja suspender. Para obter mais informações, consulte [Pré-requisitos](#Prerequisites)anteriormente neste tópico.  
@@ -149,7 +149,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Retomar um banco de dados de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Retomar um banco de dados de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)  
   

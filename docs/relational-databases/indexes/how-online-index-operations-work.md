@@ -16,19 +16,19 @@ helpviewer_keywords:
 - index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.suite: sql
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: Inactive
-ms.openlocfilehash: 5c4b0e6d0830e1addce4f3bc586aa4c09029314c
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: 3a06dc9f01b2cf889605770beb57940b7f10558b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="how-online-index-operations-work"></a>Como funcionam as operações de índice online
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/28/2017
 |-----------|---------------------|------------------|  
 |Preparação|Um novo índice é criado e definido como somente gravação.|IS|  
 |Compilação|Os dados são inseridos a partir da origem.<br /><br /> São aplicadas as modificações de usuário (inserções, atualizações, exclusões) aplicadas à origem.<br /><br /> Esta atividade é transparente ao usuário.|IS|  
-|Final|Os metadados do índice são atualizados.<br /><br /> O índice é definido para o status de leitura/gravação.|P<br /><br /> ou<br /><br /> SCH-M|  
+|Final|Os metadados do índice são atualizados.<br /><br /> O índice é definido para o status de leitura/gravação.|P<br /><br /> ou em<br /><br /> SCH-M|  
   
  O destino não é acessado por instruções SELECT emitidas pelo usuário até que a operação de índice seja concluída.  
   

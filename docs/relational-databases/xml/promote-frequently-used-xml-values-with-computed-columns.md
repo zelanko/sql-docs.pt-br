@@ -16,15 +16,15 @@ helpviewer_keywords:
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0280a49bf91f078355dedab297ffd75102f5faa
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7374751ae2fd74f93ed0744853eb472689538347
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promover valores XML frequentemente usados com colunas computadas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Se as consultas forem feitas principalmente em um pequeno número de valores de elementos e de atributos, você poderá desejar promover essas quantidades em colunas relacionais. Isso é útil quando consultas são emitidas em uma pequena parte dos dados XML enquanto toda a instância XML é recuperada. A criação de um índice XML na coluna XML não é necessária. Em vez disso, a coluna promovida pode ser indexada. As consultas devem ser escritas para usar a coluna promovida. Isto é, o otimizador de consultas não destina consultas novamente na coluna XML para a coluna promovida.  
@@ -259,7 +259,7 @@ as
   
  O gatilho de inserção é idêntico à versão de não CLR. No entanto o gatilho de atualização apenas substitui a função udf_XML2Table() pela CLR_udf_XML2Table().  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar XML em colunas computadas](../../relational-databases/xml/use-xml-in-computed-columns.md)  
   
   

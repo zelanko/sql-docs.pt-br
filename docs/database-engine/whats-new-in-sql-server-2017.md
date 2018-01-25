@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3ab26cac71a11ed7e9d98401b01930f27784433a
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: 8f6f7d38bf06e453017b48108b5bda5594f0870c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Novidades no mecanismo de banco de dados – SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ Este tópico descreve as melhorias feitas no [!INCLUDE[ssdenoversion-md](../incl
 - Uma nova DMV [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) foi introduzida para controlar o uso do repositório de versão por banco de dados. Essa nova DMV é útil no monitoramento do uso do repositório de versão no tempdb, a fim de planejar de modo proativo o dimensionamento do tempdb de acordo com o requisito de uso do repositório de versão por banco de dados, sem cobrança de desempenho nem sobrecargas de executá-lo em servidores de produção.
 - Uma nova DMF [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) foi introduzida para expor as informações de VLF semelhantes a DBCC LOGINFO, a fim de monitorar, emitir alertas e evitar possíveis problemas de log de transações causados pelo número de VLFs, tamanho de VLF ou problemas de redução de arquivo enfrentados pelos clientes.
 - Melhor desempenho de backup para bancos de dados pequenos em servidores de alto nível – ao fazer backup de bancos de dados no SQL Server, o processo de backup exige iterações múltiplas do pool de buffers para esvaziar as E/Ss em andamento. Como resultado, o tempo de backup não é apenas a função do tamanho do banco de dados, mas também uma função do tamanho do pool de buffers ativo. No SQL Server 2017, o backup é otimizado para evitar iterações múltiplas do pool de buffers, resultando em ganhos substanciais no desempenho de backup de bancos de dados pequenos a médios. O ganho de desempenho é reduzido, à medida que o tamanho do banco de dados aumenta e à medida que as páginas a serem copiadas em backup e a E/S de backup levam mais tempo, comparado ao pool de buffers de iteração.  
-- O Repositório de Consultas agora acompanha as informações resumidas das estatísticas de espera. O acompanhamento das categorias de estatísticas de espera por consulta no Repositório de Consultas possibilita o próximo nível da experiência de solução de problemas de desempenho, fornecendo ainda mais informações sobre o desempenho da carga de trabalho e seus afunilamentos, ao mesmo tempo que preserva as principais vantagens do Repositório de Consultas.  
+- O Repositório de Consultas agora acompanha as informações resumidas das estatísticas de espera. O acompanhamento das categorias de estatísticas de espera por consulta no Repositório de Consultas possibilita o próximo nível da experiência de solução de problemas de desempenho, fornecendo ainda mais informações sobre o desempenho da carga de trabalho e seus gargalos, ao mesmo tempo que preserva as principais vantagens do Repositório de Consultas.  
 - Tabelas temporais com controle de versão do sistema agora dão suporte a CASCADE DELETE e CASCADE UPDATE.  
 - Melhorias indiretas de desempenho do ponto de verificação.
 - Suporte a grupos de disponibilidade sem cluster adicionado.

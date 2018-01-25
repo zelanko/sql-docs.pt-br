@@ -15,12 +15,12 @@ ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: bc1b70a3c4707976539d13222b088bd744e2d436
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 42f27ae342fdd30ac608e1071029eb2415c9b896
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrade-data-quality-services"></a>Atualizar o Data Quality Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico fornece informações sobre como fazer upgrade da instalação existente do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] DQS (Data Quality Services). Como parte do upgrade do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server, você também deverá fazer upgrade do esquema de bancos de dados do DQS.  
@@ -93,12 +93,12 @@ ms.lasthandoff: 11/20/2017
   
 3.  A saída exibirá uma entrada para cada atualização junto com a data da atualização. O VERSION_ID e ASSEMBLY_VERSION máximo na última data é a versão atual. Um valor de 2 na coluna STATUS indica êxito. Se um erro ocorreu, o erro será listado na coluna ERROR. Uma saída de exemplo:  
   
-    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|ERROR|  
+    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|erro|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
     |1.000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMAIN\UserName>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMAIN\UserName>|2||  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instalar o Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Remover objetos do Data Quality Server](../../sql-server/install/remove-data-quality-server-objects.md)   
  [Atualizar o SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  

@@ -19,13 +19,13 @@ ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
 caps.latest.revision: "39"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b67769fce7a6516e3bd8d0a76eb70ef3d0365d4a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b2f2b52243f94686b1132988d588bf901db09c7c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>Espelhamento de Banco de Dados – usar certificados para conexões de saída
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve os passos para configurar instâncias de servidor para usar certificados para autenticar conexões de saída para espelhamento de banco de dados. A configuração de conexão de saída deve ser feita antes que você possa configurar conexões de entrada.  
@@ -181,7 +181,7 @@ GO
   
  Ao copiar um certificado para outro sistema, use um método de cópia seguro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Escolher um algoritmo de criptografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   

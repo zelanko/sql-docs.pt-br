@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Web synchronization, security architecture
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a582eb3debf641b5704e051e67c49104a83f270c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 94de766b7e039aa2b66d900202fff0d458b0f358
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Arquitetura de segurança para sincronização da Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] habilita o controle refinado da configuração de segurança para sincronização da Web. Esse tópico fornece uma lista abrangente de todos os componentes que podem ser incluídos na configuração da sincronização da Web e as informações sobre as conexões que são efetuadas entre os componentes. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
@@ -140,8 +140,8 @@ ms.lasthandoff: 11/17/2017
 |---------------------|------------------------------------|  
 |Qualquer usuário do Windows que tenha as permissões exigidas.|Gerenciador dos Serviços de Informações da Internet (IIS). |  
   
-## <a name="see-also"></a>Consulte também  
- [Configurar a Sincronização da Web](../../../relational-databases/replication/configure-web-synchronization.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md)   
  [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   
   

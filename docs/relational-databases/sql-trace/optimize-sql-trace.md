@@ -18,15 +18,15 @@ helpviewer_keywords:
 - performance [SQL Server], trace
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b8994a4c12de53e82ff45dd5c587b00390a4ac0b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 04c90ac8025d4939c6c9606d63c5d35c5d68aabe
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="optimize-sql-trace"></a>Otimizar o Rastreamento do SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Embora a execução do Rastreamento do SQL reduza o desempenho por usar recursos do sistema para coletar os dados, há diversos procedimentos que podem minimizar esse efeito. Para minimizar os custos ao desempenho devidos a um rastreamento, tente o seguinte:  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Limite o número de eventos retornados. Com o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , é possível limitar o número de eventos retornados salvando o rastreamento em uma tabela e definindo o número máximo de linhas. Os resultados do rastreamento continuam sendo retornados na tela do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] quando o número máximo de linhas é atingido, mas elimina-se o custo decorrido do registro dos resultados em uma tabela.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Filtrar um rastreamento](../../relational-databases/sql-trace/filter-a-trace.md)  
   
   

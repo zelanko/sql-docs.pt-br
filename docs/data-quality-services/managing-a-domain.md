@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ccacb5ac042cbfe0e72623b78cf930587c7dd7fd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4ca23eae8c1593e9bc5d8a9a58402b6a46d7603d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="managing-a-domain"></a>Gerenciando um domínio
   Este tópico descreve o uso de domínios no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Um domínio contém uma representação semântica dos dados em um campo específico na fonte de dados que será analisada. Um domínio faz parte da base de dados de conhecimento que você cria para uma fonte de dados e o conhecimento que acumula analisando uma amostra da fonte de dados ou importando dados é adicionado aos domínios definidos na base de dados de conhecimento. O conhecimento nesses domínios é usado depois para executar a limpeza e a correspondência em um projeto de qualidade de dados. Os domínios estão ao núcleo de todas as atividades no Data Quality Services.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/20/2017
 |Usar relações para corrigir um termo que faz parte de um valor em um domínio|[Criar relações baseadas em termos](../data-quality-services/create-term-based-relations.md)|  
 |Concluir, fechar ou cancelar a atividade de gerenciamento de domínio|[Encerrar a atividade Gerenciamento de Domínio](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

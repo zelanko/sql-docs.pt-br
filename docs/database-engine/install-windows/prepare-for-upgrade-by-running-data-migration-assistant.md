@@ -15,13 +15,13 @@ ms.assetid: eabcc635-7adf-4e45-b6f1-158d6e024908
 caps.latest.revision: "7"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3a4e884490b9def42f660fca00da886f93627666
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 79d71afe2cfba311f7886b70fae34b1074424145
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="prepare-for-upgrade-by-running-data-migration-assistant"></a>Preparar o upgrade executando o Assistente de Migração de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Prepare-se para atualizar seus bancos de dados OLTP e adotar novos recursos no [!INCLUDE[ssnover](../../includes/ssnoversion-md.md)] baixando e executando o Assistente de Migração de Dados da Microsoft.  

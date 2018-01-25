@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server:Query Store
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
 caps.latest.revision: "8"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3bfa37e7f645148daa38f8e79b8c51aaf1613c0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 854714fbe12db7e32dc0989a442abbdd23695ef9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, Objeto de Repositório de Consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
  Esta tabela descreve os contadores do **SQLServer:Repositório de Consultas**.  
   
-|Contadores de Repositório de Consultas do SQL Server|Descrição|  
+|Contadores de Repositório de Consultas do SQL Server|Description|  
 |-------------------------------------|-----------------|  
 |**Uso de CPU do Repositório de Consultas**|Indica o uso da CPU pelos Repositórios de Consultas.|  
 |**Leituras lógicas do Repositório de Consultas**|Indica o número de leituras lógicas feitas pelo Repositório de Consultas.|  
@@ -42,14 +42,14 @@ ms.lasthandoff: 11/17/2017
   
  Cada contador no objeto contém as seguintes instâncias:  
   
-|Instância do Repositório de Consultas|Descrição|  
+|Instância do Repositório de Consultas|Description|  
 |--------------------------|-----------------|  
 |**_Total**|Informações para o Repositório de Consultas para esta instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |\<nome do banco de dados>|Informações do Repositório de Consultas para este banco de dados.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Procedimentos armazenados do repositório de consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Exibições de catálogo do repositório de consultas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   

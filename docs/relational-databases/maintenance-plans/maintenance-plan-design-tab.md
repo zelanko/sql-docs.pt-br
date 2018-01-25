@@ -17,15 +17,15 @@ f1_keywords:
 - sql13.swb.maint.subplaneditor.f1
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e2c7e920b4f0a4ca5933efafce3dc09b2b5924b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e425cd4e4901b396ae08cc9586381120ab225745
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-plan-design-tab"></a>Plano de manutenção (Guia Design)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use o **Plano de Manutenção (Guia Design)** para especificar as propriedades de um plano de manutenção e seus subplanos. Arraste tarefas da caixa de ferramentas para o designer de plano. Clique com o botão direito do mouse em grupos de tarefas para criar caminhos de execução de ramificação. Os planos de manutenção são salvos como pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e são executados pelos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
  **Superfície do Designer**  
  Executa design e mantém os planos de manutenção. Use a superfície de designer para adicionar tarefas de manutenção a um plano, remover tarefas de um plano, especificar os links com precedência entre tarefas e para indicar a ramificação ou paralelismo de uma tarefa.  
   
- Um link de precedência entre duas tarefas estabelece uma relação entre elas. A segunda tarefa (a *tarefa dependente*) é executada somente se o resultado da execução da primeira tarefa (a *tarefa precedente*) corresponde aos critérios especificados. Normalmente o resultado da execução especificado é **Êxito**, **Falha**ou **Conclusão**. A superfície do designer do plano de manutenção baseia-se na superfície do designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Para obter mais informações, consulte [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
+ Um link de precedência entre duas tarefas estabelece uma relação entre elas. A segunda tarefa (a *tarefa dependente*) é executada somente se o resultado da execução da primeira tarefa (a *tarefa precedente*) corresponde aos critérios especificados. Normalmente o resultado da execução especificado é **Êxito**, **Falha**ou **Conclusão**. A superfície do designer do plano de manutenção baseia-se na superfície do designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Para obter informações, consulte [Restrições de precedência](../../integration-services/control-flow/precedence-constraints.md).  
   
  Por exemplo, poderá ser especificada a execução de uma tarefa Índice de Desfragmentação somente se a tarefa anterior Verificar a Integridade do Banco de Dados for completada com êxito. O recurso de vinculação de precedência de tarefa também permite que sejam tratadas condições de erro ou falha em um plano. Por exemplo, se a tarefa Verificar a Integridade do Banco de Dados falhar, uma tarefa Notificar Operador poderá notificar o usuário ou o operador sobre a falha.  
   
@@ -119,8 +119,8 @@ ms.lasthandoff: 11/17/2017
  **Zoom**  
  Altera o tamanho das tarefas na superfície de design  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Planos de manutenção](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [Criar um plano de manutenção](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
+ [Criar um Plano de Manutenção](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   
   

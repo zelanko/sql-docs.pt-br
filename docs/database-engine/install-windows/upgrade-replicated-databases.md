@@ -21,12 +21,12 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 caps.latest.revision: "74"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 7bbf6e3432dd66e45173afa4c955ee0269b531ca
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: d0e323482ac2d762a24a2ef39f2922764a24d35b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrade-replicated-databases"></a>Atualizar bancos de dados replicados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] dá suporte à atualização de bancos de dados replicados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; não é necessário interromper a atividade de outros nós durante o upgrade de um nó. Verifique se você está em conformidade com as regras que dizem respeito às versões suportadas em uma topologia:  
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="restoring-a-replicated-database-from-an-earlier-version"></a>Restaurando um banco de dados replicado de uma versão anterior  
  Para assegurar que as configurações de replicação sejam mantidas na restauração do backup de um banco de dados replicado de uma versão anterior, restaure para um servidor e um banco de dados que tenham os mesmos nomes que o servidor e o banco de dados dos quais foi obtido o backup.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administração &#40;Replicação&#41;](../../relational-databases/replication/administration/administration-replication.md)   
  [Compatibilidade com versões anteriores de replicação](../../relational-databases/replication/replication-backward-compatibility.md)   
  [Novidades &#40;Replicação&#41;](../../relational-databases/replication/what-s-new-replication.md)   

@@ -22,13 +22,13 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 caps.latest.revision: "48"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b605fdc999d3b0bb8937428e7b158322d182d839
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dd664120017d7e498fd2930281380c718e98aaa9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clustering de failover e Grupos de Disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,8 +78,8 @@ ms.lasthandoff: 11/20/2017
 ||Nós dentro de uma FCI|Réplicas dentro de um grupo de disponibilidade|  
 |-|-------------------------|-------------------------------------------|  
 |**Usa cluster WSFC**|Sim|Sim|  
-|**Nível de proteção**|Instância|Banco de Dados|  
-|**Tipo de armazenamento**|Compartilhada|Não compartilhado<br /><br /> Embora as réplicas de um grupo de disponibilidade não compartilhem armazenamento, uma réplica hospedada por uma FCI usa uma solução de armazenamento compartilhado conforme exigido por essa FCI. A solução de armazenamento é compartilhada somente pelos nós dentro da FCI e não entre as réplicas do grupo de disponibilidade.|  
+|**Nível de proteção**|Instância|banco de dados|  
+|**Tipo de armazenamento**|Compartilhado|Não compartilhado<br /><br /> Embora as réplicas de um grupo de disponibilidade não compartilhem armazenamento, uma réplica hospedada por uma FCI usa uma solução de armazenamento compartilhado conforme exigido por essa FCI. A solução de armazenamento é compartilhada somente pelos nós dentro da FCI e não entre as réplicas do grupo de disponibilidade.|  
 |**Soluções de armazenamento**|Conexão direta, rede SAN, pontos de montagem, SMB|Depende do tipo de nó|  
 |**Secundários legíveis**|Não*|Sim|  
 |**Configurações de política de failover aplicáveis**|Quorum WSFC<br /><br /> Específica da FCI<br /><br /> Configurações de grupo de disponibilidade**|Quorum WSFC<br /><br /> Configurações de grupo de disponibilidade|  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>Considerações para hospedar uma réplica de disponibilidade em uma FCI  
   
 > [!IMPORTANT]  
->  Se você planeja hospedar uma réplica de disponibilidade em uma FCI (Instância de Cluster de Failover) do SQL Server, é preciso garantir que os nós host do Windows Server 2008 atendem aos pré-requisitos e às restrições do AlwaysOn para FCIs (Instâncias de Cluster de Failover). Para obter mais informações, consulte [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+>  Se você planeja hospedar uma réplica de disponibilidade em uma FCI (Instância de Cluster de Failover) do SQL Server, é preciso garantir que os nós host do Windows Server 2008 atendem aos pré-requisitos e às restrições do AlwaysOn para FCIs (Instâncias de Cluster de Failover). Para obter mais informações, veja [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] As FCIs (Instâncias de Cluster de Failover) não dão suporte ao failover automático por grupos de disponibilidade, de modo que qualquer réplica de disponibilidade que esteja hospedado por um FCI só pode ser configurada para failover manual.  
   
@@ -142,7 +142,7 @@ ms.lasthandoff: 11/20/2017
   
      [White papers da equipe de consultoria do cliente do SQL Server](http://sqlcat.com/)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Habilitar e desabilitar Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)   
  [Monitorar grupos de disponibilidade &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   

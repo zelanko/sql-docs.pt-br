@@ -27,15 +27,15 @@ helpviewer_keywords:
 - importing data
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 caps.latest.revision: "61"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0d6c0536543d77b323684869a42349e614dd48cc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0a7a6c256b102c43decf8cc003ce2ceae808e621
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Importação e exportação em massa de dados (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à exportação de dados em massa (*dados em massa*) de uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e à importação dos dados em massa para uma exibição não particionada ou uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
@@ -48,11 +48,11 @@ ms.lasthandoff: 11/17/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à exportação de dados em massa de uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e à importação de dados em massa em uma tabela ou exibição não particionada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os métodos básicos a seguir estão disponíveis.  
  
   
-|Método|Descrição|Importa dados|Exporta dados|  
+|Método|Description|Importa dados|Exporta dados|  
 |------------|-----------------|------------------|------------------|  
 |[utilitário bcp](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|Um utilitário de linha de comando (Bcp.exe) que exporta e importa dados em massa e gera arquivos de formato.|Sim|Sim|  
-|[instrução BULK INSERT](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que importa dados diretamente de um arquivo de dados para uma tabela de banco de dados ou exibição não particionada.|Sim|Não|  
-|[Instrução INSERT ... Instrução SELECT * FROM OPENROWSET(BULK...)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que usa o provedor de conjunto de linhas em massa OPENROWSET para importação em massa dos dados para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificando a função OPENROWSET(BULK...) para selecionar dados em uma instrução INSERT.|Sim|Não| 
+|[instrução BULK INSERT](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que importa dados diretamente de um arquivo de dados para uma tabela de banco de dados ou exibição não particionada.|Sim|não|  
+|[Instrução INSERT ... Instrução SELECT * FROM OPENROWSET(BULK...)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que usa o provedor de conjunto de linhas em massa OPENROWSET para importação em massa dos dados para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificando a função OPENROWSET(BULK...) para selecionar dados em uma instrução INSERT.|Sim|não| 
 |[Assistente de Importação e Exportação do SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|O assistente cria pacotes simples que importam e exportam dados entre vários formatos de dados populares, incluindo bancos de dados, planilhas e arquivos de texto.|Sim|Sim|  
   
 > [!IMPORTANT]

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - nodes method [XML in SQL Server]
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 82e2e1da18b277dc23ab249505e27907ab8d39e0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 56771eba840963660eb0160e6c5e5c45e98980b4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>Usar os métodos value() e nodes() com OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] É possível usar vários métodos **value()** em tipo de dados **xml** em uma cláusula **SELECT** para gerar um conjunto de linhas de valores extraídos. O método **nodes()** produz uma referência interna para cada nó selecionado que pode ser usado para consulta adicional. A combinação dos métodos **nodes()** e **value()** pode ser mais eficiente para gerar o conjunto de linhas quando ele tem várias colunas e, talvez, quando as expressões de caminho usadas em sua geração são complexas.  
@@ -79,7 +79,7 @@ DEALLOCATE name_cursor
   
  A combinação das funções **nodes()** e **value()** usa índices XML de maneira efetiva. Como resultado, essa combinação pode exibir mais escalabilidade que o **OpenXml**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)  
   
   

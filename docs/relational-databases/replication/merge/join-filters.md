@@ -18,15 +18,15 @@ helpviewer_keywords:
 - join filters
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7873edc14c20b25cefa66a7c1602c056ab7b978f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 211bde4093eff61342659558e231fb29c13e5bd7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="join-filters"></a>filtros de junção
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Um filtro de junção permite que uma tabela seja filtrada com base na forma pela qual uma tabela relacionada é filtrada na publicação. Geralmente uma tabela pai é filtrada usando um filtro de linha com parâmetros; depois um ou mais filtros de junção são definidos da mesma forma que se define junções entre tabelas. Os filtros de junção estendem os filtros com parâmetros para que os dados nas tabelas relacionadas sejam replicados somente se corresponderem à cláusula do filtro de junção.  
@@ -92,7 +92,7 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
      É altamente recomendável que toda lógica desse tipo seja expressa em um filtro de junção em vez de em uma subconsulta. Se seu aplicativo requer que um filtro de linha use uma subconsulta, certifique-se de que a subconsulta só referencie dados de pesquisa que não sejam alterados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Filtrar dados publicados para a replicação de mesclagem](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
  [Filtros de linha com parâmetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   

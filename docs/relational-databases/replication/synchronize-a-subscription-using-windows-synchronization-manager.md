@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Windows Synchronization Manager
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 202347a7f949b382ccc1fa9f635c09c1679475d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a50dbf98515a00a947ba54207d3688d24417b7f3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Sincronizar uma assinatura usando o Gerenciador de Sincronização do Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Gerenciador de Sincronização do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows só poderá ser usado para sincronizar assinaturas para publicações do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver em execução no mesmo computador que o Gerenciador de Sincronização (ele também pode ser usado para sincronizar arquivos offline e páginas da Web). Para usar o Gerenciador de Sincronização:  
@@ -122,7 +122,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  As edições serão aplicadas apenas se fizerem parte da linha escolhida para resolução. Por exemplo, se você fizer edições no **Publicador**e, em seguida, clicar em **Aceitar Assinante**, as edições serão descartadas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Resolução interativa de conflitos](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   
   

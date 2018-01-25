@@ -18,15 +18,15 @@ f1_keywords:
 helpviewer_keywords: Shrink Database Task dialog box
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 977d851af5e4b044527a196417ea32504a44a65f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0b71a3f5cf438b4ac5f3cce071329a81cff88d25
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>Tarefa reduzir banco de dados (Plano de Manutenção)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a caixa de diálogo da **Tarefa Reduzir Banco de Dados** para criar uma tarefa que tenta reduzir o tamanho dos bancos de dados selecionados. Use as opções abaixo para determinar a quantidade de espaço não usado que permanecerá no banco de dados depois de ele ser reduzido (quanto maior a porcentagem, menos o banco de dados poderá ser reduzido). O valor é baseado na porcentagem dos dados reais no banco de dados. Por exemplo, se você reduzir um banco de dados de 100 MB contendo 60 MB de dados e 40 MB de espaço livre, com uma porcentagem de espaço livre de 50%, você ficará com 60 MB de dados e 30 MB de espaço livre (pois 50% de 60 MB são 30 MB). Somente o espaço em excesso no banco de dados é eliminado. Os valores válidos são de 0 a 100.  
@@ -98,13 +98,13 @@ ms.lasthandoff: 11/17/2017
  **Usar nome de usuário e senha específicos**  
  Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa opção não está disponível.  
   
- **Nome de usuário**  
+ **User name**  
  Forneça um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser usado na autenticação. Essa opção não está disponível.  
   
  **Senha**  
  Forneça uma senha a ser usada na autenticação. Essa opção não está disponível.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)  
   
   

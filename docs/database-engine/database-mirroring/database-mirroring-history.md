@@ -16,13 +16,13 @@ ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 caps.latest.revision: "25"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c06fd5ffe8a889b1decb3083f517c5ecae86bc0b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3e3bf2700f9570a41f07d18d376332080daa99cd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-history"></a>Histórico do espelhamento de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use essa caixa de diálogo para exibir o histórico de status de espelhamento de um banco de dados espelho em uma instância de servidor especificada.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/20/2017
  **Instância de servidor**  
  Nome da instância de servidor a partir da qual o histórico está sendo informado.  
   
- **Banco de dados**  
+ **Backup de banco de dados**  
  Nome do banco de dados cujo histórico está sendo informado.  
   
  **Filtrar lista por**  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/20/2017
  **Histórico**  
  Exibe a lista de histórico. Clique em um cabeçalho de coluna para classificar a grade por essa coluna. A lista contém as seguintes colunas:  
   
-|Nome da coluna|Descrição|  
+|Nome da coluna|Description|  
 |-----------------|-----------------|  
 |**Hora registrada**|Carimbo de data/hora da linha do histórico.|  
 |**Função**|Função de espelhamento atual da instância de servidor deste banco de dados, Principal ou Espelho.|  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/20/2017
 |**Taxa de Recuperação**|Taxa em que as transações estão sendo recuperadas no banco de dados espelho, em KB por segundo.|  
 |**Sobrecarga Espelhada Confirmada**|Atraso médio por transação em milissegundos (somente em modos síncronos). Esse atraso consiste na quantidade de sobrecarga incidente enquanto a instância do servidor principal aguarda que a instância do servidor espelho grave o registro do log da transação na fila de restauração.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar o Monitor de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

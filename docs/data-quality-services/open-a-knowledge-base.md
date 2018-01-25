@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.dqs.kb.openkb.f1
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 693a38d7a92f7dc6728452e721716e89b366feb9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f01519c6ddbeb4a137f6f9ec5bf6cc2d0f84d6f4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="open-a-knowledge-base"></a>Abrir uma base de dados de conhecimento
   Este tópico descreve como abrir uma base de dados de conhecimento existente no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) e prepará-la para o gerenciamento de domínio, a descoberta de conhecimento ou a adição de uma política de correspondência.  

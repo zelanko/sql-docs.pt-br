@@ -16,15 +16,15 @@ helpviewer_keywords:
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5963e9521c9c54cad7cee997f246d31b1b198549
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9a5ff7baa53924206192db30e8ae9f50cef02cff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Solucionar problemas na conexão com o Mecanismo de Banco de Dados do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

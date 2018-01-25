@@ -15,13 +15,13 @@ ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
 caps.latest.revision: "8"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb0f5a1872802fc5f623650902ab7a92fe72c6e0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 041279879116916b0d603e8c1f9a81f8ad180f70
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-columnstore-object"></a>SQL Server, Objeto Columnstore
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
   
  A tabela a seguir descreve as colunas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Columnstore** counters.  
   
-|Contadores de columnstore|Descrição|  
+|Contadores de columnstore|Description|  
 |--------------------------|-----------------|  
 |**Rowgroups delta fechados**|Número de rowgroups delta fechados.|  
 |**Rowgroups delta compactados**|Número de rowgroups delta compactados.|  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |**Total de mesclagens de rowgroups compactadas**|Número de rowgroups de destino compactados criados com MERGE desde a inicialização do SQL Server.|  
 |**Total de rowgroups de origem mesclados**|Número de rowgroups de origem mesclados desde a inicialização do SQL Server.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: "Introdução ao monitoramento do Analysis Services com o SQL Server Profiler | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 01/23/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -23,14 +23,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a673b05f7806d8ed139a41f14cc4f1302e1a8c99
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 193b7d2907fe41c35560f23e204a3f56e209802d
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>Introdução ao monitoramento do Analysis Services com o SQL Server Profiler
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode usar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para monitorar eventos gerados por uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], você pode fazer o seguinte:  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  É possível usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para monitorar eventos gerados por uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], você pode fazer o seguinte:  
   
 -   Monitorar o desempenho de uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -64,8 +66,8 @@ ms.lasthandoff: 01/08/2018
   
  Para obter o desempenho ideal, use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para monitorar somente os eventos pelos quais você tem maior interesse. O monitoramento de muitos eventos pode causar sobrecarga e aumentar muito a tabela ou o arquivo de rastreamento, especialmente durante o monitoramento em um longo período de tempo. Além disso, use a filtragem para limitar a quantidade de dados coletados e impedir o aumento em excesso dos rastreamentos.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Eventos de rastreamento do Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)   
- [Criar rastreamentos do Profiler para reprodução &#40;Analysis Services&#41;](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)  
+ [Criar rastreamentos do Profiler para reprodução &#40; Analysis Services &#41;](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)  
   
   

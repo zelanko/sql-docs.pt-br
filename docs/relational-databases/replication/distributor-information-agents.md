@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.Distributor.commonjobs..f1
 ms.assetid: 5d601a64-6af0-42f9-81b1-cf0087f1c50d
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c2b4b54ae1494a72bf86d56f50ace2da6b0a5e0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a60816a7220a5d1c2b9f15aeeac98e1a74da21ea
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor-information-agents"></a>Distributor Information, Agentes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A guia **Agentes** exibe informações sobre os agentes e trabalhos de manutenção associados com o Publicador e o Assinante.  
@@ -146,7 +146,7 @@ ms.lasthandoff: 11/17/2017
  **Conflitos do Assinante**  
  O número de conflitos por segundo que ocorrem no Assinante durante o processo de mesclagem.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar o Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Exibir informações e executar tarefas para um Publicador &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
  [Exibir informações e executar tarefas para os agentes associados a uma publicação &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   

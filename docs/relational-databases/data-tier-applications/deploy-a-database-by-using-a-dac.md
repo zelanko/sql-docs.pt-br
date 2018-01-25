@@ -22,15 +22,15 @@ helpviewer_keywords:
 - database deploy [SQL Server]
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf70035387f68c17913ba152101cf1417f6e8741
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 110cea8f6a219fad5121e88a19ed5608b2afcb59
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Implantar um banco de dados usando um DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use o Assistente **Implantar Banco de Dados no SQL Azure** para implantar um banco de dados entre uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e um servidor [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] ou entre dois servidores [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
  As opções de banco de dados, como TRUSTWORTHY, DB_CHAINING e HONOR_BROKER_PRIORITY, não podem ser ajustadas como parte do processo de implantação. Propriedades físicas, como o número de grupos de arquivos ou os números e os tamanhos de arquivos, não podem ser alteradas como parte do processo de implantação. Após a conclusão da implantação, você pode usar a instrução ALTER DATABASE, o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell para personalizar o banco de dados.  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
  O assistente para **Implantar Banco de Dados** oferece suporte à implantação de um banco de dados:  
   
 -   De uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para o [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
@@ -145,7 +145,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  Use o método **Import** do tipo **Microsoft.SqlServer.Management.Dac.DacStore** para importar o banco de dados para um arquivo BACPAC. Especifique o arquivo BACPAC criado pela exportação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Exportar um aplicativo da camada de dados](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [Importar um arquivo BACPAC para criar um novo banco de dados de usuário](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)  

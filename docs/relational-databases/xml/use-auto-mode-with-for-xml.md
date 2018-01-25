@@ -18,15 +18,15 @@ helpviewer_keywords:
 - AUTO FOR XML mode
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2e830183ed89e7d9496809fd7545219b1b978079
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 23c8ca2f784e6893ddd5af0a65a8387ee2778dde
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Usar o modo AUTO com FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Conforme descrito em [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md), o modo AUTO retorna os resultados da consulta como elementos XML aninhados. Isso não fornece muito controle sobre a forma do XML gerado em um resultado de consulta. As consultas em modo AUTO são úteis para gerar hierarquias simples. No entanto, [Usar o modo EXPLICIT com FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) e [Usar o modo PATH com FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md) fornecem mais controle e flexibilidade para decidir a forma do XML em um resultado de consulta.  
@@ -144,7 +144,7 @@ FOR XML AUTO, ELEMENTS
   
 -   [Exemplos: Usando modo AUTO](../../relational-databases/xml/examples-using-auto-mode.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   

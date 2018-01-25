@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 711aaff1e0692bcf377117026692f508fd881798
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 757b2b72fe2066f452e53087e2ae73ea67d45aa8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, objeto Transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto **Transactions** no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar o número de transações ativas em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e os efeitos dessas transações em recursos como o repositório de versões de linhas de isolamento de instantâneo em **tempdb**. As transações são unidades de trabalho lógicas; um conjunto de operações que devem ter êxito ou ser apagadas de um banco de dados para manter a integridade lógica dos dados. Todas as modificações de dados nos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são feitas em transações.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  Esta tabela descreve os contadores **SQLServer:Transactions** .  
   
-|Contadores de transações do SQL Server|Descrição|  
+|Contadores de transações do SQL Server|Description|  
 |--------------------------------------|-----------------|  
 |**Espaço livre em tempdb (KB)**|A quantidade de espaço (em quilobytes) disponível em **tempdb**. Deve haver espaço livre suficiente para manter o repositório de versão de nível de isolamento do instantâneo e todos os novos objetos temporários criados nesta instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |**Tempo de execução da transação mais longa**|A quantidade de tempo (em segundos) desde o início da transação que está ativada por mais tempo que qualquer outra transação atual. Este contador somente mostra a atividade quando o banco de dados está no nível de isolamento do instantâneo de leitura confirmada. Ele não registra nenhuma atividade se o banco de dados estiver em qualquer outro nível de isolamento.|  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 |**Criação de unidade de repositório de versão**|O número de unidades de alocação criadas no repositório de isolamento de instantâneo desde que a instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] foi iniciada.|  
 |**Truncamento de unidade de repositório de versão**|O número de unidades de alocação removidas do repositório de isolamento de instantâneo desde que a instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] foi iniciada.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

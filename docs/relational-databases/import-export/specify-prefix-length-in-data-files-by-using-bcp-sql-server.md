@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e27fceed483f3f66d1f167c5971a536bc4aa6a77
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d649216f87a35c21430cd2d9b16bd4a4085b485
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Especificar o tamanho de prefixo em arquivos de dados usando bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Para fornecer o armazenamento de arquivos mais compacto para a exportação de dados em massa no formato nativo para um arquivo de dados, o comando **bcp** precede cada campo com um ou mais caracteres que indicam o tamanho do campo. Esses caracteres são chamados *caracteres de prefixo de comprimento*.  
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Para especificar um tamanho do prefixo em um arquivo de dados que não foi criado usando o **bcp**, use os tamanhos fornecidos em [Tamanhos do Prefixo para a Exportação em Massa](#PrefixLengthsExport), anteriormente neste tópico.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Utilitário bcp](../../tools/bcp-utility.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Especificar tamanho do campo usando bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   

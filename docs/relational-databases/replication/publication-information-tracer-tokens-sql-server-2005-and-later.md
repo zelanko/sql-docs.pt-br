@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.publicationinfo.tracertokens.f1
 ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28ea5f20bb9f71a0362756ca05be8ce189ecbcd3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 89955827dd69aee8d9a81b244c30bf289f66a502
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-information-tracer-tokens-sql-server-2005-and-later"></a>Informações da publicação, tokens de rastreamento (SQL Server 2005 e posteriores)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A guia **Tokens de Rastreamento** permite validar conexões e medir a latência de um sistema que usa replicação transacional. Um token (uma quantidade pequena de dados) é gravado no log de transações do banco de dados de publicação, marcado como se fosse uma transação replicada comum e enviado pelo sistema, permitindo um cálculo de:  
@@ -71,12 +71,12 @@ ms.lasthandoff: 11/17/2017
  **Latência Total**  
  O tempo decorrido entre a confirmação de uma transação no Publicador e a confirmação da transação correspondente no Assinante. Isso representa a latência completa do sistema de replicação para esse Assinante neste momento. Um valor **Pendente** indica que o token ainda não alcançou o Assinante.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar e interromper um agente de replicação &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
  [Iniciar o Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Medir a latência e validar as conexões para a replicação transacional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
  [Monitorar o desempenho com o Replication Monitor](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)   
  [Monitorando a Replicação](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Visão geral dos agentes de replicação](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

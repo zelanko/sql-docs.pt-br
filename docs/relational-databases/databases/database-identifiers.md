@@ -22,15 +22,15 @@ helpviewer_keywords:
 - database objects [SQL Server], names
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e65cd74dd93228a722395eac56a120a4c64e0bd2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 35570e23edbec76e06c58a0756c6850024d371ea
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-identifiers"></a>Identificadores de banco de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O nome do objeto de banco de dados é conhecido como identificador. Tudo no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ter um identificador. Servidores, bancos de dados e objetos de banco de dados, como tabelas, exibições, colunas, índices, gatilhos, procedimentos, restrições e regras, podem ter identificadores. Os identificadores são necessários para a maioria dos objetos, mas são opcionais para alguns objetos, como restrições.  
@@ -112,7 +112,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
 > [!NOTE]  
 >  As regras do formato de identificadores normais dependem do nível de compatibilidade do banco de dados. Esse nível pode ser definido por meio de [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   

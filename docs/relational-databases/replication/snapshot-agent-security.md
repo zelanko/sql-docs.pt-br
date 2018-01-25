@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.security.SSA.f1
 helpviewer_keywords: Snapshot Agent Security dialog box
 ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e2f5d2ba5897a96ee89941eef26c7e37f73bf86
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 72edcfbbb48b6ce33df6ba9df99ef587a14c4c73
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="snapshot-agent-security"></a>Segurança do Snapshot Agent
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A caixa de diálogo **Segurança do Agente de Instantâneo** permite specificar:  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
  A conta do Windows ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usada para conexão com o Assinante deve ser, no mínimo, um membro da função de banco de dados fixa **db_owner** no banco de dados de publicação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciar logons e senhas na replicação](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
  [Modelo de segurança do agente de replicação](../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Visão geral dos agentes de replicação](../../relational-databases/replication/agents/replication-agents-overview.md)   

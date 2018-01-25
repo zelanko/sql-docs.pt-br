@@ -25,15 +25,15 @@ helpviewer_keywords:
 - indexed views [SQL Server], disabled indexes
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f32d91eea1ea94b345691aa136645d88effa25ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7193d3a1a473f426565f214cb411c447469b8e9e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="disable-indexes-and-constraints"></a>Desabilitar índices e restrições
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -166,7 +166,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Clique no hiperlink para exibir uma caixa de diálogo que exibe o erro completo.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-disable-an-index"></a>Para desabilitar um índice  
   

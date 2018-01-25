@@ -17,15 +17,15 @@ helpviewer_keywords:
 - merge replication precomputed partitions [SQL Server replication], about precomputed partitions
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bb142518ea996d1344c71aed46e06645fb0d957
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c5e5341614b3da26ec21f84017b0e776000a3bb5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>Filtros com parâmetros – Otimizar para partições pré-computadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Partições pré-computadas são uma otimização de desempenho que pode ser usada com publicações de mesclagem filtradas. Partições pré-computadas também são um requisito para usar registros lógicos em publicações filtradas. Para obter mais informações sobre registros lógicos, consulte [Agrupar alterações em linhas relacionadas com registros lógicos](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="performance-of-precomputed-partitions"></a>Desempenho de partições pré-computadas  
  Há um pequeno custo de desempenho com partições pré-computadas quando as alterações são carregadas do Assinante para o Publicador, mas o tempo de processamento em massa de mesclagem é gasto avaliando as partições e baixando as alterações do Publicador para o Assinante, portanto, o ganho da rede ainda pode ser significativo. O benefício de desempenho irá variar, dependendo do número de Assinantes, sincronizando simultaneamente e o número de atualizações por sincronização que move linhas de uma partição a outra.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

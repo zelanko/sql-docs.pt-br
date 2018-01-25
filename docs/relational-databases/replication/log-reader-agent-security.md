@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.security.LRA.f1
 helpviewer_keywords: Log Reader Agent Security dialog box
 ms.assetid: d6981e74-ddb8-41b8-9ea1-56c2ece63b8a
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d0b0d080908d50d0546c0bed9af79041c7b3499
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5972b9932cd0d30e1695e35ff816df38e40e1e96
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="log-reader-agent-security"></a>Segurança do Log Reader Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A caixa de diálogo **Segurança do Log Reader Agent** permite especificar:  
@@ -40,10 +40,10 @@ ms.lasthandoff: 11/17/2017
  Todas as contas devem ser válidas, com a senha correta especificada para cada conta. Contas e senhas não são validadas até que um agente seja executado.  
   
 ## <a name="options"></a>Opções  
- **Process account**  
+ **Conta do processo**  
  Insira uma conta do Windows na qual o Log Reader Agent é executado no Distribuidor. A conta do Windows especificada deve ser, no mínimo, um membro da função de banco de dados fixa **db_owner** no banco de dados de distribuição.  
   
- **Senha** e **Confirmar senha**  
+ **Senha** e **Confirmar Senha**  
  Insira a senha para a conta do Windows.  
   
  **Conectar ao Publicador**  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
  A conta do Windows ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usada para conexão com o Assinante deve ser, no mínimo, um membro da função de banco de dados fixa **db_owner** no banco de dados de publicação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciar logons e senhas na replicação](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
  [Modelo de segurança do agente de replicação](../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Visão geral dos agentes de replicação](../../relational-databases/replication/agents/replication-agents-overview.md)   

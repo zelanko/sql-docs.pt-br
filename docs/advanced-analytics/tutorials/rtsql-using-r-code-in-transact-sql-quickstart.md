@@ -18,11 +18,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3e1562fc0cf2cd1c3f037dab1ee275beeaeffeea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9c0896ca67df3d8000fae8f3cd3d336b047ee481
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>Usando o código R no Transact-SQL (R no início rápido do SQL)
 
@@ -50,7 +50,7 @@ A instância do SQL Server pode estar em uma máquina virtual do Azure ou no loc
 
 Para executar consultas SQL que incluem script R, você pode usar qualquer outro aplicativo que possa se conectar a um banco de dados e executar o código T-SQL. Profissionais do SQL podem usar o SQL Server Management Studio (SSMS) ou o Visual Studio.
 
-Para este tutorial, para mostrar como é fácil executar R dentro do SQL Server, usamos o novo **extensão mssql para o código do Visual Studio**. Código do VS é um ambiente de desenvolvimento gratuito que pode ser executado em Windows, macOS ou Linux. O **mssql*** extensão é uma extensão leve para execução de consultas do SLq. Para instalá-lo, consulte este artigo: [Usar a extensão mssql para Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
+Para este tutorial, para mostrar como é fácil executar R dentro do SQL Server, usamos o novo **extensão mssql para o código do Visual Studio**. Código do VS é um ambiente de desenvolvimento gratuito que pode ser executado em Windows, macOS ou Linux. O **mssql** extensão é uma extensão leve para execução de consultas T-SQL. Para instalá-lo, consulte este artigo: [Usar a extensão mssql para Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>Conectar-se ao banco de dados e executar um script de teste do Olá, Mundo
 

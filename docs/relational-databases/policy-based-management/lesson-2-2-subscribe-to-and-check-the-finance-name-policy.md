@@ -16,13 +16,13 @@ ms.assetid: 126b4c4c-2a1c-4701-a0ad-8de23fbd7306
 caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43ecb337ed0e54282b7347287481fd4ce7a84f5a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 247af1bcdb8e3d3293792fb52a5d0e8149ce6ccc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-2---subscribe-to-and-check-the-finance-name-policy"></a>Lição 2-2 – Assinar e verificar a política Nome Financeiro
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Nesta tarefa, você configurará o banco de dados Finanças para assinar a categoria de política Finanças. Então, você testará a política Nome de Finanças.  
@@ -79,7 +79,7 @@ Este tutorial está concluído. Para retornar ao início, clique em [Tutorial: A
   
 Para obter uma lista de tutoriais, consulte [Tutoriais do SQL Server 2016](../../sql-server/tutorials-for-sql-server-2016.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Administrar servidores com Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

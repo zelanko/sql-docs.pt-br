@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb7b93313a278db10ecffa7efd61e971b418868d
-ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
+ms.openlocfilehash: 49eb5705e77b8ebe69af42addd95d9d59abdb082
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="modify-a-partition-scheme"></a>Modificar um esquema de partição
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Você pode Modificar um esquema de partição no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ao designar um grupo de arquivos para manter a partição seguinte que será adicionada à tabela particionada usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Isso é feito ao atribuir a propriedade NEXT USED a um grupo de arquivos. Você pode atribuir a propriedade NEXT USED a um grupo de arquivos vazio ou para um que já mantenha uma partição. Em outras palavras, um grupo de arquivos pode manter mais de uma partição.  

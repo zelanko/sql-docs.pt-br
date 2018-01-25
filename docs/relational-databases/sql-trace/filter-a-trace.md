@@ -19,15 +19,15 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49755f29a54164f008e19bc542a9ca650e54b37b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a53a67bdd997f3daa8168f445ce8eada527b5608
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filter-a-trace"></a>Filtrar um rastreamento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Filtros limitam os eventos coletados em um rastreamento. Se não houver um filtro definido, serão retornados todos os eventos das classes de evento selecionadas na saída do rastreamento. Por exemplo, limitar os nomes de usuário do Windows em um rastreamento a usuários específicos restringe os dados de saída apenas a esses usuários.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
  A disponibilidade do filtro depende da coluna de dados. Algumas colunas de dados não podem ser filtradas. As colunas de dados que podem ser filtradas só o podem por certos operadores relacionais, como mostra a tabela a seguir.  
   
-|Operador relacional|Símbolo do operador|Descrição|  
+|Operador relacional|Símbolo do operador|Description|  
 |-------------------------|---------------------|-----------------|  
 |Como|Como|Especifica que os dados de evento de rastreamento devem ser semelhantes ao texto digitado. Permite vários valores.|  
 |Não semelhante a|Não semelhante a|Especifica que os dados de evento de rastreamento não devem ser semelhantes ao texto digitado. Permite vários valores.|  
@@ -133,7 +133,7 @@ ms.lasthandoff: 11/17/2017
 |**SqlHandle**|Use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para filtrar eventos nesta coluna de dados. Para obter mais informações, consulte [Filtrar rastreamentos com o SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**StartTime**|>=, <=|  
 |**Estado**|=, <>, >=, <=|  
-|**Success**|=, <>, >=, <=|  
+|**Êxito**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE, NOT LIKE|  
 |**TargetLoginSid**|Use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para filtrar eventos nesta coluna de dados. Para obter mais informações, consulte [Filtrar rastreamentos com o SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**TargetUserName**|LIKE, NOT LIKE|  

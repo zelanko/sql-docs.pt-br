@@ -22,15 +22,15 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47790c69d2f3fbfaf2af2d86b5bc6c6d3baf79fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c52b8aa34c3f384e9ab1f638e6f6e9dac3bdf04
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Replicação de mesclagem avançada – detecção e resolução de conflito
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando o Publicador e o Assinante estão conectados e ocorre a sincronização, o Agente de Mesclagem detecta se há algum conflito. Se forem detectados conflitos, o Agente de Mesclagem usará o resolvedor de conflitos (especificado quando um artigo é adicionado à publicação) para determinar quais dados serão aceitos e propagados para outros sites.  
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Especificar um tipo de assinatura de mesclagem e a prioridade da resolução de conflitos &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Programação [!INCLUDE[tsql](../../../includes/tsql-md.md)] de replicação e programação RMO (Replication Management Objects): [Criar uma assinatura pull](../../../relational-databases/replication/create-a-pull-subscription.md) e [Criar uma assinatura push](../../../relational-databases/replication/create-a-push-subscription.md)  
+-   Programação [!INCLUDE[tsql](../../../includes/tsql-md.md)] de replicação e programação RMO (Replication Management Objects): [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md) e [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>Resolvedor Interativo  
  A replicação fornece uma interface de usuário de Resolvedor Interativo que pode ser usada tanto em conjunto com o resolvedor padrão de conflitos, baseado em prioridade, como com o resolvedor de artigo. Ao realizar a sincronização sob demanda por meio do Gerenciador de Sincronização do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, o Resolvedor Interativo exibe os dados do conflito em tempo real e permite que se opte pela forma de resolução dos conflitos. Para obter mais informações sobre como ativar resolução interativa e iniciar o Resolvedor Interativo, consulte [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
@@ -137,7 +137,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Replicando programação do [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Exibir informações sobre conflitos em publicações de mesclagem &#40;Programação Transact-SQL de replicação&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Sincronizar dados](../../../relational-databases/replication/synchronize-data.md)  
   
   

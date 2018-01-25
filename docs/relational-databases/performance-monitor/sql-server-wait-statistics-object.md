@@ -16,22 +16,22 @@ helpviewer_keywords:
 - SQLServer:Wait Statistics
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c040fa96a905d3b9547163e1b75963b3ac28933
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 86fed40dbd12e7124aa837b7e428af711e33ef24
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server, Objeto Wait Statistics
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto de desempenho **SQLServer:Wait Statistics** contém contadores de desempenho que relatam informações sobre o status de espera.  
   
  A tabela a seguir lista os contadores contidos no objeto Wait Statistics (Estatísticas de Espera).  
   
-|Contadores de Estatísticas de Espera do SQL Server|Descrição|  
+|Contadores de Estatísticas de Espera do SQL Server|Description|  
 |-----------------------------------------|-----------------|  
 |**Esperas de bloqueio**|Estatísticas dos processos que esperam por um bloqueio.|  
 |**Esperas de buffer de log**|Estatísticas dos processos que esperam pela disponibilização de buffer de log.|  
@@ -48,14 +48,14 @@ ms.lasthandoff: 11/17/2017
   
  Cada contador no objeto contém as seguintes instâncias:  
   
-|Item|Descrição|  
+|Item|Description|  
 |----------|-----------------|  
 |**Tempo de espera médio (ms)**|Tempo médio do tipo de espera selecionado.|  
 |**Tempo de espera cumulativo (ms) por segundo**|Tempo de espera agregado, por segundo, do tipo de espera selecionado.|  
 |**Esperas em andamento**|Número de processos que esperam atualmente pelo tipo seguinte.|  
 |**Esperas iniciadas por segundo**|Número de esperas iniciadas, por segundo, do tipo de espera selecionado.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

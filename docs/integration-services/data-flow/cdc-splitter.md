@@ -16,24 +16,24 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a680f3d08dcc3cc9e6cb196e02bc3429ac526a6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 19b09b99c30e0dffd81b1778c3df25596d455110
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="cdc-splitter"></a>Separador de CDC
   O separador de CDC divide um único fluxo de linhas de alteração de um fluxo de dados de origem CDC em diferentes fluxos de dados para operações de Inserir, Atualizar e Excluir. O fluxo de dados é dividido com base na coluna necessária de `__$operation` e seus valores padrão em tabelas de alterações do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 |Valor da operação|Saída|Description|  
 |------------------------|------------|-----------------|  
-|1|Delete (excluir)|Linha excluída|  
-|2|Insert (inserir)|Linha inserida (não disponível durante o uso do modo de CDC **Rede com Mesclagem** )|  
-|3|Update (atualizar)|Linha Before-update (disponível apenas durante o uso do modo de CDC **Tudo com Valores Antigos** )|  
-|4|Update (atualizar)|Linha After-update (após Before-update)|  
-|5|Update (atualizar)|Linha Merge (disponível apenas durante o uso do modo CDC **Rede com Mesclagem** )|  
+|1|DELETE|Linha excluída|  
+|2|Insert|Linha inserida (não disponível durante o uso do modo de CDC **Rede com Mesclagem** )|  
+|3|Update|Linha Before-update (disponível apenas durante o uso do modo de CDC **Tudo com Valores Antigos** )|  
+|4|Update|Linha After-update (após Before-update)|  
+|5|Update|Linha Merge (disponível apenas durante o uso do modo CDC **Rede com Mesclagem** )|  
 |Outro|Erro||  
   
  Você pode usar o separador para se conectar a saídas INSERT, DELETE e UPDATE predefinidas para processamento adicional.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Na tela **Fluxo de Dados** do seu projeto do [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] , clique com o botão direito do mouse no separador de CDC e selecione **Mostrar Editor Avançado**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Direcionar o fluxo de CDC de acordo com o tipo de alteração](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
   

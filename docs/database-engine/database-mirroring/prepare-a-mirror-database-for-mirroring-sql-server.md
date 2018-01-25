@@ -19,13 +19,13 @@ ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 caps.latest.revision: "43"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 869a784fe82f1a142fd2a9792bd79784b5fe3959
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6a14d697865f099b584e3f8f7132f0bfc6a0cf49
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Preparar um banco de dados espelho para espelhamento (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Antes de iniciar uma sessão de espelhamento de banco de dados, o proprietário do banco de dados ou o administrador do sistema devem verificar se o banco de dados de espelho foi criado e está pronto para ser espelhado. A criação de um novo banco de dados espelho requer minimamente um backup cheio do banco de dados principal e um backup de log subsequente e a restauração de ambos sobre a instância do servidor espelho, usando WITH NORECOVERY.  
@@ -265,7 +265,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Configurar um banco de dados espelho para usar a propriedade confiável &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   

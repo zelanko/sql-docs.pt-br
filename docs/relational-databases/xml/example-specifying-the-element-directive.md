@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: ELEMENT directive
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9cf0356191e1f71c1b886599a46da1be9bb46bd3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 217dba29c2005e7f0ae34ea36e82436c5179a1d1
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="example-specifying-the-element-directive"></a>Exemplo: Especificando a diretiva ELEMENT
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Isso recupera informações de funcionários e gera XML centrado em elemento conforme mostrado no seguinte:  
@@ -88,7 +88,7 @@ FOR XML EXPLICIT;
   
  `...`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar o modo EXPLICIT com FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

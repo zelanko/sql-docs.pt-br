@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.sortcolumns.f1
 ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
 caps.latest.revision: "7"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f88b55e8e3168d60224ff5215b12c06804059111
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 58c20200282fcba44851188ca451d82ab934f2c0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sort-columns"></a>Classificar Colunas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A caixa de diálogo **Classificar Colunas** permite classificar grades no Replication Monitor com base em uma ou mais colunas. (Você também pode classificar uma única coluna clicando no cabeçalho de coluna na grade do Replication Monitor.) Por exemplo, para classificar assinaturas na guia **Todas as Assinaturas** com base no status e no tipo de conexão, siga estas etapas:  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
  **Limpar Tudo**  
  Remove todas as linhas da grade de classificação. Para remover uma única linha, selecione a linha e pressione a tecla Delete.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorando a Replicação](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

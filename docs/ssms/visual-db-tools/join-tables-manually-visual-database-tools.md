@@ -19,13 +19,13 @@ ms.assetid: 9c785356-646b-4c87-82d4-25efd6051d9d
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1223e0a42ed48773f2294a5ae58444e52fae2843
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3fea2b8cf342805937cb62eb4a32badca49a17f0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>Unir tabelas manualmente (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Quando você adiciona duas (ou mais) tabelas a uma consulta, o [Designer de Exibição e Consulta](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) tenta uni-las com base em dados comuns ou em informações armazenadas no banco de dados sobre como as tabelas estão relacionadas. Para obter detalhes, consulte [Unir tabelas automaticamente &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md). Entretanto, se o Designer de Consulta e Exibição não uniu as tabelas automaticamente, ou se você quiser criar outras condições de junção entre tabelas, será possível unir as tabelas manualmente.  

@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.profiles.newperfprofile.f1
 helpviewer_keywords: New Agent Profile dialog box
 ms.assetid: ebf59330-a421-45a5-9020-0484a96852bc
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7f73501091ce352164db71ebf4ebf8758d0c40e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b456153f06f449086e5ba740f1a4a0e896de3440
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="new-agent-profile"></a>Novo Perfil de Agente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a caixa de diálogo **Novo Perfil de Agente** para criar um novo perfil. Novos perfis sempre são baseados em perfis existentes, mas eles podem ser modificados para atender aos requisitos do aplicativo. Depois que um perfil é criado ele pode ser aplicado a trabalhos de agentes futuros e existentes na caixa de diálogo **Perfis de Agente** . Os valores de parâmetro de agente podem ser editados na caixa de diálogo \<**AgentProfileName> Propriedades**.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
  **Parâmetro**  
  Os parâmetros de agente incluídos no perfil. O perfil no qual o perfil novo é baseado não especifica necessariamente um valor para cada parâmetro. Para consultar todos os parâmetros válidos de um determinado agente, desmarque a caixa de seleção **Mostrar apenas os parâmetros usados neste perfil** . Para obter descrições de cada parâmetro, consulte.  
   
--   [Agente de Instantâneo de Replicação](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+-   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
 -   [Agente do Leitor de Log de Replicação](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
@@ -51,13 +51,13 @@ ms.lasthandoff: 11/17/2017
  **Valor padrão**  
  O valor padrão para cada parâmetro de agente.  
   
- **Valor**  
+ **Value**  
  O valor especificado para o parâmetro no perfil no qual o perfil novo é baseado. Edite esse campo para obter qualquer valor de parâmetro que você queira alterar.  
   
  **Mostrar apenas os parâmetros usados neste perfil**  
  Desmarque para mostrar todos os parâmetros válidos para um determinado agente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Trabalhar com perfis do Agente de Replicação](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [Visão geral dos agentes de replicação](../../relational-databases/replication/agents/replication-agents-overview.md)   
  [Perfis do agente de replicação](../../relational-databases/replication/agents/replication-agent-profiles.md)  

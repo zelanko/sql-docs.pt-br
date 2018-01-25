@@ -22,13 +22,13 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 caps.latest.revision: "48"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7b83e4fedf8ee39ceb90b2156852de4698ae273a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f21ea2afcf50beb80ec3cdfdc39c0d1f79d5adbe
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Ouvintes, conectividade de cliente e failover de aplicativo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico contém informações sobre considerações de conectividade de cliente [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e funcionalidade de failover de aplicativo.  
@@ -246,7 +246,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 -   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Conectividade de cliente AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)   
  [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   

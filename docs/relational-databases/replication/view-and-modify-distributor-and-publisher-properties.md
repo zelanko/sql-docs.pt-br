@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Distributors [SQL Server replication], properties
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e858945600755eb9563efc67492f8498de59c769
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 065c526757332260fba2ee76fc7f08bac8bc82fa
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Exibir e modificar propriedades de Publicador e Distribuidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como exibir e modificar propriedades do Distribuidor e do Publicador no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] ou RMO (Replication Management Objects).  
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Modifique propriedades, se necessário, depois clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  As propriedades do Publicador e do Distribuidor podem ser exibidas programaticamente usando os procedimentos armazenados de replicação.  
   
 #### <a name="to-view-distributor-and-distribution-database-properties"></a>Para exibir as propriedades do banco de dados de distribuição e do Distribuidor  
@@ -203,8 +203,8 @@ ms.lasthandoff: 11/17/2017
   
  [!code-vb[HowTo#rmo_vb_ChangeDistPub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changedistpub)]  
   
-## <a name="see-also"></a>Consulte também  
- [Conceitos de objetos de gerenciamento de replicação](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Desabilitar a publicação e a distribuição](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [Configurar Distribuição](../../relational-databases/replication/configure-distribution.md)   
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   

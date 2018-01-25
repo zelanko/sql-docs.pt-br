@@ -21,15 +21,15 @@ helpviewer_keywords:
 - data additions [SQL Server]
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 53e54d646d13d4f7ebff91a370c856da5c74706b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: feca52c4aeb1bde1d19f9afcb19145ce85895cd3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Adicionar arquivos de dados ou de log a um banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como adicionar um arquivo de dados ou de log a um banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -107,7 +107,7 @@ ms.lasthandoff: 11/17/2017
   
 12. Clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-add-data-or-log-files-to-a-database"></a>Para adicionar arquivos de dados ou de log a um banco de dados existente  
   
@@ -121,7 +121,7 @@ ms.lasthandoff: 11/17/2017
   
  Para obter mais exemplos, consulte [Opções de arquivo e grupos de arquivos ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [Excluir arquivos de dados ou de log de um banco de dados](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)   
  [Aumentar o tamanho de um banco de dados](../../relational-databases/databases/increase-the-size-of-a-database.md)  

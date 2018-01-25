@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.configuredistributionwizard.distributorpassword.f1
 ms.assetid: 52787c5e-c9ef-440e-a000-0787111b7dbb
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0104061da4cf79f6b031f0a0d3af736e924eacbf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 25add00605312f2a290f265088f59f763410df13
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor-password"></a>Senha do Distribuidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Se na página **Publicadores** deste assistente você tiver habilitado um ou mais Publicadores para usar esse servidor como Distribuidor remoto, você terá de especificar uma senha para a conexão que a replicação faz entre o Publicador e o Distribuidor remoto, usando o logon **distributor_admin**. A mesma senha deve ser inserida, para cada Publicador que usa esse Distribuidor remoto, na página **Senha Administrativa** do Assistente para Nova Publicação ou no Assistente para Configurar Distribuição. Para mais informações sobre segurança de distribuidores, consulte [Proteger o distribuidor](../../relational-databases/replication/security/secure-the-distributor.md).  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
  **Confirmar Senha**  
  Reinsira a senha para confirmar que ela foi inserida corretamente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar Distribuição](../../relational-databases/replication/configure-distribution.md)   
  [Configurar a publicação e a distribuição](../../relational-databases/replication/configure-publishing-and-distribution.md)  
   

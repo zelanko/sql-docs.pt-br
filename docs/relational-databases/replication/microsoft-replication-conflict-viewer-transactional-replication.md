@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.replconflictviewer.cvqueued.f1
 ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cfb8b69c3bc8da0edc49d3444e18067a675ba353
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 110c636ba2a86f698f2955e7cb6a067885c2165f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Visualizador de Conflitos de Replicação da Microsoft (replicação transacional)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] O Visualizador de Conflitos de Replicação permite exibir conflitos que ocorreram durante a sincronização para uma replicação transacional ponto a ponto de uma replicação transacional com assinaturas de atualização enfileiradas. Para obter mais informações, consulte [Exibir conflitos de dados em publicações transacionais &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  Os dados de conflito na seção inferior são exibidos em duas colunas correspondentes (**Vencedor do Conflito** e **Perdedor do Conflito**). Se o conflito estiver entre os dados atualizados e excluídos, talvez não haja dados a serem exibidos no lado excluído do conflito. Nesse caso, o Visualizador de Conflitos de Replicação exibe uma mensagem em uma das colunas, indicando que a linha foi excluída em um local e atualizada em outro. Também indica a resolução sugerida.  
   
- **Banco de dados**  
+ **Backup de banco de dados**  
  Escolha um banco de dados que inclua publicações com conflitos.  
   
  **Publicação**  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
  **Registrar em log os detalhes do conflito**  
  Marque essa caixa para registrar em log os detalhes do conflito em um arquivo. Para especificar um local para o arquivo, aponte para o menu **Exibir** e clique em **Opções**. Insira um valor ou clique em (**...**) e navegue até o arquivo apropriado. Clique em **OK** para sair da caixa de diálogo **Opções** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Detecção de conflitos na replicação ponto a ponto](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
  [Exibir conflitos de dados em publicações transacionais &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   

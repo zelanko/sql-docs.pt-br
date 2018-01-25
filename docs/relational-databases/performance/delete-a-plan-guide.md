@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: plan guides [SQL Server], deleting
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d356a06b0ca1127851245349787c8037ce70f3e4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d74f5652bbbbcb857bcd2bf34dd3732639920709
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="delete-a-plan-guide"></a>Excluir um guia de plano
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você pode excluir (remover) um guia de plano no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Usando o [!INCLUDE[tsql](../../includes/tsql-md.md)], você também pode excluir todas as guias de plano de um banco de dados.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Na caixa de diálogo **Excluir Objeto** , verifique se o guia de plano correto está selecionado e clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-delete-a-single-plan-guide"></a>Para excluir um único guia de plano  
   

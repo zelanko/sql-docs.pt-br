@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: "61"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4ed295cab6b932ba39a2a6417b8977dc5791e6e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 336fea7b5f3ea9fec4dc559933477086f4cca5ed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objeto Recursos Preteridos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -273,7 +273,7 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |Opção de tabela 'text in row'|Referências à opção de tabela 'text in row' foram encontradas. Use 'large value types out of row' de sp_tableoption em seu lugar. Ocorre uma vez por consulta.|  
 |TEXTPTR|Referências à função TEXTPTR foram encontradas. Reescreva os aplicativos para que eles usem o tipo de dados **varchar(max)** e removam a sintaxe dos tipos de dados **text**, **ntext**e **image** . Ocorre uma vez por consulta.|  
 |TEXTVALID|Referências à função TEXTVALID foram encontradas. Reescreva os aplicativos para que eles usem o tipo de dados **varchar(max)** e removam a sintaxe dos tipos de dados **text**, **ntext**e **image** . Ocorre uma vez por consulta.|  
-|TIMESTAMP|Número total de vezes que o tipo preterido de dados **timestamp** foi encontrado em uma instrução DDL. Em seu lugar, use o tipo de dados **rowversion** .|  
+|timestamp|Número total de vezes que o tipo preterido de dados **timestamp** foi encontrado em uma instrução DDL. Em seu lugar, use o tipo de dados **rowversion** .|  
 |UPDATETEXT ou WRITETEXT|As instruções UPDATETEXT ou WRITETEXT foram encontradas. Reescreva os aplicativos para que eles usem o tipo de dados **varchar(max)** e removam a sintaxe dos tipos de dados **text**, **ntext**e **image** . Ocorre uma vez por consulta.|  
 |USER_ID|Referências à função USER_ID foram encontradas. Use a função DATABASE_PRINCIPAL_ID em seu lugar. Ocorre uma vez por compilação.|  
 |Usando OLEDB para servidores vinculados||  
@@ -284,7 +284,7 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |xp_loginconfig|O procedimento xp_loginconfig foi encontrado. Em vez disso, use o argumento IsIntegratedSecurityOnly de SERVERPROPERTY. Ocorre uma vez por consulta.|  
 |xp_revokelogin|O procedimento xp_revokelogin foi encontrado. Em vez disso, use ALTER LOGIN DISABLE ou DROP LOGIN. Ocorre uma vez por compilação.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Recursos de pesquisa de texto completo preteridos no SQL Server 2016](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Classe de evento Deprecation Announcement](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   

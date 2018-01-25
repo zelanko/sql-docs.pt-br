@@ -19,15 +19,15 @@ helpviewer_keywords:
 - logins [SQL Server replication], managing
 ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c15197c4444fc8f1e56aa3651f9f501dce72241a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 728fc310a00084d5b69257221fbda270f3994c01
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>Gerenciar logons na lista de acesso à publicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como gerenciar logons na Lista de Acesso à Publicação no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. O acesso a uma publicação é controlado pela PAL (lista de acesso à publicação). É possível adicionar e remover logons e grupos do PAL.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-view-groups-and-logins-that-belong-to-the-pal"></a>Para exibir grupos e logons que pertencem à PAL  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  No Publicador do banco de dados da publicação, execute [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md). Para **@publication**especifique o nome da publicação e para **@login**especifique o nome do logon ou grupo que está sendo removido.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciar logons na lista de acesso à publicação](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)   
  [Modelo de segurança do agente de replicação](../../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Proteger uma topologia de replicação](../../../relational-databases/replication/security/secure-a-replication-topology.md)   

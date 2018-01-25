@@ -18,15 +18,15 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a1a69db0b1054e7b481a73c36c6106acb61bcc72
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 66a0716665f2f8df2be0df258392aeb8ea4531dc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementar o resolvedor de conflitos personalizado para um artigo de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como implementar um resolvedor de conflitos personalizado para um artigo de mesclagem no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)] ou um [resolvedor personalizado com base em COM](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
      [Resolvedor baseado em COM](#COM)  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Você pode gravar seu próprio resolvedor de conflito personalizado como um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] em cada Publicador. Durante a sincronização, esse procedimento armazenado será invocado quando forem encontrados conflitos em um artigo para o qual o resolvedor foi registrado, e a informação na linha em conflito é passada pelo Merge Agent para os parâmetros requeridos do procedimento. Resolvedores de conflito personalizados com base em procedimento armazenado sempre são criados no Publicador.  
   
 > [!NOTE]  
@@ -122,7 +122,7 @@ ms.lasthandoff: 11/17/2017
 2.  Execute [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), especificando **@publication**, **@article**, um valor de **article_resolver** para **@property** e o nome amigável do resolvedor de artigo da etapa 1 para **@value**.  
   
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [COM-Based Custom Resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  

@@ -16,13 +16,13 @@ ms.assetid: a384b583-cec5-4f86-8353-954c989dd94d
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 395fb96d7c98556d62c17858c549287aa7af3d66
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 32c46564f3a75c08941e8d408f3dd4d3ad620e13
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-comment-dialog-box-visual-database-tools"></a>Caixa de diálogo Comentário do SQL (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Esta caixa de diálogo fornece uma área editável na qual você pode escrever uma descrição detalhada da consulta. Para acessar essa caixa de diálogo, abra a consulta ou exibição no Designer de Consulta e Exibição e na janela **Propriedades** , selecione o **Comentário SQL**e clique nas reticências (**…**) à direita do campo de propriedade.  

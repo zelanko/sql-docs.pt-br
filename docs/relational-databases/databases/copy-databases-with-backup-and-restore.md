@@ -21,15 +21,15 @@ helpviewer_keywords:
 - database backups [SQL Server], copying databases
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 caps.latest.revision: "61"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 61898f292e44da04152eeb3ebeb2e7221eb1bb68
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f5555b305edf4ac249959e77d4a68c07c72efef5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiar bancos de dados com backup e restauração
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

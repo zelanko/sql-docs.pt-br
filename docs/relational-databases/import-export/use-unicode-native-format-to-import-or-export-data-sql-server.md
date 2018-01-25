@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data formats [SQL Server], Unicode native
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8301c9cf1b0e3494a6a146f16b4f9a86ba0926e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7b3217ebde3a1d9b3424b2fcb9c53954504a853a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Usar o formato nativo Unicode para importar ou exportar dados (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O formato nativo Unicode é útil quando as informações devem ser copiadas de uma instalação [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a outra. O uso de formato nativo para dados do tipo não caractere economiza tempo, eliminando a conversão desnecessária de tipos de dados de e para o formato de caractere. O uso de formato de caractere Unicode para obter todos os dados de caractere impede a perda de qualquer caractere estendido durante a transferência de dados em massa entre servidores que usam páginas de código diferentes. Um arquivo de dados em formato nativo Unicode pode ser lido por qualquer método de importação em massa.  
@@ -45,7 +45,7 @@ Você pode importar dados de formato nativo Unicode para uma tabela usando [bcp]
   
 O formato nativo Unicode tem suporte nas seguintes opções de comando:  
   
-|Comando|Opção|Descrição|  
+|Comando|Opção|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-N**|Faz com que o utilitário **bcp** use o formato nativo Unicode que usa tipos de dados nativos (banco de dados) para todos os dados do tipo não caractere e formato de dados de caractere Unicode para obter todos os dados de caracteres (**char**, **nchar**, **varchar**, **nvarchar**, **text**e **ntext**).|  
 |BULK INSERT|DATAFILETYPE **='widenative'**|Usa o formato nativo Unicode na importação de dados em massa.|  
@@ -188,7 +188,7 @@ Para usar formatos de dados para importação ou exportação em massa
   
 -   [Usar o formato de caractere Unicode para importar ou exportar dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

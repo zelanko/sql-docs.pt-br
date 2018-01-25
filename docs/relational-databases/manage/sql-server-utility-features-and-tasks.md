@@ -20,17 +20,17 @@ helpviewer_keywords:
 - Multi-server management [SQL Server]
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c7a221f337f54f625840fa724db01545a7af2c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 75d12d94fb1d58242036abbc91e692414f9da3b5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="sql-server-utility-features-and-tasks"></a>Recursos e tarefas do utilitário do SQL Server
+# <a name="sql-server-utility-features-and-tasks"></a>Recursos e tarefas do Utilitário do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisam gerenciar seu ambiente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um todo. Isso é abordado nesta versão por meio do conceito de gerenciamento de aplicativo e multisservidor do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="benefits-of-the-sql-server-utility"></a>Benefícios do Utilitário do SQL Server  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
  Cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aplicativo da camada de dados gerenciado pelo Utilitário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser monitorado com base nas definições da política global ou com base nas definições de políticas individuais.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Use os tópicos a seguir como introdução rápida ao utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |||  

@@ -22,13 +22,13 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 caps.latest.revision: "40"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba4368ce9a1557d8cd199f0bad59fb3d40a2cdf4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 01d279d30860e0e10cf3a76b447aaec245541fcc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Use os limites de aviso e alertas em métricas de desempenho de espelhamento (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico contém informações sobre os eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para os quais os limites de avisos podem ser configurados e gerenciados para espelhamento de banco de dados. Você pode usar o Monitor de Espelhamento de Banco de Dados ou os procedimentos armazenados **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**e **sp_dbmmonitordropalert** . Este tópico também contém informações sobre como configurar alertas em eventos de espelhamento de banco de dados.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/20/2017
   
      O conjunto a seguir de procedimentos armazenados do sistema permite que um administrador configure e gerencie limites de aviso em bancos de dados espelhados, um parceiro por vez.  
   
-    |Procedimento|Descrição|  
+    |Procedimento|Description|  
     |---------------|-----------------|  
     |[sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)|Adiciona ou altera limites de aviso para uma métrica especificada de desempenho de espelhamento.|  
     |[sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)|Retorna informações sobre limites de aviso em uma ou todas as várias métricas de desempenho do monitor de espelhamento de banco de dados principal.|  
@@ -145,7 +145,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   

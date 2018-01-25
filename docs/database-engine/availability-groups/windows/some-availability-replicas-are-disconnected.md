@@ -17,13 +17,13 @@ ms.assetid: aea808be-6f0f-40c2-9aa2-a2a435ec6443
 caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8208e4e2a7e1e93183c2d7123f523b74515aefa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fc3af26fd507ef52e13ca29fa72b4dc6640c0dbd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="some-availability-replicas-are-disconnected"></a>Algumas réplicas de disponibilidade são desconectadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.lasthandoff: 11/20/2017
 |**Nome da Política**|Estado da conexão em réplicas de disponibilidade|  
 |**Problema**|Algumas réplicas de disponibilidade estão desconectadas.|  
 |**Categoria**|**Aviso**|  
-|**Faceta**|Grupo de disponibilidade|  
+|**Faceta**|grupo de disponibilidade|  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>Description  
  Essa política acumula o estado de conexão de todas as réplicas de disponibilidade e verifica se há alguma réplica DISCONNECTED. O estado da política é não íntegro quando qualquer réplica de disponibilidade é DISCONNECTED. Caso contrário, a política estará em um estado íntegro.  
   
 > [!NOTE]  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="possible-solution"></a>Solução possível  
  Use o estado da política de réplica de disponibilidade para localizar a réplica de disponibilidade que é DISCONNECTED; depois, resolva o problema na réplica de disponibilidade.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   

@@ -24,15 +24,15 @@ helpviewer_keywords:
 - wizard [DAC], extract
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a3fe80df8624968a5bf71f3fd7976bc838a0abf4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 510eb23505fde879a82d3ded7282cabd410cacaf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extrair um DAC de um banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use o **Assistente para Extrair um Aplicativo da Camada de Dados** ou um script do Windows PowerShell para extrair um pacote de DAC (aplicativo da camada de dados) de um banco de dados do SQL Server existente. O processo de extração cria um arquivo de pacote de DAC que contém definições dos objetos de banco de dados e os elementos em nível de instância relacionados. Por exemplo, um arquivo de pacote de DAC contém as tabelas do banco de dados, os procedimentos armazenados, as exibições e os usuários junto com os logons que mapeiam para os usuários de banco de dados.  

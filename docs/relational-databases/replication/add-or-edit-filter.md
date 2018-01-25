@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.addeditfilter.f1
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a859ba6929e849ea753b3cf5c86c428afbaaadfb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0461e699bbf3593f87567d3972aa7e260bca3111
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-or-edit-filter"></a>Adicionar ou Editar Filtro
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] As caixas de diálogo **Adicionar Filtro** e **Editar Filtro** permitem adicionar e editar filtros de linha estáticos e filtros de linha com parâmetros.  
@@ -64,11 +64,11 @@ ms.lasthandoff: 11/17/2017
   
  Depois de adicionar ou editar um filtro, clique em **OK** para salvar as alterações e fechar a caixa de diálogo. O filtro que você especificou é analisado e executado na tabela, na cláusula SELECT. Se a instrução de filtro contiver erros de sintaxe ou outros problemas, você será notificado e poderá editar a instrução de filtro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filtrar os dados publicados](../../relational-databases/replication/publish/filter-published-data.md)   
- [Filtros de junção](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
