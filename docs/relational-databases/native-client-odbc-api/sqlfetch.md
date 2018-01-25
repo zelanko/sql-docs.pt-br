@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: SQLFetch function
 ms.assetid: 69f0ec68-5857-4aec-9fbf-4bf592d3ab39
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc46f040b250bec14b288a14da50debbbfbc8fdd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: af299a8dd048817ae8a36de6d2be766dee3c5200
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlfetch"></a>SQLFetch
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,8 +35,8 @@ ms.lasthandoff: 01/08/2018
 ## <a name="sqlfetch-support-for-large-clr-udts"></a>Suporte de SQLFetch para UDTs CLR grandes  
  **SQLFetch** dá suporte a UDTs CLR grandes. Para obter mais informações, consulte [Large CLR User-Defined tipos &#40; ODBC &#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=80703)   
- [Detalhes da implementação da API do ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Detalhes de implementação de API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

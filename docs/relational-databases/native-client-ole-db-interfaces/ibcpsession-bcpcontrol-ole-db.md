@@ -16,15 +16,15 @@ apitype: COM
 helpviewer_keywords: BCPControl method
 ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72969fb998915015b59e47c602df075921f46a0e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 123232c2815dcb2e7086a58e363a0003d747f80d
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,18 +41,18 @@ HRESULT BCPControl(
       void *iValue);  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O método **BCPControl** define vários parâmetros de controle para operações de cópia em massa, inclusive o número de erros permitidos antes de cancelar uma cópia em massa, os números da primeira e da última linha a serem copiadas de um arquivo de dados e o tamanho do lote.  
   
  Esse método também é usado para especificar a instrução SELECT a ser usada na cópia em massa de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode definir o argumento **eOption** como BCP_OPTION_HINTS e o argumento **iValue** para ter um ponteiro para uma cadeia de caracteres largos que contenha a instrução SELECT.  
   
  Os valores possíveis para *eOption* são:  
   
-|Opção|Descrição|  
+|Opção|Description|  
 |------------|-----------------|  
 |BCP_OPTION_ABORT|Para uma operação de cópia em massa que já está em andamento. Você pode chamar o método **BCPControl** com um argumento *eOption* com valor BCP_OPTION_ABORT de outro thread para parar uma operação de cópia em massa em execução. O argumento *iValue* é ignorado.|  
 |BCP_OPTION_BATCH|O número de linhas por lote. O padrão é 0, que indica que todas as linhas de uma tabela quando os dados estiverem sendo extraídos, ou todas as linhas no arquivo de dados do usuário quando os dados estiverem sendo copiados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um valor menor que 1 reinicia BCP_OPTION_BATCH para o valor padrão.|  
-|BCP_OPTION_DELAYREADFMT|Um booliano, se definido como verdadeiro, fará com que [ibcpsession:: Bcpreadfmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) Leia na execução. Se false (padrão), ibcpsession:: Bcpreadfmt será imediatamente ler o arquivo de formato. Ocorrerá um erro de sequência se **BCP_OPTION_DELAYREADFMT** é verdadeiro e é chamada de ibcpsession:: BCPColumns ou ibcpsession:: BCPColFmt.<br /><br /> Um erro de sequência também ocorrerá se você chamar `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` depois de chamar `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` e ibcpsession:: Bcpwritefmt.<br /><br /> Para obter mais informações, consulte [descoberta de metadados](../../relational-databases/native-client/features/metadata-discovery.md).|  
+|BCP_OPTION_DELAYREADFMT|Um booliano, se definido como verdadeiro, fará com que [ibcpsession:: Bcpreadfmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) Leia na execução. Se false (padrão), ibcpsession:: Bcpreadfmt será imediatamente ler o arquivo de formato. Ocorrerá um erro de sequência se **BCP_OPTION_DELAYREADFMT** é verdadeiro e é chamada de ibcpsession:: BCPColumns ou ibcpsession:: BCPColFmt.<br /><br /> Um erro de sequência também ocorrerá se você chamar `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` depois de chamar `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` e ibcpsession:: Bcpwritefmt.<br /><br /> Para obter mais informações, consulte [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).|  
 |BCP_OPTION_FILECP|O argumento *iValue* contém o número da página de código para o arquivo de dados. Você pode especificar o número da página de código, como 1252 ou 850, ou um dos seguintes valores:<br /><br /> BCP_FILECP_ACP: os dados do arquivo estão na página de código do Microsoft Windows® do cliente.<br /><br /> BCP_FILECP_OEMCP: os dados do arquivo estão na página de código OEM do cliente (padrão).<br /><br /> BCP_FILECP_RAW: os dados do arquivo estão na página de código do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |BCP_OPTION_FILEFMT|O número de versão do formato de arquivo de dados. Pode ser 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) ou 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. 120 é o padrão. Isso é útil para exportar e importar dados em formatos que tinham suporte em versões anteriores do servidor.  Por exemplo importar dados obtidos de uma coluna de texto em uma [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server em uma **varchar (max)** coluna em um [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou servidor mais recente, você deve especificar 80. Da mesma forma, se você especificar 80 ao exportar dados de um **varchar (max)** coluna, ele será salvo como colunas de texto são salvos no [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Formatar e podem ser importados para uma coluna de texto de um [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server.|  
 |BCP_OPTION_FIRST|A primeira linha de dados do arquivo ou da tabela a ser copiada. O padrão é 1; um valor menor que 1 redefine essa opção para seu valor padrão.|  

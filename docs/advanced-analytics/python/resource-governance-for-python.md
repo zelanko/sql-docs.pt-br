@@ -12,13 +12,13 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 88f096b636dba544948410f00566c8aa3eaa0a91
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 10760026ef04284f6d0838af8ba81b0c7613645b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="resource-governance-for-python"></a>Governança de recursos para Python
 
@@ -82,7 +82,7 @@ Suporte para scripts externos é opcional em [!INCLUDE[ssNoVersion](../../includ
 
 No caso de fuga scripts, você pode desabilitar todos a execução do script. Apenas reverter esse processo e defina a propriedade `external scripts enabled` como FALSE ou 0, na instância. Isso desabilitará imediatamente qualquer execução de script externo. Você deve reservar esta opção para problemas de segurança, ou em situações em que um administrador precisa mitigar os problemas de recurso imediatamente.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
 [Pool de recursos do Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
 

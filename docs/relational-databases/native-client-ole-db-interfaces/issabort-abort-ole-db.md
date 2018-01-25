@@ -16,15 +16,15 @@ apitype: COM
 helpviewer_keywords: Abort method
 ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ec5d868f317096ead72757d55bdfcfbf2bebecb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 023bf3428adb186b170ddb2e3a70e5f8dd7cff18
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,9 +32,9 @@ ms.lasthandoff: 11/17/2017
 
   Cancela o conjunto de linhas atual, além de todos os comandos em lote associados ao comando atual.  
   
-O **ISSAbort** interface, que é exposta no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client, fornece o **issabort:: Abort** método que é usado para cancelar o conjunto de linhas atual, além de todos os comandos em lote com o comando que gerou inicialmente o conjunto de linhas, e que ainda não concluiu a execução.  
+A interface **ISSAbort** , que é exposta no provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, fornece o método **ISSAbort::Abort** que é usado para cancelar o conjunto de linhas atual, além de todos os comandos executados em lotes com o comando que gerou inicialmente o conjunto de linhas e cuja execução ainda não foi concluída.  
   
- **ISSAbort** é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponível por meio da interface de específica do provedor de Native Client **QueryInterface** no **IMultipleResults** objeto retornado por  **ICommand:: execute** ou **IOpenRowset:: OPENROWSET**.  
+ O**ISSAbout** é uma interface específica do provedou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client disponível pou meio da utilização de **QueryInterface** no objeto **IMultipleResults** retounado pou **ICommand::Execute** ou **IOpenRowset::OpenRowset**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +49,7 @@ HRESULT Abort(void);
  Depois que **ISSAbort::Abort** retornar S_OK, a interface **IMultipleResults** associada entrará em um estado inutilizável e retornará DB_E_CANCELED para todas as chamadas de método (com exceção dos métodos definidos pela interface **IUnknown** ) até que seja liberada. Se um **IRowset** foi obtido de **IMultipleResults** antes de uma chamada para **Abort**, também entrará em um estado inutilizável e retornará DB_E_CANCELED para todas as chamadas de método (com exceção dos métodos definidos pela interface **IUnknown** e **IRowset::ReleaseRows**) até que seja liberado após uma chamada bem-sucedida para **ISSAbort::Abort**.  
   
 > [!NOTE]  
->  Começando com [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], se o estado XACT_ABORT do servidor está ativada, executando **issabort:: Abort** encerrará e reverter qualquer implícita ou explícita transação atual quando conectado a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não anularão a transação atual.  
+>  A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], se o estado XACT_ABORT do servidor estiver ON, a execução de **ISSAbort::Abort** encerrará e reverterá qualquer transação implícita ou explícita atual quando conectada ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não anularão a transação atual.  
   
 ## <a name="arguments"></a>Argumentos  
  Nenhuma.  
@@ -65,7 +65,7 @@ HRESULT Abort(void);
  O lote não foi cancelado.  
   
  E_FAIL  
- Ocorreu um erro específico do provedor; Para obter informações detalhadas, use o [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) interface.  
+ Ocorreu um erro específico do provedor. Para obter informações detalhadas, use a interface [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) .  
   
  E_UNEXPECTED  
  A chamada para o método era inesperada. Por exemplo, o objeto está em um estado de zumbi porque **ISSAbort::Abort** já foi chamado.  

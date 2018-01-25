@@ -18,15 +18,15 @@ helpviewer_keywords:
 - statistics [SQL Server], live query statistics
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e81e49b14a91f809c4c3452369069ff4d856a99f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bff144ba100fe72dcc036299138e656362977b96
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="live-query-statistics"></a>Estatísticas de Consulta ao Vivo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece a capacidade de exibir o plano de execução ao vivo de uma consulta ativa. Esse plano de consulta ao vivo fornece visões em tempo real sobre o processo de execução da consulta, conforme os controles são transmitidos de um operador de plano de consulta para outro. O plano de consulta ao vivo exibe o progresso geral da consulta e as estatísticas de tempo de execução do nível de operador, como o número de linhas produzido, tempo decorrido, progresso do operador, etc. Como esses dados estão disponíveis em tempo real sem a necessidade de aguardar a conclusão da consulta, essas estatísticas de execução são extremamente úteis para depurar problemas de desempenho de consulta. Este recurso está disponível do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] em diante; no entanto, ele pode funcionar com o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
@@ -54,14 +54,14 @@ ms.lasthandoff: 11/17/2017
   
  ![Botão Estatísticas de Consulta Dinâmica no Monitor de Atividade](../../relational-databases/performance/media/livequerystatsactmon.png "Botão Estatísticas de Consulta Dinâmica no Monitor de Atividade")  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A infraestrutura do perfil de estatísticas deve ser habilitada antes que as estatísticas de consulta ao vivo possam capturar informações sobre o andamento das consultas. A especificação de **Incluir Estatísticas de Consulta ao Vivo** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] habilita a infraestrutura de estatísticas para a sessão de consulta atual. 
  
 Até o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], há duas outras maneiras de habilitar a infraestrutura de estatísticas que pode ser usada para exibir as estatísticas de consultas dinâmicas em outras sessões (por exemplo, no Monitor de Atividade):  
   
 -   Execute `SET STATISTICS XML ON;` ou `SET STATISTICS PROFILE ON;` na sessão de destino.  
   
- ou  
+ ou em  
   
 -   Habilitar o evento estendido **query_post_execution_showplan** . Esta é uma configuração ampla de servidor que permite estatísticas de consulta ao vivo em todas as sessões. Para habilitar eventos estendidos, consulte [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
 
@@ -69,7 +69,7 @@ Do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 em diante, o [!INCLUDE[
 
 -   Use o sinalizador de rastreamento global 7412.  
   
- ou  
+ ou em  
   
 -   Habilite o evento estendido **query_thread_profile** . Esta é uma configuração ampla de servidor que permite estatísticas de consulta ao vivo em todas as sessões. Para habilitar eventos estendidos, consulte [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).
   
@@ -79,7 +79,7 @@ Do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 em diante, o [!INCLUDE[
 ## <a name="permissions"></a>Permissões  
  Requer a permissão **SHOWPLAN** do nível de banco de dados para preencher a página de resultados **Estatísticas de Consulta ao Vivo** , a permissão de nível de servidor **VIEW SERVER STATE** para ver as estatísticas ao vivo e exige as permissões necessárias para executar a consulta.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar e ajustar o desempenho](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [Ferramentas para monitoramento e ajuste de desempenho](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)   
  [Abrir o Monitor de Atividade &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)   

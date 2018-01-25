@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: conversions [OLE DB], server to client
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0f86d6337913eee857e3575eb23dc52417c6e8f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d336c8e61a51967c84535bac977f2cd85fbcf570
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversões executadas do servidor para o cliente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,12 +35,12 @@ ms.lasthandoff: 01/08/2018
   
 |Para -><br /><br /> De|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|data|1,7|OK|-|-|1|1,3|1,7|-|OKEY (VT_BSTR)|OK|OK|4|4|  
-|Hora|5,6,7|-|9|OK|6|3,6|5,6|-|OKEY (VT_BSTR)|OK|OK|4|4|  
+|Data|1,7|OK|-|-|1|1,3|1,7|-|OK (VT_BSTR)|OK|OK|4|4|  
+|Hora|5,6,7|-|9|OK|6|3,6|5,6|-|OK (VT_BSTR)|OK|OK|4|4|  
 |Smalldatetime|7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
-|DATETIME|5,7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
-|Datetime2|5,7|8|9,10|10|7|3|5,7|-|OKEY (VT_BSTR)|OK|OK|4|4|  
-|Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|OK|5,7,11|-|OKEY (VT_BSTR)|OK|OK|4|4|  
+|Datetime|5,7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
+|Datetime2|5,7|8|9,10|10|7|3|5,7|-|OK (VT_BSTR)|OK|OK|4|4|  
+|Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|OK|5,7,11|-|OK (VT_BSTR)|OK|OK|4|4|  
 |Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12,9|12|12|12|7,13|N/A|N/A|N/A|N/A|N/A|N/A|  
 |Sql_variant<br /><br /> (datetime)|7|8|9,10|10|OK|3|7|-|7(VT_DATE)|OK|OK|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|OK|3|7|-|7(VT_DATE)|OK|OK|4|4|  
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/08/2018
 |12|A cadeia de caracteres é analisada como um literal ISO e convertida para o tipo de destino. Se houver falha, a cadeia de caracteres será analisada como um literal de data OLE (que também tem componentes de hora) e convertida de uma data OLE (DBTYPE_DATE) para o tipo de destino. A cadeia de caracteres deverá se conformar com a sintaxe para literais do tipo de destino permitido para que a análise do formato ISO tenha êxito. Para que a análise de OLE tenha êxito, a cadeia de caracteres deve se conformar com a sintaxe reconhecida pelo OLE. Se não for possível analisar a cadeia de caracteres, DBSTATUS_E_CANTCONVERTVALUE será definido. Se qualquer valor de componente estiver fora do intervalo, DBSTATUS_E_DATAOVERFLOW será definido.|  
 |13|A cadeia de caracteres é analisada como um literal ISO e convertida para o tipo de destino. Se houver falha, a cadeia de caracteres será analisada como um literal de data OLE (que também tem componentes de hora) e convertida de uma data OLE (DBTYPE_DATE) para o tipo de destino. A cadeia de caracteres deve se conformar com a sintaxe de literais datetime, a menos que o destino seja DBTYPE_DATE ou DBTYPE_DBTIMESTAMP. Se for o caso, um literal datetime ou time será permitido para que a análise de formato ISO tenha êxito. Para que a análise de OLE tenha êxito, a cadeia de caracteres deve se conformar com a sintaxe reconhecida pelo OLE. Se não for possível analisar a cadeia de caracteres, DBSTATUS_E_CANTCONVERTVALUE será definido. Se qualquer valor de componente estiver fora do intervalo, DBSTATUS_E_DATAOVERFLOW será definido.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Associações e conversões &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
   
   

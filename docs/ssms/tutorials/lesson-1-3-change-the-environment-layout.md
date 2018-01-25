@@ -14,15 +14,15 @@ ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: ce118ee5-70e2-472e-8e09-7ed3bfed59fa
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aeb1e5f0f66a98425ab7600636510e82cfdc16c0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4a256c1d0e37956f235754724c4b208d9c48b7d1
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-3---change-the-environment-layout"></a>Lição 1-3 – Alterar o layout do ambiente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Os componentes do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] competem por espaço na tela. Para ter mais espaço, você pode fechar, ocultar ou mover componentes do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Os exercícios desta página movem os componentes para locais diferentes.  

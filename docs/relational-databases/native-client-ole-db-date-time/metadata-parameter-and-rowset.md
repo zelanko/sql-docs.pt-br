@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: metadata [OLE DB]
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8dfe465757a4182803609ec24f3b2b28510ffb61
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0de69450f5aecceb87e56a76b9edb0e46a146d35
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="metadata---parameter-and-rowset"></a>Metadados - parâmetro e o conjunto de linhas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,23 +32,23 @@ ms.lasthandoff: 01/08/2018
   
 -   Estrutura DBBINDING  
   
--   **ICommandWithParameters:: Getparameterinfo**  
+-   **ICommandWithParameters::GetParameterInfo**  
   
--   **ICommandWithParameters:: SetParameterInfo**  
+-   **ICommandWithParameters::SetParameterInfo**  
   
--   **Getcolumnsrowset**  
+-   **IColumnsRowset::GetColumnsRowset**  
   
--   **Icolumnsinfo:: Getcolumninfo**  
+-   **IColumnsInfo::GetColumnInfo**  
   
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  As seguintes informações são retornadas na estrutura DBPARAMINFO por meio de *prgParamInfo*:  
   
 |Tipo de parâmetro|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|Data|DBTYPE_DBDATE|6|10|0|Liberada|  
+|date|DBTYPE_DBDATE|6|10|0|Liberada|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Defina|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Liberada|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Liberada|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Liberada|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19,21..27|0..7|Defina|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26,28..34|0..7|Defina|  
   
@@ -62,11 +62,11 @@ ms.lasthandoff: 01/08/2018
 |*pwszDataSourceType*<br /><br /> (específico do provedor)|*pwszDataSourceType*<br /><br /> (OLE DB genérico)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|Ignored|  
-|Data|DBTYPE_DBDATE|6|Ignored|  
+|date|DBTYPE_DBDATE|6|Ignored|  
 ||DBTYPE_DBTIME|10|Ignored|  
 |time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|Ignored|  
-|DATETIME||16|Ignored|  
+|datetime||16|Ignored|  
 |datetime2 ou DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 01/08/2018
 |Tipo de associação|*pwszDataSourceType*<br /><br /> (específico do provedor)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|Data|  
+|DBTYPE_DBDATE|date|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
@@ -90,10 +90,10 @@ ms.lasthandoff: 01/08/2018
   
 |Tipo de coluna|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|Data|DBTYPE_DBDATE|6|10|0|Liberada|  
+|date|DBTYPE_DBDATE|6|10|0|Liberada|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Defina|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Liberada|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Liberada|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Liberada|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Defina|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Defina|  
   
@@ -124,10 +124,10 @@ ms.lasthandoff: 01/08/2018
   
 |Tipo de parâmetro|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|Data|DBTYPE_DBDATE|6|10|0|Liberada|  
+|date|DBTYPE_DBDATE|6|10|0|Liberada|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Defina|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Liberada|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Liberada|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Liberada|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Defina|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Defina|  
   
@@ -149,7 +149,7 @@ ms.lasthandoff: 01/08/2018
   
  Um novo sinalizador DBCOLUMNFLAGS_SS_ISVARIABLESCALE é fornecido em *dwFlags* para permitir que um aplicativo determinar o tipo de servidor de colunas, onde *wType* é DBTYPE_DBTIMESTAMP. *bScale* também deve ser usado para identificar o tipo de servidor.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Metadados &#40; OLE DB &#41;](http://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

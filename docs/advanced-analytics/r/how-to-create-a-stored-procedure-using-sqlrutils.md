@@ -15,13 +15,13 @@ ms.assetid: 5ba99b49-481e-4b30-967a-a429b855b1bd
 caps.latest.revision: "10"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3e1223ded4b8ef7107a0a565b751b31d12ff6f3e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c86b39e8c6c9aad23c9059482f1e33ec7ba3621b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Criar um procedimento armazenado usando sqlrutils
 
@@ -41,7 +41,7 @@ Entre os parâmetros de entrada pode haver no máximo um quadro de dados.
 
 Os objetos dentro do quadro de dados, bem como todos os outros parâmetros de entrada da função, devem ser dos seguintes tipos de dados R:
 - POSIXct
-- NUMERIC
+- numeric
 - character
 - inteiro
 - logical
@@ -89,7 +89,7 @@ Quando você faz com que cada função de chamada, será criado um objeto de R q
 
 Quando todos os parâmetros de entrada e saídos estiverem prontos, fazer uma chamada para o `StoredProcedure` construtor.
 
-**Usage**
+**Uso**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 
@@ -236,7 +236,7 @@ myetl1function <- function() {
 > 
 > Embora você não precise explicitamente abrir a conexão ODBC como parte do seu código, uma conexão ODBC ainda é necessária para usar o **sqlrutils**.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
 [Gerando um procedimento armazenado usando sqlrutils](../../advanced-analytics/r-services/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
 

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65b1c5cf58fbd27b54c0d4bca3d24213c9dc0493
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4f7d92d0580f7c56a17f1de332204622eee15948
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="mapping-data-types-odbc"></a>Mapeando tipos de dados (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -97,7 +97,7 @@ while ((retcode = SQLFetch (hstmt))==SQL_SUCCESS)
 ### <a name="sending-data-to-the-server"></a>Enviando dados ao servidor  
  **SQL_SS_VARIANT**, um novo tipo de dados específico para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o driver ODBC Native Client, é usado para dados enviados para um **sql_variant** coluna. Ao enviar dados para o servidor usando parâmetros (por exemplo, INSERT INTO TableName VALUES (?,?)), [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) é usado para especificar as informações de parâmetro, incluindo o tipo C e correspondente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client converterá o tipo de dados C em um dos **sql_variant** subtipos.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Resultados do processamento &#40; ODBC &#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

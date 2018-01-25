@@ -16,13 +16,13 @@ ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e66ff6af4498f744a0f1144e1b85aace682b650
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 72f33dceec5940d9b34aa9f7e2c44b4b903d4211
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>Propriedades de (coluna) de objeto com valor de tabela (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Essas propriedades aparecem quando uma coluna de objeto com valor de tabela é selecionada no painel **Diagrama** do Designer de Exibição e Consulta.  

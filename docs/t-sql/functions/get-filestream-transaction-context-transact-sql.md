@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca5d2fac23dfa3c74689265915c498a4d6858fbc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1bab9267495b6e5f41507bf058f84ca571f9728e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
 ## <a name="return-value"></a>Valor de retorno  
  NULL será retornado se a transação não tiver sido iniciada, ou tiver sido cancelada ou confirmada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A transação deve ser explícita. Use BEGIN TRANSACTION seguido por COMMIT TRANSACTION ou ROLLBACK TRANSACTION.  
   
  Quando você chama GET_FILESTREAM_TRANSACTION_CONTEXT, o chamador recebe acesso de sistema de arquivos à transação durante a sua duração. Para permitir que outro usuário acesse a transação pelo sistema de arquivos, use EXECUTE AS para executar GET_FILESTREAM_TRANSACTION_CONTEXT como outro usuário.  
@@ -280,7 +280,7 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Caminho &#40; Transact-SQL &#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
+ [PathName &#40;Transact-SQL&#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
  [Objeto binário grande &#40;Blob&#41; Dados &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   
   

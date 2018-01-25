@@ -14,13 +14,13 @@ ms.assetid: 5df99e1c-a89a-42c1-9d68-ffe8d9577c94
 caps.latest.revision: "16"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d52eb12f7985f4a7ee5561767ecdb6ffb981e1cf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 14bfba68925f357c39fc192ae7852055a7e91f4f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="r-libraries-and-r-data-types"></a>Tipos de dados de R e bibliotecas de R
 
@@ -64,14 +64,14 @@ A tabela a seguir mostra as alterações em tipos de dados e valores quando dado
 |**date**|`POSIXct`|**datetime**|Representado como GMT|
 |**decimal(p,s)**|`numeric`|**float**||
 |**float**|`numeric`|**float**||
-|**int**|`integer`|**int**||
+|**Int**|`integer`|**Int**||
 |**money**|`numeric`|**float**||
 |**numeric(p,s)**|`numeric`|**float**||
 |**real**|`numeric`|**float**||
 |**smalldatetime**|`POSIXct`|**datetime**|Representado como GMT|
-|**smallint**|`integer`|**int**||
+|**smallint**|`integer`|**Int**||
 |**smallmoney**|`numeric`|**float**||
-|**tinyint**|`integer`|**int**||
+|**tinyint**|`integer`|**Int**||
 |**uniqueidentifier**|`character`|**varchar(max)**||
 |**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|Só é permitido como parâmetro de entrada e saída|
 |**varbinary(max)**|`raw`|**varbinary(max)**|Só é permitido como parâmetro de entrada e saída|
@@ -84,7 +84,7 @@ Das categorias de tipos de dados com suporte no [sistema de tipos do SQL Server]
 
 + Tipos de dados listados no **outros** seção do tópico de sistema de tipo SQL: **cursor**, **timestamp**, **hierarchyid**,  **uniqueidentifier**, **sql_variant**, **xml**, **tabela**
 + Todos os tipos espaciais
-+ **imagem**
++ **image**
 
 ## <a name="data-types-that-might-convert-poorly"></a>Tipos de dados que podem ser mal convertidos
 
@@ -195,6 +195,6 @@ columnList <- do.call(paste, c(as.list(columns$COLUMN_NAME), sep = ","))
 sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
 [Bibliotecas de Python e tipos de dados](../python/python-libraries-and-data-types.md)

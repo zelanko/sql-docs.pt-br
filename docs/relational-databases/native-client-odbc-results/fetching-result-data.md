@@ -25,15 +25,15 @@ helpviewer_keywords:
 - SQLGetData function
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9e005a7076dd8491806370c739b0156644a484b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1514a1309ea6a88e2d9c449ed9dbf15f99388227
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="fetching-result-data"></a>Buscando dados de resultados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/08/2018
   
  Essa otimização pode ser aplicada a aplicativos para que nenhum **texto**, **ntext**, ou **imagem** dados são exibidos enquanto um usuário está rolando um cursor para cima e. Depois que o usuário seleciona uma linha, o aplicativo pode chamar **SQLGetData** para recuperar o **texto**, **ntext**, ou **imagem** dados. Isso economiza transmitir o **texto**, **ntext**, ou **imagem** dados para qualquer uma das linhas, o usuário não seleciona e pode salvar a transmissão de quantidades muito grandes de dados.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Resultados do processamento &#40; ODBC &#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

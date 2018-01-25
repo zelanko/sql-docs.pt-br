@@ -16,15 +16,15 @@ apitype: COM
 helpviewer_keywords: BCPInit method
 ms.assetid: 583096d7-da34-49be-87fd-31210aac81aa
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd54a7333259365db701d064debf06d02962c8e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 43f82a0cb7a7634353d1de821ccabf3a51e70740
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ HRESULT BCPInit(
       int eDirection);  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **BCPInit** método deve ser chamado antes de qualquer outro método de cópia em massa. O **BCPInit** método executa as inicializações necessárias para uma cópia em massa de dados entre a estação de trabalho e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  O **BCPInit** método examina a estrutura de banco de dados fonte ou destino tabela, não o arquivo de dados. Ele especifica valores de formato de dados para o arquivo de dados com base em cada coluna na tabela, exibição ou conjunto de resultados SELECT do banco de dados. Essa especificação inclui o tipo de dados de cada coluna, a presença ou ausência de um indicador de comprimento ou nulo e cadeias de caracteres de bytes de terminador nos dados, além da largura de tipos de dados de comprimento fixo. O **BCPInit** método define esses valores da seguinte maneira:  

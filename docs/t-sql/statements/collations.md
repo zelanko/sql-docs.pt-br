@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7cc579d5f4c5d84dcec335e69d12334725f60741
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 7a206f638b78a5e4311ab7889a7902aa39a17413
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="collations"></a>Agrupamentos
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,6 @@ ms.lasthandoff: 01/02/2018
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 COLLATE { <collation_name> | database_default }  
 <collation_name> :: =   
      { Windows_collation_name } | { SQL_collation_name }  
@@ -87,11 +86,11 @@ COLLATE { <collation_name> | database_default }
   
  COLLATE usa *collate_name* para se referir ao nome do agrupamento do SQL Server ou o agrupamento do Windows a ser aplicado à expressão, definição de coluna ou definição de banco de dados. *collation_name* pode ser apenas um especificado *Windows_collation_name* ou um *SQL_collation_name* e o parâmetro deve conter um valor literal. *collation_name* não pode ser representado por uma variável ou expressão.  
   
- Geralmente, os agrupamentos são identificados por um nome de agrupamento, exceto na Instalação. Na Instalação, você especifica o designador de agrupamento raiz (a localidade do agrupamento) para agrupamentos do Windows e, em seguida, especifica as opções de classificação que diferenciam ou não maiúsculas e minúsculas ou caracteres com ou sem acentos.  
+ Geralmente, os agrupamentos são identificados por um nome de agrupamento, exceto na Instalação. Na instalação, em vez disso, especifique o designador de agrupamento raiz (a localidade do agrupamento) para agrupamentos do Windows e, em seguida, especifique as opções de classificação são diferencia ou não maiusculas ou acentos.  
   
  Você pode executar a função de sistema [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) para recuperar uma lista de todos os nomes de agrupamento válido para agrupamentos do Windows e agrupamentos do SQL Server:  
   
-```  
+```sql  
 SELECT name, description  
 FROM fn_helpcollations();  
 ```  
@@ -104,9 +103,11 @@ FROM fn_helpcollations();
   
 -   Ao restaurar ou anexar um banco de dados, o agrupamento padrão do banco de dados e o agrupamento de qualquer **char**, **varchar**, e **texto** colunas ou parâmetros no banco de dados deve ser suportado pelo sistema operacional.  
   
-     Conversões de página de código têm suporte para **char** e **varchar** tipos de dados, mas não para **texto** tipo de dados. A perda de dados durante traduções de página de código não é informada.  
+> [!NOTE]
+> Conversões de página de código têm suporte para **char** e **varchar** tipos de dados, mas não para **texto** tipo de dados. A perda de dados durante traduções de página de código não é informada.  
   
- Se o agrupamento especificado ou o agrupamento usado pelo objeto referenciado usar uma página de código sem suporte no Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibirá um erro.  
+> [!NOTE]
+> Se o agrupamento especificado ou o agrupamento usado pelo objeto referenciado usar uma página de código sem suporte no Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibirá um erro.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -132,39 +133,39 @@ COLLATE Traditional_Spanish_ci_ai ASC;
 GO  
 ```  
 
- Estes são os resultados da primeira consulta.  
+Estes são os resultados da primeira consulta.  
   
- ```
- Place 
- ------------- 
- California 
- Chiapas 
- Cinco Rios 
- Colima
- ```  
+```
+Place 
+------------- 
+California 
+Chiapas 
+Cinco Rios 
+Colima
+```  
   
- Estes são os resultados da segunda consulta.  
-  
- ```
- Place 
- ------------- 
- California 
- Cinco Rios 
- Colima 
- Chiapas
- ```  
+Estes são os resultados da segunda consulta.  
+ 
+```
+Place 
+------------- 
+California 
+Cinco Rios 
+Colima 
+Chiapas
+```  
   
 ### <a name="b-additional-examples"></a>B. Exemplos adicionais  
- Para obter exemplos adicionais que usam **COLLATE**, consulte [CREATE DATABASE &#40; Servidor SQL Transact-SQL &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md) exemplo **g. criando um banco de dados e especificando um nome de agrupamento e opções**, e [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md) exemplo **V. alterando o agrupamento de coluna**.  
+ Para obter exemplos adicionais que usam **COLLATE**, consulte [CREATE DATABASE &#40; Servidor SQL Transact-SQL &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples) exemplo **g. criando um banco de dados e especificando um nome de agrupamento e opções**, e [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md#alter_column) exemplo **V. alterando o agrupamento de coluna**.  
   
-## <a name="see-also"></a>Consulte Também  
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)   
- [Precedência de agrupamento &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)   
- [Constantes &#40; Transact-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [tabela &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)  
+## <a name="see-also"></a>Consulte também  
+ [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
+ [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [Precedência de agrupamento &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)     
+ [Constants &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)     
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)     
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)     
+ [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)     
   
   

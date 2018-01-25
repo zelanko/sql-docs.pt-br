@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLFreeStmt function
 ms.assetid: d9666d0b-3446-480e-bf1a-10b01213e411
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bc206ab590d3c5ee9aea03b74c25b8267d13373
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a198bb508f07bd16278df4784d4c5705bbdf8f9e
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlfreestmt"></a>SQLFreeStmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,8 +34,8 @@ ms.lasthandoff: 01/08/2018
   
  Em geral, é mais eficiente reutilizar instruções que to descartá-los e alocar novos. No entanto em algumas situações, como a reutilização de instruções, SQLFreeStmt ainda deve ser usada.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Função SQLFreeStmt](http://go.microsoft.com/fwlink/?LinkId=59346)   
- [Detalhes da implementação da API do ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Detalhes de implementação de API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

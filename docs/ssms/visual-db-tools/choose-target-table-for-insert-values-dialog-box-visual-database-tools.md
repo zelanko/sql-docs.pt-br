@@ -18,13 +18,13 @@ ms.assetid: 580ed86a-be86-419b-9dc7-e3b17f19905f
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f73ebe1c3a1c0f1b37b02f7941c217d10780d88
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 69f5728462ca8df633618be59fbcf1eb6f4272ff
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>Caixa de diálogo Escolher Tabela de Destino para Inserir Valores (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Esta caixa de diálogo permite especificar qual tabela será atualizada com a consulta INSERT VALUES. Essa caixa de diálogo será exibida se mais de uma tabela for exibida no painel **Diagrama** quando o tipo de consulta for alterado para INSERT VALUES.  

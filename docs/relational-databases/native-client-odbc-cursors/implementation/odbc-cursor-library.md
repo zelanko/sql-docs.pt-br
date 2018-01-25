@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SQL_CUR_USE_ODBC option
 ms.assetid: 3c610d3d-6e06-49cf-9a40-05b6a1c83a32
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4a4a0231a45114675ffd8f4b56b936aab52088f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: dc5bdbde64fa160a9d9e7729b6758483b7d529b4
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="odbc-cursor-library"></a>Biblioteca de cursores ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 01/08/2018
   
  A biblioteca de cursores permite que os aplicativos usem várias instruções ativas em uma conexão, assim como cursores roláveis e atualizáveis. A biblioteca de cursores deve ser carregada para dar suporte a essa funcionalidade. Use [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) para especificar como a biblioteca de cursores deve ser usada e [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) para especificar o tamanho de tipo, simultaneidade e conjunto de linhas do cursor.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Como os cursores são implementados](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
   

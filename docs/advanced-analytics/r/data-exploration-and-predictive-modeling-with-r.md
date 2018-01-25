@@ -14,13 +14,13 @@ ms.assetid: bf6de7e2-f394-4b8a-a4b7-0b8dadf25426
 caps.latest.revision: "20"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: a64db58ce05675a3a2ac30e0bcea0d3924731a08
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f700b865e2ee353872e8e0e67adf9e7c78060570
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r"></a>Exploração e Dados e Modelagem Preditiva com R
 
@@ -106,7 +106,7 @@ Para saber mais sobre como mover seu código para executá-lo no [!INCLUDE[ssNoV
 
 Normalmente, o processo de implantação começa com a limpeza do seu script para eliminar códigos desnecessários na produção. Como mover cálculos mais próximo para os dados, você pode encontrar formas de com mais eficiência mover, resumir ou apresentar dados do que fazer tudo no R.  É recomendável que o cientista de dados Consulte com um desenvolvedor de banco de dados sobre maneiras de melhorar o desempenho, especialmente se a solução não limpeza de dados ou o recurso de engenharia que pode ser mais eficaz em SQL. Podem ser necessárias alterações nos processos de ETL para garantir que os fluxos de trabalho de criação ou pontuação de modelos não falhem e para que os dados de entrada estejam disponíveis no formato correto.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
 [Comparação de funções Base R e ScaleR](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
 

@@ -14,13 +14,13 @@ ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
 caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 9455eef75df9e802d797b67da0454d36e11def2d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 265f66c0dfba28e1f3c35fa560098b3a2d13cb0c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Desempenho de serviços do R - otimização de dados
 

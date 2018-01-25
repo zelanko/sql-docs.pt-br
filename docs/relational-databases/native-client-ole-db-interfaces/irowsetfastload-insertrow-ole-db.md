@@ -1,5 +1,5 @@
 ---
-title: 'IRowsetFastLoad:: Insertrow (OLE DB) | Microsoft Docs'
+title: IRowsetFastLoad::InsertRow (OLE DB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -16,15 +16,15 @@ apitype: COM
 helpviewer_keywords: InsertRow method
 ms.assetid: 594d3461-34d2-41e7-8ad4-bd2753601ab6
 caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 396623230f9df9ba3466cf50c63d0a725f878d99
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f3b7e73fa767ef0d07f8e43553bdaff5c7365ea4
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ HRESULT InsertRow(
  DB_E_BADACCESSORTYPE  
  O acessador especificado não era um acessador de linha ou não especificou a memória de propriedade do consumidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Erro ao converter dados do consumidor para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados para uma coluna gera um retorno de E_FAIL o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider. Dados podem ser transmitidos para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em qualquer **InsertRow** método ou apenas no **confirmar** método. O aplicativo do consumidor pode chamar o método **InsertRow** muitas vezes com dados incorretos antes ser avisado de que há um erro de conversão de tipo de dados. Como o método **Commit** assegura que todos os dados sejam especificados corretamente pelo consumidor, ele pode usar o método **Commit** apropriadamente para validar os dados, conforme necessário.  
   
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de linhas de cópia em massa Native Client OLE DB provider são somente gravação. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client não expõe nenhum método que permite consultas do consumidor do conjunto de linhas. Para encerrar o processamento, o consumidor pode liberar sua referência no [IRowsetFastLoad](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) interface sem chamar o **confirmar** método. Não há nenhum recurso para acessar uma linha inserida pelo consumidor no conjunto de linhas e alterar seus valores ou para removê-la individualmente do conjunto de linhas.  

@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_setcolfmt function
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c01a4e7098524e14c8198894a4f282b602cb1166
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 553681c7e0e56978f5df44b23041e52a66f129a9
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,13 +53,13 @@ RETCODE bcp_setcolfmt (
  *HDBC*  
  É o identificador de conexão ODBC habilitado para cópia em massa.  
   
- *campo*  
+ *field*  
  É o número de coluna ordinal para o qual a propriedade está sendo definida.  
   
  *propriedade*  
  É um das constantes de propriedade. As constantes de propriedade são definidas nesta tabela.  
   
-|propriedade|Valor|Descrição|  
+|propriedade|Value|Description|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|É o tipo de dados desta coluna no arquivo de usuário. Se for diferente do tipo de dados da coluna correspondente na tabela do banco de dados, a cópia em massa converterá os dados se possível.<br /><br /> O parâmetro BCP_FMT_TYPE é enumerado pelos tokens de tipo de dados do SQL Server em sqlncli.h, e não nos enumeradores de tipo de dados ODBC C. Por exemplo, você pode especificar uma cadeia de caracteres, o tipo ODBC SQL_C_CHAR, usando o tipo SQLCHARACTER específico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Para especificar a representação de dados padrão do tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], defina esse parâmetro como 0.<br /><br /> Para obter uma cópia em massa do SQL Server em um arquivo, quando BCP_FMT_TYPE for SQLDECIMAL ou SQLNUMERIC, se a coluna de origem não for **decimal** ou **numérico**, a precisão e escala padrão são usados. Caso contrário, se a coluna de origem é **decimal** ou **numérico**, a precisão e escala da coluna de origem são usados.|  
 |BCP_FMT_INDICATOR_LEN|INT|É o comprimento em bytes do indicador (prefixo).<br /><br /> É o comprimento, em bytes, de um indicador de comprimento/nulo nos dados de coluna. Os valores de comprimento de indicador válidos são 0 (quando nenhum indicador é usado), 1, 2 ou 4.<br /><br /> Para especificar o uso do indicador de cópia em massa padrão, defina esse parâmetro como SQL_VARLEN_DATA.<br /><br /> Os indicadores aparecem na memória diretamente antes de quaisquer dados, e no arquivo de dados diretamente antes dos dados aos quais se aplicam.<br /><br /> Se for usada mais de uma maneira de especificar um comprimento de coluna de arquivo de dados (como um indicador e um comprimento de coluna máximo ou um indicador e uma sequência de terminador), a cópia em massa escolherá aquela que resultar na menor quantidade de dados sendo copiados.<br /><br /> Os arquivos de dados gerados pela cópia em massa quando nenhuma intervenção de usuário ajusta o formato dos dados contêm indicadores quando os dados de coluna podem variar em comprimento ou a coluna pode aceitar NULL como valor.|  
@@ -71,13 +71,13 @@ RETCODE bcp_setcolfmt (
  *pValue*  
  É o ponteiro para o valor que será associado a *property*. Ele permite que cada propriedade de formato de coluna seja definida individualmente.  
   
- *cbValue*  
+ *cbvalue*  
  É o comprimento do buffer da propriedade em bytes.  
   
 ## <a name="returns"></a>Retorna  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esta função substitui a função **bcp_colfmt** . É oferecida toda a funcionalidade de **bcp_colfmt** na função **bcp_setcolfmt** . Além disso, também há suporte ao agrupamento de coluna. É recomendável que os atributos de formato de coluna a seguir sejam definidos nesta ordem:  
   
  BCP_FMT_SERVER_COL  

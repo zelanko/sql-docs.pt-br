@@ -21,13 +21,13 @@ ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb2bc5a6ba90fb46d4d5329a3d8c8a16d7f9fe8d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 77d9cd92950ddecc334fd5d75c3092bc5b3b4214
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Criar consultas Inserir Resultados (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode copiar linhas de uma tabela para outra ou em uma tabela utilizando uma consulta Inserir Resultados. Por exemplo, em uma tabela `titles` , é possível utilizar uma consulta Inserir Resultados para copiar informações sobre todos os títulos de um publicador para uma segunda tabela que você pode disponibilizar para esse publicador. Uma consulta Inserir Resultados é semelhante às Consultas de Criar Tabela, mas copia linhas para uma tabela existente.  

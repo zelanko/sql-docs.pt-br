@@ -13,21 +13,21 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fdd4ba2e98b31d2637641eaded57be1aa4415c3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f1332812cc70853fc095e506b43c45aa637cec6c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-how-to-topics"></a>Tópicos de instruções sobre ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Para usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC, você deve ser capaz de criar fontes de dados ODBC e garantir que o servidor tem a versão correta dos procedimentos armazenados de catálogo. Para codificar um aplicativo do SQL Server, você deve saber como alocar identificadores ODBC, definir atributos, se conectar a uma instância do SQL Server, executar consultas e processar resultados.  
+  Para usar o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você deve ser capaz de criar fontes de dados ODBC e garantir que o servidor tenha a versão correta dos procedimentos armazenados do catálogo. Para codificar um aplicativo do SQL Server, você deve saber como alocar identificadores ODBC, definir atributos, se conectar a uma instância do SQL Server, executar consultas e processar resultados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Cópia em massa com os SQL Server ODBC Driver tópicos de instruções &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Cliente nativo do SQL Server &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   
