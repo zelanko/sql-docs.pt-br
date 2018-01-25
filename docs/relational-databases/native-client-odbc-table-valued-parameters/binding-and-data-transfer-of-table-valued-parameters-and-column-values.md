@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: table-valued parameters (ODBC), binding and data transfer
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d536a83a3c1c8f58fca6c62650c71e3a20bec28
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 738981ef92321f4989497b20d027667698065a75
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Associação e transferência de dados de parâmetros com valor de tabela e valores de coluna
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +83,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  Chama SQLExecute ou SQLExecDirect. Isso retornará SQL_NEED_DATA se houver qualquer parâmetro SQL_PARAM_INPUT ou SQL_PARAM_INPUT_OUTPUT para ser tratado como parâmetro de dados em execução. Nesse caso, o aplicativo faz o seguinte:  
   
-    -   Chama SQLParamData. Isso retorna o *ParameterValuePtr* valor para um parâmetro de dados em execução e um código de retorno de SQL_NEED_DATA. Quando todos os dados de parâmetro foi passado para o driver, SQLParamData retorna SQL_SUCCESS, SQL_SUCCESS_WITH_INFO ou SQL_ERROR. Para parâmetros de dados em execução, *ParameterValuePtr*, que é o mesmo que o descritor de campo SQL_DESC_DATA_PTR, pode ser considerada como um token para identificar exclusivamente um parâmetro para o qual um valor é necessário. Esse "token" é passado do aplicativo para o driver em tempo de associação e, depois, devolvido ao aplicativo em tempo de execução.  
+    -   Calls SQLParamData. Isso retorna o *ParameterValuePtr* valor para um parâmetro de dados em execução e um código de retorno de SQL_NEED_DATA. Quando todos os dados de parâmetro foi passado para o driver, SQLParamData retorna SQL_SUCCESS, SQL_SUCCESS_WITH_INFO ou SQL_ERROR. Para parâmetros de dados em execução, *ParameterValuePtr*, que é o mesmo que o descritor de campo SQL_DESC_DATA_PTR, pode ser considerada como um token para identificar exclusivamente um parâmetro para o qual um valor é necessário. Esse "token" é passado do aplicativo para o driver em tempo de associação e, depois, devolvido ao aplicativo em tempo de execução.  
   
 4.  Para enviar dados de linha de parâmetro com valor de tabela para parâmetros com valor de tabela nulos, se o parâmetro com valor de tabela não tem nenhuma linha, um aplicativo chama SQLPutData com *StrLen_or_Ind* definido como SQL_DEFAULT_PARAM.  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 01/08/2018
   
 6.  Chama SQLParamData novamente. Se houver quaisquer parâmetros de dados em execução entre as colunas de parâmetro com valor de tabela, esses serão identificados pelo valor *ValuePtrPtr* retornado por SQLParamData. Quando todos os valores de coluna estão disponíveis, SQLParamData retornará novamente o *ParameterValuePtr* valor para o parâmetro com valor de tabela e o aplicativo começa novamente.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Com valor de tabela parâmetros &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

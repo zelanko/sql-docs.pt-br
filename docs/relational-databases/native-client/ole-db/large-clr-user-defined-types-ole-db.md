@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: large CLR user-defined types [OLE DB]
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd1b3396b763d6ca8eb8c3f3f6f2559f3ef4c44e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a6bdb5767937e4fbfdf7dd92cc683fe7830e066a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipos definidos pelo usuário CLR grandes (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/08/2018
   
  A seguinte tabela mostra o mapeamento de tipo de dados em parâmetros e conjuntos de linhas:  
   
-|Tipo de dados do SQL Server|Tipo de dados OLE DB|Layout de memória|Valor|  
+|Tipo de dados do SQL Server|Tipo de dados OLE DB|Layout de memória|Value|  
 |--------------------------|----------------------|-------------------|-----------|  
 |CLR UDT|DBTYPE_UDT|BYTE [] (matriz de bytes\)|132 (OLEDB)|  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  Informações retornadas na estrutura DBPARAMINFO por meio de **prgParamInfo** é o seguinte:  
   
-|Tipo de parâmetro|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* se DBPARAMFLAGS_ISLONG|  
+|Tipo de parâmetro|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|"DBTYPE_UDT"|*n*|não definido|não definido|clear|  
 |DBTYPE_UDT<br /><br /> (comprimento maior que 8.000 bytes)|"DBTYPE_UDT"|~0|não definido|não definido|set|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  As informações fornecidas na estrutura DBPARAMBINDINFO devem estar de acordo com o seguinte:  
   
-|Tipo de parâmetro|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* se DBPARAMFLAGS_ISLONG|  
+|Tipo de parâmetro|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|--------------------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|DBTYPE_UDT|*n*|ignorado|ignorado|Deve ser definido se o parâmetro for passado usando DBTYPE_IUNKNOWN.|  
 |DBTYPE_UDT<br /><br /> (comprimento maior que 8.000 bytes)|DBTYPE_UDT|~0|ignorado|ignorado|ignorado|  
@@ -177,7 +177,7 @@ ms.lasthandoff: 01/08/2018
   
  Quando **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) é definido como "80", tipos UDT grandes aparecem para os clientes da mesma forma que aparecem para clientes de nível inferior.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Tipos de dados CLR grandes definidos pelo usuário](~/relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

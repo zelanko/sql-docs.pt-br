@@ -15,13 +15,13 @@ ms.assetid: 6fc5fd95-2045-4f20-a914-3598091bc7cc
 caps.latest.revision: "37"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e8d0df617bef08305166f4112fcb4f4d371137d2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a5c22e2ce58189f396835f65748fdbab7ef8f9d5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (banco de dados do SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -201,7 +201,7 @@ ALTER DATABASE { database_name }
  CURRENT  
  Designa que o banco de dados em uso deve ser alterado.  
   
- MODIFY NAME  **=**  *new_database_name*  
+ MODIFY NAME **= * new_database_name*  
  Renomeia o banco de dados com o nome especificado como *new_database_name*. O exemplo a seguir altera o nome de um banco de dados `db1` para `db2`:   
 
 ```  
@@ -222,7 +222,7 @@ A alteração da edição falhará se a propriedade MAXSIZE do banco de dados é
  MODIFICAR (MAXSIZE  **=**  [100 MB | 500 MB | 1 | 1024... 4096] GB)  
  Especifica o tamanho máximo do banco de dados. O tamanho máximo deve estar em conformidade com o conjunto válido de valores da propriedade EDITION do banco de dados. A alteração do tamanho máximo do banco de dados pode fazer com que a EDIÇÃO do banco de dados seja alterada. A tabela a seguir lista os valores MAXSIZE com suporte e os padrões (D) para as camadas de serviço do [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-|**MAXSIZE**|**Basic**|**S2 S0**|**/S12 S3**|**P1 P6 e PRS1 PRS6**|**P11 P15**|  
+|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1 P6 e PRS1 PRS6**|**P11-P15**|  
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|  
@@ -267,7 +267,7 @@ ALTER DATABASE current
 ```  
  Os valores disponíveis para o objetivo de serviço são: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `PRS1`, `PRS2`, `PRS4`, e `PRS6`. Para descrições de objetivo de serviço e obter mais informações sobre o tamanho, as edições e as combinações de objetivos de serviço, consulte [camadas de serviço de banco de dados SQL do Azure e níveis de desempenho](http://msdn.microsoft.com/library/azure/dn741336.aspx). Se o SERVICE_OBJECTIVE especificado não é suportada pela edição, você receberá um erro. Para alterar o valor SERVICE_OBJECTIVE de uma camada para outra (por exemplo, de S1 para P1), você deve alterar também o valor EDITION.  
   
- MODIFICAR (SERVICE_OBJECTIVE = ELÁSTICA\_POOL (nome = \<elastic_pool_name >)  
+ MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)  
  Para adicionar um banco de dados existente para um pool Elástico, defina o SERVICE_OBJECTIVE do banco de dados como ELASTIC_POOL e forneça o nome do pool Elástico. Você também pode usar esta opção para alterar o banco de dados para um pool Elástico diferente no mesmo servidor. Para obter mais informações, consulte [criar e gerenciar um pool Elástico de banco de dados SQL](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/). Para remover um banco de dados de um pool Elástico, use ALTER DATABASE para definir o SERVICE_OBJECTIVE para um nível de desempenho do banco de dados único.  
 
  Adicionar SECUNDÁRIO ON SERVER \<partner_server_name >  
@@ -279,7 +279,7 @@ ALTER DATABASE current
  COM SERVICE_OBJECTIVE {'S0' | 'S1' | 'S2' | ' S3 "| 'S4' | 'S6' | 'S7' | 'S9' | '/S12' | 'P1' | 'P2' | 'P4' | 'P6' | 'P11' | 'P15' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6'}  
  Quando o SERVICE_OBJECTIVE não for especificado, o banco de dados secundário é criado no mesmo nível de serviço do banco de dados primário. Quando SERVICE_OBJECTIVE for especificado, o banco de dados secundário é criado no nível especificado. Essa opção oferece suporte à criação secundários replicados geograficamente com os níveis de serviço mais baratos. O SERVICE_OBJECTIVE especificado deve estar dentro a mesma edição como a origem. Por exemplo, você não pode especificar S0 se a edição premium.  
   
- ELASTIC_POOL (nome = \<elastic_pool_name)  
+ ELASTIC_POOL (name = \<elastic_pool_name)  
  Quando ELASTIC_POOL não for especificado, o banco de dados secundário não é criado em um pool Elástico. Quando ELASTIC_POOL for especificado, o banco de dados secundário é criado no pool especificado.  
   
 > [!IMPORTANT]  
@@ -399,16 +399,16 @@ ALTER DATABASE db1 FAILOVER
  [Criar banco de dados &#40; Banco de dados SQL do Azure &#41;](../../t-sql/statements/create-database-azure-sql-database.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
- [Definir nível de ISOLAMENTO da transação &#40; Transact-SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
+ [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [database_mirroring_witnesses &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
- [data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
- [sys. filegroups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [sys. master_files &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
+ [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Bancos de dados do sistema](../../relational-databases/databases/system-databases.md)  
   
   

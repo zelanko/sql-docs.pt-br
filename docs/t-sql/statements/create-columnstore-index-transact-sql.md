@@ -32,13 +32,13 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 caps.latest.revision: "76"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fd51d2a902337b232f5bf9497f5ebd0bbcac9199
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.openlocfilehash: ccf03c6b2d3d7798f3bad65b340657bf2b21b751
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -123,7 +123,7 @@ Especifica o nome para o novo índice.
   
 Se a tabela já tiver um índice columnstore clusterizado, você pode especificar o mesmo nome que o índice existente, ou você pode usar a opção DROP EXISTING para especificar um novo nome.  
   
-ON [*database_name*. [*schema_name* ]. | *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Especifica o nome de uma, duas ou três partes da tabela a ser armazenada como um índice columnstore clusterizado. Se a tabela for um heap ou índice clusterizado de tabela é convertido de rowstore em columnstore. Se a tabela já está columnstore, essa instrução recria o índice columnstore clusterizado.  
   
 com  
@@ -171,7 +171,7 @@ ON
    *filegroup_name*  
    Especifica o grupo de arquivos para armazenamento do índice columnstore clusterizado. Se nenhum local for especificado e a tabela não for particionada, o índice utilizará o mesmo grupo de arquivos da exibição ou tabela subjacente. O grupo de arquivos já deve existir.  
 
-   **"**padrão**"**  
+   **"**default**"**  
    Para criar o índice no grupo de arquivos padrão, use "padrão" ou [padrão].  
   
    Se "padrão" for especificado, a opção QUOTED_IDENTIFIER deverá ser definida como ON para a sessão atual. QUOTED_IDENTIFIER está ON por padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
@@ -182,11 +182,11 @@ Criar um índice columnstore não clusterizado na memória em uma tabela rowstor
 *index_name*  
    Especifica o nome do índice. *index_name* devem ser exclusivos dentro da tabela, mas não precisa ser exclusivo no banco de dados. Os nomes de índice devem seguir as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
- **(** *coluna* [ **,**... *n* ] **)**  
+ **(** *column*  [ **,**...*n* ] **)**  
     Especifica as colunas a serem armazenadas. Um índice não clusterizado columnstore é limitado a 1024 colunas.  
    Cada coluna deve ser de um tipo de dados com suporte para índices columnstore. Consulte [limitações e restrições](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) para obter uma lista dos tipos de dados com suporte.  
 
-ON [*database_name*. [*schema_name* ]. | *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Especifica a uma, duas ou nome de três partes da tabela que contém o índice.  
 
 COM DROP_EXISTING = [OFF] | ON  
@@ -213,7 +213,7 @@ ON Especifica que o índice não clusterizado columnstore permaneça online e di
 
    Desativar Especifica que o índice não está disponível para uso, enquanto a nova cópia está sendo construída. Como esse é um índice não clusterizado, o permanece de tabela base disponível, que apenas o índice columnstore não clusterizado não é usado para atender consultas até que o novo índice seja concluído. 
 
-COMPRESSION_DELAY = **0** | \<atraso > [minutos]  
+COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
    Aplica-se a: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
    Especifica um limite inferior em quanto tempo uma linha deve permanecer no rowgroup delta antes que seja qualificado para migração para o grupo de linhas compactado. Por exemplo, um cliente pode dizer que se uma linha for alterada para 120 minutos, torná-la elegível para a compactação em formato de armazenamento Colunar. Para um índice columnstore em tabelas baseadas em disco, nós não rastrear o tempo quando uma linha foi inserida ou atualizada, usamos o delta rowgroup fechado tempo como um proxy para a linha em vez disso. A duração padrão é 0 minutos. Uma linha é migrada para o armazenamento Colunar depois que foram acumulado 1 milhão de linhas no rowgroup delta e ele foi marcado como fechado.  
@@ -255,7 +255,7 @@ ON
 *filegroup_name*  
    Especifica o nome do grupo de arquivos no qual criar o índice. Se *filegroup_name* não for especificado e a tabela não estiver particionada, o índice usa o mesmo grupo de arquivos da tabela subjacente. O grupo de arquivos já deve existir.  
  
-**"**padrão**"**  
+**"**default**"**  
 Cria o índice especificado no grupo de arquivos padrão.  
   
 Nesse contexto, default não é uma palavra-chave. Ele é um identificador para o grupo de arquivos padrão e deve ser delimitado, como em ON **"**padrão**"** ou ON **[**padrão**]**. Se "padrão" for especificado, a opção QUOTED_IDENTIFIER deverá ser definida como ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
@@ -275,7 +275,7 @@ As opções SET na coluna Valor necessário são necessárias sempre que ocorrer
 - A operação INSERT, UPDATE, DELETE ou MERGE modificar os dados de um índice filtrado.  
 - O índice filtrado é usado pelo otimizador de consulta para produzir o plano de consulta.  
   
-    |Opções Set|Valor Obrigatório|Valor do servidor padrão|Padrão<br /><br /> Valor OLE DB e ODBC|Padrão<br /><br /> Valor da DB-Library|  
+    |opções SET|Valor Obrigatório|Valor do servidor padrão|Padrão<br /><br /> Valor OLE DB e ODBC|Padrão<br /><br /> Valor da DB-Library|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -297,35 +297,35 @@ As opções SET na coluna Valor necessário são necessárias sempre que ocorrer
   
  Para obter mais informações sobre índices filtrados, consulte [criar índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md). 
   
-##  <a name="LimitRest"></a> Limitações e Restrições  
+##  <a name="LimitRest"></a> Limitações e restrições  
 
 **Cada coluna em um índice columnstore deve ser de um dos seguintes tipos de dados de negócios comuns:** 
--   DateTimeOffset [(  *n*  )]  
--   datetime2 [(  *n*  )]  
--   DATETIME  
+-   datetimeoffset [ ( *n* ) ]  
+-   datetime2 [ ( *n* ) ]  
+-   datetime  
 -   smalldatetime  
--   Data  
--   tempo [(  *n*  )]  
--   float [(  *n*  )]  
--   real [(  *n*  )]  
--   decimal [( *precisão* [ *, escala* ] **)** ]
--   numérico [( *precisão* [ *, escala* ] **)** ]    
+-   date  
+-   time [ ( *n* ) ]  
+-   float [ ( *n* ) ]  
+-   real [ ( *n* ) ]  
+-   decimal [ ( *precision* [ *, scale* ] **)** ]
+-   numeric [ ( *precision* [ *, scale* ] **)** ]    
 -   money  
--   SMALLMONEY  
--   BIGINT  
--   INT  
+-   smallmoney  
+-   bigint  
+-   int  
 -   smallint  
--   TINYINT  
+-   tinyint  
 -   bit  
--   nvarchar [(  *n*  )] 
+-   nvarchar [ ( *n* ) ] 
 -   nvarchar (max) (aplica-se a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e o banco de dados SQL Azure no premium preço, em índices columnstore clusterizados apenas)   
--   nchar [(  *n*  )]  
--   varchar [(  *n*  )]  
+-   nchar [ ( *n* ) ]  
+-   varchar [ ( *n* ) ]  
 -   varchar (max) (aplica-se a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e o banco de dados SQL Azure no premium preço, em índices columnstore clusterizados apenas)
--   char [(  *n*  )]  
--   varbinary [(  *n*  )] 
+-   char [ ( *n* ) ]  
+-   varbinary [ ( *n* ) ] 
 -   varbinary (max) (aplica-se a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e o banco de dados SQL Azure no premium preço, em índices columnstore clusterizados apenas)
--   binário [(  *n*  )]  
+-   binary [ ( *n* ) ]  
 -   Identificador exclusivo (aplica-se a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior)
   
 Se a tabela subjacente tiver uma coluna de um tipo de dados que não há suporte para índices columnstore, você deve omitir a coluna do índice columnstore não clusterizado.  

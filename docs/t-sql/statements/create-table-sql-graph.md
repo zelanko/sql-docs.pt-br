@@ -35,13 +35,13 @@ ms.assetid:
 caps.latest.revision: "1"
 author: shkale-msft
 ms.author: shkale
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 92a586a3612934a4f66e5a616d969454afc87eac
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fe8ace1b8f8c55c14d4807514fcb1436f6966fed
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-sql-graph"></a>Criar tabela (gráfico SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ CREATE TABLE
 ## <a name="arguments"></a>Argumentos  
 Este documento lista apenas os argumentos que pertencem ao gráfico SQL. Para uma lista completa e a descrição de argumentos com suporte, consulte [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
 
- *Database_Name*    
+ *database_name*    
  É o nome do banco de dados no qual a tabela é criada. *Database_Name* deve especificar o nome do banco de dados existente. Se não for especificado, *database_name* padrões para o banco de dados atual. O logon para a conexão atual deve ser associado uma ID de usuário existente no banco de dados especificado por *database_name*, e essa ID de usuário deve ter permissões CREATE TABLE.  
   
  *schema_name*    
@@ -82,7 +82,7 @@ Este documento lista apenas os argumentos que pertencem ao gráfico SQL. Para um
  BORDA  
  Cria uma tabela de borda.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Não há suporte para a criação de uma tabela temporária como nó ou a tabela de borda.  
 
 Não há suporte para a criação de uma tabela de borda ou nó como uma tabela temporal.
@@ -125,6 +125,6 @@ Os exemplos a seguir mostram como criar `EDGE` tabelas
 
 ## <a name="see-also"></a>Consulte também  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [INSERT (gráfico SQL)](../../t-sql/statements/insert-sql-graph.md)]  
+ [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [Gráfico de processamento com o SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)
 

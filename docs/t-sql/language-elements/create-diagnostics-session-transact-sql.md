@@ -16,15 +16,15 @@ ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
 caps.latest.revision: "9"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bda2e9c6813e53bffeab974e5e01b475cdfebe26
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d869ed18b07f824ffa4cc3fc8b746ded5242ed99
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-diagnostics-session-transact-sql"></a>CRIAR sessão de diagnóstico (Transact-SQL)
+# <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Sessões de diagnóstico permitem que você salve as informações de diagnóstico detalhadas, definidas pelo usuário no desempenho do sistema ou de consulta.  
@@ -79,7 +79,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  *comp_type*  
  O tipo de comparação. Possíveis valores são: igual a, EqualsOrGreaterThan, EqualsOrLessThan, GreaterThan, LessThan, NotEquals, Contains, RegEx  
   
- *Property_Name*  
+ *property_name*  
  Uma propriedade relacionada ao evento.  Nomes de propriedade podem fazer parte da marca de captura ou usado como parte dos critérios de filtragem.  
   
 |Nome da propriedade|Description|  
@@ -93,7 +93,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |Duration|A duração do evento.|  
 |SPID|A ID de processo do serviço.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Cada usuário é permitido um máximo de 10 sessões simultâneas de diagnóstico. Consulte [sys.pdw_diag_sessions](http://msdn.microsoft.com/en-us/ca111ddc-2787-4205-baf0-1a242c0257a9) para obter uma lista de sessões atuais e soltar os desnecessários sessões usando `DROP DIAGNOSTICS SESSION`.  
   
  Sessões de diagnóstico continuará coletar metadados até descartado.  

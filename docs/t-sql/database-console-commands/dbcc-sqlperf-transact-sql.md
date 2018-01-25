@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DBCC SQLPERF statement
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1a4efef1269d85483b098e98a03b913306088f68
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cd615cd56860138d2e9afa7e2d7090ed27ba8e3a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,10 +62,10 @@ Retorna o tamanho atual do log de transações e a porcentagem de espaço usado 
 > [!IMPORTANT]
 > Para obter mais informações sobre informações de uso de espaço para o log de transações, começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], consulte o [comentários](#Remarks) neste tópico.
   
-**"sys.DM os_latch_stats"**, DESMARQUE  
+**"sys.dm_os_latch_stats"**, CLEAR  
 Zera as estatísticas de trava. Para obter mais informações, consulte [sys.DM os_latch_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md). Essa opção não está disponível no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-**"sys.DM os_wait_stats"**, DESMARQUE  
+**"sys.dm_os_wait_stats"**, CLEAR  
 Zera as estatísticas de espera. Para obter mais informações, consulte [sys.DM os_wait_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). Essa opção não está disponível no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 WITH NO_INFOMSGS  
@@ -76,7 +76,7 @@ Suprime todas as mensagens informativas com níveis de severidade de 0 a 10.
   
 |Nome da coluna|Definição|  
 |---|---|
-|**Database Name**|Nome do banco de dados da estatística de logs exibida.|  
+|**Nome do Banco de Dados**|Nome do banco de dados da estatística de logs exibida.|  
 |**Tamanho do log (MB)**|Tamanho atual alocado ao log. Esse valor sempre é menor que a quantidade alocada originalmente para o espaço de log porque o [!INCLUDE[ssDE](../../includes/ssde-md.md)] reserva uma quantidade pequena de espaço em disco para informações de cabeçalho internas.|  
 |**Espaço de log usado (%)**|Porcentagem do arquivo de log em uso para armazenar informações de log de transação no momento.|  
 |**Status**|Status do arquivo de log. Sempre 0.|  
@@ -120,12 +120,12 @@ O exemplo a seguir zera as estatísticas de espera da instância do [!INCLUDE[ss
 DBCC SQLPERF("sys.dm_os_wait_stats",CLEAR);  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
-[sys.DM os_latch_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)    
-[sys.DM os_wait_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
+[sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)    
+[sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
 [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)    
-[sys.dm_db_log_info &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
+[sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)     
-[sys.dm_db_log_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)     
+[sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)     
 

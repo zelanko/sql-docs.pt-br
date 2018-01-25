@@ -1,5 +1,5 @@
 ---
-title: Criar tabela externa (Transact-SQL) | Microsoft Docs
+title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/27/2017
 ms.prod: sql-non-specified
@@ -24,15 +24,15 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 caps.latest.revision: "30"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eab36ee612c3e559bf13db948c128ea6428063ae
-ms.sourcegitcommit: 3cc7ffde800b451923c523fd549e8f4b4994f052
+ms.openlocfilehash: 97381b5381491b98c81a6863b3cfcdc6a340c79e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-external-table-transact-sql"></a>Criar tabela externa (Transact-SQL)
+# <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Cria uma tabela externa PolyBase que faz referência a dados armazenados em um cluster de Hadoop ou armazenamento de BLOBs do Azure. Também pode ser usado para criar uma tabela externa para [consulta de banco de dados Elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
@@ -135,7 +135,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Database_Name* . [schema_name]. | schema_name. ] *table_name*  
+ *Database_Name* . [ schema_name ] . | schema_name. ] *table_name*  
  Um a três - parte nome da tabela para criar. Para uma tabela externa, apenas os metadados da tabela são armazenados no SQL com estatísticas básicas sobre o arquivo e/ou pasta referenciado no armazenamento de BLOBs do Azure ou Hadoop. Nenhum dado real é movido ou armazenado em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  \<column_definition > [,...  *n*  ] CREATE EXTERNAL TABLE permite que uma ou mais definições de coluna. CREATE EXTERNAL TABLE e CREATE TABLE usam a mesma sintaxe para definir uma coluna. Uma exceção a isso, você não pode usar a restrição padrão em tabelas externas. Para obter detalhes completos sobre definições de coluna e seus tipos de dados, consulte [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) e [criar tabela no banco de dados SQL do Azure](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
@@ -159,20 +159,20 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 |real|Single|float|FloatWritable||  
 |money|Decimal|double|DoubleWritable||  
 |smallmoney|Decimal|double|DoubleWritable||  
-|nchar|Cadeia de caracteres<br /><br /> Char]|cadeia de caracteres|text||  
+|NCHAR|Cadeia de caracteres<br /><br /> Char]|cadeia de caracteres|text||  
 |nvarchar|Cadeia de caracteres<br /><br /> Char]|cadeia de caracteres|Texto||  
 |char|Cadeia de caracteres<br /><br /> Char]|cadeia de caracteres|Texto||  
 |varchar|Cadeia de caracteres<br /><br /> Char]|cadeia de caracteres|Texto||  
-|binary|Byte[]|binary|BytesWritable|Aplica-se a seção 0,8 e posterior.|  
-|varbinary|Byte[]|binary|BytesWritable|Aplica-se a seção 0,8 e posterior.|  
+|BINARY|Byte[]|BINARY|BytesWritable|Aplica-se a seção 0,8 e posterior.|  
+|varbinary|Byte[]|BINARY|BytesWritable|Aplica-se a seção 0,8 e posterior.|  
 |date|DateTime|timestamp|TimestampWritable||  
 |smalldatetime|DateTime|timestamp|TimestampWritable||  
 |datetime2|DateTime|timestamp|TimestampWritable||  
 |datetime|DateTime|timestamp|TimestampWritable||  
 |time|TimeSpan|timestamp|TimestampWritable||  
-|decimal|Decimal|decimal|BigDecimalWritable|Aplica-se ao Hive0.11 e posterior.|  
+|Decimal|Decimal|Decimal|BigDecimalWritable|Aplica-se ao Hive0.11 e posterior.|  
   
- LOCAL = '*folder_or_filepath*'  
+ LOCATION =  '*folder_or_filepath*'  
  Especifica a pasta ou o caminho do arquivo e o nome de arquivo para os dados reais no armazenamento de BLOBs do Azure ou Hadoop. Inicia o local da pasta raiz; a pasta raiz é o local de dados especificado na fonte de dados externa.  
   
  Se você especificar o local para uma pasta, uma consulta do PolyBase que seleciona da tabela externa recuperará os arquivos da pasta e todas as suas subpastas. Assim como Hadoop, PolyBase não retorna as pastas ocultas. Ele também não retornar os arquivos para o qual o nome do arquivo começa com um sublinhado (_) ou um ponto (.).  
@@ -202,7 +202,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  Por exemplo, se REJECT_VALUE = 5 e REJECT_TYPE = valor, o PolyBase consulta SELECT falhará após 5 linhas foram rejeitadas.  
   
- Porcentagem  
+ percentage  
  REJECT_VALUE é uma porcentagem, não é um valor literal. Uma consulta do PolyBase falhará quando o *porcentagem* de linhas com falha excede *reject_value*. A porcentagem de linhas com falha é calculada em intervalos.  
   
  REJECT_VALUE = *reject_value*  
@@ -563,7 +563,7 @@ FROM ClickStream
  [Exemplos comuns de consulta de metadados (SQL Server PDW)](http://msdn.microsoft.com/en-us/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
- [Criar tabela externa como SELECT &#40; Transact-SQL &#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
+ [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
  [Criar tabela como SELECT &#40; Depósito de dados SQL do Azure &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
   
   

@@ -34,15 +34,15 @@ helpviewer_keywords:
 - http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer message
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3772f81727b60f5c7932671fa10f5ca6454047c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6f85695e3d8263936d053979074a92b52fba7259
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
  TIMEOUT  
  Especifica, em segundos, o tempo de espera antes de colocar a mensagem na fila.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um timer de conversa fornece uma maneira de um aplicativo receber uma mensagem em uma conversa depois de um período específico. Chamar BEGIN CONVERSATION TIMER em uma conversa antes de o timer expirar define o tempo limite para o novo valor. Diferentemente do tempo de vida da conversa, cada lado da conversa tem um timer de conversa independente. O **DialogTimer** mensagem chega na fila local sem afetar o lado remoto da conversa. Portanto, um aplicativo pode usar uma mensagem de timer para qualquer propósito.  
   
  Por exemplo, você pode usar o timer de conversa para evitar que um aplicativo espere demais por uma resposta atrasada. Se você espera que o aplicativo conclua um diálogo em 30 segundos, poderá definir o timer de conversa para esse diálogo como 60 segundos (30 segundos mais um período de tolerância de 30 segundos). Se o diálogo ainda estiver aberto depois de 60 segundos, o aplicativo receberá uma mensagem de tempo limite na fila para esse diálogo.  
@@ -91,8 +91,8 @@ TIMEOUT = 120 ;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [Instrução END CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [RECEBER &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)  
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)  
   
   

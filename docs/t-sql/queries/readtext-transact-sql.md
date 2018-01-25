@@ -23,18 +23,18 @@ ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 17d233bf75593d8b27a458120dbcb2035bc7d2ec
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: c1659dfcc9ca8908ce756eb41b32fd30649decfa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Lê **texto**, **ntext**, ou **imagem** valores de um **texto**, **ntext**, ou **imagem ** coluna, começando em um deslocamento especificado e o número especificado de bytes de leitura.  
+  Lê **texto**, **ntext**, ou **imagem** valores de um **texto**, **ntext**, ou **imagem**  coluna, começando em um deslocamento especificado e o número especificado de bytes de leitura.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Use o [subcadeia de caracteres](../../t-sql/functions/substring-transact-sql.md) function em vez disso.  
@@ -65,11 +65,11 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
  Faz com que o valor de texto seja bloqueado para leituras até o final da transação. Outros usuários podem ler o valor, mas não podem modificá-lo.  
   
 ## <a name="remarks"></a>Remarks  
- Use o [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md) função para obter um válido *text_ptr* valor. TEXTPTR retorna um ponteiro para o **texto**, **ntext**, ou **imagem** coluna da linha especificada ou para o **texto**, **ntext **, ou **imagem** coluna na última linha retornada pela consulta se mais de uma linha é retornada. Como TEXTPTR retorna uma cadeia binária de 16 bytes, recomenda-se declarar uma variável local para conter o ponteiro de texto e usá-la com READTEXT. Para obter mais informações sobre como declarar uma variável local, consulte [DECLARE @local_variable & #40; Transact-SQL & #41; ](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
+ Use o [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md) função para obter um válido *text_ptr* valor. TEXTPTR retorna um ponteiro para o **texto**, **ntext**, ou **imagem** coluna da linha especificada ou para o **texto**, **ntext** , ou **imagem** coluna na última linha retornada pela consulta se mais de uma linha é retornada. Como TEXTPTR retorna uma cadeia binária de 16 bytes, recomenda-se declarar uma variável local para conter o ponteiro de texto e usá-la com READTEXT. Para obter mais informações sobre como declarar uma variável local, consulte [DECLARE @local_variable &#40; Transact-SQL &#41; ](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
   
- No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], podem existir ponteiros de texto em linha, mas podem não ser válidos. Para obter mais informações sobre o **texto em linha** opção, consulte [sp_tableoption & #40; Transact-SQL & #41; ](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Para obter mais informações sobre como invalidar ponteiros de texto, consulte [sp_invalidate_textptr & #40; Transact-SQL & #41; ](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+ No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], podem existir ponteiros de texto em linha, mas podem não ser válidos. Para obter mais informações sobre o **texto em linha** opção, consulte [sp_tableoption &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Para obter mais informações sobre como invalidar ponteiros de texto, consulte [sp_invalidate_textptr &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
- O valor de @@TEXTSIZE função substitui o tamanho especificado para READTEXT se ele for menor que o tamanho especificado para READTEXT. O @@TEXTSIZE função especifica o limite no número de bytes de dados a serem retornados, definido pela instrução SET TEXTSIZE. Para obter mais informações sobre como definir a configuração de sessão para TEXTSIZE, consulte [SET TEXTSIZE & #40; Transact-SQL & #41; ](../../t-sql/statements/set-textsize-transact-sql.md).  
+ O valor de @@TEXTSIZE função substitui o tamanho especificado para READTEXT se ele for menor que o tamanho especificado para READTEXT. O @@TEXTSIZE função especifica o limite no número de bytes de dados a serem retornados, definido pela instrução SET TEXTSIZE. Para obter mais informações sobre como definir a configuração de sessão para TEXTSIZE, consulte [SET TEXTSIZE &#40; Transact-SQL &#41; ](../../t-sql/statements/set-textsize-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
  As permissões de READTEXT usam como padrão os usuários que têm permissões SELECT na tabela especificada. As permissões são transferíveis quando são transferidas permissões SELECT.  

@@ -26,15 +26,15 @@ dev_langs: TSQL
 helpviewer_keywords: CREATE BROKER PRIORITY statement
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 256536ee8fc56891b0b957498c7c5bcf4881f235
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 524909a3f12040460950448e77c177f3b1aeef8d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -111,10 +111,10 @@ FOR CONVERSATION
   
  O padrão é ANY.  
   
- PRIORITY_LEVEL = { *PriorityValue* | **padrão** }  
+ PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
  Especifica a prioridade a ser atribuída a qualquer ponto de extremidade da conversa que use os contratos e os serviços especificados na prioridade da conversa. *PriorityValue* deve ser um inteiro literal de 1 (prioridade mais baixa) a 10 (prioridade mais alta). O padrão é 5.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O [!INCLUDE[ssSB](../../includes/sssb-md.md)] atribui níveis de prioridade a pontos de extremidade de conversa. Os níveis de prioridade controlam a prioridade das operações associadas ao ponto de extremidade. Cada conversa tem dois pontos de extremidade de conversa:  
   
 -   O ponto de extremidade de conversa de iniciador associa um lado da conversa ao serviço iniciador e à fila do iniciador. O ponto de extremidade de conversa do iniciador é criado quando a instrução BEGIN DIALOG é executada. As operações associadas ao ponto de extremidade de conversa do iniciador incluem:  
@@ -288,15 +288,15 @@ CREATE BROKER PRIORITY BronzePriority
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [ALTER BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [CRIAR contrato &#40; Transact-SQL &#41;](../../t-sql/statements/create-contract-transact-sql.md)   
+ [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [DROP BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [OBTER grupo de conversação &#40; Transact-SQL &#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
- [RECEBER &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
- [Enviar &#40; Transact-SQL &#41;](../../t-sql/statements/send-transact-sql.md)   
- [conversation_priorities &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
+ [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
+ [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
+ [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
+ [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md)   
+ [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   

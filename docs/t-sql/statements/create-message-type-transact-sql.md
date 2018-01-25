@@ -30,15 +30,15 @@ helpviewer_keywords:
 - CREATE MESSAGE TYPE statement
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 78606c8f9f058acec660a7fe20a392f93c8dee49
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ab3cf42da615c6ec303abb80b3a5d3f961edf888
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ CREATE MESSAGE TYPE message_type_name
  VALID_XML WITH SCHEMA COLLECTION *schema_collection_name*  
  Especifica que o corpo da mensagem deve conter XML que obedeça a um esquema na coleção de esquema especificado de *schema_collection_name* deve ser o nome de uma coleção de esquema XML existente.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O [!INCLUDE[ssSB](../../includes/sssb-md.md)] valida mensagens de entrada. Quando uma mensagem contém um corpo de mensagem que não obedece ao tipo de validação especificado, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] descarta a mensagem inválida e retorna uma mensagem de erro ao serviço que enviou a mensagem.  
   
  Os dois lados de uma conversa devem definir o mesmo nome para um tipo de mensagem. Para ajudar a solucionar problemas, os dois lados de uma conversa normalmente especificam a mesma validação para o tipo de mensagem, embora o [!INCLUDE[ssSB](../../includes/sssb-md.md)] não exija que os dois lados da conversa usem a mesma validação.  
@@ -165,8 +165,8 @@ CREATE MESSAGE TYPE
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [ALTERAR o tipo de mensagem &#40; Transact-SQL &#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
- [REMOVER o tipo de mensagem &#40; Transact-SQL &#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
+ [ALTER MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
+ [DROP MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

@@ -16,13 +16,13 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 caps.latest.revision: "59"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 42b3f397fa93b2134594e10476138d5d30e0015f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f6e639bf97ed132b6ace7128b4cbe9b6f3ce474e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>Criar tabela (SQL Azure Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -104,12 +104,12 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  *table_name*  
  O nome da nova tabela. Para criar uma tabela temporária local, preceda o nome da tabela com #.  Para obter explicações e orientação sobre tabelas temporárias, consulte [tabelas temporárias no Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-temporary/). 
  
- *nome da coluna*  
+ *column_name*  
  O nome de uma coluna de tabela.
    
 ### <a name="ColumnOptions"></a>Opções de coluna
 
- `COLLATE`*Windows_collation_name*  
+ `COLLATE` *Windows_collation_name*  
  Especifica o agrupamento da expressão. O agrupamento deve ser um dos agrupamentos do Windows com suporte pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de agrupamentos do Windows com suporte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [nome de agrupamento do Windows (Transact-SQL)](http://msdn.microsoft.com/library/ms188046\(v=sql11\)/).  
   
  `NULL` | `NOT NULL`  
@@ -133,7 +133,7 @@ Armazena a tabela como um índice columnstore clusterizado. O índice columnstor
  `HEAP`   
   Armazena a tabela como heap. Esse é o padrão para [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
- `CLUSTERED INDEX`( *index_column_name* [,... *n* ] )  
+ `CLUSTERED INDEX` ( *index_column_name* [ ,...*n* ] )  
  Armazena a tabela como um índice clusterizado com uma ou mais colunas de chave. Armazena os dados por linha. Use *index_column_name* para especificar o nome de uma ou mais colunas de chave no índice.  Para obter mais informações, consulte as tabelas Rowstore nos comentários gerais.
  
  `LOCATION = USER_DB`   
@@ -142,7 +142,7 @@ Armazena a tabela como um índice columnstore clusterizado. O índice columnstor
 ### <a name="TableDistributionOptions"></a>Opções de distribuição da tabela
 Para entender como escolher o melhor método de distribuição e use tabelas distribuídas, consulte [distribuir tabelas no Data Warehouse do Azure SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/).
 
-`DISTRIBUTION = HASH`( *distribution_column_name* )   
+`DISTRIBUTION = HASH` ( *distribution_column_name* )   
 Atribui cada linha a uma distribuição pelo hash o valor armazenado na *distribution_column_name*. O algoritmo é determinística, que significa que ela confunde sempre o mesmo valor para a mesma distribuição.  A coluna de distribuição deve ser definida como NOT NULL, desde que todas as linhas que têm será NULL a ser atribuído para a mesma distribuição.
 
 `DISTRIBUTION = ROUND_ROBIN`   
@@ -447,7 +447,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a>G. Criar uma tabela replicada  
+### <a name="Replicated"></a> G. Criar uma tabela replicada  
  O exemplo a seguir cria uma tabela replicada semelhante dos exemplos anteriores. Tabelas replicadas são copiadas por completo para cada nó de computação. Com essa cópia em cada nó de computação, movimentação de dados é reduzida para consultas. Este exemplo é criado com um índice CLUSTERIZADO, que fornece a melhor compactação de dados de um heap e não pode conter linhas suficientes para obter uma boa compactação do índice COLUMNSTORE CLUSTERIZADO.  
   
 ```  
@@ -467,7 +467,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>Exemplos de partições de tabela
 
-###  <a name="PartitionedTable"></a>H. Criar uma tabela particionada  
+###  <a name="PartitionedTable"></a> H. Criar uma tabela particionada  
  O exemplo a seguir cria a mesma tabela, conforme mostrado no exemplo A, com a adição de particionamento RANGE LEFT no `id` coluna. Especifica quatro valores de limite de partição, o que resulta em cinco partições.  
   
 ```  
@@ -501,7 +501,7 @@ WITH
 -   4:30 da partição < = n < 40   
 -   Partição 5:40 < = n  
   
-### <a name="OnePartition"></a>I. Criar uma tabela particionada com uma partição  
+### <a name="OnePartition"></a> I. Criar uma tabela particionada com uma partição  
  O exemplo a seguir cria uma tabela particionada com uma partição. Ele não especifica quaisquer valores de limite, o que resulta em uma partição.  
   
 ```  
@@ -517,7 +517,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a>J. Criar uma tabela com o particionamento de data  
+### <a name="DatePartition"></a> J. Criar uma tabela com o particionamento de data  
  O exemplo a seguir cria uma nova tabela nomeada `myTable`, com o particionamento em um `date` coluna. Usando datas e RANGE RIGHT para os valores de limite, ele coloca um mês de dados em cada partição.  
   
 ```  

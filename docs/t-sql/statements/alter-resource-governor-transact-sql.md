@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RECONFIGURE, ALTER RESOURCE GOVERNOR
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1ac429e7876212a7f6f0e4da3c38498b0e1f550
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7650a9eec60108a5dbd228b21a27573cc72ca4fc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,18 +92,18 @@ ALTER RESOURCE GOVERNOR
 > [!IMPORTANT]  
 >  ALTER RESOURCE GOVERNOR RECONFIGURE deve ser emitida para que qualquer alteração de configuração entre em vigor.  
   
- CLASSIFIER_FUNCTION = { *schema_name***.** *function_name* | NULL}  
+ CLASSIFIER_FUNCTION = { *schema_name***.*** nome_da_função* | NULL}  
  Registra a função de classificação especificada por *function_name*. Essa função classifica cada sessão nova e atribui as solicitações e consultas de sessão a um grupo de carga de trabalho. Quando NULL é usado, novas sessões são automaticamente atribuídas ao grupo de carga de trabalho padrão.  
   
  RESET STATISTICS  
  Redefine as estatísticas em todos os grupos de carga de trabalho e pools de recursos. Para obter mais informações, consulte [sys.DM resource_governor_workload_groups &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) e [sys.DM resource_governor_resource_pools &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
   
- MAX_OUTSTANDING_IO_PER_VOLUME = *valor*  
+ MAX_OUTSTANDING_IO_PER_VOLUME = *value*  
  **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Define o máximo de operações de E/S na fila por volume de disco. Essas operações de E/S podem ser leituras ou gravações de qualquer tamanho.  O valor máximo para MAX_OUTSTANDING_IO_PER_VOLUME é 100. Não é uma porcentagem. Essa configuração é criada para ajustar a administração do recurso de E/S às características de E/S de um volume de disco. É recomendável fazer experiências com valores diferentes e considere o uso de uma ferramenta de calibração como IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223), ou SQLIO (preterido) para identificar o valor máximo para o subsistema de armazenamento. Essa configuração fornece uma verificação de segurança no nível do sistema que permite ao SQL Server atender ao mínimo de IOPS para pools de recursos mesmo se outros pools tiverem o MAX_IOPS_PER_VOLUME definido como ilimitado. Para obter mais informações sobre MAX_IOPS_PER_VOLUME, consulte [criar POOL de recursos](../../t-sql/statements/create-resource-pool-transact-sql.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  ALTER RESOURCE GOVERNOR DISABLE, ALTER RESOURCE GOVERNOR RECONFIGURE, e ALTER RESOURCE GOVERNOR RESET STATISTICS não podem ser usados em uma transação de usuário.  
   
  O parâmetro RECONFIGURE é parte da sintaxe do administrador de recursos e não deve ser confundido com [RECONFIGURAR](../../t-sql/language-elements/reconfigure-transact-sql.md), que é uma instrução DDL separada.  
@@ -197,12 +197,12 @@ WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);
  [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
  [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)   
  [DROP EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)   
- [ALTERAR o POOL de recursos EXTERNOS &#40; Transact-SQL &#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
+ [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)   
- [sys.DM resource_governor_workload_groups &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [sys.DM resource_governor_resource_pools &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)  
+ [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
+ [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)  
   
   

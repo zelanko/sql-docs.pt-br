@@ -21,13 +21,13 @@ ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
 caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1acb605c95246bde4f9803d92aa0cce38163a80d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 620eed7dda3887d04cf0d88a01ee5b991025638b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="delete-xml-dml"></a>excluir (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ delete Expression
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Expression*  
+ *Expressão*  
  É uma expressão XQuery que identifica os nós a serem excluídos. Todos os nós selecionados pela expressão, e também todos os nós ou valores que estão contidos nos nós selecionados, são excluídos. Conforme descrito em [inserir (XML DML)](../../t-sql/xml/insert-xml-dml.md), isso deve ser uma referência a um nó existente no documento. Não pode ser um nó construído. A expressão não pode ser o nó de raiz (/). Se a expressão retornar uma sequência vazia, nenhuma exclusão ocorrerá e nenhum erro será retornado.  
   
 ## <a name="examples"></a>Exemplos  
@@ -193,7 +193,7 @@ go
 ## <a name="see-also"></a>Consulte também  
  [Comparar XML digitado com XML não digitado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Criar instâncias de dados XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipos de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [Métodos de tipo de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Linguagem de modificação de dados XML &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

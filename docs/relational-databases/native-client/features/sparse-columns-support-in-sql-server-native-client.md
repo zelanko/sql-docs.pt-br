@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sparse columns, OLE DB
 ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bd0b2effecf483376270594e63de91ff168dcc6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 541c38e37a581c929da8ca3185b39fbaef065b92
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>Suporte a colunas esparsas no SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.lasthandoff: 01/08/2018
   
  No entanto, se **queryout** é usado para exportar e fazer referência a colunas esparsas que são membros da coluna esparsa definido por nome, você não pode executar uma importação direta para uma tabela de estrutura semelhante. Isso ocorre porque o BCP usa metadados consistentes com um **selecione \***  operação para a importação e não pode corresponder **column_set** colunas de membro com esses metadados. Para importar **column_set** colunas de membro individualmente, você deve definir uma exibição em uma tabela que faz referência a desejado **column_set** colunas e você deve executar a operação de importação usando o modo de exibição.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Programação do SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

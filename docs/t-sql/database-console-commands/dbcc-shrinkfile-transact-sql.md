@@ -31,15 +31,15 @@ helpviewer_keywords:
 - DBCC SHRINKFILE statement
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 caps.latest.revision: "87"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f1b96b92738d3f44c21f4e6056798da74e26872a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 94ad5652920129790045e33c93e2a8fbb83816bd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ A tabela a seguir descreve as colunas do conjunto de resultados.
 |**UsedPages**|Número de páginas de 8 KB usado atualmente pelo arquivo.|  
 |**EstimatedPages**|Número de páginas de 8 KB a que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcula que o arquivo poderia ser reduzido.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 DBCC SHRINKFILE aplica-se aos arquivos do banco de dados atual. Para obter mais informações sobre como alterar o banco de dados atual, consulte [USE &#40; Transact-SQL &#41; ](../../t-sql/language-elements/use-transact-sql.md).
   
 Operações DBCC SHRINKFILE podem ser interrompidas a qualquer momento do processo e todo o trabalho concluído será mantido.
@@ -236,7 +236,7 @@ GO
 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)  
-[FILE_ID &#40; Transact-SQL &#41;](../../t-sql/functions/file-id-transact-sql.md)  
+[FILE_ID &#40;Transact-SQL&#41;](../../t-sql/functions/file-id-transact-sql.md)  
 [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
 [Reduzir um arquivo](../../relational-databases/databases/shrink-a-file.md)
   

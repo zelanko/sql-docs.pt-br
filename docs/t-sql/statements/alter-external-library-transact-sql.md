@@ -1,5 +1,5 @@
 ---
-title: ALTER biblioteca externa (Transact-SQL) | Microsoft Docs
+title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-non-specified
@@ -18,14 +18,14 @@ dev_langs: TSQL
 helpviewer_keywords: ALTER EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: e679664f02ffcb08d811a66229a21f1bdaf08077
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: craigg
+ms.openlocfilehash: d0fe9adc1907d773bdfddda38b5900774ec97deb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="alter-external-library-transact-sql"></a>ALTER biblioteca externa (Transact-SQL)  
+# <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
@@ -57,7 +57,7 @@ WITH ( LANGUAGE = 'R' )
 
 ### <a name="arguments"></a>Argumentos
 
-**nome_da_biblioteca**
+**library_name**
 
 Especifica o nome de uma biblioteca de pacote existente. Bibliotecas de escopo serão o usuário. Ou seja, nomes de biblioteca são considerados exclusivos dentro do contexto de um usuário específico ou um proprietário.
 
@@ -137,7 +137,7 @@ ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 
 
 ## <a name="see-also"></a>Consulte também  
 
-[Criar biblioteca externa (Transact-SQL)](create-external-library-transact-sql.md)
-[DROP biblioteca externa (Transact-SQL)](drop-external-library-transact-sql.md)  
+[CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)
+[DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  

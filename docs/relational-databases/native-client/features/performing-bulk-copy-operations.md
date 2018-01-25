@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQLNCLI, bulk copy operations
 ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c6070899aab81b6e3cef56a7c6320934d57a21d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ea17b70786b4b059417c8cf0f8b514fc6a6208e4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="performing-bulk-copy-operations"></a>Executando operações de cópia em massa
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ ms.lasthandoff: 01/08/2018
   
 -   **ISupportErrorInfo**  
   
- As propriedades específicas de provedor SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS e SSPROP_FASTLOADKEEPIDENTITY controlam o comportamento de um conjunto de linhas de cópia em massa do provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. As propriedades são especificadas no *rgProperties* membro de um *rgPropertySets***IOpenRowset**de parâmetro.  
+ As propriedades específicas de provedor SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS e SSPROP_FASTLOADKEEPIDENTITY controlam o comportamento de um conjunto de linhas de cópia em massa do provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. As propriedades são especificadas no *rgProperties* membro de um * rgPropertySets ***IOpenRowset**de parâmetro.  
   
 |ID da propriedade|Description|  
 |-----------------|-----------------|  
@@ -118,10 +118,10 @@ ms.lasthandoff: 01/08/2018
 ## <a name="sql-server-native-client-odbc-driver"></a>Driver ODBC do SQL Server Native Client  
  O driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client mantém o mesmo suporte para operações de cópia em massa que o das versões anteriores do driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter informações sobre operações de cópia em massa usando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o driver ODBC Native Client, consulte [executando operações de cópia em massa &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Recursos do SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Propriedades da fonte de dados &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)   
- [Importação e exportação em massa de dados &#40;SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
+ [Importação e exportação de dados &#40;em massa SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [IRowsetFastLoad &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)   
  [IBCPSession &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Otimizando o desempenho da importação em massa](http://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  

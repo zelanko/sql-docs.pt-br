@@ -1,5 +1,5 @@
 ---
-title: EXPLIQUE (Transact-SQL) | Microsoft Docs
+title: EXPLAIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 caps.latest.revision: "13"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3aa20ea08fe34eab316a41d46ea955a78e4be512
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 515c21cbf7874c0268eeedad0b67e0ce7cf3726d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="explain-transact-sql"></a>EXPLIQUE (Transact-SQL)
+# <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Retorna o plano de consulta para um [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] instrução sem executar a instrução. Use **EXPLICAR** para visualizar quais operações exigirá a movimentação de dados e exibir os custos estimados das operações de consulta.  
@@ -68,11 +68,11 @@ EXPLAIN SQL_statement
   
 |Marca XML|Resumo, atributos e conteúdo|  
 |-------------|--------------------------------------|  
-|\<dsql_query >|Elemento de nível superior/documento.|
-|\<SQL >|Duplica a *SQL_statement*.|  
-|\<params >|Essa marca não é usada no momento.|  
-|\<dsql_operations >|Resume e contém as etapas de consulta e inclui informações de custo para a consulta. Também contém todos os `<dsql_operation>` blocos. Essa marca contém informações de contagem para a consulta inteira:<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* é o tempo total estimado para a consulta seja executada em ms.<br /><br /> *total_number_operations* é o número total de operações para a consulta. Uma operação que serão colocados em paralelo e executada em vários nós é contada como uma única operação.|  
-|\<dsql_operation >|Descreve uma única operação no plano de consulta. O \<dsql_operation > marca contém o tipo de operação como um atributo:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* é um dos valores encontrados na [consultando dados (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c).<br /><br /> O conteúdo a `\<dsql_operation>` bloco é dependente do tipo de operação.<br /><br /> Consulte a tabela a seguir.|  
+|\<dsql_query>|Elemento de nível superior/documento.|
+|\<sql>|Duplica a *SQL_statement*.|  
+|\<params>|Essa marca não é usada no momento.|  
+|\<dsql_operations>|Resume e contém as etapas de consulta e inclui informações de custo para a consulta. Também contém todos os `<dsql_operation>` blocos. Essa marca contém informações de contagem para a consulta inteira:<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* é o tempo total estimado para a consulta seja executada em ms.<br /><br /> *total_number_operations* é o número total de operações para a consulta. Uma operação que serão colocados em paralelo e executada em vários nós é contada como uma única operação.|  
+|\<dsql_operation>|Descreve uma única operação no plano de consulta. O \<dsql_operation > marca contém o tipo de operação como um atributo:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* é um dos valores encontrados na [consultando dados (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c).<br /><br /> O conteúdo a `\<dsql_operation>` bloco é dependente do tipo de operação.<br /><br /> Consulte a tabela a seguir.|  
   
 |Tipo de operação|Conteúdo|Exemplo|  
 |--------------------|-------------|-------------|  

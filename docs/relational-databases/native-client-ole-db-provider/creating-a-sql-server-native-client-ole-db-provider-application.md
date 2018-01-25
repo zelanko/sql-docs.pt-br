@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLE DB, creating applications
 ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6adfd47a5e29407083643af44210cee88d7a9702
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 68fb2398633deb91e596e46170e87606345ca236
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>Criando um aplicativo provedor OLE DB do SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,9 +44,9 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Estabelecendo uma conexão com uma fonte de dados](../../relational-databases/native-client-ole-db-provider/establishing-a-connection-to-a-data-source.md)  
+-   [Estabelecer uma Conexão com uma fonte de dados](../../relational-databases/native-client-ole-db-provider/establishing-a-connection-to-a-data-source.md)  
   
--   [Executando um comando](../../relational-databases/native-client-ole-db-provider/executing-a-command.md)  
+-   [Executar um comando](../../relational-databases/native-client-ole-db-provider/executing-a-command.md)  
   
 -   [Processando resultados](../../relational-databases/native-client-ole-db-provider/processing-results.md)  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Usando a cláusula OUTPUT com OLE DB no SQL Server Native Client](../../relational-databases/native-client-ole-db-provider/using-the-output-clause-with-ole-db-in-sql-server-native-client.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

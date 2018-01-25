@@ -14,13 +14,13 @@ ms.assetid: fb4446ba-e9ce-4b93-9854-5e8a58507da0
 caps.latest.revision: "4"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 19ecd44707cd6a94b9a521184b0c588806a63869
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 35194b08e43c98985e0ae0d03f1e470fe8370383
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>Instalar o servidor de aprendizado de máquina (autônomo) ou Microsoft R Server (autônomo) na linha de comando
 
@@ -95,8 +95,8 @@ Após a conclusão da instalação, você pode examinar o arquivo de configuraç
 
 Por padrão, todos os resumos e logs de instalação do SQL Server e os recursos relacionados são criados nas seguintes pastas:
 
-+ 2017 do SQL Server:`C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
-+ SQL Server 2016:`C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
++ SQL Server 2017: `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
++ SQL Server 2016:  `C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
 
 Uma subpasta separada é criada para cada recurso que você instalou.
 

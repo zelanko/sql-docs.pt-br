@@ -15,13 +15,13 @@ ms.assetid: d8739f16-ac26-4f69-870c-51c77cf286d3
 caps.latest.revision: "8"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 7f906136e7e948c7b4cbe2da2f60cc4c488b71e9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4948cdd841c2b97e50623dac7b9d6ba9ef923220
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package"></a>Gerando um procedimento armazenado de R para o código R usando o pacote sqlrutils
 O pacote **sqlrutils** fornece um mecanismo para que os usuários de R coloquem seus scripts de R em um procedimento armazenado T-SQL, registrem esse procedimento armazenado em um banco de dados, e executem o procedimento armazenado em um ambiente de desenvolvimento de R. 
@@ -91,6 +91,6 @@ help(package="sqlrutils")
 
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 [Como criar um procedimento armazenado usando sqlrutils](../../advanced-analytics/r-services/how-to-create-a-stored-procedure-using-sqlrutils.md)
 

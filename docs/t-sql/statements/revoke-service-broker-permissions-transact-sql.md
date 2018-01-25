@@ -23,15 +23,15 @@ helpviewer_keywords:
 - REVOKE statement, Service Broker
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 077fe296f48de1658a56d0c3e7403904652603bc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 897da4d05bcd9a2cfbb88ce5383ba7a71867edcc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>Permissões REVOKE do Service Broker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,22 +64,22 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!IMPORTANT]  
 >  Se a entidade de segurança tiver a permissão especificada sem a opção GRANT, a própria permissão será revogada.  
   
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser revogada em um protegível do [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Para obter uma lista dessas permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- CONTRATO **::***contract_name*  
+ CONTRATO **:: * contract_name*  
  Especifica o contrato no qual a permissão está sendo revogada. O qualificador de escopo **::** é necessária.  
   
- TIPO de mensagem **::***message_type_name*  
+ TIPO de mensagem **:: * message_type_name*  
  Especifica o tipo de mensagem no qual a permissão está sendo revogada. O qualificador de escopo **::** é necessária.  
   
- A associação de serviço remoto **::***remote_binding_name*  
+ A associação de serviço remoto **:: * remote_binding_name*  
  Especifica a associação de serviço remoto na qual a permissão está sendo revogada. O qualificador de escopo **::** é necessária.  
   
- ROTA **::***route_name*  
+ ROTA **:: * route_name*  
  Especifica o roteamento no qual a permissão está sendo revogada. O qualificador de escopo **::** é necessária.  
   
- SERVIÇO **::***message_type_name*  
+ SERVIÇO **:: * message_type_name*  
  Especifica o serviço no qual a permissão está sendo revogada. O qualificador de escopo **::** é necessária.  
   
  *database_principal*  
@@ -126,7 +126,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   Usuário do banco de dados não mapeado para um principal de servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="service-broker-contracts"></a>Contratos do Agente de Serviços  
  Um [!INCLUDE[ssSB](../../includes/sssb-md.md)] contrato é um banco de dados protegível em nível que contém o banco de dados que é seu pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em um [!INCLUDE[ssSB](../../includes/sssb-md.md)] contrato são listados na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  

@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: SQL Server Native Client, updating applications
 ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea8bd24944008b1301f02024f9aa77910a7dbe37
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7a0765a262b2775f81b35969a638ff6f3583357e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Atualizando um aplicativo no SQL Server 2005 Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/08/2018
 |Comportamento alterado no SQL Server Native Client desde o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|Description|  
 |------------------------------------------------------------------------------------|-----------------|  
 |O OLE DB preenche apenas até a escala definida.|Para conversões onde os dados convertidos são enviados ao servidor, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (a partir do [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) preenche zeros à direita nos dados apenas até o comprimento máximo de **datetime** valores. O SQL Server Native Client 9.0 e preenchia até nove dígitos.|  
-|Valide DBTYPE_DBTIMESTAMP para ICommandWithParameter::SetParameterInfo.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client (a partir do [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) implementa o requisito OLE DB de *bScale* em ICommandWithParameter::SetParameterInfo a ser definido com precisão os segundos fracionários para DBTYPE_DBTIMESTAMP.|  
+|Validate DBTYPE_DBTIMESTAMP for ICommandWithParameter::SetParameterInfo.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client (a partir do [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) implementa o requisito OLE DB de *bScale* em ICommandWithParameter::SetParameterInfo a ser definido com precisão os segundos fracionários para DBTYPE_DBTIMESTAMP.|  
 |O **sp_columns** procedimento armazenado agora retorna **"Não"** em vez de **"Não"** para a coluna IS_NULLABLE.|A partir do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]), **sp_columns** procedimento armazenado agora retorna **"Não"** em vez de **"Não"** para uma coluna IS_NULLABLE .|  
 |SQLBindCol, SQLBindParameter e SQLSetDescRec agora executam a verificação de consistência.|Antes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0, a configuração de SQL_DESC_DATA_PTR não causava uma verificação de consistência para qualquer tipo de descritor no SQLBindCol, SQLBindParameter ou SQLSetDescRec.|  
 |SQLCopyDesc agora faz a verificação de consistência do descritor.|Antes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0, SQLCopyDesc não fez uma verificação de consistência quando o campo SQL_DESC_DATA_PTR estava definido em um registro específico.|  
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/08/2018
 |Validação mais rígida dos parâmetros SQL_C_TYPE _TIMESTAMP e DBTYPE_DBTIMESTAMP.|Antes de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client, **datetime** valores foram arredondados para se ajustar a escala de **datetime** e **smalldatetime** colunas por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client (bem como as versões posteriores) aplica as regras de validação mais rígidas que são definidas na especificação ODBC principal para segundos fracionários. Se não for possível converter um valor de parâmetro no tipo SQL usando a escala especificada ou implícita pela associação de cliente sem truncamento de dígitos à direita, será retornado um erro.|  
 |O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode retornar resultados diferentes quando um gatilho é executado.|Alterações introduzidas no [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] pode fazer com que um aplicativo retorne diferentes resultados de uma instrução que causou um gatilho a ser executada quando **NOCOUNT OFF** estava em vigor. Nessa situação, o aplicativo pode gerar um erro. Para resolver esse erro, defina **NOCOUNT ON** no gatilho ou chame SQLMoreResults para ir para o próximo resultado.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Programação do SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

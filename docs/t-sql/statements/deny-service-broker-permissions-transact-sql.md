@@ -25,15 +25,15 @@ helpviewer_keywords:
 - services [Service Broker], permissions
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c63c3d62d0104642953545da75b0f7fa1b988eb0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 100c447d3a258ecf8a590173a7c0ef161f0fad3e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>Permissões DENY do Service Broker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,22 +59,22 @@ DENY permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permissão*  
+ *permission*  
  Especifica uma permissão que pode ser negada em um protegível do [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- CONTRATO **::***contract_name*  
+ CONTRATO **:: * contract_name*  
  Especifica o contrato no qual a permissão está sendo negada. O qualificador de escopo **::** é necessária.  
   
- TIPO de mensagem **::***message_type_name*  
+ TIPO de mensagem **:: * message_type_name*  
  Especifica o tipo de mensagem no qual a permissão está sendo negada. O qualificador de escopo **::** é necessária.  
   
- A associação de serviço remoto **::***remote_binding_name*  
+ A associação de serviço remoto **:: * remote_binding_name*  
  Especifica a associação de serviço remoto na qual a permissão está sendo negada. O qualificador de escopo **::** é necessária.  
   
- ROTA **::***route_name*  
+ ROTA **:: * route_name*  
  Especifica o roteamento no qual a permissão está sendo negada. O qualificador de escopo **::** é necessária.  
   
- SERVIÇO **::***message_type_name*  
+ SERVIÇO **:: * message_type_name*  
  Especifica o serviço no qual a permissão está sendo negada. O qualificador de escopo **::** é necessária.  
   
  *database_principal*  
@@ -104,7 +104,7 @@ CASCADE
 -   Usuário de banco de dados mapeado para uma chave assimétrica  
 -   Usuário do banco de dados não mapeado para um principal de servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="service-broker-contracts"></a>Contratos do Agente de Serviços  
  Um contrato do [!INCLUDE[ssSB](../../includes/sssb-md.md)] é um protegível em nível de banco de dados contido no banco de dados pai da hierarquia de permissões. Mais permissões específicas e limitadas que podem ser negadas em um [!INCLUDE[ssSB](../../includes/sssb-md.md)] contrato são listados na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  

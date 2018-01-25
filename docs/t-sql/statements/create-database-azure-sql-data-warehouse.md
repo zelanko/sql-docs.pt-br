@@ -14,12 +14,12 @@ ms.topic: language-reference
 dev_langs: TSQL
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 7406a538eb4c0f236f2e0d444e96fd2c4fa5d585
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: 51db5c7cbaa2932cfcb819538d743fe1368f6442
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-database-azure-sql-data-warehouse"></a>Criar banco de dados (SQL Azure Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]

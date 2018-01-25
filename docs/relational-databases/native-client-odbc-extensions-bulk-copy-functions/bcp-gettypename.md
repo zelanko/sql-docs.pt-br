@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f452b3c5e12b76ba2d1327b59f1cfa17f16bb46
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ccb5d8652421aa0d52fd941e99cbcd01a0cfb6b2
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,13 +46,13 @@ RETCODE bcp_gettypename (
  *token*  
  Um valor que indica um token do tipo BCP.  
   
- *campo*  
+ *field*  
  Indica se o token solicitado é do tipo max.  
   
 ## <a name="returns"></a>Retorna  
  Uma cadeia de caracteres que contém o nome do tipo SQL que corresponde ao tipo BCP. Se um for especificado um tipo BCP inválido, uma cadeia de caracteres vazia será retornada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os tokens do tipo BCP são definidos arquivo do cabeçalho sqlncli.h e na biblioteca sqlncli11.lib.  
   
  A tabela a seguir especifica os possíveis tipos BCP, se eles são ou não tipos max e a saída esperada.  
@@ -63,37 +63,37 @@ RETCODE bcp_gettypename (
 |**SQLNUMERIC**|Qualquer|**numeric**|  
 |**SQLINT1**|Qualquer|**tinyint**|  
 |**SQLINT2**|Qualquer|**smallint**|  
-|**SQLINT4**|Qualquer|**int**|  
+|**SQLINT4**|Qualquer|**Int**|  
 |**SQLMONEY**|Qualquer|**money**|  
 |**SQLFLT8**|Qualquer|**float**|  
 |**SQLDATETIME**|Qualquer|**datetime**|  
-|**SQLBITN**|Qualquer|**bit nulo**|  
+|**SQLBITN**|Qualquer|**bit-null**|  
 |**SQLBIT**|Qualquer|**bit**|  
-|**SQLBIGCHAR**|Não|**char**|  
-|**SQLCHARACTER**|Não|**char**|  
-|**SQLBIGVARCHAR**|Não|**varchar**|  
-|**SQLVARCHAR**|Não|**varchar**|  
-|**SQLTEXT**|Qualquer|**texto**|  
-|**SQLBIGBINARY**|Não|**binary**|  
-|**SQLBINARY**|Não|**Binary**|  
-|**SQLBIGVARBINARY**|Não|**Varbinary**|  
-|**SQLVARBINARY**|Não|**Varbinary**|  
+|**SQLBIGCHAR**|não|**char**|  
+|**SQLCHARACTER**|não|**char**|  
+|**SQLBIGVARCHAR**|não|**varchar**|  
+|**SQLVARCHAR**|não|**varchar**|  
+|**SQLTEXT**|Qualquer|**text**|  
+|**SQLBIGBINARY**|não|**binary**|  
+|**SQLBINARY**|não|**Binary**|  
+|**SQLBIGVARBINARY**|não|**Varbinary**|  
+|**SQLVARBINARY**|não|**Varbinary**|  
 |**SQLIMAGE**|Qualquer|**Imagem**|  
-|**SQLINTN**|Qualquer|**int null**|  
-|**SQLDATETIMN**|Qualquer|**DateTime null**|  
-|**SQLMONEYN**|Qualquer|**Money null**|  
-|**SQLFLTN**|Qualquer|**float null**|  
+|**SQLINTN**|Qualquer|**int-null**|  
+|**SQLDATETIMN**|Qualquer|**datetime-null**|  
+|**SQLMONEYN**|Qualquer|**money-null**|  
+|**SQLFLTN**|Qualquer|**float-null**|  
 |**SQLAOPSUM**|Qualquer|**Sum**|  
 |**SQLAOPAVG**|Qualquer|**Avg**|  
-|**SQLAOPCNT**|Qualquer|**Contagem**|  
+|**SQLAOPCNT**|Qualquer|**Count**|  
 |**SQLAOPMIN**|Qualquer|**Min**|  
 |**SQLAOPMAX**|Qualquer|**Max**|  
 |**SQLDATETIM4**|Qualquer|**smalldatetime**|  
 |**SQLMONEY4**|Qualquer|**Smallmoney**|  
 |**SQLFLT4**|Qualquer|**Real**|  
 |**SQLUNIQUEID**|Qualquer|**uniqueidentifier**|  
-|**SQLNCHAR**|Não|**Nchar**|  
-|**SQLNVARCHAR**|Não|**Nvarchar**|  
+|**SQLNCHAR**|não|**Nchar**|  
+|**SQLNVARCHAR**|não|**Nvarchar**|  
 |**SQLNTEXT**|Qualquer|**Ntext**|  
 |**SQLVARIANT**|Qualquer|**sql_variant**|  
 |**SQLINT8**|Qualquer|**Bigint**|  

@@ -25,15 +25,15 @@ helpviewer_keywords:
 - ALTER ASSEMBLY statement
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 caps.latest.revision: "76"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b1a0a6da27bc534e22da2995fa592d6b430d418
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8b8918d653d6d9ff5f26588ad1626bfc62e3679d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,10 +73,10 @@ ALTER ASSEMBLY assembly_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *nome_do_assembly*  
+ *assembly_name*  
  É o nome do assembly que você deseja modificar. *nome_do_assembly* já deve existir no banco de dados.  
   
- DE \<client_assembly_specifier > | \<assembly_bits >  
+ FROM \<client_assembly_specifier> | \<assembly_bits>  
  Atualiza um assembly à cópia mais recente dos módulos do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que contêm sua implementação. Esta opção pode ser usada somente se não houver nenhum arquivo associado ao assembly especificado.  
   
  \<client_assembly_specifier > especifica o local onde o assembly que está sendo atualizado fica situado ou rede. O local da rede inclui o nome do computador, o nome do compartilhamento e um caminho dentro desse compartilhamento. *manifest_file_name* Especifica o nome do arquivo que contém o manifesto do assembly.  
@@ -115,7 +115,7 @@ ALTER ASSEMBLY assembly_name
   
  Para obter mais informações, consulte [implementando Assemblies](../../relational-databases/clr-integration/assemblies-implementing.md).  
   
- [DROP FILE { *file_name*[ **,***... n*] | ALL}]  
+ [DROP FILE { *file_name*[**, *... n*] | ALL}]  
  Remove do banco de dados o nome de arquivo associado ao assembly ou todos os arquivos associados ao assembly. Se for usado com ADD FILE a seguir, DROP FILE será executado em primeiro lugar. Isto permite que você substitua um arquivo com o mesmo nome de arquivo.  
   
 > [!NOTE]  
@@ -127,7 +127,7 @@ ALTER ASSEMBLY assembly_name
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  ALTER ASSEMBLY não interrompe sessões que estejam atualmente em execução com código no assembly que está sendo modificado. As sessões atuais concluem a execução usando os bits inalterados do assembly.  
   
  Se a cláusula FROM for especificada, ALTER ASSEMBLY atualizará o assembly com relação às cópias mais recentes dos módulos fornecidos. Como pode haver funções CLR, procedimentos armazenados, disparadores, tipos de dados e funções de agregação definidas pelo usuário na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que já estejam definidos em relação ao assembly, a instrução ALTER ASSEMBLY os reassocia à implementação mais recente do assembly. Para realizar essa nova associação, os métodos mapeados para funções CLR, procedimentos armazenados e disparadores ainda deverão existir no assembly modificado com as mesmas assinaturas. As classes que implementam tipos CLR definidos pelo usuário e funções de agregação definidas pelo usuário ainda deverão satisfazer os requisitos para serem uma agregação ou tipo definido pelo usuário.  
@@ -222,8 +222,8 @@ ALTER ASSEMBLY ComplexNumber WITH PERMISSION_SET = EXTERNAL_ACCESS;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
- [DROP ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
+ [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
+ [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

@@ -19,22 +19,22 @@ helpviewer_keywords:
 - database mirroring [SQL Server], Transact-SQL
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b08f208ce80eb1e8c79d2e47a06fdd9f1de8a986
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 54396925abb0e8eb2d6006ffdd4048551792d6db
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>Banco de dados ALTER DATABASE (Transact-SQL) de espelhamento 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] em vez disso.  
   
  Controla o espelhamento de um banco de dados. Valores especificados com as opções de espelhamento de banco de dados aplicam-se a ambas as cópias do banco de dados e à sessão de espelhamento de banco de dados como um todo. Apenas um \<database_mirroring_option > é permitido por instrução ALTER DATABASE.  
   
@@ -79,7 +79,7 @@ SET { <partner_option> | <witness_option> }
  *database_name*  
  É o nome do banco de dados a ser modificado.  
   
- PARCEIRO \<partner_option >  
+ PARTNER \<partner_option>  
  Controla as propriedades de banco de dados que definem os parceiros de failover de uma sessão de espelhamento de banco de dados e seu comportamento. Algumas opções de SET PARTNER podem ser definidas em qualquer parceiro; outros se restringem ao servidor principal ou ao servidor espelho. Para obter mais informações, consulte as opções individuais de PARTNER a seguir. Uma cláusula SET PARTNER afeta ambas as cópias do banco de dados, independentemente do parceiro no qual é especificada.  
   
  Para executar uma instrução SET PARTNER, o STATE dos pontos de extremidade de ambos os parceiros deve ser definido como STARTED. Note, também, que o ROLE do ponto de extremidade do espelhamento de banco de dados de cada instância de servidor parceiro deve ser definido como PARTNER ou ALL. Para obter informações sobre como especificar um ponto de extremidade, consulte [criar um banco de dados de espelhamento de ponto de extremidade para autenticação do Windows &#40; Transact-SQL &#41; ](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md). Para conhecer a função e o estado do ponto de extremidade do espelhamento de banco de dados de uma instância de servidor, naquela instância, use a seguinte instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
@@ -88,7 +88,7 @@ SET { <partner_option> | <witness_option> }
 SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints  
 ```  
   
- **\<partner_option >:: =**  
+ **\<partner_option> ::=**  
   
 > [!NOTE]  
 >  Apenas um \<partner_option > é permitida por cláusula SET PARTNER.  
@@ -96,7 +96,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **'** *partner_server* **'**  
  Especifica o endereço de rede de servidor de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atuar como um parceiro de failover em uma nova sessão de espelhamento de banco de dados. Cada sessão requer dois parceiros: um começa como servidor principal e o outro, como servidor espelho. Recomendamos que estes parceiros residam em computadores diferentes.  
   
- Esta opção é especificada uma vez por sessão em cada parceiro. Iniciar um sessão de espelhamento de banco de dados requer duas ALTER DATABASE *banco de dados* SET PARTNER **='***partner_server***'** instruções . A ordem delas é significativa. Primeiro, conecte-se ao servidor espelho e especifique a instância do servidor principal como *partner_server* (SET PARTNER **='***servidor_principal***'**). Segundo, conecte-se ao servidor principal e especifique a instância de servidor espelho como *partner_server* (SET PARTNER **='***servidor_espelho***'**); Isso inicia um sessão entre esses dois parceiros de espelhamento de banco de dados. Para obter mais informações, consulte [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
+ Esta opção é especificada uma vez por sessão em cada parceiro. Iniciar um sessão de espelhamento de banco de dados requer duas ALTER DATABASE *banco de dados* SET PARTNER **='***partner_server***'** instruções. A ordem delas é significativa. Primeiro, conecte-se ao servidor espelho e especifique a instância do servidor principal como *partner_server* (SET PARTNER **='***servidor_principal***'**). Segundo, conecte-se ao servidor principal e especifique a instância de servidor espelho como *partner_server* (SET PARTNER **='***servidor_espelho***'**); Isso inicia um banco de dados sessão entre esses dois parceiros de espelhamento. Para obter mais informações, consulte [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
  O valor de *partner_server* é um endereço de rede do servidor. Tem a seguinte sintaxe:  
   
@@ -194,7 +194,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]  
 >  As propriedades do banco de dados não podem ser definidas na testemunha.  
   
- **\<witness_option >:: =**  
+ **\<witness_option> ::=**  
   
 > [!NOTE]  
 >  Apenas um \<witness_option > é permitida por cláusula SET WITNESS.  
@@ -202,12 +202,12 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **'** *witness_server* **'**  
  Especifica uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para atuar como servidor testemunha de uma sessão de espelhamento de banco de dados. Você só pode especificar instruções SET WITNESS no servidor principal.  
   
- Em SET WITNESS **='***witness_server***'** instrução, a sintaxe de *witness_server* é o mesmo que a sintaxe de  *partner_server*.  
+ Em SET WITNESS **='***witness_server***'** instrução, a sintaxe de *witness_server* é o mesmo que a sintaxe de *partner_server*.  
   
  OFF  
  Remove a testemunha de uma sessão de espelhamento de banco de dados. Definir a testemunha como OFF desabilita o failover automático. Se o banco de dados estiver definido como FULL SAFETY e a testemunha como OFF, uma falha no servidor espelho fará com que o servidor principal torne o banco de dados indisponível.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -253,6 +253,6 @@ GO
 ## <a name="see-also"></a>Consulte também  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
- [database_mirroring_witnesses &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  
+ [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  
   
   

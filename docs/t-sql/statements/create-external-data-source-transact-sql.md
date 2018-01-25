@@ -1,5 +1,5 @@
 ---
-title: Criar fonte de dados externa (Transact-SQL) | Microsoft Docs
+title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
@@ -23,15 +23,15 @@ ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
 caps.latest.revision: "58"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 283971bbd1bfe04b26860f56601c315ac5244717
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8e5f0a03ef6efa09218cc6740df4439a25eb7265
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-external-data-source-transact-sql"></a>Criar fonte de dados externa (Transact-SQL)
+# <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Cria uma fonte de dados externa para o PolyBase, consultas de banco de dados Elástico ou armazenamento de BLOBs do Azure. Dependendo do cenário, a sintaxe irá diferir significativamente. Uma fonte de dados criada para PolyBase não pode ser usada para consultas de banco de dados Elástico.  Da mesma forma, uma fonte de dados criada para consultas de banco de dados Elástico não pode ser usada para o PolyBase, etc. 
@@ -135,10 +135,10 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 ## <a name="arguments"></a>Argumentos  
  *data_source_name* Especifica o nome da fonte de dados definido pelo usuário. O nome deve ser exclusivo no banco de dados no SQL Server, o banco de dados do SQL Azure e o Azure SQL Data Warehouse. O nome deve ser exclusivo dentro do servidor no Parallel Data Warehouse.
   
- TIPO = [HADOOP | SHARD_MAP_MANAGER | RDBMS | BLOB_STORAGE]  
+ TYPE = [ HADOOP | SHARD_MAP_MANAGER | RDBMS | BLOB_STORAGE]  
  Especifica o tipo de fonte de dados. Use o HADOOP quando a fonte de dados externa é Hadoop ou blob de armazenamento do Azure para Hadoop. Use SHARD_MAP_MANAGER ao criar uma fonte de dados externa para consulta de banco de dados Elástico fragmentação no banco de dados do SQL Azure. Use o RDBMS com fontes de dados externas para consultas de bancos de dados com a consulta de banco de dados Elástico no banco de dados do SQL Azure.  Use BLOB_STORAGE ao executar operações em massa usando [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ou [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) com [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
   
-LOCAL = \<location_path > **HADOOP**    
+LOCATION = \<location_path> **HADOOP**    
 Para HADOOP, especifica o URI Uniform Resource Indicator () para um cluster Hadoop.  
 `LOCATION = 'hdfs:\/\/*NameNode\_URI*\[:*port*\]'`  
 NameNode_URI: O nome do computador ou endereço IP do cluster Hadoop Namenode.  
@@ -202,7 +202,7 @@ Para as operações em massa, `LOCATION` devem ser válidas a URL para o armazen
 A credencial usada, deve ser criada usando `SHARED ACCESS SIGNATURE` como a identidade. Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Para obter um exemplo de como acessar o armazenamento de blob, consulte o exemplo F de [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md). 
 
   
- RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*porta*]'  
+ RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*port*]'  
  Especifica o local do Gerenciador de recursos Hadoop. Quando especificado, o otimizador de consulta pode fazer uma decisão baseada em custo para pré-processar dados de uma consulta do PolyBase usando recursos de computação do Hadoop com MapReduce. Chamado a aplicação de predicado, isso pode reduzir significativamente o volume de dados transferidos entre Hadoop e SQL e, portanto, melhorar o desempenho da consulta.  
   
  Quando isso não for especificado, envio de computação para Hadoop está desabilitada para consultas do PolyBase.  
@@ -256,7 +256,7 @@ Para obter uma lista completa de distribuições do Hadoop e versões compatíve
     RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8032'  
     ```  
   
- CREDENCIAL = *credential_name*  
+ CREDENTIAL = *credential_name*  
  Especifica uma credencial no escopo do banco de dados para autenticar a fonte de dados externa. Para obter um exemplo, consulte [C. Crie uma fonte de dados externos de armazenamento de BLOBs do Azure](../../t-sql/statements/create-external-data-source-transact-sql.md#credential). Para criar uma credencial, consulte [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md). Observe que a CREDENCIAL não é necessária para conjuntos de dados públicos que permitem o acesso anônimo. 
   
  DATABASE_NAME = *'QueryDatabaseName'*  
@@ -479,11 +479,11 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 ```   
 Para ver esse exemplo em uso, consulte [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).
   
-## <a name="see-also"></a>Consulte Também
-[ALTERAR a fonte de dados externa (Transact-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  
+## <a name="see-also"></a>Consulte também
+[ALTER EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  
 [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
 [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
-[Criar tabela externa como SELECT &#40; Transact-SQL &#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
+[CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
 [Criar tabela como SELECT &#40; Depósito de dados SQL do Azure &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
 [sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
   

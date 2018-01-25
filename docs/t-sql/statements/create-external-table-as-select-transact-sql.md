@@ -24,13 +24,13 @@ ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 caps.latest.revision: "16"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5742453b2465aa06c425e81d2e8c45d79e0c5e72
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f2ca379cf30fe2e7d359a294a18804f0b5e6faeb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [[ *database_name* . [ *schema_name* ]. ] | *schema_name* . ] *table_name*  
+ [[ *database_name* . [ *schema_name* ] . ] | *schema_name* . ] *table_name*  
  Um a três - parte nome da tabela para criar o banco de dados. Para uma tabela externa, apenas os metadados de tabela são armazenados no banco de dados relacional.  
   
  LOCAL = '*hdfs_folder*'  
@@ -106,7 +106,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  Por exemplo, se REJECT_VALUE = 5 e REJECT_TYPE = valor, o banco de dados irá parar importação linhas depois de 5 linhas falharam importar.  
   
- Porcentagem  
+ percentage  
  REJECT_VALUE é uma porcentagem, não é um valor literal. O banco de dados irá parar importação de linhas de externo do arquivo de dados quando o *porcentagem* de linhas com falha excede *reject_value*. A porcentagem de linhas com falha é calculada em intervalos.  
   
  REJECT_SAMPLE_VALUE = *reject_sample_value*  

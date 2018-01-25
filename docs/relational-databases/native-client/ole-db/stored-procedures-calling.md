@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: caf634af86e7338d25ae18a2101cffabb9f5f762
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7d756f34ea2ac9e5bf2803dc27b80a374ab9cd56
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stored-procedures---calling"></a>Procedimentos armazenados - chamar
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -100,7 +100,7 @@ ms.lasthandoff: 01/08/2018
   
  A sintaxe geral para chamar um procedimento usando a sequência de escape ODBC CALL é:  
   
- {[**?=**]**call***procedure_name*[**(**[*parameter*][**,**[*parameter*]]... **)**]}  
+ {[**? =**]**chamada * **procedure_name*[**(**[*parâmetro*] [**,**[*parâmetro*]]...** )**]}  
   
  Por exemplo:  
   
@@ -134,7 +134,7 @@ ms.lasthandoff: 01/08/2018
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

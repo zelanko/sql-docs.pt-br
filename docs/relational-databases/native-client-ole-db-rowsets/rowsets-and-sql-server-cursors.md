@@ -19,15 +19,15 @@ helpviewer_keywords:
 - cursors [OLE DB]
 ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e0546fe394d34b9a06bed38b0277192ca8f9ff8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 94f02b59dacb2ded2cc5597a3438be025a8ac678
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Conjuntos de linha e cursores do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/08/2018
   
  As seguintes propriedades de conjunto de linhas levam o provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a usar cursores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Algumas propriedades podem ser tranquilamente combinadas com outras. Por exemplo, um conjunto de linhas que exibe as propriedades DBPROP_IRowsetScroll e DBPROP_IRowsetChange será um conjunto de linhas indicador que exibe um comportamento de atualização imediato. Outras propriedades são mutuamente excludentes. Por exemplo, um conjunto de linhas que exibe DBPROP_OTHERINSERT não pode conter indicadores.  
   
-|ID da propriedade|Valor|Comportamento do conjunto de linhas|  
+|ID da propriedade|Value|Comportamento do conjunto de linhas|  
 |-----------------|-----------|---------------------|  
 |DBPROP_SERVERCURSOR|VARIANT_TRUE|Não é possível atualizar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no conjunto de linhas. O conjunto de linhas é sequencial, o que oferece suporte apenas ao roll-forward e à busca. Há suporte para o posicionamento de linha relativo. O texto do comando pode conter uma cláusula ORDER BY.|  
 |DBPROP_CANSCROLLBACKWARDS ou DBPROP_CANFETCHBACKWARDS|VARIANT_TRUE|Não é possível atualizar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no conjunto de linhas. O conjunto de linhas oferece suporte à rolagem e à busca em qualquer direção. Há suporte para o posicionamento de linha relativo. O texto do comando pode conter uma cláusula ORDER BY.|  
@@ -94,7 +94,7 @@ ms.lasthandoff: 01/08/2018
   
  T = VARIANT_TRUE  
   
- \-= VARIANT_TRUE ou VARIANT_FALSE  
+ \- = VARIANT_TRUE or VARIANT_FALSE  
   
  Para usar um determinado tipo de modelo de cursor, localize a coluna correspondente ao modelo de cursor e encontre todas as propriedades do conjunto de linhas com o valor 'T' na coluna. Defina essas propriedades do conjunto de linhas como VARIANT_TRUE para usar o modelo de cursor específico. As propriedades do conjunto de linhas com '-' como um valor podem ser definidas como VARIANT_TRUE ou VARIANT_FALSE.  
   
@@ -159,7 +159,7 @@ ms.lasthandoff: 01/08/2018
   
  Independentemente do método usado para preencher o conjunto de linhas e formar o bloco de cursor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o bloco permanece ativo até que o próximo método de busca de linhas seja executado no conjunto.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Conjuntos de linhas](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

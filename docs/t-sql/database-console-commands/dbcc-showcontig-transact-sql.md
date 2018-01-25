@@ -26,15 +26,15 @@ helpviewer_keywords:
 - index defragmenting [SQL Server]
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 caps.latest.revision: "78"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 85822d9351e0f0ce5a8c5a7542fbd7df57d13d74
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fb7faf36132e131c0fd771480e89318492c71372
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -122,7 +122,7 @@ Quando TABLERESULTS é especificado, DBCC SHOWCONTIG retorna as seguintes coluna
 |**ObjectId**|ID do nome do objeto.|  
 |**IndexName**|Nome do índice processado. É NULL para um heap.|  
 |**IndexId**|ID do índice. É 0 para um heap.|  
-|**Level**|Nível do índice. Nível 0 é o nível folha ou dados do índice.<br /><br /> Nível é 0 para um heap.|  
+|**Nível**|Nível do índice. Nível 0 é o nível folha ou dados do índice.<br /><br /> Nível é 0 para um heap.|  
 |**Páginas**|Número de páginas que compõem o nível do índice ou de todo o heap.|  
 |**Linhas**|Número de dados ou registros de índice no nível do índice. Para um heap, esse valor é o número de registros de dados em todo o heap.<br /><br /> Para um heap, o número de registros retornados de sua função pode não corresponder ao número de linhas retornadas devido à execução de SELECT COUNT(*) relacionada ao heap. Isso porque uma linha pode conter vários registros. Por exemplo, em algumas situações de atualização, uma única linha de heap pode ter um registro de encaminhamento e um registro encaminhado como resultado de uma operação de atualização. Da mesma forma, a maior parte das linhas de LOB grandes é dividida em vários registros no armazenamento LOB_DATA.|  
 |**MinimumRecordSize**|Tamanho mínimo do registro no nível do índice ou de todo o heap.|  
@@ -148,7 +148,7 @@ Quando WITH TABLERESULTS e FAST forem especificados, o conjunto de resultados se
 |**AverageRecordSize**|**ExtentFragmentation**|  
 |**ForwardedRecords**||  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 A instrução DBCC SHOWCONTIG atravessa a cadeia de páginas no nível folha do índice quando *index_id* for especificado. Se apenas *table_id* for especificado ou se *index_id* for 0, as páginas de dados da tabela especificada são verificadas. A operação somente requer um bloqueio de tabela de tentativa compartilhada (IS). Desse modo, podem ser executadas todas as atualizações e inserções, exceto as que exigirem um bloqueio de tabela exclusivo (X). Isso permite um equilíbrio entre a velocidade da execução e nenhuma redução da simultaneidade em relação ao número de estatísticas retornadas. Entretanto, se o comando estiver sendo usado apenas para medir a fragmentação, recomendamos o uso da opção WITH FAST para obter um desempenho melhor. Uma verificação rápida não lê as páginas em nível de dados ou folha do índice. A opção WITH FAST não se aplica a um heap.
   
 ## <a name="restrictions"></a>Restrições  

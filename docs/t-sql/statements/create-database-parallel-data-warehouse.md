@@ -15,13 +15,13 @@ ms.assetid: 40cacde4-ac72-45f7-9564-d76e2b4a741a
 caps.latest.revision: "13"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 622dd3433ad5cb900dbbcb23777add948ea5474b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4e9ff76a4d260604a93f59baa3b61f5c37b4952f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-database-parallel-data-warehouse"></a>Criar banco de dados (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -55,14 +55,14 @@ WITH (
   
  Aumento automático é ON para todos os tamanhos ou OFF para todos os tamanhos. Por exemplo, não é possível definir o crescimento automático ON para *log_size*, mas não defini-lo para *replicated_size*.  
   
- *replicated_size* [GB]  
+ *replicated_size* [ GB ]  
  Um número positivo. Define o tamanho (em gigabytes de número inteiro ou decimal) para o espaço total alocado para tabelas replicadas e os dados correspondentes *em cada nó de computação*. Para mínimo e máximo *replicated_size* requisitos, consulte "Mínimo e máximo valores" a [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
  Se o crescimento automático for ON, tabelas replicadas terão permissão para crescer além desse limite.  
   
  Se o crescimento automático for OFF, um erro será retornado se um usuário tentar criar uma nova tabela replicada, inserir dados em um existente replicados da tabela ou atualizar uma existente replicadas a tabela de uma maneira que pode aumentar o tamanho além *replicated_size*.  
   
- *distributed_size* [GB]  
+ *distributed_size* [ GB ]  
  Um número positivo. O tamanho, em gigabytes, inteiro ou decimal, para o espaço total alocado para tabelas distribuídas (e os dados correspondentes) *entre o dispositivo*. Para mínimo e máximo *distributed_size* requisitos, consulte "Mínimo e máximo valores" a [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
  Se o crescimento automático for ON, tabelas distribuídas terão permissão para crescer além desse limite.  

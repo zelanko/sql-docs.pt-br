@@ -1,5 +1,5 @@
 ---
-title: PREVER (Transact-SQL) | Microsoft Docs
+title: PREDICT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -18,12 +18,12 @@ dev_langs: TSQL
 helpviewer_keywords: PREDICT clause
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 5f2ed3582341ff2824943a432e5877602b0b9ee7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: craigg
+ms.openlocfilehash: b9aacbffa28783adf6e92d9260d2bf73d89a0cc4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="predict-transact-sql"></a>PREVER (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ O objeto de modelo pode ser criado usando o R ou Python ou outra ferramenta.
 
 O parâmetro de dados é usado para especificar os dados usados para previsão ou pontuação. Dados são especificados na forma de uma fonte de tabela na consulta. Fonte de tabela pode ser uma tabela, o alias de tabela, alias CTE, exibição ou função com valor de tabela.
 
-**parâmetros**
+**parameters**
 
 O parâmetro de parâmetros é usado para especificar os parâmetros opcionais definidas pelo usuário usados para pontuação ou previsão.
 
@@ -73,7 +73,7 @@ O nome de cada parâmetro é específico para o tipo de modelo. Por exemplo, a f
 
 > [OBSERVAÇÃO] Essa opção não há suporte para a versão de pré-lançamento do SQL Server 2017 e está incluída para fins de compatibilidade com versões posteriores.
 
-**COM ( \<result_set_definition >)**
+**WITH ( \<result_set_definition> )**
 
 A cláusula WITH é usada para especificar o esquema da saída retornada pelo `PREDICT` função.
 

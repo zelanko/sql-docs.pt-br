@@ -19,13 +19,13 @@ ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bcf939f68dd338e9672dfc4bc716b3d92ebda272
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 74fc65730d0c46858c282b9625c86d1ab651ec49
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="exist-method-xml-data-type"></a>Método exista() (Tipo de dados xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ exist (XQuery)
  XQuery  
  É uma expressão XQuery, uma cadeia de caracteres literal.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]  
 >  O **exist ()** método retorna 1 para a expressão XQuery que retorna um resultado não vazio. Se você especificar o **verdadeiro ()** ou **False ()** funções dentro de **exist ()** método, o **exist ()** método retornará 1, porque o funções **verdadeiro ()** e **False ()** retornar booliano True e False, respectivamente. Quer dizer, elas retornam um resultado nonempty. Portanto, **exist ()** retornará 1 (verdadeiro), conforme mostrado no exemplo a seguir:  
@@ -162,7 +162,7 @@ WHERE CatalogDescription.exist('
  [Adicionar namespaces a consultas com WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Comparar XML digitado com XML não digitado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Criar instâncias de dados XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipos de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [Métodos de tipo de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Linguagem de modificação de dados XML &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

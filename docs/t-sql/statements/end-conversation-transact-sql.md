@@ -26,15 +26,15 @@ helpviewer_keywords:
 - ending conversations [SQL Server]
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5f7f2dd42fd3d34073bbdfc223af339f2e867539
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d68dcecf84cb24b0c06876d40742c8f5ffe8124d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ END CONVERSATION conversation_handle
  WITH CLEANUP  
  Remove todas as mensagens e entradas da exibição do catálogo para um lado de uma conversa que não pode ser concluída normalmente. O outro lado da conversa não é notificado da limpeza. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remove o ponto de extremidade de conversa, todas as mensagens da conversa na fila de transmissão e todas as mensagens da conversa na fila de serviço. Os administradores podem usar essa opção para remover conversas que não podem ser concluídas normalmente. Por exemplo, se o serviço remoto tiver sido removido permanentemente, um administrador poderá usar WITH CLEANUP para remover conversas para esse serviço. Não use WITH CLEANUP no código de um [!INCLUDE[ssSB](../../includes/sssb-md.md)] aplicativo. Se END CONVERSATION WITH CLEANUP for executado antes de o ponto de extremidade de recepção confirmar o recebimento de uma mensagem, o ponto de extremidade de envio enviará a mensagem novamente. Isto poderá executar novamente o diálogo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Terminando uma conversa bloqueia o grupo de conversa que fornecido *conversation_handle* pertence. Quando uma conversa é encerrada, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] remove todas as mensagens para ela da fila de serviço.  
   
  Após o término de uma conversa, um aplicativo não pode mais enviar ou receber mensagens para essa conversa. Ambos os participantes em uma conversa devem chamar END CONVERSATION para concluir a conversa. Se o [!INCLUDE[ssSB](../../includes/sssb-md.md)] não tiver recebido uma mensagem de término do diálogo ou uma mensagem de erro do outro participante, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] notificará o outro participante de que a conversa terminou. Neste caso, embora o identificador da conversa não seja mais válido, o ponto de extremidade de conversa permanece ativo até a instância que hospeda o serviço remoto confirmar a mensagem.  
@@ -135,8 +135,8 @@ END CONVERSATION @dialog_handle WITH CLEANUP ;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [BEGIN CONVERSATION TIMER &#40; Transact-SQL &#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [conversation_endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+ [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   

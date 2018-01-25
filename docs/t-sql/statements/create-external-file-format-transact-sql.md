@@ -23,15 +23,15 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 caps.latest.revision: "25"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1d7b64d907e0474361a342dbdbc6e581f2c898ed
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: ab389a5c811f915ff497057a5daf12374f1cedb7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-external-file-format-transact-sql"></a>CRIAR um formato de arquivo externo (Transact-SQL)
+# <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Cria uma definição de formato de arquivo externo do PolyBase para dados externos armazenados no Hadoop, o armazenamento de BLOBs do Azure ou o repositório Azure Data Lake. Criar um formato de arquivo externo é um pré-requisito para a criação de uma tabela externa do PolyBase. Criando um formato de arquivo externo, você deve especificar o layout real dos dados referenciados por uma tabela externa.  
@@ -128,7 +128,7 @@ WITH (
   
  Exemplos:  
   
--   FIELD_TERMINATOR = ' |'  
+-   FIELD_TERMINATOR = '|'  
   
 -   FIELD_TERMINATOR = ' '  
   
@@ -142,13 +142,13 @@ WITH (
   
  Exemplos:  
 
--   STRING_DELIMITER = ' "'
+-   STRING_DELIMITER = '"'
 
 -   STRING_DELIMITER = '0x22' – hex aspas duplas
   
--   STRING_DELIMITER = ' *'  
+-   STRING_DELIMITER = '*'  
   
--   STRING_DELIMITER = Ꞌ, Ꞌ  
+-   STRING_DELIMITER = ꞌ,ꞌ  
   
 -   STRING_DELIMITER = '0x7E0x7E' – til duas vezes (por exemplo, ~ ~)
   
@@ -164,9 +164,9 @@ PolyBase só usa o formato de data personalizada para importar os dados. Ele nã
   
 -   Data: 'AAAA-MM-dd'  
   
--   DateTime2: 'AAAA-MM-dd HH'  
+-   DateTime2: 'yyyy-MM-dd HH:mm:ss'  
   
--   DateTimeOffset: 'AAAA-MM-dd HH'  
+-   DateTimeOffset: 'yyyy-MM-dd HH:mm:ss'  
   
 -   Hora: 'HH'  
   
@@ -192,24 +192,24 @@ PolyBase só usa o formato de data personalizada para importar os dados. Ele nã
 |datetime2|DATE_FORMAT = 'AAAA-MM-dd hh:mm:ss.ffffffftt'|Além de ano, mês e dia, esse formato de data inclui 00-11 horas, 00-59 minutos, 00-59 segundos, de 7 dígitos para milissegundos e AM, am, PM ou pm.|  
 |DateTimeOffset|DATE_FORMAT = 'AAAA-MM-dd: ss. FFFFFFF zzz'|Além de ano, mês e dia, esse formato de data inclui 00-23 horas, 00-59 minutos, 00-59 segundos e 7 dígitos para milissegundos e o deslocamento de fuso horário que você coloca no arquivo de entrada como `{+&#124;-}HH:ss`. Por exemplo, desde a hora Los Angeles sem verão economia é 8 horas antes do UTC, um valor de -08:00 no arquivo de entrada especifica o fuso horário de Brasília.|  
 |DateTimeOffset|DATE_FORMAT = 'AAAA-MM-dd hh:mm:ss.ffffffftt zzz'|Além de ano, mês e dia, esse formato de data inclui 00-11 horas, 00-59 minutos, 00-59 segundos, 7 dígitos para milissegundos, (AM, am, PM ou pm) e o deslocamento de fuso horário. Consulte a descrição da linha anterior.|  
-|Hora|DATE_FORMAT = 'HH'|Não há nenhum valor de data, apenas de 00 a 23 horas, 00-59 minutos e 00-59 segundos.|  
+|Hora|DATE_FORMAT = 'HH:mm:ss'|Não há nenhum valor de data, apenas de 00 a 23 horas, 00-59 minutos e 00-59 segundos.|  
   
  Todos os formatos de data com suporte:
   
 |datetime|smalldatetime|date|datetime2|datetimeoffset|  
 |--------------|-------------------|----------|---------------|--------------------|  
-|[M [M]] M-[d] d-[AA] AA hh [. fff]|[M [M]] M-[d] d-[AA] AA hh: mm [: 00]|[M [M]] M-[d] d-[AA] AA|[M [M]] M-[d] d-[AA] AA hh [. FFFFFFF]|[M [M]] M-[d] d-[AA] AA hh [. FFFFFFF] zzz|  
-|[M [M]] M-[d] d-[AA] AA hh [. fff] [tt]|[M [M]] M-[d] d-[AA] AA hh: mm [: 00] [tt]||[M [M]] M-[d] d-[AA] AA hh [. FFFFFFF] [tt]|[M [M]] M-[d] d-[AA] AA hh [. FFFFFFF] [tt] zzz|  
-|[M [M]] M-[AA] AA-[d] d hh [. fff]|[M [M]] M-[AA] AA-[d] d hh: mm [: 00]|[M [M]] M-[AA] AA-[d] d|[M [M]] M-[AA] AA-[d] d hh [. FFFFFFF]|[M [M]] M-[AA] AA-[d] d zzz hh [. FFFFFFF]|  
-|[M [M]] M-[AA] AA-[d] d hh [. fff] [tt]|[M [M]] M-[AA] AA-[d] d hh: mm [: 00] [tt]||[M [M]] M-[AA] AA-[d] d hh [. FFFFFFF] [tt]|[M [M]] M-[AA] AA-[d] d hh [. FFFFFFF] [tt] zzz|  
-|[AA] AA-[[M] M] M-[d] d hh [. fff]|[AA] AA-[[M] M] M-[d] d hh: mm [: 00]|[AA] AA-[[M] M] M-[d] d|[AA] AA-[[M] M] M-[d] d hh [. FFFFFFF]|[AA] AA-[[M] M] M-[d] d hh [. FFFFFFF] zzz|  
-|[AA] AA-[[M] M] M-[d] d hh [. fff] [tt]|[AA] AA-[[M] M] M-[d] d hh: mm [: 00] [tt]||[AA] AA-[[M] M] M-[d] d hh [. FFFFFFF] [tt]|[AA] AA-[[M] M] M-[d] d hh [. FFFFFFF] [tt] zzz|  
-|[AA] AA-[d] d-[[M] M] M hh [. fff]|[AA] AA-[d] d-[[M] M] M hh: mm [: 00]|[AA] AA - d [d]-[[M] M] M|[AA] AA-[d] d-[[M] M] M hh [. FFFFFFF]|[AA] AA-[d] d-[[M] M] M hh [. FFFFFFF] zzz|  
-|[AA] AA-[d] d-[[M] M] M hh [. fff] [tt]|[AA] AA-[d] d-[[M] M] M hh: mm [: 00] [tt]||[AA] AA-[d] d-[[M] M] M hh [. FFFFFFF] [tt]|[AA] AA-[d] d-[[M] M] M hh [. FFFFFFF] [tt] zzz|  
-|[d] d-[[M] M] M-[AA] AA hh [. fff]|[d] d-[[M] M] M-[AA] AA hh: mm [: 00]|[d] d-[[M] M] M-[AA] AA|[d] d-[[M] M] M-[AA] AA hh [. FFFFFFF]|[d] d-[[M] M] M-[AA] AA hh [. FFFFFFF] zzz|  
+|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fff]|[M[M]]M-[d]d-[yy]yy HH:mm[:00]|[M[M]]M-[d]d-[yy]yy|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff]|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff] zzz|  
+|[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fff][tt]|[M [M]] M-[d] d-[AA] AA hh: mm [: 00] [tt]||[M [M]] M-[d] d-[AA] AA hh [. FFFFFFF] [tt]|[M [M]] M-[d] d-[AA] AA hh [. FFFFFFF] [tt] zzz|  
+|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fff]|[M[M]]M-[yy]yy-[d]d HH:mm[:00]|[M[M]]M-[yy]yy-[d]d|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fffffff]|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fffffff] zzz|  
+|[M[M]]M-[yy]yy-[d]d hh:mm:ss[.fff][tt]|[M [M]] M-[AA] AA-[d] d hh: mm [: 00] [tt]||[M[M]]M-[yy]yy-[d]d hh:mm:ss[.fffffff][tt]|[M [M]] M-[AA] AA-[d] d hh [. FFFFFFF] [tt] zzz|  
+|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fff]|[yy]yy-[M[M]]M-[d]d HH:mm[:00]|[yy]yy-[M[M]]M-[d]d|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fffffff]|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fffffff]  zzz|  
+|[yy]yy-[M[M]]M-[d]d hh:mm:ss[.fff][tt]|[AA] AA-[[M] M] M-[d] d hh: mm [: 00] [tt]||[yy]yy-[M[M]]M-[d]d hh:mm:ss[.fffffff][tt]|[AA] AA-[[M] M] M-[d] d hh [. FFFFFFF] [tt] zzz|  
+|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fff]|[yy]yy-[d]d-[M[M]]M HH:mm[:00]|[yy]yy-[d]d-[M[M]]M|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fffffff]|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fffffff]  zzz|  
+|[yy]yy-[d]d-[M[M]]M hh:mm:ss[.fff][tt]|[AA] AA-[d] d-[[M] M] M hh: mm [: 00] [tt]||[yy]yy-[d]d-[M[M]]M hh:mm:ss[.fffffff][tt]|[AA] AA-[d] d-[[M] M] M hh [. FFFFFFF] [tt] zzz|  
+|[d]d-[M[M]]M-[yy]yy HH:mm:ss[.fff]|[d]d-[M[M]]M-[yy]yy HH:mm[:00]|[d]d-[M[M]]M-[yy]yy|[d]d-[M[M]]M-[yy]yy HH:mm:ss[.fffffff]|[d]d-[M[M]]M-[yy]yy HH:mm:ss[.fffffff] zzz|  
 |[d] d-[[M] M] M-[AA] AA hh [. fff] [tt]|[d] d-[[M] M] M-[AA] AA hh: mm [: 00] [tt]||[d] d-[[M] M] M-[AA] AA hh [. FFFFFFF] [tt]|[d] d-[[M] M] M-[AA] AA hh [. FFFFFFF] [tt] zzz|  
-|d [d]-[AA] AA-[[M] M] M hh [. fff]|d [d]-[AA] AA-[[M] M] M hh: mm [: 00]|d [d]-[AA] AA-[[M] M] M|d [d]-[AA] AA-[[M] M] M hh [. FFFFFFF]|[d] d-[AA] AA-[[M] M] M hh [. FFFFFFF] zzz|  
-|[d] d-[AA] AA-[[M] M] M hh [. fff] [tt]|[d] d-[AA] AA-[[M] M] M hh: mm [: 00] [tt]||[d] d-[AA] AA-[[M] M] M hh [. FFFFFFF] [tt]|[d] d-[AA] AA-[[M] M] M hh [. FFFFFFF] [tt] zzz|  
+|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fff]|[d]d-[yy]yy-[M[M]]M HH:mm[:00]|[d]d-[yy]yy-[M[M]]M|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fffffff]|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fffffff]  zzz|  
+|[d]d-[yy]yy-[M[M]]M hh:mm:ss[.fff][tt]|[d] d-[AA] AA-[[M] M] M hh: mm [: 00] [tt]||[d]d-[yy]yy-[M[M]]M hh:mm:ss[.fffffff][tt]|[d] d-[AA] AA-[[M] M] M hh [. FFFFFFF] [tt] zzz|  
   
  Detalhes:  
   
@@ -244,25 +244,25 @@ PolyBase só usa o formato de data personalizada para importar os dados. Ele nã
  
  O tipo de formato DELIMITEDTEXT dá suporte a esses métodos de compactação:
   
--   COMPACTAÇÃO de dados = 'org.apache.hadoop.io.compress.DefaultCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
--   COMPACTAÇÃO de dados = 'org.apache.hadoop.io.compress.GzipCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
 
  O tipo de formato RCFILE dá suporte a esse método de compactação:
   
--   COMPACTAÇÃO de dados = 'org.apache.hadoop.io.compress.DefaultCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
  O tipo de formato de arquivo ORC dá suporte a esses métodos de compactação:
   
--   COMPACTAÇÃO de dados = 'org.apache.hadoop.io.compress.DefaultCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
--   COMPACTAÇÃO de dados = 'org.apache.hadoop.io.compress.SnappyCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
   
  O tipo de formato de arquivo PARQUET oferece suporte a métodos de compactação do seguinte:
   
--   COMPACTAÇÃO de dados = 'org.apache.hadoop.io.compress.GzipCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
   
--   COMPACTAÇÃO de dados = 'org.apache.hadoop.io.compress.SnappyCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão ALTER ANY EXTERNAL FILE FORMAT.
@@ -349,6 +349,6 @@ WITH (
 ## <a name="see-also"></a>Consulte também
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
- [Criar tabela externa como SELECT &#40; Transact-SQL &#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
+ [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
  [Criar tabela como SELECT &#40; Depósito de dados SQL do Azure &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
  [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)  

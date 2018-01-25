@@ -23,15 +23,15 @@ helpviewer_keywords:
 - routes [Service Broker], modifying
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 221fcf4d801d062d491935c8380abd4f75b83285
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e9ae2ef58b234919dab8057b00afd64efa0cc89b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,13 +81,13 @@ WHERE database_id = DB_ID();
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
- Tempo de vida  **=**  *route_lifetime*  
+ Tempo de vida **= * route_lifetime*  
  Especifica a hora, em segundos, que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retém a rota na tabela de roteamento. No fim do tempo de vida, a rota expira e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não a considera mais ao escolher uma rota para uma nova conversa. Se essa cláusula for omitida, o tempo de vida da rota permanecerá inalterado.  
   
- ENDEREÇO **='***next_hop_address'*  
+ ADDRESS **='***next_hop_address'*  
  Especifica o endereço de rede para essa rota. O *next_hop_address* Especifica um endereço TCP/IP no seguinte formato:  
   
- **TCP: / /** { *dns_name* | *netbios_name* |*endereço_IP* } **:**  *número_da_porta*  
+ **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
   
  Especificado *port_number* deve corresponder ao número de porta para o [!INCLUDE[ssSB](../../includes/sssb-md.md)] ponto de extremidade de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador especificado. Isso pode ser obtido executando a seguinte consulta no banco de dados selecionado:  
   
@@ -111,7 +111,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
  MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
  Especifica o endereço de rede para o servidor espelho de um par espelhado cujo servidor principal está no *next_hop_address*. O *next_hop_mirror_address* Especifica um endereço TCP/IP no seguinte formato:  
   
- **TCP: / /**{ *dns_name* | *netbios_name* | *endereço_IP* } **:**  *número_da_porta*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  Especificado *port_number* deve corresponder ao número de porta para o [!INCLUDE[ssSB](../../includes/sssb-md.md)] ponto de extremidade de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador especificado. Isso pode ser obtido executando a seguinte consulta no banco de dados selecionado:  
   
@@ -128,7 +128,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela de roteamento que armazena as rotas é uma tabela de metadados que pode ser lidos por meio de **routes** exibição do catálogo. A tabela de roteamento pode ser atualizada somente pelas instruções CREATE ROUTE, ALTER ROUTE e DROP ROUTE.  
   
  As cláusulas que não são especificadas no comando ALTER ROUTE permanecem inalteradas. Portanto, não é possível alterar uma rota com ALTER para especificar que ela não expira, que corresponde a qualquer nome de serviço ou qualquer instância do agente. Para alterar essas características de uma rota, é necessário descartar a rota existente e criar uma nova com as novas informações.  
@@ -183,7 +183,7 @@ ALTER ROUTE ExpenseRoute
   
 ## <a name="see-also"></a>Consulte também  
  [CREATE ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/create-route-transact-sql.md)   
- [Remover ROTA &#40; Transact-SQL &#41;](../../t-sql/statements/drop-route-transact-sql.md)   
+ [DROP ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-route-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

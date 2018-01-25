@@ -23,15 +23,15 @@ helpviewer_keywords:
 - status information [ODBC]
 ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ced62a96f94fa4cb929f295f7a390c60b42e15d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5b2c800550b992735c0af6854a83d5ea28a2c597
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="diagnostic-records-and-fields"></a>Registros e campos de diagnóstico
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
  Os campos dos registros de status contêm informações sobre erros ou avisos específicos retornados pelo Gerenciador de Driver ODBC, driver ou fonte de dados, incluindo o SQLSTATE, número do erro nativo, mensagem de diagnóstico, número da coluna e número da linha. Os registros de status só são criados se a função retornar SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA ou SQL_STILL_EXECUTING. Para obter uma lista completa dos campos dos registros de status, consulte **SQLGetDiagField**.  
   
- **SQLGetDiagRec** recupera um único registro de diagnóstico junto com seu ODBC SQLSTATE, número de erro nativo e campos de mensagem de diagnóstico. Essa funcionalidade é semelhante do ODBC 2. *x***SQLError** função. A função mais simples de tratamento de erros em ODBC 3. *x* é chamar repetidamente **SQLGetDiagRec** começando com o *RecNumber* parâmetro definido como 1 e aumentando *RecNumber* por 1 até **SQLGetDiagRec** retorna SQL_NO_DATA. Isso é equivalente a um ODBC 2. *x* aplicativo que chama **SQLError** até ele retornar SQL_NO_DATA_FOUND.  
+ **SQLGetDiagRec** recupera um único registro de diagnóstico junto com seu ODBC SQLSTATE, número de erro nativo e campos de mensagem de diagnóstico. Essa funcionalidade é semelhante do ODBC 2. *x * SQLError** função. A função mais simples de tratamento de erros em ODBC 3. *x* é chamar repetidamente **SQLGetDiagRec** começando com o *RecNumber* parâmetro definido como 1 e aumentando *RecNumber* por 1 até **SQLGetDiagRec** retorna SQL_NO_DATA. Isso é equivalente a um ODBC 2. *x* aplicativo que chama **SQLError** até ele retornar SQL_NO_DATA_FOUND.  
   
  ODBC 3. *x* dá suporte a muito mais informações de diagnósticas que o ODBC 2. *x*. Essas informações são armazenadas nos campos adicionais recuperados por meio de registros de diagnóstico **SQLGetDiagField**.  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/08/2018
   
  A maioria dos erros relatados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client pode ser diagnosticado usando apenas as informações retornadas por **SQLGetDiagRec**. Em alguns casos, porém, as informações retornadas pelos campos de diagnóstico específicos de driver são importantes no diagnóstico de um erro. Ao codificar um identificador de erro ODBC para aplicativos que usam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o driver ODBC Native Client, é recomendável também usar **SQLGetDiagField** para recuperar pelo menos o SQL_DIAG_SS_MSGSTATE e SQL_DIAG_SS_SEVERITY campos específicos do driver. Se um erro em particular for gerado em vários locais no código [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL_DIAG_SS_MSGSTATE indicará a um engenheiro de suporte da Microsoft onde especificamente o erro foi gerado, o que muitas vezes ajuda no diagnóstico de um problema.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Tratando de erros e mensagens](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

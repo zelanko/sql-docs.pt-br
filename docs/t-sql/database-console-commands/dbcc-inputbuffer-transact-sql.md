@@ -25,15 +25,15 @@ helpviewer_keywords:
 - DBCC INPUTBUFFER statement
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 caps.latest.revision: "51"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 23ac916dccb2f8d4c6511f9e672aa07834001cad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0d36f0e25c0f5959053e028cdfc95babf69c4e48
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ DBCC INPUTBUFFER retorna um conjunto de linhas com as seguintes colunas.
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**EventType**|**nvarchar (30)**|Tipo de evento. Isso pode ser **evento RPC** ou **eventos de linguagem**. A saída será **nenhum evento** quando nenhum último evento foi detectado.|  
+|**EventType**|**nvarchar(30)**|Tipo de evento. Isso pode ser **evento RPC** ou **eventos de linguagem**. A saída será **nenhum evento** quando nenhum último evento foi detectado.|  
 |**Parâmetros**|**smallint**|0 = Texto<br /><br /> 1 -  *n*  = parâmetros|  
 |**EventInfo**|**nvarchar(4000)**|Para uma **EventType** de RPC, **EventInfo** contém apenas o nome do procedimento. Para uma **EventType** de idioma, somente os primeiros 4000 caracteres do evento são exibidos.|  
   
@@ -126,6 +126,6 @@ DBCC INPUTBUFFER (52);
 ## <a name="see-also"></a>Consulte também  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
-[sys.DM exec_input_buffer &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
+[sys.dm_exec_input_buffer &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
   
   

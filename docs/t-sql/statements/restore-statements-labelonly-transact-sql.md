@@ -22,15 +22,15 @@ helpviewer_keywords:
 - backup media [SQL Server], content information
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
 caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 972a51eca37afca09042608b3bfcc767ec6ece27
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c5cbf694abdf86a5e5e13f2799f5b1f4b808a498
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>Instruções - de RESTORE LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,18 +83,18 @@ FROM <backup_device>
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**MediaName**|**nvarchar (128)**|Nome da mídia.|  
+|**MediaName**|**nvarchar(128)**|Nome da mídia.|  
 |**MediaSetId**|**uniqueidentifier**|Número de identificação exclusivo do conjunto de mídias.|  
-|**FamilyCount**|**int**|Número de famílias de mídias no conjunto de mídias.|  
-|**FamilySequenceNumber**|**int**|Número de sequência desta família.|  
+|**FamilyCount**|**Int**|Número de famílias de mídias no conjunto de mídias.|  
+|**FamilySequenceNumber**|**Int**|Número de sequência desta família.|  
 |**MediaFamilyId**|**uniqueidentifier**|Número de identificação exclusivo da família de mídia.|  
-|**MediaSequenceNumber**|**int**|Número de sequência dessa mídia na família de mídias.|  
+|**MediaSequenceNumber**|**Int**|Número de sequência dessa mídia na família de mídias.|  
 |**MediaLabelPresent**|**tinyint**|Se a descrição de mídia contiver:<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] rótulo de mídia do formato de fita<br /><br /> **0** = descrição de mídia|  
 |**MediaDescription**|**nvarchar(255)**|Descrição da mídia, em texto de formato livre, ou rótulo de mídia de formato de fita.|  
-|**SoftwareName**|**nvarchar (128)**|Nome do software de backup que gravou o rótulo.|  
-|**SoftwareVendorId**|**int**|Número exclusivo de identificação do fornecedor do software que gravou o backup.|  
+|**SoftwareName**|**nvarchar(128)**|Nome do software de backup que gravou o rótulo.|  
+|**SoftwareVendorId**|**Int**|Número exclusivo de identificação do fornecedor do software que gravou o backup.|  
 |**MediaDate**|**datetime**|Data e hora em que o rótulo foi gravado.|  
-|**Mirror_Count**|**int**|Número de espelhos no conjunto (1-4).<br /><br /> Observação: Os rótulos gravados para espelhos diferentes em um conjunto são idênticos.|  
+|**Mirror_Count**|**Int**|Número de espelhos no conjunto (1-4).<br /><br /> Observação: Os rótulos gravados para espelhos diferentes em um conjunto são idênticos.|  
 |**IsCompressed**|**bit**|Se o backup é compactado:<br /><br /> 0 = não compactado<br /><br /> 1 = compactado|  
   
 > [!NOTE]  

@@ -14,13 +14,13 @@ ms.assetid: ffbdb114-e7a5-4145-bb8f-2eb97720ea96
 caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: c45a6525ef9fa63141ddc4c594d84e4f9e118ee3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c5852461b21566ea90fa884f0e94e53d52fba210
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="monitoring-r-services"></a>Monitorar o R Services
   Esta seção fornece informações sobre essas tarefas de monitoramentos comuns ao usar o [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]:  
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/08/2018
 
 [Monitorar o R Services Usando Relatórios Personalizados no Management Studio](../../advanced-analytics/r-services/monitor-r-services-using-custom-reports-in-management-studio.md)
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Governança de recursos para o R Services](../../advanced-analytics/r-services/resource-governance-for-r-services.md)  
   
   

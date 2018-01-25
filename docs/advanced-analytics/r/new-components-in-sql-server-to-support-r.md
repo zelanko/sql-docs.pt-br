@@ -14,13 +14,13 @@ ms.assetid: 54e9ef3f-1136-471e-865a-7cf013673186
 caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 5c2e2459a3cf95090b0ca408eceae505086b6118
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5efdde73d0b2f880d62927b9b96b3eee7fadfe5f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="components-in-sql-server-to-support-r"></a>Componentes do SQL Server para dar suporte a R
 
@@ -38,7 +38,7 @@ O [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] é um servi
 
 O serviço Launchpad iniciará somente inicializadores confiáveis que sejam publicados pela Microsoft ou que tenham sido certificados pela Microsoft como atendendo aos requisitos de desempenho e gerenciamento de recursos. A nomeação para os iniciadores de idioma específico é simples:
 
-  + R - RLauncher.dll
+  + R -  RLauncher.dll
   + Python - PythonLauncher.dll
 
 O serviço [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] é executado em sua própria conta de usuário. Cada processo satélite para um tempo de execução de linguagem específica herdará a conta de usuário do Launchpad. Para obter mais informações sobre a configuração e o contexto de segurança da barra inicial, consulte [visão geral de segurança](../../advanced-analytics/r/security-overview-sql-server-r.md).

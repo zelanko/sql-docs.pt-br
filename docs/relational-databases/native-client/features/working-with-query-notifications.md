@@ -24,15 +24,15 @@ helpviewer_keywords:
 - consumer notification for rowset changes [SQL Server Native Client]
 ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 98eadce8ef3ffe948793a6da69a47c209889942d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6405ed5efa051a7b8c5bb7865b9f2a469c640592
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="working-with-query-notifications"></a>Trabalhando com notificações de consulta
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -134,7 +134,7 @@ RECEIVE * FROM MyQueue
   
 -   **ntext**  
   
--   **imagem**  
+-   **image**  
   
  Se for feita uma solicitação de notificação para um consulta que retorna um desses tipos, a notificação será disparada imediatamente, especificando que não foi possível realizar a assinatura na notificação.  
   
@@ -142,7 +142,7 @@ RECEIVE * FROM MyQueue
   
  O envio de uma consulta para notificação que foi enviada pelo mesmo usuário no mesmo contexto de banco de dados e que tem o mesmo modelo, os mesmos valores de parâmetros, a mesma ID de notificação e o mesmo local de entrega de uma assinatura ativa existente, renovará a assinatura existente, redefinindo o novo tempo limite especificado. Isso significa que, se for solicitada uma notificação para consultas idênticas, apenas uma notificação será enviada. Isso se aplica a uma consulta duplicada em um lote ou a uma consulta em um procedimento armazenado chamada várias vezes.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Recursos do SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

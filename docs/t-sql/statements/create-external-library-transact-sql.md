@@ -1,5 +1,5 @@
 ---
-title: Criar biblioteca externa (Transact-SQL) | Microsoft Docs
+title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-non-specified
@@ -20,14 +20,14 @@ dev_langs: TSQL
 helpviewer_keywords: CREATE EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: f52205803e3ab44e7c72808255dbe93fd61de336
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: craigg
+ms.openlocfilehash: fe1cb90bce5717d194defd2c684d7b20fc29a061
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-external-library-transact-sql"></a>Criar biblioteca externa (Transact-SQL)  
+# <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
@@ -61,7 +61,7 @@ WITH ( LANGUAGE = 'R' )
 
 ### <a name="arguments"></a>Argumentos
 
-**nome_da_biblioteca**
+**library_name**
 
 Bibliotecas forem adicionadas ao banco de dados com escopo para o usuário. Ou seja, nomes de biblioteca são considerados exclusivos dentro do contexto de um usuário específico ou um proprietário e nomes de biblioteca devem ser exclusivos por usuário. Por exemplo, dois usuários **RUser1** e **RUser2** podem ambos individualmente e separadamente carregar a biblioteca R `ggplot2`.
 
@@ -191,7 +191,7 @@ DROP EXTERNAL LIBRARY customPackage <user_name>;
 
 ## <a name="see-also"></a>Consulte também
 
-[ALTER biblioteca externa (Transact-SQL)](alter-external-library-transact-sql.md)  
-[SOLTE a biblioteca externa (Transact-SQL)](drop-external-library-transact-sql.md)  
+[ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  
+[DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  

@@ -20,15 +20,15 @@ dev_langs: TSQL
 helpviewer_keywords: CREATE RESOURCE POOL
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0d6f56e80b0a28dffab2311df3ecce3b2ac76cd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6da47e346606170b29798b0301c10c5adeeed055
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,16 +67,16 @@ CREATE RESOURCE POOL pool_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *nome_do_pool*  
+ *pool_name*  
  É o nome definido pelo usuário para o pool de recursos. *nome_do_pool* é alfanumérico, pode ter até 128 caracteres, deve ser exclusivo dentro de uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e deve estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
- MIN_CPU_PERCENT =*valor*  
+ MIN_CPU_PERCENT =*value*  
  Especifica a média de largura de banda de CPU garantida para todas as solicitações no pool de recursos quando houver contenção de CPU. *valor* é um inteiro com uma configuração padrão de 0. O intervalo permitido para *valor* é de 0 a 100.  
   
- MAX_CPU_PERCENT =*valor*  
+ MAX_CPU_PERCENT =*value*  
  Especifica a média máxima de largura de banda de CPU que todas as solicitações desse pool de recursos receberão quando houver contenção de CPU. *valor* é um inteiro com uma configuração padrão de 100. O intervalo permitido para *valor* é de 1 a 100.  
   
- CAP_CPU_PERCENT =*valor*  
+ CAP_CPU_PERCENT =*value*  
  **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica uma extremidade rígida na largura de banda de CPU que todas as solicitações no pool de recursos receberão. Limita o nível de largura de banda de CPU máxima para que ele seja igual ao valor especificado. *valor* é um inteiro com uma configuração padrão de 100. O intervalo permitido para *valor* é de 1 a 100.  
@@ -97,25 +97,25 @@ INNER JOIN sys.dm_os_schedulers AS sc
     AND sc.scheduler_id < 1048576;  
 ```  
   
- MIN_MEMORY_PERCENT =*valor*  
+ MIN_MEMORY_PERCENT =*value*  
  Especifica a quantidade mínima de memória reservada para esse pool de recursos que não pode ser compartilhada com outros pools de recursos. *valor* é um inteiro com uma configuração padrão de 0 o intervalo permitido para *valor* é de 0 a 100.  
   
- MAX_MEMORY_PERCENT =*valor*  
+ MAX_MEMORY_PERCENT =*value*  
  Especifica a memória total de servidor que pode ser usada por solicitações nesse pool de recursos. *valor* é um inteiro com uma configuração padrão de 100. O intervalo permitido para *valor* é de 1 a 100.  
   
- MIN_IOPS_PER_VOLUME =*valor*  
+ MIN_IOPS_PER_VOLUME =*value*  
  **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica o mínimo de operações de E/S por segundo (IOPS) por volume de disco para reservar para o pool de recursos. O intervalo permitido para *valor* é de 0 a 2 ^ 31-1 (2.147.483.647). Especifique 0 para indicar nenhum limite mínimo para o pool. O padrão é 0.  
   
- MAX_IOPS_PER_VOLUME =*valor*  
+ MAX_IOPS_PER_VOLUME =*value*  
  **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica o máximo de operações de E/S por segundo (IOPS) por volume de disco para permitir para o pool de recursos. O intervalo permitido para *valor* é de 0 a 2 ^ 31-1 (2.147.483.647). Especifique 0 para definir um limite ilimitado para o pool. O padrão é 0.  
   
  Se o MAX_IOPS_PER_VOLUME para um pool for definido como 0, o pool não será controlado e pode utilizar todos os IOPS no sistema mesmo se outros pools tiverem MIN_IOPS_PER_VOLUME definido. Para esses casos, é recomendável definir o valor de MAX_IOPS_PER_VOLUME para esse pool para um número alto (por exemplo, o valor máximo 2^31-1) se você quiser que esse pool seja controlado para E/S.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  MIN_IOPS_PER_VOLUME e MAX_IOPS_PER_VOLUME especificam as leituras ou gravações mínimas e máximas por segundo. Essas leituras ou gravações podem ser de qualquer tamanho e não indicam a taxa de transferência mínima ou máxima.  
   
  Os valores para MAX_CPU_PERCENT e MAX_MEMORY_PERCENT devem ser maiores ou iguais aos valores de MIN_CPU_PERCENT e MIN_MEMORY_PERCENT, respectivamente.  
@@ -174,7 +174,7 @@ WITH (
  [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)   
- [Pool de recursos do Administrador de Recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
+ [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [Criar um pool de recursos](../../relational-databases/resource-governor/create-a-resource-pool.md)  
   
   

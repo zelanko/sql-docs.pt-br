@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: ALTER WORKLOAD GROUP statement
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0103b63c883e1d3f9a263cf5fdb4e4ef4ca9521f
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: d48a892ef00610cc0d69ff8d2a36e0fce4be7704
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *nome_do_grupo* | "**padrão**"  
+ *group_name* | "**default**"  
  É o nome de um grupo de cargas de trabalho existente, definido pelo usuário, ou o grupo de cargas de trabalho padrão do Administrador de Recursos.  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  IMPORTANCE é local para o pool de recursos; grupos de cargas de trabalho de importâncias diferentes no mesmo pool de recursos afetam uns aos outros, mas não afetam grupos de cargas de trabalho em outro pool de recursos.  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*valor*  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
  Especifica o máximo de memória que uma única solicitação pode usar do pool. Essa porcentagem é relativa ao tamanho do pool de recursos especificado por MAX_MEMORY_PERCENT.  
   
 > [!NOTE]  
@@ -98,7 +98,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 >   
 >  Esteja ciente de que ambos os casos estarão sujeitos ao erro de tempo limite 8645 se a memória física do servidor for insuficiente.  
   
- REQUEST_MAX_CPU_TIME_SEC =*valor*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  Especifica o tempo máximo de CPU, em segundos, que uma solicitação pode usar. *valor* deve ser 0 ou um número inteiro positivo. A configuração padrão para *valor* é 0, o que significa ilimitado.  
   
 > [!NOTE]  
@@ -107,7 +107,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!IMPORTANT]
 > Começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e usando [2422 do sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), administrador de recursos será anular uma solicitação quando o tempo máximo for excedido.
   
- REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*valor*  
+ REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Especifica o tempo máximo, em segundos, que uma consulta pode aguardar pela concessão de memória (memória do buffer de trabalho).  
   
 > [!NOTE]  
@@ -115,7 +115,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  *valor* deve ser um inteiro positivo. A configuração padrão para *valor*, 0, usa um cálculo interno baseado no custo da consulta para determinar o tempo máximo.  
   
- MAX_DOP =*valor*  
+ MAX_DOP =*value*  
  Especifica o DOP (grau máximo de paralelismo) para solicitações paralelas. *valor* deve ser 0 ou um número inteiro positivo, 1 a 255. Quando *valor* é 0, o servidor escolherá o grau máximo de paralelismo. Essa é a configuração padrão e recomendada.  
   
 > [!NOTE]  
@@ -136,7 +136,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  Depois de ser configurado, o DOP só pode ser reduzido sob pressão de concessão de memória. A reconfiguração do grupo de carga de trabalho não é visível durante a espera na fila de concessão de memória.  
   
- GROUP_MAX_REQUESTS =*valor*  
+ GROUP_MAX_REQUESTS =*value*  
  Especifica o número máximo de solicitações simultâneas permitido para execução no grupo de carga de trabalho. *valor* deve ser 0 ou um número inteiro positivo. A configuração padrão para *valor*, 0, permite solicitações ilimitadas. Quando as solicitações simultâneas máximas são alcançadas, um usuário nesse grupo pode fazer logon, mas é colocado em um estado de espera até que as solicitações simultâneas sejam ignoradas abaixo do valor especificado.  
   
  USANDO { *nome_do_pool* | "**padrão**"}  
@@ -191,7 +191,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   

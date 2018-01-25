@@ -13,15 +13,15 @@ ms.assetid: 341e80f5-3b59-4122-bbaa-969d7904297d
 caps.latest.revision: "23"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 46912d3c96c55f07d54cc319f3d397e93e2d4da2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bc3d80c01bc16d6d89bbf3e97ddf88089e9379fd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="microsoft-machine-learning-services"></a>Serviços de aprendizado de máquina da Microsoft
+# <a name="microsoft-machine-learning-services"></a>Serviços de Microsoft Machine Learning
 
 A meta de serviços de aprendizado de máquina do Microsoft é fornecer uma plataforma extensível e escalonável para a integração de ferramentas e tarefas de aprendizado de máquina com os aplicativos que consomem serviços de aprendizado de máquina. A plataforma deve atender às necessidades de todos os usuários envolvidos no processo de análise e desenvolvimento de dados de cientistas de dados para arquitetos e administradores de banco de dados.
 
@@ -62,7 +62,7 @@ Quando você instala o aprendizado de máquina do SQL Server, você obtém uma d
 Para começar, consulte estes recursos:
 
 + [SQL Server R Services](sql-server-r-services.md)
-+ [Serviços de Python do SQL Server](../python/sql-server-python-services.md)
++ [SQL Server Python Services](../python/sql-server-python-services.md)
 + [Tutoriais de aprendizado de máquina](../tutorials/machine-learning-services-tutorials.md)
 
 > [!NOTE]

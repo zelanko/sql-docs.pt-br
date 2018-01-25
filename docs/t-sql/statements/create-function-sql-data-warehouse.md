@@ -16,13 +16,13 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 caps.latest.revision: "14"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 69f4f470cf049deb3ce3b38a2bcb75f37265b31b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4957b8d665f9aa887a5ad4ab18a2e8441ea4cc2d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-function-sql-data-warehouse"></a>Criar função (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -72,7 +72,7 @@ RETURNS return_data_type
  *schema_name*  
  É o nome do esquema ao qual a função definida pelo usuário pertence.  
   
- *nome_da_função*  
+ *function_name*  
  É o nome da função definida pelo usuário. Nomes de função devem estar de acordo com as regras para identificadores e devem ser exclusivos no banco de dados e seu esquema.  
   
 > [!NOTE]  
@@ -91,7 +91,7 @@ RETURNS return_data_type
  *parameter_data_type*  
  É o tipo de dados do parâmetro. Para [!INCLUDE[tsql](../../includes/tsql-md.md)] funções, todos os tipos de dados escalares com suporte no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] são permitidos. O tipo de dados de carimbo de hora (rowversion) não é um tipo com suporte.  
   
- [=*padrão* ]  
+ [ =*default* ]  
  É um valor padrão para o parâmetro. Se um *padrão* valor for definido, a função pode ser executada sem especificar um valor para esse parâmetro.  
   
  Quando um parâmetro da função tiver um valor padrão, a palavra-chave DEFAULT deverá ser especificada quando a função for chamada para recuperar o valor padrão. Esse comportamento é diferente do uso de parâmetros com valores padrão em procedimentos armazenados nos quais a omissão do parâmetro também indica o valor padrão.  
@@ -107,7 +107,7 @@ RETURNS return_data_type
  *scalar_expression*  
  Especifica o valor escalar que a função escalar retorna.  
   
- **\<function_option >:: =** 
+ **\<function_option>::=** 
   
  Especifica que a função terá uma ou mais das opções a seguir.  
   

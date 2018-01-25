@@ -1,5 +1,5 @@
 ---
-title: CRIAR o ASSEMBLY (Transact-SQL) | Microsoft Docs
+title: CREATE ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 8/07/2017
 ms.prod: sql-non-specified
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - assemblies [CLR integration], creating
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 caps.latest.revision: "94"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4e7587bfb20c110dd28e6b59bba0fde1e937cb6e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3f937dc219eb317347cceeafcdcd8753244bcb07
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,18 +61,18 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *nome_do_assembly*  
+ *assembly_name*  
  É o nome do assembly. O nome deve ser exclusivo no banco de dados e uma opção válida [identificador](../../relational-databases/databases/database-identifiers.md).  
   
  AUTORIZAÇÃO *owner_name*  
  Especifica o nome de um usuário ou função como proprietário do assembly. *owner_name* deve ser o nome de uma função da qual o usuário atual é um membro ou o usuário atual deve ter a permissão IMPERSONATE no *owner_name*. Se não estiver especificada, a propriedade será dada ao usuário atual.  
   
- \<client_assembly_specifier >  
+ \<client_assembly_specifier>  
 Especifica o caminho local ou o local da rede onde o assembly que está sendo carregado está localizado e também o nome do arquivo de manifesto que corresponde ao assembly.  \<client_assembly_specifier > pode ser expresso como uma cadeia de caracteres fixa ou uma expressão que avalia para uma cadeia de caracteres fixa, com variáveis. CREATE ASSEMBLY não dá suporte ao carregamento de assemblies de vários módulos. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também procura assemblies dependentes desse assembly no mesmo lugar e os carrega com o mesmo proprietário do assembly do nível raiz. Se esses assemblies dependentes não forem encontrados e eles já não estiverem carregados no banco de dados atual, CREATE ASSEMBLY falhará. Se os assemblies dependentes já estiverem carregados no banco de dados atual, o proprietário deles deve ser o mesmo proprietário do assembly recém-criado.
   
  \<client_assembly_specifier > não pode ser especificado se o usuário conectado que está sendo representado.  
   
- \<assembly_bits >  
+ \<assembly_bits>  
  É a lista de valores binários que compõe o assembly e seus assemblies dependentes. O primeiro valor na lista é considerado o assembly do nível raiz. Os valores correspondentes aos assemblies dependentes podem ser fornecidos em qualquer ordem. Qualquer valor que não corresponda a dependências do assembly raiz será ignorado.  
   
 > [!NOTE]  
@@ -111,7 +111,7 @@ Especifica o caminho local ou o local da rede onde o assembly que está sendo ca
   
  Para obter mais informações sobre conjuntos de permissões de assembly, consulte [projetar Assemblies](../../relational-databases/clr-integration/assemblies-designing.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  CREATE ASSEMBLY carrega um assembly previamente compilado como um arquivo .dll a partir do código gerenciado para uso dentro de uma instância do SQL Server.  
  
 Quando habilitada, a opção `PERMISSION_SET` nas instruções `CREATE ASSEMBLY` e `ALTER ASSEMBLY` é ignorada em tempo de execução, mas as opções `PERMISSION_SET` são preservadas nos metadados. Ignorar a opção minimiza a interrupção de instruções de código existentes.
@@ -193,13 +193,13 @@ WITH PERMISSION_SET = SAFE;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [ALTER ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
- [DROP ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
+ [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
+ [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
- [Criar agregação &#40; Transact-SQL &#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
+ [CREATE AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Cenários de uso e exemplos de Common Language Runtime &#40; CLR &#41; Integração](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
   

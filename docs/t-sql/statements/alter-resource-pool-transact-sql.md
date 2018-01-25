@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: ALTER RESOURCE POOL
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 357dab163aca094928f5c417c605dcb699c922b1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4edf3d8f20cc3705a6303d55f471dfa74c250f74
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,13 +71,13 @@ ALTER RESOURCE POOL { pool_name | "default" }
 > [!NOTE]  
 >  Grupos de cargas de trabalho predefinidos e pools de recursos usam nomes de letras minúsculas, como "padrão". Isso deve ser levado em consideração nos servidores que usam agrupamento com diferenciação de maiúsculas e minúsculas. Os servidores com agrupamento sem diferenciação de maiúsculas e minúsculas, como SQL_Latin1_General_CP1_CI_AS, tratarão "default" e "Default" da mesma maneira.  
   
- MIN_CPU_PERCENT =*valor*  
+ MIN_CPU_PERCENT =*value*  
  Especifica a média de largura de banda de CPU garantida para todas as solicitações no pool de recursos quando houver contenção de CPU. *valor* é um inteiro com uma configuração padrão de 0. O intervalo permitido para *valor* é de 0 a 100.  
   
- MAX_CPU_PERCENT =*valor*  
+ MAX_CPU_PERCENT =*value*  
  Especifica a média máxima de largura de banda de CPU que todas as solicitações do pool de recursos receberão quando houver contenção de CPU. *valor* é um inteiro com uma configuração padrão de 100. O intervalo permitido para *valor* é de 1 a 100.  
   
- CAP_CPU_PERCENT =*valor*  
+ CAP_CPU_PERCENT =*value*  
  **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica a capacidade de CPU máxima do destino para solicitações no pool de recursos. *valor* é um inteiro com uma configuração padrão de 100. O intervalo permitido para *valor* é de 1 a 100.  
@@ -102,25 +102,25 @@ INNER JOIN sys.dm_os_schedulers AS sc
       AND sc.scheduler_id < 1048576;  
 ```  
   
- MIN_MEMORY_PERCENT =*valor*  
+ MIN_MEMORY_PERCENT =*value*  
  Especifica a quantidade mínima de memória reservada para esse pool de recursos que não pode ser compartilhada com outros pools de recursos. *valor* é um inteiro com uma configuração padrão de 0. O intervalo permitido para *valor* é de 0 a 100.  
   
- MAX_MEMORY_PERCENT =*valor*  
+ MAX_MEMORY_PERCENT =*value*  
  Especifica a memória total de servidor que pode ser usada por solicitações nesse pool de recursos. *valor* é um inteiro com uma configuração padrão de 100. O intervalo permitido para *valor* é de 1 a 100.  
   
- MIN_IOPS_PER_VOLUME =*valor*  
+ MIN_IOPS_PER_VOLUME =*value*  
  **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica o mínimo de operações de E/S por segundo (IOPS) por volume de disco para reservar para o pool de recursos. O intervalo permitido para *valor* é de 0 a 2 ^ 31-1 (2.147.483.647). Especifique 0 para indicar nenhum limite mínimo para o pool.  
   
- MAX_IOPS_PER_VOLUME =*valor*  
+ MAX_IOPS_PER_VOLUME =*value*  
  **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica o máximo de operações de E/S por segundo (IOPS) por volume de disco para permitir para o pool de recursos. O intervalo permitido para *valor* é de 0 a 2 ^ 31-1 (2.147.483.647). Especifique 0 para definir um limite ilimitado para o pool. O padrão é 0.  
   
  Se o MAX_IOPS_PER_VOLUME para um pool for definido como 0, o pool não será controlado e pode utilizar todos os IOPS no sistema mesmo se outros pools tiverem MIN_IOPS_PER_VOLUME definido. Para esses casos, é recomendável definir o valor de MAX_IOPS_PER_VOLUME para esse pool para um número alto (por exemplo, o valor máximo 2^31-1) se você quiser que esse pool seja controlado para E/S.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  MAX_CPU_PERCENT e MAX_MEMORY_PERCENT devem ser maior que ou igual a MIN_CPU_PERCENT e MIN_MEMORY_PERCENT, respectivamente.  
   
  MAX_CPU_PERCENT pode usar a capacidade da CPU acima do valor de MAX_CPU_PERCENT quando ela está disponível. Embora possa haver picos periódicos acima CAP_CPU_PERCENT, cargas de trabalho não devem exceder CAP_CPU_PERCENT por longos períodos de tempo, mesmo quando a capacidade de CPU adicional está disponível.  

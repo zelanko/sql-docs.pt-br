@@ -19,15 +19,15 @@ helpviewer_keywords:
 - DB-Library bulk copy
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df98f0513252765781d2030b1597aec50bbd246e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: abdb8b529914a3ebb09ed0d5d933c30e0ef43f9d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Convertendo de cópia em massa DB-Library em ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
 -   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client não dá suporte a identificadores de erros e mensagens de DB-Library; você deve chamar **SQLGetDiagRec** para obter erros e as mensagens geradas pelas funções de cópia em massa do ODBC. As versões ODBC das funções de cópia em massa retornam os códigos de retorno padrão da cópia em massa, SUCCEED ou FAILED, e não os códigos de retorno ODBC, como SQL_SUCCESS ou SQL_ERROR.  
   
--   Os valores especificados para a biblioteca de banco de dados [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* parâmetro são interpretados de forma diferente de ODBC **bcp_bind***cbData*parâmetro.  
+-   Os valores especificados para a biblioteca de banco de dados [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* parâmetro são interpretados de forma diferente de ODBC **bcp_bind * cbData* parâmetro.  
   
     |Condição indicada|DB-Library *varlen* valor|ODBC *cbData* valor|  
     |-------------------------|--------------------------------|-------------------------|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/08/2018
   
      Em DB-Library, um *varlen* valor -1 indica que dados de comprimento variável estão sendo fornecidos, que no ODBC *cbData* significa que somente valores NULL estão sendo fornecidos. Alterar qualquer DB-Library *varlen* especificações de -1 para SQL_VARLEN_DATA e qualquer *varlen* especificações de 0 para SQL_NULL_DATA.  
   
--   O DB-Library **bcp_colfmt***file_collen* e ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData* têm o mesmo problema que o  **bcp_bind***varlen* e *cbData* parâmetros indicado acima. Alterar qualquer DB-Library *file_collen* especificações de -1 para SQL_VARLEN_DATA e qualquer *file_collen* especificações de 0 para SQL_NULL_DATA.  
+-   O DB-Library  **bcp_colfmt * file_collen* e ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData * têm o mesmo problema que o **bcp_bind * varlen*e *cbData* parâmetros indicado acima. Alterar qualquer DB-Library *file_collen* especificações de -1 para SQL_VARLEN_DATA e qualquer *file_collen* especificações de 0 para SQL_NULL_DATA.  
   
 -   O *iValue* parâmetro do ODBC [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) função é um ponteiro nulo. Em DB-Library, *iValue* era um inteiro. Converter os valores do ODBC *iValue* para void *.  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Na saída **money** valores em formato de caractere, ODBC bulk copy funções fornecem quatro dígitos de precisão e sem separadores de vírgula; Versões DB-Library apenas fornecem dois dígitos de precisão e incluem os separadores de vírgula.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Executando operações de cópia em massa &#40; ODBC &#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
  [Funções de cópia em massa](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
