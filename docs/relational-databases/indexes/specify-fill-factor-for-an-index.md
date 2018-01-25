@@ -16,15 +16,15 @@ helpviewer_keywords:
 - page splits [SQL Server]
 ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a5d92a3e54da02194fa104d38a7440c9f191462b
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: d7852414828385eb9758f310bf0cb95800656c63
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Especificar fator de preenchimento para um índice
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.lasthandoff: 12/21/2017
   
 7.  Clique em **Fechar**.  
   
-8.  No menu **Arquivo** , selecione **Salvar***table_name*.  
+8.  No menu **Arquivo**, selecione **Salvar***table_name*.  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>Para especificar um fator de preenchimento em um índice usando o Pesquisador de Objetos  
   

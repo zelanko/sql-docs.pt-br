@@ -25,11 +25,11 @@
 
 # [Migrar pacotes do SSIS por lift-and-shift para o Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
 ## [Tutorial – implantar, executar e monitorar um pacote no Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-## [Conectar-se ao catálogo do SSIS no Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
-## [Agendar a execução do pacote no Azure](lift-shift/ssis-azure-schedule-packages.md)
-## [Validar pacotes implantados no Azure](lift-shift/ssis-azure-validate-packages.md)
 ## [Conectar-se a fontes de dados com a autenticação do Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [Conectar aos arquivos e compartilhamentos de arquivo](lift-shift/ssis-azure-files-file-shares.md)
+## [Validar pacotes implantados no Azure](lift-shift/ssis-azure-validate-packages.md)
+## [Conectar-se ao catálogo do SSIS no Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [Agendar a execução do pacote no Azure](lift-shift/ssis-azure-schedule-packages.md)
 
 # [Instalar ou atualizar](../integration-services/install-windows/install-integration-services.md)
 
@@ -175,11 +175,8 @@
 #### [Lição 3-3 – testar os pacotes implantados](lesson-3-3-testing-the-deployed-packages.md)
 
 # Recursos
-## Siga o blog
-### [Blog da equipe do SSIS](https://blogs.msdn.microsoft.com/ssis/)
-## Obter ajuda
-### [Fórum do SSIS no MSDN](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
-### [Marca do SSIS no Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
-## Faça comentários
-### [Fórum de comentários do SQL Server](https://feedback.azure.com/forums/908035-sql-server)  
+## [Obter ajuda no fórum do SSIS](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+## [Obter ajuda no Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+## [Seguir o blog da equipe do SSIS](https://blogs.msdn.microsoft.com/ssis/)
+## [Relatar problemas e solicitar recursos](https://feedback.azure.com/forums/908035-sql-server)
 ## [Obter os documentos em seu computador](../sql-server/sql-server-help-installation.md)
