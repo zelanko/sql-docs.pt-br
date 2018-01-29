@@ -1,10 +1,10 @@
 ---
-title: Configurar o grupo de disponibilidade para o SQL Server no Linux | Microsoft Docs
+title: Configurar SQL Server sempre no grupo de disponibilidade para alta disponibilidade no Linux | Microsoft Docs
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.date: 06/14/2017
+ms.date: 01/24/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,32 +15,32 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: e75ae9a6f3c48f0ece0c95be9f3836c8205a1b8c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c510789ccd2c76e2d4e3b7bd8354a46e80e335c2
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="configure-always-on-availability-group-for-sql-server-on-linux"></a>Configurar o grupo de disponibilidade do AlwaysOn para SQL Server no Linux
+# <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurar SQL Server sempre no grupo de disponibilidade para alta disponibilidade no Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Este artigo descreve como criar um SQL Server AlwaysOn no grupo de disponibilidade para alta disponibilidade no Linux. Há dois tipos de configuração para grupos de disponibilidade. Um *alta disponibilidade* configuração usa um Gerenciador de cluster para fornecer continuidade de negócios. Essa configuração também pode incluir réplicas de escala de leitura. Este documento explica como criar a configuração de alta disponibilidade do grupo de disponibilidade.
+Este artigo descreve como criar um SQL Server sempre na disponibilidade de grupo (AG) para alta disponibilidade no Linux. Há dois tipos de configuração para grupos de disponibilidade. Um *alta disponibilidade* configuração usa um Gerenciador de cluster para fornecer continuidade de negócios. Essa configuração também pode incluir réplicas de escala de leitura. Este documento explica como criar o grupo de disponibilidade para alta disponibilidade.
 
-Você também pode criar um *leitura escala* grupo de disponibilidade sem um Gerenciador de cluster. Essa configuração fornece apenas réplicas somente leitura para expansão de desempenho. Ele não fornece alta disponibilidade. Para criar um grupo de disponibilidade de escala de leitura, consulte [configurar o grupo de disponibilidade de escala de leitura para o SQL Server no Linux](sql-server-linux-availability-group-configure-rs.md).
+Você também pode criar um grupo de disponibilidade sem um cluster de Gerenciador para *leitura escala*. O grupo de disponibilidade para a escala de leitura somente fornece réplicas somente leitura para expansão de desempenho. Ele não fornece alta disponibilidade. Para criar um grupo de disponibilidade para a escala de leitura, consulte [configurar um grupo de disponibilidade do SQL Server para a escala de leitura no Linux](sql-server-linux-availability-group-configure-rs.md).
 
-Configurações que garantem alta disponibilidade e proteção de dados necessitam de réplicas de confirmação de duas ou três síncrona. Com três réplicas síncronas o grupo de disponibilidade podem automaticamente recuperação mesmo que um servidor não está disponível. Para obter mais informações, consulte [alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade](sql-server-linux-availability-group-ha.md). 
+Configurações que garantem alta disponibilidade e proteção de dados necessitam de réplicas de confirmação de duas ou três síncrona. Com três réplicas síncronas, o grupo de disponibilidade pode recuperar automaticamente mesmo se um servidor não está disponível. Para obter mais informações, consulte [alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade](sql-server-linux-availability-group-ha.md). 
 
 Todos os servidores devem ser físicos ou virtuais e servidores virtuais devem ter a mesma plataforma de virtualização. Esse requisito é como os agentes de isolamento são específicas à plataforma. Consulte [políticas para Clusters convidados](https://access.redhat.com/articles/29440#guest_policies).
 
 ## <a name="roadmap"></a>Roadmap
 
-As etapas para criar um grupo de disponibilidade em servidores Linux para alta disponibilidade são diferentes das etapas em um cluster de failover do Windows Server. A lista a seguir descreve as etapas de alto níveis: 
+As etapas para criar um grupo de disponibilidade em servidores Linux para alta disponibilidade são diferentes das etapas em um cluster de failover do Windows Server. A lista a seguir descreve as etapas de alto nível: 
 
 1. [Configurar o SQL Server em três servidores de cluster](sql-server-linux-setup.md).
 
    >[!IMPORTANT]
-   >Todos os três servidores no grupo de disponibilidade precisam ser a mesma plataforma - físico ou virtual - como alta disponibilidade do Linux usa agentes de isolamento para isolar recursos de servidores. Os agentes de isolamento são específicos para cada plataforma.
+   >Todos os três servidores do grupo de disponibilidade precisam ser a mesma plataforma - físico ou virtual - como alta disponibilidade do Linux usa agentes de isolamento para isolar recursos de servidores. Os agentes de isolamento são específicos para cada plataforma.
 
 2. Crie o grupo de disponibilidade. Esta etapa é abordada neste artigo atual. 
 
@@ -69,15 +69,18 @@ As etapas para criar um grupo de disponibilidade em servidores Linux para alta d
 
 [!INCLUDE [Create Prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
-## <a name="create-the-availability-group"></a>Criar o grupo de disponibilidade
+## <a name="create-the-ag"></a>Criar o grupo de disponibilidade
 
-Há duas configurações de grupo de disponibilidade com suporte para o SQL Server no Linux.
+Para uma configuração de alta disponibilidade que garante que o failover automático, o grupo de disponibilidade requer pelo menos três réplicas. Qualquer uma das configurações a seguir pode dar suporte a alta disponibilidade:
 
 - [Três réplicas síncronas](sql-server-linux-availability-group-ha.md#threeSynch)
 
-- [Duas réplicas síncronas](sql-server-linux-availability-group-ha.md#twoSynch)
+- [Duas réplicas síncronas mais uma réplica de configuração](sql-server-linux-availability-group-ha.md#twoSynch)
 
 Para obter informações, consulte [alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade](sql-server-linux-availability-group-ha.md).
+
+>[!NOTE]
+>Os grupos de disponibilidade podem incluir mais de réplicas síncronas ou assíncronas. 
 
 Crie o grupo de disponibilidade para alta disponibilidade no Linux. Use o [criar grupo de disponibilidade](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-availability-group-transact-sql) com `CLUSTER_TYPE = EXTERNAL`. 
 
@@ -86,7 +89,7 @@ Crie o grupo de disponibilidade para alta disponibilidade no Linux. Use o [criar
 * Conjunto de réplicas primárias e secundárias `FAILOVER_MODE = EXTERNAL`. 
    Especifica que a réplica interage com um Gerenciador de cluster externo, como Pacemaker. 
 
-Os scripts de Transact-SQL a seguir cria um grupo de disponibilidade para alta disponibilidade chamado `ag1`. O script configura as réplicas de grupo de disponibilidade com `SEEDING_MODE = AUTOMATIC`. Essa configuração faz com que o SQL Server criar automaticamente o banco de dados em cada servidor secundário. Atualize o script a seguir para o seu ambiente. Substitua o `**<node1>**`, `**<node2>**`, ou `**<node3>**` valores com os nomes das instâncias do SQL Server que hospedam as réplicas. Substitua o `**<5022>**` com a porta que você definiu para os ponto de extremidade do espelhamento de dados. Para criar o grupo de disponibilidade, execute o Transact-SQL a seguir na instância do SQL Server que hospeda a réplica primária.
+Os scripts de Transact-SQL a seguir criam um grupo de disponibilidade para alta disponibilidade chamado `ag1`. O script configura as réplicas de AG com `SEEDING_MODE = AUTOMATIC`. Essa configuração faz com que o SQL Server criar automaticamente o banco de dados em cada servidor secundário. Atualize o script a seguir para o seu ambiente. Substitua o `**<node1>**`, `**<node2>**`, ou `**<node3>**` valores com os nomes das instâncias do SQL Server que hospedam as réplicas. Substitua o `**<5022>**` com a porta que você definiu para os ponto de extremidade do espelhamento de dados. Para criar o grupo de disponibilidade, execute o Transact-SQL a seguir na instância do SQL Server que hospeda a réplica primária.
 
 Executar **apenas um** dos scripts a seguir: 
 
@@ -189,9 +192,9 @@ Executar **apenas um** dos scripts a seguir:
 
 Você também pode configurar um grupo de disponibilidade com `CLUSTER_TYPE=EXTERNAL` usando o SQL Server Management Studio ou PowerShell. 
 
-### <a name="join-secondary-replicas-to-the-availability-group"></a>Unir réplicas secundárias ao grupo de disponibilidade
+### <a name="join-secondary-replicas-to-the-ag"></a>Unir réplicas secundárias para o grupo de disponibilidade
 
-Script Transact-SQL a seguir une a uma instância do SQL Server a um grupo de disponibilidade denominado `ag1`. Atualize o script para o seu ambiente. Em cada instância do SQL Server que hospeda uma réplica secundária, execute o seguinte Transact-SQL para ingressar no grupo de disponibilidade.
+Script Transact-SQL a seguir une a uma instância do SQL Server para um grupo de disponibilidade denominado `ag1`. Atualize o script para o seu ambiente. Em cada instância do SQL Server que hospeda uma réplica secundária, execute o seguinte Transact-SQL para unir o grupo de disponibilidade.
 
 ```Transact-SQL
 ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -204,12 +207,12 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 >[!IMPORTANT]
 >Depois de criar o grupo de disponibilidade, você deve configurar a integração com uma tecnologia de cluster como Pacemaker para alta disponibilidade. Para uma configuração de escala de leitura usando grupos de disponibilidade, começando com [!INCLUDE [SQL Server version](..\includes\sssqlv14-md.md)], não é necessário configurar um cluster.
 
-Se você seguiu as etapas neste documento, você tem um grupo de disponibilidade ainda não está clusterizado. A próxima etapa é adicionar o cluster. Essa configuração é inválida para cenários de balanceamento de carga-de escala de leitura, ele não foi concluído para alta disponibilidade. Para alta disponibilidade, você precisa adicionar o grupo de disponibilidade como um recurso de cluster. Consulte [próximas etapas](#next-steps) para obter instruções. 
+Se você seguiu as etapas neste documento, você tem um grupo de disponibilidade que ainda não está clusterizado. A próxima etapa é adicionar o cluster. Essa configuração é inválida para cenários de balanceamento de carga-de escala de leitura, ele não foi concluído para alta disponibilidade. Para alta disponibilidade, você precisa adicionar o grupo de disponibilidade como um recurso de cluster. Consulte [próximas etapas](#next-steps) para obter instruções. 
 
 ## <a name="notes"></a>Observações
 
 >[!IMPORTANT]
->Depois de configurar o cluster e adicione o grupo de disponibilidade como um recurso de cluster, você não pode usar o Transact-SQL para fazer failover os recursos do grupo de disponibilidade. Recursos de cluster do SQL Server no Linux não estão ligados como intimamente com o sistema operacional como estão em um Cluster de Failover do Windows Server (WSFC). Serviço do SQL Server não está ciente da presença do cluster. Orquestração todos é feita por meio das ferramentas de gerenciamento de cluster. Em RHEL ou Ubuntu usar `pcs`. SLES usar `crm`. 
+>Depois de configurar o cluster e adicione o grupo de disponibilidade como um recurso de cluster, você não pode usar o Transact-SQL para faça failover dos recursos do AG. Recursos de cluster do SQL Server no Linux não estão ligados como intimamente com o sistema operacional como estão em um Cluster de Failover do Windows Server (WSFC). Serviço do SQL Server não está ciente da presença do cluster. Orquestração todos é feita por meio das ferramentas de gerenciamento de cluster. Em RHEL ou Ubuntu usar `pcs`. SLES usar `crm`. 
 
 >[!IMPORTANT]
 >Se o grupo de disponibilidade é um recurso de cluster, há um problema conhecido na versão atual, em que o failover forçado com perda de dados para uma réplica assíncrona não funciona. Isso será corrigido na próxima versão. Failover manual ou automático para uma réplica de síncrona terá êxito. 

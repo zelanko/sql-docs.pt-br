@@ -1,5 +1,5 @@
 ---
-title: "Instrução ALTER INDEX (Transact-SQL) | Microsoft Docs"
+title: ALTER INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/24/2017
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: tsql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
-dev_langs: t-sql
+dev_langs:
+- t-sql
 helpviewer_keywords:
 - indexes [SQL Server], reorganizing
 - ALTER INDEX statement
@@ -46,16 +48,16 @@ helpviewer_keywords:
 - index rebuild [SQL Server]
 - index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: "222"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 24c7f8121439958cd9d0d4f17254b0520cbaa857
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: a5bf734d607c6954c1652df9b9814a31b2224740
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -244,13 +246,13 @@ PARTITION
 > [!WARNING]
 >  É possível criar e reconstruir índices não alinhados em uma tabela com mais de 1.000 partições, mas não há suporte para isso. Fazer isso pode provocar degradação do desempenho ou consumo excessivo de memória durante essas operações. É recomendável usar índices alinhados apenas quando o número de partições for maior que 1.000.  
   
- *número_da_partição*  
+ *partition_number*  
    
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  É o número de partição de um índice particionado que será reconstruído ou reorganizado. *número_da_partição* é uma expressão constante que pode fazer referência a variáveis. Isso inclui variáveis de tipo definido pelo usuário ou funções e funções definidas pelo usuário, mas não é possível fazer referência a uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. *número_da_partição* deve existir ou a instrução falhará.  
   
- COM **(**\<single_partition_rebuild_index_option >**)**  
+ WITH **(**\<single_partition_rebuild_index_option>**)**  
    
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -307,7 +309,10 @@ Para índices columnstore em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
 -   Para rowgroups em que 10% ou mais linhas foram excluídas logicamente, SQL Server tenta combinar esse grupo de linhas com um ou mais rowgroups.    Por exemplo, 1 do rowgroup é compactado com 500.000 linhas e linhas 21 é compactada com o máximo de 1.048.576 linhas.  21 de grupo de linhas tem 60% das linhas excluídas que deixa 409,830 linhas. SQL Server favorece combinar essas duas rowgroups para compactar um grupo de linhas novas com 909,830 linhas.  
   
 REORGANIZAR COM (COMPRESS_ALL_ROW_GROUPS = {ON | **OFF** })  
- Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)], o COMPRESS_ALL_ROW_GROUPS fornece uma maneira para forçar os rowgroups delta aberto ou fechado para o columnstore. Com essa opção, não é necessário recriar o índice columnstore para esvaziar os rowgroups delta.  Isso, combinado com o outros remover e mesclagem desfragmentação recursos torna não é mais necessário reconstruir o índice na maioria das situações.    
+
+ **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e[!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+
+COMPRESS_ALL_ROW_GROUPS fornece uma maneira para forçar os rowgroups delta aberto ou fechado para o columnstore. Com essa opção, não é necessário recriar o índice columnstore para esvaziar os rowgroups delta.  Isso, combinado com o outros remover e mesclagem desfragmentação recursos torna não é mais necessário reconstruir o índice na maioria das situações.    
 
 -   ON força todos os rowgroups do ColumnStore, independentemente do tamanho e estado (FECHADAS ou ABERTAS).  
   
@@ -330,7 +335,7 @@ PAD_INDEX = { ON | OFF }
   
  Para obter mais informações, consulte [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
-FILLFACTOR = *fator de preenchimento*  
+FILLFACTOR = *fillfactor*  
  
  **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
@@ -343,7 +348,7 @@ FILLFACTOR = *fator de preenchimento*
 > [!IMPORTANT]
 >  A criação ou alteração de um índice clusterizado com um valor FILLFACTOR afeta a quantidade de espaço de armazenamento que os dados ocupam, pois o [!INCLUDE[ssDE](../../includes/ssde-md.md)] redistribui os dados quando cria o índice clusterizado.  
   
- SORT_IN_TEMPDB = {ON | **OFF** }  
+ SORT_IN_TEMPDB = { ON | **OFF** }  
  
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -578,13 +583,13 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  Uma recriação de índice online precisa aguardar as operações de bloqueio nesta tabela. **WAIT_AT_LOW_PRIORITY** indica que a operação de recriação de índice online aguardará bloqueios de baixa prioridade, permitindo que outras operações continuem enquanto a operação de compilação de índice online estiver aguardando. A omissão de **WAIT AT LOW PRIORITY** opção é equivalente a `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Para obter mais informações, consulte [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
   
- MAX_DURATION = *tempo* [**minutos**]  
+ MAX_DURATION = *time* [**MINUTES**]  
   
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  O tempo (um valor inteiro especificado em minutos) que a opção ou os bloqueios de recompilação de índice online deverão aguardar com baixa prioridade ao executar o comando DDL. Se a operação está bloqueada para o **MAX_DURATION** de tempo, uma da **ABORT_AFTER_WAIT** ações serão executadas. **MAX_DURATION** hora é sempre em minutos e a palavra **minutos** pode ser omitido.  
  
- ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOQUEADORES** }]  
+ ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
    
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
@@ -880,9 +885,9 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. Compactar todos os abertos e FECHADOS delta rowgroups do ColumnStore  
- Não é aplicável a: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+ **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você pode executar REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) para compactar cada rowgroup delta aberto e fechado para o columnstore como um rowgroup compactado. Isso esvaziará o deltastore e força todas as linhas para obter compactados no columnstore. Isso é útil principalmente depois de executar várias operações de inserção, desde que essas operações armazenam as linhas de um ou mais deltastores.  
+ O comando REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) compreses cada abertos e FECHADOS rowgroup delta para o columnstore como um rowgroup compactado. Isso esvaziará o deltastore e força todas as linhas para obter compactados no columnstore. Isso é útil principalmente depois de executar várias operações de inserção, desde que essas operações armazenam as linhas de um ou mais deltastores.  
   
  REORGANIZE combina rowgroups para preencher rowgroups até um número máximo de linhas \<= 1,024,576. Portanto, ao compactar todos os rowgroups aberto e fechado você não acabará com muita rowgroups compactados que têm apenas algumas linhas neles. Você deseja que rowgroups seja tão completo quanto possível reduzir o tamanho compactado e melhorar o desempenho de consulta.  
   
@@ -1163,11 +1168,11 @@ Para obter exemplos de compactação de dados adicionais, consulte [compactaçã
    ALTER INDEX test_idx on test_table ABORT ;
    ``` 
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [Criar índice ESPACIAL &#40; Transact-SQL &#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
- [Criar índice XML &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
- [DROP INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/drop-index-transact-sql.md)   
+ [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
+ [CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
+ [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)   
  [Desabilitar índices e restrições](../../relational-databases/indexes/disable-indexes-and-constraints.md)   
  [Índices XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [Executar operações de índice Online](../../relational-databases/indexes/perform-index-operations-online.md)   

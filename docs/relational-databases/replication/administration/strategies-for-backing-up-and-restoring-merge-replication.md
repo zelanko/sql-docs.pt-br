@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - restoring [SQL Server replication], merge replication
 - merge replication [SQL Server replication], backup and restore
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
-caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e93e06006d649fac0046a2e2df8953d9356acfa5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5690ea80bfe12a6995e80987e11bdaa59a30d150
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Estratégias para fazer backup e restaurar a replicação de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para replicação de mesclagem, faça backup dos seguintes bancos de dados regularmente:  
@@ -97,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>Fazendo backup e restaurando um banco de dados de republicação  
  Quando um banco de dados assina os dados de um Publicador e, por sua vez, publica os mesmos dados em outros bancos de dados de assinatura, isso é chamado de banco de dados de republicação. Ao restaurar um banco de dados de republicação, siga as diretrizes descritas em "Fazendo backup e restaurando um banco de dados de publicação" e "Fazendo backup e restaurando um banco de dados de assinatura" neste tópico.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Backup e Restauração de bancos de dados do SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Fazer backup e restaurar bancos de dados replicados](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
   

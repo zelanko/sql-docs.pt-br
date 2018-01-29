@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: "41"
-ms.openlocfilehash: 234c1ee3b13f3440e3f8a0377f3423ccf937acbc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 
+ms.openlocfilehash: cc95a4f26970b91f2346e3edfcfa937190694b43
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configure-windows-server-update-services-wsus"></a>Configurar o Windows Server Update Services (WSUS)
 Essas instruções orientam você durante as etapas para usar o Assistente de configuração do Windows Server Update Services (WSUS) para configurar o WSUS para Analytics Platform System. Você precisa configurar o WSUS antes de aplicar as atualizações de software para o dispositivo. WSUS já está instalado na máquina virtual do VMM do dispositivo.  
@@ -61,7 +61,7 @@ Para configurar o WSUS, você precisa:
   
     1.  No **painel do Gerenciador do servidor**, no **ferramentas** menu, clique em **Windows Server Update Services**.  
   
-    2.  No painel esquerdo do **Update Services** janela, clique para expandir o servidor de gerenciamento de máquinas virtuais do nó (***appliance_domain*- VMM**) e, em seguida, clique em **Opções**.  
+    2.  No painel esquerdo do **Update Services** janela, clique para expandir o servidor de gerenciamento de máquinas virtuais do nó (***appliance_domain *-VMM**) e, em seguida, clique em **opções**.  
   
     3.  No **opções** painel, clique em **Assistente de configuração do servidor do WSUS** para iniciar o Assistente de configuração.  
   
@@ -113,7 +113,7 @@ Para configurar o WSUS, você precisa:
   
     Se este servidor requer um servidor proxy para acessar o Microsoft Update ou outro servidor upstream, você pode configurar as configurações do servidor proxy aqui. Caso contrário, clique em **próximo**.  
   
-    ![Proxy WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
+    ![WSUS Proxy](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
   
     #### <a name="to-configure-proxy-server-settings"></a>Para definir configurações de servidor proxy  
   
@@ -148,7 +148,7 @@ Para configurar o WSUS, você precisa:
   
     Cancele a seleção de todas as atualizações selecionadas.  
   
-    Selecione **SQL Server 2014**, **Windows Server 2012 R2**, e **System Center 2012 R2 - Virtual Machine Manager**e, em seguida, clique em **próximo**.  
+    Selecione **do SQL Server 2014**, **do SQL Server 2016**, **Windows Server 2012 R2**, e **System Center 2012 R2 - Virtual Machine Manager**, e em seguida, clique em **próximo**.  
   
 9. Escolha as classificações.  
   
@@ -165,7 +165,7 @@ Para configurar o WSUS, você precisa:
   
     Selecione **sincronizar manualmente**e, em seguida, clique em **próximo**.  
   
-    ![Definir agenda de sincronização](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSyncSchedule.png "SQL_Server_PDW_WSUSSyncSchedule")  
+    ![Set sync schedule](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSyncSchedule.png "SQL_Server_PDW_WSUSSyncSchedule")  
   
 11. Começar a sincronização inicial.  
   
@@ -201,7 +201,7 @@ Depois de configurar o WSUS para Analytics Platform System, a próxima etapa é 
   
 5.  Selecione o novo grupo de computadores que você criou clicando na caixa de seleção e, em seguida, clicando em **Okey**.  
   
-    ![Associação de grupo de computadores do conjunto](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
+    ![Set Computer Group Membership](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
   
 6.  Selecione o novo grupo de computadores, alterar seu **Status** para **qualquer**e, em seguida, clique em **atualizar**. Todos os computadores agora devem ser atribuídos a esse grupo e listados no painel direito. Geralmente é seguro continuar quando nós mostram avisos como **esse nó não relatou o status ainda**.  
   
