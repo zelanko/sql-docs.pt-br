@@ -11,15 +11,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: a5277d975380f135003bb7f8a11eec8641374f07
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 781622d51b7112d3a501652b7c320ab27e74ae35
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>Provisionar uma máquina virtual para o aprendizado de máquina do Azure
 
@@ -85,9 +85,7 @@ Para obter mais informações, consulte [instalando o SQL Server R Services em u
 
 ### <a name="using-machine-learning-in-azure-sql-database"></a>Usando o aprendizado de máquina no banco de dados do SQL Azure
 
-A partir de ficar 2017, banco de dados do SQL Azure oferece suporte ao uso de R para treinar modelos e usá-los para previsão. 
-
-Serviços de R no banco de dados está disponível como um recurso de visualização e tem algumas limitações em comparação com a edição no local do SQL Server. Para obter mais informações, consulte [Azure SQL DB](../r/using-r-in-azure-sql-database.md).
+A visualização de suporte de R no SQL Azure está suspensa no momento, para o trabalho de desenvolvimento contínuo. Para obter mais informações, consulte [Azure SQL DB](../r/using-r-in-azure-sql-database.md).
 
 ### <a name="can-i-upgrade-the-sql-server-version-on-a-virtual-machine"></a>Posso atualizar a versão do SQL Server em uma máquina virtual?
 

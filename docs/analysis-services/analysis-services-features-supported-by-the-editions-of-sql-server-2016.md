@@ -12,18 +12,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f09d7be1-bd63-43f8-b91c-bf19166b4457
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0b69db6baee27296bf9544801b627c884d68795b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 14c64237e32d433592f44fcbd0d56bd661cc4940
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="analysis-services-features-supported-by-the-editions-of-sql-server-2016"></a>Recursos do Analysis Services com suporte nas edições do SQL Server 2016
+# <a name="analysis-services-features-supported-by-sql-server-editions"></a>Recursos do Analysis Services com suporte nas edições do SQL Server
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
 Este tópico fornece detalhes de recursos com suporte nas diferentes edições do SQL Server 2016 Analysis Services. Para os recursos com suporte nas edições Evaluation e Developer, consulte Enterprise edition.
@@ -44,8 +44,8 @@ Este tópico fornece detalhes de recursos com suporte nas diferentes edições d
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Hierarquias|Sim|Sim|||||Sim|  
 |KPIs|Sim|Sim|||||Sim|  
-|perspectivas|Sim||||||Sim|  
-|Translations|Sim|Sim|||||Sim|  
+|Perspectivas|Sim||||||Sim|  
+|Traduções|Sim|Sim|||||Sim|  
 |Cálculos DAX, consultas DAX, consultas MDX|Sim|Sim|||||Sim|  
 |Segurança em nível de linha|Sim|Sim|||||Sim|  
 |Várias partições|Sim||||||Sim|  
@@ -59,7 +59,7 @@ Este tópico fornece detalhes de recursos com suporte nas diferentes edições d
 |Medidas semiaditivas|Sim|Não <sup>1</sup>|||||Sim|  
 |Hierarquias|Sim|Sim|||||Sim|  
 |KPIs|Sim|Sim|||||Sim|  
-|perspectivas|Sim||||||Sim|  
+|Perspectivas|Sim||||||Sim|  
 |Ações|Sim|Sim|||||Sim|  
 |Inteligência de conta|Sim|Sim|||||Sim|  
 |Inteligência de dados temporais|Sim|Sim|||||Sim|  
@@ -71,7 +71,7 @@ Este tópico fornece detalhes de recursos com suporte nas diferentes edições d
 |Tipos de hierarquia avançados (pai-filho e hierarquias desbalanceadas)|Sim|Sim|||||Sim|  
 |Dimensões avançadas (Dimensões de referência, dimensões muitos-para-muitos)|Sim|Sim|||||Sim|  
 |Medidas e dimensões vinculadas|Sim|Sim  <sup>2</sup> |||||Sim|  
-|Translations|Sim|Sim|||||Sim|  
+|Traduções|Sim|Sim|||||Sim|  
 |Agregações|Sim|Sim|||||Sim|  
 |Várias partições|Sim|Sim, até 3|||||Sim|  
 |Cache pró-ativo|Sim||||||Sim|  
@@ -122,6 +122,6 @@ Este tópico fornece detalhes de recursos com suporte nas diferentes edições d
   
  ## <a name="see-also"></a>Consulte também  
  [Especificações do produto para SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
- [Instalação do SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)  
+ [Instalação do SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
 
 

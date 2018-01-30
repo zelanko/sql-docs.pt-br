@@ -12,23 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6e2dad4e17ebee4497c4e62f15c5706affb62182
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6d745e0de3f7d18571d904a31cf34a8e30217555
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Verifique uma Instalação do Power Pivot para SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Um [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint instância instalada em um farm do SharePoint é administrada por meio da Administração Central do SharePoint. É possível, ao menos, verificar as páginas na Administração Central e nos sites do SharePoint para verificar a disponibilidade dos componentes e recursos do servidor [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . No entanto, para verificar integralmente uma instalação, você deve ter uma pasta de trabalho [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] que possa publicar no SharePoint e acessar em uma biblioteca. Para fins de teste, é possível publicar uma pasta de trabalho de exemplo que já contenha dados do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e usá-la para confirmar se essa integração com o SharePoint está configurada corretamente.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
+
   
 ##  <a name="verifyinstall"></a> Verificar a integração da Administração Central  
  Para verificar a integração do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] com a Administração Central, faça o seguinte:  

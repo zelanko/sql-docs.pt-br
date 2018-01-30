@@ -14,41 +14,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7528721b65101ee32285d57f18f93f98eeec9dae
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: f3b10fdee9956b28273553755365b9251d073964
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Instale o Analysis Services no modo do Power Pivot.
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Os procedimentos neste tópico guiá-lo por meio de uma instalação de servidor único de um [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] servidor [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modo de implantação do SharePoint. As etapas incluem a execução do assistente de instalação do SQL Server, bem como as tarefas de configuração que usam a Administração Central do SharePoint.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
-  
- **Neste tópico:**  
-  
- [Plano de fundo](#bkmk_background)  
-  
- [Pré-requisitos](#bkmk_prereq)  
-  
- [Etapa 1: Instalar o Power Pivot para SharePoint](#InstallSQL)  
-  
- [Etapa 2: Configure a integração básica do Analysis Services SharePoint](#bkmk_config)  
-  
- [Etapa 3: Verifique a integração](#bkmk_verify)  
-  
- [Configurar o Firewall do Windows para permitir o acesso ao Analysis Services](#bkmk_firewall)  
-  
- [Atualizar pastas de trabalho e atualização de dados agendada](#bkmk_upgrade_workbook)  
-  
- [Além da instalação de servidor único – PowerPivot para Microsoft SharePoint](#bkmk_multiple_servers)  
   
 ##  <a name="bkmk_background"></a> Plano de fundo  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint é uma coleção de serviços de camada intermediária e back-end que fornece acesso a dados [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] em um farm do SharePoint 2016 ou SharePoint 2013.  
