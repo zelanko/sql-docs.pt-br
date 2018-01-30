@@ -8,7 +8,8 @@ ms.service:
 ms.component: spatial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-spatial
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17c60845cbb26234bc6c52e7fe0e192973689e86
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 11d8454a5862b02e162e22ead3ca46e68b4f1354
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Criar, modificar e remover índices espaciais
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Um índice espacial pode executar determinadas operações com mais eficiência em uma coluna do tipo de dados **geometry** ou **geography** (uma *coluna espacial*). Mais de um índice espacial pode ser especificado em uma coluna espacial. Por exemplo, isto é útil para indexar diferentes parâmetros de mosaico em uma única coluna.  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
 11. Na página **Espacial** , especifique os valores que você deseja usar para as propriedades espaciais do índice.  
   
-     Ao criar um índice em uma coluna de tipo **geometry** , você deve especificar as coordenadas **(***X mínima***,***Y mínima***)** e **(***X máxima***,***Y máxima***)** da caixa delimitadora. Para obter um índice em uma coluna de tipo **geography** , os campos da caixa delimitadora se tornam somente leitura após você especificar o esquema de mosaico **Grade geográfica** porque o mosaico de grade geográfica não usa uma caixa delimitadora.  
+     Ao criar um índice em uma coluna de tipo **geometry**, você deve especificar as coordenadas **(***X-min***,***Y-min***)** e **(***X-max***,***Y-max***)** da caixa delimitadora. Para obter um índice em uma coluna de tipo **geography** , os campos da caixa delimitadora se tornam somente leitura após você especificar o esquema de mosaico **Grade geográfica** porque o mosaico de grade geográfica não usa uma caixa delimitadora.  
   
      Opcionalmente, é possível especificar valores não padrão para o campo **Células por Objeto** e para a densidade da grade em qualquer nível do esquema de mosaico. O número padrão de células por objeto é 16 para o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou 8 para o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou versão superior, e a densidade padrão da grade é **Média** para o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
@@ -159,7 +160,7 @@ ms.lasthandoff: 11/17/2017
  Os mosaicos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] não podem ser replicados para o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Você deverá usar mosaicos espaciais do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] em índices espaciais quando a compatibilidade com versões anteriores com bancos de dados do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] for um requisito.  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   

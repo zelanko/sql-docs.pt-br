@@ -1,7 +1,7 @@
 ---
 title: "Solução de problemas do Reporting Services | Microsoft Docs"
 ms.custom: 
-ms.date: 05/25/2016
+ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.service: 
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6eeed553-512d-4603-9b14-0492a9d052b5
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ce0ce0df4a993917cb0aef35f603b3dfb2a5275c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f7125d026a9fde171db97685354b9e26bcebc6b3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="troubleshoot-reporting-services"></a>Solucionar problemas do Reporting Services
   Os tópicos desta seção ajudam a identificar e solucionar problemas com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -48,5 +48,10 @@ ms.lasthandoff: 01/09/2018
 +  [Causa e resolução de erros do Reporting Services](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
 
 ## <a name="see-also"></a>Consulte Também  
- [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Ativar eventos do Reporting Services para o log de rastreamento do SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+
+-  [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
+-   [Ativar eventos do Reporting Services para o log de rastreamento do SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+-  [SQL Server Reporting Services](https://stackoverflow.com/questions/tagged/reporting-services) no Stack Overflow  
+-  Registre um problema ou uma sugestão no [UserVoice do Microsoft SQL Server](https://feedback.azure.com/forums/908035-sql-server).  
+
+

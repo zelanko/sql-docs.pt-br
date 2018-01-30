@@ -9,20 +9,22 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: haoqian
 ms.author: haoqian
 manager: craigg
-f1_keywords: sql13.ssis.ssms.ispackageexecuteinscaleout.f1
+f1_keywords:
+- sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.workload: Inactive
-ms.openlocfilehash: 091d67122b07e8787ccfce914236a4ff9f793b27
-ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
+ms.openlocfilehash: 40bc7489efca9139dd83489452610f64b84a90bf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Executar pacotes no SSIS (Integration Services) Scale Out
 Depois de implantar pacotes no servidor do Integration Services, execute-os no Scale Out usando um dos seguintes métodos:
@@ -66,7 +68,7 @@ Depois de implantar pacotes no servidor do Integration Services, execute-os no S
 
 1.  Crie execuções.
 
-    Chame `[catalog].[create_execution]` para cada pacote. Defina o parâmetro **@runinscaleout** como `True`. Se nem todos os computadores do Trabalho do Scale Out tiverem permissão para executar o pacote, defina o parâmetro **@useanyworker** como `False`.   
+    Chame `[catalog].[create_execution]` para cada pacote. Defina o parâmetro **@runinscaleout** como `True`. Se nem todos os computadores do Trabalho do Scale Out tiverem permissão para executar o pacote, defina o parâmetro **@useanyworker** como `False`. Para obter mais informações sobre esse procedimento armazenado e o parâmetro **@useanyworker**, consulte [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md). 
 
 2. Defina os parâmetros de execução.
 

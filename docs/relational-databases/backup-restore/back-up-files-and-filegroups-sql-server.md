@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
-caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6383f0bdcbd230c5bd4868084ae2fd06f4003269
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 65b1141e3d47a947f9b1c90b25c6ba875373c266
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Fazer backup de arquivos e de grupos de arquivos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como fazer backup de arquivos e grupos de arquivos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)] ou o PowerShell. Quando o tamanho de banco de dados e exigências de desempenho tornarem um backup de banco de dados completo impraticável, então você poderá criar um backup de arquivo. Um *backup de arquivo* contém todos os dados em um ou mais arquivos (ou grupos de arquivos). Para obter mais informações sobre backups de arquivos, veja [Backups completos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) e [Backups diferenciais &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
@@ -201,9 +202,9 @@ GO
   
 1.  Use o cmdlet **Backup-SqlDatabase** e especifique **Files** como valor do parâmetro **-BackupAction** . Além disso, especifique um dos seguintes parâmetros:  
   
-    -   Para fazer backup de um arquivo específico, especifique o parâmetro **-DatabaseFile***String* , em que *String* contém um ou mais arquivos de banco de dados para fazer backup.  
+    -   Para fazer backup de um arquivo específico, especifique o parâmetro **-DatabaseFile***String*, em que *String* é um ou mais arquivos de banco de dados para fazer backup.  
   
-    -   Para fazer backup de todos os arquivos de determinado grupo de arquivos, especifique o parâmetro **-DatabaseFileGroup***String* , em que *String* contém um ou mais grupos de arquivos de banco de dados para fazer backup.  
+    -   Para fazer backup de todos os arquivos em um determinado grupo de arquivos, especifique o parâmetro **-DatabaseFileGroup***String*, em que *String* é um ou mais grupos de arquivos de banco de dados para fazer backup.  
   
      O exemplo a seguir cria um backup de arquivo completo de todos os arquivos dos grupos de arquivos secundários 'FileGroup1' e 'FileGroup2' no banco de dados `MyDB` . Os backups são criados no local de backup padrão da instância do servidor `Computer\Instance`.  
   

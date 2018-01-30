@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - clustered indexes, UNIQUE constraint
 - indexes [SQL Server], clustered
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ec406af911a0ea95910eba4a7bf35b68544418cd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9aca99e368fa95b55877b7c654be2fec55dbab2e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-clustered-indexes"></a>Criar índices clusterizados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -94,7 +95,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Na guia **Colunas de chave de índice**, clique em **Adicionar…**.  
   
-5.  Na caixa de diálogo **Selecionar Colunas de***table_name* , marque a caixa de seleção das colunas de tabela a serem adicionadas ao índice clusterizado.  
+5.  Na caixa de diálogo **Selecionar Colunas de***table_name*, marque a caixa de seleção da coluna de tabela a ser adicionada ao índice clusterizado.  
   
 6.  Clique em **OK**.  
   
@@ -120,9 +121,9 @@ ms.lasthandoff: 11/17/2017
   
 9. Clique em **Fechar**.  
   
-10. No menu **Arquivo** , clique em **Salvar***table_name*.  
+10. No menu **Arquivo**, clique em **Salvar***table_name*.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-clustered-index"></a>Para criar um índice clusterizado  
   
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/17/2017
   
  Para obter mais informações, consulte [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar chaves primárias](../../relational-databases/tables/create-primary-keys.md)   
  [Criar restrições exclusivas](../../relational-databases/tables/create-unique-constraints.md)  
   

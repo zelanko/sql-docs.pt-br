@@ -19,7 +19,7 @@ helpviewer_keywords:
 - creating, data alerts
 - creating, alerts
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -58,7 +58,7 @@ Você cria e edita definições de alerta de dados no Designer de Alertas de Dad
 > [!NOTE]  
 >  Como o recurso de alertas de dados do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] está disponível apenas quando você instala o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint, o relatório no qual você deseja criar um alerta deve ser salvo, implantado ou carregado em uma biblioteca de documentos do SharePoint.  
 >   
->  Os alertas de dados não podem ser criados nos relatórios que usam a autenticação Integrada do Windows ou avisos para credenciais. Os relatórios devem usar credenciais armazenadas. Para obter mais informações, consulte [Specify Credential and Connection Information for Report Data Sources](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
+>  Os alertas de dados não podem ser criados nos relatórios que usam a autenticação Integrada do Windows ou avisos para credenciais. Os relatórios devem usar credenciais armazenadas. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
  Para abrir o Designer de Alertas de Dados, clique na opção **Novo Alerta de Dados** no menu **Ações** na barra de ferramentas de relatório. Se a opção **Novo Alerta de Dados** não aparecer, o relatório não está configurado para usar credenciais armazenadas. Você pode atualizar o tipo de credencial atualizando a fonte de dados de relatório a partir da biblioteca do SharePoint.  
   

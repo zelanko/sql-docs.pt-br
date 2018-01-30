@@ -17,7 +17,7 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -86,7 +86,7 @@ ms.lasthandoff: 01/09/2018
   
  Para criar uma assinatura controlada por dados, atenda aos seguintes requisitos:  
   
--   **Requisitos de relatório**. O relatório deve usar credenciais armazenadas ou nenhuma credencial para recuperar os dados durante a execução. Você não pode assinar um relatório que use credenciais não representadas ou delegadas para se conectar a uma fonte de dados externa; as credenciais do usuário que cria ou possui uma assinatura não estarão disponíveis quando a assinatura é processada. As credenciais armazenadas podem ser uma conta do Windows ou uma conta de usuário de banco de dados. Para obter mais informações, consulte [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
+-   **Requisitos de relatório**. O relatório deve usar credenciais armazenadas ou nenhuma credencial para recuperar os dados durante a execução. Você não pode assinar um relatório que use credenciais não representadas ou delegadas para se conectar a uma fonte de dados externa; as credenciais do usuário que cria ou possui uma assinatura não estarão disponíveis quando a assinatura é processada. As credenciais armazenadas podem ser uma conta do Windows ou uma conta de usuário de banco de dados. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
      Não é possível assinar um relatório do Construtor de Relatórios que use um modelo como uma fonte de dados e o modelo contiver configurações de segurança do item de modelo. Somente relatórios que usam a segurança do item de modelo são incluídos nesta restrição.  
   

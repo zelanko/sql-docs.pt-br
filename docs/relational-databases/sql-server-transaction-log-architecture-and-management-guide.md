@@ -8,7 +8,8 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - vlf size
 - transaction log internals
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: dcc274dcde55b2910b96404c2c3a06c647518dc5
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: 69637be0ea958bf908210df298b210959e3afc17
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guia de arquitetura e gerenciamento do log de transações do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,14 +86,16 @@ O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] divide cada arquivo
 >    -  Se o crescimento for de 64 MB a 1 GB, crie 8 VLFs que abranjam o tamanho do crescimento (por exemplo, para um crescimento de 512 MB, crie oito VLFs de 64 MB)
 >    -  Se o crescimento for maior que 1 GB, crie 16 VLFs que abranjam o tamanho do crescimento (por exemplo, para um crescimento de 8 GB, crie dezesseis VLFs de 512 MB)
 
-Se os arquivos de log ficarem grandes por causa de diversos incrementos pequenos, eles terão muitos arquivos de log virtuais. **Isso pode reduzir a velocidade de inicialização do banco de dados e também das operações de backup e restauração de log.** Recomendamos que você atribua aos arquivos de log um valor de *size* próximo ao tamanho final necessário e também que tenha um valor de *growth_increment* relativamente grande. Consulte a dica abaixo para determinar a distribuição ideal de VLF para o tamanho atual do log de transações.
+Se os arquivos de log ficarem grandes, em diversos incrementos pequenos, eles terão muitos arquivos de log virtuais. **Isso pode reduzir a velocidade de inicialização do banco de dados e também das operações de backup e restauração de log.** Por outro lado, se os arquivos de log forem definidos para um tamanho grande com poucos ou apenas um incremento, eles terão poucos arquivos de log virtuais muito grandes. Para obter mais informações de como estimar corretamente as configurações **tamanho necessário** e **crescimento automático** de um log de transações, consulte a seção *Recomendações* de [Gerenciar o tamanho do arquivo de log de transações](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).
+
+É recomendável que você atribua aos arquivos de log um valor de *tamanho* próximo ao tamanho final necessário, usando os incrementos necessários para alcançar uma distribuição de VLF ideal e também ter um valor de *growth_increment* relativamente grande. Consulte a dica abaixo para determinar a distribuição ideal de VLF para o tamanho atual do log de transações. 
  - O valor *size*, conforme definido pelo argumento `SIZE` de `ALTER DATABASE`, é o tamanho inicial do arquivo de log.
- - O valor *growth_increment*, conforme definido pelo argumento `FILEGROWTH` de `ALTER DATABASE`, é a quantidade de espaço adicionada ao arquivo sempre que um novo espaço é necessário. 
+ - O valor *growth_increment* (também conhecido como valor de crescimento automático), conforme definido pelo argumento `FILEGROWTH` de `ALTER DATABASE`, é a quantidade de espaço adicionada ao arquivo sempre que um novo espaço é necessário. 
  
 Para obter mais informações sobre os argumentos `FILEGROWTH` e `SIZE` de `ALTER DATABASE`, consulte [Opções de arquivo e grupo de arquivos de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!TIP]
-> Para determinar a distribuição ideal de VLF para o tamanho atual do log de transações de todos os bancos de dados em determinada instância, consulte este [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+> Para determinar a distribuição ideal de VLF para o tamanho atual do log de transações de todos os bancos de dados em uma instância determinada e os incrementos de crescimento necessários para alcançar o tamanho necessário, consulte este [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
   
  O log de transações é um arquivo embrulhado. Por exemplo, considere um banco de dados com um arquivo de log físico dividido em quatro VLFs. Quando o banco de dados é criado, o arquivo de log lógico começa no início do arquivo de log físico. Novos registros de log são adicionados no final do log lógico e expandem para o final do log físico. O truncamento de logs libera quaisquer logs virtuais cujos registros apareçam todos na frente do número mínimo de sequência de recuperação do log (MinLSN). O *MinLSN* é o número de sequência de log do registro de log mais antigo que deve estar presente para o êxito de uma reversão de todo o banco de dados. O log de transações no banco de dados de exemplo pareceria semelhante ao apresentado na ilustração a seguir.  
   

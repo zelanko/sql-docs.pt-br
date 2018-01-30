@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a705efcec62c826d391d302f73d2656ee694cbd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 35cef9e6a0576780aa802d891f9ea43cc21bc15a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recuperação de bancos de dados relacionados que contêm transação marcada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico é relevante apenas para os bancos de dados que contêm transações marcadas e que usam modelos de recuperação bulk-logged ou completos.  
@@ -65,13 +66,13 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
  Para obter informações sobre como inserir uma marca em uma transação que abrange vários bancos de dados, veja [Usar transações marcadas para recuperar bancos de dados relacionados de forma consistente &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Sintaxe Transact-SQL para recuperar a uma marca  
- Quando você assinala uma transação marcada usando uma instrução [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md), é possível usar uma das seguintes cláusulas para parar na marca ou imediatamente antes dela:  
+ Quando você assinala uma transação marcada usando uma instrução[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md), é possível usar uma das seguintes cláusulas para parar na marca ou imediatamente antes dela:  
   
--   Use a cláusula WITH STOPATMARK = **'***<nome_marca>***'** para especificar que a transação marcada é o ponto de recuperação.  
+-   Use a cláusula WITH STOPATMARK = **'***<mark_name>***'** para especificar que a transação marcada é o ponto de recuperação.  
   
      O STOPATMARK roll-forward até a marca e inclui a transação marcada no roll-forward.  
   
--   Use a cláusula WITH STOPATMARK = **'***<nome_marca>***'** para especificar que o log de eventos que está imediatamente antes da marca é o ponto de recuperação.  
+-   Use a cláusula WITH STOPBEFOREMARK = **'***<mark_name>***'** para especificar que o registro de log que está imediatamente antes da marca é o ponto de recuperação.  
   
      O STOPATMARK roll-forward até a marca e exclui a transação marcada do roll-forward.  
   
@@ -116,7 +117,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
 6.  Recupere cada banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Aplicar backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   

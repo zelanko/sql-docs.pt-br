@@ -11,13 +11,14 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
 - data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -75,7 +76,7 @@ Para usar este tutorial, seu computador deve ter os seguintes itens instalados:
   
 -   O banco de dados de exemplo **AdventureWorks2014** , que fornece dados ao relatório de exemplo.  
   
--   Uma atribuição de função [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] que inclui a tarefa Gerenciar todas as assinaturas no relatório de exemplo. Esta tarefa é obrigatória para definir uma assinatura controlada por dados. Se você for administrador no computador, a atribuição de função padrão para administradores locais fornecerá as permissões necessárias para criar assinaturas controladas por dados. Para obter mais informações, consulte [Granting Permissions on a Native Mode Report Server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
+-   Uma atribuição de função [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] que inclui a tarefa Gerenciar todas as assinaturas no relatório de exemplo. Esta tarefa é obrigatória para definir uma assinatura controlada por dados. Se você for administrador no computador, a atribuição de função padrão para administradores locais fornecerá as permissões necessárias para criar assinaturas controladas por dados. Para obter mais informações, consulte [Concedendo permissões em um servidor de relatório no modo nativo](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 -   Uma pasta compartilhada na qual você tenha permissões de gravação. A pasta compartilhada deve ser acessada por uma conexão de rede.  
   

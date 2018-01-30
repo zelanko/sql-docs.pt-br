@@ -8,7 +8,8 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - displaying dependences
 - viewing dependencies
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
-caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 979ef92cdeac8a39ef35239f5b3f4b526cfbf69a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 809c461b1f9599e0d46ab7a6175d7dbd4cdb06bc
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-the-dependencies-of-a-table"></a>Exibir as dependências de uma tabela
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -60,11 +61,11 @@ ms.lasthandoff: 11/17/2017
   
 2.  Clique com o botão direito do mouse em uma tabela e clique em **Exibir Dependências**.  
   
-3.  Na caixa de diálogo **Dependências do Objeto***\<object name>*, selecione **Objetos que dependem do**  *\<<nome do objeto>* ou **Objetos dos quais o** *\<object name>***depende**.  
+3.  Na caixa de diálogo **Dependências entre Objetos***\<nome do objeto>*, selecione **Objetos que dependem do** *\<nome do objeto>* ou **Objetos dos quais ***\<nome do objeto>*** depende**.  
   
 4.  Selecione um objeto na grade **Dependências** . O tipo de objeto (como “Gatilho” ou “Procedimento Armazenado”) aparece na caixa **Tipo** .  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-view-the-objects-that-depend-on-a-table"></a>Para exibir os objetos que dependem de uma tabela  
   
