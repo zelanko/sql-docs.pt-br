@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cdce8273a2a1ed7cfa725f1933ab99de40cfe3f6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 54eb41670979c83b200060128da8564b765bcd5d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="the-oracle-cdc-databases"></a>Os bancos de dados Oracle CDC
   Uma Instância do Oracle CDC está associada a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pelo mesmo nome na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino. Este banco de dados é chamado de banco de dados Oracle CDC (ou banco de dados CDC).  
@@ -113,11 +114,11 @@ ms.lasthandoff: 11/20/2017
   
  A tabela a seguir descreve as opções disponíveis.  
   
-|Nome|Default|Min|Max|Estático|Description|  
+|Nome|Padrão|Mín|Max|Estático|Description|  
 |----------|-------------|---------|---------|------------|-----------------|  
-|rastreamento|Falso|-|-|Falso|Os valores disponíveis são:<br /><br /> Verdadeiro<br /><br /> Falso<br /><br /> on<br /><br /> off|  
+|rastreamento|Falso|-|-|Falso|Os valores disponíveis são:<br /><br /> True<br /><br /> Falso<br /><br /> on<br /><br /> off|  
 |cdc_update_state_interval|10|1|120|Falso|O tamanho (em Kbytes) de partes de memória alocadas para uma transação (uma transação pode alocar mais de uma parte). Consulte a coluna memory_limit na tabela [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) .|  
-|target_max_batched_transactions|100|1|1.000|Verdadeiro|O número máximo de transações do Oracle que podem ser processadas como uma transação na atualização de tabelas do SQL Server CT.|  
+|target_max_batched_transactions|100|1|1.000|True|O número máximo de transações do Oracle que podem ser processadas como uma transação na atualização de tabelas do SQL Server CT.|  
 |target_idle_lsn_update_interval|10|0|1|Falso|O intervalo (em segundos) para atualizar a tabela **lsn_time_mapping** quando as tabelas capturadas não têm nenhuma atividade.|  
 |trace_retention_period|24|1|24*31|Falso|A quantidade de tempo (em horas para manter mensagens na tabela de rastreamento).|  
 |sql_reconnect_interval|2|2|3600|Falso|A quantidade de tempo (em segundos) a esperar antes de reconectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este intervalo é usado além do tempo limite de conexão do cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
@@ -125,16 +126,16 @@ ms.lasthandoff: 11/20/2017
 |cdc_restart_limit|6|-1|3600|Falso|Na maioria dos casos, o serviço CDC reinicia automaticamente uma instância CDC terminada de maneira anormal. Esta propriedade define depois de quantas falhas por hora o serviço para reiniciar a instância. O valor -1 significa que a instância sempre deve ser reiniciada.<br /><br /> O Serviço retorna para reiniciar a instância depois de qualquer atualização da tabela de configuração.|  
 |cdc_memory_report|0|0|1.000|Falso|Se o valor do parâmetro foi alterado, a Instância CDC imprimirá seu relatório de memória na tabela de rastreamento.|  
 |target_command_timeout|600|1|3600|Falso|O tempo limite de comando ao trabalhar com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|source_character_set|-|-|-|Verdadeiro|Pode ser definido como uma codificação de Oracle específica a ser usada em vez da página de código de banco de dados Oracle. Isto pode ser útil quando a codificação real que os dados de caractere estão usando é diferente de uma expressa pela página de código de banco de dados Oracle.|  
+|source_character_set|-|-|-|True|Pode ser definido como uma codificação de Oracle específica a ser usada em vez da página de código de banco de dados Oracle. Isto pode ser útil quando a codificação real que os dados de caractere estão usando é diferente de uma expressa pela página de código de banco de dados Oracle.|  
 |source_error_retry_interval|30|1|3600|Falso|Usado antes de tentar novamente vários erros como erro de conexão ou falta temporária de sincronização entre tabelas do sistema.|  
-|source_prefetch_size|100|1|10.000|Verdadeiro|Tamanho do lote de pré-busca.|  
-|source_max_tables_in_query|100|1|10.000|Verdadeiro|Número máximo de tabelas na cláusula WHERE antes de alternar para a leitura do log do Oracle sem filtragem de tabela.|  
+|source_prefetch_size|100|1|10.000|True|Tamanho do lote de pré-busca.|  
+|source_max_tables_in_query|100|1|10.000|True|Número máximo de tabelas na cláusula WHERE antes de alternar para a leitura do log do Oracle sem filtragem de tabela.|  
 |source_read_retry_interval|2|1|3600|Falso|A quantidade de tempo que a origem aguarda antes de tentar ler os logs de transação do Oracle no EOF novamente.|  
 |source_reconnect_interval|30|1|3600|Falso|Quanto tempo aguardar (em segundos) antes de tentar reconectar-se ao banco de dados de origem.|  
 |source_reconnect_limit|-1|-1||Falso|O número máximo de reconexões do banco de dados de origem. O padrão -1 significa que o processo tenta se reconectar até ser parado.|  
 |source_command_timeout|30|1|3600|Falso|O tempo limite de conexão ao trabalhar com Oracle.|  
 |source_connection_timeout|30|1|3600|Falso|O tempo limite de conexão ao trabalhar com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|trace_data_errors|Verdadeiro|-|-|Falso|Booliano. **True** indica registro em log de erros de conversão de dados e de truncamento.|  
+|trace_data_errors|True|-|-|Falso|Booliano. **True** indica registro em log de erros de conversão de dados e de truncamento.|  
 |CDC_stop_on_breaking_schema_changes|Falso|-|-|Falso|Booliano. **True** indica parada quando a quebra de esquema é detectada.<br /><br /> **False** indica remoção da tabela de espelho e instância de captura.|  
 |source_oracle_home||-|-|Falso|Pode ser definido como um caminho específico do Oracle Home ou um Nome do Oracle Home que a instância CDC usará para conectar-se ao Oracle.|  
   
@@ -191,7 +192,7 @@ ms.lasthandoff: 11/20/2017
 |data_end_cn|O número de alteração (CN) para a última alteração nos dados nesta linha.|  
 |data|As alterações preparadas para a transação no formato de um BLOB.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Change Data Capture Designer para Oracle da Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
   
   

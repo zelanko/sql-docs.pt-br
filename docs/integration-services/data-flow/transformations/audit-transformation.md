@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa1ed88a75603d7a943dfb05089c0a79092507ef
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6a3e8e346a8b71c3bd11fad1847dc33fa4b47145
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="audit-transformation"></a>Transformação Auditoria
   A opção Auditar Transformação permite ao fluxo de dados de um pacote incluir dados sobre o ambiente em que o pacote é executado. Por exemplo, o nome do pacote, o computador e o operador podem ser adicionados ao fluxo de dados. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclui variáveis do sistema que fornecem essas informações.  
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/20/2017
  **Tipo de auditoria**  
  Selecione uma variável de sistema disponível para fornecer as informações de auditoria.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**GUID de instância de execução**|Insira o GUID que identifica com exclusividade a instância de execução do pacote.|  
 |**ID do Pacote**|Insira o GUID que identifica com exclusividade o pacote.|  
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/20/2017
 |**ID da Versão**|Insira o GUID que identifica com exclusividade a versão do pacote.|  
 |**Hora de início de execução**|Insira a hora de início de execução do pacote.|  
 |**Nome do computador**|Insira o nome do computador no qual o pacote foi inicializado.|  
-|**Nome de usuário**|Insira o nome de logon do usuário que inicializou o pacote.|  
+|**User name**|Insira o nome de logon do usuário que inicializou o pacote.|  
 |**Nome da tarefa**|Insira o nome da tarefa de Fluxo de Dados com a qual Auditar Transformação está associada.|  
 |**ID da Tarefa**|Insira o GUID que identifica com exclusividade a tarefa de Fluxo de Dados com a qual Auditar Transformação está associada.|  
   
