@@ -8,23 +8,24 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - packages view [Integration Services]
 - catalog.packages view [Integration Services]
 ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e544436126d299182760f94ef46304c334d448b6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 658fee9ba05b4cd0a31099c4dafe303c541bec58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (Banco de dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/20/2017
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |package_id|**bigint**|O identificador exclusivo (ID) do pacote.|  
-|name|**nvarchar(256)**|O nome exclusivo do pacote.|  
+|NAME|**nvarchar(256)**|O nome exclusivo do pacote.|  
 |package_guid|**uniqueidentifier**|O identificador exclusivo global (GUID) que identifica o pacote.|  
 |descrição|**nvarchar(1024)**|Uma descrição opcional do pacote.|  
 |package_format_version|**int**|A versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usada para desenvolver o pacote.|  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/20/2017
 |validation_status|**char(1)**|O status da validação.|  
 |last_validation_time|**datetimeoffset(7)**|A hora da última validação.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esta exibição mostra uma linha para cada pacote no catálogo.  
   
 ## <a name="permissions"></a>Permissões  

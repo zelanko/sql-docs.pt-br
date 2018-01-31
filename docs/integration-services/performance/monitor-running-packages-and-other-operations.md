@@ -8,23 +8,24 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a23adf907e01dd8c95c5c44a5a57db0aeb807625
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c2254c139d1e93755cd9b3c503ad0bc42f08cb4e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Monitorar a execução de pacotes e outras operações
   Você pode monitorar execuções de pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , validações de projeto e outras operações usando uma ou mais das ferramentas a seguir. Algumas ferramentas, como toques de dados, estão disponíveis somente para os projetos que são implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/20/2017
   
      Para saber mais, confira [Reports for the Integration Services Server](#reports).  
   
--   Exibições  
+-   exibições  
   
      Para obter mais informações, consulte [Exibições &#40;Catálogo do Integration Services&#41;](../../integration-services/system-views/views-integration-services-catalog.md).  
   
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/20/2017
   
 |Seção|Description|  
 |-------------|-----------------|  
-|Filtrar|Mostra o filtro atual aplicado ao relatório, como o intervalo de horas de início.|  
+|Filtro|Mostra o filtro atual aplicado ao relatório, como o intervalo de horas de início.|  
 |Informações de Execução|Mostra a hora de início, a hora de término e a duração para cada execução do pacote. Você pode exibir uma lista de valores de parâmetros que foram usados com uma execução de pacote, como valores que foram transmitidos a um pacote filho usando a tarefa Executar Pacote. Para exibir a lista de parâmetros, clique em Visão Geral.|  
   
  Para obter mais informações sobre como usar a tarefa Executar Pacote para disponibilizar valores para um pacote filho, consulte [Tarefa Executar Pacote](../../integration-services/control-flow/execute-package-task.md).  
@@ -204,6 +205,6 @@ ms.lasthandoff: 11/20/2017
   
     -   **Todas as Conexões**  
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Execução de projetos e pacotes](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
  [Relatórios para solução de problemas de execução de pacote](../troubleshooting/troubleshooting-reports-for-package-execution.md)  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1569b4bb562d9342792e4ff9cda58ffe3714eb2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1e67ff8d521b46f0f22462b244b6b4aff41c1a6f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogeventmessages"></a>catalog.event_messages
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,13 +31,13 @@ ms.lasthandoff: 11/20/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|Event_message_ID|bigint|A ID exclusiva da mensagem de evento.|  
-|Operation_id|bigint|O tipo de operação.<br /><br /> Para ver uma lista completa dos tipos de operação, consulte [catalog.operations &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
+|Event_message_ID|BIGINT|A ID exclusiva da mensagem de evento.|  
+|Operation_id|BIGINT|O tipo de operação.<br /><br /> Para ver uma lista completa dos tipos de operação, consulte [catalog.operations &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
 |Message_time|datetimeoffset(7)|A hora em que a mensagem foi criada.|  
-|Message_type|smallint|O tipo da mensagem exibida. Para obter mais informações sobre tipos de mensagem, consulte [catalog.operation_messages &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md).|  
-|Message_source_type|smallint|A origem da mensagem.|  
+|Message_type|SMALLINT|O tipo da mensagem exibida. Para obter mais informações sobre tipos de mensagem, consulte [catalog.operation_messages &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md).|  
+|Message_source_type|SMALLINT|A origem da mensagem.|  
 |message|nvarchar(max)|O texto da mensagem.|  
-|Extended_info_id|bigint|A ID de informações adicionais relacionadas à mensagem da operação, localizada na exibição [catalog.extended_operation_info &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
+|Extended_info_id|BIGINT|A ID de informações adicionais relacionadas à mensagem da operação, localizada na exibição [catalog.extended_operation_info &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
 |Package_name|nvarchar(260)|O nome do arquivo do pacote.|  
 |Event_name|nvarchar(1024)|O evento em tempo de execução associado ao tipo de mensagem.|  
 |Message_source_name|nvarchar(4000)|O componente de pacote que é a origem da mensagem.|  
@@ -44,10 +45,10 @@ ms.lasthandoff: 11/20/2017
 |Subcomponent_name|nvarchar(4000)|O componente do fluxo de dados que é a origem da mensagem.<br /><br /> Quando as mensagens são retornadas pelo mecanismo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], SSIS.Pipeline aparece nesta coluna.|  
 |Package_path|nvarchar(max)|O caminho exclusivo do componente no pacote.|  
 |Execution_path|nvarchar(max)|O caminho completo do pacote pai para o ponto no qual o componente é executado.<br /><br /> Esse caminho também captura iterações de um componente.|  
-|threadID|int|ID do thread que está executando quando a mensagem é registrada em log.|  
-|Message_code|int|O código associado à mensagem.|  
+|threadID|INT|ID do thread que está executando quando a mensagem é registrada em log.|  
+|Message_code|INT|O código associado à mensagem.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esta exibição exibe os tipos de origem de mensagem a seguir.  
   
 |**message_source_type**|Description|  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Associação à função de servidor **sysadmin**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [catalog.event_message_context](../../integration-services/system-views/catalog-event-message-context.md)  
   
   

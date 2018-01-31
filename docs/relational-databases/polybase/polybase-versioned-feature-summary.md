@@ -8,23 +8,24 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 70725ec64b79f538b4129993de83dfd97772a667
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: c2733d10d4dde01c2067a0d75da629c83c45c355
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="polybase-versioned-feature-summary"></a>Resumo de recursos com controle de versão do PolyBase
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Resumo dos recursos do PolyBase disponíveis para produtos e serviços do SQL Server.  
+[!INCLUDE[appliesto-ss2016-asdb-asdw-pdw-md](../../includes/appliesto-ss2016-asdb-asdw-pdw-md.md)] Resumo dos recursos do PolyBase disponíveis para produtos e serviços do SQL Server.  
   
 ## <a name="feature-summary-for-product-releases"></a>Resumo de recursos para versões do produto  
  Esta tabela resume os principais recursos para o PolyBase e os produtos nos quais eles estão disponíveis.  
@@ -58,7 +59,7 @@ No SQL Server e no APS, nem todos os operadores T-SQL podem ser aplicados ao clu
 |Classificações|não|não|
 
 Agregação parcial significa que uma agregação final deve ocorrer depois que os dados atingirem o SQL Server, mas uma parte da agregação ocorre no Hadoop. Este é uma agregação de computação de método comum em sistemas de Processamento Paralelo Maciço.  
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Guia do PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   
   

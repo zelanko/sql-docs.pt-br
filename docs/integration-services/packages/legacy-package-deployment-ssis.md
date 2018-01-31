@@ -8,7 +8,8 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,16 +34,16 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 486fa573b955848828bff349f364543e6a1e23f7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f0a4d37996a1add0c028f9481b1dc232190a19a3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="legacy-package-deployment-ssis"></a>Implantação de pacote herdado (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui ferramentas e assistentes que simplificam a implantação de pacotes do computador de desenvolvimento para o servidor de produção ou para outros computadores.  
@@ -221,7 +222,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  A tabela a seguir descreve as colunas da lista de configurações na caixa de diálogo **Organizador de Configurações do Pacote** .  
   
-|Coluna|Description|  
+|coluna|Description|  
 |------------|-----------------|  
 |**Nome da Configuração**|O nome da configuração.|  
 |**Tipo de Configuração**|O tipo de configuração.|  
@@ -323,7 +324,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Tipo de configuração**  
  Selecione o tipo de fonte na qual deseja armazenar a configuração usando as seguintes opções:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Arquivo de configuração XML**|Armazene a configuração como um arquivo XML. Se este valor for selecionado, as opções dinâmicas serão exibidas na seção **Tipo de Configuração**.|  
 |**Variável de ambiente**|Armazene a configuração em uma das variáveis de ambiente. Se este valor for selecionado, as opções dinâmicas serão exibidas na seção **Tipo de Configuração**.|  
@@ -340,7 +341,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar as definições de configuração diretamente**  
  Use para especificar as configurações diretamente.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Nome do arquivo de configuração**|Digite o caminho do arquivo de configuração gerado pelo assistente.|  
 |**Procurar**|Use a caixa de diálogo **Selecionar Local do Arquivo de Configuração** para especificar o caminho do arquivo de configuração gerado pelo assistente. Se o arquivo não existir, ele será criado pelo assistente.|  
@@ -348,7 +349,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **O local de configuração é armazenado em uma variável de ambiente**  
  Use para especificar a variável de ambiente na qual você deseja armazenar a configuração.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Variável de ambiente**|Selecione uma variável de ambiente da lista.|  
   
@@ -360,14 +361,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar as definições de configuração diretamente**  
  Use para especificar as configurações diretamente.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada de Registro**|Digite a chave do Registro que contém as informações de configuração. O formato é \<registry key>.<br /><br /> A chave do Registro já deve existir em HKEY_CURRENT_USER e deve ter um valor chamado Value (valor). O valor pode ser um DWORD ou uma cadeia de caracteres.<br /><br /> Se desejar usar uma chave do Registro que não está na raiz de HKEY_CURRENT_USER, use o formato \<Registry key\registry key\\...> para identificar a chave.|  
   
  **O local de configuração é armazenado em uma variável de ambiente**  
  Use para especificar a variável de ambiente na qual deseja armazenar a configuração.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Variável de ambiente**|Selecione uma variável de ambiente da lista.|  
   
@@ -375,14 +376,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar as definições de configuração diretamente**  
  Use para especificar as configurações diretamente.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Variável pai**|Especifique a variável no pacote pai que contém as informações de configuração.|  
   
  **O local de configuração é armazenado em uma variável de ambiente**  
  Use para especificar a variável de ambiente que armazena a configuração.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Variável de ambiente**|Selecione uma variável de ambiente da lista.|  
   
@@ -390,7 +391,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar as definições de configuração diretamente**  
  Use para especificar as configurações diretamente.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Conexão**|Selecione uma conexão da lista ou clique em **Nova** para criar uma nova conexão.|  
 |**Tabela de configuração**|Selecione uma tabela existente ou clique em **Nova** para gravar uma instrução SQL que cria uma nova tabela.|  
@@ -399,7 +400,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **O local de configuração é armazenado em uma variável de ambiente**  
  Use para especificar a variável de ambiente onde a configuração está armazenada.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Variável de ambiente**|Selecione uma variável de ambiente da lista.|  
   
@@ -675,7 +676,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Usar Autenticação do SQL Server**  
  Especifique se o pacote deve usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para fazer login no servidor. Se você usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , será preciso fornecer um nome de usuário e uma senha.  
   
- **Nome de usuário**  
+ **User name**  
  Especifique um nome de usuário.  
   
  **Senha**  

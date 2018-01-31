@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 488a95178554c7caee4d44a55b03c972065bdfb0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 05b3941ccc90394999a8af6b9f8d10aaf25f0921
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/20/2017
 |-----------------|---------------|-----------------|  
 |project_id|**bigint**|O identificador exclusivo (ID) do projeto.|  
 |folder_id|**bigint**|O ID exclusivo da pasta onde o projeto reside.|  
-|name|**sysname**|O nome do projeto.|  
+|NAME|**sysname**|O nome do projeto.|  
 |descrição|**nvarchar(1024)**|A descrição opcional do projeto.|  
 |project_format_version|**int**|A versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usada para desenvolver o projeto.|  
 |deployed_by_sid|**varbinary(85)**|O identificador de segurança (SID) exclusivo do usuário que instalou o projeto.|  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/20/2017
 |validation_status|**char(1)**|O status da validação.|  
 |last_validation_time|**datetimeoffset(7)**|A hora da última validação.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esta exibição mostra uma linha para cada projeto no catálogo.  
   
 ## <a name="permissions"></a>Permissões  

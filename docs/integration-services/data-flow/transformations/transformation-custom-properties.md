@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -43,18 +44,18 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-caps.latest.revision: "72"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 964997cb8223139d44c696a80b4c659769f717a9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a69a7252045efacefccfa0847741e76309999ce9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="transformation-custom-properties"></a>Propriedades personalizadas de Transformação
+# <a name="transformation-custom-properties"></a>Propriedades personalizadas da transformação
   Além das propriedades comuns à maioria dos objetos Data Flow no modelo de objeto do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , muitos objetos Data Flow têm propriedades personalizadas específicas. Essas propriedades personalizadas estão disponíveis somente em tempo de execução e não constam da Documentação de Referência de Programação Gerenciada do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
   
  Este tópico lista e descreve as propriedades personalizadas de várias transformações de fluxo de dados. Para obter mais informações sobre as propriedades comuns à maioria dos objetos Data Flow, consulte [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
@@ -161,7 +162,7 @@ ms.lasthandoff: 11/20/2017
 |Propriedade|Tipo de dados|Description|  
 |--------------|---------------|-----------------|  
 |EvaluationOrder|Integer|Um valor que especifica a posição de uma condição, associado a uma saída, na lista de condições avaliada pela transformação Divisão Condicional. As condições são avaliadas do valor mais baixo para o valor mais alto.|  
-|Expressão|Cadeia de caracteres|Uma expressão que representa a condição avaliada pela transformação Divisão Condicional. Colunas são representadas por identificadores de linhagem.|  
+|Expression|Cadeia de caracteres|Uma expressão que representa a condição avaliada pela transformação Divisão Condicional. Colunas são representadas por identificadores de linhagem.|  
 |FriendlyExpression|Cadeia de caracteres|Uma expressão que representa a condição avaliada pela transformação Divisão Condicional. Colunas são representadas pelos nomes.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
 |IsDefaultOut|Booliano|Um valor que indica se a saída é a saída padrão.|  
   
@@ -189,7 +190,7 @@ ms.lasthandoff: 11/20/2017
   
 |Propriedade|Tipo de dados|Description|  
 |--------------|---------------|-----------------|  
-|FastParse|Booliano|Um valor que indica se as colunas usam as rotinas de análise mais rápidas, mas que não fazem distinção entre localidades, que o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece ou as rotinas de análise padrão que fazem distinção entre localidades. O valor padrão dessa propriedade é **False**. Para obter mais informações, consulte [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) e [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). .<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação da Conversão de Dados**, mas pode ser definida usando o **Editor Avançado**.|  
+|FastParse|Booliano|Um valor que indica se as colunas usam as rotinas de análise mais rápidas, mas que não fazem distinção entre localidades, que o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece ou as rotinas de análise padrão que fazem distinção entre localidades. O valor padrão dessa propriedade é **False**. Para obter mais informações, consulte [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) e [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). para obter informações sobre a ferramenta de configuração e recursos adicionais.<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação da Conversão de Dados**, mas pode ser definida usando o **Editor Avançado**.|  
 |SourceInputColumnLineageId|Integer|O **LineageID** da coluna de entrada que é fonte da coluna de saída.|  
   
  A entrada, as colunas de entrada e a saída da transformação Conversão de Dados não têm nenhuma propriedade personalizada.  
@@ -222,7 +223,7 @@ ms.lasthandoff: 11/20/2017
   
 |Propriedade|Tipo de dados|Description|  
 |--------------|---------------|-----------------|  
-|Expressão|Cadeia de caracteres|Uma expressão que representa a condição avaliada pela transformação Divisão Condicional. Colunas são representadas pela propriedade **LineageID** da coluna.|  
+|Expression|Cadeia de caracteres|Uma expressão que representa a condição avaliada pela transformação Divisão Condicional. Colunas são representadas pela propriedade **LineageID** da coluna.|  
 |FriendlyExpression|Cadeia de caracteres|Uma expressão que representa a condição avaliada pela transformação Divisão Condicional. Colunas são representadas pelos nomes.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
   
  A entrada e a saída da transformação Coluna Derivada não têm nenhuma propriedade personalizada.  
@@ -632,7 +633,7 @@ ms.lasthandoff: 11/20/2017
   
  Para obter mais informações, consulte [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
  [Propriedades do caminho](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   

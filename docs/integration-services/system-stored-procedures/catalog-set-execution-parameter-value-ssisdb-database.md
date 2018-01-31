@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 233eed5038eb8a2f63e89cbadc5ea738398b8d8b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e3d621273b3b45b25158d494fd9bee3d7241e1d3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,19 +73,19 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  [ @parameter_value = ] *parameter_value*  
  O valor do parâmetro. O *parameter_value* é **sql_variant**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para descobrir os valores de parâmetros que foram usados para uma determinada execução, consulte a exibição catalog.execution_parameter_values.  
   
  Para especificar o escopo das informações registradas em log durante uma execução de pacote, defina *parameter_name* como LOGGING_LEVEL e *parameter_value* como um dos valores a seguir.  
   
  Defina o parâmetro *object_type* como 50.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
-|0|Nenhuma<br /><br /> O log está desativado. Apenas o status da execução do pacote é registrado em log.|  
+|0|Nenhum<br /><br /> O log está desativado. Apenas o status da execução do pacote é registrado em log.|  
 |1|Basic<br /><br /> Todos os eventos são registrados em log, menos personalizados e de diagnóstico. Este é o valor padrão.|  
 |2|Desempenho<br /><br /> Apenas estatísticas de desempenho e eventos OnError e OnWarning são registrados em log.|  
-|3|detalhado<br /><br /> Todos os eventos são registrados em log, inclusive eventos personalizados e de diagnóstico. <br />Eventos personalizados incluem os que são registrados em log por meio de tarefas do Integration Services. Para obter mais informações, consulte [Custom Messages for Logging](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages) (Mensagens personalizadas para criação de log)|  
+|3|Detalhado<br /><br /> Todos os eventos são registrados em log, inclusive eventos personalizados e de diagnóstico. <br />Eventos personalizados incluem os que são registrados em log por meio de tarefas do Integration Services. Para obter mais informações, consulte [Custom Messages for Logging](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages) (Mensagens personalizadas para criação de log)|  
 |4|Linhagem de tempo de execução<br /><br /> Coleta os dados necessários para rastrear a linhagem no fluxo de dados.|  
 |100|Nível de registro em log personalizado<br /><br /> Especifique as configurações no parâmetro CUSTOMIZED_LOGGING_LEVEL. Para obter mais informações sobre os valores que você pode especificar, consulte [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).<br /><br /> Para obter mais informações sobre níveis de log personalizados, veja [Habilitar o log para a execução do pacote no servidor SSIS](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).|  
   
@@ -139,7 +140,7 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
@@ -161,7 +162,7 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
   
 -   O tipo de dados do valor do parâmetro não corresponde ao tipo de dados do parâmetro  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [catalog.execution_parameter_values &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)   
  [Gerar arquivos de despejo para execução de pacote](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   

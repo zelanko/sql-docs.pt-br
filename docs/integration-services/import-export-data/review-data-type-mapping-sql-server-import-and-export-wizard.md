@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.reviewissues.f1
+f1_keywords:
+- sql13.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f73734f20bcda435f099066852d84101192fb212
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8f9c2ddd8834d5ff3dbef2d0aff725343fae4f41
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Revisar mapeamento de tipo de dados (Assistente de Importação e Exportação do SQL Server)
 Se você especificou um mapeamento de tipo de dados que pode não ter êxito na lista **Mapeamentos** da caixa de diálogo **Mapeamentos de coluna** , o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra a página **Revisar mapeamento de tipo de dados** . Nesta página, examine as informações detalhadas sobre conversões de tipo de dados que o assistente precisa executar para tornar os dados de origem compatíveis com o destino. Essas informações incluem dicas visuais para fazer distinção entre conversões de tipo de dados que se espera que sejam bem-sucedidas de conversões que podem causar erros ou truncamentos. Para cada conversão, decida se deseja aceitar a conversão sugerida pelo assistente e especifique como manipular qualquer eventual erro que possa surgir.   
@@ -49,7 +51,7 @@ Neste exemplo, os resultados da consulta que o usuário forneceu serão copiados
   
  A tabela a seguir descreve as colunas na lista **Tabela** .  
   
-|Coluna|Description|  
+|coluna|Description|  
 |------------|-----------------|  
 |(Ícone de origem)|Indica a probabilidade de sucesso para as conversões de tipo de dados:<br /> –   Um ícone de sinal de verificação **verde** indica que o assistente espera que todas as conversões de tipo de dados da tabela sejam bem sucedidas.<br />–   Um ícone de aviso **amarelo** indica que você deveria examinar as conversões individuais que o assistente executará. Para revisar essas conversões, selecione a tabela e revise as conversões das colunas individuais na lista **Mapeamento de tipo de dados** .<br />–   Um ícone de erro **vermelho** indica que o assistente não pode executar algumas das conversões da tabela de maneira segura.|  
 |**Origem**|O nome da tabela de origem.|  
@@ -65,7 +67,7 @@ Neste exemplo, cada coluna na origem será copiada para uma coluna com o mesmo n
 
 A tabela a seguir descreve as colunas da lista **Mapeamento de tipo de dados** . 
 
-|Coluna|Description|  
+|coluna|Description|  
 |------------|-----------------|  
 |(Ícone de conversão)|Indica a probabilidade de sucesso para as conversões de tipo de dados:<br /> –   Um ícone de sinal de verificação **verde** indica que o assistente espera que a conversão de tipo de dados da coluna sejam bem sucedida.<br />–   Um ícone de aviso **amarelo** indica que você deveria examinar a conversão que o assistente executará. Para examinar a conversão, clique duas vezes na coluna para exibir a caixa de diálogo **Detalhes da Conversão de Coluna** . Para obter mais informações, consulte [Caixa de diálogo Detalhes da Conversão de Coluna](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md).<br />–   Um ícone de erro **vermelho** indica que o assistente não pode executar a conversão de maneira segura.|  
 |**Coluna de Origem**|O nome da coluna de origem.|  

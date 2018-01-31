@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 00bfa716-5390-48e3-b30c-d954d5e0be47
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28f72cd6a5ea50bdc310d89bf16dbe498e06a638
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a46e7c75cc67eefe81329eebe943fca862dfbb48
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogmasterproperties-ssisdb-database"></a>catalog.master_properties (Banco de dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ Exibe as propriedades do Mestre do Scale Out [!INCLUDE[ssISnoversion](../../incl
 |property_name|**nvarchar(256)**|O nome da propriedade mestre de expansão.|  
 |property_value|**nvarchar(max)**|O valor da propriedade mestre de expansão.|
 
-## <a name="remarks"></a>Comentários
+## <a name="remarks"></a>Remarks
 Esta exibição mostra uma linha para cada propriedade mestre de expansão. As propriedades mostradas por esta exibição incluem o seguinte:
 
 |Nome da propriedade|Description|  

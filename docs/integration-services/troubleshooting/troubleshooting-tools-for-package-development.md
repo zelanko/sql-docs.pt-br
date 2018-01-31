@@ -8,7 +8,8 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1588c3806523f28a30b0d8eb6a190acba148d773
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5c47c0b46d9b171c2bf75e11e9e854ed91c68836
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Solucionando problemas de ferramentas para desenvolvimento de pacotes
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui recursos e ferramentas que podem ser usados para solucionar problemas de pacotes enquanto você os estiver desenvolvendo no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -94,7 +95,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="troubleshooting-errors-without-a-description"></a>Solucionando problemas de erros sem uma descrição  
  Se você encontrar um número de erro do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sem a respectiva descrição durante o desenvolvimento de pacotes, poderá localizar a descrição em [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md). No momento, a lista não inclui informações para solução de problemas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Solucionando problemas de ferramentas para execução de pacotes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)   
  [Recursos de desempenho de fluxo de dados](../../integration-services/data-flow/data-flow-performance-features.md)  
   

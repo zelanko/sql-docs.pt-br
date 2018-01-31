@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82e50a6cb72d5b26810493f656eff82f3b7cdccc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 96311a68d7d003889f88ed91987f1d9a2775c72f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cdc-flow-components"></a>Componentes de fluxo CDC
   Os componentes Change Data Capture da Attunity para Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] Microsoft ajudam os desenvolvedores do SSIS a trabalharem com CDC e reduzir a complexidade de pacotes CDC.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/20/2017
   
  [Origem CDC](../../integration-services/data-flow/cdc-source.md)  
   
- [Separador de CDC](../../integration-services/data-flow/cdc-splitter.md)  
+ [Divisor de CDC](../../integration-services/data-flow/cdc-splitter.md)  
   
 ## <a name="installation"></a>Instalação  
  Esta seção descreve os procedimentos de instalação para os Componentes CDC para o Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
@@ -113,7 +114,7 @@ Uma mensagem é exibida depois de instalar os componentes. Clique em **Sim** qua
   
  Para obter mais informações sobre o Separador de CDC, consulte:  
   
- [Separador de CDC](../../integration-services/data-flow/cdc-splitter.md)  
+ [Divisor de CDC](../../integration-services/data-flow/cdc-splitter.md)  
   
  Um dos problemas básicos que exigem atenção ao criar pacotes de CDC é como o processamento de alterações interage com o carregamento inicial (ou processamento inicial) dos dados.  
   
@@ -198,9 +199,9 @@ Uma mensagem é exibida depois de instalar os componentes. Clique em **Sim** qua
   
 -   [Origem CDC](../../integration-services/data-flow/cdc-source.md)  
   
--   [Separador de CDC](../../integration-services/data-flow/cdc-splitter.md)  
+-   [Divisor de CDC](../../integration-services/data-flow/cdc-splitter.md)  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Direcionar o fluxo de CDC de acordo com o tipo de alteração](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
@@ -220,7 +221,7 @@ Uma mensagem é exibida depois de instalar os componentes. Clique em **Sim** qua
   
 -   Vídeo [CDC para bancos de dados Oracle usando o SQL Server Integration Services 2012 (vídeo do SQL Server)](http://technet.microsoft.com/sqlserver/jj218898)em technet.microsoft.com.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefa Controle de CDC](../../integration-services/control-flow/cdc-control-task.md)  
   
   

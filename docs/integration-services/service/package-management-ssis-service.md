@@ -8,7 +8,8 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -29,16 +30,16 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f3438dedb23fe7a168599e06b4847654853aa57b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 454bdfb2ce829153943ebef0c32f7ef80c2a2b2c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="package-management-ssis-service"></a>Gerenciamento de pacotes (serviço SSIS)
   O gerenciamento de pacotes inclui monitoramento, gerenciamento, importação e exportação de pacotes.  
@@ -128,7 +129,7 @@ Interrompa um pacote em execução na pasta **Pacotes em Execução** clicando c
   
 1.  Clique em **Iniciar**, aponte para **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e clique em **SQL Server Management Studio**.  
   
-2.  Na caixa de diálogo **Conectar ao Servidor** , defina as seguintes opções:  
+2.  Na caixa de diálogo **Conectar ao Servidor**, defina as seguintes opções:  
   
     -   Na caixa **Tipo de servidor** , selecione **Integration Services**.  
   
@@ -172,7 +173,7 @@ Interrompa um pacote em execução na pasta **Pacotes em Execução** clicando c
   
 3.  Se o Pesquisador de Objetos não estiver aberto, clique em **Pesquisador de Objetos** no menu **Exibir**.  
   
-4.  No Pesquisador de Objetos, expanda a pasta **Pacotes Armazenados** .  
+4.  No Pesquisador de Objetos, expanda a pasta **Pacotes Armazenados**.  
   
 5.  Expanda as subpastas para localizar o pacote que deseja exportar.  
   
@@ -190,7 +191,7 @@ Interrompa um pacote em execução na pasta **Pacotes em Execução** clicando c
   
          Clique no botão Procurar **(...)**, expanda a pasta dos **Pacotes SSIS** e selecione a pasta na qual deseja salvar o pacote. Opcionalmente, digite um novo nome para o pacote na caixa de texto **Nome do Pacote** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  Para atualizar o nível de proteção do pacote, clique no botão Procurar **(...)** e, na caixa de diálogo **Nível de Proteção do Pacote** , escolha um nível de proteção diferente. Se a opção **Criptografar dados confidenciais com senhas** ou **Criptografar todos os dados com senhas** for selecionada, digite e confirme uma senha.  
+7.  Para atualizar o nível de proteção do pacote, clique no botão Procurar **(...)** e, na caixa de diálogo **Nível de Proteção do Pacote**, escolha um nível de proteção diferente. Se a opção **Criptografar dados confidenciais com senhas** ou **Criptografar todos os dados com senhas** for selecionada, digite e confirme uma senha.  
   
 8.  Clique em **OK** para completar a exportação.  
 
@@ -219,7 +220,7 @@ Interrompa um pacote em execução na pasta **Pacotes em Execução** clicando c
  **Tipo de autenticação**  
  Selecione um tipo de autenticação.  
   
- **Nome de usuário**  
+ **User name**  
  Se estiver usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , forneça um nome de usuário.  
   
  **Senha**  
@@ -259,7 +260,7 @@ Interrompa um pacote em execução na pasta **Pacotes em Execução** clicando c
  **Tipo de autenticação**  
  Selecione um tipo de autenticação.  
   
- **Nome de usuário**  
+ **User name**  
  Se estiver usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , forneça um nome de usuário.  
   
  **Senha**  
@@ -289,7 +290,7 @@ Interrompa um pacote em execução na pasta **Pacotes em Execução** clicando c
 ### <a name="packages-stored-in-the-file-system"></a>Pacotes armazenados no sistema de arquivos  
  O backup de pacotes salvos no sistema de arquivos deveria ser incluído no plano de backup do sistema de arquivos do servidor. O arquivo de configuração do serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , com o nome padrão de MsDtsSrvr.ini.xml, lista no servidor as pastas monitoradas pelo serviço. Você deve verificar se essas pastas têm backup. Além disso, os pacotes podem ser armazenados em outras pastas no servidor e você deve verificar se essas pastas estão incluídas no backup.  
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Serviço Integration Services &#40;Serviço SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md)  
   
   

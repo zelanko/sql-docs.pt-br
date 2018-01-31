@@ -8,20 +8,21 @@ ms.service:
 ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
-caps.latest.revision: "5"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 70b893aabd8a6c602b55365e4658f8f02cc4fc30
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 46eee672ae46777c21a896599d4c3fbf7819e7d9
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="transact-sql-code-snippets"></a>Trechos de código Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Um trecho de código [!INCLUDE[tsql](../../includes/tsql-md.md)] é um modelo que contém a estrutura básica de um bloco ou uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. Você pode usar os trechos como ponto de partida ao adicionar instruções ao Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Você pode inserir os trechos predefinidos fornecidos com o SQL Server ou criar o seu próprio.  

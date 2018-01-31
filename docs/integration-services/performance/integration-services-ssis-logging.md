@@ -8,7 +8,8 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -31,16 +32,16 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 772217a434d69d8849fdaefd66108365c25e46e7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f1082fb2dc121b3751a14b4cf1e291c8da9425ab
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-logging"></a>Log do SSIS (Integration Services)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui provedores de log que você pode usar para implementar log em pacotes, contêineres e tarefas. Com o log, você pode capturar informações de tempo de execução sobre um pacote, que o ajudem a auditar e solucionar problemas de um pacote sempre que ele for executado. Por exemplo, um log pode capturar o nome do operador que executou o pacote e a hora em que o pacote começou e foi concluído.  
@@ -238,7 +239,7 @@ ms.lasthandoff: 11/20/2017
   
     -   Para o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], use um Gerenciador de conexões de arquivo.  
   
-    -   Para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use um gerenciador de conexões OLE DB. Para obter mais informações, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+    -   Para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use um gerenciador de conexões OLE DB. Para saber mais, veja [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
     -   Para o Log de Eventos de Windows, não faça nada. [!INCLUDE[ssIS](../../includes/ssis-md.md)] cria o log automaticamente.  
   
@@ -310,7 +311,7 @@ ms.lasthandoff: 11/20/2017
  **Nome**  
  Habilite ou desabilite logs para contêineres ou tarefas selecionadas no painel **Contêineres** da caixa de diálogo **Configurar Logs do SSIS** usando as caixas de seleção. O campo de nome é editável. Use o nome padrão para o provedor ou digite um nome exclusivo.  
   
- **Description**  
+ **Descrição**  
  O campo de descrição é editável. Clique e modifique a descrição padrão do log.  
   
  **Configuração**  
@@ -328,13 +329,13 @@ ms.lasthandoff: 11/20/2017
  **Eventos**  
  Ative ou desative eventos para log.  
   
- **Description**  
+ **Descrição**  
  Exiba uma descrição do evento.  
   
  **Avançado**  
  Marque ou desmarque os eventos para log e marque ou desmarque informações que serão usadas no log de cada evento. Clique em **Básico** para ocultar todos os detalhes de log, exceto a lista de eventos. As informações a seguir estão disponíveis para log:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Computer**|O nome do computador no qual o evento de log ocorreu.|  
 |**Operador**|O nome de usuário da pessoa que iniciou o pacote.|  
@@ -414,11 +415,11 @@ ms.lasthandoff: 11/20/2017
   
 |Nível de log|Description|  
 |-------------------|-----------------|  
-|Nenhum.|O log está desativado. Apenas o status da execução do pacote é registrado em log.|  
+|Nenhum|O log está desativado. Apenas o status da execução do pacote é registrado em log.|  
 |Basic|Todos os eventos são registrados em log, menos personalizados e de diagnóstico. Este é o valor padrão.|  
 |RuntimeLineage|Coleta os dados necessários para rastrear as informações de linhagem no fluxo de dados. Você pode analisar essas informações de linhagem para mapear o relacionamento de linhagem entre tarefas. ISVs e desenvolvedores podem compilar ferramentas de mapeamento de linhagem personalizadas com essas informações.|  
 |Desempenho|Apenas estatísticas de desempenho e eventos OnError e OnWarning são registrados em log.<br /><br /> O relatório **Desempenho de Execução** mostra a hora ativa e o tempo total para os componentes de fluxo de dados do pacote. Estas informações estão disponíveis quando o nível de log da última execução do pacote foi definido como **desempenho** ou **detalhado**. Para saber mais, confira [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).<br /><br /> A exibição [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) mostra as horas de início e de término para os componentes de fluxo de dados, para cada fase de uma execução. Esta exibição mostra essas informações para esses componentes apenas quando o nível de log da execução do pacote é definido como **Desempenho** ou **Detalhado**.|  
-|detalhado|Todos os eventos são registrados em log, inclusive eventos personalizados e de diagnóstico.<br /><br /> Eventos personalizados incluem os eventos registrados por tarefas do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para saber mais sobre eventos personalizados, confira [Custom Messages for Logging](#custom_messages).<br /><br /> Um exemplo de um evento de diagnóstico é o evento **DiagnosticEx** . Sempre que uma tarefa Executar Pacote executa um pacote filho, esse evento captura os valores de parâmetro passados para os pacotes filho.<br /><br /> O evento **DiagnosticEx** também ajuda você a obter os nomes das colunas nas quais ocorrem erros no nível da linha. Esse evento grava um mapa de linhagem de fluxo de dados no log. Em seguida, você pode procurar o nome da coluna nesse mapa de linhagem usando o identificador da coluna capturado por uma saída do erro.  Para obter mais informações, consulte [Tratamento de erro em dados](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> O valor da coluna de mensagem para **DiagnosticEx** é texto XML. Para exibir o texto da mensagem para uma execução de pacote, consulte a exibição [catalog.operation_messages &#40;Banco de Dados SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Observe que o evento **DiagnosticEx** não preservar o espaço em branco em sua saída XML, a fim de reduzir o tamanho do log. Para melhorar a legibilidade, copie o log em um editor de XML, no Visual Studio, por exemplo, que ofereça suporte à formatação XML e ao realce de sintaxe.<br /><br /> A exibição [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) mostra uma linha cada vez que um componente de fluxo de dados envia dados a um componente downstream, para determinada execução do pacote. O nível de log deve ser definido como **Detalhado** para capturar essas informações na exibição.|  
+|Detalhado|Todos os eventos são registrados em log, inclusive eventos personalizados e de diagnóstico.<br /><br /> Eventos personalizados incluem os eventos registrados por tarefas do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para saber mais sobre eventos personalizados, confira [Custom Messages for Logging](#custom_messages).<br /><br /> Um exemplo de um evento de diagnóstico é o evento **DiagnosticEx** . Sempre que uma tarefa Executar Pacote executa um pacote filho, esse evento captura os valores de parâmetro passados para os pacotes filho.<br /><br /> O evento **DiagnosticEx** também ajuda você a obter os nomes das colunas nas quais ocorrem erros no nível da linha. Esse evento grava um mapa de linhagem de fluxo de dados no log. Em seguida, você pode procurar o nome da coluna nesse mapa de linhagem usando o identificador da coluna capturado por uma saída do erro.  Para obter mais informações, consulte [Tratamento de erro em dados](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> O valor da coluna de mensagem para **DiagnosticEx** é texto XML. Para exibir o texto da mensagem para uma execução de pacote, consulte a exibição [catalog.operation_messages &#40;Banco de Dados SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Observe que o evento **DiagnosticEx** não preservar o espaço em branco em sua saída XML, a fim de reduzir o tamanho do log. Para melhorar a legibilidade, copie o log em um editor de XML, no Visual Studio, por exemplo, que ofereça suporte à formatação XML e ao realce de sintaxe.<br /><br /> A exibição [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) mostra uma linha cada vez que um componente de fluxo de dados envia dados a um componente downstream, para determinada execução do pacote. O nível de log deve ser definido como **Detalhado** para capturar essas informações na exibição.|  
   
 ### <a name="create-and-manage-customized-logging-levels-by-using-the-customized-logging-level-management-dialog-box"></a>Criar e gerenciar níveis de registro em log personalizados usando a caixa de diálogo Gerenciamento de Nível de Registro em Log Personalizado  
  Você pode criar níveis de registro em log personalizados que coletam somente as estatísticas e eventos que você quiser. Opcionalmente, você também pode capturar o contexto de eventos, que inclui valores de variáveis, cadeias de conexão e propriedades do componente. Quando você executa um pacote, é possível selecionar um nível de registro em log personalizado sempre que você puder selecionar um nível de registro em log interno.  
@@ -503,7 +504,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 |**Diagnostic**|Fornece informações sobre a configuração do sistema que afeta a execução de pacotes como os executáveis numéricos que podem ser executados simultaneamente.<br /><br /> A entrada de log **Diagnóstico** também inclui entradas anteriores e posteriores a chamadas para provedores de dados externos.|  
   
 ####  <a name="BulkInsert"></a> Tarefa Inserção em Massa  
- A seguinte tabela relaciona as entradas de log personalizadas para a tarefa inserção em massa.  
+ A seguinte tabela relaciona as entradas de log personalizadas para a tarefa inserção em massa .  
   
 |Entrada de log|Description|  
 |---------------|-----------------|  
@@ -678,7 +679,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 |---------------|-----------------|  
 |**XMLOperation**|Fornece informações sobre a operação executada pela tarefa|  
 
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  A lista a seguir contém links para tópicos que mostram como executar tarefas relacionadas ao recurso de log.  
   
 -   [Eventos registrados em log por um pacote do Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  

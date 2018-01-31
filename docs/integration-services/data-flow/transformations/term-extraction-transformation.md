@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,16 +31,16 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4282ad429a54af716010bc8b0463551477a771fb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cb9671f2cc2e595b12d1ddef1f962faa25d7563e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="term-extraction-transformation"></a>Transformação Extração de Termos
   A transformação Extração de Termo extrai termos de texto em uma coluna de entrada de transformação e grava os termos em uma coluna de saída de transformação. A transformação trabalha apenas com texto em inglês e usa seu próprio dicionário de inglês e informações linguísticas sobre o inglês.  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="identification-of-words"></a>Identificação de palavras  
  Primeiro, a transformação Extração de Termos identifica palavras executando as seguintes tarefas:  
   
--   Separando o texto em palavras usando espaços, quebras de linha e outros delimitadores vocabulares da língua inglesa. Por exemplo, sinais de pontuação tais como *?* e *:* são caracteres delimitadores de palavras.  
+-   Separando o texto em palavras usando espaços, quebras de linha e outros delimitadores vocabulares da língua inglesa. Por exemplo, sinais de pontuação tais como *?* e *** são caracteres delimitadores de palavras.  
   
 -   Preservando palavras que estão conectadas por hífens ou sublinhadas. Por exemplo, as palavras *protegido por cópia* e *somente leitura* permanecem como uma palavra simples.  
   
@@ -211,10 +212,10 @@ ms.lasthandoff: 11/20/2017
  **Usar termos de exclusão**  
  Indique se devem ser excluídos termos específicos durante uma extração de termos especificando uma coluna que contém termos de exclusão. Você deve especificar as seguintes propriedades de origem caso opte por excluir termos.  
   
- **gerenciador de conexões OLE DB**  
+ **Gerenciador de conexões OLE DB**  
  Selecione um gerenciador de conexões OLE DB existente ou crie uma nova conexão clicando em **Novo**.  
   
- **Novo**  
+ **Nova**  
  Crie uma nova conexão com um banco de dados usando a caixa de diálogo **Configurar Gerenciador de Conexões OLE DB** .  
   
  **Tabela ou exibição**  
@@ -257,7 +258,7 @@ ms.lasthandoff: 11/20/2017
  **Configurar Saída de Erro**  
  Use a caixa de diálogo [Configurar Saída de Erro](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar tratamento de erro em linhas que causam erros.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Transformação Pesquisa de Termos](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
 

@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -32,16 +33,16 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: "73"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 72a38ba6fa45a5b7d6c6003100b27398c60ed522
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 834bdc1febf1f066847b33f1490f076151357e98
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="foreach-loop-container"></a>Contêiner Loop Foreach
   O contêiner Loop Foreach define um fluxo de controle repetitivo em um pacote. A implementação de loop é semelhante à estrutura de loop **Foreach** em linguagens de programação. Em um pacote, o looping é habilitado por um enumerador Foreach.  O contêiner Loop Foreach repete o fluxo de controle para cada membro de um enumerador especificado.  
@@ -105,7 +106,7 @@ ms.lasthandoff: 11/20/2017
   
  O contêiner Loop Foreach não fornece nenhuma funcionalidade, ele só fornece a estrutura na qual você cria o fluxo de controle repetível, especifica o tipo do enumerados e configura o enumerador. Para fornecer funcionalidade de contêiner, você deve incluir no mínimo uma tarefa no contêiner Loop Foreach. Para obter mais informações, consulte [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md).  
   
- O contêiner Loop Foreach pode incluir um fluxo de controle com várias tarefas e outros contêineres. Adicionar tarefas e contêineres ao contêiner Loop Foreach é semelhante a adicioná-las a um pacote, exceto que você arrasta as tarefas e contêineres para o contêiner Loop Foreach e não para o pacote. Se o contêiner Loop Foreach incluir mais de uma tarefa ou contêiner, você poderá conectá-los usando as restrições de precedência, assim como faria em um pacote. Para obter mais informações, consulte [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
+ O contêiner Loop Foreach pode incluir um fluxo de controle com várias tarefas e outros contêineres. Adicionar tarefas e contêineres ao contêiner Loop Foreach é semelhante a adicioná-las a um pacote, exceto que você arrasta as tarefas e contêineres para o contêiner Loop Foreach e não para o pacote. Se o contêiner Loop Foreach incluir mais de uma tarefa ou contêiner, você poderá conectá-los usando as restrições de precedência, assim como faria em um pacote. Para obter informações, consulte [Restrições de precedência](../../integration-services/control-flow/precedence-constraints.md).  
   
 ### <a name="add-and-configure-a-foreach-loop-container"></a>Adicionar e configurar um contêiner de Loop Foreach
   
@@ -117,7 +118,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  Configure o contêiner Loop Foreach. Para obter mais informações, consulte [Configurar um contêiner Loop Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
 
-## <a name="configure-a-foreach-loop-container"></a>Configurar um contêiner Loop Foreach
+## <a name="configure-a-foreach-loop-container"></a>Para configurar um contêiner Loop Foreach
 Este procedimento descreve como configurar um contêiner Loop Foreach, incluindo expressões de propriedade nos níveis de enumerador e contêiner.  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
@@ -192,7 +193,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
 > [!NOTE]  
 >  Os nomes de objeto devem ser exclusivos em um pacote.  
   
- **Description**  
+ **Descrição**  
  Digite uma descrição do contêiner Loop Foreach.  
 
 ## <a name="collection-page---foreach-loop-editor"></a>Página Coleção – Editor de Loop Foreach
@@ -204,7 +205,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **Enumerador**  
  Selecione o tipo de enumerador na lista. As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Enumerador de Arquivo Foreach**|Enumera arquivos. Se este valor for selecionado, serão exibidas as opções dinâmicas na seção **Enumerador de Arquivo Foreach**.|  
 |**Enumerador de Item Foreach**|Enumera valores em um item. Se este valor for selecionado serão exibidas as opções dinâmicas na seção **Enumerador de Item Foreach**.|  
@@ -345,7 +346,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **DocumentSourceType**  
  Selecione o tipo de origem do documento XML. As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
@@ -365,7 +366,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **EnumerationType**  
  Selecione um tipo de enumeração na lista. As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Navegador**|Enumere usando um XPathNavigator.|  
 |**Nó**|Enumere nós retornados por uma operação XPath.|  
@@ -375,7 +376,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **OuterXPathStringSourceType**  
  Selecione o tipo de origem da cadeia XPath. As opções desta propriedade estão listadas na seguinte tabela: 
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
@@ -398,7 +399,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **InnerXPathStringSourceType**  
  Seleciona o tipo de origem da cadeia interna XPath. As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
@@ -577,7 +578,7 @@ Use a caixa de diálogo **Selecionar Enumeração SMO** para especificar o objet
   
  Para evitar consequências negativas do controle não determinante da execução paralela de tarefas no loop, o pacote deve ser configurado para executar só um executável de cada vez. Por exemplo, se um pacote puder executar várias tarefas simultaneamente; um contêiner Loop Foreach que enumera arquivos na pasta, recupera os nomes de arquivo e, depois, usa uma tarefa Executar SQL para inserir os nomes de arquivo em uma tabela podem gerar conflitos de gravação quando duas instâncias da tarefa Executar SQL tentarem gravar ao mesmo tempo. Para obter mais informações, consulte [Usar expressões de propriedade em pacotes](../../integration-services/expressions/use-property-expressions-in-packages.md).  
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)   
  [Contêineres do Integration Services](../../integration-services/control-flow/integration-services-containers.md)  
   

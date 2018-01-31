@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e020fef5d484af024ef822cf6fcc654e547b7b68
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e7bd491ec0bc33dbcc35a309208b37cf3893d062
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +67,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
@@ -86,7 +87,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 -   O usuário não tem as permissões apropriadas  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Uma variável de ambiente pode ser usada para atribuir um valor com eficiência a um parâmetro de projeto ou parâmetro de pacote para uso na execução de um pacote. As variáveis de ambiente habilitam a organização de valores de parâmetros. Os nomes de variável devem ser exclusivos dentro de um ambiente.  
   
  O procedimento armazenado valida o tipo de dados da variável para ter certeza de que tem suporte pelo catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -106,7 +107,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
 |**Int32**|**int**|  
 |**Int64**|**bigint**|  
 |**Single**|Numérico exato: **decimal**, **numeric**; Numérico aproximado: **float**, **real**|  
-|**Cadeia de caracteres**|**varchar**, **nvarchar**, **char**|  
+|**String**|**varchar**, **nvarchar**, **char**|  
 |**UInt32**|**int** (**int** é o mapeamento disponível mais próximo para **Uint32**.)|  
 |**UInt64**|**bigint** (**int** é o mapeamento disponível mais próximo para **Uint64**.)|  
   

@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 936d4f9346b4f8e3e58f88bbadf60127b7dc122f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cb3d2a6db5f17bb8c180e590426cec34b6dbc359
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogenvironmentvariables-ssisdb-database"></a>catalog.environment_variables (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,13 +33,13 @@ ms.lasthandoff: 11/20/2017
 |-----------------|---------------|-----------------|  
 |variable_id|**bigint**|O ID (identificador exclusivo) da variável de ambiente.|  
 |environment_id|**bigint**|O ID exclusivo do ambiente ao qual a variável está associada.|  
-|name|**sysname**|O nome da variável de ambiente.|  
+|NAME|**sysname**|O nome da variável de ambiente.|  
 |descrição|**nvarchar(1024)**|A descrição da variável do ambiente.|  
 |Tipo|**nvarchar(128)**|O tipo de dados da variável do ambiente.|  
 |sensitive|**bit**|Quando o valor for `1`, a variável será confidencial e criptografada quando for armazenada. Quando o valor for `0`, a variável não será confidencial e o valor será armazenado em texto não criptografado.|  
 |value|**sql_variant**|O valor da variável de ambiente. Quando sensitive é `0`, o valor do texto sem formatação é mostrado. Quando sensitive é `1`, o valor **NULL** é exibido.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esta exibição mostra uma linha para cada variável de ambiente no catálogo.  
   
 ## <a name="permissions"></a>Permissões  
