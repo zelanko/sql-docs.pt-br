@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bfecde5790f25c254428d53ec613b968d7d3efd9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e3217fe03497c2d72f3ce0a2c321df5e089ce4e1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do Access (Assistente de Importação e Exportação do SQL Server)
 Este tópico mostra como se conectar a uma fonte de dados do **Microsoft Access** (arquivo de texto) por meio da página **Escolher uma Fonte de Dados** ou **Escolher um Destino** do Assistente de Importação e Exportação do SQL Server.
@@ -57,7 +58,7 @@ Especifique o nome do arquivo e o caminho completo para o arquivo do Access. Por
  **Procurar**  
  Localize o arquivo de banco de dados usando a caixa de diálogo **Abrir**.  
   
- **Nome de usuário**  
+ **User name**  
 Se um arquivo de informações do grupo de trabalho estiver associado ao banco de dados, forneça um nome de usuário válido.  
   
  **Senha**  

@@ -8,24 +8,26 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.oledbcommandtrans.f1
+f1_keywords:
+- sql13.dts.designer.oledbcommandtrans.f1
 helpviewer_keywords:
 - statements [Integration Services]
 - OLE DB Command transformation
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ad315b1ac024edc88c7a095a8ac029607391bf4b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b759d86a0a501364cdb5f4a1544ac2eb3df8d717
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-command-transformation"></a>transformação Comando OLE DB
   A transformação Comando OLE DB executa uma instrução SQL para cada linha do fluxo de dados. Por exemplo, você pode executar uma instrução SQL que insira, atualize ou exclua linhas em uma tabela de banco de dados.  
@@ -51,7 +53,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="logging"></a>Log  
  Você poderá fazer log das chamadas que a transformação Comando OLE DB fizer a provedores de dados externos. Você pode usar esse recurso de log para solucionar problemas de conexões e comandos das fontes de dados externos executados pela transformação Comando OLE DB. Para fazer log das chamadas que a transformação Comando OLE DB fizer aos provedores de dados externos, habilite o log do pacote e selecione o evento **Diagnóstico** no nível de pacote. Para obter mais informações, consulte [Solucionando problemas de ferramentas para execução de pacotes](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Você pode configurar a transformação por meio do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer ou do modelo de objeto. Consulte o Guia do Desenvolvedor para obter detalhes sobre como configurar essa transformação programaticamente.  
   
 ## <a name="configure-the-ole-db-command-transformation"></a>Configurar a transformação Comando OLE DB
@@ -105,7 +107,7 @@ ms.lasthandoff: 11/20/2017
   
 15. Para salvar o pacote atualizado, clique em **Salvar** no menu **Arquivo** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

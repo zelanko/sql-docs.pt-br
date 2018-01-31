@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - flat files
 - Flat File source
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0d9493c57bcfa4285bfadc811d6b24e1485bbb46
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4bc2455f71ec0aa3f927249d50524cfb98f9b380
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="flat-file-source"></a>Fonte de Arquivo Simples
   A fonte de Arquivo Simples lê dados de um arquivo de texto. O arquivo de texto pode ser delimitado, ter largura fixa ou formato misto.  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Propriedades personalizadas de arquivo simples](../../integration-services/data-flow/flat-file-custom-properties.md)  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Para obter detalhes sobre como definir as propriedades de um componente de fluxo de dados, consulte [Definir as propriedades de um componente de fluxo de dados](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="flat-file-source-editor-connection-manager-page"></a>Editor de Fonte de Arquivo Simples (página Gerenciador de Conexões)
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/20/2017
  **Flat file connection manager**  
  Selecione um gerenciador de conexões na lista ou crie um novo gerenciador de conexões clicando em **Novo**.  
   
- **Novo**  
+ **Nova**  
  Crie um novo gerenciador de conexões, usando a caixa de diálogo **Editor de Gerenciador de Conexões de Arquivo Simples** .  
   
  **Reter valores nulos da origem como valores nulos no fluxo de dados**  
@@ -127,7 +128,7 @@ ms.lasthandoff: 11/20/2017
  **Truncation**  
  Especifique o que deve acontecer quando ocorre um truncamento: ignorar a falha, redirecionar a linha ou causar falha do componente.  
   
- **Description**  
+ **Descrição**  
  Exiba a descrição do erro.  
   
  **Definir este valor para células selecionadas**  
@@ -136,7 +137,7 @@ ms.lasthandoff: 11/20/2017
  **Aplicar**  
  Aplique a opção de tratamento de erros às células selecionadas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Destino de arquivo simples](../../integration-services/data-flow/flat-file-destination.md)   
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  
   

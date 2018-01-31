@@ -8,24 +8,26 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.dataprofileviewer.f1
+f1_keywords:
+- sql13.dts.dataprofileviewer.f1
 helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], output viewer
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f364b536b40a68565eb1dac1c8709dc28931043e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 807c980f9c561b6c4da18597b011a98e8d9992de
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profile-viewer"></a>Visualizador de Perfil de Dados
   Exibir e analisar os perfis de dados são a próxima etapa no processo de criação de perfil de dados. Esses perfis podem ser exibidos depois que você executar a tarefa Criação de Perfil de Dados dentro de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e computá-los. Para obter mais informações sobre como configurar e executar a tarefa Criação de Perfil de Dados, consulte [Configuração da Tarefa Criação de Perfil de Dados](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
@@ -174,7 +176,7 @@ ms.lasthandoff: 11/20/2017
  **Value**  
  Exibe os valores distintos encontrados na coluna cujo perfil está sendo criado.  
   
- **Count**  
+ **Contagem**  
  Exibe o número de linhas nas quais a coluna cujo perfil está sendo criado tem o valor exibido na coluna **Valor** .  
   
  **Porcentagem**  
@@ -193,7 +195,7 @@ ms.lasthandoff: 11/20/2017
  **\<column1>, \<column2>, etc.**  
  Exibe os valores em duplicata encontrados na coluna cujo perfil está sendo criado.  
   
- **Count**  
+ **Contagem**  
  Exibe o número de linhas nas quais a coluna especificada tem o valor exibido na primeira coluna.  
   
 #### <a name="profile-type--functional-dependency-profile"></a>Tipo de Perfil = Perfil de Dependência Funcional  
@@ -244,6 +246,6 @@ ms.lasthandoff: 11/20/2017
  **\<column1>, \<column2>, etc.**  
  Exibe os valores na coluna de subconjunto ou colunas que não foram localizadas na coluna ou colunas do superconjunto.  
   
- **Count**  
+ **Contagem**  
  Exibe o número de linhas nas quais a coluna especificada tem o valor exibido na primeira coluna.  
   

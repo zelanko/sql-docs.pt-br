@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4fb97dd247146cd2535e4eee72c448fdd94c10de
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d011a5b39f6aded3bc305c922b5d2788026559e2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do MySQL (Assistente de Importação e Exportação do SQL Server)
 Este tópico mostra como se conectar a uma fonte de dados do **MySQL** (arquivo de texto) por meio da página **Escolher uma Fonte de Dados** ou **Escolher um Destino** do Assistente de Importação e Exportação do SQL Server. Há vários provedores de dados que você pode usar para se conectar ao MySQL.
@@ -41,7 +42,7 @@ Depois de selecionar o **Provedor de Dados do .NET Framework para MySQL** na pá
 |Informações necessárias|Propriedade Provedor de Dados do .NET Framework para MySQL|
 |---|---|
 |Nome do servidor|**Servidor**|
-|Nome do banco de dados|**Banco de dados**|
+|Nome do banco de dados|**Backup de banco de dados**|
 |Informações (logon) de Autenticação|**ID de usuário** e **Senha**|
 
 Você não precisa inserir a cadeia de conexão no campo **ConnectionString** da lista. Depois de inserir valores individuais para o nome do servidor MySQL (**Servidor**) e informações de logon, o assistente monta a cadeia de conexão das propriedades individuais e dos respectivos valores. 
@@ -73,7 +74,7 @@ O nome do driver ODBC.
 **Servidor**  
 O nome do servidor MySQL. 
 
-**Banco de dados**  
+**Backup de banco de dados**  
 O nome do banco de dados MySQL.
 
 **UID** e **PWD**   

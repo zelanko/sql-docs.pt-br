@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-caps.latest.revision: "101"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ff6aab3608b1bebd61e9750ea8769dda0fbf2f2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 05753f3cea7979f78499dc68cb4baa784367b383
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ado-net-source"></a>Origem do ADO NET
   A origem do ADO NET recebe dados de um provedor de .NET e os disponibiliza para o fluxo de dados.  
@@ -138,7 +139,7 @@ ms.lasthandoff: 11/20/2017
  **Texto do comando SQL**  
  Digite o texto de uma consulta SQL, crie a consulta clicando em **Construir Consulta**ou localize o arquivo que contém o texto da consulta clicando em **Procurar**.  
   
- **Build query**  
+ **Construir consulta**  
  Use a caixa de diálogo **Construtor de Consultas** para construir a consulta SQL visualmente.  
   
  **Procurar**  
@@ -195,7 +196,7 @@ ms.lasthandoff: 11/20/2017
  **Truncation**  
  Especifique o que deve acontecer quando ocorre um truncamento: ignorar a falha, redirecionar a linha ou causar falha do componente.  
   
- **Description**  
+ **Descrição**  
  Exiba a descrição do erro.  
   
  **Definir este valor para células selecionadas**  
@@ -204,7 +205,7 @@ ms.lasthandoff: 11/20/2017
  **Aplicar**  
  Aplique a opção de tratamento de erros às células selecionadas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Destino DataReader](../../integration-services/data-flow/datareader-destination.md)   
  [Destino do ADO NET](../../integration-services/data-flow/ado-net-destination.md)   
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  

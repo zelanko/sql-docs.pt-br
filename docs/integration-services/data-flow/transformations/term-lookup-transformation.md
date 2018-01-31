@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 11b53327292545add9678714c4901dbdad01007e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1d4c2104bf9a24def61fe2c2c77020ef6a0a4c24
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="term-lookup-transformation"></a>transformação Pesquisa de Termos
   A transformação Pesquisa de Termo corresponde termos extraídos de texto em uma coluna de entrada de transformação com termos em uma tabela de referência. Ela conta o número de vezes em que um termo na tabela de pesquisa ocorre no conjunto de dados de entrada e grava a contagem junto com o termo da tabela de referência nas colunas na saída de transformação. Essa transformação é útil para criar uma lista de palavras personalizada com base no texto de entrada, completa com estatísticas de frequência de palavras.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
  Quando um item de pesquisa contém termos que se sobrepõem no conjunto de referência, isto é, um subtermo é achado em mais de um registro de referência, a transformação pesquisa de termos só retorna um resultado de pesquisa. O exemplo a seguir mostra o resultado quando um item de pesquisa contém um subtermo sobreposto. O subtermo sobreposto nesse caso é *Windows*, que é achado dentro de dois termos de referência. Porém, a transformação não retorna dois resultados, mas apenas um único termo de referência: *Windows*. O segundo termo de referência, *Windows 7 Professional*não é retornado.  
   
-|Item|Value|  
+|Item|Valor|  
 |----------|-----------|  
 |Termo de entrada|Windows 7 Professional|  
 |Termos de referência|Windows, Windows 7 Professional|  
@@ -154,7 +155,7 @@ ms.lasthandoff: 11/20/2017
  **Configurar Saída de Erro**  
  Use a caixa de diálogo [Configurar Saída de Erro](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar as opções de tratamento de erro em linhas que causam erros.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Transformação Extração de Termos](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   

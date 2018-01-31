@@ -8,10 +8,12 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.configureerroroutput.f1
+f1_keywords:
+- sql13.dts.designer.configureerroroutput.f1
 helpviewer_keywords:
 - truncating data
 - data conversion errors [Integration Services]
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d71c06122f09a20e384fc491f2568136e8f29ce8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 016befa8b9085029b5fdfe332fce0afa063b40bf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="error-handling-in-data"></a>Tratamento de erros em dados
   Quando um componente de fluxo de dados aplica uma transformação aos dados da coluna, extrai dados de fontes ou carrega dados nos destinos, podem ocorrer erros. Frequentemente, os erros ocorrem por causa de valores de dados inesperados. Por exemplo, uma conversão de dados falha porque uma coluna contém uma cadeia de caracteres em vez de um número, uma inserção em uma coluna de banco de dados falha porque os dados são uma data e a coluna tem um tipo de dados numéricos, ou uma expressão não é avaliada porque o valor de uma coluna é zero, resultando em uma operação matemática que não é válida.  
@@ -80,7 +82,7 @@ Use a caixa de diálogo **Configurar Saída de Erro** para configurar opções d
   
  **Tópicos Relacionados:** [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md)  
   
- **Description**  
+ **Descrição**  
  Visualize a descrição da operação.  
   
  **Definir este valor para células selecionadas**  
@@ -149,7 +151,7 @@ Use a caixa de diálogo **Configurar Saída de Erro** para configurar opções d
   
      Você pode adicionar o componente Script ao segmento de erro do fluxo de dados em qualquer lugar na direção downstream dos componentes de fluxo de dados cujos erros você deseja capturar. Normalmente, você coloca o componente Script imediatamente antes das linhas de erro serem gravadas em um destino. Deste modo, o script pesquisa descrições somente para linhas de erro que estão gravadas. O segmento de erro do fluxo de dados pode corrigir alguns erros e não gravar essas linhas em um destino de erro.  
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)   
  [Transformar Dados com Transformações](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
  [Conectar componentes com caminhos](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   

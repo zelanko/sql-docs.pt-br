@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f2a93e5d4c038db3620e78a4141ca8235d703263
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 50fdbc0168430a4119da86582258c5dff333a1f0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do Oracle (Assistente de Importação e Exportação do SQL Server)
 Este tópico mostra como se conectar a uma fonte de dados do **Oracle** (arquivo de texto) por meio da página **Escolher uma Fonte de Dados** ou **Escolher um Destino** do Assistente de Importação e Exportação do SQL Server. Há vários provedores de dados que você pode usar para se conectar ao Oracle.
@@ -89,7 +90,7 @@ Execute uma das consultas a seguir para obter o nome do servidor Oracle.
 
 `SELECT host_name FROM v$instance`
 
-ou
+ou em
 
 `SELECT sys_context('USERENV','SERVER_HOST') FROM dual`
 

@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-caps.latest.revision: "115"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ae247a65d28b039210dcf8d3243ae19ffde504cc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 82f72b4696d1169055c5726d9095eff70715b523
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-sql-task"></a>Tarefa Executar SQL
   A tarefa Executar SQL executa instruções SQL ou procedimentos armazenados a partir de um pacote. A tarefa pode conter uma única instrução SQL ou várias instruções SQL que são executadas em sequência. Você pode usar a tarefa Executar SQL para os seguintes propósitos:  
@@ -53,9 +54,9 @@ ms.lasthandoff: 11/20/2017
   
 |Tipo de conexão|Gerenciador de conexões|  
 |---------------------|------------------------|  
-|EXCEL|[Gerenciador de conexões do Excel](../../integration-services/connection-manager/excel-connection-manager.md)|  
+|EXCEL|[Gerenciador de Conexões do Excel](../../integration-services/connection-manager/excel-connection-manager.md)|  
 |OLE DB|[Gerenciador de conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
-|ODBC|[Gerenciador de conexões ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|  
+|ODBC|[Gerenciador de Conexões ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|  
 |ADO|[Gerenciador de conexões ADO](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|[Gerenciador de conexões ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
 |SQLMOBILE|[Gerenciador de Conexões do SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|  
@@ -123,7 +124,7 @@ Para saber mais sobre a linguagem de consulta Transact-SQL, consulte [Referênci
  **Nome**  
  Forneça um nome exclusivo para a tarefa Executar SQL no fluxo de trabalho. O nome fornecido será exibido no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Descrição**  
  Descreva a tarefa Executar SQL. Como prática recomendável, para tornar os pacotes autodocumentados e mais fáceis de manter, descreva a tarefa de acordo com a sua finalidade.  
   
  **TimeOut**  
@@ -159,7 +160,7 @@ Para saber mais sobre a linguagem de consulta Transact-SQL, consulte [Referênci
   
  As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a fonte como uma instrução Transact-SQL. Selecionando esse valor, a opção dinâmica **Instrução SQL**é exibida.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém uma instrução Transact-SQL. Definindo essa opção, a opção dinâmica **FileConnection**é exibida.|  
@@ -333,7 +334,7 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
   
 -   Um parâmetro de saída com o tipo de dados apropriado, como listado na tabela a seguir.  
   
-    |Tipo de parâmetro**Output** |Tipo de dados de data|  
+    |Tipo de parâmetro **Output**|Tipo de dados de data|  
     |-------------------------------|--------------------|  
     |DBDATE|**date**|  
     |DBTIME2|**time**|  
@@ -529,7 +530,7 @@ Esta seção descreve como usar uma instrução SQL parametrizada na tarefa Exec
 |---------------------|---------------------------|--------------------|  
 |Linha simples|Qualquer tipo compatível com a coluna de tipo no conjunto de resultados.|Não aplicável|  
 |Conjunto de resultados completo|**Objeto**|Se a tarefa usar um gerenciador de conexões nativo, incluindo os gerenciadores de conexões ADO, OLE DB, Excel e ODBC, o objeto retornado será **Recordset**ADO.<br /><br /> Se a tarefa usar um gerenciador de conexões gerenciado, como o gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)], o objeto retornado será um **System.Data.DataSet**.<br /><br /> Você pode usar uma tarefa Script para acessar o objeto **System.Data.DataSet** , conforme mostrado no exemplo a seguir.<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
-|XML|**Cadeia de caracteres**|**Cadeia de caracteres**|  
+|XML|**String**|**String**|  
 |XML|**Objeto**|Se a tarefa usar um gerenciador de conexões nativo, inclusive os gerenciadores de conexões ADO, OLE DB, Excel e ODBC, o objeto retornado será **MSXML6.IXMLDOMDocument**.<br /><br /> Se a tarefa usar um gerenciador de conexões gerenciado, como o gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)], o objeto retornado será um **System.Xml.XmlDocument**.|  
   
  A variável pode ser definida no escopo da tarefa Executar SQL ou do pacote. Se a variável tiver escopo de pacote, o conjunto de resultados estará disponível para outras tarefas e contêineres no pacote e para qualquer pacote executado pelas tarefas Executar pacote ou Executar Pacotes do DTS 2000.  

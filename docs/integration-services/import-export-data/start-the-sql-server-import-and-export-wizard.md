@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +18,20 @@ helpviewer_keywords:
 - Import and Export Wizard
 - starting Import and Export Wizard
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-caps.latest.revision: "130"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5bcd54dcbbf171b74855f5d48a7af113dd12ee43
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 48cd6b4f32630b48b0e2ccd92400020d6bfa6e91
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>Iniciar o Assistente de Importação e Exportação do SQL Server
 
- > Para obter o conteúdo relacionado a versões anteriores do SQL Server, consulte [Executar o Assistente de Importação e Exportação do SQL Server](https://msdn.microsoft.com/en-US/library/ms140052(SQL.120).aspx).
+ > Para obter o conteúdo relacionado a versões anteriores do SQL Server, consulte [Executar o Assistente de Importação e Exportação do SQL Server](https://msdn.microsoft.com/library/ms140052(SQL.120).aspx).
 
 Inicie o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma das maneiras descritas neste tópico para importar dados e exportar dados para qualquer fonte de dados compatível.
 

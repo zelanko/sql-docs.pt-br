@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 58d8e69ae49c56716d8d0f5393fad329bd924b21
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5f57bd2510c80e676a979c691b1e3d43707c6885
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do PostgreSQL (Assistente de Importação e Exportação do SQL Server)
 Este tópico mostra como se conectar a uma fonte de dados do **PostgreSQL** (arquivo de texto) por meio da página **Escolher uma Fonte de Dados** ou **Escolher um Destino** do Assistente de Importação e Exportação do SQL Server. 
@@ -65,7 +66,7 @@ O nome do servidor PostgreSQL.
 **Porta**  
 A porta a ser usada para se conectar ao servidor PostgreSQL.
 
-**Banco de dados**  
+**Backup de banco de dados**  
 O nome do banco de dados PostgreSQL.
 
 **Uid** e **Pwd**   

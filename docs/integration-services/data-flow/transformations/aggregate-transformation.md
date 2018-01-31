@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c52546eab7dc5c52fb38e03616df648d3d5d67d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7262db9da133a2aa6f82f501e8dab3228de16efb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="aggregate-transformation"></a>Transformação Agregação
   A transformação Agregação aplica funções de agregação, como Average, a valores de coluna e copia os resultados na saída da transformação. Além de funções de agregação, a transformação fornece a cláusula GROUP BY que você pode utilizar para especificar grupos a serem agregados.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/20/2017
 |Operação|Description|  
 |---------------|-----------------|  
 |Agrupar por|Divide conjuntos de dados em grupos. As colunas contendo qualquer tipo de dados podem ser utilizadas para agrupamento. Para obter mais informações, veja [GROUP BY &#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md).|  
-|Sum|Soma os valores em uma coluna. Somente colunas com tipos de dados numéricos podem ser somadas. Para obter mais informações, veja [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md).|  
+|SUM|Soma os valores em uma coluna. Somente colunas com tipos de dados numéricos podem ser somadas. Para obter mais informações, veja [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md).|  
 |Médio|Retorna a média dos valores da coluna em uma coluna. A média só poderá ser obtida em colunas com tipos de dados numéricos. Para obter mais informações, veja [AVG &#40;Transact-SQL&#41;](../../../t-sql/functions/avg-transact-sql.md).|  
 |Count|Retorna o número de itens de um grupo. Para obter mais informações, veja [COUNT &#40;Transact-SQL&#41;](../../../t-sql/functions/count-transact-sql.md).|  
 |Distinção de Contagem|Retorna o número de valores não nulos exclusivos de um grupo.|  
@@ -132,7 +133,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Agregar valores em um conjunto de dados por meio da transformação Agregação](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
 ## <a name="aggregate-transformation-editor-aggregations-tab"></a>Editor de Transformação Agregação (guia Agregações)
@@ -156,7 +157,7 @@ ms.lasthandoff: 11/20/2017
  **Escala de Chave**  
  Na exibição avançada, especifique, opcionalmente, o número aproximado de chaves que a agregação pode gravar. Por padrão, o valor desta opção é **Não Especificado**. Se as propriedades **Escala de Chave** e **Chaves** forem definidas, o valor de **Chaves** terá precedência.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Não Especificado|A propriedade Chave de Escala não é usada.|  
 |Baixa|A agregação pode gravar aproximadamente 500.000 chaves.|  
@@ -183,7 +184,7 @@ ms.lasthandoff: 11/20/2017
 |**GroupBy**|Divide conjuntos de dados em grupos. Colunas que contêm qualquer tipo de dados podem ser utilizadas para agrupamento. Para obter mais informações, consulte GROUP BY.|  
 |**Sum**|Soma os valores em uma coluna. Somente colunas com tipos de dados numéricos podem ser somadas. Para obter mais informações, consulte SUM.|  
 |**Médio**|Retorna a média dos valores da coluna em uma coluna. A média só poderá ser obtida em colunas com tipos de dados numéricos. Para obter mais informações, consulte AVG.|  
-|**Count**|Retorna o número de itens de um grupo. Para obter mais informações, consulte COUNT.|  
+|**Contagem**|Retorna o número de itens de um grupo. Para obter mais informações, consulte COUNT.|  
 |**CountDistinct**|Retorna o número de valores não nulos exclusivos de um grupo. Para obter mais informações, consulte COUNT e Distinct.|  
 |**Mínimo**|Retorna o valor mínimo de um grupo. Restrito a tipos de dados numéricos.|  
 |**Máximo**|Retorna o valor máximo em um grupo. Restrito a tipos de dados numéricos.|  
@@ -194,7 +195,7 @@ ms.lasthandoff: 11/20/2017
  **Count Distinct Scale**  
  Especifique, opcionalmente, o número aproximado de valores de distinção que a agregação pode gravar. Por padrão, o valor desta opção é **Não Especificado**. Se forem especificadas **CountDistinctScale** e **CountDistinctKeys** , **CountDistinctKeys** terá precedência.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Não Especificado|A propriedade **CountDistinctScale** não é usada.|  
 |Baixa|A agregação pode gravar aproximadamente 500.000 valores de distinção.|  
@@ -216,7 +217,7 @@ ms.lasthandoff: 11/20/2017
  **Escala de Chave**  
  Especifique, opcionalmente, o número aproximado de chaves que a agregação espera. A transformação usa estas informações para otimizar seu tamanho de cache inicial. Por padrão, o valor desta opção é **Não Especificado**. Se for especificada a **Escala de chave** e o **Número de chaves** , o **Número de chaves** terá precedência.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Não Especificado|A propriedade **Escala de chave** não é usada.|  
 |Baixa|A agregação pode gravar aproximadamente 500.000 chaves.|  
@@ -229,7 +230,7 @@ ms.lasthandoff: 11/20/2017
  **Escala de distinção de contagem**  
  Especifique, opcionalmente, o número aproximado de valores de distinção que a agregação pode gravar. Por padrão, o valor desta opção é **Não Especificado**. Se for especificada a **Escala de Distinção de Contagem** e as **Chaves de Distinção de Contagem** , as **Chaves de Distinção de Contagem** terão precedência.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Não Especificado|A propriedade Escala de Distinção de Contagem não é usada.|  
 |Baixa|A agregação pode gravar aproximadamente 500.000 valores de distinção.|  
@@ -242,7 +243,7 @@ ms.lasthandoff: 11/20/2017
  **Estender fator automaticamente**  
  Use um valor entre 1 e 100 para especificar a porcentagem pela qual a memória pode ser estendida durante a agregação. Por padrão, o valor desta opção é **25%**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

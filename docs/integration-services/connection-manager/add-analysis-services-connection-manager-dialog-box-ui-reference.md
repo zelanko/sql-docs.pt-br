@@ -8,22 +8,25 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.olapconnection.f1
-helpviewer_keywords: Add Analysis Services Connection Manager
+f1_keywords:
+- sql13.dts.designer.olapconnection.f1
+helpviewer_keywords:
+- Add Analysis Services Connection Manager
 ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eab4334febdb7b834bf1974cd213116cd381ad55
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fad19adc4f40c8feaafb48686d7772efc6f1684d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services
   Use a caixa de diálogo **Adicionar Gerenciador de Conexões do Analysis Services** para criar uma conexão com um servidor executando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ou para editar propriedades de conexão.  
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/20/2017
  **Projeto do Analysis Services**  
  Selecione um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na lista.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
  [Conexões do SSIS &#40;Integration Services&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

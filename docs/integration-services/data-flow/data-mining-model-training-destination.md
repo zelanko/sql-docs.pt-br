@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], training
 - training mining models
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe2df40e58f7a4164655d4b7970797c697fcff37
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: de320d943bf8159b211af64caa32cb37d09a7da9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-mining-model-training-destination"></a>Destino de treinamento do modelo de mineração de dados
   Um destino de treinamento de modelos de mineração de dados treina modelos de mineração de dados ao passar os dados que o destino recebe pelos algoritmos de modelo de mineração de dados. Vários modelos de mineração de dados poderão ser treinados por um destino se os modelos forem criados na mesma estrutura de mineração de dados. Para obter mais informações, consulte [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) e [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md).  
@@ -62,13 +63,13 @@ ms.lasthandoff: 11/20/2017
  **Gerenciador de conexões**  
  Selecione na lista de conexões existentes do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou crie uma nova conexão do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando o botão **Novo** como descrito abaixo.  
   
- **Novo**  
+ **Nova**  
  Crie uma nova conexão usando a caixa de diálogo **Adicionar Gerenciador de Conexões do Analysis Services** .  
   
  **Estrutura de mineração**  
  Selecione na lista de estruturas de mineração disponíveis ou crie uma estrutura nova clicando em **Novo**.  
   
- **Novo**  
+ **Nova**  
  Crie uma estrutura e modelo de mineração novos usando o **Assistente de Mineração de Dados**.  
   
  **Modelos de mineração**  

@@ -16,7 +16,7 @@ helpviewer_keywords:
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -213,7 +213,7 @@ ms.lasthandoff: 01/09/2018
 |Exibir propriedades do servidor de relatório|Exiba as propriedades aplicáveis ao servidor de relatório, como o nome do aplicativo, se a opção Meus Relatórios está habilitada e os padrões de histórico do relatório.<br /><br /> Se você remover essa tarefa da função **Usuário do Sistema** , a página Configurações de Site não estará disponível. Além disso, o título do aplicativo não é exibido na parte superior de cada página. Por padrão, o título para Gerenciador de Relatórios é "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]."|  
 |Exibir agendas compartilhadas|Exiba os agendamentos compartilhados usados para executar relatórios ou atualizar um.<br /><br /> Se você remover essa tarefa da função **Usuário do Sistema** , os usuários não poderão selecionar os agendamentos compartilhados a serem usados com assinaturas e outras opções agendadas.|  
   
- A função **Usuário do Sistema** pode ser usada para complementar a segurança padrão. Você pode incluir a função em novas atribuições de função que ampliam o acesso do servidor de relatório aos usuários de relatórios. Para obter mais informações, consulte [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
+ A função **Usuário do Sistema** pode ser usada para complementar a segurança padrão. Você pode incluir a função em novas atribuições de função que ampliam o acesso do servidor de relatório aos usuários de relatórios. Para obter mais informações, consulte [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar, excluir ou modificar uma função &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   

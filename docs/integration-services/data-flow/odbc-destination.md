@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,16 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c3df5b8f8ef946021fcc72bb12cb164e99fdb5b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 34e524470a56b62657f231a22639fc3e2c20e2d1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-destination"></a>Destino ODBC
   O destino ODBC carrega dados em massa em tabelas de bancos de dados com suporte ODBC. O destino ODBC usa um gerenciador de conexões ODBC para se conectar à fonte de dados.  
@@ -103,7 +104,7 @@ ms.lasthandoff: 11/20/2017
   
 ### <a name="options"></a>Opções  
   
-#### <a name="connection-manager"></a>Gerenciador de Conexões  
+#### <a name="connection-manager"></a>Gerenciador de conexões  
  Selecione na lista um gerenciador de conexões ODBC existente ou clique em Novo para criar uma nova conexão. A conexão pode ser com qualquer banco de dados com suporte ODBC.  
   
 #### <a name="new"></a>Nova  
@@ -157,7 +158,7 @@ ms.lasthandoff: 11/20/2017
 #### <a name="inputoutput"></a>Entrada/Saída  
  Exibe o nome da fonte de dados.  
   
-#### <a name="column"></a>Coluna  
+#### <a name="column"></a>coluna  
  Não usado.  
   
 #### <a name="error"></a>Erro  

@@ -8,10 +8,12 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.precedenceconstraint.f1
+f1_keywords:
+- sql13.dts.designer.precedenceconstraint.f1
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - control flow [Integration Services], precedence constraints
@@ -20,16 +22,16 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 411d89b90a77bf704dd876b5d6ce0dc5a36233a9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 84b5d39132c85d7aa34dbb1e4bfb53d400d3cfa0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="precedence-constraints"></a>Restrições de precedência
   As restrições de precedência vinculam executáveis, contêineres e tarefas em pacotes em um fluxo de controle e especificam condições que determinam a execução de executáveis. Um executável pode ser um contêiner Loop For, Loop Foreach ou Sequência; uma tarefa; ou um manipulador de eventos. Os manipuladores de eventos também usam restrições de precedência para vincular os seus executáveis a um fluxo de controle.  
@@ -126,7 +128,7 @@ Use a caixa de diálogo **Editor de Restrição de Precedência** para configura
  **Expression**  
  Se usar as operações **Expressão**, **Expressão e Restrição**ou **Expressão ou Restrição**, digite uma expressão ou inicie o Construtor de Expressões para criar a expressão. A expressão deve ser avaliada como um booliano.  
   
- **Teste**  
+ **Testar**  
  Valide a expressão.  
   
  **AND lógico**  
@@ -155,7 +157,7 @@ Use a caixa de diálogo **Editor de Restrição de Precedência** para configura
     |--------------------------|--------------------------|  
     |Description|Forneça uma descrição.|  
     |EvalOp|Selecione uma operação de avaliação. Se a operação **Expression**, **ExpressionAndConstant**ou **ExpressionOrConstant** for selecionada, você poderá especificar uma expressão.|  
-    |Expressão|Se a operação de avaliação incluir uma expressão, forneça uma expressão. A expressão deve ser avaliada como um booliano. Para obter mais informações sobre a linguagem de expressão, consulte [Expressões do Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).|  
+    |Expression|Se a operação de avaliação incluir uma expressão, forneça uma expressão. A expressão deve ser avaliada como um booliano. Para obter mais informações sobre a linguagem de expressão, consulte [Expressões do Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).|  
     |LogicalAnd|Defina **LogicalAnd** para especificar se a restrição de precedência é avaliada juntamente com outras restrições de precedência, quando vários executáveis precederem e estiverem vinculados ao executável restrito|  
     |Nome|Atualize o nome da restrição de precedência.|  
     |ShowAnnotation|Especifique o tipo de anotação a ser usada. Selecione **Nunca** para desabilitar anotações, **AsNeeded** para habilitar a anotação sob demanda, **ConstraintName** para efetuar anotações automáticas usando o valor da propriedade Name, **ConstraintDescription** para efetuar anotações automaticamente usando o valor da propriedade Description e **ConstraintOptions** para efetuar anotações automáticas usando os valores das propriedades Value e Expression.|  
@@ -178,7 +180,7 @@ Use a caixa de diálogo **Editor de Restrição de Precedência** para configura
 5.  Para salvar o pacote atualizado, clique em **Salvar Item Selecionado** no menu **Arquivo** .  
 
 ## <a name="add-expressions-to-precedence-constraints"></a>Adicionar expressões a restrições de precedência
- Uma restrição de precedência pode usar uma expressão para definir a restrição entre dois executáveis: o executável de precedência e o executável de restrição. Os executáveis podem ser tarefas ou contêineres. A expressão pode ser usada sozinha ou em combinação com o resultado de execução do executável da restrição. O resultado da execução de um executável pode ter sucesso ou falha. Quando você configura o resultado de execução de uma restrição de precedência, pode definir o resultado de execução como **Sucesso**, **Falha**ou **Conclusão**. **Sucesso** exige que o executável de precedência tenha sucesso, **Falha** exige que o executável de precedência falhe e **Conclusão** indica que o executável de restrição deve ser executado independentemente da tarefa de restrição ter sucesso ou falhar. Para obter mais informações, consulte [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
+ Uma restrição de precedência pode usar uma expressão para definir a restrição entre dois executáveis: o executável de precedência e o executável de restrição. Os executáveis podem ser tarefas ou contêineres. A expressão pode ser usada sozinha ou em combinação com o resultado de execução do executável da restrição. O resultado da execução de um executável pode ter sucesso ou falha. Quando você configura o resultado de execução de uma restrição de precedência, pode definir o resultado de execução como **Sucesso**, **Falha**ou **Conclusão**. **Sucesso** exige que o executável de precedência tenha sucesso, **Falha** exige que o executável de precedência falhe e **Conclusão** indica que o executável de restrição deve ser executado independentemente da tarefa de restrição ter sucesso ou falhar. Para obter informações, consulte [Restrições de precedência](../../integration-services/control-flow/precedence-constraints.md).  
   
  A expressão deve ser avaliada como **Verdadeira** ou **Falsa** e deve ser uma expressão [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] válida. A expressão pode usar literais, variáveis personalizadas e de sistema e as funções e operadores que a gramática de expressão [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornece. Por exemplo, a expressão `@Count == SQRT(144) + 10` usa a variável **Count**, a função SQRT e os operadores de igual (==) e soma (+). Para obter mais informações, consulte [Expressões do Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
@@ -217,18 +219,18 @@ Use a caixa de diálogo **Editor de Restrição de Precedência** para configura
   
 |Operação de avaliação|A restrição avalia como|A expressão avalia como|O executável restrito executa|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
-|Constraint|Verdadeira|N/A|Verdadeira|  
-|Constraint|Falsa|N/A|Falsa|  
-|Expressão|N/A|Verdadeira|Verdadeira|  
-|Expressão|N/A|Falsa|Falsa|  
-|Restrição e expressão|Verdadeira|Verdadeira|Verdadeira|  
-|Restrição e expressão|Verdadeira|Falsa|Falsa|  
-|Restrição e expressão|Falsa|Verdadeira|Falsa|  
-|Restrição e expressão|Falsa|Falsa|Falsa|  
-|Restrição ou expressão|Verdadeira|Verdadeira|Verdadeira|  
-|Restrição ou expressão|Verdadeira|Falsa|Verdadeira|  
-|Restrição ou expressão|Falsa|Verdadeira|Verdadeira|  
-|Restrição ou expressão|Falsa|Falsa|Falso|  
+|Constraint|True|N/A|True|  
+|Constraint|Falso|N/A|Falso|  
+|Expression|N/A|True|Verdadeiro|  
+|Expression|N/A|Falso|Falso|  
+|Restrição e expressão|True|True|True|  
+|Restrição e expressão|True|Falso|Falso|  
+|Restrição e expressão|Falsa|True|Falso|  
+|Restrição e expressão|Falso|Falso|Falso|  
+|Restrição ou expressão|True|True|Verdadeira|  
+|Restrição ou expressão|True|Falso|True|  
+|Restrição ou expressão|Falso|True|Verdadeira|  
+|Restrição ou expressão|Falso|Falso|Falso|  
 
 
 ## <a name="complex-constraint-scenarios-with-multiple-precedence-constraints"></a>Cenários de restrição complexos com várias restrições de precedência 

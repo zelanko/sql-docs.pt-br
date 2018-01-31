@@ -8,25 +8,27 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.smoconnection.f1
+f1_keywords:
+- sql13.dts.designer.smoconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], SMO
 - SMO connection manager
 - connection managers [Integration Services], SMO
 ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eace0d881304757c067c95a30fadb2bc0e960641
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d9541fc983610a90fdd847ed752e6eaf493331b4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="smo-connection-manager"></a>gerenciador de conexões SMO
   Um gerenciador de conexões SMO habilita um pacote para conexão a um servidor do SQL Management Object (SMO). As tarefas de transferência que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui utilizam um gerenciador de conexões do SMO. Por exemplo, a tarefa Transferir Logons que transfere os logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa um gerenciador de conexões do SMO.  
@@ -64,7 +66,7 @@ ms.lasthandoff: 11/20/2017
  **Usar Autenticação do SQL Server**  
  Use a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectar-se à instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selecionada.  
   
- **Nome de usuário**  
+ **User name**  
  Se você selecionou a autenticação de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , digite o nome de usuário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Senha**  
@@ -73,7 +75,7 @@ ms.lasthandoff: 11/20/2017
  **Testar Conexão**  
  Teste a conexão como foi configurada.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conexões do SSIS &#40;Integration Services&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

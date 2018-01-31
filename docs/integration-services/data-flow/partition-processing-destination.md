@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - Partition Processing destination [Integration Services]
 - destinations [Integration Services], Partition Processing
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc582d705e699d4c91c6bf89a51df444db00a04d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 20277b2aee209f1632100615d94a1fc3caec27d9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="partition-processing-destination"></a>Destino de processamento de partições
   O destino de Processamento de Partição carrega e processa uma partição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter mais informações sobre partições, consulte [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/20/2017
  **Método de processamento**  
  Selecione o método de processamento. O valor padrão desta opção é **Completo**.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Adicionar (incremental)|Execute um processamento com incremento da partição.|  
 |Completo|Execute um processamento completo da partição.|  
@@ -120,7 +121,7 @@ ms.lasthandoff: 11/20/2017
  **Ação de erro de chave**  
  Especifique como manipular registros que possuem valores de chave inaceitáveis.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Converta o valor de chave inaceitável em um valor Desconhecido.|  
 |**DiscardRecord**|Descarte o registro.|  
@@ -137,7 +138,7 @@ ms.lasthandoff: 11/20/2017
  **Ação se houver erro**  
  Especifique a ação a ser tomada quando o limite de erros for atingido, caso tenha selecionado **Parar se houver erro**.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**StopProcessing**|Pare o processamento.|  
 |**StopLogging**|Pare de registrar os erros.|  
@@ -145,7 +146,7 @@ ms.lasthandoff: 11/20/2017
  **Chave não encontrada**  
  Especifique a ação a ser tomada mediante erro de chave não encontrada. Por padrão, este valor é **ReportAndContinue**.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
@@ -154,7 +155,7 @@ ms.lasthandoff: 11/20/2017
  **Chave duplicada**  
  Especifique a ação a ser tomada mediante erro de chave duplicada. Por padrão, esse valor é **IgnoreError**.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
@@ -163,7 +164,7 @@ ms.lasthandoff: 11/20/2017
  **Chave nula convertida em desconhecida**  
  Especifique a ação a ser tomada quando uma chave nula foi convertida no valor Desconhecido. Por padrão, esse valor é **IgnoreError**.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
@@ -172,7 +173,7 @@ ms.lasthandoff: 11/20/2017
  **Chave nula não permitida**  
  Especifique a ação a ser tomada quando chaves nulas não forem permitidas, e uma chave nula for encontrada. Por padrão, este valor é **ReportAndContinue**.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
@@ -184,5 +185,5 @@ ms.lasthandoff: 11/20/2017
  **Procurar (...)**  
  Selecione um caminho para o log de erros.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   

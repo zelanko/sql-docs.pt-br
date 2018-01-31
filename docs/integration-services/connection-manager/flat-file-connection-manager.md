@@ -8,7 +8,8 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - flat files
 - flat file connections [Integration Services]
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 29a1b62455247f2ba3cbcb17fafb6f0f78865230
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 73ab1f41223d78f627bd13523bf76eb4ab4d19e8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="flat-file-connection-manager"></a>Gerenciador de conexões de arquivos simples
   Um gerenciador de conexões de Arquivos Simples permite que um pacote acesse dados em um arquivo simples. Por exemplo, a origem e o destino dos Arquivos Simples podem usar gerenciadores de conexões de Arquivos Simples para extrair e carregar dados.  
@@ -91,7 +92,7 @@ ms.lasthandoff: 11/20/2017
  **Nome do gerenciador de conexões**  
  Forneça um nome exclusivo para a conexão de arquivos simples no fluxo de trabalho. O nome fornecido será exibido no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Descrição**  
  Descreva a conexão. Como prática recomendável, descreva a conexão em termos de objetivo, para tornar os pacotes autodocumentados e mais fáceis de manter.  
   
  **Nome do arquivo**  
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/20/2017
  **Formato**  
  Indique se o arquivo usa formatação delimitada, de largura fixa ou irregular à direita.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Delimitado|As colunas são separadas por delimitadores, especificados na página **Colunas** .|  
 |Largura fixa|As colunas têm uma largura fixa.|  
@@ -127,7 +128,7 @@ ms.lasthandoff: 11/20/2017
  **Delimitador de linha de cabeçalho**  
  Selecione na lista de delimitadores de linhas de cabeçalho ou digite o texto do delimitador.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|A linha do cabeçalho é delimitada por uma combinação de retorno de carro e avanço de linha.|  
 |**{CR}**|A linha do cabeçalho é delimitada por um retorno de carro.|  
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/20/2017
  **Nome do gerenciador de conexões**  
  Forneça um nome exclusivo para a conexão de Arquivo Simples no fluxo de trabalho. O nome fornecido será exibido no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Descrição**  
  Descreva a conexão. Como prática recomendável, descreva a conexão em termos de objetivo, para tornar os pacotes autodocumentados e mais fáceis de manter.  
   
 ### <a name="flat-file-format-dynamic-options"></a>Opções dinâmicas do formato de arquivo simples  
@@ -161,7 +162,7 @@ ms.lasthandoff: 11/20/2017
  **Delimitador de linha**  
  Selecione na lista de delimitadores de linha disponíveis ou digite o texto delimitador.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|As linhas são delimitadas por uma combinação de retorno de carro e avanço de linha.|  
 |**{CR}**|As linhas são delimitadas por um retorno de carro.|  
@@ -175,7 +176,7 @@ ms.lasthandoff: 11/20/2017
  **Delimitador de coluna**  
  Selecione na lista de delimitadores de coluna disponíveis ou digite o texto delimitador.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|As colunas são delimitadas por uma combinação de retorno de carro e alimentação de linha.|  
 |**{CR}**|As colunas são delimitadas por um retorno de carro.|  
@@ -222,7 +223,7 @@ ms.lasthandoff: 11/20/2017
  **Delimitador de linha**  
  Selecione na lista de delimitadores de linha disponíveis ou digite o texto delimitador.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|As linhas são delimitadas por uma combinação de retorno de carro e avanço de linha.|  
 |**{CR}**|As linhas são delimitadas por um retorno de carro.|  
@@ -246,7 +247,7 @@ ms.lasthandoff: 11/20/2017
  **Nome do gerenciador de conexões**  
  Forneça um nome exclusivo para o gerenciador de conexões de arquivo simples no fluxo de trabalho. O nome fornecido será exibido no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Descrição**  
  Descreva o gerenciador de conexões. Como prática recomendável, descreva o gerenciador de conexões em termos de objetivo, para tornar os pacotes autodocumentados e mais fáceis de manter.  
   
  **Configurar as propriedades de cada coluna**  
@@ -267,7 +268,7 @@ ms.lasthandoff: 11/20/2017
  **Nova**  
  Adicione uma nova coluna, clicando em **Nova**. Por padrão, o botão **Nova** adiciona uma nova coluna ao final da lista. O botão também tem as opções a seguir, disponíveis na lista suspensa.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Adicionar Coluna**|Adiciona uma nova coluna fim da lista.|  
 |**Insert Before**|Insere uma nova coluna antes da coluna selecionada.|  
@@ -287,7 +288,7 @@ ms.lasthandoff: 11/20/2017
  **Nome do gerenciador de conexões**  
  Forneça um nome exclusivo para a conexão de Arquivo Simples no fluxo de trabalho. O nome fornecido será exibido no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Descrição**  
  Descreva a conexão. Como prática recomendável, descreva a conexão em termos de objetivo, para tornar os pacotes autodocumentados e mais fáceis de manter.  
   
  **Linhas de dados a ignorar**  

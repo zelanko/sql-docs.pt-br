@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c72863715fb807cba939c997da386b93004332f7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 95197ab786c24da00fc87f7788575d5847770c6b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Trabalhando com o Serviço Oracle CDC
   Esta seção descreve alguns conceitos importantes do Serviço Oracle CDC. Os conceitos incluídos nesta seção são:  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/20/2017
   
  **Consulte também:**  
   
- [Como Preparar o SQL Server para CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
+ [Como preparar o SQL Server para CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   
 ### <a name="the-msxdbcdc-database-tables"></a>As tabelas do banco de dados MSXDBCDC  
  Essa seção descreve as seguintes tabelas no banco de dados MSXDBCDC.  
@@ -97,7 +98,7 @@ ms.lasthandoff: 11/20/2017
   
 |Item|Description|  
 |----------|-----------------|  
-|name|O nome do banco de dados Oracle na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|NAME|O nome do banco de dados Oracle na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |config_version|O carimbo de data/hora (UTC) para a última alteração na tabela **xdbcdc_config** correspondente do banco de dados CDC ou o carimbo de data/hora (UTC) para a linha atual nesta tabela.<br /><br /> O gatilho UPDATE impõe um valor de GETUTCDATE() para este item. **config_version** deixa o serviço CDC identificar a instância CDC que precisa ser verificada para alteração de configuração ou para habilitar/desabilitar.|  
 |cdc_service_name|Este item determina qual Serviço Oracle CDC trata o banco de dados Oracle selecionado.|  
 |enabled|Indica se a instância do Oracle CDC está ativa (1) ou desabilitada (0). Quando o Serviço Oracle CDC inicia, somente as instâncias marcadas como habilitadas (1) são iniciadas.<br /><br /> **Observação**: uma instância do Oracle CDC pode ser desabilitada devido a um erro não reproduzível. Neste caso, a instância deverá ser reiniciada manualmente depois que o erro for resolvido.|  
@@ -187,7 +188,7 @@ ms.lasthandoff: 11/20/2017
   
  **Consulte também**  
   
- [Como usar a interface de linha de comando do Serviço CDC](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)  
+ [Como usar a interface de linha de comando do serviço CDC](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)  
   
 ### <a name="service-program-commands"></a>Comandos do programa de serviço  
  A seção descreve os seguintes comandos que são usados para configurar o serviço CDC.  
@@ -266,7 +267,7 @@ ms.lasthandoff: 11/20/2017
   
  **Observação**: qualquer parâmetro que contém espaços ou aspas duplas deve ser envolvido com aspas duplas ("). As marcas de aspas duplas inseridas devem ser dobradas (por exemplo, para usar **"A#B" D** como senha, insira **""A#B"" D"**).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Como usar a interface de linha de comando do Serviço CDC](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)   
  [Como preparar o SQL Server para CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   

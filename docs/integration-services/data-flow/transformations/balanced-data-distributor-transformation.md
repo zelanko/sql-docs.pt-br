@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.balanceddatadistributor.f1
+f1_keywords:
+- sql13.dts.designer.balanceddatadistributor.f1
 ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c625840d537599994213b51cfd0d53601f904ed6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a054a759317186f4d060442ff20e642d9ab67190
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="balanced-data-distributor-transformation"></a>Transformação de BDD (Balanced Data Distributor)
   A transformação de BDD (Balanced Data Distributor) aproveita o recurso de processamento simultâneo de CPUs modernas. Ela distribui buffers de linhas de entrada uniformemente em saídas em threads separados. Usando threads separados para cada caminho de saída, o componente de BDD melhora o desempenho de um pacote SSIS em computadores de vários núcleos ou de vários processadores.  
@@ -35,11 +37,11 @@ ms.lasthandoff: 11/20/2017
   
 1.  Há uma grande quantidade de dados que entram na transformação de BDD. Se o tamanho dos dados é pequeno e somente um buffer pode manter os dados, não faz sentido usar a transformação de BDD. Se o tamanho dos dados for grande e vários buffers forem necessários para manter os dados, o BDD poderá processar com eficácia buffers de dados em paralelo usando threads separados.  
   
-2.  Os dados podem ser lidos mais rápido do que o restante do fluxo de dados pode processá-los. Nesse cenário, as transformações que são executadas nos dados ocorrem lentamente comparado à taxa de entrada dos dados. Se o afunilamento está no destino, o destino deve ser paralelizável.  
+2.  Os dados podem ser lidos mais rápido do que o restante do fluxo de dados pode processá-los. Nesse cenário, as transformações que são executadas nos dados ocorrem lentamente comparado à taxa de entrada dos dados. Se o gargalo está no destino, o destino deve ser paralelizável.  
   
 3.  Os dados não precisam ser ordenados. Por exemplo, se os dados precisam ser classificados, você não deve dividi-los usando a transformação de BDD.  
   
- Observe que, se o afunilamento em um pacote SSIS for devido à taxa na qual os dados podem ser lidos da origem, o componente de BDD não ajudará a melhorar o desempenho. Se a causa do afunilamento em um pacote SSIS for a falta de suporte do destino ao paralelismo, o BDD não ajudará; porém, você pode executar todas as transformações em paralelo e usar a transformação Union All para combinar os dados de saída provenientes de diferentes caminhos da saída da transformação de BDD antes de enviar os dados para o destino.  
+ Observe que, se o gargalo em um pacote SSIS for devido à taxa na qual os dados podem ser lidos da origem, o componente de BDD não ajudará a melhorar o desempenho. Se a causa do gargalo em um pacote SSIS for a falta de suporte do destino ao paralelismo, o BDD não ajudará; porém, você pode executar todas as transformações em paralelo e usar a transformação Union All para combinar os dados de saída provenientes de diferentes caminhos da saída da transformação de BDD antes de enviar os dados para o destino.  
   
 > [!IMPORTANT]  
 >  Consulte o vídeo [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278) na biblioteca do TechNet para obter uma apresentação com uma demonstração sobre o uso da transformação.  

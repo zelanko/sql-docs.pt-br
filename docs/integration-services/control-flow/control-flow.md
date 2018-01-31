@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - SSIS control flow elements
 - SQL Server Integration Services control flow elements
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 22d33e386fb522b7b01c65d4ed87b1dac7d47e14
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 588f1ea0f1c61b6d0d6b793fac41409aa7933964
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="control-flow"></a>Fluxo de Controle
   Um pacote consiste em um fluxo de controle e, opcionalmente, em um ou mais fluxos de dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece três tipos diferentes de elementos de fluxo de controle: contêineres, que fornecem estruturas em pacotes, tarefas, que oferecem funcionalidade e restrições de precedência, que conectam os executáveis, os contêineres e as tarefas em um fluxo de controle ordenado.  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/20/2017
   
      Depois de adicionar uma tarefa ou um contêiner à superfície de design da guia **Fluxo de Controle** , o Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] adiciona automaticamente um conector ao item. Se um pacote inclui dois ou mais itens, tarefas ou contêineres, você pode uni-los a um fluxo de controle, arrastando seus conectores de um item para outro.  
   
-     O conector entre dois itens representa uma restrição de precedência. Uma restrição de precedência define a relação entre os dois itens conectados. Ela especifica a ordem na qual as tarefas e contêineres são executados no tempo de execução, e as condições sob as quais as tarefas e contêineres são executados. Por exemplo, uma restrição de precedência pode especificar que uma tarefa deva ter sucesso para que a próxima tarefa no fluxo de controle seja executada. Para obter mais informações, consulte [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
+     O conector entre dois itens representa uma restrição de precedência. Uma restrição de precedência define a relação entre os dois itens conectados. Ela especifica a ordem na qual as tarefas e contêineres são executados no tempo de execução, e as condições sob as quais as tarefas e contêineres são executados. Por exemplo, uma restrição de precedência pode especificar que uma tarefa deva ter sucesso para que a próxima tarefa no fluxo de controle seja executada. Para obter informações, consulte [Restrições de precedência](../../integration-services/control-flow/precedence-constraints.md).  
   
 -   Adicionando gerenciadores de conexões.  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/20/2017
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] O Designer também inclui vários recursos de tempo de design que você pode usar para gerenciar a superfície de design e tornar a documentação do fluxo de controle autodocumentada.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   

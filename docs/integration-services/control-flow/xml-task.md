@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - XML [Integration Services]
 - XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 198bea7d4f2b566d34185156477179359eaf82bb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d8826d464d7cdbfab3e17e2cca9b61ceed0ae304
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xml-task"></a>XML Task
   A tarefa XML é usada para se trabalhar com dados XML. Usando essa tarefa, um pacote pode recuperar documentos XML, aplicar operações aos documentos usando folhas de estilos XSLT e expressões XPath, mesclar vários documentos ou validar, comparar e salvar os documentos atualizados em arquivos e variáveis.  
@@ -139,7 +140,7 @@ ms.lasthandoff: 11/20/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask>  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="xml-task-editor-general-page"></a>XML Task Editor (General Page)
@@ -151,7 +152,7 @@ ms.lasthandoff: 11/20/2017
  **OperationType**  
  Selecione o tipo de operação na lista. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Validar**|Valida o documento XML com base em um esquema de definição de tipo de documento (DTD) ou definição de esquema XML (XSD). Selecionar esta opção faz com que sejam exibidas as opções dinâmicas na seção **Validar**.|  
 |**XSLT**|Executa transformações de XSL em documentos XML. Selecionar esta opção faz com que sejam exibidas as opções dinâmicas na seção **XSLT**.|  
@@ -163,14 +164,14 @@ ms.lasthandoff: 11/20/2017
  **SourceType**  
  Selecione o tipo de origem do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
   
  **Origem**  
- Se a **Origem** for definida como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(...)** e forneça o XML usando a caixa de diálogo **Editor de Origem de Documento** .  
+ Se a **Origem** for definida como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(...)** e forneça o XML usando a caixa de diálogo **Editor de Origem de Documento**.  
   
  Se **Origem** for definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
@@ -199,7 +200,7 @@ ms.lasthandoff: 11/20/2017
  **DestinationType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
@@ -207,7 +208,7 @@ ms.lasthandoff: 11/20/2017
  **ValidationType**  
  Selecione o tipo de validação. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**DTD**|Use uma DTD.|  
 |**XSD**|Use um esquema XSD. Selecionar esta opção faz com que sejam exibidas as opções dinâmicas na seção **ValidationType**.|  
@@ -224,14 +225,14 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  Selecione o tipo de origem do segundo documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
   
  **SecondOperand**  
- Se **SecondOperandType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML utilizando a caixa de diálogo **Editor de Origem** .  
+ Se **SecondOperandType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML utilizando a caixa de diálogo **Editor de Origem**.  
   
  Se **SecondOperandType** for definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
@@ -262,7 +263,7 @@ ms.lasthandoff: 11/20/2017
  **DestinationType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
@@ -270,14 +271,14 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  Selecione o tipo de origem do segundo documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
   
  **SecondOperand**  
- Se **SecondOperandType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML utilizando a caixa de diálogo **Editor de Origem** .  
+ Se **SecondOperandType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML utilizando a caixa de diálogo **Editor de Origem**.  
   
  Se **SecondOperandType** for definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
@@ -308,7 +309,7 @@ ms.lasthandoff: 11/20/2017
  **DestinationType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
@@ -316,14 +317,14 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  Selecione o tipo de origem do segundo documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
   
  **SecondOperand**  
- Se **SecondOperandType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML utilizando a caixa de diálogo **Editor de Origem** .  
+ Se **SecondOperandType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML utilizando a caixa de diálogo **Editor de Origem**.  
   
  Se **SecondOperandType** for definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
@@ -339,7 +340,7 @@ ms.lasthandoff: 11/20/2017
  **XPathOperation**  
  Selecione o tipo de resultado XPath. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Evaluation**|Retorna os resultados de uma função XPath.|  
 |**Lista de nós**|Retorna os nós selecionados como um fragmento XML.|  
@@ -351,14 +352,14 @@ ms.lasthandoff: 11/20/2017
  **XPathStringSourceType**  
  Selecione o tipo de origem do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
   
  **XPathStringSource**  
- Se **XPathStringSourceType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML usando a caixa de diálogo **Editor de Origem de Documento** .  
+ Se **XPathStringSourceType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML usando a caixa de diálogo **Editor de Origem de Documento**.  
   
  Se **XPathStringSourceType** for definido com **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
@@ -388,7 +389,7 @@ ms.lasthandoff: 11/20/2017
  **DestinationType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
@@ -396,7 +397,7 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  Selecione o tipo de destino do segundo documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
@@ -419,7 +420,7 @@ ms.lasthandoff: 11/20/2017
  **DiffAlgorithm**  
  Selecione o algoritmo Diff para ser usado ao comparar documentos. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Auto**|Deixe a tarefa XML determinar se o algoritmo rápido ou preciso deve ser usado.|  
 |**Rápido**|Use um algoritmo Diff rápido, porém menos preciso.|  
@@ -428,7 +429,7 @@ ms.lasthandoff: 11/20/2017
  **Opções de Diff**  
  Defina as opções de Diff a serem aplicadas à operação Diff. As opções estão listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**IgnoreXMLDeclaration**|Especifique se a declaração XML deve ser comparada.|  
 |**IgnoreDTD**|Especifique se a DTD deve ser ignorada.|  
@@ -463,7 +464,7 @@ ms.lasthandoff: 11/20/2017
  **DestinationType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
@@ -471,7 +472,7 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
@@ -509,7 +510,7 @@ ms.lasthandoff: 11/20/2017
  **DestinationType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
@@ -517,7 +518,7 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  Selecione o tipo de destino do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada Direta**|Defina a origem de um documento XML.|  
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  

@@ -8,19 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3821b2849ef266437fb65c45004415727746d80f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 93a8df11a73ebb9abc21e94147c5ba2fbc0abd87
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="error-handling"></a>Tratamento de erros
   Uma Instância do Oracle CDC mina as alterações de um único banco de dados de origem do Oracle (um cluster do Oracle RAC é considerado um banco de dados único) e grava as alterações confirmadas em tabelas de alteração em um banco de dados do CDC na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino.  
@@ -117,7 +118,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="handling-unexpected-oracle-cdc-instance-failures"></a>Tratando falhas inesperadas da Instância Oracle CDC  
  O Serviço Oracle CDC monitora seus subprocessos de Instância CDC. Quando um subprocesso de Instância CDC é anulado, o Serviço CDC desabilita-o na tabela MSXDBCDC.dbo.xdbcdc_databases e atualiza seu status de cdc.xdbcdc_state para ABORTED. Neste caso, a caixa de diálogo padrão de Relatório de Erros do Windows é usada para relatar este erro para análise posterior.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Change Data Capture Designer para Oracle da Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
  [A instância Oracle CDC](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   

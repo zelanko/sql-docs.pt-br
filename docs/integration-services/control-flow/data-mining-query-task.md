@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,18 +21,18 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72ed17f506e2da78c972c54e19e98c8deacc287c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c8ffadcd36d1df013d8e5a9a9aeb3f85d4056c27
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="data-mining-query-task"></a>Tarefa Consulta de Mineração de Dados
+# <a name="data-mining-query-task"></a>Data Mining Query Task
   A tarefa Consulta de Mineração de Dados executa consultas de previsão com base em modelos internos de mineração de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. A consulta de previsão cria uma previsão para novos dados usando modelos de mineração. Por exemplo, uma consulta de previsão pode prever quantos veleiros serão vendidos durante os meses de verão ou gerar uma lista de possíveis clientes para a compra de um veleiro.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece tarefas que desempenham outras operações de business intelligence, como executar instruções DDL (linguagem de definição de dados) e objetos de análise de processamento.  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Os nomes das tarefas devem ser exclusivos em um pacote.  
   
- **Description**  
+ **Descrição**  
  Digite uma descrição para a tarefa Consulta de Mineração de Dados.  
   
 ### <a name="mining-model-tab-options"></a>Opções da guia Modelo de Mineração  
@@ -91,7 +92,7 @@ ms.lasthandoff: 11/20/2017
   
  **Tópicos relacionados:**  [Gerenciador de conexões do Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
- **Novo**  
+ **Nova**  
  Crie um novo gerenciador de conexões do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  **Tópicos relacionados:** [Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
@@ -114,7 +115,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Os nomes das tarefas devem ser exclusivos em um pacote.  
   
- **Description**  
+ **Descrição**  
  Digite uma descrição para a tarefa Consulta de Mineração de Dados.  
   
 ### <a name="build-query-tab-options"></a>Opções da guia Construir Consulta  
@@ -170,14 +171,14 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Os nomes das tarefas devem ser exclusivos em um pacote.  
   
- **Description**  
+ **Descrição**  
  Digite uma descrição para a tarefa Consulta de Mineração de Dados.  
   
 ### <a name="output-tab-options"></a>Opções da guia Saída  
  **Conexão**  
  Selecione um gerenciador de conexões na lista ou clique em **Novo** para criar um novo gerenciador de conexões.  
   
- **Novo**  
+ **Nova**  
  Crie um novo gerenciador de conexões. Só podem ser usados os tipos de gerenciador de conexões ADO.NET e OLE DB.  
   
  **Tabela de saída**  

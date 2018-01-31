@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: da7bf1509d8c49bfcd10b03e38b41f87ea80580c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6fb4c80904f506c28ad4a67e6df6c476a354a7cd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="for-loop-container"></a>Contêiner Loop For
   O contêiner Loop For define um fluxo de controle repetitivo em um pacote. A implementação de loop é semelhante à estrutura de loop **For** em linguagens de programação. Em cada repetição do loop, o contêiner Loop For avalia uma expressão e repete seu fluxo de trabalho até a expressão ser avaliada como **False**.  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/20/2017
   
  O contêiner Loop For não fornece nenhuma funcionalidade, ele só fornece a estrutura na qual você cria o fluxo de controle repetível. Para fornecer funcionalidade de contêiner, você deve incluir no mínimo uma tarefa no contêiner Loop For. Para obter mais informações, consulte [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md).  
   
- O contêiner Loop For pode incluir um fluxo de controle com várias tarefas, além de outros contêineres. Adicionar tarefas e contêineres ao contêiner Loop For é semelhante a adicioná-las a um pacote, exceto que você arrasta as tarefas e contêineres para o contêiner Loop Forem e não para o pacote. Se o contêiner Loop For incluir mais de uma tarefa ou contêiner, você poderá conectá-los usando as restrições de precedência, assim como faria em um pacote. Para obter mais informações, consulte [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
+ O contêiner Loop For pode incluir um fluxo de controle com várias tarefas, além de outros contêineres. Adicionar tarefas e contêineres ao contêiner Loop For é semelhante a adicioná-las a um pacote, exceto que você arrasta as tarefas e contêineres para o contêiner Loop Forem e não para o pacote. Se o contêiner Loop For incluir mais de uma tarefa ou contêiner, você poderá conectá-los usando as restrições de precedência, assim como faria em um pacote. Para obter informações, consulte [Restrições de precedência](../../integration-services/control-flow/precedence-constraints.md).  
   
 ## <a name="add-a-for-loop-container-in-a-control-flow"></a>Adicionar um contêiner do Loop For em um fluxo de controle  
   
@@ -115,7 +116,7 @@ Use a página **Loop For** da caixa de diálogo **Editor do Loop For** para conf
 > [!NOTE]  
 >  Os nomes de objeto devem ser exclusivos em um pacote.  
   
- **Description**  
+ **Descrição**  
  Forneça uma descrição do contêiner do Loop For.  
  
 ## <a name="use-expressions-with-the-for-loop-container"></a>Usar expressões com o contêiner do Loop For  
@@ -130,7 +131,7 @@ Use a página **Loop For** da caixa de diálogo **Editor do Loop For** para conf
  A gramática de expressão do [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornece um conjunto completo de operadores e funções para implementar as complexas expressões usadas para avaliação, inicialização ou atribuição. Para obter mais informações, consulte [Expressões do Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)   
  [Expressões do SSIS &#40;Integration Services&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
