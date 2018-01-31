@@ -18,7 +18,7 @@ helpviewer_keywords:
 - confidential reports [Reporting Services]
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/09/2018
 >  Em versões anteriores da documentação, foi incluído um exemplo de criação de uma consulta dinâmica como uma expressão. Esse tipo de consulta cria uma vulnerabilidade a ataques de injeção SQL e, portanto, não é recomendado.  
   
 ## <a name="securing-confidential-reports"></a>Protegendo relatórios confidenciais  
- Os relatórios que contêm informações confidenciais devem ser protegidos no nível de acesso aos dados, solicitando que os usuários forneçam credenciais para acessar dados confidenciais. Para obter mais informações, consulte [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Você também pode proteger uma pasta deixá-la inacessível para usuários não autorizados. Para obter mais informações, consulte [Proteger pastas](../../reporting-services/security/secure-folders.md).  
+ Os relatórios que contêm informações confidenciais devem ser protegidos no nível de acesso aos dados, solicitando que os usuários forneçam credenciais para acessar dados confidenciais. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Você também pode proteger uma pasta deixá-la inacessível para usuários não autorizados. Para obter mais informações, consulte [Proteger pastas](../../reporting-services/security/secure-folders.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar e gerenciar atribuições de função](../../reporting-services/security/create-and-manage-role-assignments.md)   
