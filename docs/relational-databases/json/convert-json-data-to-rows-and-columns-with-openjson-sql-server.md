@@ -1,5 +1,5 @@
 ---
-title: Converter dados JSON em linhas e colunas com OPENJSON (SQL Server) | Microsoft Docs
+title: Analisar e transformar dados JSON com OPENJSON (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
@@ -7,7 +7,8 @@ ms.prod_service: database-engine, sql-database
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-json
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,24 +16,24 @@ helpviewer_keywords:
 - JSON, importing
 - importing JSON
 ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8cef7629fe382a5011e71e371c999e0aef84c35e
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 7b3a7da165234ed59fdadef6b2e3972525d81821
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>Converter dados JSON em linhas e colunas com OPENJSON (SQL Server)
+# <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>Analisar e transformar dados JSON com OPENJSON (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 A função de conjunto de linhas **OPENJSON** converte o texto JSON em um conjunto de linhas e colunas. Depois de transformar uma coleção JSON em um conjunto de linhas com **OPENJSON**, é possível executar qualquer consulta SQL nos dados retornados ou inseri-los em uma tabela do SQL Server. 
   
 A função **OPENJSON** obtém um único objeto JSON ou uma coleção de objetos JSON e transforma-os em uma ou mais linhas. Por padrão, a função **OPENJSON** retorna os dados a seguir:
--   De um objeto JSON, a função retorna todos os pares chave:valor localizados no primeiro nível.
+-   De um objeto JSON, a função retorna todos os pares chave-valor localizados no primeiro nível.
 -   De uma matriz JSON, a função retorna todos os elementos da matriz com seus índices.  
 
 É possível adicionar uma cláusula opcional **WITH** para fornecer um esquema que define explicitamente a estrutura da saída.  

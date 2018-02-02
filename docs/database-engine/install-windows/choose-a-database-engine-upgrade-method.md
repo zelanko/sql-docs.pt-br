@@ -8,19 +8,20 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fef7f02b15fee27e3e18a5eac23e0ee6ab97959c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 164c24f5cfd3c4120c75776764221560392ebd4d
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Escolher um método de upgrade do mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Há várias abordagens a serem consideradas quando você está planejando fazer upgrade do [!INCLUDE[ssDE](../../includes/ssde-md.md)] de uma versão anterior do SQL Server, a fim de minimizar o tempo de inatividade e o risco. Você pode executar uma atualização in-loco, migrar para uma nova instalação ou executar uma atualização sem interrupção. O diagrama a seguir ajudará você a escolher entre essas abordagens. Cada uma das abordagens no diagrama também são discutidas abaixo. Para ajudá-lo com os pontos de decisão no diagrama, veja também [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/18/2018
 >  Você também pode atualizar o banco de dados do SQL Azure ou virtualizar seu ambiente SQL Server como parte de seu plano de atualização. Estes tópicos estão fora do escopo deste tópico, mas veja abaixo alguns links:
 >   - [Visão geral do SQL Server nas Máquinas Virtuais do Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
 >   - [Banco de Dados SQL do Azure](https://azure.microsoft.com/en-us/services/sql-database/) 
->   - [Selecionando uma opção do SQL Server no Azure (https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)].  
+>   - [Selecionando uma opção do SQL Server no Azure](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/).  
   
 ##  <a name="UpgradeInPlace"></a> Atualização in-loco  
  Com essa abordagem, o programa de instalação do SQL Server faz upgrade da instalação existente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], substituindo os bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existentes pelos novos bits do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] e, depois, faz upgrade de cada um dos bancos de dados do sistema e do usuário.  O método de atualização in-loco é o mais fácil, requer algum tempo de inatividade, leva mais tempo para executar um fallback se um fallback for necessário e não é permitido em todos os cenários. Para obter mais informações sobre os cenários de atualização in-loco com e sem suporte, veja [Atualizações de versão e edição com suporte](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  

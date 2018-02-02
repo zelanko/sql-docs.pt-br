@@ -8,25 +8,26 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8a620eefb1d9c679083cdafb67dfba27f5414826
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6233878fdf7d0eadcfd837fd3640bdb041cdcf24
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Atualizar instâncias de réplica do Grupo de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Ao atualizar uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda um AG (Grupo de Disponibilidade) do AlwaysOn para uma nova versão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], para um novo service pack ou atualização cumulativa do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ou ao instalar um novo service pack ou atualização cumulativa do Windows, você poderá reduzir o tempo de inatividade para a réplica primária para um único failover manual executando uma atualização sem interrupção (ou dois failovers manuais em caso de failback para a primária original). Durante o processo de atualização, uma réplica secundária não estará disponível para failover ou para operações somente leitura e, depois da atualização, poderá levar algum tempo para que a réplica secundária fique atualizada com o nó da réplica primária, dependendo do volume de atividade no nó da réplica primária (portanto, espere alto tráfego de rede).  
+Ao atualizar uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda um AG (Grupo de Disponibilidade) do AlwaysOn para uma nova versão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], para um novo service pack ou atualização cumulativa do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ou ao instalar um novo service pack ou atualização cumulativa do Windows, você poderá reduzir o tempo de inatividade para a réplica primária para um único failover manual executando uma atualização sem interrupção (ou dois failovers manuais em caso de failback para a primária original). Durante o processo de atualização, uma réplica secundária não estará disponível para failover ou para operações somente leitura e, depois da atualização, poderá levar algum tempo para que a réplica secundária fique atualizada com o nó da réplica primária, dependendo do volume de atividade no nó da réplica primária (portanto, espere alto tráfego de rede). Além disso, lembre-se de que depois do failover inicial para uma réplica secundária executando uma versão mais recente do SQL Server, os bancos de dados nesse Grupo de Disponibilidade passarão por um processo de atualização para colocá-los na versão mais recente. Durante esse tempo, não haverá nenhuma réplica legível para nenhum desses bancos de dados. O tempo de inatividade depois do failover inicial dependerá do número de bancos de dados no Grupo de Disponibilidade. Se você planeja realizar o failback no primário original, essa etapa não será repetida ao realizar o failback.
   
 >[!NOTE]  
 >Este artigo limita a discussão à atualização do próprio SQL Server. Ele não aborda a atualização do sistema operacional que contém o Cluster de Failover do Windows Server (WSFC). Não há suporte para atualização do sistema operacional do Windows que hospeda o cluster de failover para sistemas operacionais anteriores ao Windows Server 2012 R2. Para atualizar um nó de cluster executado no Windows Server 2012 R2, veja [Atualização sem interrupção do sistema operacional do cluster](https://technet.microsoft.com/library/dn850430.aspx)  

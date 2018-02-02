@@ -1,11 +1,12 @@
 ---
 title: "Fazer upgrade das instâncias do SQL Server em execução em clusters do Windows Server 2008/2008 R2/2012 | Microsoft Docs"
-ms.date: 11/10/2017
+ms.date: 1/25/2018
 ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: database engine
 ms.component: failover-clustuers
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bac006539f14341ff07d6af2ba7fd73c1e73a917
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 3337f1c438f303775d923ec12b14891c13b36c03
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Fazer upgrade das instâncias do SQL Server em execução em clusters do Windows Server 2008/2008 R2/2012
 
@@ -29,7 +30,6 @@ O [!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!I
 ## <a name="prerequisites"></a>Prerequisites
 
 -   Antes de executar uma das estratégias de migração, é necessário preparar um cluster de failover paralelo do Windows Server com o Windows Server 2016/2012 R2. Todos os nós que incluem FCIs (instâncias de cluster de failover) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] devem ser ingressados no cluster do Windows com as FCIs paralelas instaladas. Os computadores autônomos **não devem** ser ingressados no cluster de failover do Windows Server antes da migração. Os bancos de dados de usuário devem ser sincronizados no novo ambiente antes da migração.
-
 -   Todas as instâncias de destino devem executar a mesma versão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] de sua instância paralela no ambiente original, com os mesmos nomes e IDs de instância e devem ser instaladas com os mesmos recursos. Os caminhos de instalação e a estrutura de diretórios devem ser idênticos nos computadores de destino. Isso não inclui os nomes da rede virtual da FCI, que devem ser diferentes antes da migração. Todos os recursos habilitados pela instância original (Always On, FILESTREAM, etc.) devem ser habilitados na instância de destino.
 
 -   O cluster paralelo não deve ter nenhum [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)] instalado antes da migração.
@@ -41,7 +41,6 @@ O [!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!I
 -   Os compartilhamentos de arquivos da rede e as unidades mapeadas da rede usados no ambiente de cluster original do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] ainda devem existir e permanecer acessíveis pelo cluster de destino com as mesmas permissões das instâncias originais.
 
 -   Todas as portas TCP/IP escutadas pela instância original do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] não devem estar sendo utilizadas e devem permitir o tráfego de entrada no computador de destino.
-
 -   Todos os serviços relacionados ao SQL devem ser instalados e executados pelo mesmo usuário do Windows.
 
 -   As instâncias de destino devem ser instaladas com a mesma localidade das instâncias originais.
@@ -57,8 +56,8 @@ A estratégia de migração adequada depende de determinados parâmetros da topo
 | **O cluster usa instâncias autônomas** | [Cenário 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [Cenário 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [Cenário 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Cenário 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
 \* Excluindo nomes do ouvinte do Grupo de Disponibilidade
 
-## <a name="scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1"></a>Cenário 1: o cluster a ser migrado usa estritamente Grupos de Disponibilidade (Windows Server 2008 R2 SP1+)
-Se você tiver uma instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] que usa estritamente AGs (Grupos de Disponibilidade), poderá migrar para um novo cluster criando uma instalação paralela do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] em outro Cluster do Windows com o Windows Server 2016/2012 R2. Depois disso, você poderá criar um AG distribuído em que o cluster de destino é o secundário para o cluster de produção atual. Isso exige que o usuário faça upgrade para o [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] ou superior.
+## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>Cenário 1: Cluster do Windows com Grupos de Disponibilidade do SQL Server e nenhuma FCI (Instância do Cluster de Failover)
+Se você tiver uma instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] que usa AGs (Grupos de Disponibilidade) e nenhuma instância de cluster de failover, poderá migrar para um novo cluster criando uma implantação paralela de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] em um Cluster do Windows diferente com o Windows Server 2016/2012 R2. Depois disso, você poderá criar um AG distribuído em que o cluster de destino é o secundário para o cluster de produção atual. Isso exige que o usuário faça upgrade para o [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] ou superior.
 
 ###  <a name="to-perform-the-upgrade"></a>Para fazer o upgrade
 
@@ -69,7 +68,7 @@ Se você tiver uma instalação do [!INCLUDE[ssNoVersion](../../../includes/ssno
 3.  Forme um grupo de disponibilidade distribuído em que o cluster de destino é o Grupo de Disponibilidade secundário.
 
     >[!NOTE]
-    >O parâmetro LISTENER\_URL da consulta do AG distribuído criado se comporta um pouco diferente dos AGs com uma FCI que serve como a instância primária. Se esse for o cenário do AG primário ou secundário, use o VNN da FCI primária do SQL como a URL do ouvinte no lugar do nome da rede do ouvinte, ainda usando a porta do ponto de extremidade de espelhamento de banco de dados em qualquer um desses cenários.
+    >O parâmetro LISTENER\_URL da criação do T-SQL do AG distribuído se comporta de forma diferente para AGs com FCI do SQL como a instância primária. Se esse for o caso para o AG primário ou secundário, use o VNN da FCI de SQL primária como a URL do ouvinte no lugar do nome da rede do ouvinte, juntamente com a porta do ponto de extremidade do espelhamento de banco de dados.
 
 4.  Ingresse o Grupo de Disponibilidade secundário no AG distribuído.
 
@@ -80,7 +79,7 @@ Se você tiver uma instalação do [!INCLUDE[ssNoVersion](../../../includes/ssno
 
 6.  Corte todo o tráfego para o AG primário e permita que o secundário seja sincronizado.
 
-7.  Altere a política de confirmação em ambos os Grupos de Disponibilidade para SYNCHRONOUS\_COMMIT e faça failover para o cluster de destino depois que o status for SYNCHRONIZED.
+7.  Altere a política de confirmação em ambos os Grupos de Disponibilidade para SYNCHRONOUS_COMMIT e faça failover para o cluster de destino depois que o status for SYNCHRONIZED.
 
 8.  Exclua o AG distribuído.
 
@@ -93,9 +92,9 @@ Se você tiver uma instalação do [!INCLUDE[ssNoVersion](../../../includes/ssno
 
 11. Retome o tráfego em direção ao ouvinte.
 
-## <a name="scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag"></a>Cenário 2: o cluster a ser migrado tem apenas FCIs do SQL e nenhum AG
+## <a name="scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis"></a>Cenário 2: Clusters do Windows com FCIs (Instâncias de Cluster de Failover) do SQL Server
 
-Se você tiver uma instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] que não usa instâncias autônomas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] (apenas FCIs do SQL), poderá migrar para um novo cluster criando uma instalação paralela do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] em outro Cluster do Windows com o Windows Server 2016/2012 R2. Você migrará para o cluster de destino “roubando” os VNNs das FCIs antigas do SQL e adquirindo-as nos novos clusters. Isso criará um tempo de inatividade adicional que depende dos tempos de propagação de DNS.
+Se você tiver um ambiente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] com apenas instâncias de FCI do SQL, poderá migrar para um novo cluster criando um ambiente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] paralelo em um Cluster do Windows diferente com o Windows Server 2016/2012 R2. Você migrará para o cluster de destino “roubando” os VNNs das FCIs antigas do SQL e adquirindo-as nos novos clusters. Isso criará um tempo de inatividade adicional que depende dos tempos de propagação de DNS.
 
 ###  <a name="to-perform-the-upgrade"></a>Para fazer o upgrade
 
@@ -126,7 +125,7 @@ Se você tiver uma instalação do [!INCLUDE[ssNoVersion](../../../includes/ssno
 
 12. Conforme os computadores voltam a ficar online após a reinicialização, inicie cada uma das funções da FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] no Gerenciador de Cluster de Failover.
 
-## <a name="scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups"></a>Cenário 3: o Cluster tem apenas FCIs do SQL e usa Grupos de Disponibilidade
+## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>Cenário 3: o Cluster do Windows tem FCIs do SQL e Grupos de Disponibilidade do SQL Server
 
 Se você tiver uma instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] que não usa nenhuma instância autônoma do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)], apenas FCIs do SQL, que estão contidas em, pelo menos, um Grupo de Disponibilidade, poderá migrar isso para um novo cluster usando métodos semelhantes ao cenário “nenhum Grupo de Disponibilidade, nenhuma instância autônoma”. Antes de copiar as tabelas do sistema para os discos compartilhados da FCI de destino, você deverá remover todos os Grupos de Disponibilidade do ambiente original. Depois que todos os bancos de dados forem migrados para os computadores de destino, você recriará os Grupos de Disponibilidade com os mesmos nomes de esquema e de ouvinte. Ao fazer isso, os recursos de cluster de failover do Windows Server serão formados corretamente e gerenciados no cluster de destino. **O Always On deve estar habilitado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] Configuration Manager em cada computador no ambiente de destino antes da migração.**
 
@@ -164,7 +163,7 @@ Se você tiver uma instalação do [!INCLUDE[ssNoVersion](../../../includes/ssno
 
 16. Crie um ouvinte no novo AG com o nome do ouvinte do Grupo de Disponibilidade original.
 
-## <a name="scenario-4-cluster-has-some-non-fci-and-no-availability-groups"></a>Cenário 4: o Cluster tem algumas instâncias não FCI e nenhum Grupo de Disponibilidade
+## <a name="scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups"></a>Cenário 4: Cluster do Windows com Instâncias do SQL Server autônomas e nenhum Grupo de Disponibilidade
 
 A migração de um cluster com instâncias autônomas é semelhante no processo de migração de um cluster do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] com apenas FCIs. No entanto, em vez de alterar o VNN do recurso de cluster do nome da rede da FCI, altere o nome do computador autônomo original e “roube” o nome do computador antigo no computador de destino. Isso introduz um tempo de inatividade adicional em relação ao cenário “nenhuma instância autônoma”, pois não é possível ingressar o computador autônomo de destino no WSFC até que o nome da rede do computador antigo tenha sido adquirido.
 
@@ -200,9 +199,9 @@ A migração de um cluster com instâncias autônomas é semelhante no processo 
 
 15. Conforme os computadores voltam a ficar online após a reinicialização, inicie cada uma das funções da FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] no Gerenciador de Cluster de Failover.
 
-## <a name="scenario-5-cluster-has-some-non-fci-and-uses-availability-groups"></a>Cenário 5: o Cluster tem algumas instâncias não FCI e usa Grupos de Disponibilidade
+## <a name="scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups"></a>Cenário 5: Cluster do Windows com Instâncias do SQL Server autônomas e Grupos de Disponibilidade
 
-A migração de um cluster que usa Grupos de Disponibilidade com réplicas autônomas é semelhante ao processo de migração de um cluster com o uso estrito de FCIs que usam Grupos de Disponibilidade. Ainda é necessário excluir os Grupos de Disponibilidade originais e reconstruí-los no cluster de destino; no entanto, um tempo de inatividade adicional é introduzido devido aos custos adicionais das migração de instâncias autônomas. **O Always On deve estar habilitado em cada FCI no ambiente de destino antes da migração.**
+A migração de um cluster que usa Grupos de Disponibilidade com réplicas autônomas é semelhante ao processo de migração de um cluster com o uso de FCIs que usam Grupos de Disponibilidade. Ainda é necessário excluir os Grupos de Disponibilidade originais e reconstruí-los no cluster de destino; no entanto, um tempo de inatividade adicional é introduzido devido aos custos adicionais das migração de instâncias autônomas. **O Always On deve estar habilitado em cada FCI no ambiente de destino antes da migração.**
 
 ###  <a name="to-perform-the-upgrade"></a>Para fazer o upgrade
 

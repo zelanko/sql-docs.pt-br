@@ -8,11 +8,14 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
 helpviewer_keywords:
 - Script task [Integration Services], debugging
 - SSIS Script task, development environment
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - VSTA
 - SSIS Script task, coding
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
-caps.latest.revision: "81"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2bccd7c5b39ff2614eb390ed60ebb41653127f81
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a3ff34e28c937c83e43860129f8185ae0ed1b1d6
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codificando e depurando a tarefa Script
   Depois de configurar a tarefa Script no **Editor da Tarefa Script**, você escreve seu código personalizado no ambiente de desenvolvimento da tarefa Script.  
@@ -236,7 +239,7 @@ To open Help, press F1.
  Para depurar o código na sua tarefa Script, defina pelo menos um ponto de interrupção no código e, depois, feche o VSTA IDE para executar o pacote no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Quando a execução do pacote insere a tarefa Script, o VSTA IDE é reaberto e exibe seu código em modo somente leitura. Depois que a execução atingir seu ponto de interrupção, você poderá examinar valores de variáveis e passar pelo código restante.  
   
 > [!WARNING]  
->  Você pode depurar a tarefa Script quando executar o pacote no modo de 64 bits.  
+>  Você não pode depurar a tarefa Script quando executar o pacote no modo de 64 bits.  
   
 > [!NOTE]  
 >  Execute o pacote para depurar em sua tarefa Script. Se você executar apenas a tarefa individual, os pontos de interrupção no código da tarefa Script serão ignorados.  
@@ -251,7 +254,7 @@ To open Help, press F1.
   
 -   Entrada de blog, [Problemas de instalação e configuração de VSTA nas instalações de SSIS 2008 e R2](http://go.microsoft.com/fwlink/?LinkId=215661), em blogs.msdn.com.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referenciar outros assemblies em soluções de script](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   
  [Configurar a tarefa Script no Editor da Tarefa Script](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
   
