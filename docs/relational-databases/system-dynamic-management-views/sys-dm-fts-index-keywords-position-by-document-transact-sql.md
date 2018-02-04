@@ -1,5 +1,5 @@
 ---
-title: sys.DM fts_index_keywords_position_by_document (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_index_keywords_position_by_document (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,23 @@ f1_keywords:
 - dm_fts_index_keywords_position_by_document_TSQL
 - dm_fts_index_keywords_position_by_document
 - sys.dm_fts_index_keywords_position_by_document
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_fts_index_keywords_position_by_document dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_fts_index_keywords_position_by_document dynamic management view
 ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9fc96c8db1521ac99601312869146290a622147
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: afb129fac832bafca777747b078d4f44e18f2422
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmftsindexkeywordspositionbydocument-transact-sql"></a>sys.DM fts_index_keywords_position_by_document (Transact-SQL)
+# <a name="sysdmftsindexkeywordspositionbydocument-transact-sql"></a>sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações de posição de palavra-chave em documentos indexados.  
@@ -46,10 +49,10 @@ OBJECT_ID('table_name')
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- db_id ('*database_name*')  
+ db_id('*database_name*')  
  Uma chamada para o [db_id](../../t-sql/functions/db-id-transact-sql.md) função. Essa função aceita um nome de banco de dados e retorna a ID de banco de dados, que sys.DM fts_index_keywords_position_by_document usa para localizar o banco de dados especificado.  
   
- object_id ('*table_name*')  
+ object_id('*table_name*')  
  Uma chamada para o [object_id ()](../../t-sql/functions/object-id-transact-sql.md) função. Essa função aceita um nome de tabela e retorna a ID da tabela que contém o índice de texto completo a ser inspecionado.  
   
 ## <a name="table-returned"></a>Tabela retornada  
@@ -58,11 +61,11 @@ OBJECT_ID('table_name')
 |------------|---------------|-----------------|  
 |palavra-chave|**varbinary(128)**|Cadeia de caracteres binária que representa a palavra-chave.|  
 |display_term|**nvarchar(4000)**|O formato legível da palavra-chave. Esse formato é derivado do formato interno, que é armazenado no índice de texto completo.|  
-|column_id|**int**|A ID da coluna a partir da qual a palavra-chave atual foi indexada com texto completo.|  
+|column_id|**Int**|A ID da coluna a partir da qual a palavra-chave atual foi indexada com texto completo.|  
 |document_id|**bigint**|A ID do documento ou linha a partir da qual o termo atual foi indexado com texto completo. Essa ID corresponde ao valor da chave de texto completo desse documento ou linha.|  
-|position|**int**|A posição da palavra-chave no documento.|  
+|position|**Int**|A posição da palavra-chave no documento.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use a DMV para identificar o local das palavras indexadas em documentos indexados. Essa DMV pode ser usada para solucionar problemas ao **sys.DM fts_index_keywords_by_document** indica as palavras são no índice de texto completo, mas quando você executa uma consulta usando as palavras, o documento não é retornado.  
   
 ## <a name="permissions"></a>Permissões  
@@ -95,7 +98,7 @@ WHERE document_id = 7 AND display_term = 'performance';
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Pesquisa de Texto Completo](../../relational-databases/search/full-text-search.md)   
+ [Pesquisa de texto completo](../../relational-databases/search/full-text-search.md)   
  [Melhorar o desempenho de índices de texto completo](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
  [Pesquisa de texto completo e funções de pesquisa semântica &#40; Transact-SQL &#41;](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)   
  [Pesquisa de texto completo e exibições de gerenciamento dinâmico de pesquisa semântica e funções &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   

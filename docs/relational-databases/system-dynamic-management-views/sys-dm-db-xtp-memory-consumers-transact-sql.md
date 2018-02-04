@@ -1,5 +1,5 @@
 ---
-title: sys.DM db_xtp_memory_consumers (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_memory_consumers (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_xtp_memory_consumers
 - dm_db_xtp_memory_consumers_TSQL
 - sys.dm_db_xtp_memory_consumers_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_memory_consumers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_memory_consumers dynamic management view
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29a4fae7f62f76dc6d7f1256eed6e681fe0ff9e4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3b34320f2a94ce971bae2cd4406078b9b60669a3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -40,23 +43,23 @@ ms.lasthandoff: 11/17/2017
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|ID (interna) do consumidor de memória.|  
-|memory_consumer_type|**int**|O tipo de consumidor de memória:<br /><br /> 0=Agregação. (Agrega o uso de memória de dois ou mais consumidores. Ele não deve ser exibido.)<br /><br /> 2=VARHEAP (Rastreia o consumo de memória para um heap de comprimento variável.)<br /><br /> 3=HASH (Rastreia o consumo da memória para um índice.)<br /><br /> 5=Pool da página do BD (Rastreia o consumo de memória de um pool de página de banco de dados usado em operações de tempo de execução. Por exemplo, as variáveis de tabela e algumas verificações serializáveis. Há apenas um consumidor de memória deste tipo por banco de dados.)|  
-|memory_consumer_type_desc|**nvarchar (64)**|Tipo de consumidor de memória: VARHEAP, HASH ou PGPOOL.<br /><br /> 0 – (Não deve ser exibido.)<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
-|memory_consumer_desc|**nvarchar (64)**|Descrição da instância do consumidor de memória:<br /><br /> VARHEAP: <br />Heap do banco de dados. Usado para alocar dados do usuário para um banco de dados (linhas).<br />Heap do sistema de banco de dados. Usado para alocar dados do banco de dados que serão incluídos nos despejos de memória e não incluem dados de usuário.<br />Heap do índice de intervalo. Heap privado usado pelo índice de intervalo para alocar páginas do BW.<br /><br /> HASH: Nenhuma descrição desde que o object_id indica a tabela e o index_id, o índice de hash.<br /><br /> PGPOOL: Para o banco de dados há pool da página somente um pool de página do banco de dados de 64K.|  
+|memory_consumer_type|**Int**|O tipo de consumidor de memória:<br /><br /> 0=Agregação. (Agrega o uso de memória de dois ou mais consumidores. Ele não deve ser exibido.)<br /><br /> 2=VARHEAP (Rastreia o consumo de memória para um heap de comprimento variável.)<br /><br /> 3=HASH (Rastreia o consumo da memória para um índice.)<br /><br /> 5=Pool da página do BD (Rastreia o consumo de memória de um pool de página de banco de dados usado em operações de tempo de execução. Por exemplo, as variáveis de tabela e algumas verificações serializáveis. Há apenas um consumidor de memória deste tipo por banco de dados.)|  
+|memory_consumer_type_desc|**nvarchar(64)**|Tipo de consumidor de memória: VARHEAP, HASH ou PGPOOL.<br /><br /> 0 – (Não deve ser exibido.)<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
+|memory_consumer_desc|**nvarchar(64)**|Descrição da instância do consumidor de memória:<br /><br /> VARHEAP: <br />Heap do banco de dados. Usado para alocar dados do usuário para um banco de dados (linhas).<br />Heap do sistema de banco de dados. Usado para alocar dados do banco de dados que serão incluídos nos despejos de memória e não incluem dados de usuário.<br />Heap do índice de intervalo. Heap privado usado pelo índice de intervalo para alocar páginas do BW.<br /><br /> HASH: Nenhuma descrição desde que o object_id indica a tabela e o index_id, o índice de hash.<br /><br /> PGPOOL: Para o banco de dados há pool da página somente um pool de página do banco de dados de 64K.|  
 |object_id|**bigint**|A ID de objeto à qual a memória alocada está atribuída. Um valor negativo de objetos do sistema.|  
 |xtp_object_id|**bigint**|A ID de objeto para a tabela com otimização de memória.|  
-|index_id|**int**|A ID de índice do consumidor (se houver). NULL para tabelas base.|  
+|index_id|**Int**|A ID de índice do consumidor (se houver). NULL para tabelas base.|  
 |allocated_bytes|**bigint**|Número de bytes reservados para o consumidor.|  
 |used_bytes|**bigint**|Bytes usados por este consumidor. Aplica-se somente a varheap.|  
-|allocation_count|**int**|Número de alocações.|  
-|partition_count|**int**|Somente para uso interno.|  
-|sizeclass_count|**int**|Somente para uso interno.|  
-|min_sizeclass|**int**|Somente para uso interno.|  
-|max_sizeclass|**int**|Somente para uso interno.|  
+|allocation_count|**Int**|Número de alocações.|  
+|partition_count|**Int**|Somente para uso interno.|  
+|sizeclass_count|**Int**|Somente para uso interno.|  
+|min_sizeclass|**Int**|Somente para uso interno.|  
+|max_sizeclass|**Int**|Somente para uso interno.|  
 |memory_consumer_address|**varbinary**|Endereço interno do consumidor. Somente para uso interno.|  
 |xtp_object_id|**bigint**|A ID de objeto OLTP na memória que corresponde à tabela com otimização de memória.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Na saída, os alocadores nos níveis de banco de dados fazem referência a tabelas de usuário, índices e tabelas do sistema. VARHEAP com object_id = NULL refere-se à memória alocada para tabelas com colunas de tamanho variável.  
   
 ## <a name="permissions"></a>Permissões  

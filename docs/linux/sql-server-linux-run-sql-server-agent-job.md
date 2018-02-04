@@ -3,7 +3,7 @@ title: Criar e executar trabalhos do SQL Server no Linux | Microsoft Docs
 description: Este tutorial mostra como executar o trabalho do SQL Server Agent no Linux.
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.workload: Inactive
-ms.openlocfilehash: fe2705d9d1bfefd9953ff03da123621dd4ef95f3
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 526375f9f9f96c9ea0402dcb84f20a2c214fd13f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Criar e executar trabalhos do SQL Server Agent no Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Trabalhos do SQL Server são usados para executar regularmente a mesma sequência de comandos no banco de dados do SQL Server. Este tutorial fornece um exemplo de como criar um trabalho do SQL Server Agent no Linux usando o Transact-SQL e SQL Server Management Studio (SSMS).
 
@@ -35,7 +35,7 @@ Trabalhos do SQL Server são usados para executar regularmente a mesma sequênci
 
 Para problemas conhecidos com o SQL Server Agent no Linux, consulte o [notas de versão](sql-server-linux-release-notes.md).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os seguintes pré-requisitos são necessários para concluir este tutorial:
 

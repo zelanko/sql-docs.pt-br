@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - fulltext_semantic_language_statistics_database_TSQL
 - fulltext_semantic_language_statistics_database
 - sys.fulltext_semantic_language_statistics_database
-dev_langs: TSQL
-helpviewer_keywords: sys.fulltext_semantic_language_statistics_database catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.fulltext_semantic_language_statistics_database catalog view
 ms.assetid: 32e95614-ed88-4068-8c37-1e21544717bc
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3aa0d4e32e5356d9e0472f2278c8cb5a94096193
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b37db7d715f878156e44c76909d4b0d5c645c199
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfulltextsemanticlanguagestatisticsdatabase-transact-sql"></a>sys.fulltext_semantic_language_statistics_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +43,11 @@ ms.lasthandoff: 11/17/2017
   
 ||||  
 |-|-|-|  
-|**Nome da coluna**|**Tipo**|**Description**|  
-|**database_id**|**int**|ID do banco de dados, exclusivo em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Nome da coluna**|**Tipo**|**Descrição**|  
+|**database_id**|**Int**|ID do banco de dados, exclusivo em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**register_date**|**datetime**|Data do registro do banco de dados para processamento semântico.|  
-|**registered_by**|**int**|ID da entidade de segurança de servidor que registrou o banco de dados para processamento semântico.|  
-|**version**|**nvarchar (128)**|As informações de versão mais recentes específicas ao banco de dados de estatísticas de idioma semântico.|  
+|**registered_by**|**Int**|ID da entidade de segurança de servidor que registrou o banco de dados para processamento semântico.|  
+|**version**|**nvarchar(128)**|As informações de versão mais recentes específicas ao banco de dados de estatísticas de idioma semântico.|  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Para obter mais informações, veja [Instalar e configurar a pesquisa semântica](../../relational-databases/search/install-and-configure-semantic-search.md).  

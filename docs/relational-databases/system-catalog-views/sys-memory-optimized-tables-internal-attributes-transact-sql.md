@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.memory_optimized_tables_internal_attributes_TSQL
 - memory_optimized_tables_internal_attributes
 - memory_optimized_tables_internal_attributes_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.memory_optimized_tables_internal_attributes catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.memory_optimized_tables_internal_attributes catalog view
 ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jodebrui
 ms.author: jodebrui
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ab05ef27e9687be506db960e628868cb08184d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 97bc9da007e21fd6f686795776b9d96ab53b3c77
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -37,11 +40,11 @@ Contém uma linha para cada tabela com otimização de memória interna usada pa
  
 | Nome da coluna  | Tipo de dados  | Description |
 | :------ |:----------| :-----|
-|object_id  |**int**|       ID da tabela de usuário. Tabelas internas com otimização de memória que existem para dar suporte a uma tabela de usuário (como armazenamento fora de linha ou linhas excluídas no caso de combinações de Hk/Columnstore) têm o mesmo object_id como pai. |
+|object_id  |**Int**|       ID da tabela de usuário. Tabelas internas com otimização de memória que existem para dar suporte a uma tabela de usuário (como armazenamento fora de linha ou linhas excluídas no caso de combinações de Hk/Columnstore) têm o mesmo object_id como pai. |
 |xtp_object_id  |**bigint**|    ID de objeto OLTP in-memory correspondente à tabela interna com otimização de memória usada para dar suporte à tabela de usuário. Ela é exclusiva no banco de dados e pode mudar com o tempo de vida do objeto. 
-|Tipo|  **int** |   Tipo de tabela interna.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
-|type_desc| **nvarchar (60)**|   Descrição do tipo<br/><br/>DELETED_ROWS_TABLE -> Linhas de acompanhamento de tabela interna excluídas de um índice columnstore<br/>USER_TABLE -> Tabela contendo os dados do usuário em linha<br/>DICTIONARIES_TABLE -> Dicionários para um índice columnstore<br/>SEGMENTS_TABLE -> Segmentos compactados para um índice columnstore<br/>ROW_GROUPS_INFO_TABLE -> Metadados sobre grupos de linhas compactados de um índice columnstore<br/>INTERNAL OFF-ROW DATA TABLE -> Tabela interna usada para o armazenamento de uma coluna fora da linha. Nesse caso, minor_id reflete column_id.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> Parte final mais acessada da tabela de histórico baseada em disco. Linhas inseridas no histórico de linhas são inseridas primeiro nessa tabela interna com otimização de memória. Há uma tarefa em segundo plano que move as linhas de forma assíncrona desta tabela interna para a tabela de histórico baseada em disco. |
-|minor_id|  **int**|    0 indica um usuário ou uma tabela interna<br/><br/>Não 0 indica a ID de uma coluna armazenada fora de linha. Junções com column_id em sys.columns.<br/><br/>Cada coluna armazenada fora de linha tem uma linha correspondente nesta exibição do sistema.|
+|tipo|  **Int** |   Tipo de tabela interna.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
+|type_desc| **nvarchar(60)**|   Descrição do tipo<br/><br/>DELETED_ROWS_TABLE -> Linhas de acompanhamento de tabela interna excluídas de um índice columnstore<br/>USER_TABLE -> Tabela contendo os dados do usuário em linha<br/>DICTIONARIES_TABLE -> Dicionários para um índice columnstore<br/>SEGMENTS_TABLE -> Segmentos compactados para um índice columnstore<br/>ROW_GROUPS_INFO_TABLE -> Metadados sobre grupos de linhas compactados de um índice columnstore<br/>INTERNAL OFF-ROW DATA TABLE -> Tabela interna usada para o armazenamento de uma coluna fora da linha. Nesse caso, minor_id reflete column_id.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> Parte final mais acessada da tabela de histórico baseada em disco. Linhas inseridas no histórico de linhas são inseridas primeiro nessa tabela interna com otimização de memória. Há uma tarefa em segundo plano que move as linhas de forma assíncrona desta tabela interna para a tabela de histórico baseada em disco. |
+|minor_id|  **Int**|    0 indica um usuário ou uma tabela interna<br/><br/>Não 0 indica a ID de uma coluna armazenada fora de linha. Junções com column_id em sys.columns.<br/><br/>Cada coluna armazenada fora de linha tem uma linha correspondente nesta exibição do sistema.|
 
 ## <a name="permissions"></a>Permissões  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

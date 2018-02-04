@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_purge_health_state_TSQL
 - sp_syspolicy_purge_health_state
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_purge_health_state
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_purge_health_state
 ms.assetid: 4ba4aa91-4c19-41c7-b70d-5fd9d0e89a5e
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d476953862783efa0de9b0c7eaa461041f434df9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9ae3d46c7a50cc8b7f5a56e3807cb44eb4edd922
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicypurgehealthstate-transact-sql"></a>sp_syspolicy_purge_health_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@target_tree_root_with_id =** ] **'***target_tree_root_with_id***'**  
+ [ **@target_tree_root_with_id =** ] **'***target_tree_root_with_id***'**  
  Representa o nó do Pesquisador de Objetos no qual você deseja desmarcar o estado de integridade. *target_tree_root_with_id* é **nvarchar (400)**, com um padrão NULL.  
   
  Você pode especificar valores da coluna target_query_expression_with_id da exibição do sistema msdb.dbo.syspolicy_system_health_state.  
@@ -51,7 +54,7 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você deve executar sp_syspolicy_purge_health_state no contexto do banco de dados de sistema msdb.  
   
  Se você executar esse procedimento armazenado sem qualquer parâmetro, o estado de integridade do sistema será excluído para todos os nós do Pesquisador de Objetos.  

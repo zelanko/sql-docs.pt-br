@@ -3,7 +3,7 @@ title: "Opções de configuração para o SQL Server 2017 no Docker | Microsoft 
 description: "Explore diferentes maneiras de usar e interagir com o SQL Server 2017 imagens de contêiner no Docker. Isso inclui dados persistentes, copiando arquivos e solução de problemas."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: 416a05397580e6b9c609307f8b25c8014099f999
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 30ac0b58a439af47504c94669af581f5e81fd17c
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Configurar imagens de contêiner de 2017 do SQL Server no Docker
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este tópico explica como configurar e usar o [imagem de contêiner mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) com o Docker. Esta imagem consiste em execução no Linux, com base no Ubuntu 16.04 do SQL Server. Ele pode ser usado com o mecanismo do Docker 1.8 + no Linux ou no Docker para Mac/Windows.
 
@@ -86,7 +86,7 @@ Você pode se conectar e consultar o SQL Server em um contêiner de seja fora do
 
 Você pode se conectar à instância do SQL Server na máquina Docker de qualquer ferramenta externa de macOS, Windows ou Linux que oferece suporte a conexões de SQL. Algumas ferramentas comuns incluem:
 
-- [Sqlcmd](sql-server-linux-setup-tools.md)
+- [sqlcmd](sql-server-linux-setup-tools.md)
 - [Código do Visual Studio](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) no Windows](sql-server-linux-develop-use-ssms.md)
 

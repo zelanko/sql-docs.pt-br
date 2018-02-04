@@ -3,7 +3,7 @@ title: "Configurar o iSCSI de armazenamento de instância de cluster de failover
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 9d4ab14772f78370563c6117553ea9e45203a8b9
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 9720eb3b4254f2592e3c237bc2af16bc5360d2ad
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurar a instância de cluster de failover - iSCSI – SQL Server no Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este artigo explica como configurar o armazenamento iSCSI para uma instância de cluster de failover (FCI) no Linux. 
 
@@ -57,7 +57,7 @@ Para obter informações adicionais sobre o iniciador iSCSI para as distribuiç�
 
     - iface.net_ifacename é o nome da placa de rede, como visto no sistema operacional.
     - iface.hwaddress é o endereço MAC do nome exclusivo que será criado para esta interface abaixo.
-    - iface.IPAddress
+    - iface.ipaddress
     - iface.subnet_Mask 
 
     Consulte o seguinte exemplo:
@@ -99,7 +99,7 @@ Para obter informações adicionais sobre o iniciador iSCSI para as distribuiç�
     ```bash
     sudo grep “Attached SCSI” /var/log/messages
     ```
-    ![30 iSCSIattachedDisks][7]
+    ![30-iSCSIattachedDisks][7]
 
 7.  Crie um volume físico no disco iSCSI.
 
@@ -200,7 +200,7 @@ Para obter informações adicionais sobre o iniciador iSCSI para as distribuiç�
     ls /var/opt/mssql/data
     ```
 
-    ![45 CopyMove][8]
+    ![45-CopyMove][8]
  
    *    Tipo `exit` para alternar novamente para o usuário raiz.
 
@@ -250,7 +250,7 @@ Para obter informações adicionais sobre o iniciador iSCSI para as distribuiç�
     
    *    Insira `exit` a não ser a raiz.
 
-   *    Inicie o SQL Server. Se tudo foi copiado corretamente e segurança aplicada corretamente, do SQL Server deve mostrar é iniciado.
+   *    Start SQL Server. Se tudo foi copiado corretamente e segurança aplicada corretamente, do SQL Server deve mostrar é iniciado.
 
     ```bash
     sudo systemctl start mssql-server
@@ -324,7 +324,7 @@ Para obter informações adicionais sobre o iniciador iSCSI para as distribuiç�
 
    *    Para testar, crie um banco de dados nessa pasta. O exemplo abaixo usa o sqlcmd para criar um banco de dados, alterne o contexto para ele, verifique se os arquivos existem no nível do sistema operacional e, em seguida, exclui o local temporário. Você pode usar o SSMS.
   
-    ![50 ExampleCreateSSMS][9]
+    ![50-ExampleCreateSSMS][9]
 
    *    Desmontar o compartilhamento 
 
@@ -358,7 +358,7 @@ Para obter informações adicionais sobre o iniciador iSCSI para as distribuiç�
 
     \<ListOfVGsNotUsedByPacemaker > é a lista de grupos de volume da saída de etapa 20 que não será usado por FCI. Coloque cada uma entre aspas e separado por uma vírgula. Um exemplo é mostrado a seguir.
 
-    ![55 ListOfVGs][11]
+    ![55-ListOfVGs][11]
  
  
 17. Quando o Linux é iniciado, ele instala o sistema de arquivos. Para garantir que somente Pacemaker pode montar o disco iSCSI, recrie a imagem do sistema de arquivos raiz. 

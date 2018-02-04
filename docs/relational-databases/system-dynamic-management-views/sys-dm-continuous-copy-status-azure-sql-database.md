@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_continuous_copy_status_TSQL
 - dm_continuous_copy_status
 - sys.dm_continuous_copy_status
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dm_continuous_copy_status
 - sys.dm_continuous_copy_status
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4556ca83115890372c53c28c1ee15adfb0d5d835
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 34d840580edb8bb15f4af379575bc0f24b44edcc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>sys.DM continuous_copy_status (banco de dados do SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -46,7 +48,7 @@ Se você estiver usando o SQL Database V12 use [sys.dm_geo_replication_link_stat
 |**partner_server**|**sysname**|Nome do servidor do Banco de Dados SQL vinculado.|  
 |**partner_database**|**sysname**|Nome do banco de dados vinculado no servidor do Banco de Dados SQL.|  
 |**last_replication**|**datetimeoffset**|O carimbo de data/hora da última transação replicada aplicada.|  
-|**replication_lag_sec**|**int**|A diferença de tempo, em segundos, entre a hora atual e o carimbo de data/hora da última transação confirmada com êxito no banco de dados primário que não foi reconhecida pelo banco de dados secundário ativo.|  
+|**replication_lag_sec**|**Int**|A diferença de tempo, em segundos, entre a hora atual e o carimbo de data/hora da última transação confirmada com êxito no banco de dados primário que não foi reconhecida pelo banco de dados secundário ativo.|  
 |**replication_state**|**tinyint**|O estado de replicação de cópia contínua para esse banco de dados. Estes são os valores possíveis e suas descrições.<br /><br /> 1: a propagação. O destino de replicação está sendo propagado e está em um estado transicionalmente inconsistente. Até que a propagação seja concluída, você não pode se conectar ao banco de dados secundário ativo. <br />2: mesmo ritmo. O banco de dados secundário ativo está realizando a captura do banco de dados primário e está em um estado transacionalmente consistente.<br />3: nova propagação. O banco de dados secundário ativo está sendo repropagado automaticamente devido a uma falha de replicação irrecuperável.<br />4: suspenso. Isso não é uma relação de cópia contínua ativa. Esse estado geralmente indica que a largura de banda disponível para o interlink é insuficiente para o nível de atividade da transação no banco de dados primário. No entanto, a relação de cópia contínua ainda permanece intacta.|  
 |**replication_state_desc**|**nvarchar(256)**|Descrição do replication_state:<br /><br /> SEEDING<br /><br /> CATCH_UP<br /><br /> RE_SEEDING<br /><br /> SUSPENDED|  
 |**is_rpo_limit_reached**|**bit**|Isso sempre será definido como 0|  
@@ -56,7 +58,7 @@ Se você estiver usando o SQL Database V12 use [sys.dm_geo_replication_link_stat
 ## <a name="permissions"></a>Permissões  
  Para recuperar dados, requer a participação no **db_owner** função de banco de dados. O usuário dbo, membro do **dbmanager** função de banco de dados e o logon sa podem consultar esse modo de exibição.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **sys.DM continuous_copy_status** exibição é criada no **recurso** banco de dados e é visível em todos os bancos de dados, incluindo o mestre lógico. No entanto, a consulta dessa exibição no mestre lógico retorna um conjunto vazio.  
   
  Se a relação de cópia contínua é encerrada em um banco de dados, a linha do banco de dados no **sys.DM continuous_copy_status** desaparece da exibição.  

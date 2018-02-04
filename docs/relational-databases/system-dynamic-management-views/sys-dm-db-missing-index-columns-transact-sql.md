@@ -1,5 +1,5 @@
 ---
-title: sys.DM db_missing_index_columns (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_missing_index_columns (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_db_missing_index_columns_TSQL
 - sys.dm_db_missing_index_columns
 - dm_db_missing_index_columns
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_missing_index_columns dynamic management function
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_columns dynamic management function
 ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
-caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f2f358532d43453242fea591ab9ac12024230f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f0778fe8698d486d8535eb17fe1d10e6fd812984
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbmissingindexcolumns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,19 +50,19 @@ sys.dm_db_missing_index_columns(index_handle)
  *index_handle*  
  Número inteiro que identifica exclusivamente um índice ausente. Pode ser obtido nos seguintes objetos de gerenciamento dinâmico:  
   
- [sys.DM db_missing_index_details &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)  
+ [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)  
   
- [db_missing_index_groups &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)  
+ [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**column_id**|**int**|ID da coluna.|  
-|**nome da coluna**|**sysname**|Nome da coluna da tabela.|  
-|**column_usage**|**varchar (20)**|Como a coluna é usada pela consulta. Os valores possíveis e suas descrições são:<br /><br /> IGUALDADE: A coluna contribui com um predicado que expressa igualdade do formulário: <br />                        *tabela* = *constant_value*<br /><br /> Operador de DESIGUALDADE: A coluna contribui com um predicado que expressa desigualdade, por exemplo, um predicado do formulário: *tabela* > *constant_value*. Qualquer operador de comparação diferente de "=" expressa desigualdade.<br /><br /> INCLUIR: Coluna não é usada para avaliar um predicado, mas é usada por outro motivo, por exemplo, para cobrir uma consulta.|  
+|**column_id**|**Int**|ID da coluna.|  
+|**column_name**|**sysname**|Nome da coluna da tabela.|  
+|**column_usage**|**varchar(20)**|Como a coluna é usada pela consulta. Os valores possíveis e suas descrições são:<br /><br /> IGUALDADE: A coluna contribui com um predicado que expressa igualdade do formulário: <br />                        *table.column* = *constant_value*<br /><br /> Operador de DESIGUALDADE: A coluna contribui com um predicado que expressa desigualdade, por exemplo, um predicado do formulário: *tabela* > *constant_value*. Qualquer operador de comparação diferente de "=" expressa desigualdade.<br /><br /> INCLUIR: Coluna não é usada para avaliar um predicado, mas é usada por outro motivo, por exemplo, para cobrir uma consulta.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Informações retornadas por **sys.DM db_missing_index_columns** é atualizada quando uma consulta for otimizada pelo otimizador de consulta e não é persistente. As informações do índice ausente são mantidas apenas até o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ser reiniciado. Os administradores de banco de dados devem periodicamente gerar cópias de backup de informações de índice ausente se quiserem mantê-las após o desligamento e a reinicialização do servidor.  
   
 ## <a name="transaction-consistency"></a>Consistência de transação  
@@ -89,8 +91,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sys.DM db_missing_index_details &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [db_missing_index_groups &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
- [db_missing_index_group_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
+ [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ [sys.dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
   
   

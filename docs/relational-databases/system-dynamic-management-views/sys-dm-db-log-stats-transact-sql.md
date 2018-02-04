@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_log_stats
 - sys.dm_db_log_stats_TSQL
 - dm_db_log_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_log_stats dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_log_stats dynamic management function
 ms.assetid: 
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa7b169b3ff6887616346a8324854ab10aceab07
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 281e3c2c74361698ddf67a4e9a607c559bd74ccb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -55,8 +58,8 @@ A função interna [DB_ID](../../t-sql/functions/db-id-transact-sql.md) pode ser
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|database_id    |**int**    |ID do banco de dados |  
-|recovery_model |**nvarchar (60)**   |   Modelo de recuperação do banco de dados. Os valores possíveis incluem: <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
+|database_id    |**Int**    |ID do banco de dados |  
+|recovery_model |**nvarchar(60)**   |   Modelo de recuperação do banco de dados. Os valores possíveis incluem: <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
 |log_min_lsn    |**nvarchar(24)**   |   Início atual [(LSN) do número de sequência de log](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) no log de transações.|  
 |log_end_lsn    |**nvarchar(24)**   |   [log (LSN) do número de sequência](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) do último registro de log no log de transações.|  
 |current_vlf_sequence_number    |**bigint** |   Atual [(VLF) do arquivo de log virtual](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) número de sequência no tempo de execução.|  
@@ -65,7 +68,7 @@ A função interna [DB_ID](../../t-sql/functions/db-id-transact-sql.md) pode ser
 |total_log_size_mb  |**float**  |   Tamanho do log de transações total em MB. |  
 |active_vlf_count   |**bigint** |   Número total de ativos [arquivos de log virtuais (VLFs)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) no log de transações.|  
 |active_log_size_mb |**float**  |   Tamanho do log de transação ativa total em MB.|  
-|log_truncation_holdup_reason   |**nvarchar (60)**   |   Razão de retenção de truncamento do log. O valor é igual a `log_reuse_wait_desc` coluna `sys.databases`.  (Para obter mais explicações sobre esses valores, consulte [o Log de transações](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />Os valores possíveis incluem: <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />Replicação<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />OUTRO TRANSITÓRIO |  
+|log_truncation_holdup_reason   |**nvarchar(60)**   |   Razão de retenção de truncamento do log. O valor é igual a `log_reuse_wait_desc` coluna `sys.databases`.  (Para obter mais explicações sobre esses valores, consulte [o Log de transações](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />Os valores possíveis incluem: <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />Replicação<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />OUTRO TRANSITÓRIO |  
 |log_backup_time    |**datetime**   |   Transaction log horário do último backup.|   
 |log_backup_lsn |**nvarchar(24)**   |   Último backup de log de transação [(LSN) do número de sequência de log](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|   
 |log_since_last_log_backup_mb   |**float**  |   Tamanho do log em MB desde o último backup de log de transação [(LSN) do número de sequência de log](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  
@@ -100,7 +103,7 @@ FROM sys.databases AS s
 CROSS APPLY sys.dm_db_log_stats(s.database_id); 
 ```
 
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Exibições de gerenciamento dinâmico relacionadas ao &#40; do banco de dados Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   

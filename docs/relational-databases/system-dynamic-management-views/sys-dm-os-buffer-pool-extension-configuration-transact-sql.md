@@ -1,5 +1,5 @@
 ---
-title: sys.DM os_buffer_pool_extension_configuration (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_buffer_pool_extension_configuration (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/08/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_buffer_pool_extension_configuration_TSQL
 - dm_os_buffer_pool_extension_configuration_TSQL
 - sys.dm_os_buffer_pool_extension_configuration
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_buffer_pool_extension_configuration dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_buffer_pool_extension_configuration dynamic management view
 ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d0f473b0e871f0df6ce84830e42caaf29bd21c3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d9762b7b907c024807f93334f8dd9dd9b3521b66
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosbufferpoolextensionconfiguration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +42,9 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|caminho|**nvarchar**(256)|O caminho e o nome de arquivo do cache de extensão do pool de buffers. Anulável.|  
-|file_id|**int**|ID do arquivo de extensão do pool de buffers. Não permite valor nulo.|  
-|state|**int**|O estado do recurso de extensão do pool de buffers. Não permite valor nulo.<br /><br /> 0 - Extensão do pool de buffers desabilitada<br /><br /> 1 - Extensão do pool de buffers desabilitando<br /><br /> 2 - reservado para uso futuro<br /><br /> 3 - Extensão do pool de buffers habilitando<br /><br /> 4 - Reservado para uso futuro<br /><br /> 5 - Extensão do pool de buffers habilitada|  
+|path|**nvarchar**(256)|O caminho e o nome de arquivo do cache de extensão do pool de buffers. Anulável.|  
+|file_id|**Int**|ID do arquivo de extensão do pool de buffers. Não permite valor nulo.|  
+|state|**Int**|O estado do recurso de extensão do pool de buffers. Não permite valor nulo.<br /><br /> 0 - Extensão do pool de buffers desabilitada<br /><br /> 1 - Extensão do pool de buffers desabilitando<br /><br /> 2 - reservado para uso futuro<br /><br /> 3 - Extensão do pool de buffers habilitando<br /><br /> 4 - Reservado para uso futuro<br /><br /> 5 - Extensão do pool de buffers habilitada|  
 |state_description|**nvarchar**(60)|Descreve o estado do recurso de extensão do pool de buffers. Permite valor nulo.<br /><br /> 0 = EXTENSÃO DO POOL DE BUFFERS DESABILITADA<br /><br /> 1 = EXTENSÃO DO POOL DE BUFFERS HABILITADA|  
 |current_size_in_kb|**bigint**|Tamanho atual do arquivo de extensão do pool de buffers. Não permite valor nulo.|  
   
@@ -70,6 +73,6 @@ WHERE is_in_bpool_extension <> 0
   
 ## <a name="see-also"></a>Consulte também  
  [Extensão do Pool de buffers](../../database-engine/configure-windows/buffer-pool-extension.md)   
- [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
+ [sys.DM os_buffer_descriptors &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
   
   

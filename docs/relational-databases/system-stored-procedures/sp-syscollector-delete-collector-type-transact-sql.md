@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_collector_type
 - sp_syscollector_delete_collector_type_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_delete_collector_type
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9aff09b2400158d36f590422c2ec7883bc24d99
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 14bfab3376da20b677414106e293ad21103e52dc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +51,13 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
  [  **@collector_type_uid =** ] **'***collector_type_uid***'**  
  É o GUID do tipo de coletor. *collector_type_uid* é **uniqueidentifier** e deve ter um valor se *nome* é NULL.  
   
- [  **@name =** ] **'***nome***'**  
+ [ **@name =** ] **'***name***'**  
  É o nome do tipo de coletor. *nome* é **sysname** e deve ter um valor se *collector_type_uid* é NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O *collector_type_uid* ou *nome* deve ter um valor, não pode ser NULL.  
   
  Este procedimento lançará um erro caso existam itens de coleta deste tipo de coleta.  

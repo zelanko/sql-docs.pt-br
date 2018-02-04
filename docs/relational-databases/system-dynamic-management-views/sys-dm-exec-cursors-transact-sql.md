@@ -1,5 +1,5 @@
 ---
-title: sys.DM exec_cursors (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_cursors (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_cursors
 - dm_exec_cursors_TSQL
 - sys.dm_exec_cursors
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_cursors dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b2978fe15394ed17d63c5c98b562a332a629866
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7e659c10857c8a5248707e592738375fc5c7c483
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,31 +55,31 @@ dm_exec_cursors (session_id | 0 )
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|ID da sessão que detém o cursor.|  
-|**cursor_id**|**int**|ID do objeto do cursor.|  
+|**session_id**|**Int**|ID da sessão que detém o cursor.|  
+|**cursor_id**|**Int**|ID do objeto do cursor.|  
 |**name**|**nvarchar(256)**|Nome do cursor como definido pelo usuário.|  
 |**Propriedades**|**nvarchar(256)**|Especifica as propriedades do cursor. Os valores das seguintes propriedades são concatenados para formar o valor desta coluna:<br />Interface de declaração<br />Tipo de cursor <br />Simultaneidade de cursores<br />Escopo do cursor<br />Nível de aninhamento do cursor<br /><br /> Por exemplo, o valor retornado nesta coluna pode ser "TSQL &#124; Dinâmico &#124; Otimista &#124; Global (0) ".|  
 |**sql_handle**|**varbinary(64)**|Identificador do texto do lote que declarou o cursor.|  
-|**statement_start_offset**|**int**|Número de caracteres no procedimento em lote ou armazenado atualmente em execução no qual a instrução atualmente em execução se inicia. Pode ser usado junto com o **sql_handle**, o **statement_end_offset**e o [dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) função de gerenciamento dinâmico para recuperar o atualmente executar a instrução para a solicitação.|  
-|**statement_end_offset**|**int**|Número de caracteres no procedimento em lote ou armazenado atualmente em execução no qual a instrução atualmente em execução termina. Pode ser usado junto com o **sql_handle**, o **statement_start_offset**e o **dm_exec_sql_text** função de gerenciamento dinâmico para recuperar o atualmente executar a instrução para a solicitação.|  
+|**statement_start_offset**|**Int**|Número de caracteres no procedimento em lote ou armazenado atualmente em execução no qual a instrução atualmente em execução se inicia. Pode ser usado junto com o **sql_handle**, o **statement_end_offset**e o [dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) função de gerenciamento dinâmico para recuperar o atualmente executar a instrução para a solicitação.|  
+|**statement_end_offset**|**Int**|Número de caracteres no procedimento em lote ou armazenado atualmente em execução no qual a instrução atualmente em execução termina. Pode ser usado junto com o **sql_handle**, o **statement_start_offset**e o **dm_exec_sql_text** função de gerenciamento dinâmico para recuperar o atualmente executar a instrução para a solicitação.|  
 |**plan_generation_num**|**bigint**|Um número de sequência que pode ser usado para distinguir entre instâncias de planos após uma recompilação.|  
 |**creation_time**|**datetime**|Carimbo de data e hora da criação do cursor.|  
 |**is_open**|**bit**|Especifica se o cursor está aberto.|  
 |**is_async_population**|**bit**|Especifica se o thread em segundo plano ainda está populando assincronamente um cursor KEYSET ou STATIC.|  
 |**is_close_on_commit**|**bit**|Especifica se o cursor foi declarado por meio de CURSOR_CLOSE_ON_COMMIT.<br /><br /> 1 = O cursor será fechado quando a transação terminar.|  
-|**fetch_status**|**int**|Retorna o último status de busca do cursor. Esta é a última retornada@FETCH_STATUS valor.|  
-|**fetch_buffer_size**|**int**|Retorna informações sobre o tamanho do buffer de busca.<br /><br /> 1 = Cursores Transact-SQL. Pode ser definido como um valor mais alto para cursores de API.|  
-|**fetch_buffer_start**|**int**|No caso dos cursores FAST_FORWARD e DYNAMIC, retornará 0 se o cursor não estiver aberto ou se for posicionado antes da primeira linha. Caso contrário, ele retornará -1.<br /><br /> No caso dos cursores STATIC e KEYSET, retornará 0, se o cursor não estiver aberto, e -1, se o cursor for posicionado antes da primeira linha.<br /><br /> Caso contrário, retorna o número da linha onde está posicionado.|  
-|**ansi_position**|**int**|Posição de cursor dentro do buffer de busca.|  
+|**fetch_status**|**Int**|Retorna o último status de busca do cursor. Esta é a última retornada@FETCH_STATUS valor.|  
+|**fetch_buffer_size**|**Int**|Retorna informações sobre o tamanho do buffer de busca.<br /><br /> 1 = Cursores Transact-SQL. Pode ser definido como um valor mais alto para cursores de API.|  
+|**fetch_buffer_start**|**Int**|No caso dos cursores FAST_FORWARD e DYNAMIC, retornará 0 se o cursor não estiver aberto ou se for posicionado antes da primeira linha. Caso contrário, ele retornará -1.<br /><br /> No caso dos cursores STATIC e KEYSET, retornará 0, se o cursor não estiver aberto, e -1, se o cursor for posicionado antes da primeira linha.<br /><br /> Caso contrário, retorna o número da linha onde está posicionado.|  
+|**ansi_position**|**Int**|Posição de cursor dentro do buffer de busca.|  
 |**worker_time**|**bigint**|Tempo gasto, em microssegundos, pelos trabalhados que executam este cursor.|  
-|**Leituras**|**bigint**|Número de leituras executadas pelo cursor.|  
-|**gravações**|**bigint**|Número de gravações executadas pelo cursor.|  
+|**reads**|**bigint**|Número de leituras executadas pelo cursor.|  
+|**writes**|**bigint**|Número de gravações executadas pelo cursor.|  
 |**dormant_duration**|**bigint**|Milissegundos desde o início da última consulta (aberta ou de busca) neste cursor.|  
   
 ## <a name="permissions"></a>Permissões  
  , é necessário ter permissão VIEW SERVER STATE no servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela a seguir fornece informações sobre a interface de declaração de cursor e inclui os valores possíveis para a coluna de propriedades.  
   
 |Propriedade|Description|  

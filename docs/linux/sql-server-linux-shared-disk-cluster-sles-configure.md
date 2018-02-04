@@ -3,7 +3,7 @@ title: Configurar o cluster de disco compartilhado SLES no SQL Server | Microsof
 description: "Implementar a alta disponibilidade por meio da configuração de cluster de disco compartilhado do SUSE Linux Enterprise Server (SLES) para o SQL Server."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,21 +15,21 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.workload: Inactive
-ms.openlocfilehash: 71671e0103916d6a539b730ce4bac141d29c417e
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 52747e7bc7a4ab04e0316669e350affb96fc73bf
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configurar o cluster de disco compartilhado SLES para SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este guia fornece instruções para criar um cluster de disco compartilhado de dois nós para o SQL Server no SUSE Linux Enterprise Server (SLES). A camada de clustering é baseada no SUSE [alta disponibilidade extensão (HAE)](https://www.suse.com/products/highavailability) criado na parte superior do [Pacemaker](http://clusterlabs.org/). 
 
 Para obter mais detalhes sobre a configuração de cluster, opções do recurso de agente, gerenciamento, as práticas recomendadas e recomendações, consulte [SUSE Linux Enterprise alta disponibilidade extensão 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para concluir o cenário de ponta a ponta abaixo, você precisa duas máquinas para implantar o cluster de dois nós e outro servidor para configurar o compartilhamento de NFS. Etapas a seguir descrevem como esses servidores serão configurados.
 
@@ -254,7 +254,7 @@ Full list of resources:
 
 Para gerenciar seus recursos de cluster, consulte o tópico a seguir SUSE: [Gerenciando recursos de Cluster](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
-### <a name="manual-failover"></a>Failover manual
+### <a name="manual-failover"></a>failover manual
 
 Embora os recursos estiverem configurados para failover automaticamente (ou migrar) para outros nós do cluster em caso de falha de hardware ou software, você pode mover um recurso também manualmente para outro nó do cluster usando a GUI do Pacemaker ou a linha de comando. 
 

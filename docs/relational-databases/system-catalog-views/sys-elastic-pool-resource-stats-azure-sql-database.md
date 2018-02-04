@@ -8,29 +8,32 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: Azure SQL Database
-f1_keywords: sys.elastic_pool_resource_stats catalog view
+applies_to:
+- Azure SQL Database
+f1_keywords:
+- sys.elastic_pool_resource_stats catalog view
 helpviewer_keywords:
 - sys.elastic_pool_resource_stats_TSQL
 - sys.elastic_pool_resource_stats
 - elastic_pool_resource_stats_TSQL
 - elastic_pool_resource_stats
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9505470a81f88e457a8b2f0b9429cee60cef7dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7af69bdd1f98560d3a6ae9699551b4f3062f68c6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="syselasticpoolresourcestats-azure-sql-database"></a>sys.elastic_pool_resource_stats (banco de dados do SQL Azure)
+# <a name="syselasticpoolresourcestats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Retorna estatísticas de uso de recursos de todos os pools de banco de dados Elástico em um servidor lógico. Para cada pool Elástico de banco de dados, há uma linha para cada relatório de janela (quatro linhas por minuto) de 15 segundos. Isso inclui a utilização da CPU, e/s, Log, o consumo de armazenamento e simultâneas/sessão de solicitação por todos os bancos de dados no pool. Esses dados são retidos por 14 dias. 
@@ -43,17 +46,17 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**start_time**|**datetime2**|Hora UTC que indica o início da segunda 15 intervalo de relatório.|  
 |**end_time**|**datetime2**|Hora UTC que indica o final do intervalo de relatório de 15 segundos.|  
-|**elastic_pool_name**|**nvarchar (128)**|Nome do pool Elástico de banco de dados.|  
-|**avg_cpu_percent**|**decimal (5,2)**|Média de utilização em porcentagem do limite do pool de computação.|  
-|**avg_data_io_percent**|**decimal (5,2)**|Utilização média de e/s em percentagem com base no limite do pool.|  
-|**avg_log_write_percent**|**decimal (5,2)**|Média de utilização de recursos de gravação em porcentagem do limite do pool de.|  
-|**avg_storage_percent**|**decimal (5,2)**|Média de utilização do armazenamento em porcentagem do limite do pool de armazenamento.|  
-|**max_worker_percent**|**decimal (5,2)**|Máximo simultâneos trabalhadores (solicitações) em porcentagem com base no limite do pool.|  
-|**max_session_percent**|**decimal (5,2)**|Máximo de sessões simultâneas em porcentagem com base no limite do pool.|  
-|**elastic_pool_dtu_limit**|**int**|Máximo do pool Elástico DTU configuração atual para este pool Elástico durante esse intervalo.|  
+|**elastic_pool_name**|**nvarchar(128)**|Nome do pool Elástico de banco de dados.|  
+|**avg_cpu_percent**|**decimal(5,2)**|Média de utilização em porcentagem do limite do pool de computação.|  
+|**avg_data_io_percent**|**decimal(5,2)**|Utilização média de e/s em percentagem com base no limite do pool.|  
+|**avg_log_write_percent**|**decimal(5,2)**|Média de utilização de recursos de gravação em porcentagem do limite do pool de.|  
+|**avg_storage_percent**|**decimal(5,2)**|Média de utilização do armazenamento em porcentagem do limite do pool de armazenamento.|  
+|**max_worker_percent**|**decimal(5,2)**|Máximo simultâneos trabalhadores (solicitações) em porcentagem com base no limite do pool.|  
+|**max_session_percent**|**decimal(5,2)**|Máximo de sessões simultâneas em porcentagem com base no limite do pool.|  
+|**elastic_pool_dtu_limit**|**Int**|Máximo do pool Elástico DTU configuração atual para este pool Elástico durante esse intervalo.|  
 |**elastic_pool_storage_limit_mb**|**bigint**|Limite de armazenamento máximo do pool Elástico atual configuração para este pool Elástico em megabytes durante esse intervalo.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Essa exibição existe no banco de dados mestre do servidor lógico. Você deve estar conectado ao banco de dados mestre para consulta **sys.elastic_pool_resource_stats**.  
   
 ## <a name="permissions"></a>Permissões  

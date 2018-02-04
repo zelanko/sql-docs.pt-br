@@ -1,5 +1,5 @@
 ---
-title: backup_devices (Transact-SQL) | Microsoft Docs
+title: sys.backup_devices (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - backup_devices
 - sys.backup_devices
 - sys.backup_devices_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backup devices [SQL Server], viewing information
 - sys.backup_devices catalog view
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dab6ab1eedc6ae0e6a7af91fbad65a8ed36562a1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8c3e73f8ed9f7d19f52d40742ea029d664b02ea8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysbackupdevices-transact-sql"></a>sys.backup_devices (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +42,9 @@ ms.lasthandoff: 11/27/2017
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome do dispositivo de backup. É exclusivo no conjunto.|  
-|**tipo**|**tinyint**|Tipo de dispositivo de backup:<br /><br /> 2 = Disco<br /><br /> 3 = Disquete (obsoleto)<br /><br /> 5 = Fita<br /><br /> 6 = Pipe (obsoleto)<br /><br /> 7 = Dispositivo virtual (para uso opcional por fornecedores terceirizados de backup)<br /><br /> Geralmente, são usados somente as opções disco (2) e fita (5).|  
-|**type_desc**|**nvarchar (60)**|Descrição do tipo de dispositivo de backup.<br /><br /> DISK<br /><br /> DISKETTE (obsoleto)<br /><br /> TAPE<br /><br /> PIPE (obsoleto)<br /><br /> VIRTUAL_DEVICE (para uso opcional por fornecedores terceirizados de backup)<br /><br /> Geralmente, apenas DISK e TAPE são usados.|  
-|**physical_name**|**nvarchar (260)**|O nome de arquivo ou caminho físico do dispositivo de backup.|  
+|**type**|**tinyint**|Tipo de dispositivo de backup:<br /><br /> 2 = Disco<br /><br /> 3 = Disquete (obsoleto)<br /><br /> 5 = Fita<br /><br /> 6 = Pipe (obsoleto)<br /><br /> 7 = Dispositivo virtual (para uso opcional por fornecedores terceirizados de backup)<br /><br /> Geralmente, são usados somente as opções disco (2) e fita (5).|  
+|**type_desc**|**nvarchar(60)**|Descrição do tipo de dispositivo de backup.<br /><br /> DISK<br /><br /> DISKETTE (obsoleto)<br /><br /> TAPE<br /><br /> PIPE (obsoleto)<br /><br /> VIRTUAL_DEVICE (para uso opcional por fornecedores terceirizados de backup)<br /><br /> Geralmente, apenas DISK e TAPE são usados.|  
+|**physical_name**|**nvarchar(260)**|O nome de arquivo ou caminho físico do dispositivo de backup.|  
   
 ## <a name="permissions"></a>Permissões  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - syspolicy_policy_categories
 - syspolicy_policy_categories_TSQL
-dev_langs: TSQL
-helpviewer_keywords: syspolicy_policy_groups view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- syspolicy_policy_groups view
 ms.assetid: 65f080c7-771f-4cf6-a7a0-88882c637f8d
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f75d3b95c0c37fa9acf2a550651f34308d0e782
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d133b241116b9bc17bf068f07bf8ee566e83f842
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syspolicypolicycategories-transact-sql"></a>syspolicy_policy_categories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +39,11 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|policy_category_id|**int**|Identificador da categoria da política.|  
+|policy_category_id|**Int**|Identificador da categoria da política.|  
 |name|**sysname**|Nome da categoria de política.|  
 |mandate_database_subscriptions|**bit**|Indica se a categoria da política aplica-se a todos os bancos de dados de uma instância sem uma assinatura explícita (1) ou se a categoria da política deve ser aplicada a um banco de dados usando uma assinatura explícita (0).|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Exibe uma lista dos grupos de políticas do Gerenciamento Baseado em Política.  
   
 ## <a name="permissions"></a>Permissões  

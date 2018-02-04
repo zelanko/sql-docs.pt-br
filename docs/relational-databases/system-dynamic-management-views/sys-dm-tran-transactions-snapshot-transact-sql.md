@@ -1,5 +1,5 @@
 ---
-title: tran_transactions_snapshot (Transact-SQL) | Microsoft Docs
+title: sys.dm_tran_transactions_snapshot (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_tran_transactions_snapshot
 - sys.dm_tran_transactions_snapshot_TSQL
 - dm_tran_transactions_snapshot_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_transactions_snapshot dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_transactions_snapshot dynamic management view
 ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab16132fd9b9bca0b0c2e0f12eedfbfe87fae530
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f73b2955b25e17cd9c4aea963acb277f11bc3351
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmtrantransactionssnapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +76,7 @@ dm_tran_transactions_snapshot
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|Número de sequência de transação (XSN) de um instantâneo de transação.|  
-|**snapshot_id**|**int**|ID de instantâneo para cada instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] iniciada com leitura confirmada, usando controle de versão de linha. Este valor é usado para gerar uma exibição consistente transacional do banco de dados que oferece suporte para cada consulta sendo executada com leitura confirmada, usando controle de versão de linha.|  
+|**snapshot_id**|**Int**|ID de instantâneo para cada instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] iniciada com leitura confirmada, usando controle de versão de linha. Este valor é usado para gerar uma exibição consistente transacional do banco de dados que oferece suporte para cada consulta sendo executada com leitura confirmada, usando controle de versão de linha.|  
 |**snapshot_sequence_num**|**bigint**|Número de sequência de transação de uma transação que estava ativa quando o instantâneo de transação começou.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -81,7 +84,7 @@ dm_tran_transactions_snapshot
   
  Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] camadas Premium requer a permissão VIEW DATABASE STATE no banco de dados. Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] camadas Standard e Basic requer o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] conta de administrador.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando uma transação de instantâneo começa, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] registra todas as transações ativas naquele momento. **tran_transactions_snapshot** reporta essas informações para todas as transações de instantâneo ativas.  
   
  Cada transação é identificada por um número de sequência de transação atribuído quando no início da transação. As transações começam quando uma instrução BEGIN TRANSACTION ou BEGIN WORK é executada. No entanto, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] nomeia o número de sequência de transação com a execução da primeira instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] a acessar dados, depois da instrução BEGIN TRANSACTION ou BEGIN WORK. Os números de sequência de transação são incrementados de um.  

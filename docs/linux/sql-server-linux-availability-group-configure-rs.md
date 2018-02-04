@@ -3,7 +3,7 @@ title: Configurar um grupo de disponibilidade do SQL Server para a escala de lei
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 01/24/2018
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 1b7705c33b252dc7cb032976b15c7c0efe28de8d
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+ms.openlocfilehash: e2ce8a7cd87e188fce0f1b0f62bde148324373a5
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Configurar um grupo de disponibilidade do SQL Server para a escala de leitura no Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Você pode configurar um SQL Server sempre na disponibilidade de grupo (AG) para cargas de trabalho de leitura de escala no Linux. Há dois tipos de arquiteturas de grupos de disponibilidade. Uma arquitetura de alta disponibilidade usa um Gerenciador de cluster para fornecer melhor continuidade de negócios. Essa arquitetura também pode incluir leitura escala réplicas. Para criar a arquitetura de alta disponibilidade, consulte [configurar o SQL Server sempre no grupo de disponibilidade para alta disponibilidade no Linux](sql-server-linux-availability-group-configure-ha.md). Arquitetura de dá suporte a cargas de trabalho somente leitura de escala. Este artigo explica como criar um grupo de disponibilidade sem um Gerenciador de cluster para cargas de trabalho de leitura de escala. Essa arquitetura fornece a escala de leitura somente. Ele não fornece alta disponibilidade.
 

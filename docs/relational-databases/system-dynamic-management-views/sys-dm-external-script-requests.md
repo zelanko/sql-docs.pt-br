@@ -1,5 +1,5 @@
 ---
-title: sys.DM external_script_requests | Microsoft Docs
+title: sys.dm_external_script_requests | Microsoft Docs
 ms.custom: 
 ms.date: 06/24/2016
 ms.prod: sql-non-specified
@@ -16,19 +16,21 @@ f1_keywords:
 - sys.dm_external_script_requests_TSQL
 - dm_external_script_requests
 - dm_external_script_requests_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_external_script_requests dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_external_script_requests dynamic management view
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
-caps.latest.revision: "4"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cde483c6fab14391f74a52bb9ad5fbcf9fee8d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 55ac900238a49bcad4c0af31b7482b7381b1aadc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexternalscriptrequests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +44,9 @@ Retorna uma linha para cada conta de trabalho ativa que executa um script extern
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**Identificador exclusivo**|ID do processo que enviou a solicitação de script externo. Isso corresponde à ID de processo como recebidas por[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**Identificador exclusivo**|ID do processo que enviou a solicitação de script externo. Corresponde à ID do processo recebida por [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |language|**nvarchar**|Palavra-chave que representa uma linguagem de script com suporte. Atualmente, há suporte apenas para `R` .|  
-|degree_of_parallelism|**int**|Número que indica o número de processos paralelos que foram criados. Esse valor pode ser diferente do número de processos paralelos solicitados.|  
+|degree_of_parallelism|**Int**|Número que indica o número de processos paralelos que foram criados. Esse valor pode ser diferente do número de processos paralelos solicitados.|  
 |external_user_name|**nvarchar**|A conta de trabalho do Windows na qual o script foi executado.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -87,7 +89,7 @@ external_script_request_id  |language  |degree_of_parallelism  |external_user_na
 
 
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funções e exibições de gerenciamento dinâmico &#40; relacionadas à execução Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)

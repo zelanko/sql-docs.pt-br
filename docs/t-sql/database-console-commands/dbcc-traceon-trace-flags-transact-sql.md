@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - trace flags [SQL Server], about trace flags
 - trace flags [SQL Server]
@@ -21,16 +23,16 @@ helpviewer_keywords:
 - performance [SQL Server], trace
 - debugging [SQL Server], trace flags
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
-caps.latest.revision: "171"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6011c66716e96347b295325ab020739e41c04370
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 396216c00fc4c474164d98e47d0185f479e61b48
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - Trace Flags (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -143,6 +145,7 @@ A tabela a seguir lista e descreve os sinalizadores de rastreamento disponíveis
 |**9567**|Habilita a compactação do fluxo de dados para grupos de disponibilidade AlwaysOn durante a propagação automática. A compactação pode reduzir significativamente o tempo de transferência durante a propagação automática e aumentará a carga no processador. Para obter mais informações, consulte [inicializar automaticamente o grupo de disponibilidade do AlwaysOn](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md) e [ajustar a compactação do grupo de disponibilidade](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Escopo**: global ou sessão|
 |**9591**|Desabilita a compactação do bloco de log em grupos de disponibilidade AlwaysOn. Compactação do bloco de log é o comportamento padrão usado com réplicas síncronas e assíncronas [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Em [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a compactação é usada somente com a réplica assíncrona. <br /><br />**Escopo**: global ou sessão|
 |**9592**|Permite registrar a compactação do fluxo de grupos de disponibilidade síncrona. Este recurso está desabilitado por padrão em grupos de disponibilidade síncrona, pois a compactação adiciona latência. Para obter mais informações, veja [Ajustar a compactação do grupo de disponibilidade](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Escopo**: global ou sessão| 
+|**9929**|Reduz os arquivos de ponto de verificação na memória para 1 MB. Para obter mais informações, consulte [artigo do Microsoft Support](http://support.microsoft.com/kb/3147012).<br /><br />**Escopo**: global apenas|  
 |**9939**|Habilita paralelo planos e verificação paralela de tabelas com otimização de memória e variáveis de tabela em operações DML que fazem referência a tabelas com otimização de memória ou variáveis de tabela, desde que eles não sejam o destino da operação de DML na [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Para obter mais informações, consulte [artigo do Microsoft Support](http://support.microsoft.com/kb/4013877).<br /><br />**Observação:** 9939 o sinalizador de rastreamento não é necessária se o sinalizador de rastreamento 4199 explicitamente estiver habilitado.<br /><br />**Escopo**: global ou sessão ou consulta|   
 |**10204**|Desabilita a mesclagem/recompactar durante a reorganização de índice columnstore. Em [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], quando um índice columnstore é reorganizado, há nova funcionalidade para mesclar automaticamente todos os pequenos rowgroups compactados em maior rowgroups compactados, bem como recompactar todos os rowgroups que têm um grande número de linhas excluídas.<br /><br />**Observação:** sinalizador de rastreamento 10204 não se aplica a índices columnstore que são criados em tabelas com otimização de memória.<br /><br />**Escopo**: global ou sessão|   
 |**10316**|Permite a criação de índices adicionais em [tabela interna de otimização de memória preparo temporal](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md), ao lado do padrão. Se você tiver o padrão de consulta específico que inclui colunas que não são cobertas pelo índice padrão você pode considerar adicionar outros.<br /><br />**Observação:** da versão do sistema temporal tabelas para tabelas com otimização de memória são projetadas para fornecer a alta taxa de transferência transacional. Esteja ciente de que a criação de índices adicionais pode apresentar sobrecarga para operações DML que atualizar ou excluir linhas na tabela atual. Com os índices adicionais, você deve visar para encontrar o equilíbrio certo entre desempenho de consultas temporais e sobrecarga adicional de DML.<br /><br />**Escopo**: global ou sessão|

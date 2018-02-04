@@ -1,5 +1,5 @@
 ---
-title: sys.DM db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/29/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_xtp_nonclustered_index_stats
 - sys.dm_db_xtp_nonclustered_index_stats_TSQL
 - sys.dm_db_xtp_nonclustered_index_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_nonclustered_index_stats
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_nonclustered_index_stats
 ms.assetid: d55ba31c-296c-419b-9c4b-c126e0a3d156
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1b54d3955dd250a3d3799170e4ad15a7312802f
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6e19c56f14c155ef6cde21d3628613f5326346b8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtpnonclusteredindexstats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -45,9 +48,9 @@ ms.lasthandoff: 11/27/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|object_id|**int**|A ID do objeto.|  
+|object_id|**Int**|A ID do objeto.|  
 |xtp_object_id|**bigint**|ID da tabela com otimização de memória.|  
-|index_id|**int**|ID do índice.|  
+|index_id|**Int**|ID do índice.|  
 |delta_pages|**bigint**|O número total de páginas delta deste índice na árvore.|  
 |internal_pages|**bigint**|Para uso interno. O número total de páginas internas deste índice na árvore.|  
 |leaf_pages|**bigint**|O número total de páginas de folha deste índice na árvore.|  

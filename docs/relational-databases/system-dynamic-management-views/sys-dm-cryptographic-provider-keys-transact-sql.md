@@ -1,5 +1,5 @@
 ---
-title: sys.DM cryptographic_provider_keys (Transact-SQL) | Microsoft Docs
+title: sys.dm_cryptographic_provider_keys (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_cryptographic_provider_keys_TSQL
 - dm_cryptographic_provider_keys
 - sys.dm_cryptographic_provider_keys
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_cryptographic_provider_keys dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_cryptographic_provider_keys dynamic management function
 ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
-caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b16cf946a2e963ac0421fe91ac11df6e9021ed1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 84149c495867b1479e09edcd24e32c2191608fc8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmcryptographicproviderkeys-transact-sql"></a>sys.dm_cryptographic_provider_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,13 +55,13 @@ dm_cryptographic_provider_keys ( provider_id )
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**key_id**|**int**|Número de identificação da chave no provedor.|  
+|**key_id**|**Int**|Número de identificação da chave no provedor.|  
 |**key_name**|**nvarchar(512)**|Nome da chave no provedor.|  
 |**key_thumbprint**|**varbinary(32)**|Impressão digital do provedor da chave.|  
-|**algorithm_id**|**int**|Número de identificação do algoritmo no provedor.|  
-|**algorithm_tag**|**int**|Marca do algoritmo no provedor.|  
+|**algorithm_id**|**Int**|Número de identificação do algoritmo no provedor.|  
+|**algorithm_tag**|**Int**|Marca do algoritmo no provedor.|  
 |**key_type**|**nchar(256)**|Tipo de chave no provedor.|  
-|**comprimento_de_chave**|**int**|Comprimento da chave no provedor.|  
+|**key_length**|**Int**|Comprimento da chave no provedor.|  
   
 ## <a name="permissions"></a>Permissões  
  Quando essa exibição for consultada, ela autenticará o contexto do usuário junto ao provedor e enumerará todas as chaves visíveis ao usuário.  

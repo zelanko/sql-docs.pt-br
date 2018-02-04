@@ -1,5 +1,5 @@
 ---
-title: sql_referencing_entities (Transact-SQL) | Microsoft Docs
+title: sys.dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_sql_referencing_entities_TSQL
 - sys.dm_sql_referencing_entities_TSQL
 - dm_sql_referencing_entities
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_sql_referencing_entities dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_sql_referencing_entities dynamic management function
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 26d13446ff128a00b31677c78d7e205ba40b0e94
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 35e2f1be36365c2b1f5c8801a9e0d7749c70de7d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +66,7 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *schema_name.referenced*_*nome da entidade*  
+ *schema_name.referenced*_*entity_name*  
  É o nome da entidade referenciada.  
   
  *schema_name* é necessária, exceto quando a classe referenciada é a PARTITION_FUNCTION.  
@@ -81,9 +84,9 @@ sys.dm_sql_referencing_entities (
 |-----------------|---------------|-----------------|  
 |referencing_schema_name|**sysname**|Esquema ao qual a entidade de referência pertence. Permite valor nulo.<br /><br /> NULL para nível de banco de dados e gatilhos DDL no nível do servidor.|  
 |referencing_entity_name|**sysname**|Nome da entidade de referência. Não permite valor nulo.|  
-|referencing_id|**int**|ID da entidade de referência. Não permite valor nulo.|  
+|referencing_id|**Int**|ID da entidade de referência. Não permite valor nulo.|  
 |referencing_class|**tinyint**|Classe da entidade de referência. Não permite valor nulo.<br /><br /> 1 = Objeto<br /><br /> 12 = Gatilho DDL no nível do banco de dados<br /><br /> 13 - Gatilho DDL no nível do servidor|  
-|referencing_class_desc|**nvarchar (60)**|Descrição da classe da entidade de referência.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
+|referencing_class_desc|**nvarchar(60)**|Descrição da classe da entidade de referência.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
 |is_caller_dependent|**bit**|Indica que a resolução da ID da entidade referenciada ocorre em tempo de execução por depender do esquema do chamador.<br /><br /> 1 = A entidade de referência tem o potencial de fazer referência à entidade. No entanto, a resolução da ID da entidade referenciada depende do chamador e não pode ser determinada. Isso ocorre apenas com relação a referências não associadas a esquema em procedimento armazenado, procedimento armazenado estendido ou função definida pelo usuário chamados em uma instrução EXECUTE.<br /><br /> 0 = A entidade referenciada não é dependente do chamador.|  
   
 ## <a name="exceptions"></a>Exceções  
@@ -106,14 +109,14 @@ sys.dm_sql_referencing_entities (
 |-----------------|------------------------|-----------------------|  
 |Table|Sim*|Sim|  
 |Exibição|Sim|Sim|  
-|Procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sim|Sim|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] procedimento armazenado * *|Sim|Sim|  
 |procedimento armazenado CLR|não|Sim|  
-|Função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário|Sim|Sim|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] função definida pelo usuário|Sim|Sim|  
 |Função CLR definida pelo usuário|não|Sim|  
 |Gatilho CLR (DML e DDL)|não|não|  
-|Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)] |Sim|não|  
-|Gatilho DDL no nível do banco de dados [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|não|  
-|Gatilho DDL no nível do servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|não|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] gatilho DML|Sim|não|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] gatilho DDL de nível de banco de dados|Sim|não|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] gatilho DDL de nível de servidor|Sim|não|  
 |Procedimentos armazenados estendidos|não|Sim|  
 |Fila|não|Sim|  
 |Sinônimo|não|Sim|  
@@ -177,7 +180,7 @@ GO
  (2 row(s) affected)`  
  ``` 
  
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   

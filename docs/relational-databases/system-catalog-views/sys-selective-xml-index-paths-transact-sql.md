@@ -1,5 +1,5 @@
 ---
-title: sys. selective_xml_index_paths (Transact-SQL) | Microsoft Docs
+title: sys.selective_xml_index_paths (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - xml_schema_attributes
 - sys.xml_schema_attributes_TSQL
 - sys.xml_schema_attributes
-dev_langs: TSQL
-helpviewer_keywords: sys.xml_schema_attributes catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.xml_schema_attributes catalog view
 ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c2f8156f9821bb6d4d0f70ae1af200a33ce3cb9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f71e46667c56b628965eab154af0c3e15c421f8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysselectivexmlindexpaths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +52,14 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|ID da tabela com coluna XML.|  
-|**index_id**|**int**|ID exclusiva do índice xml seletivo.|  
-|**path_id**|**int**|ID do caminho XML promovido.|  
-|**caminho**|**nvarchar(4000)**|Caminho promovido. Por exemplo, '/a/b/c/d/e'.|  
+|**object_id**|**Int**|ID da tabela com coluna XML.|  
+|**index_id**|**Int**|ID exclusiva do índice xml seletivo.|  
+|**path_id**|**Int**|ID do caminho XML promovido.|  
+|**path**|**nvarchar(4000)**|Caminho promovido. Por exemplo, '/a/b/c/d/e'.|  
 |**name**|**sysname**|Nome do caminho.|  
 |**path_type**|**tinyint**|0 = XQUERY<br /><br /> 1 = SQL|  
 |**path_type_desc**|**sysname**|Com base em **path_type** valor 'XQUERY' ou 'SQL'.|  
-|**xml_component_id**|**int**|ID exclusiva do componente de esquema XML no banco de dados.|  
+|**xml_component_id**|**Int**|ID exclusiva do componente de esquema XML no banco de dados.|  
 |**xquery_type_description**|**nvarchar(4000)**|Nome do tipo xsd especificado.|  
 |**is_xquery_type_inferred**|**bit**|1 = o tipo é inferido.|  
 |**xquery_max_length**|**smallint**|Comprimento máximo (em caracteres do tipo xsd).|  
@@ -66,7 +69,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**user_type_id**|**tinyint**|ID do tipo de usuário da coluna.|  
 |**max_length**|**smallint**|Comprimento máximo (em bytes) do tipo.<br /><br /> -1 = O tipo de dados de coluna é varchar(max), nvarchar(max), varbinary(max) ou xml.|  
 |**precisão**|**tinyint**|Precisão máxima do tipo se for numérico. Caso contrário, 0.|  
-|**escala**|**tinyint**|Escala máxima do tipo se for numérico. Caso contrário, será 0.|  
+|**scale**|**tinyint**|Escala máxima do tipo se for numérico. Caso contrário, será 0.|  
 |**collation_name**|**sysname**|Nome do agrupamento do tipo se baseado em caractere. Caso contrário, NULL.|  
 |**is_singleton**|**bit**|0 = dica SINGLETON ausente.<br /><br /> 1 = dica de otimização SINGLETON aplicada.|  
   

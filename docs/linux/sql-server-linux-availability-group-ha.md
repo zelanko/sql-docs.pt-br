@@ -12,20 +12,20 @@ ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7131eec581f973738d1cacb45dd355e2b7168aeb
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 8d0f5fe75b65efbea49df143e573316b50675a93
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este artigo apresenta as configurações de implantação com suporte para grupos de disponibilidade do SQL Server Always On em servidores Linux. Um grupo de disponibilidade dá suporte a alta disponibilidade e proteção de dados. Detecção de falha automático, failover automático e transparente reconexão depois do failover fornecem alta disponibilidade. Réplicas sincronizadas fornecem proteção de dados. 
 

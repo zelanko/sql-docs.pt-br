@@ -1,5 +1,5 @@
 ---
-title: fts_memory_buffers (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_memory_buffers (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/29/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_fts_memory_buffers_TSQL
 - dm_fts_memory_buffers
 - sys.dm_fts_memory_buffers_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_fts_memory_buffers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_fts_memory_buffers dynamic management view
 ms.assetid: 56895fe5-e8df-4d75-9adc-c1f7757cdef8
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3708d5c98e8869e0a1d1a68fe2bc2df3376bcadf
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 190d564ec27cf7921fbfbd9d6e85fc594b77c2d6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsmemorybuffers-transact-sql"></a>sys.dm_fts_memory_buffers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,13 +44,13 @@ ms.lasthandoff: 11/17/2017
   
 |Coluna|Data type|Description|  
 |------------|---------------|-----------------|  
-|**pool_id**|**int**|ID do pool de memória alocada.<br /><br /> 0 = Buffers pequenos<br /><br /> 1 = Buffers grandes|  
-|**memory_address**|**varbinary (8)**|Endereço do buffer de memória alocado.|  
+|**pool_id**|**Int**|ID do pool de memória alocada.<br /><br /> 0 = Buffers pequenos<br /><br /> 1 = Buffers grandes|  
+|**memory_address**|**varbinary(8)**|Endereço do buffer de memória alocado.|  
 |**name**|**nvarchar(4000)**|Nome do buffer de memória compartilhado para o qual esta alocação foi feita.|  
 |**is_free**|**bit**|Estado atual de buffer de memória.<br /><br /> 0 = Livre<br /><br /> 1 = Ocupado|  
-|**row_count**|**int**|Número de linhas que esse buffer está manipulando atualmente.|  
-|**bytes_used**|**int**|Quantidade, em bytes, de memória em uso nesse buffer.|  
-|**percent_used**|**int**|Porcentagem de memória alocada usada.|  
+|**row_count**|**Int**|Número de linhas que esse buffer está manipulando atualmente.|  
+|**bytes_used**|**Int**|Quantidade, em bytes, de memória em uso nesse buffer.|  
+|**percent_used**|**Int**|Porcentagem de memória alocada usada.|  
   
 ## <a name="permissions"></a>Permissões  
 Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   

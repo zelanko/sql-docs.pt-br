@@ -1,5 +1,5 @@
 ---
-title: sys.DM repl_articles (Transact-SQL) | Microsoft Docs
+title: sys.dm_repl_articles (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_repl_articles
 - dm_repl_articles_TSQL
 - sys.dm_repl_articles
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_repl_articles dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_repl_articles dynamic management function
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a28b7a4e6b49427fff970bbc0a793f2fcc30d6dd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 99ec6ab0d4feb697092002fb0c7354625dd9da83
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +40,10 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**artcache_db_address**|**varbinary (8)**|Endereço na memória da estrutura de banco de dados em cache para o banco de dados de publicação.|  
-|**artcache_table_address**|**varbinary (8)**|Endereço na memória da estrutura de tabela em cache para um artigo de tabela publicado.|  
-|**artcache_schema_address**|**varbinary (8)**|Endereço na memória da estrutura do esquema de artigo em cache para um artigo de tabela publicado.|  
-|**artcache_article_address**|**varbinary (8)**|Endereço na memória da estrutura de artigo em cache para um artigo de tabela publicado.|  
+|**artcache_db_address**|**varbinary(8)**|Endereço na memória da estrutura de banco de dados em cache para o banco de dados de publicação.|  
+|**artcache_table_address**|**varbinary(8)**|Endereço na memória da estrutura de tabela em cache para um artigo de tabela publicado.|  
+|**artcache_schema_address**|**varbinary(8)**|Endereço na memória da estrutura do esquema de artigo em cache para um artigo de tabela publicado.|  
+|**artcache_article_address**|**varbinary(8)**|Endereço na memória da estrutura de artigo em cache para um artigo de tabela publicado.|  
 |**artid**|**bigint**|Identifica exclusivamente cada entrada dessa tabela.|  
 |**artfilter**|**bigint**|ID do procedimento armazenado usado para filtrar horizontalmente o artigo.|  
 |**artobjid**|**bigint**|ID do objeto publicado.|  
@@ -50,15 +53,15 @@ ms.lasthandoff: 11/17/2017
 |**wszArtdesttable**|**nvarchar(514)**|Nome do objeto publicado no destino.|  
 |**wszArtdesttableowner**|**nvarchar(514)**|Proprietário do objeto publicado no destino.|  
 |**wszArtinscmd**|**nvarchar(510)**|Comando ou procedimento armazenado usado para inserções.|  
-|**cmdTypeIns**|**int**|Sintaxe de chamada do procedimento armazenado de inserção, podendo ser um destes valores.<br /><br /> **1** = CHAMADA<br /><br /> **2** = SQL<br /><br /> **3** = NENHUM<br /><br /> **7** = DESCONHECIDO|  
+|**cmdTypeIns**|**Int**|Sintaxe de chamada do procedimento armazenado de inserção, podendo ser um destes valores.<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NENHUM<br /><br /> **7** = DESCONHECIDO|  
 |**wszArtdelcmd**|**nvarchar(510)**|Comando ou procedimento armazenado usado em exclusões.|  
-|**cmdTypeDel**|**int**|Sintaxe de chamada do procedimento armazenado de exclusão, podendo ser um destes valores.<br /><br /> **0** = XCALL<br /><br /> **1** = CHAMADA<br /><br /> **2** = SQL<br /><br /> **3** = NENHUM<br /><br /> **7** = DESCONHECIDO|  
+|**cmdTypeDel**|**Int**|Sintaxe de chamada do procedimento armazenado de exclusão, podendo ser um destes valores.<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NENHUM<br /><br /> **7** = DESCONHECIDO|  
 |**wszArtupdcmd**|**nvarchar(510)**|Comando ou procedimento armazenado usado em atualizações.|  
-|**cmdTypeUpd**|**int**|Sintaxe de chamada do procedimento armazenado de atualização, podendo ser um destes valores.<br /><br /> **0** = XCALL<br /><br /> **1** = CHAMADA<br /><br /> **2** = SQL<br /><br /> **3** = NENHUM<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = DESCONHECIDO|  
+|**cmdTypeUpd**|**Int**|Sintaxe de chamada do procedimento armazenado de atualização, podendo ser um destes valores.<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NENHUM<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = DESCONHECIDO|  
 |**wszArtpartialupdcmd**|**nvarchar(510)**|Comando ou procedimento armazenado usado em atualizações parciais.|  
-|**cmdTypePartialUpd**|**int**|Sintaxe de chamada do procedimento armazenado de atualização parcial, podendo ser um destes valores.<br /><br /> **2** = SQL|  
-|**numcol**|**int**|Número de colunas na partição de um artigo filtrado verticalmente.|  
-|**artcmdtype**|**tinyint**|Tipo de comando atualmente sendo replicado, podendo ser um destes valores.<br /><br /> **1** = INSERT<br /><br /> **2** = EXCLUIR<br /><br /> **3** = ATUALIZAÇÃO<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = nenhum<br /><br /> **6** = somente para uso interno<br /><br /> **7** = somente para uso interno<br /><br /> **8** = UPDATE parcial|  
+|**cmdTypePartialUpd**|**Int**|Sintaxe de chamada do procedimento armazenado de atualização parcial, podendo ser um destes valores.<br /><br /> **2** = SQL|  
+|**numcol**|**Int**|Número de colunas na partição de um artigo filtrado verticalmente.|  
+|**artcmdtype**|**tinyint**|Tipo de comando atualmente sendo replicado, podendo ser um destes valores.<br /><br /> **1** = INSERT<br /><br /> **2** = DELETE<br /><br /> **3** = ATUALIZAÇÃO<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = nenhum<br /><br /> **6** = somente para uso interno<br /><br /> **7** = somente para uso interno<br /><br /> **8** = UPDATE parcial|  
 |**artgeninscmd**|**nvarchar(510)**|Modelo de comando INSERT baseado nas colunas incluídas no artigo.|  
 |**artgendelcmd**|**nvarchar(510)**|Modelo de comando DELETE, que pode incluir a chave primária ou as colunas incluídas no artigo, dependendo de a sintaxe de chamada ser usada ou não.|  
 |**artgenupdcmd**|**nvarchar(510)**|Modelo de comando UPDATE, que pode incluir a chave primária, colunas atualizadas ou uma lista de colunas completa, dependendo de a sintaxe de chamada ser usada ou não.|  
@@ -73,7 +76,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="permissions"></a>Permissões  
  Requer permissão VIEW DATABASE STATE no banco de dados de publicação para chamar **dm_repl_articles**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As informações só serão retornadas para objetos de banco de dados replicados atualmente armazenados no cache de artigo de replicação.  
   
 ## <a name="see-also"></a>Consulte também  

@@ -1,5 +1,5 @@
 ---
-title: sys.DM os_sys_memory (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_sys_memory (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,26 +17,28 @@ f1_keywords:
 - sys.dm_os_sys_memory_TSQL
 - sys.dm_os_sys_memory
 - dm_os_sys_memory_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_sys_memory dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_sys_memory dynamic management view
 ms.assetid: 1ca58814-1caa-44c1-b307-ff0bdcbbef62
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bec663451e720a350b4cbf9c295d8e3946981a0e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5ac5e7d7fad2ceabdbfbfe30b73529ffb8d960d2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmossysmemory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Retorna informações de memória do sistema operacional.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]é limitado pelo e responde às condições de memória externa no nível do sistema operacional e dos limites físicos do hardware subjacente. Determinar o estado geral do sistema é uma parte importante da avaliação do uso de memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é limitado pelo e responde às condições de memória externa no nível do sistema operacional e dos limites físicos do hardware subjacente. Determinar o estado geral do sistema é uma parte importante da avaliação do uso de memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  Para chamar essa de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_sys_memory**.  
@@ -52,9 +55,9 @@ ms.lasthandoff: 11/17/2017
 |**system_high_memory_signal_state**|**bit**|Estado do sistema de notificação do recurso de memória alta. Um valor de 1 indica o sinal de memória alto determinado pelo Windows. Para obter mais informações, consulte [CreateMemoryResourceNotification](http://go.microsoft.com/fwlink/?LinkId=82427) na biblioteca MSDN.|  
 |**system_low_memory_signal_state**|**bit**|Estado do sistema de notificação do recurso de memória insuficiente. Um valor de 1 indica que o sinal de memória insuficiente definido pelo Windows. Para obter mais informações, consulte [CreateMemoryResourceNotification](http://go.microsoft.com/fwlink/?LinkId=82427) na biblioteca MSDN.|  
 |**system_memory_state_desc**|**nvarchar(256)**|Descrição do estado da memória. Consulte a tabela a seguir.|  
-|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|**pdw_node_id**|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
-|Condição|Valor|  
+|Condição|Value|  
 |---------------|-----------|  
 |system_high_memory_signal_state = 1<br /><br /> e<br /><br /> system_low_memory_signal_state = 0|Memória física disponível está alta|  
 |system_high_memory_signal_state = 0<br /><br /> e<br /><br /> system_low_memory_signal_state = 1|Memória física disponível é insuficiente.|  

@@ -1,5 +1,5 @@
 ---
-title: sys.DM server_services (Transact-SQL) | Microsoft Docs
+title: sys.dm_server_services (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/07/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_server_services
 - sys.dm_server_services_TSQL
 - dm_server_services_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_server_services dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_server_services dynamic management view
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 08a4cd914783a094cf9d9ae681d3a3695af34e4d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 205d755e46b472cfca44170819ba177e523e4f3f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +42,11 @@ ms.lasthandoff: 01/08/2018
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |servicename|**nvarchar(256)**|Nome da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], texto completo ou o serviço SQL Server Agent. Não pode ser nulo.|  
-|startup_type|**int**|Indica o modo inicial do serviço. Estes são os valores possíveis e suas descrições correspondentes.<br /><br /> 0: outros<br />1: outros<br />2: automático<br />3: manual<br />4: desabilitado<br /><br /> Permite valor nulo.|  
+|startup_type|**Int**|Indica o modo inicial do serviço. Estes são os valores possíveis e suas descrições correspondentes.<br /><br /> 0: outros<br />1: outros<br />2: automático<br />3: Manual<br />4: desabilitado<br /><br /> Permite valor nulo.|  
 |startup_desc|**nvarchar(256)**|Descreve o modo inicial do serviço. Estes são os valores possíveis e suas descrições correspondentes.<br /><br /> Outros: Outros (iniciar reinicialização)<br />Outros: Outros (Iniciar sistema)<br />Automática: Inicialização automática<br />Manual: Início de demanda<br />Desabilitado: desabilitado<br /><br /> Não pode ser nulo.|  
-|status|**int**|Indica o status atual do serviço. Estes são os valores possíveis e suas descrições correspondentes.<br /><br /> 1: interrompido<br />2: outros (início pendente)<br />3: outros (parada pendente)<br />4: em execução<br />5: outros (continuação pendente)<br />6: outros (pausa pendente)<br />7: pausado<br /><br /> Permite valor nulo.|  
+|status|**Int**|Indica o status atual do serviço. Estes são os valores possíveis e suas descrições correspondentes.<br /><br /> 1: interrompido<br />2: outros (início pendente)<br />3: outros (parada pendente)<br />4: em execução<br />5: outros (continuação pendente)<br />6: outros (pausa pendente)<br />7: pausado<br /><br /> Permite valor nulo.|  
 |status_desc|**nvarchar(256)**|Descreve o status atual do serviço. Estes são os valores possíveis e suas descrições correspondentes.<br /><br /> Interrompido: O serviço é interrompido.<br />Outros (início de operação pendente): O serviço está iniciando.<br />Outros (parada de operação pendente): O serviço está no processo de parada.<br />Está em execução: O serviço está em execução.<br />Outros (continuar operações pendente): O serviço está em um estado pendente.<br />Outros (pausa pendente): O serviço está no processo de pausa.<br />Em pausa: O serviço está em pausa.<br /><br /> Não pode ser nulo.|  
-|process_id|**int**|A ID do processo do serviço. Não pode ser nulo.|  
+|process_id|**Int**|A ID do processo do serviço. Não pode ser nulo.|  
 |last_startup_time|**datetimeoffset(7)**|A data e a hora em que o serviço foi iniciado pela última vez. Permite valor nulo.|  
 |service_account|**nvarchar(256)**|A conta autorizada para controlar o serviço. Essa conta pode iniciar ou parar o serviço, ou modificar as propriedades do serviço. Não pode ser nulo.|  
 |filename|**nvarchar(256)**|O caminho e o nome do arquivo do serviço executável. Não pode ser nulo.|  
@@ -56,6 +59,6 @@ ms.lasthandoff: 01/08/2018
 ### <a name="permissions"></a>Permissões  
  Requer a permissão `VIEW SERVER STATE` no servidor.  
   
-## <a name="see-also"></a>Consulte Também  
- [sys.DM server_registry &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)  
+## <a name="see-also"></a>Consulte também  
+ [sys.dm_server_registry &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)  
   

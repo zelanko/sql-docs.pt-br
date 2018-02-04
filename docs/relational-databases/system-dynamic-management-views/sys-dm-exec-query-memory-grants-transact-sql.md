@@ -1,5 +1,5 @@
 ---
-title: sys.DM exec_query_memory_grants (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_query_memory_grants
 - sys.dm_exec_query_memory_grants_TSQL
 - dm_exec_query_memory_grants
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_memory_grants dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_memory_grants dynamic management view
 ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2e10e979e962c7f0e2f98a8fbabff47995dc7e86
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 92b11100a0a037374871dc38844fecc8b69b0c72
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,10 +46,10 @@ ms.lasthandoff: 11/17/2017
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**smallint**|ID (SPID) da sessão em que esta consulta está em execução.|  
-|**request_id**|**int**|ID da solicitação. Exclusiva no contexto da sessão.|  
-|**scheduler_id**|**int**|ID do agendador que está programando esta consulta.|  
-|**DOP**|**smallint**|Grau de paralelismo desta consulta.|  
-|**request_time.**|**datetime**|Data e hora quando esta consulta solicitou a concessão de memória.|  
+|**request_id**|**Int**|ID da solicitação. Exclusiva no contexto da sessão.|  
+|**scheduler_id**|**Int**|ID do agendador que está programando esta consulta.|  
+|**dop**|**smallint**|Grau de paralelismo desta consulta.|  
+|**request_time**|**datetime**|Data e hora quando esta consulta solicitou a concessão de memória.|  
 |**grant_time**|**datetime**|Data e hora quando a memória foi concedida a esta consulta. NULL se memória ainda não tiver sido concedida.|  
 |**requested_memory_kb**|**bigint**|Quantidade total solicitada de memória em quilobytes.|  
 |**granted_memory_kb**|**bigint**|Total de memória realmente concedido em quilobytes. Poderá ser NULL se a memória ainda não tiver sido concedida. Em uma situação típica, esse valor deve ser o mesmo que **requested_memory_kb**. Na criação de índices, o servidor pode permitir memória sob demanda adicional além da memória inicialmente concedida.|  
@@ -54,25 +57,25 @@ ms.lasthandoff: 11/17/2017
 |**used_memory_kb**|**bigint**|Memória física usada neste momento em quilobytes.|  
 |**max_used_memory_kb**|**bigint**|Máximo de memória física usada até este momento em quilobytes.|  
 |**query_cost**|**float**|Custo de consulta estimado.|  
-|**timeout_sec**|**int**|Tempo limite em segundos antes de esta consulta desistir da solicitação de concessão de memória.|  
+|**timeout_sec**|**Int**|Tempo limite em segundos antes de esta consulta desistir da solicitação de concessão de memória.|  
 |**resource_semaphore_id**|**smallint**|ID não exclusivo do semáforo do recurso no qual esta consulta está aguardando.<br /><br /> **Observação:** essa ID é exclusiva em versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Essa alteração pode afetar a execução de consulta de solução de problemas. Para obter mais informações, consulte "Comentários", posteriormente neste tópico.|  
 |**queue_id**|**smallint**|ID da fila de espera em que esta consulta aguarda concessões de memória. NULL se a memória já tiver sido concedida.|  
-|**wait_order**|**int**|Ordem sequencial de consultas de espera em especificado **queue_id**. Esse valor poderá ser alterado para uma determinada consulta se outras consultas obtiverem concessões de memória ou tempo limite. NULL se a memória já tiver sido concedida.|  
+|**wait_order**|**Int**|Ordem sequencial de consultas de espera em especificado **queue_id**. Esse valor poderá ser alterado para uma determinada consulta se outras consultas obtiverem concessões de memória ou tempo limite. NULL se a memória já tiver sido concedida.|  
 |**is_next_candidate**|**bit**|Candidato para a próxima concessão de memória.<br /><br /> 1 = Sim<br /><br /> 0 = Não<br /><br /> NULL = Se a memória já tiver sido concedida.|  
 |**wait_time_ms**|**bigint**|Tempo de espera em milissegundos. NULL se a memória já tiver sido concedida.|  
 |**plan_handle**|**varbinary(64)**|Identificador para este plano de consulta. Use **sys.DM exec_query_plan** para extrair o plano XML real.|  
 |**sql_handle**|**varbinary(64)**|Identificador de texto [!INCLUDE[tsql](../../includes/tsql-md.md)] desta consulta. Use **dm_exec_sql_text** para obter o valor real [!INCLUDE[tsql](../../includes/tsql-md.md)] texto.|  
-|**group_id**|**int**|ID do grupo de carga de trabalho em que esta consulta está sendo executada.|  
-|**pool_id**|**int**|ID do pool de recursos a que este grupo de carga de trabalho pertence.|  
+|**group_id**|**Int**|ID do grupo de carga de trabalho em que esta consulta está sendo executada.|  
+|**pool_id**|**Int**|ID do pool de recursos a que este grupo de carga de trabalho pertence.|  
 |**is_small**|**tinyint**|Quando definido como 1, indica que esta concessão usa o sinal do recurso pequeno. Quando definido como 0, indica que um sinal normal é usado.|  
 |**ideal_memory_kb**|**bigint**|Tamanho, em quilobytes (KB), da concessão de memória para ajustar tudo na memória física. Ele tem como base a estimativa de cardinalidade.|  
-|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|**pdw_node_id**|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
 ## <a name="permissions"></a>Permissões  
 Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
 Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `VIEW DATABASE STATE` no banco de dados. Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, requer o **administrador do servidor** ou um **administrador do Active Directory do Azure** conta.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um cenário de depuração típico para tempo limite de consulta pode se parecer com este:  
   
 -   Verifique o status geral sistema memória usando [sys.DM os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), [sys.DM os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)e vários contadores de desempenho.  
@@ -117,7 +120,7 @@ Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `V
  O recurso Administrador de Recursos permite que um administrador de banco de dados distribua recursos de servidor entre pools de recursos, até um máximo de 64 pools. Começando com [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], cada pool se comporta como uma instância de servidor independente pequena e requer 2 semáforos. O número de linhas retornadas de **sys.DM exec_query_resource_semaphores** pode ser até 20 vezes mais do que as linhas que são retornadas em [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
- [sys.DM exec_query_resource_semaphores &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)   
+ [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)   
  [Funções e exibições de gerenciamento dinâmico &#40; relacionadas à execução Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

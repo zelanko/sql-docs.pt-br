@@ -1,5 +1,5 @@
 ---
-title: sys.DM fts_fdhosts (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_fdhosts (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/29/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_fts_fdhosts_TSQL
 - sys.dm_fts_fdhosts
 - sys.dm_fts_fdhosts_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_fts_fdhosts dynamic management view
 - troubleshooting [SQL Server], full-text search
 ms.assetid: d42a6334-4362-4361-83da-f8324fe55ec7
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fef59b93c9f9c5694fe0b7ecd8404eeaffcaf380
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9866da01d5ef108e9665c0d04ac3e89ee8cc30be
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsfdhosts-transact-sql"></a>sys.dm_fts_fdhosts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,12 +42,12 @@ ms.lasthandoff: 11/17/2017
  
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**fdhost_id**|**int**|ID do host daemon do filtro.|  
+|**fdhost_id**|**Int**|ID do host daemon do filtro.|  
 |**fdhost_name**|**nvarchar(120)**|Nome de host daemon do filtro.|  
-|**fdhost_process_id**|**int**|ID de processo do Windows do host daemon do filtro.|  
+|**fdhost_process_id**|**Int**|ID de processo do Windows do host daemon do filtro.|  
 |**fdhost_type**|**nvarchar(120)**|Tipo de documento que está sendo processado pelo host daemon do filtro, um de:<br /><br /> Thread único<br /><br /> Multi-thread<br /><br /> Documento enorme|  
-|**max_thread**|**int**|Número de máximo de threads no host daemon do filtro.|  
-|**batch_count**|**int**|Número de lotes que estão sendo processados no host daemon do filtro.|  
+|**max_thread**|**Int**|Número de máximo de threads no host daemon do filtro.|  
+|**batch_count**|**Int**|Número de lotes que estão sendo processados no host daemon do filtro.|  
   
 ## <a name="permissions"></a>Permissões  
 Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   

@@ -1,5 +1,5 @@
 ---
-title: sys.DM db_persisted_sku_features (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_persisted_sku_features (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_db_persisted_sku_features
 - dm_db_persisted_sku_features_TSQL
 - dm_db_persisted_sku_features
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - editions [SQL Server], feature restrictions
 - sys.dm_db_persisted_sku_features dynamic management view
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8dc796f006abde19b0441cb9dba27d29f27c1b7e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c0af6dc4a6c8031be8a33a44d2c00265d5c58ed0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbpersistedskufeatures-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/02/2018
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |feature_name|**sysname**|Nome externo do recurso habilitado no banco de dados, mas que não possui suporte em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse recurso deve ser removido antes que o banco de dados possa ser migrado a todas as edições disponíveis do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|feature_id|**int**|ID de recurso associada ao recurso. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
+|feature_id|**Int**|ID de recurso associada ao recurso. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão VIEW DATABASE STATE no banco de dados.  
@@ -58,7 +60,7 @@ ms.lasthandoff: 01/02/2018
   
     **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
--   **Compactação**: indica que pelo menos uma tabela ou índice usa compactação de dados ou o formato de armazenamento vardecimal. Para habilitar um banco de dados a ser movida para uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não dá suporte a esse recurso, use o [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instrução para remover a compactação de dados. Para remover o formato de armazenamento vardecimal, use a instrução sp_tableoption. Para saber mais, veja [Data Compression](../../relational-databases/data-compression/data-compression.md).  
+-   **Compactação**: indica que pelo menos uma tabela ou índice usa compactação de dados ou o formato de armazenamento vardecimal. Para habilitar um banco de dados a ser movida para uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não dá suporte a esse recurso, use o [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instrução para remover a compactação de dados. Para remover o formato de armazenamento vardecimal, use a instrução sp_tableoption. Para obter mais informações, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
 -   **MultipleFSContainers**: indica que o banco de dados usa vários contêineres FILESTREAM. O banco de dados tem um grupo de arquivos FILESTREAM com vários contêineres (arquivos). Para obter mais informações, veja [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
@@ -80,7 +82,7 @@ SELECT feature_name FROM sys.dm_db_persisted_sku_features;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Exibições de gerenciamento dinâmico relacionadas ao &#40; do banco de dados Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [Edições e recursos com suporte do SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)   

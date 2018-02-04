@@ -3,7 +3,7 @@ title: "Noções básicas de disponibilidade do SQL Server para implantações d
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: b137d8badf44bf1c7d181b490bcf6d06e2bd087f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d53e54c6e8e74970316de557ddf3bd60a09e9ffe
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Noções básicas de disponibilidade do SQL Server para implantações do Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Começando com [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] tem suporte no Linux e Windows. Baseado no Windows, como [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] implantações, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] instâncias e bancos de dados precisam ser altamente disponível em Linux. Este artigo aborda os aspectos técnicos de planejamento e implantação altamente disponível com base em Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] bancos de dados e instâncias, bem como algumas das diferenças de instalações baseadas em Windows. Porque [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] podem ser novos para profissionais de Linux e Linux podem ser novos para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] profissionais, o artigo às vezes apresenta conceitos que podem ser familiar a algumas e não familiar para outras pessoas.
 
@@ -90,18 +90,18 @@ Semelhante ao Windows, distribuições do Linux tem um firewall interno. Se sua 
 
 | Número da Porta | Tipo     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS –`rpcbind/sunrpc`                                                                                                    |
+| 111         | TCP/UDP  | NFS – `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (se usado) – mapeador de ponto de extremidade                                                                                          |
 | 137         | UDP      | Samba (se usado) – serviço de nomes NetBIOS                                                                                      |
 | 138         | UDP      | Samba (se usado) – datagrama NetBIOS                                                                                          |
 | 139         | TCP      | Samba (se usado) – sessão NetBIOS                                                                                           |
 | 445         | TCP      | Samba (se usado) – SMB sobre TCP                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]– porta; padrão Se desejar, pode alterar com`mssql-conf set network.tcpport <portnumber>`                       |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – porta; padrão Se desejar, pode alterar com`mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP, UDP | NFS (se usado)                                                                                                               |
 | 2224        | TCP      | Pacemaker – usada pelo`pcsd`                                                                                                |
 | 3121        | TCP      | Pacemaker – necessário se houver nós remotos Pacemaker                                                                    |
 | 3260        | TCP      | iSCSI Initiator (se usado) – pode ser alterado em `/etc/iscsi/iscsid.config` (RHEL), mas deve coincidir com a porta de destino iSCSI |
-| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-padrão a porta usada para um ponto de extremidade do grupo de disponibilidade; pode ser alterado durante a criação de ponto de extremidade                                |
+| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -padrão a porta usada para um ponto de extremidade do grupo de disponibilidade; pode ser alterado durante a criação de ponto de extremidade                                |
 | 5403        | TCP      | Pacemaker                                                                                                                   |
 | 5404        | UDP      | Pacemaker – necessário por Corosync se estiver usando multicast UDP                                                                     |
 | 5405        | UDP      | Pacemaker – exigido pelo Corosync                                                                                            |
@@ -204,7 +204,7 @@ O `corosync.conf` arquivo contém a configuração do cluster. Ele está localiz
 #### <a name="cluster-log-location"></a>Local do log de cluster
 Locais de log para clusters de Pacemaker diferem dependendo da distribuição.
 -   RHEL e SLES-`/var/log/cluster/corosync.log`
--   Ubuntu –`/var/log/corosync/corosync.log`
+-   Ubuntu – `/var/log/corosync/corosync.log`
 
 Para alterar o local de log padrão, modifique `corosync.conf`.
 

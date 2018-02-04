@@ -3,7 +3,7 @@ title: Gerenciar o SQL Server no Linux | Microsoft Docs
 description: "Este tópico fornece links para tarefas comuns de gerenciamento e ferramentas do SQL Server em execução no Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,19 +15,19 @@ ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: 0f775666ae0ba3e5bc9140e52ec2f532d6b92e0c
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: f6710b3e7bd40a2589333cebbf94c8b07f9aaa5d
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Escolha a ferramenta certa para gerenciar o SQL Server no Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Há várias maneiras de gerenciar 2017 do SQL Server no Linux. A seção a seguir fornece uma visão geral das técnicas com ponteiros mais recursos e ferramentas de gerenciamento diferentes.
 
-## <a name="mssql-conf"></a>MSSQL conf 
+## <a name="mssql-conf"></a>mssql-conf 
 O **mssql conf** ferramenta configura o SQL Server no Linux. Para obter mais informações, consulte [configurar o SQL Server no Linux com mssql conf](sql-server-linux-configure-mssql-conf.md).
 
 ## <a name="transact-sql"></a>Transact-SQL
@@ -42,7 +42,7 @@ O novo Microsoft SQL operações Studio (visualização) é uma ferramenta de pl
 
 SQL Server Management Studio (SSMS) é um aplicativo do Windows que fornece uma interface gráfica do usuário para o gerenciamento do SQL Server. Embora atualmente é executado somente no Windows, você pode usá-lo para se conectar remotamente a suas instâncias do SQL Server do Linux. Para obter mais informações sobre como usar o SSMS para gerenciar o SQL Server, consulte [Use SSMS para gerenciar o SQL Server no Linux](sql-server-linux-manage-ssms.md).
 
-## <a name="mssql-cli-preview"></a>MSSQL-cli (visualização)
+## <a name="mssql-cli-preview"></a>mssql-cli (preview)
 
 A Microsoft lançou uma nova ferramenta de script de plataforma cruzada para o SQL Server, [mssql cli](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/). Essa ferramenta está atualmente em visualização.
 

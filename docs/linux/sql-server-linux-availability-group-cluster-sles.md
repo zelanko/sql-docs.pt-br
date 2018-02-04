@@ -3,7 +3,7 @@ title: Configurar SLES Cluster para o grupo de disponibilidade do SQL Server | M
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 05/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.workload: Inactive
-ms.openlocfilehash: 7bb98b8da1af1b97b9c06b58e5b8264a653547d3
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c33c1cea948e64c69e52475e8c63ecce0c52bd6d
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurar SLES Cluster para o grupo de disponibilidade do SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este guia fornece instruções para criar um cluster de três nós para o SQL Server no SUSE Linux Enterprise Server (SLES) 12 SP2. Para alta disponibilidade, um grupo de disponibilidade no Linux requer três nós - consulte [alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade](sql-server-linux-availability-group-ha.md). A camada de clustering é baseada no SUSE [alta disponibilidade extensão (HAE)](https://www.suse.com/products/highavailability) criado na parte superior do [Pacemaker](http://clusterlabs.org/). 
 
@@ -33,7 +33,7 @@ Para obter mais detalhes sobre a configuração de cluster, opções do recurso 
 >Neste ponto, a integração do SQL Server com Pacemaker no Linux não é como acoplada como com o WSFC no Windows. O serviço do SQL Server no Linux não está ciente do cluster. Pacemaker controla todas a orquestração os recursos de cluster, incluindo o recurso de grupo de disponibilidade. No Linux, você não deve depender sempre em disponibilidade grupo exibições de gerenciamento dinâmico (DMVs) que fornecem informações de cluster, como sys.DM hadr_cluster. Além disso, o nome de rede virtual é específico para o WSFC, não há nenhum equivalente do mesmo em Pacemaker. Você ainda pode criar um ouvinte para usá-lo para a reconexão depois do failover transparente, mas você terá que registrar manualmente o nome do ouvinte no servidor DNS com o IP usado para criar o recurso IP virtual (como explicado abaixo).
 
 
-## <a name="roadmap"></a>Roteiro
+## <a name="roadmap"></a>Roadmap
 
 As etapas para criar um grupo de disponibilidade em servidores Linux para alta disponibilidade são diferentes das etapas em um cluster de failover do Windows Server. A lista a seguir descreve as etapas de alto níveis: 
 
@@ -52,7 +52,7 @@ As etapas para criar um grupo de disponibilidade em servidores Linux para alta d
 
 5. [Adicione o grupo de disponibilidade como um recurso do cluster](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server). 
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para completar o cenário de ponta a ponta abaixo você precisa de três máquinas para implantar o cluster de três nós. As etapas abaixo descrevem como configurar esses servidores.
 
@@ -122,9 +122,9 @@ Em servidores Linux configurar o grupo de disponibilidade e, em seguida, configu
 
 3. Para configurar a camada de comunicação do cluster (Corosync): 
 
-   a. Insira um endereço de rede para associar a. Por padrão, o script irá propor o endereço de rede de eth0. Como alternativa, digite um endereço de rede diferente, por exemplo, o endereço de bond0. 
+   A. Insira um endereço de rede para associar a. Por padrão, o script irá propor o endereço de rede de eth0. Como alternativa, digite um endereço de rede diferente, por exemplo, o endereço de bond0. 
 
-   b. Insira um endereço de multicast. O script propõe um endereço aleatório que você pode usar como padrão. 
+   B. Insira um endereço de multicast. O script propõe um endereço aleatório que você pode usar como padrão. 
 
    c. Insira uma porta de multicast. O script propõe 5405 como padrão. 
 

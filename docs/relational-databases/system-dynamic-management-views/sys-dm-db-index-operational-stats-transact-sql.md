@@ -1,5 +1,5 @@
 ---
-title: sys.DM db_index_operational_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_index_operational_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_index_operational_stats_TSQL
 - sys.dm_db_index_operational_stats
 - dm_db_index_operational_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_index_operational_stats dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_index_operational_stats dynamic management function
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
-caps.latest.revision: "61"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3856ea2062d6575f34382c2489d3a80ece259203
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3866f4dfbd25fc665949455969b1546bd906462a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -86,10 +89,10 @@ sys.dm_db_index_operational_stats (
 |Nome da coluna|Tipo de dados|Description|    
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|ID do banco de dados.|    
-|**object_id**|**int**|ID da tabela ou exibição.|    
-|**index_id**|**int**|ID do índice ou heap.<br /><br /> 0 = Heap|    
+|**object_id**|**Int**|ID da tabela ou exibição.|    
+|**index_id**|**Int**|ID do índice ou heap.<br /><br /> 0 = Heap|    
 |**hobt_id**|**bigint**|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID do heap de dados ou conjunto de linhas de árvore B que controla os dados internos para um índice columnstore.<br /><br /> NULO – isso não é um conjunto de linhas do columnstore interno.<br /><br /> Para obter mais detalhes, consulte [sys.internal_partitions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
-|**número_da_partição**|**int**|Número de partição com base 1 no índice ou heap.|    
+|**partition_number**|**Int**|Número de partição com base 1 no índice ou heap.|    
 |**leaf_insert_count**|**bigint**|Contagem cumulativa de inserções de nível folha.|    
 |**leaf_delete_count**|**bigint**|Contagem cumulativa de exclusões de nível folha. leaf_delete_count só é incrementada para registros excluídos não são marcados como fantasma primeiro. Para registros excluídos são fantasma primeiro, **leaf_ghost_count** é incrementada em vez disso.|    
 |**leaf_update_count**|**bigint**|Contagem cumulativa de atualizações de nível folha.|    
@@ -131,7 +134,7 @@ sys.dm_db_index_operational_stats (
 |**page_compression_attempt_count**|**bigint**|Número de páginas avaliadas por compactação de nível de PAGE para partições específicas de tabela, índice ou exibição indexada. Inclui páginas que não foram compactadas porque economias significativas não puderam ser obtidas. Sempre 0 para índice columnstore.|    
 |**page_compression_success_count**|**bigint**|Número de páginas de dados que foram compactadas com a compactação de PAGE para partições específicas de tabela, índice ou exibição indexada. Sempre 0 para índice columnstore.|    
     
-## <a name="remarks"></a>Comentários    
+## <a name="remarks"></a>Remarks    
  Esse objeto de gerenciamento dinâmico não aceita parâmetros correlatos de CROSS APPLY e OUTER APPLY.    
     
  Você pode usar **sys.DM db_index_operational_stats** para rastrear o período de tempo que os usuários devem aguardar para ler ou gravar em uma tabela, índice ou partição e identificar as tabelas ou índices que estão encontrando atividade de e/s significativa ou hot pontos de acesso.    
@@ -240,13 +243,13 @@ GO
     
 ## <a name="see-also"></a>Consulte também    
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
- [Índice de funções e exibições de gerenciamento dinâmico relacionadas ao &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
+ [Exibições e funções de gerenciamento dinâmico relacionadas ao índice &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
  [Monitorar e ajustar o desempenho](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
- [sys.DM db_index_usage_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
- [sys.DM os_latch_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
- [sys.DM db_partition_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
- [sys. allocation_units &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
+ [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
+ [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
+ [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)    
     
   

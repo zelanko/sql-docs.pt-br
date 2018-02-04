@@ -7,7 +7,8 @@ ms.reviewer:
 ms.suite: sql
 ms.prod_service: sql-database
 ms.service: sql-database
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -15,21 +16,22 @@ f1_keywords:
 - slo_assignment_history
 - slo_assignment_history_TSQL
 - dbo.slo_assignment_history_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dbo.slo_assignment_history
 - slo_assignment_history
 ms.assetid: 048a6fb5-2fc2-4d12-a436-4c53ecd413f3
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcff1c5141e6556f8cb4184284769e3be537f80a
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 61bab47646d1acff9edcfbf461588b3560916acd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosloassignmenthistory-azure-sql-database"></a>dbo.slo_assignment_history (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,14 +53,14 @@ ms.lasthandoff: 12/21/2017
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |database_name|**sysname**|Nome do banco de dados.|  
-|database_id|**int**|ID do banco de dados.|  
+|database_id|**Int**|ID do banco de dados.|  
 |create_date|**datetimeoffset(7)**|Data de criação do banco de dados.|  
 |service_objective_name|**sysname**|Nome do SLO (objetivo de nível de serviço).|  
 |service_objective_id|**uniqueidentifier**|A ID do SLO.|  
 |operation_id|**uniqueidentifier**|Identificador da operação.|  
 |operation_start_time|**datetimeoffset(7)**|Hora de início da solicitação de alteração do SLO do banco de dados.|  
 |operation_end_time|**datetimeoffset(7)**|Hora de término da solicitação de alteração do SLO do banco de dados.|  
-|error_code|**int**|Código de erro da solicitação de alteração do SLO do banco de dados.|  
+|error_code|**Int**|Código de erro da solicitação de alteração do SLO do banco de dados.|  
 |error_desc|**nvarchar**|Descrição do erro na solicitação de alteração do SLO do banco de dados.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -75,7 +77,7 @@ ORDER BY operation_start_time DESC;
   
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Gerenciando bancos de dados Premium](http://go.microsoft.com/fwlink/?LinkID=311927)  
   
   

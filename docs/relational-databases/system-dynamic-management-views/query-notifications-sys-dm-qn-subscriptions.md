@@ -1,5 +1,5 @@
 ---
-title: sys.DM qn_subscriptions (Transact-SQL) | Microsoft Docs
+title: sys.dm_qn_subscriptions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,34 +17,36 @@ f1_keywords:
 - dm_qn_subscriptions_TSQL
 - sys.dm_qn_subscriptions
 - sys.dm_qn_subscriptions_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_qn_subscriptions dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd318140e5c3eed17a5440ebf1a3135e7e01dc90
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2fdc34ae033de8baf0173bc7c86bd0fe05c7668f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>Consultar notificações - sys.DM qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações sobre as assinaturas de notificações de consulta ativa no servidor. Você pode usar essa exibição para verificar assinaturas ativas no servidor ou em um banco de dados especificado, ou verificar um principal de servidor especificado.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|ID de uma assinatura.|  
-|**database_id**|**int**|ID do banco de dados no qual a consulta de notificação foi executada. Esse banco de dados armazena informações relativas a essa assinatura.|  
-|**SID**|**varbinary(85)**|ID de segurança do principal do servidor que criou e detém essa assinatura.|  
-|**object_id**|**int**|ID da tabela interna que armazena informações sobre parâmetros de assinatura.|  
-|**criado**|**datetime**|Data e hora em que a assinatura foi criada.|  
-|**tempo limite**|**int**|Tempo limite para a assinatura em segundos. A notificação será sinalizada para disparar após o decorrer desse período.<br /><br /> Observação: O tempo real do disparo pode ser maior que o tempo limite especificado. No entanto, se uma alteração que invalida a assinatura ocorrer após o tempo limite especificado, mas antes de a assinatura ser disparada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegurará que o disparo ocorra no momento em que a alteração for realizada.|  
-|**status**|**int**|Indica o status da assinatura. Veja a tabela abaixo dos comentários para obter a lista de códigos.|  
+|**id**|**Int**|ID de uma assinatura.|  
+|**database_id**|**Int**|ID do banco de dados no qual a consulta de notificação foi executada. Esse banco de dados armazena informações relativas a essa assinatura.|  
+|**sid**|**varbinary(85)**|ID de segurança do principal do servidor que criou e detém essa assinatura.|  
+|**object_id**|**Int**|ID da tabela interna que armazena informações sobre parâmetros de assinatura.|  
+|**created**|**datetime**|Data e hora em que a assinatura foi criada.|  
+|**timeout**|**Int**|Tempo limite para a assinatura em segundos. A notificação será sinalizada para disparar após o decorrer desse período.<br /><br /> Observação: O tempo real do disparo pode ser maior que o tempo limite especificado. No entanto, se uma alteração que invalida a assinatura ocorrer após o tempo limite especificado, mas antes de a assinatura ser disparada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegurará que o disparo ocorra no momento em que a alteração for realizada.|  
+|**status**|**Int**|Indica o status da assinatura. Veja a tabela abaixo dos comentários para obter a lista de códigos.|  
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relações  
   
@@ -52,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|Muitos para um|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|Muitos para um|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O código de status 0 indica um status indefinido.  
   
  Os códigos de status a seguir indicam que uma assinatura foi acionada devido a uma alteração:  
@@ -60,7 +63,7 @@ ms.lasthandoff: 11/17/2017
 |Código|Status secundário|informações de|  
 |----------|------------------|----------|  
 |65798|Assinatura acionada porque os dados foram alterados|Assinatura disparada por inserção|  
-|65799|Assinatura acionada porque os dados foram alterados|DELETE|  
+|65799|Assinatura acionada porque os dados foram alterados|Delete (excluir)|  
 |65800|Assinatura acionada porque os dados foram alterados|Update (atualizar)|  
 |65801|Assinatura acionada porque os dados foram alterados|Mesclagem|  
 |65802|Assinatura acionada porque os dados foram alterados|Truncar tabela|  
@@ -138,6 +141,6 @@ GO
 ## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Notificações de consulta relacionados exibições de gerenciamento dinâmico &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
- [ELIMINAR assinatura de notificação de consulta &#40; Transact-SQL &#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
+ [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   
   

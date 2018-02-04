@@ -1,5 +1,5 @@
 ---
-title: db_missing_index_group_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_missing_index_group_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_db_missing_index_group_stats
 - dm_db_missing_index_group_stats_TSQL
 - dm_db_missing_index_group_stats
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_missing_index_group_stats dynamic management view
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_group_stats dynamic management view
 ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
-caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 938f1e4d13b001899a0695c2141cbaac35a7d7bb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 62088e8f8f331748e9af63641c89039d38c80ed8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbmissingindexgroupstats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/17/2017
     
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**group_handle**|**int**|Identifica um grupo de índices ausentes. Esse identificador é exclusivo no servidor.<br /><br /> As outras colunas fornecem informações sobre todas as consultas para as quais o índice no grupo é considerado ausente.<br /><br /> Um grupo de índice contém apenas um índice.|  
+|**group_handle**|**Int**|Identifica um grupo de índices ausentes. Esse identificador é exclusivo no servidor.<br /><br /> As outras colunas fornecem informações sobre todas as consultas para as quais o índice no grupo é considerado ausente.<br /><br /> Um grupo de índice contém apenas um índice.|  
 |**unique_compiles**|**bigint**|Número de compilações e recompilações que se beneficiariam deste grupo de índice ausente. Compilações e recompilações de muitas consultas diferentes podem contribuir para esse valor de coluna.|  
 |**user_seeks**|**bigint**|Número de buscas geradas por consultas de usuário para as quais o índice recomendado no grupo poderia ter sido usado.|  
 |**user_scans**|**bigint**|Número de exames gerados por consultas de usuário para as quais o índice recomendado no grupo poderia ter sido usado.|  
@@ -56,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |**avg_total_system_cost**|**float**|Custo médio das consultas de sistema que poderia ser reduzido pelo índice no grupo.|  
 |**avg_system_impact**|**float**|Benefício de porcentagem média que as consultas de sistema poderiam experimentar se esse grupo de índices ausentes fosse implementado. O valor indica que o custo da consulta ficaria na média dessa porcentagem se esse grupo de índices ausentes fosse implementado.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Informações retornadas por **db_missing_index_group_stats** são atualizadas por cada execução da consulta, não por todas as compilações de consulta ou recompilação. As estatísticas de uso não são persistentes e só serão mantidas até o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ser reiniciado. Os administradores de banco de dados devem periodicamente gerar cópias de backup de informações de índice ausente se quiserem manter as estatísticas de uso após o desligamento e a reinicialização do servidor.  
   
 ## <a name="permissions"></a>Permissões  
@@ -90,9 +92,9 @@ WHERE migs.group_handle = 24;
  Esta consulta fornece o nome do banco de dados, do esquema e da tabela em que um índice está ausente. Fornece também os nomes das colunas que deveriam ser usadas para a chave de índice. Ao escrever a instrução CREATE INDEX DDL para implementar índices ausentes, liste primeiro as colunas de igualdade e colunas de desigualdade em ON \< *table_name*> cláusula da instrução CREATE INDEX. As colunas incluídas devem ser listadas na cláusula INCLUDE da instrução CREATE INDEX. Para determinar uma ordem efetiva para as colunas iguais, ordene-as com base em sua seletividade, listando as colunas mais seletivas primeiro (a mais à esquerda na lista de colunas).  
   
 ## <a name="see-also"></a>Consulte também  
- [sys.DM db_missing_index_columns &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
- [sys.DM db_missing_index_details &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [db_missing_index_groups &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
+ [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   

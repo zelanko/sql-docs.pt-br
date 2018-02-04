@@ -1,5 +1,5 @@
 ---
-title: sys.DM db_xtp_checkpoint_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_checkpoint_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_xtp_checkpoint_stats_TSQL
 - sys.dm_db_xtp_checkpoint_stats
 - sys.dm_db_xtp_checkpoint_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_checkpoint_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_checkpoint_stats dynamic management view
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a9dff499f4e0fd7182ee7d018532a386233f42c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a3bce2f4337894c86e251e53c9fc0546f2e69253
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -101,10 +104,10 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |new_log_wait_time_in_ms|**bigint**|Tempo acumulado gasto aguardando novo log.|  
 |log_generated_since_last_checkpoint_in_bytes|**bigint**|Quantidade de log gerado desde o último ponto de verificação do OLTP na memória.|  
 |ms_since_last_checkpoint|**bigint**|Quantidade tempo em milissegundos desde o último ponto de verificação do OLTP na memória.|  
-|checkpoint_lsn|**numérico (38)**|O LSN (número de sequência de log) de recuperação associado ao último ponto de verificação de OLTP na memória concluído.|  
-|current_lsn|**numérico (38)**|O LSN do registro de log que está sendo processado.|  
-|end_of_log_lsn|**numérico (38)**|O LSN do fim do log.|  
-|task_address|**varbinary (8)**|O endereço da SOS_Task. Entre em sys.dm_os_tasks para localizar informações adicionais.|  
+|checkpoint_lsn|**numeric (38)**|O LSN (número de sequência de log) de recuperação associado ao último ponto de verificação de OLTP na memória concluído.|  
+|current_lsn|**numeric (38)**|O LSN do registro de log que está sendo processado.|  
+|end_of_log_lsn|**numeric (38)**|O LSN do fim do log.|  
+|task_address|**varbinary(8)**|O endereço da SOS_Task. Entre em sys.dm_os_tasks para localizar informações adicionais.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão `VIEW DATABASE STATE` no servidor.  

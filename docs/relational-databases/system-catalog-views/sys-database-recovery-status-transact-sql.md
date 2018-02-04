@@ -1,5 +1,5 @@
 ---
-title: sys. database_recovery_status (Transact-SQL) | Microsoft Docs
+title: sys.database_recovery_status (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/12/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - database_recovery_status
 - sys.database_recovery_status
 - sys.database_recovery_status_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.database_recovery_status catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.database_recovery_status catalog view
 ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc080e2f9a7dd102dcd9fa760ffc6267430fb30f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 644f73be666aa21a13cd745e5c50ed4552d87b19
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdatabaserecoverystatus-transact-sql"></a>sys.database_recovery_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|ID do banco de dados, exclusivo em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**database_id**|**Int**|ID do banco de dados, exclusivo em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**database_guid**|**uniqueidentifier**|Usado para relacionar em conjunto todos os arquivos de um banco de dados. Todos os arquivos devem ter este GUID na página de cabeçalho para que o banco de dados seja iniciado como esperado. Apenas um banco de dados deve ter esse GUID, mas duplicatas podem ser criadas copiando-se e anexando-se bancos de dados. RESTORE sempre gera um novo GUID quando você restaura um banco de dados que ainda não existe.<br /><br /> NULL= O banco de dados está offline ou não será iniciado.|  
 |**family_guid**|**uniqueidentifier**|Identificador da "família de backup" do banco de dados para detectar estados de restauração correspondentes.<br /><br /> NULL = banco de dados está offline ou o banco de dados não será iniciado.|  
 |**last_log_backup_lsn**|**numeric(25,0)**|O número de sequência de log inicial do próximo backup de log.<br /><br /> Se for NULL, um log de transações de volta até não pode ser executado porque o banco de dados está em recuperação simples ou não há nenhum backup de banco de dados atual.|  

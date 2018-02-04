@@ -1,5 +1,5 @@
 ---
-title: sys.DM tran_current_transaction (Transact-SQL) | Microsoft Docs
+title: sys.dm_tran_current_transaction (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_tran_current_transaction_TSQL
 - dm_tran_current_transaction_TSQL
 - dm_tran_current_transaction
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_current_transaction dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_current_transaction dynamic management view
 ms.assetid: 75d5697d-b390-4963-99b8-fa0b4244a40c
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55c0179a2c589a8dad2d178693593a943adba445
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 37deeb2752cc1e96c5c3ddc0719d2f71dce2283a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmtrancurrenttransaction-transact-sql"></a>sys.dm_tran_current_transaction (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +58,7 @@ sys.dm_tran_current_transaction
 |**first_snapshot_sequence_num**|**bigint**|Número de sequência de transação mais baixo das transações que estavam ativas quando o instantâneo foi feito. Em execução, uma transação de instantâneo faz um instantâneo de todas as transações ativas naquele momento. No caso de transações não instantâneo, esta coluna mostra 0.|  
 |**last_transaction_sequence_num**|**bigint**|Número de sequência global. Este valor representa o último número de sequência de transação que foi gerado pelo sistema.|  
 |**first_useful_sequence_num**|**bigint**|Número de sequência global. Este valor representa o número de sequência de transação mais antigo da transação que tem versões de linha que devem ser retidas no armazenamento de versões. As versões de linha que foram criadas por transações anteriores podem ser removidas.|  
-|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|**pdw_node_id**|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
 ## <a name="permissions"></a>Permissões  
  Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer a permissão VIEW SERVER STATE no servidor.  

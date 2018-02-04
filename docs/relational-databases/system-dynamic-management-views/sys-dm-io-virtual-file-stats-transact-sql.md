@@ -1,5 +1,5 @@
 ---
-title: sys.DM io_virtual_file_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_io_virtual_file_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_io_virtual_file_stats_TSQL
 - sys.dm_io_virtual_file_stats
 - dm_io_virtual_file_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_io_virtual_file_stats dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_io_virtual_file_stats dynamic management function
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6890eda5969d783a6d40b27493b07e8831146aa8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2ab0b534ceea8712c9c197ea52f2da66065d3167
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -81,7 +84,7 @@ ID do arquivo. *file_id* é int, sem padrão. São entradas válidas o número d
 |**database_name**|**sysname**|Nome do banco de dados.</br></br>Para o SQL Data Warehouse, isso é o nome do banco de dados armazenado no nó que é identificado por pdw_node_id. Cada nó tem um banco de dados de tempdb com 13 arquivos. Cada nó também tem um banco de dados por distribuição, e cada banco de dados de distribuição tem 5 arquivos. Por exemplo, se cada nó contém 4 distribuições, os resultados mostram 20 arquivos de banco de dados de distribuição por pdw_node_id. 
 |**database_id**|**smallint**|ID do banco de dados.|  
 |**file_id**|**smallint**|ID de arquivo.|  
-|**sample_ms**|**bigint**|Número de milissegundos desde que o computador foi iniciado. Essa coluna pode ser usada para comparar saídas diferentes dessa função.</br></br>O tipo de dados é **int** para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**sample_ms**|**bigint**|Número de milissegundos desde que o computador foi iniciado. Essa coluna pode ser usada para comparar saídas diferentes dessa função.</br></br>O tipo de dados é **int** para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|Número de leituras emitidas no arquivo.|  
 |**num_of_bytes_read**|**bigint**|Número total de bytes lidos no arquivo.|  
 |**io_stall_read_ms**|**bigint**|Tempo total, em milissegundos, que os usuários aguardaram pelas leituras emitidas no arquivo.|  
@@ -93,7 +96,7 @@ ID do arquivo. *file_id* é int, sem padrão. São entradas válidas o número d
 |**file_handle**|**varbinary**|Identificador de arquivo do Windows desse arquivo.|  
 |**io_stall_queued_read_ms**|**bigint**|**Não é aplicável a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Latência total de E/S apresentada pela administração do recurso de E/S para leituras. Não permite valor nulo. Para obter mais informações, consulte [sys.DM resource_governor_resource_pools &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
 |**io_stall_queued_write_ms**|**bigint**|**Não é aplicável a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Latência total de E/S apresentada pela administração do recurso de E/S para gravações. Não permite valor nulo.|
-|**pdw_node_id**|**int**|**Aplica-se a:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificador do nó para a distribuição.
+|**pdw_node_id**|**Int**|**Aplica-se a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificador do nó para a distribuição.
  
   
 ## <a name="permissions"></a>Permissões  
@@ -122,7 +125,7 @@ WHERE database_name = ‘tempdb’ AND file_id = 2;
 
 ```
 
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Eu O relacionados funções e exibições de gerenciamento dinâmico &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

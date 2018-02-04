@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_stats_histogram_TSQL
 - dm_db_stats_histogram
 - dm_db_stats_histogram_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_stats_histogram dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_stats_histogram dynamic management function
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
-caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f43afdac5972dd5f01c192dbbc755911a83a341
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4ce36dbcac1e0df3f8cbe4020e87fc32af36920a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -55,9 +58,9 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|object_id |**int**|ID do objeto (tabela ou exibição indexada) para o qual as propriedades do objeto de estatísticas serão retornadas.|  
-|stats_id |**int**|ID do objeto de estatísticas. É exclusiva na tabela ou exibição indexada. Para obter mais informações, veja [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
-|step_number |**int** |O número da etapa do histograma. |
+|object_id |**Int**|ID do objeto (tabela ou exibição indexada) para o qual as propriedades do objeto de estatísticas serão retornadas.|  
+|stats_id |**Int**|ID do objeto de estatísticas. É exclusiva na tabela ou exibição indexada. Para obter mais informações, veja [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
+|step_number |**Int** |O número da etapa do histograma. |
 |range_high_key |**sql_variant** |Valor da coluna associada superior de uma etapa do histograma. O valor da coluna também será denominado um valor de chave.|
 |range_rows |**real** |Número estimado de linhas cujo valor de coluna fica dentro de uma etapa do histograma, excluindo-se o limite superior. |
 |equal_rows |**real** |Número estimado de linhas cujo valor de coluna é igual ao limite superior da etapa do histograma. |
@@ -147,7 +150,7 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
     AND sh.range_high_key = CAST('Canada' AS CHAR(8));
 ```
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [Objeto exibições de gerenciamento dinâmico relacionadas e funções (Transact-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
-[sys.DM db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
+[sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

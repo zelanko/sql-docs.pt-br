@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,38 +17,39 @@ f1_keywords:
 - dm_db_wait_stats
 - sys.dm_db_wait_stats
 - sys.dm_db_wait_stats_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_wait_stats dynamic management view
 - dm_db_wait_stats
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 465c768c9f5636463e4d124d224f9184ebc2dac8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d4d15404469382da4d8ab135e0619f4d6a9360d0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.DM db_wait_stats (banco de dados do SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Retorna informações sobre todas as esperas encontradas por threads executados durante a operação. É possível usar essa exibição agregada para diagnosticar problemas de desempenho com o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e também com consultas e lotes específicos.  
   
- Tipos específicos de horas de espera durante execução de consulta podem indicar afunilamentos ou pontos de pausa dentro da consulta. Da mesma forma, os tempos de espera altos ou as contagens de espera em todo o servidor podem indicar afunilamentos nas interações de consulta de interação na instância do servidor. Por exemplo, as esperas de bloqueio indicam a contenção de dados por consultas; as esperas de trava de ES de página indicam tempos de resposta de ES lentos; as esperas de atualização de trava de página indicam layout de arquivo incorreto.  
+ Tipos específicos de horas de espera durante execução de consulta podem indicar gargalos ou pontos de pausa dentro da consulta. Da mesma forma, os tempos de espera altos ou as contagens de espera em todo o servidor podem indicar gargalos nas interações de consulta de interação na instância do servidor. Por exemplo, as esperas de bloqueio indicam a contenção de dados por consultas; as esperas de trava de ES de página indicam tempos de resposta de ES lentos; as esperas de atualização de trava de página indicam layout de arquivo incorreto.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar (60)**|Nome do tipo de espera. Para obter mais informações, consulte [tipos de espera](#WaitTypes), mais adiante neste tópico.|  
+|wait_type|**nvarchar(60)**|Nome do tipo de espera. Para obter mais informações, consulte [tipos de espera](#WaitTypes), mais adiante neste tópico.|  
 |waiting_tasks_count|**bigint**|Número de esperas nesse tipo de espera. O contador é incrementado no início de cada espera.|  
 |wait_time_ms|**bigint**|Tempo de espera total para esse tipo de espera em milissegundos. Essa hora é inclusiva de signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Tempo de espera máximo neste tipo de espera.|  
 |signal_wait_time_ms|**bigint**|Diferença entre a hora em que o thread de espera foi sinalizado e quando ele começou a ser executado.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 -   Essa exibição de gerenciamento dinâmico exibe dados apenas para o banco de dados atual.  
   
@@ -378,7 +380,7 @@ ms.lasthandoff: 11/17/2017
 |XACTLOCKINFO|Ocorre durante a sincronização de acesso à lista de bloqueios para uma transação. Além da própria transação, a lista de bloqueios é acessada por operações como detecção de deadlock e migração de bloqueio durante divisões de páginas.|  
 |XACTWORKSPACE_MUTEX|Ocorre durante a sincronização de remoções de uma transação, bem como do número de bloqueios de banco de dados entre os membros registrados de uma transação.|  
 |XE_BUFFERMGR_ALLPROCESSED_EVENT|Ocorre quando buffers de sessão de Eventos Estendidos são liberados para destinos. Essa espera ocorre em um thread em segundo plano.|  
-|XE_BUFFERMGR_FREEBUF_EVENT|Ocorre quando uma destas condições é verdadeira:<br /><br /> Uma sessão de Eventos Estendidos é configurada para nenhuma perda de evento e todos os buffers na sessão estão atualmente cheios. Isso pode indicar que os buffers para uma sessão de Eventos Estendidos são muito pequenos ou devem ser particionados.<br /><br /> As auditorias apresentam um atraso. Isso pode indicar um afunilamento de disco na unidade onde as auditorias são gravadas.|  
+|XE_BUFFERMGR_FREEBUF_EVENT|Ocorre quando uma destas condições é verdadeira:<br /><br /> Uma sessão de Eventos Estendidos é configurada para nenhuma perda de evento e todos os buffers na sessão estão atualmente cheios. Isso pode indicar que os buffers para uma sessão de Eventos Estendidos são muito pequenos ou devem ser particionados.<br /><br /> As auditorias apresentam um atraso. Isso pode indicar um gargalo de disco na unidade onde as auditorias são gravadas.|  
 |XE_DISPATCHER_CONFIG_SESSION_LIST|Ocorre quando uma sessão de Eventos Estendidos que está usando destinos assíncronos é iniciada ou interrompida. Essa espera indica qualquer um dos seguintes:<br /><br /> Uma sessão de Eventos Estendidos está sendo registrada com um pool de thread em segundo plano.<br /><br /> O pool de thread em segundo plano está calculando o número necessário de threads com base na carga atual.|  
 |XE_DISPATCHER_JOIN|Ocorre quando um thread em segundo plano que é usado para sessões de Eventos Estendidos está sendo encerrado.|  
 |XE_DISPATCHER_WAIT|Ocorre quando um thread em segundo plano que é usado para sessões de Eventos Estendidos está esperando o processamento de buffers de evento.|  

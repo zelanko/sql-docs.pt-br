@@ -1,5 +1,5 @@
 ---
-title: sys.DM os_wait_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/04/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_wait_stats
 - sys.dm_os_wait_stats
 - sys.dm_os_wait_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_wait_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_wait_stats dynamic management view
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
-caps.latest.revision: "111"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 355aefa1b0cb4d8acbc215a3afc72709d8b811e9
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
-ms.translationtype: MT
+ms.openlocfilehash: c7e4859e69328535a89d0c2abc3122340176eaec
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,12 +43,12 @@ Retorna informações sobre todas as esperas encontradas por threads executados.
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar (60)**|Nome do tipo de espera. Para obter mais informações, consulte [tipos de espera](#WaitTypes), mais adiante neste tópico.|  
+|wait_type|**nvarchar(60)**|Nome do tipo de espera. Para obter mais informações, consulte [tipos de espera](#WaitTypes), mais adiante neste tópico.|  
 |waiting_tasks_count|**bigint**|Número de esperas nesse tipo de espera. O contador é incrementado no início de cada espera.|  
 |wait_time_ms|**bigint**|Tempo de espera total para esse tipo de espera em milissegundos. Essa hora é inclusiva de signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Tempo de espera máximo neste tipo de espera.|  
 |signal_wait_time_ms|**bigint**|Diferença entre a hora em que o thread de espera foi sinalizado e quando ele começou a ser executado.|  
-|pdw_node_id|**Int**|O identificador para o nó que essa distribuição é no. <br/> **Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|pdw_node_id|**Int**|O identificador para o nó que essa distribuição é no. <br/> **Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>Permissões  
 Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
@@ -74,7 +77,7 @@ Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `V
   
  Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os contadores de tempo de espera são **bigint** valores e, portanto, não são tão suscetíveis à substituição de contador quanto os contadores equivalentes em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Tipos específicos de horas de espera durante execução de consulta podem indicar afunilamentos ou pontos de pausa dentro da consulta. Da mesma forma, os tempos de espera altos ou as contagens de espera em todo o servidor podem indicar afunilamentos nas interações de consulta de interação na instância do servidor. Por exemplo, as esperas de bloqueio indicam a contenção de dados por consultas; as esperas de trava de ES de página indicam tempos de resposta de ES lentos; as esperas de atualização de trava de página indicam layout de arquivo incorreto.  
+ Tipos específicos de horas de espera durante execução de consulta podem indicar gargalos ou pontos de pausa dentro da consulta. Da mesma forma, os tempos de espera altos ou as contagens de espera em todo o servidor podem indicar gargalos nas interações de consulta de interação na instância do servidor. Por exemplo, as esperas de bloqueio indicam a contenção de dados por consultas; as esperas de trava de ES de página indicam tempos de resposta de ES lentos; as esperas de atualização de trava de página indicam layout de arquivo incorreto.  
   
  Os conteúdos desta exibição de gerenciamento dinâmico podem ser reajustados executando o seguinte comando:  
   
@@ -127,7 +130,7 @@ Esse comando redefine todos os contadores como 0.
 |BROKER_FORWARDER |TBD <br /> **Aplica-se a**: do [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |BROKER_INIT |Ocorre ao inicializar o Service Broker em cada banco de dados ativo. Isso deve ocorrer raramente.| 
 |BROKER_MASTERSTART |Ocorre quando uma tarefa está aguardando o manipulador de eventos principal do Service Broker para iniciar. Isso deve ocorrer muito brevemente.| 
-|BROKER_RECEIVE_WAITFOR |Ocorre quando RECEIVE WAITFOR estiver aguardando. Isso será comum se nenhuma mensagem estiver pronta para ser recebida.| 
+|BROKER_RECEIVE_WAITFOR |Ocorre quando RECEIVE WAITFOR estiver aguardando. Isso pode significar que nenhuma mensagem estiver pronta para ser recebida da fila ou uma contenção de bloqueio está impedindo que ele receba mensagens da fila.| 
 |BROKER_REGISTERALLENDPOINTS |Ocorre durante a inicialização de um ponto de extremidade de conexão do Service Broker. Isso deve ocorrer muito brevemente.| 
 |BROKER_SERVICE |Ocorre quando a lista de destino do Service Broker que está associada um serviço de destino é atualizada ou priorizada novamente.| 
 |BROKER_SHUTDOWN |Ocorre quando há um desligamento planejado do Service Broker. Isso deve ocorrer muito brevemente, se ocorrer.| 
@@ -169,7 +172,7 @@ Esse comando redefine todos os contadores como 0.
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **Aplica-se a**: do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |COUNTRECOVERYMGR |TBD <br /> **Aplica-se a**: do [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |CREATE_DATINISERVICE |TBD <br /> **Aplica-se a**: do [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|CXCONSUMER |Ocorre com planos de consulta paralelos quando um thread de consumidor aguarda um thread de produtor enviar linhas. Isso é uma parte normal da execução de consulta paralela. <br /> **Aplica-se a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXCONSUMER |Ocorre com planos de consulta paralelos quando um thread de consumidor aguarda um thread de produtor enviar linhas. Isso é uma parte normal da execução de consulta paralela. <br /> **Aplica-se a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
 |CXPACKET |Ocorre com planos de consulta paralelos ao sincronizar o iterador de troca do processador de consulta e ao produzir e consumir linhas. Se a espera for excessiva e não puder ser reduzida ajustando a consulta (como adicionando índices), ajuste o limite de custo para paralelismo ou reduza o grau de paralelismo.<br /> **Observação:** na [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET refere-se apenas para sincronizar o iterador de troca do processador de consulta e produzindo linhas para threads de consumidor. Threads de consumidor são rastreadas separadamente no tipo de espera CXCONSUMER.| 
 |CXROWSET_SYNC |Ocorre durante um exame de intervalo paralelo.| 
 |DAC_INIT |Ocorre enquanto a conexão de administrador dedicada estiver inicializando.| 
@@ -1024,7 +1027,7 @@ Esse comando redefine todos os contadores como 0.
 ## <a name="see-also"></a>Consulte também  
     
  [Sistema operacional SQL Server relacionadas exibições de gerenciamento dinâmico &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys.DM exec_session_wait_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
+ [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
  [sys.DM db_wait_stats &#40; Banco de dados SQL do Azure &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   
   

@@ -3,7 +3,7 @@ title: Instalar o agente do SQL Server no Linux | Microsoft Docs
 description: "Este tópico descreve como instalar o SQL Server Agent no Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.workload: On Demand
-ms.openlocfilehash: 7ba7f55064542f2650584a87888214052b8d74f4
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 873c2da961db577889a3fca4139e325083d609e9
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Instalar o agente do SQL Server no Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 As etapas a seguir instala o SQL Server Agent (**mssql-server-agente**) no Linux. O [do SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) executa trabalhos agendados do SQL Server. Para obter informações sobre os recursos com suporte para esta versão do SQL Server Agent, consulte o [notas de versão](sql-server-linux-release-notes.md).
 
@@ -79,7 +79,7 @@ Se você precisar de uma instalação offline, localize o download do pacote do 
 
 Use as etapas a seguir para instalar o **mssql-server-agente** no SUSE Linux Enterprise Server. 
 
-Instalar **mssql de servidor de agente** 
+Install **mssql-server-agent** 
 
 ```bash
 sudo zypper install mssql-server-agent

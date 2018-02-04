@@ -1,5 +1,5 @@
 ---
-title: sys.DM db_stats_properties (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_stats_properties (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/18/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_stats_properties
 - dm_db_stats_properties_TSQL
 - dm_db_stats_properties
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_stats_properties
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_stats_properties
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d1603e9d1fb3fb9e84556f432c5b421844f8c1c3
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 3406cfffce07260fc425c2850e548d006f9d796a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbstatsproperties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,12 +55,12 @@ sys.dm_db_stats_properties (object_id, stats_id)
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|object_id|**int**|ID do objeto (tabela ou exibição indexada) para o qual as propriedades do objeto de estatísticas serão retornadas.|  
-|stats_id|**int**|ID do objeto de estatísticas. É exclusiva na tabela ou exibição indexada. Para obter mais informações, veja [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
+|object_id|**Int**|ID do objeto (tabela ou exibição indexada) para o qual as propriedades do objeto de estatísticas serão retornadas.|  
+|stats_id|**Int**|ID do objeto de estatísticas. É exclusiva na tabela ou exibição indexada. Para obter mais informações, veja [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
 |last_updated|**datetime2**|Data e hora da última atualização do objeto de estatísticas. Para obter mais informações, consulte o [comentários](#Remarks) seção nesta página.|  
 |rows|**bigint**|O número total de linhas da tabela ou exibição indexada na última atualização das estatísticas. Se as estatísticas forem filtradas ou corresponderem a um índice filtrado, o número de linhas talvez seja menor do que o número de linhas na tabela.|  
 |rows_sampled|**bigint**|O número total de linhas amostradas para cálculos de estatísticas.|  
-|etapas|**int**|O número de etapas no histograma. Para obter mais informações, veja [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).|  
+|etapas|**Int**|O número de etapas no histograma. Para obter mais informações, veja [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).|  
 |unfiltered_rows|**bigint**|O número total de linhas da tabela antes da aplicação da expressão de filtro (para estatísticas filtradas). Se as estatísticas não forem filtradas, unfiltered_rows será igual ao valor retornado na coluna de linhas.|  
 |modification_counter|**bigint**|Número total de modificações da coluna de estatísticas principal (a coluna em que o histograma é criado) desde que as últimas estatísticas de tempo foram atualizadas.<br /><br /> Tabelas com otimização de memória: iniciando [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] esta coluna contém: o número total de modificações para a tabela desde as última estatísticas de tempo foram atualizadas ou o banco de dados foi reiniciado.|  
 |persisted_sample_percent|**float**|Persistir a porcentagem de exemplo usada para as atualizações de estatísticas que não especificam explicitamente um percentual de amostragem. Se o valor for zero, nenhuma porcentagem de exemplo persistente é definida para essa estatística.<br /><br /> **Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 atualização cumulativa 4|  
@@ -107,7 +110,7 @@ CROSS APPLY sys.dm_db_stats_properties(stat.object_id, stat.stats_id) AS sp
 WHERE modification_counter > 1000;  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas ao objeto &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   

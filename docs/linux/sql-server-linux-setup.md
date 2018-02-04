@@ -3,7 +3,7 @@ title: Instalar o SQL Server de 2017 no Linux | Microsoft Docs
 description: "Instalar, atualizar e desinstalar o SQL Server no Linux. Este tópico abrange cenários autônomos online e offline."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 180c8492531da7c3b9c15ebef28917b52e0869ce
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 114bbd717ad7d0d244b7290bd612547c9226f941
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Orientação de instalação do SQL Server no Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este tópico explica como instalar, atualizar e desinstalar o SQL Server 2017 no Linux. Há suporte para o SQL Server 2017 no Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) e Ubuntu. Ele também está disponível como uma imagem do Docker, que pode ser executado no mecanismo do Docker no Linux ou o Docker para Windows/Mac.
 
@@ -37,7 +37,7 @@ Há suporte para o SQL Server 2017 nas seguintes plataformas Linux:
 | Plataforma | Versões com suporte | Obter
 |-----|-----|-----
 | **Red Hat Enterprise Linux** | 7.3 ou 7.4 | [Obter RHEL 7.4](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
-| **SUSE Linux Enterprise Server** | SP2 v12 | [Obter SLES v12 SP2](https://www.suse.com/products/server)
+| **SUSE Linux Enterprise Server** | v12 SP2 | [Obter SLES v12 SP2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Obter Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Mecanismo do docker** | 1.8+ | [Obter o Docker](http://www.docker.com/products/overview)
 
@@ -86,7 +86,7 @@ Para atualizar o **mssql server** para a versão mais recente do pacote, use um 
 
 Esses comandos baixar o pacote mais recente e substitua os binários localizados em `/opt/mssql/`. O usuário gerou bancos de dados e bancos de dados do sistema não são afetados por essa operação.
 
-## <a id="rollback"></a>Reversão SQL Server
+## <a id="rollback"></a> Rollback SQL Server
 
 A reversão ou fazer downgrade do SQL Server para uma versão anterior, use as seguintes etapas:
 

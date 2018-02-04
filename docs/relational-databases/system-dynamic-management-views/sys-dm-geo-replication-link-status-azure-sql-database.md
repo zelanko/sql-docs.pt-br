@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,18 +21,18 @@ helpviewer_keywords:
 - dm_geo_replication_link_status dynamic management view
 - sys.dm_geo_replication_link_status dynamic management view
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 040c326ca5e4f38a1a6c32ce3ae5fe7ba6ddddea
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: 37bb0b6c2252a213824e24c51178711a704d2e85
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (banco de dados do SQL Azure)
+# <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Contém uma linha para cada link de replicação entre bancos de dados primários e secundários em uma parceria de replicação geográfica. Isso inclui bancos de dados primários e secundários. Se houver mais de um link de replicação contínua para um determinado banco de dados primário, essa tabela contém uma linha para cada uma das relações. A exibição é criada em todos os bancos de dados, incluindo o mestre lógico. No entanto, a consulta dessa exibição no mestre lógico retorna um conjunto vazio.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/14/2017
 |partner_server|**sysname**|Nome do servidor lógico que contém o banco de dados.|  
 |partner_database|**sysname**|Nome do banco de dados vinculado no servidor lógico vinculado.|  
 |last_replication|**datetimeoffset**|O carimbo de hora de confirmação da última transação pelo secundário com base no relógio do banco de dados primário. Esse valor está disponível no banco de dados primário apenas.|  
-|replication_lag_sec|**int**|Diferença de tempo em segundos entre o valor de last_replication e o carimbo de hora da confirmação da transação na réplica primária com base no relógio do banco de dados primário.  Esse valor está disponível no banco de dados primário apenas.|  
+|replication_lag_sec|**Int**|Diferença de tempo em segundos entre o valor de last_replication e o carimbo de hora da confirmação da transação na réplica primária com base no relógio do banco de dados primário.  Esse valor está disponível no banco de dados primário apenas.|  
 |replication_state|**tinyint**|O estado de replicação geográfica para este banco de dados, um de:.<br /><br /> 1 = propagação. O destino de replicação geográfica está sendo propagado mas dois bancos de dados ainda não estão sincronizados. Até que a propagação seja concluída, você não pode se conectar ao banco de dados secundário. Remover o banco de dados secundário do primário cancelará a operação de propagação.<br /><br /> 2 = varredura. O banco de dados secundário está em um estado transacionalmente consistente e está sendo constantemente sincronizado com o banco de dados primário.<br /><br /> 4 = suspenso. Isso não é uma relação de cópia contínua ativa. Esse estado geralmente indica que a largura de banda disponível para o interlink é insuficiente para o nível de atividade da transação no banco de dados primário. No entanto, a relação de cópia contínua ainda permanece intacta.|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
 |função|**tinyint**|Função de replicação geográfica, um de:<br /><br /> 0 = primário. O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.<br /><br /> 1 = secundário.  O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.|  
@@ -69,7 +70,7 @@ SELECT
 FROM sys.dm_geo_replication_link_status;  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [ALTER DATABASE &#40; Banco de dados SQL do Azure &#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [sys.geo_replication_links &#40; Banco de dados SQL do Azure &#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
  [sys.DM operation_status &#40; Banco de dados SQL do Azure &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  

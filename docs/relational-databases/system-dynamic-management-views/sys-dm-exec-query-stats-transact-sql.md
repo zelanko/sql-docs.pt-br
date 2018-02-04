@@ -1,5 +1,5 @@
 ---
-title: sys.DM exec_query_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/04/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_query_stats
 - sys.dm_exec_query_stats
 - sys.dm_exec_query_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_stats dynamic management view
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
-caps.latest.revision: "64"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 26cc8e4ea520560452b59b9a08da198882ba96cd
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: 8874b5ba3eca2f3e9d72874af7440934fc2ec20f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,12 +78,12 @@ ms.lasthandoff: 01/12/2018
 |**last_elapsed_time**|**bigint**|Tempo decorrido, relatado em microssegundos (mas preciso somente em milissegundos), para a execução completa mais recente desse plano.|  
 |**min_elapsed_time**|**bigint**|Tempo decorrido mínimo, relatado em microssegundos (mas preciso somente em milissegundos), para qualquer execução concluída desse plano.|  
 |**max_elapsed_time**|**bigint**|Tempo decorrido máximo, relatado em microssegundos (mas preciso somente em milissegundos), para qualquer execução concluída desse plano.|  
-|**query_hash**|**Binary (8)**|Valor de hash binário calculado na consulta e usado para identificar consultas com lógica semelhante. Você pode usar o hash de consulta para determinar o recurso de agregação usado para consultas que são diferentes apenas nos valores literais.|  
-|**query_plan_hash**|**binary (8)**|Valor de hash binário calculado no plano de execução de consulta e usado para identificar planos de execução de consulta semelhantes. Você pode usar o hash de plano de consulta para localizar o custo cumulativo de consultas com planos de execução semelhantes.<br /><br /> Sempre será 0x000 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
+|**query_hash**|**Binary(8)**|Valor de hash binário calculado na consulta e usado para identificar consultas com lógica semelhante. Você pode usar o hash de consulta para determinar o recurso de agregação usado para consultas que são diferentes apenas nos valores literais.|  
+|**query_plan_hash**|**binary(8)**|Valor de hash binário calculado no plano de execução de consulta e usado para identificar planos de execução de consulta semelhantes. Você pode usar o hash de plano de consulta para localizar o custo cumulativo de consultas com planos de execução semelhantes.<br /><br /> Sempre será 0x000 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
 |**total_rows**|**bigint**|O número total de linhas retornadas pela consulta. Não pode ser nulo.<br /><br /> Sempre será 0 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
 |**last_rows**|**bigint**|O número total de linhas retornadas pela última execução da consulta. Não pode ser nulo.<br /><br /> Sempre será 0 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
 |**min_rows**|**bigint**|Número mínimo de linhas retornado pela consulta durante uma execução. Não pode ser nulo.<br /><br /> Sempre será 0 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
-|**MAX_ROWS**|**bigint**|Número máximo de linhas retornado pela consulta durante uma execução. Não pode ser nulo.<br /><br /> Sempre será 0 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
+|**max_rows**|**bigint**|Número máximo de linhas retornado pela consulta durante uma execução. Não pode ser nulo.<br /><br /> Sempre será 0 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
 |**statement_sql_handle**|**varbinary(64)**|**Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Preenchida com valores não nulos apenas se o repositório de consultas está ativado e coletar as estatísticas para a consulta específica.|  
 |**statement_context_id**|**bigint**|**Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Preenchida com valores não nulos apenas se o repositório de consultas está ativado e coletar as estatísticas para a consulta específica.|  
 |**total_dop**|**bigint**|A soma total do grau de paralelismo esse plano usado desde sua compilação. Sempre será 0 para consultar uma tabela com otimização de memória.<br /><br /> **Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
@@ -119,7 +122,7 @@ ms.lasthandoff: 01/12/2018
 |**last_spills**|**bigint**|O número de páginas vazadas a última vez em que a consulta foi executada.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**min_spills**|**bigint**|O número mínimo de páginas que essa consulta já tem vazadas durante uma única execução.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|O número máximo de páginas que essa consulta já tem vazadas durante uma única execução.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**pdw_node_id**|**Int**|O identificador para o nó que essa distribuição é no.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**pdw_node_id**|**Int**|O identificador para o nó que essa distribuição é no.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 
 > [!NOTE]
 > <sup>1</sup> para procedimentos armazenados compilados nativamente quando a coleta de estatísticas é habilitada, o tempo de trabalho será coletado em milissegundos. Se a consulta for executada em menos de um milissegundo, o valor será 0.  
@@ -175,11 +178,11 @@ ORDER BY qs.execution_count DESC;
   
 ## <a name="see-also"></a>Consulte também  
 [Funções e exibições de gerenciamento dinâmico &#40; relacionadas à execução Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
-[sys.DM exec_sql_text &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
-[sys.DM exec_query_plan &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
-[sys.DM exec_procedure_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
-[exec_trigger_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
-[exec_cached_plans &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
+[sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
+[sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
+[sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
+[sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
 
 

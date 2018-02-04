@@ -1,5 +1,5 @@
 ---
-title: sys. fulltext_catalogs (Transact-SQL) | Microsoft Docs
+title: sys.fulltext_catalogs (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.fulltext_catalogs
 - fulltext_catalogs
 - fulltext_catalogs_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.fulltext_catalogs catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.fulltext_catalogs catalog view
 ms.assetid: cf1489ff-4819-41fa-a62a-4ed797a16207
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bebdf8510393ea10076a405f585c3414d0afcca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d4c3f1c279176dea69b27a2c1416af3d15338924
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfulltextcatalogs-transact-sql"></a>sys.fulltext_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +43,14 @@ ms.lasthandoff: 11/17/2017
  
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|fulltext_catalog_id|**int**|Identificação do catálogo de texto completo. É exclusivo nos catálogos de texto completo do banco de dados.|  
+|fulltext_catalog_id|**Int**|Identificação do catálogo de texto completo. É exclusivo nos catálogos de texto completo do banco de dados.|  
 |name|**sysname**|Nome do catálogo. É exclusiva no banco de dados.|  
-|caminho|**nvarchar (260)**|Nome do diretório de catálogo no sistema de arquivos.|  
+|path|**nvarchar(260)**|Nome do diretório de catálogo no sistema de arquivos.|  
 |is_default|**bit**|O catálogo de texto completo padrão.<br /><br /> True = É padrão.<br /><br /> False = Não é padrão.|  
 |is_accent_sensitivity_on|**bit**|Configuração da distinção de acentos do catálogo.<br /><br /> True = Diferencia acentos.<br /><br /> False = Não diferencia acentos.|  
-|data_space_id|**int**|Grupo de arquivos no qual esse catálogo foi criado.|  
-|file_id|**int**|ID do arquivo de texto completo associado ao catálogo.|  
-|principal_id|**int**|ID da entidade de segurança do banco de dados que é proprietária do catálogo de texto completo.|  
+|data_space_id|**Int**|Grupo de arquivos no qual esse catálogo foi criado.|  
+|file_id|**Int**|ID do arquivo de texto completo associado ao catálogo.|  
+|principal_id|**Int**|ID da entidade de segurança do banco de dados que é proprietária do catálogo de texto completo.|  
 |is_importing|**bit**|Indica se o catálogo de texto completo está sendo importado:<br /><br /> 1 = O catálogo está sendo importado.<br /><br /> 2 = O catálogo não está sendo importado.|  
   
 ## <a name="permissions"></a>Permissões  

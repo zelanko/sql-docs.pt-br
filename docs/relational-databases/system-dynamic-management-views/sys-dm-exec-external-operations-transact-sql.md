@@ -8,30 +8,32 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DM_EXEC_EXTERNAL_OPERATIONS_TSQL
 - DM_EXEC_EXTERNAL_OPERATIONS
 - SYS.DM_EXEC_EXTERNAL_OPERATIONS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PolyBase,views
 - PolyBase
 - sys.dm_exec_external_operations management view
 - dm_exec_external_operations management view
 ms.assetid: d268217a-85b8-4b7f-9cd1-87865eba2be1
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90f2793ddb2c2059e2b279b53f7261d3b583e469
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6c22adfa3b0ac7737e322fe36818f57cff30a1f7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecexternaloperations-transact-sql"></a>sys.dm_exec_external_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -40,9 +42,9 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar (32)**|Identificador exclusivo de consulta associado à consulta do PolyBase|Consulte a ID de [exec_requests &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
-|step_index|**int**|Índice da etapa de consulta|Consulte step_index em [sys.dm_exec_distributed_request_steps &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
-|tipo de operação|**nvarchar (128)**|Descreve uma operação de Hadoop ou outra operação externa|'Operação Hadoop externo'|  
+|execution_id|**nvarchar(32)**|Identificador exclusivo de consulta associado à consulta do PolyBase|Consulte a ID de [exec_requests &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
+|step_index|**Int**|Índice da etapa de consulta|Consulte step_index em [sys.dm_exec_distributed_request_steps &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
+|tipo de operação|**nvarchar(128)**|Descreve uma operação de Hadoop ou outra operação externa|'Operação Hadoop externo'|  
 |nome de operação|**nvarchar(4000)**|Indica como o status do trabalho na porcentagem de (quanto a entrada consumida)|0-1 – multiplicado pelo fator de 100 (concluída)|  
 |progresso de map_|**float**|Indica como o status de uma redução de trabalho em porcentagem, se houver|0-1 – multiplicado pelo fator de 100 (concluída)|  
   

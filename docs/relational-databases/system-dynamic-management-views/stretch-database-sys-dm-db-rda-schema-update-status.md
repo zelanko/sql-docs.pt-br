@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,18 +17,19 @@ f1_keywords:
 - sys.dm_db_rda_schema_update_status_TSQL
 - dm_db_rda_schema_update_status
 - dm_db_rda_schema_update_status_TSQL
-helpviewer_keywords: sys.dm_db_rda_schema_update_status dynamic management view
+helpviewer_keywords:
+- sys.dm_db_rda_schema_update_status dynamic management view
 ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5a26235ac699b3a14c01759fbcb46eee92bf948
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f3889c9985bad47e192937f7ee8c2608be225ed1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="stretch-database---sysdmdbrdaschemaupdatestatus"></a>Stretch Database - sys.dm_db_rda_schema_update_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -38,18 +40,18 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**table_id**|**int**|A ID local habilitada para ampliação da tabela de esquema de arquivos cujos dados remotos está sendo atualizada.|  
-|**database_id**|**int**|A ID do banco de dados que contém a tabela local habilitada para ampliação.|  
-|**TASK_ID**|**bigint**|A ID da tarefa de atualização de esquema de arquivo morto de dados remotos.|  
-|**task_type**|**int**|O tipo da tarefa de atualização de esquema de arquivo morto de dados remotos.|  
+|**table_id**|**Int**|A ID local habilitada para ampliação da tabela de esquema de arquivos cujos dados remotos está sendo atualizada.|  
+|**database_id**|**Int**|A ID do banco de dados que contém a tabela local habilitada para ampliação.|  
+|**task_id**|**bigint**|A ID da tarefa de atualização de esquema de arquivo morto de dados remotos.|  
+|**task_type**|**Int**|O tipo da tarefa de atualização de esquema de arquivo morto de dados remotos.|  
 |**task_type_desc**|**nvarchar**|A descrição do tipo da tarefa de atualização de esquema de arquivo morto de dados remotos.|  
-|**task_state**|**int**|O estado da tarefa de atualização de esquema de arquivo morto de dados remotos.|  
+|**task_state**|**Int**|O estado da tarefa de atualização de esquema de arquivo morto de dados remotos.|  
 |**task_state_des**|**nvarchar**|A descrição do estado da tarefa de atualização de esquema de arquivo morto de dados remotos.|  
 |**start_time_utc**|**datetime**|A hora UTC em que os dados remotos arquivar o início da atualização de esquema.|  
 |**end_time_utc**|**datetime**|A hora UTC em que os dados remotos arquivar a atualização de esquema concluída.|  
-|**ERROR_NUMBER**|**int**|Se a atualização de esquema de arquivo morto de dados remotos falhar, o número do erro do erro que ocorreu; Caso contrário, nulo.|  
-|**error_severity**|**int**|Se a atualização de esquema de arquivo morto de dados remotos falhar, a severidade do erro que ocorreu; Caso contrário, nulo.|  
-|**error_state**|**int**|Se a atualização de esquema de arquivo morto de dados remotos falhar, o estado do erro que ocorreu; Caso contrário, nulo. O error_state indica a condição ou um local em que ocorreu o erro.|  
+|**error_number**|**Int**|Se a atualização de esquema de arquivo morto de dados remotos falhar, o número do erro do erro que ocorreu; Caso contrário, nulo.|  
+|**error_severity**|**Int**|Se a atualização de esquema de arquivo morto de dados remotos falhar, a severidade do erro que ocorreu; Caso contrário, nulo.|  
+|**error_state**|**Int**|Se a atualização de esquema de arquivo morto de dados remotos falhar, o estado do erro que ocorreu; Caso contrário, nulo. O error_state indica a condição ou um local em que ocorreu o erro.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  

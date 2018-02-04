@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_db_objects_impacted_on_version_change
 - dm_db_objects_impacted_on_version_change_TSQL
 - sys.dm_db_objects_impacted_on_version_change
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dm_db_objects_impacted_on_version_change
 - sys.dm_db_objects_impacted_on_version_change
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab63b177449c0648f033773197ee32b48ec0d3f5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 049b26742484e432cad95a6913fa3dad10d69dbe
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -39,11 +41,11 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de Dados|Description|  
 |-----------------|---------------|-----------------|  
-|class|**int** não NULL|A classe do objeto que será afetado:<br /><br /> **1** = restrição<br /><br /> **7** = índices e heaps|  
-|class_desc|**nvarchar (60)** não NULL|Descrição da classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
-|major_id|**int** não NULL|ID de objeto da restrição ou ID de objeto da tabela que contém índice ou heap.|  
-|minor_id|**int** nulo|**NULO** para restrições<br /><br /> Index_id para índices e heaps|  
-|dependência|**nvarchar (60)** não NULL|Descrição da dependência que está causando efeito na restrição ou índice. O mesmo valor é usado também para os avisos gerados durante a atualização.<br /><br /> Exemplos:<br /><br /> **espaço** (para intrínseco)<br /><br /> **Geometry** (para sistema UDT)<br /><br /> **geography:: Parse** (para método UDT de sistema)|  
+|class|**int** NOT NULL|A classe do objeto que será afetado:<br /><br /> **1** = restrição<br /><br /> **7** = índices e heaps|  
+|class_desc|**nvarchar(60)** NOT NULL|Descrição da classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
+|major_id|**int** NOT NULL|ID de objeto da restrição ou ID de objeto da tabela que contém índice ou heap.|  
+|minor_id|**int** NULL|**NULO** para restrições<br /><br /> Index_id para índices e heaps|  
+|dependência|**nvarchar(60)** NOT NULL|Descrição da dependência que está causando efeito na restrição ou índice. O mesmo valor é usado também para os avisos gerados durante a atualização.<br /><br /> Exemplos:<br /><br /> **espaço** (para intrínseco)<br /><br /> **Geometry** (para sistema UDT)<br /><br /> **geography:: Parse** (para método UDT de sistema)|  
   
 ## <a name="permissions"></a>Permissões  
  Exige a permissão VIEW DATABASE STATE.  
@@ -65,7 +67,7 @@ class  class_desc        major_id    minor_id    dependency
 1      OBJECT_OR_COLUMN  101575400   NULL        geometry     
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ### <a name="how-to-update-impacted-objects"></a>Como atualizar objetos afetados  
  As etapas ordenadas a seguir descrevem a ação corretiva a ser realizada depois da atualização da próxima versão do serviço de junho.  

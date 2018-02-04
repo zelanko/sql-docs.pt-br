@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5ba27432-7a29-4420-b73d-def621c0b3ac
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e484dab6061b2d48e1d2313b54b5015558ef6557
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 05f20996cb2341dd83789ef2ff81f921bc58674a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syspdwhealthcomponentgroups-transact-sql"></a>sys.pdw_health_component_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|group_id|**int**|Identificador exclusivo de componentes e dispositivos.<br /><br /> Chave para este modo de exibição.|NOT NULL|  
+|group_id|**Int**|Identificador exclusivo de componentes e dispositivos.<br /><br /> Chave para este modo de exibição.|NOT NULL|  
 |group_name|**nvarchar(255)**|Nome do grupo lógico para os componentes e dispositivos.|NOT NULL|  
   
 ## <a name="see-also"></a>Consulte também  

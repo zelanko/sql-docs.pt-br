@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2020dc2ccf50b9e6ed11c609f908e346c469c8d7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 201c0fe2d8396d5669f2a05ef43343522827c465
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmpdwexecconnections-transact-sql"></a>sys.dm_pdw_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,12 +33,12 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|session_id|**int**|Identifica a sessão associada a esta conexão. Use `SESSION_ID()` para retornar o `session_id` da conexão atual.|  
+|session_id|**Int**|Identifica a sessão associada a esta conexão. Use `SESSION_ID()` para retornar o `session_id` da conexão atual.|  
 |connect_time|**datetime**|Carimbo de data/hora de quando a conexão foi estabelecida. Não permite valor nulo.|  
-|encrypt_option|**nvarchar (40)**|Indica a TRUE (a conexão é criptografada) ou falso (conexão não é enctypred).|  
-|auth_scheme|**nvarchar (40)**|Especifica o esquema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Autenticação do Windows usado com esta conexão. Não permite valor nulo.|  
+|encrypt_option|**nvarchar(40)**|Indica a TRUE (a conexão é criptografada) ou falso (conexão não é enctypred).|  
+|auth_scheme|**nvarchar(40)**|Especifica o esquema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Autenticação do Windows usado com esta conexão. Não permite valor nulo.|  
 |client_id|**varchar(48)**|Endereço IP do cliente que se conecta a esse servidor. Permite valor nulo.|  
-|sql_spid|**int**|A ID de processo do servidor da conexão. Use `@@SPID` para retornar o `sql_spid` da conexão atual. Para propósitos de mais, use o `session_id` em vez disso.|  
+|sql_spid|**Int**|A ID de processo do servidor da conexão. Use `@@SPID` para retornar o `sql_spid` da conexão atual. Para propósitos de mais, use o `session_id` em vez disso.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer **VIEW SERVER STATE** permissão no servidor.  

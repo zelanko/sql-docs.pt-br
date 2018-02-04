@@ -8,19 +8,20 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 48519fd9-c7c2-434b-848d-ccbf41133fdd
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: 42ac4136c77b3ba00784276b12898f3d4e08d7f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: d4b3fcfe0e335b53dc483cde24520ea136c9af37
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxedatabasesessioneventactions-azure-sql-database"></a>sys.dm_xe_database_session_event_actions (banco de dados do SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -33,10 +34,10 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary (8)**|O endereço da memória da sessão de evento. Não permite valor nulo.|  
-|action_name|**nvarchar (60)**|O nome da ação. Não permite valor nulo.|  
+|event_session_address|**varbinary(8)**|O endereço da memória da sessão de evento. Não permite valor nulo.|  
+|action_name|**nvarchar(60)**|O nome da ação. Não permite valor nulo.|  
 |action_package_guid|**uniqueidentifier**|A GUID para o pacote que contém esta ação. Não permite valor nulo.|  
-|event_name|**nvarchar (60)**|O nome do evento ao qual a ação está associada. Não permite valor nulo.|  
+|event_name|**nvarchar(60)**|O nome do evento ao qual a ação está associada. Não permite valor nulo.|  
 |event_package_guid|**uniqueidentifier**|O GUID do pacote que contém o evento. Não permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 |De|Para|Relação|  
 |----------|--------|------------------|  
-|sys.dm_xe_database_session_event_actions.event_session_address|sys.dm_xe_database_sessions.Address|Muitos para um|  
+|sys.dm_xe_database_session_event_actions.event_session_address|sys.dm_xe_database_sessions.address|Muitos para um|  
 |sys.dm_xe_database_session_event_actions.action_name<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_database_session_events.event_package_guid|Muitos para um|  
 |sys.dm_xe_database_session_event_actions.event_name<br /><br /> sys.dm_xe_database_session_event_actions.event_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|Muitos para um|  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.DM db_task_space_usage (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_task_space_usage (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_task_space_usage_TSQL
 - dm_db_task_space_usage
 - sys.dm_db_task_space_usage
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_task_space_usage dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_task_space_usage dynamic management view
 ms.assetid: fb0c87e5-43b9-466a-a8df-11b3851dc6d0
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 339a8188a352f1a4a1b33a2aa6973cbb9dc961af
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2a10c12a2510baaace72219803e9f3cc26bebf20
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbtaskspaceusage-transact-sql"></a>sys.dm_db_task_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,21 +47,21 @@ ms.lasthandoff: 11/17/2017
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**smallint**|ID da sessão.|  
-|**request_id**|**int**|ID de solicitação na sessão.<br /><br /> A solicitação também é chamada de lote e contém uma ou mais consultas. Uma sessão pode ter várias solicitações ativas ao mesmo tempo. Cada consulta na solicitação poderá iniciar vários threads (tarefas), se um plano de execução paralelo for usado.|  
-|**exec_context_id**|**int**|ID do contexto de execução da tarefa. Para obter mais informações, consulte [os_tasks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
+|**request_id**|**Int**|ID de solicitação na sessão.<br /><br /> A solicitação também é chamada de lote e contém uma ou mais consultas. Uma sessão pode ter várias solicitações ativas ao mesmo tempo. Cada consulta na solicitação poderá iniciar vários threads (tarefas), se um plano de execução paralelo for usado.|  
+|**exec_context_id**|**Int**|ID do contexto de execução da tarefa. Para obter mais informações, consulte [os_tasks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
 |**database_id**|**smallint**|ID do banco de dados.|  
 |**user_objects_alloc_page_count**|**bigint**|Número de páginas reservadas ou alocadas para objetos de usuário pela tarefa.|  
 |**user_objects_dealloc_page_count**|**bigint**|Número de páginas desalocadas ou não mais reservadas para objetos de usuário pela tarefa.|  
 |**internal_objects_alloc_page_count**|**bigint**|Número de páginas reservadas ou alocadas para objetos internos de usuário pela tarefa.|  
 |**internal_objects_dealloc_page_count**|**bigint**|Número de páginas desalocadas ou não mais reservadas para objetos internos pela tarefa.|  
-|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|**pdw_node_id**|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
 ## <a name="permissions"></a>Permissões  
  Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer a permissão VIEW SERVER STATE no servidor.  
   
  Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] camadas Premium requer a permissão VIEW DATABASE STATE no banco de dados. Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] camadas Standard e Basic requer o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] conta de administrador.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As páginas IAM não estão incluídas em nenhuma contagem de páginas relatada pela exibição.  
   
  Os contadores de páginas são zerados (0) ao início da solicitação. Esses valores são agregados no nível de sessão quando a solicitação é concluída. Para obter mais informações, consulte [sys.DM db_session_space_usage &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md).  
@@ -102,10 +105,10 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Exibições de gerenciamento dinâmico relacionadas ao &#40; do banco de dados Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
- [sys.DM exec_sessions &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [exec_requests &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [os_tasks &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
- [sys.DM db_session_space_usage &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)   
+ [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
+ [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)   
  [sys.dm_db_file_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
   
   

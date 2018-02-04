@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.resource_stats
 - sys.resource_stats_TSQL
 - resource_stats_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.resource_stats
 - resource_stats
 ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dad039b91c30e4c8d89168dd90d549ec6507c750
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 72b0dc0c526198dc49047f44be0cce47ea7f3455
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,9 +53,9 @@ ms.lasthandoff: 11/17/2017
 |avg_cpu_percent|**numeric**|Utilização média de computação, em porcentagem, do limite da camada de serviço.|  
 |avg_data_io_percent|**numeric**|Utilização média de E/S em percentagem com base no limite da camada de serviço.|  
 |avg_log_write_percent|**numeric**|Utilização média do recurso de gravação, em porcentagem, do limite da camada de serviço.|  
-|max_worker_percent|**decimal (5,2)**|Máximo simultâneos trabalhadores (solicitações) em porcentagem com base no limite da camada de serviço do banco de dados.<br /><br /> Máximo está atualmente calculado para o intervalo de 5 minutos com base em 15 segundo exemplos de contagens de trabalho simultâneos.|  
-|max_session_percent|**decimal (5,2)**|Máximo de sessões simultâneas em porcentagem com base no limite da camada de serviço do banco de dados.<br /><br /> Máximo está atualmente calculado para o intervalo de 5 minutos com base em 15 segundo exemplos de contagens de sessões simultâneas.|  
-|dtu_limit|**int**|Banco de dados max DTU configuração atual para este banco de dados durante esse intervalo.|  
+|max_worker_percent|**decimal(5,2)**|Máximo simultâneos trabalhadores (solicitações) em porcentagem com base no limite da camada de serviço do banco de dados.<br /><br /> Máximo está atualmente calculado para o intervalo de 5 minutos com base em 15 segundo exemplos de contagens de trabalho simultâneos.|  
+|max_session_percent|**decimal(5,2)**|Máximo de sessões simultâneas em porcentagem com base no limite da camada de serviço do banco de dados.<br /><br /> Máximo está atualmente calculado para o intervalo de 5 minutos com base em 15 segundo exemplos de contagens de sessões simultâneas.|  
+|dtu_limit|**Int**|Banco de dados max DTU configuração atual para este banco de dados durante esse intervalo.|  
   
 > [!TIP]  
 >  Para obter mais contexto sobre esses limites e as camadas de serviço, consulte os tópicos [camadas de serviço](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) e [limites e recursos da camada de serviço](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
@@ -66,14 +68,14 @@ ms.lasthandoff: 11/17/2017
 |end_time|**datetime**|Hora UTC que indica o final do intervalo de relatório 5 minutos.|  
 |database_name|**nvarchar**|Nome do banco de dados.|  
 |sku|**nvarchar**|Camada de serviço do banco de dados. O valores possíveis são os seguintes:<br /><br /> Web<br /><br /> Business<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium|  
-|usage_in_seconds|**int**|*Observação: Esta coluna é preterida para v11 e seu valor é sempre definido como 0.*<br /><br /> Tempo de CPU usado desde que a última medida foi feita.<br /><br /> Para a medida de CPU, recomendamos que você use o **avg_cpu_cores_used** coluna, em vez desta coluna.|  
+|usage_in_seconds|**Int**|*Observação: Esta coluna é preterida para v11 e seu valor é sempre definido como 0.*<br /><br /> Tempo de CPU usado desde que a última medida foi feita.<br /><br /> Para a medida de CPU, recomendamos que você use o **avg_cpu_cores_used** coluna, em vez desta coluna.|  
 |storage_in_megabytes|**decimal**|Tamanho máximo de armazenamento em megabytes para o período de tempo, inclusive dados do banco de dados, índices, procedimentos armazenados e metadados.|  
 |avg_cpu_cores_used|**decimal**|*Observação: Esta coluna é preterida para v11 e seu valor é sempre definido como 0.*<br /><br /> Média de núcleos de CPU usados nesse intervalo.|  
 |avg_physical_read_iops|**decimal**|*Observação: Esta coluna é preterida para v11 e seu valor é sempre definido como 0.*<br /><br /> Média de IOPS lidos nesse intervalo.|  
 |avg_physical_write_iops|**decimal**|*Observação: Esta coluna é preterida para v11 e seu valor é sempre definido como 0.*<br /><br /> Média de IOPS de gravação neste intervalo.|  
 |active_memory_used_kb|**bigint**|*Observação: Esta coluna é preterida para v11 e seu valor é sempre definido como 0.*<br /><br /> Contagem de memória ativa que está sendo usada no final desse intervalo.|  
-|active_session_count|**int**|Contagem de sessões ativas no final desse intervalo.|  
-|active_worker_count|**int**|Contagem de operadores ativos no final desse intervalo.|  
+|active_session_count|**Int**|Contagem de sessões ativas no final desse intervalo.|  
+|active_worker_count|**Int**|Contagem de operadores ativos no final desse intervalo.|  
 |avg_cpu_percent|**decimal**|Utilização média de computação, em porcentagem, do limite da camada de serviço.|  
 |avg_physical_data_read_percent|**decimal**|Utilização média de E/S em percentagem com base no limite da camada de serviço.|  
 |avg_log_write_percent|**decimal**|Utilização média do recurso de gravação, em porcentagem, do limite da camada de serviço.|  
@@ -81,7 +83,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="permissions"></a>Permissões  
  Essa exibição está disponível para todas as funções de usuário com permissões para se conectar ao virtual **mestre** banco de dados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os dados retornados por **sys. resource_stats** é expresso como uma porcentagem do máximo permitido de limites DTU para o nível de desempenho/da camada de serviço que você está executando para bancos de dados Basic, Standard e Premium.  Para as camadas Web e Negócios, esses números indicam as percentagens em termos da camada de desempenho Standard S2.  Por exemplo, ao executar com relação a um banco de dados Web, se avg_cpu_percent retornar 70%, isso indica 70% do limite da camada S2. Além disso, para camadas Web e Negócios, as percentagens podem refletir um número além de 100%, o que também é baseado no limite da camada S2.  
   
  Quando um banco de dados é um membro de um pool Elástico, as estatísticas de recursos apresentadas como valores de porcentagem são expressos como o percentual do limite máximo de DTU de bancos de dados conforme definido na configuração do pool Elástico.  

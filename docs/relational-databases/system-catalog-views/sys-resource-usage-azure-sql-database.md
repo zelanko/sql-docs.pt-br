@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - resource_usage
 - sys.resource_usage
 - resource_usage_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - resource_usage
 - sys.resource_usage
 ms.assetid: b90147a3-fd8e-408e-961d-5c7000e068ad
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48a5b1046abf347c5a1239bbcd07c96da4476d98
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5af941ccad6f0736ba069c50dbff83e513f8e72a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -53,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 |time|**datetime**|A hora (UTC) em incrementos de hora.|  
 |database_name|**nvarchar**|Nome do banco de dados de usuário.|  
 |sku|**nvarchar**|O nome da SKU. O valores possíveis são os seguintes:<br /><br /> Web<br /><br /> Business<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium|  
-|usage_in_seconds|**int**|Soma do tempo de CPU usado na hora.<br /><br /> Observação: Esta coluna foi preterida para V11 e não se aplica à V12. **Valor é sempre definido como 0.**|  
+|usage_in_seconds|**Int**|Soma do tempo de CPU usado na hora.<br /><br /> Observação: Esta coluna foi preterida para V11 e não se aplica à V12. **Valor é sempre definido como 0.**|  
 |storage_in_megabytes|**decimal**|Tamanho máximo de armazenamento para a hora, inclusive dados do banco de dados, índices, procedimentos armazenados e metadados.|  
   
 ## <a name="permissions"></a>Permissões  

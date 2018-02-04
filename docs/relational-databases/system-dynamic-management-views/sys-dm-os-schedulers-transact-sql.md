@@ -1,5 +1,5 @@
 ---
-title: sys.DM os_schedulers (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_schedulers (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_schedulers_TSQL
 - sys.dm_os_schedulers
 - dm_os_schedulers_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_schedulers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_schedulers dynamic management view
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
-caps.latest.revision: "55"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 738494bb7320248fa8616d381b4424fe0b055414
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: aa32726893d196cc4c2830e79703f5583d661793
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,31 +43,31 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|scheduler_address|**varbinary (8)**|Endereço de memória do agendador. Não permite valor nulo.|  
-|parent_node_id|**int**|ID do nó ao qual o agendador pertence, também conhecido como nó pai. Isso representa um nó NUMA (acesso não uniforme à memória). Não permite valor nulo.|  
-|scheduler_id|**int**|ID do agendador. Todos os agendadores que são usados para executar consultas normais têm números de ID menores que 1048576. Os agendadores que tiverem IDs maiores ou iguais a 1048576 serão usados internamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como o agendador da conexão de administrador dedicada. Não permite valor nulo.|  
+|scheduler_address|**varbinary(8)**|Endereço de memória do agendador. Não permite valor nulo.|  
+|parent_node_id|**Int**|ID do nó ao qual o agendador pertence, também conhecido como nó pai. Isso representa um nó NUMA (acesso não uniforme à memória). Não permite valor nulo.|  
+|scheduler_id|**Int**|ID do agendador. Todos os agendadores que são usados para executar consultas normais têm números de ID menores que 1048576. Os agendadores que tiverem IDs maiores ou iguais a 1048576 serão usados internamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como o agendador da conexão de administrador dedicada. Não permite valor nulo.|  
 |cpu_id|**smallint**|A ID da CPU atribuída ao agendador.<br /><br /> Não permite valor nulo.<br /><br /> **Observação:** 255 não indica nenhuma afinidade como no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Consulte [os_threads &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) para obter informações de afinidade adicionais.|  
-|status|**nvarchar (60)**|Indica o status do agendador. Pode ser um dos seguintes valores:<br /><br /> -OCULTO ONLINE<br />-OCULTO OFFLINE<br />-VISÍVEL ONLINE<br />-VISÍVEL OFFLINE<br />-ON-LINE VISÍVEL (DAC)<br />-HOT_ADDED<br /><br /> Não permite valor nulo.<br /><br /> Os agendadores HIDDEN são usados para processar solicitações internas do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Os agendadores VISIBLE são usados para processar solicitações de usuários.<br /><br /> Os agendadores OFFLINE são mapeados para processadores que estão offline na máscara de afinidade e, portanto, não estão sendo usados para processar solicitações. Os agendadores ONLINE são mapeados para processadores que estão online na máscara de afinidade e estão disponíveis para processar threads.<br /><br /> DAC indica que o agendador está sendo executado em uma conexão de administrador dedicada.<br /><br /> HOT ADDED indica que os agendadores foram adicionados em resposta a um evento de CPU de adição a quente.|  
+|status|**nvarchar(60)**|Indica o status do agendador. Pode ser um dos seguintes valores:<br /><br /> -OCULTO ONLINE<br />-OCULTO OFFLINE<br />-VISÍVEL ONLINE<br />-VISÍVEL OFFLINE<br />-ON-LINE VISÍVEL (DAC)<br />-   HOT_ADDED<br /><br /> Não permite valor nulo.<br /><br /> Os agendadores HIDDEN são usados para processar solicitações internas do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Os agendadores VISIBLE são usados para processar solicitações de usuários.<br /><br /> Os agendadores OFFLINE são mapeados para processadores que estão offline na máscara de afinidade e, portanto, não estão sendo usados para processar solicitações. Os agendadores ONLINE são mapeados para processadores que estão online na máscara de afinidade e estão disponíveis para processar threads.<br /><br /> DAC indica que o agendador está sendo executado em uma conexão de administrador dedicada.<br /><br /> HOT ADDED indica que os agendadores foram adicionados em resposta a um evento de CPU de adição a quente.|  
 |is_online|**bit**|Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver configurado para usar somente alguns dos processadores disponíveis no servidor, essa configuração pode indicar que alguns agendadores estão mapeados para processadores que não estão na máscara de afinidade. Se esse for o caso, essa coluna retornará 0. Esse valor indica que o agendador não está sendo usado para processar consultas ou lotes.<br /><br /> Não permite valor nulo.|  
 |is_idle|**bit**|1 = O agendador está ocioso. Nenhum operador está em execução no momento. Não permite valor nulo.|  
-|preemptive_switches_count|**int**|Número de vezes que os operadores deste agendador alternaram para o modo preemptivo.<br /><br /> Para executar código fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, procedimentos armazenados estendidos e consultas distribuídas), um thread deve ser executado fora do controle de um agendador não preventivo. Para fazer isso, um trabalhador muda para o modo preventivo.|  
-|context_switches_count|**int**|Número de alternâncias de contexto ocorridas neste agendador. Não permite valor nulo.<br /><br /> Para permitir que outros trabalhadores sejam executados, o trabalhador em execução no momento precisa abrir mão do controle do agendador ou alternar o contexto.<br /><br /> **Observação:** se um operador produzir o Agendador e coloca-se na fila executável e, em seguida, não encontra outros operadores, o trabalhador selecionará a mesmo. Neste caso, a context_switches_count não será atualizada, mas a yield_count será.|  
-|idle_switches_count|**int**|Número de horas que o agendador espera por um evento enquanto está ocioso. Esta coluna é semelhante à context_switches_count. Não permite valor nulo.|  
-|current_tasks_count|**int**|Número de tarefas associadas a este agendador no momento. Esta contagem inclui o seguinte:<br /><br /> -Tarefas que estão aguardando um trabalhador para executá-los.<br />-Tarefas que estão aguardando ou em execução (no estado SUSPENDED ou RUNNABLE).<br /><br /> Quando uma tarefa é concluída, esta contagem é reduzida. Não permite valor nulo.|  
-|runnable_tasks_count|**int**|Número de operadores, com tarefas atribuídas a eles, que esperam para serem agendados na fila executável. Não permite valor nulo.|  
-|current_workers_count|**int**|Número de operadores associados a este agendador. Essa contagem inclui operadores que não estão atribuídos a nenhuma tarefa. Não permite valor nulo.|  
-|active_workers_count|**int**|Número de operadores ativos. Um operador ativo nunca é preemptivo, deve ter uma tarefa associada e estar em execução, ser executável ou estar suspenso. Não permite valor nulo.|  
+|preemptive_switches_count|**Int**|Número de vezes que os operadores deste agendador alternaram para o modo preemptivo.<br /><br /> Para executar código fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, procedimentos armazenados estendidos e consultas distribuídas), um thread deve ser executado fora do controle de um agendador não preventivo. Para fazer isso, um trabalhador muda para o modo preventivo.|  
+|context_switches_count|**Int**|Número de alternâncias de contexto ocorridas neste agendador. Não permite valor nulo.<br /><br /> Para permitir que outros trabalhadores sejam executados, o trabalhador em execução no momento precisa abrir mão do controle do agendador ou alternar o contexto.<br /><br /> **Observação:** se um operador produzir o Agendador e coloca-se na fila executável e, em seguida, não encontra outros operadores, o trabalhador selecionará a mesmo. Neste caso, a context_switches_count não será atualizada, mas a yield_count será.|  
+|idle_switches_count|**Int**|Número de horas que o agendador espera por um evento enquanto está ocioso. Esta coluna é semelhante à context_switches_count. Não permite valor nulo.|  
+|current_tasks_count|**Int**|Número de tarefas associadas a este agendador no momento. Esta contagem inclui o seguinte:<br /><br /> -Tarefas que estão aguardando um trabalhador para executá-los.<br />-Tarefas que estão aguardando ou em execução (no estado SUSPENDED ou RUNNABLE).<br /><br /> Quando uma tarefa é concluída, esta contagem é reduzida. Não permite valor nulo.|  
+|runnable_tasks_count|**Int**|Número de operadores, com tarefas atribuídas a eles, que esperam para serem agendados na fila executável. Não permite valor nulo.|  
+|current_workers_count|**Int**|Número de operadores associados a este agendador. Essa contagem inclui operadores que não estão atribuídos a nenhuma tarefa. Não permite valor nulo.|  
+|active_workers_count|**Int**|Número de operadores ativos. Um operador ativo nunca é preemptivo, deve ter uma tarefa associada e estar em execução, ser executável ou estar suspenso. Não permite valor nulo.|  
 |work_queue_count|**bigint**|Número de tarefas na fila pendente. Essas tarefas estão aguardando serem selecionadas por um operador. Não permite valor nulo.|  
-|pending_disk_io_count|**int**|Número de E/Ss pendentes que aguardam para serem concluídas. Cada agendador possui uma lista de E/Ss pendentes que são verificadas para determinar se foram concluídas sempre que há uma alternância de contexto. A contagem aumenta quando a solicitação é inserida. Essa contagem diminui quando a solicitação é concluída. O número não indica o estado das E/Ss. Não permite valor nulo.|  
-|load_factor|**int**|Valor interno que indica a carga percebida neste agendador. Esse valor é usado para determinar se uma nova tarefa deve ser colocada neste ou em outro agendador. O valor é útil para fins de depuração, quando parece que os agendadores não são carregados de maneira uniforme. A decisão de roteamento é tomada com base na carga do agendador. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também usa um fator de carga de nós e agendadores para ajudar a determinar o melhor local para a aquisição de recursos. Quando uma tarefa é enfileirada, o fator de carga aumenta. Quando uma tarefa é concluída, o fator de carga diminui. O uso do fator de carga ajuda o SO do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a equilibrar melhor a carga de trabalho. Não permite valor nulo.|  
-|yield_count|**int**|Valor interno que é usado para indicar o progresso neste agendador. Esse valor é usado pelo Scheduler Monitor para determinar se um trabalhador no agendador não está cedendo a outros trabalhadores no momento. O valor não indica que houve transição do operador ou tarefa para um novo operador. Não permite valor nulo.|  
+|pending_disk_io_count|**Int**|Número de E/Ss pendentes que aguardam para serem concluídas. Cada agendador possui uma lista de E/Ss pendentes que são verificadas para determinar se foram concluídas sempre que há uma alternância de contexto. A contagem aumenta quando a solicitação é inserida. Essa contagem diminui quando a solicitação é concluída. O número não indica o estado das E/Ss. Não permite valor nulo.|  
+|load_factor|**Int**|Valor interno que indica a carga percebida neste agendador. Esse valor é usado para determinar se uma nova tarefa deve ser colocada neste ou em outro agendador. O valor é útil para fins de depuração, quando parece que os agendadores não são carregados de maneira uniforme. A decisão de roteamento é tomada com base na carga do agendador. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também usa um fator de carga de nós e agendadores para ajudar a determinar o melhor local para a aquisição de recursos. Quando uma tarefa é enfileirada, o fator de carga aumenta. Quando uma tarefa é concluída, o fator de carga diminui. O uso do fator de carga ajuda o SO do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a equilibrar melhor a carga de trabalho. Não permite valor nulo.|  
+|yield_count|**Int**|Valor interno que é usado para indicar o progresso neste agendador. Esse valor é usado pelo Scheduler Monitor para determinar se um trabalhador no agendador não está cedendo a outros trabalhadores no momento. O valor não indica que houve transição do operador ou tarefa para um novo operador. Não permite valor nulo.|  
 |last_timer_activity|**bigint**|Em tiques de CPU, a última vez que a fila do temporizador do agendador foi verificada pelo agendador. Não permite valor nulo.|  
 |failed_to_create_worker|**bit**|Definido como 1 se não foi possível criar um novo operador neste agendador. Isso geralmente ocorre devido a restrições de memória. Permite valor nulo.|  
-|active_worker_address|**varbinary (8)**|Endereço de memória do operador que está ativo no momento. Permite valor nulo. Para obter mais informações, consulte [sys.DM os_workers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
-|memory_object_address|**varbinary (8)**|Endereço de memória do objeto de memória do agendador. Não é NULLABLE.|  
-|task_memory_object_address|**varbinary (8)**|Endereço de memória do objeto de memória da tarefa. Não permite valor nulo. Para obter mais informações, consulte [sys.DM os_memory_objects &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
+|active_worker_address|**varbinary(8)**|Endereço de memória do operador que está ativo no momento. Permite valor nulo. Para obter mais informações, consulte [sys.DM os_workers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|memory_object_address|**varbinary(8)**|Endereço de memória do objeto de memória do agendador. Não é NULLABLE.|  
+|task_memory_object_address|**varbinary(8)**|Endereço de memória do objeto de memória da tarefa. Não permite valor nulo. Para obter mais informações, consulte [sys.DM os_memory_objects &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Expõe o quantum do agendador usado por SQLOS.|  
-|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|pdw_node_id|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
 ## <a name="permissions"></a>Permissões  
 Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   

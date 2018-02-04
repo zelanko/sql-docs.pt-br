@@ -1,5 +1,5 @@
 ---
-title: sys.DM broker_queue_monitors (Transact-SQL) | Microsoft Docs
+title: sys.dm_broker_queue_monitors (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_broker_queue_monitors_TSQL
 - dm_broker_queue_monitors_TSQL
 - sys.dm_broker_queue_monitors
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_broker_queue_monitors dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_broker_queue_monitors dynamic management view
 ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba34525fb597bd4b65199aa43bcd82c3972ba20b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9bc93ac489094fcf9dfba593acd670bc4babbaa6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmbrokerqueuemonitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,12 +41,12 @@ ms.lasthandoff: 11/17/2017
 
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|Identificador de objeto do banco de dados que contém a fila que o monitor inspeciona. É NULLABLE.|  
-|**queue_id**|**int**|Identificador de objeto da fila que o monitor inspeciona. É NULLABLE.|  
-|**estado**|**nvarchar (32)**|Estado do monitor. É NULLABLE. Ele é um dos seguintes:<br /><br /> **INATIVO**<br /><br /> **NOTIFICADO**<br /><br /> **RECEIVES_OCCURRING**|  
+|**database_id**|**Int**|Identificador de objeto do banco de dados que contém a fila que o monitor inspeciona. É NULLABLE.|  
+|**queue_id**|**Int**|Identificador de objeto da fila que o monitor inspeciona. É NULLABLE.|  
+|**state**|**nvarchar(32)**|Estado do monitor. É NULLABLE. Ele é um dos seguintes:<br /><br /> **INACTIVE**<br /><br /> **NOTIFIED**<br /><br /> **RECEIVES_OCCURRING**|  
 |**last_empty_rowset_time**|**datetime**|Última vez em que um RECEIVE da fila retornou um resultado vazio. É NULLABLE.|  
 |**last_activated_time**|**datetime**|Última vez em que este monitor de fila ativou um procedimento armazenado. É NULLABLE.|  
-|**tasks_waiting**|**int**|Número de sessões que estão aguardando dentro de uma instrução RECEIVE por esta fila no momento. É NULLABLE.<br /><br /> Observação: Esse número inclui qualquer sessão que está executando uma instrução receive, independentemente se o monitor de fila iniciou a sessão. Isso ocorre se você usar WAITFOR junto com RECEIVE. Basicamente, essas tarefas estão esperando que mensagens cheguem à fila.|  
+|**tasks_waiting**|**Int**|Número de sessões que estão aguardando dentro de uma instrução RECEIVE por esta fila no momento. É NULLABLE.<br /><br /> Observação: Esse número inclui qualquer sessão que está executando uma instrução receive, independentemente se o monitor de fila iniciou a sessão. Isso ocorre se você usar WAITFOR junto com RECEIVE. Basicamente, essas tarefas estão esperando que mensagens cheguem à fila.|  
   
 ## <a name="permissions"></a>Permissões  
  , é necessário ter permissão VIEW SERVER STATE no servidor.  
@@ -81,7 +84,7 @@ INNER JOIN sys.databases t5 ON ( t5.database_id = DB_ID() );
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Exibições de gerenciamento dinâmico relacionadas ao Service Broker &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Exibições de gerenciamento dinâmico &#40; relacionadas ao Service Broker Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

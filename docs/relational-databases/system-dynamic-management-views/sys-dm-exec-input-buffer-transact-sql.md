@@ -1,5 +1,5 @@
 ---
-title: sys.DM exec_input_buffer (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_input_buffer (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/13/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,23 @@ f1_keywords:
 - sys.dm_exec_input_buffer _tsql
 - dm_exec_input_buffer
 - dm_exec_input_buffer_tsql
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_input_buffer dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_input_buffer dynamic management function
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 147ac7627ba30a8a249e00cbf03e37887368de09
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 456ae8af5d366f8fb5be006f944f1f704e382488
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexecinputbuffer-transact-sql"></a>sys.DM exec_input_buffer (Transact-SQL)
+# <a name="sysdmexecinputbuffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
   Retorna informações sobre instruções enviadas a uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -59,7 +62,7 @@ Request_id de [exec_requests](../../relational-databases/system-dynamic-manageme
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**event_type**|**nvarchar(256)**|O tipo de evento no buffer de entrada para determinado spid.|  
-|**parâmetros**|**smallint**|Quaisquer parâmetros fornecidos para a instrução.|  
+|**parameters**|**smallint**|Quaisquer parâmetros fornecidos para a instrução.|  
 |**event_info**|**nvarchar(max)**|O texto da instrução no buffer de entrada para determinado spid.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -91,8 +94,8 @@ WHERE es.session_id > 50;
 GO
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Funções e exibições de gerenciamento dinâmico &#40; relacionadas à execução Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.DM exec_sessions &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [exec_requests &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)  

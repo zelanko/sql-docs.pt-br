@@ -3,7 +3,7 @@ title: "Registrar o repositório de disponibilidade geral para o SQL Server no L
 description: "Alterar os repositórios do repositório do SQL Server 2017 de visualização no repositório de disponibilidade geral (GA) no Linux (GA é às vezes chamada de RTM)."
 author: annashres
 ms.author: anshrest
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: f74c74bddf8337bf4555ce4ecdf0b6e2c869e44f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 28c5668598c5464c893c1bf62c19699282ecf7b3
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="change-repositories-from-the-preview-repository-to-the-ga-repository"></a>Repositórios de alteração do repositório de visualização no repositório de GA
 

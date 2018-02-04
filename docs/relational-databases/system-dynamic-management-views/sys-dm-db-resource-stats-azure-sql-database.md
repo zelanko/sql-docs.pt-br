@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_db_resource_stats_TSQL
 - dm_db_resource_stats
 - dm_db_resource_stats_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b1fa8f540e8f16d901eb41138bc7ee153339cb5a
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: 606b871aeac34ac99d239ec4a84757187e00855f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -47,7 +49,7 @@ ms.lasthandoff: 12/14/2017
 |xtp_storage_percent|**decimal (5,2)**|Utilização de armazenamento para OLTP na memória em porcentagem do limite da camada de serviço (no final do intervalo de relatório). Isso inclui a memória usada para o armazenamento dos seguintes objetos OLTP na memória: variáveis de tabela, índices e tabelas com otimização de memória. Ele também inclui a memória usada para processar operações de ALTER TABLE.<br /><br /> Retorna 0 se não for usado o OLTP na memória no banco de dados.|  
 |max_worker_percent|**decimal (5,2)**|Máximo simultâneos trabalhadores (solicitações) em porcentagem do limite da camada de serviço do banco de dados.|  
 |max_session_percent|**decimal (5,2)**|Máximo de sessões simultâneas em porcentagem do limite da camada de serviço do banco de dados.|  
-|dtu_limit|**int**|Banco de dados max DTU configuração atual para este banco de dados durante esse intervalo.|  
+|dtu_limit|**Int**|Banco de dados max DTU configuração atual para este banco de dados durante esse intervalo.|  
   
 > [!TIP]  
 >  Para obter mais contexto sobre esses limites e as camadas de serviço, consulte os tópicos [camadas de serviço](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) e [limites e recursos da camada de serviço](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
@@ -103,7 +105,7 @@ FROM sys.dm_db_resource_stats;
   
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [sys. resource_stats &#40; Banco de dados SQL do Azure &#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [Camadas de serviço](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
  [Limites e recursos de nível de serviço](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  

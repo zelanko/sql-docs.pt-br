@@ -1,5 +1,5 @@
 ---
-title: sys. database_filestream_options (Transact-SQL) | Microsoft Docs
+title: sys.database_filestream_options (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.database_filestream_options_TSQL
 - database_filestream_options_TSQL
 - sys.database_filestream_options
-dev_langs: TSQL
-helpviewer_keywords: sys.database_filestream_options catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.database_filestream_options catalog view
 ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
-caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d7845c92a920a6027ba607cfbfba2ba264d1ba0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e142ba218eb5474bb45f488c87a4c41e0d2390a7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdatabasefilestreamoptions-transact-sql"></a>sys.database_filestream_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +43,10 @@ ms.lasthandoff: 11/17/2017
   
 |Coluna|Tipo|Description|  
 |------------|----------|-----------------|  
-|**database_id**|**int**|A ID do banco de dados. Esse valor é exclusivo na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**database_id**|**Int**|A ID do banco de dados. Esse valor é exclusivo na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**directory_name**|**nvarchar(255)**|O diretório no nível de banco de dados para todos os namespaces de FileTable.|  
 |**non_transacted_access**|**tinyint**|O nível do acesso não transacional a dados de FILESTREAM que estão habilitados. O nível de acesso é definido pela opção NON_TRANSACTED_ACCESS do **criar banco de dados** ou **ALTER DATABASE** instrução.<br /><br /> Essa configuração tem um dos seguintes valores:<br /><br /> 0 – Não habilitado. Este é o valor padrão. Esse nível é definido com o valor **OFF** para o **NON_TRANSACTED_ACCESS** opção.<br /><br /> 1 = Acesso somente leitura. Esse nível é definido com o valor **READ_ONLY** para o **NON_TRANSACTED_ACCESS** opção.<br /><br /> 3 – Acesso completo. Esse nível é definido com o valor **completo** para o **NON_TRANSACTED_ACCESS** opção.<br /><br /> 5 - Em transição para READONLY<br /><br /> 6 – Em transição para OFF|  
-|**non_transacted_access_desc**|**nvarchar (60)**|A descrição do nível de acesso não transacional identificado no non_transacted_access.<br /><br /> Essa configuração tem um dos seguintes valores:<br /><br /> NONE – Esse é o valor padrão.<br /><br /> READ_ONLY<br /><br /> FULL<br /><br /> IN_TRANSITION_TO_READ_ONLY<br /><br /> IN_TRANSITION_TO_OFF|  
+|**non_transacted_access_desc**|**nvarchar(60)**|A descrição do nível de acesso não transacional identificado no non_transacted_access.<br /><br /> Essa configuração tem um dos seguintes valores:<br /><br /> NONE – Esse é o valor padrão.<br /><br /> READ_ONLY<br /><br /> FULL<br /><br /> IN_TRANSITION_TO_READ_ONLY<br /><br /> IN_TRANSITION_TO_OFF|  
   
 ## <a name="see-also"></a>Consulte também  
  [Habilitar os pré-requisitos para FileTable](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  

@@ -1,5 +1,5 @@
 ---
-title: sys.DM db_uncontained_entities (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_uncontained_entities (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_uncontained_entities_TSQL
 - sys.dm_db_uncontained_entities_TSQL
 - dm_db_uncontained_entities
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_uncontained_entities dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_uncontained_entities dynamic management view
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91f36a8a8070e5f5752acf82bec5305fa4adc021
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 21a11895ad0d618f9466572edc213aa0d217d8ef
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,12 +43,12 @@ ms.lasthandoff: 01/02/2018
 ||||  
 |-|-|-|  
 |**Nome da coluna**|**Tipo**|**Descrição**|  
-|*class*|**int**|1 = Objeto ou coluna (inclui módulos, XPs, exibições, sinônimos e tabelas).<br /><br /> 4 = Entidade do Banco de Dados<br /><br /> 5 = Assembly<br /><br /> 6 = Tipo<br /><br /> 7 = Índice (Índice de Texto Completo)<br /><br /> 12 = Gatilho DDL do Banco de Dados<br /><br /> 19 = Rota<br /><br /> 30 = Especificação de Auditoria|  
+|*class*|**Int**|1 = Objeto ou coluna (inclui módulos, XPs, exibições, sinônimos e tabelas).<br /><br /> 4 = Entidade do Banco de Dados<br /><br /> 5 = Assembly<br /><br /> 6 = Tipo<br /><br /> 7 = Índice (Índice de Texto Completo)<br /><br /> 12 = Gatilho DDL do Banco de Dados<br /><br /> 19 = Rota<br /><br /> 30 = Especificação de Auditoria|  
 |*class_desc*|**nvarchar(120)**|Descrição da classe da entidade. Um dos procedimentos a seguir para corresponder à classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
-|*major_id*|**int**|ID da entidade.<br /><br /> Se *classe* = 1, então o object_id<br /><br /> Se *classe* = 4 e, em seguida, principal_id.<br /><br /> Se *classe* = 5 e, em seguida, assembly_id.<br /><br /> Se *classe* = 6 e, em seguida, user_type_id.<br /><br /> Se *classe* = 7, em seguida, index_id.<br /><br /> Se *classe* = 12, em seguida, sys.<br /><br /> Se *classe* = 19, route_id.<br /><br /> Se *classe* = 30 e, em seguida, sys. database_audit_specifications.databse_specification_id.|  
-|*statement_line_number*|**int**|Se a classe for um módulo, retornará o número da linha no qual o uso não contido está localizado.  Caso contrário, o valor será nulo.|  
-|*statement_ offset_begin*|**int**|Se a classe for um módulo, indicará, em bytes, começando com 0, a posição inicial onde uso não contido começa. Caso contrário, o valor de retorno será nulo.|  
-|*statement_ offset_end*|**int**|Se a classe for um módulo, indicará, em bytes, começando com 0, a posição final do uso não contido. Um valor de -1 indica o fim do módulo. Caso contrário, o valor de retorno será nulo.|  
+|*major_id*|**Int**|ID da entidade.<br /><br /> Se *classe* = 1, então o object_id<br /><br /> Se *classe* = 4 e, em seguida, principal_id.<br /><br /> Se *classe* = 5 e, em seguida, assembly_id.<br /><br /> Se *classe* = 6 e, em seguida, user_type_id.<br /><br /> Se *classe* = 7, em seguida, index_id.<br /><br /> Se *classe* = 12, em seguida, sys.<br /><br /> Se *classe* = 19, route_id.<br /><br /> Se *classe* = 30 e, em seguida, sys. database_audit_specifications.databse_specification_id.|  
+|*statement_line_number*|**Int**|Se a classe for um módulo, retornará o número da linha no qual o uso não contido está localizado.  Caso contrário, o valor será nulo.|  
+|*statement_ offset_begin*|**Int**|Se a classe for um módulo, indicará, em bytes, começando com 0, a posição inicial onde uso não contido começa. Caso contrário, o valor de retorno será nulo.|  
+|*statement_ offset_end*|**Int**|Se a classe for um módulo, indicará, em bytes, começando com 0, a posição final do uso não contido. Um valor de -1 indica o fim do módulo. Caso contrário, o valor de retorno será nulo.|  
 |*statement_type*|**nvarchar(512)**|O tipo de instrução.|  
 |*nome de feature_*|**nvarchar(256)**|Retorna o nome externo do objeto.|  
 |*feature_type_name*|**nvarchar(256)**|Retorna o tipo de recurso.|  
@@ -90,7 +93,7 @@ LEFT JOIN sys.objects AS SO
     ON UE.major_id = SO.object_id;  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md)  
   
   

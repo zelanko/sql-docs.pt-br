@@ -1,5 +1,5 @@
 ---
-title: sys.DM fts_index_keywords_by_document (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_index_keywords_by_document (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - dm_fts_index_keywords_by_document_TSQL
 - sys.dm_fts_index_keywords_by_document
 - dm_fts_index_keywords_by_document
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - full-text search [SQL Server], troubleshooting
 - sys.dm_fts_index_keywords_by_document dynamic management function
 - full-text search [SQL Server], viewing keywords
 ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5db2c784b48c6a1c9ef97f11fb0fbb7903bc85e4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e2662effefa1c05c33364923342e0f73829a1df3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsindexkeywordsbydocument-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -59,10 +61,10 @@ sys.dm_fts_index_keywords_by_document
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- db_id ('*database_name*')  
+ db_id('*database_name*')  
  Uma chamada para o [db_id](../../t-sql/functions/db-id-transact-sql.md) função. Essa função aceita um nome de banco de dados e retorna a ID do banco de dados, que sys.dm_fts_index_keywords_by_document usa para localizar o banco de dados especificado. Se *database_name* for omitido, a ID do banco de dados atual será retornada.  
   
- object_id ('*table_name*')  
+ object_id('*table_name*')  
  Uma chamada para o [object_id ()](../../t-sql/functions/object-id-transact-sql.md) função. Essa função aceita um nome de tabela e retorna a ID da tabela que contém o índice de texto completo a ser inspecionado.  
   
 ## <a name="table-returned"></a>Tabela retornada  
@@ -71,11 +73,11 @@ sys.dm_fts_index_keywords_by_document
 |------------|---------------|-----------------|  
 |palavra-chave|**nvarchar(4000)**|A representação hexadecimal da palavra-chave armazenada no índice de texto completo.<br /><br /> Observação: OxFF representa o caractere especial que indica o final de um arquivo ou conjunto de dados.|  
 |display_term|**nvarchar(4000)**|O formato legível da palavra-chave. Esse formato é derivado do formato interno, que é armazenado no índice de texto completo.<br /><br /> Observação: OxFF representa o caractere especial que indica o final de um arquivo ou conjunto de dados.|  
-|column_id|**int**|A ID da coluna a partir da qual a palavra-chave atual foi indexada com texto completo.|  
-|document_id|**int**|A ID do documento ou linha a partir da qual o termo atual foi indexado com texto completo. Essa ID corresponde ao valor da chave de texto completo desse documento ou linha.|  
-|occurrence_count|**int**|Número de ocorrências da palavra-chave atual no documento ou linha que é indicada por **document_id**. Quando '*search_property_name*' for especificado, occurrence_count exibe apenas o número de ocorrências da palavra-chave atual na propriedade de pesquisa especificada dentro do documento ou linha.|  
+|column_id|**Int**|A ID da coluna a partir da qual a palavra-chave atual foi indexada com texto completo.|  
+|document_id|**Int**|A ID do documento ou linha a partir da qual o termo atual foi indexado com texto completo. Essa ID corresponde ao valor da chave de texto completo desse documento ou linha.|  
+|occurrence_count|**Int**|Número de ocorrências da palavra-chave atual no documento ou linha que é indicada por **document_id**. Quando '*search_property_name*' for especificado, occurrence_count exibe apenas o número de ocorrências da palavra-chave atual na propriedade de pesquisa especificada dentro do documento ou linha.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Entre outras coisas, as informações retornadas por sys.dm_fts_index_keywords_by_document são úteis para localizar:  
   
 -   O número total de palavras-chave que um índice de texto completo contém.  
@@ -133,10 +135,10 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [Pesquisa de texto completo e exibições de gerenciamento dinâmico de pesquisa semântica e funções &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
- [Pesquisa de Texto Completo](../../relational-databases/search/full-text-search.md)   
- [sys.DM fts_index_keywords &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
- [sys.DM fts_index_keywords_by_property &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
- [sp_fulltext_keymappings &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
+ [Pesquisa de texto completo](../../relational-databases/search/full-text-search.md)   
+ [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
+ [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
+ [sp_fulltext_keymappings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
  [Melhorar o desempenho de índices de texto completo](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)  
   
   

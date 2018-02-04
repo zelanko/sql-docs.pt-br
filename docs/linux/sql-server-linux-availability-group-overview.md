@@ -3,7 +3,7 @@ title: Sempre em grupos de disponibilidade para o SQL Server no Linux | Microsof
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: 3c708d4e06f32515b96b22099990007d58db20f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d7f9dec114fd17025081c4a139537b11dd4fde45
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Sempre em grupos de disponibilidade no Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este artigo descreve as características dos grupos de disponibilidade AlwaysOn (grupos de disponibilidade) em baseados em Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] instalações. Ele também aborda as diferenças entre o cluster de failover do Windows Server (WSFC) e Linux-com base em grupos de disponibilidade. Consulte o [documentação baseados em Windows](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) para as Noções básicas de grupos de disponibilidade, como eles funcionam da mesma no Windows e Linux, exceto o WSFC.
 

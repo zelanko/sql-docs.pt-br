@@ -3,7 +3,7 @@ title: "Configurar várias sub-redes grupos de disponibilidade AlwaysOn e instâ
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 12/1/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 2af1b8a50d446fee46418302a598de7a37f79bda
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: df5182d374e41b68fe35333c6e4ab59714d8241d
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurar várias sub-redes grupos de disponibilidade AlwaysOn e instâncias de cluster de failover
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Quando uma instância de cluster sempre na disponibilidade de grupo (AG) ou o failover (FCI) ocupar mais de um site, cada site geralmente tem seu próprio sistema de rede. Isso geralmente significa que cada site tem seu próprio endereçamento de IP. Por exemplo, endereços de sites do iniciam com 192.168.1. *x* e endereços do Site B começam com 192.168.2. *x*, onde *x* é a parte do endereço IP que é exclusivo para o servidor. Sem algum tipo de roteamento em vigor na camada de rede, esses servidores não poderão se comunicar entre si. Há duas maneiras para controlar este cenário: configurar uma rede que une duas sub-redes diferentes, conhecidas como uma VLAN, ou configurar o roteamento entre sub-redes.
 

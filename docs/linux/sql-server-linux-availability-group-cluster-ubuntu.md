@@ -3,8 +3,8 @@ title: Configurar o Cluster Ubuntu para o grupo de disponibilidade do SQL Server
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.date: 03/17/2017
+manager: craigg
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,26 +15,26 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: 797cc24d46fc5a51f514508dd35226d07cda74f4
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ac48c6a17ea16ab99774cdeb80cecf726185f68f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurar o Cluster Ubuntu e recursos do grupo de disponibilidade
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este documento explica como criar um cluster de três nós no Ubuntu e adicionar um grupo de disponibilidade criado anteriormente como um recurso do cluster. Para alta disponibilidade, um grupo de disponibilidade no Linux requer três nós - consulte [alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade](sql-server-linux-availability-group-ha.md).
 
 > [!NOTE] 
-> Neste ponto, a integração do SQL Server com Pacemaker no Linux não é como acoplada como com o WSFC no Windows. De dentro do SQL, não há nenhum conhecimento sobre a presença do cluster, orquestração todas as está fora de e o serviço é controlado como uma instância autônoma por Pacemaker. Além disso, o nome de rede virtual é específico para o WSFC, não há nenhum equivalente do mesmo em Pacemaker. Sempre em exibições de gerenciamento dinâmico que consultar informações de cluster retornará linhas vazias. Você ainda pode criar um ouvinte para usá-lo para a reconexão depois do failover transparente, mas você terá que registrar manualmente o nome do ouvinte no servidor DNS com o IP usado para criar o recurso IP virtual (como explicado abaixo).
+> Neste ponto, a integração do SQL Server com Pacemaker no Linux não é como acoplada como com o WSFC no Windows. De dentro do SQL, não há nenhum conhecimento sobre a presença do cluster, orquestração todas as está fora na, e o serviço é controlado como uma instância autônoma por Pacemaker. Além disso, o nome de rede virtual é específico para o WSFC, não há nenhum equivalente do mesmo em Pacemaker. Sempre em exibições de gerenciamento dinâmico que consultar informações de cluster retornará linhas vazias. Você ainda pode criar um ouvinte para usá-lo para a reconexão depois do failover transparente, mas você terá que registrar manualmente o nome do ouvinte no servidor DNS com o IP usado para criar o recurso IP virtual (como explicado abaixo).
 
 As seções a seguir percorrer as etapas para configurar uma solução de cluster de failover. 
 
 ## <a name="roadmap"></a>Roadmap
 
-As etapas para criar um grupo de disponibilidade em servidores Linux para alta disponibilidade são diferentes das etapas em um cluster de failover do Windows Server. A lista a seguir descreve as etapas de alto níveis: 
+As etapas para criar um grupo de disponibilidade em servidores Linux para alta disponibilidade são diferentes das etapas em um cluster de failover do Windows Server. A lista a seguir descreve as etapas de alto nível: 
 
 1. [Configurar o SQL Server em nós de cluster](sql-server-linux-setup.md).
 
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. Crie o cluster. 
 
    >[!WARNING]
-   >Devido a um problema conhecido que o fornecedor do cluster está investigando, iniciando o cluster ('início de cluster de computadores') falhará com erro abaixo. Isso ocorre porque o arquivo de log configurado no /etc/corosync/corosync.conf que é criado quando o comando de instalação de cluster é executado, é incorreto. Para solucionar esse problema, altere o arquivo de log: /var/log/corosync/corosync.log. Como alternativa, você pode criar o arquivo /var/log/cluster/corosync.log.
+   >Devido a um problema conhecido que o fornecedor do cluster está investigando, iniciando o cluster ('início de cluster de computadores') falhará com erro abaixo. Isso ocorre porque o arquivo de log configurado no /etc/corosync/corosync.conf que é criado quando o comando de instalação de cluster é executado, é incorreto. Para contornar esse problema, altere o arquivo de log: /var/log/corosync/corosync.log. Como alternativa, você pode criar o arquivo /var/log/cluster/corosync.log.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
@@ -139,7 +139,7 @@ O comando a seguir cria um cluster de três nós. Antes de executar o script, su
 
 Fornecedores de cluster pacemaker exigem STONITH esteja habilitado e um dispositivo de isolamento configurado para uma configuração de cluster com suporte. Quando o Gerenciador de recursos de cluster não é possível determinar o estado de um nó ou de um recurso em um nó, o isolamento é usado para colocar o cluster para um estado conhecido novamente. Isolamento de nível de recurso principalmente garante que não há nenhuma corrupção de dados em caso de uma interrupção ao configurar um recurso. Você pode usar o isolamento de nível de recurso, por exemplo, o link de comunicação com DRBD (Distributed replicados o dispositivo de bloco) para marcar o disco em um nó como desatualizado quando fica inoperante. Isolamento de nível de nó garante que um nó não seja executado para todos os recursos. Isso é feito redefinindo o nó e a implementação de Pacemaker dele é chamada STONITH (que significa "solucionar o outro nó no cabeçalho"). Pacemaker oferece suporte a uma grande variedade de dispositivos de isolamento, por exemplo, no-break ou gerenciamento de placas de interface para servidores. Para obter mais detalhes, consulte [Pacemaker Clusters do zero](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) e [isolamento e Stonith](http://clusterlabs.org/doc/crm_fencing.html) 
 
-Porque o nível de nó cercamento configuração depende muito de seu ambiente, vamos desabilitar a ele para este tutorial (ele pode ser configurado em um momento posterior). Execute o seguinte script no nó primário: 
+Porque o nível de nó cercamento configuração depende muito de seu ambiente, nós desabilitamos esse tutorial (ele pode ser configurado em um momento posterior). Execute o seguinte script no nó primário: 
 
 ```bash
 sudo pcs property set stonith-enabled=false
@@ -160,7 +160,7 @@ sudo pcs property set start-failure-is-fatal=false
 
 
 >[!WARNING]
->Após um failover automático, quando `start-failure-is-fatal = true` o Gerenciador de recursos de tentar iniciar o recurso. Se falhar na primeira tentativa, você precisa executar manualmente `pcs resource cleanup <resourceName>` para a contagem de falhas do recurso de limpeza e redefinir a configuração.
+>Após um failover automático, quando `start-failure-is-fatal = true` o Gerenciador de recursos de tenta iniciar o recurso. Se falhar na primeira tentativa, você precisa executar manualmente `pcs resource cleanup <resourceName>` para limpar a contagem de falhas de recurso e redefinir a configuração.
 
 ## <a name="install-sql-server-resource-agent-for-integration-with-pacemaker"></a>Instalar o agente de recursos do SQL Server para integração com Pacemaker
 

@@ -8,20 +8,21 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ef44b8f0b3217aca23aee99419053dc8e2af3c0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 85584709967e1ef7988a12389b5b40e30ee47a7d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxedatabasesessions-azure-sql-database"></a>sys.DM xe_database_sessions (banco de dados do SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,10 +35,10 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary (8)**|O endereço da memória da sessão de evento. Não permite valor nulo.|  
-|event_name|**nvarchar (60)**|O nome do evento ao qual uma ação está associada. Não permite valor nulo.|  
+|event_session_address|**varbinary(8)**|O endereço da memória da sessão de evento. Não permite valor nulo.|  
+|event_name|**nvarchar(60)**|O nome do evento ao qual uma ação está associada. Não permite valor nulo.|  
 |event_package_guid|**uniqueidentifier**|A GUID para o pacote que contém o evento. Não permite valor nulo.|  
-|event_predicate|**nvarchar (2048)**|Uma representação XML da árvore de predicado que é aplicada ao evento. Permite valor nulo.|  
+|event_predicate|**nvarchar(2048)**|Uma representação XML da árvore de predicado que é aplicada ao evento. Permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão VIEW DATABASE STATE.  
@@ -47,7 +48,7 @@ A partir de 2015-07-13, xe_objects' é um desses DMVs XEvents que não contêm b
   
 |De|Para|Relação|  
 |--------|------|----------------|  
-|sys.dm_xe_database_session_events.event_session_address|sys.dm_xe_database_sessions.Address|Muitos para um|  
+|sys.dm_xe_database_session_events.event_session_address|sys.dm_xe_database_sessions.address|Muitos para um|  
 |sys.dm_xe_database_session_events.event_package_guid, sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|Muitos para um|  
   
 ## <a name="see-also"></a>Consulte também  

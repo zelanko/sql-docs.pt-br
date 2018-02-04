@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - conversation_priorities
 - sys.conversation_priorities_TSQL
 - sys.conversation_priorities
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - conversations [Service Broker], priorities
 - Service Broker, conversations
 - sys.conversation_priorities catalog view
 ms.assetid: 7cbb9171-3310-4aae-8458-755c882d6462
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73bdd453fd2f32aeb5237a79aa39e11a63b1b8f9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e99a22029fb7454a883ddfc2d06f4648aab7b500
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysconversationpriorities-transact-sql"></a>sys.conversation_priorities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +42,10 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|Priority_id|**int**|Um número que identifica exclusivamente a prioridade de conversa. Não é NULLABLE.|  
+|Priority_id|**Int**|Um número que identifica exclusivamente a prioridade de conversa. Não é NULLABLE.|  
 |name|**sysname**|Nome da prioridade de conversa. Não é NULLABLE.|  
-|service_contract_id|**int**|O identificador do contrato especificado para a prioridade de conversa. Ele pode ser unido à coluna de service_contract_id em sys.service_contracts. É NULLABLE.|  
-|local_service_id|**int**|O identificador do serviço especificado como o serviço local para a prioridade de conversa. Esta coluna pode ser unida à coluna de service_id em sys.services. É NULLABLE.|  
+|service_contract_id|**Int**|O identificador do contrato especificado para a prioridade de conversa. Ele pode ser unido à coluna de service_contract_id em sys.service_contracts. É NULLABLE.|  
+|local_service_id|**Int**|O identificador do serviço especificado como o serviço local para a prioridade de conversa. Esta coluna pode ser unida à coluna de service_id em sys.services. É NULLABLE.|  
 |remote_service_name|**nvarchar(256)**|O nome do serviço especificado como o serviço remoto para a prioridade de conversa. É NULLABLE.|  
 |priority|**tinyint**|O nível de prioridade especificado nesta prioridade de conversa. Não é NULLABLE.|  
   
@@ -70,10 +72,10 @@ ORDER BY priority_name, contract_name,
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [ALTER BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [CREATE BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
- [DROP BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [sys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)   
- [service_contracts &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-service-contracts-transact-sql.md)  
+ [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+ [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
+ [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
+ [sys.services &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)   
+ [sys.service_contracts &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-contracts-transact-sql.md)  
   
   

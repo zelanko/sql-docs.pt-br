@@ -3,7 +3,7 @@ title: Configurar SQL Server sempre no grupo de disponibilidade para alta dispon
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 01/24/2018
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: c510789ccd2c76e2d4e3b7bd8354a46e80e335c2
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+ms.openlocfilehash: b9aeae97abc2f60a9bb6c9c54f5061f68b61a1c9
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurar SQL Server sempre no grupo de disponibilidade para alta disponibilidade no Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este artigo descreve como criar um SQL Server sempre na disponibilidade de grupo (AG) para alta disponibilidade no Linux. Há dois tipos de configuração para grupos de disponibilidade. Um *alta disponibilidade* configuração usa um Gerenciador de cluster para fornecer continuidade de negócios. Essa configuração também pode incluir réplicas de escala de leitura. Este documento explica como criar o grupo de disponibilidade para alta disponibilidade.
 

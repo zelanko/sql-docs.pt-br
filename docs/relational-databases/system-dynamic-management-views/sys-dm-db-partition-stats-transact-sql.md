@@ -1,5 +1,5 @@
 ---
-title: sys.DM db_partition_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_partition_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_partition_stats_TSQL
 - sys.dm_db_partition_stats_TSQL
 - sys.dm_db_partition_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_partition_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_partition_stats dynamic management view
 ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b58fb8b2933e99f2eb77dc03ed7fdfbb132375a6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fd061684962fe1d779b3f35f472b35ca52f45e95
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,9 +44,9 @@ ms.lasthandoff: 11/17/2017
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|ID da partição. É exclusiva em um banco de dados. Este é o mesmo valor que o **partition_id** no **sys. Partitions** exibição do catálogo|  
-|**object_id**|**int**|ID de objeto da tabela ou exibição indexada da qual a partição faz parte.|  
-|**index_id**|**int**|ID do heap ou índice do qual a partição faz parte.<br /><br /> 0 = Heap<br /><br /> 1 = Índice clusterizado.<br /><br /> > 1 = Índice não clusterizado|  
-|**número_da_partição**|**int**|Número de partição com base 1 no índice ou heap.|  
+|**object_id**|**Int**|ID de objeto da tabela ou exibição indexada da qual a partição faz parte.|  
+|**index_id**|**Int**|ID do heap ou índice do qual a partição faz parte.<br /><br /> 0 = Heap<br /><br /> 1 = Índice clusterizado.<br /><br /> > 1 = Índice não clusterizado|  
+|**partition_number**|**Int**|Número de partição com base 1 no índice ou heap.|  
 |**in_row_data_page_count**|**bigint**|Número de páginas em uso para armazenar dados em linha nesta partição. Se a partição fizer parte de um heap, o valor será o número de páginas de dados no heap. Se a partição fizer parte de um índice, o valor será o número de páginas no nível folha. (Páginas não folha na árvore B não são incluídas na contagem.) As páginas IAM não são incluídas em nenhum caso. Sempre 0 para um índice columnstore xVelocity de memória otimizada.|  
 |**in_row_used_page_count**|**bigint**|Número total de páginas em uso para armazenar e gerenciar os dados em linha nesta partição. Essa contagem inclui páginas não folha da árvore B, páginas IAM e todas as páginas incluídas no **in_row_data_page_count** coluna. Sempre 0 para um índice columnstore.|  
 |**in_row_reserved_page_count**|**bigint**|Número total de páginas reservadas para armazenar e gerenciar dados em linha nesta partição, independentemente do fato de as páginas estarem ou não em uso. Sempre 0 para um índice columnstore.|  
@@ -54,10 +57,10 @@ ms.lasthandoff: 11/17/2017
 |**used_page_count**|**bigint**|Número total de páginas usadas para a partição. Computado como **in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**.|  
 |**reserved_page_count**|**bigint**|Número total de páginas reservadas para a partição. Computado como **in_row_reserved_page_count** + **lob_reserved_page_count** + **row_overflow_reserved_page_count**.|  
 |**row_count**|**bigint**|O número aproximado de linhas na partição.|  
-|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
-|**distribution_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> A id numérica exclusiva associada com a distribuição.|  
+|**pdw_node_id**|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|**distribution_id**|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> A id numérica exclusiva associada com a distribuição.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sys.DM db_partition_stats** exibe informações sobre o espaço usado para armazenar e gerenciar dados LOB de dados em linha e dados de estouro de linha para todas as partições em um banco de dados. É exibida uma linha por partição.  
   
  As contagens nas quais a saída tem como base são armazenadas em cache na memória ou armazenadas em disco nas diversas tabelas do sistema.  

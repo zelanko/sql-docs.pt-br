@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_host_info_TSQL
 - dm_os_host_info
 - dm_os_host_info_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_host_info dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_host_info dynamic management view
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63238f4148fd57f05aa0c07bb1fad92a41368c06
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 35c0163abffc8103164cc31d0d730db1a0aebb95
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,12 +42,12 @@ Retorna uma linha que exibe informações de versão do sistema operacional.
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar(256)** |O tipo de sistema operacional: Windows ou Linux |
 |**host_distribution** |**nvarchar(256)** |Descrição do sistema operacional. |
-|**host_release**|**nvarchar(256)**|Versão do sistema operacional [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (número da versão). Para obter uma lista de valores e descrições, consulte [versão do sistema operacional (Windows)](http://msdn.microsoft.com/library/ms724832\(VS.85\).aspx). <br> Para o Linux, retorna uma cadeia de caracteres vazia. |  
+|**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Versão do sistema operacional Windows (número de versão). Para obter uma lista de valores e descrições, consulte [versão do sistema operacional (Windows)](http://msdn.microsoft.com/library/ms724832\(VS.85\).aspx). <br> Para o Linux, retorna uma cadeia de caracteres vazia. |  
 |**host_service_pack_level**|**nvarchar(256)**|Nível de service pack do sistema operacional Windows. <br> Para o Linux, retorna uma cadeia de caracteres vazia. |  
-|**host_sku**|**int**|ID da SKU (Stock Keeping Unit, unidade de manutenção de estoque) do Windows. Para obter uma lista de IDs de SKU e descrições, consulte [função GetProductInfo](http://msdn.microsoft.com/library/ms724358.aspx). Permite valor nulo. <br> Para o Linux, retorna NULL. |  
-|**os_language_version**|**int**|LCID (locale identifier, ID de localidade) do sistema operacional. Para obter uma lista de valores LCID e descrições, consulte [IDs de localidade atribuídas pela Microsoft](http://go.microsoft.com/fwlink/?LinkId=208080). Não pode ser nulo.|  
+|**host_sku**|**Int**|ID da SKU (Stock Keeping Unit, unidade de manutenção de estoque) do Windows. Para obter uma lista de IDs de SKU e descrições, consulte [função GetProductInfo](http://msdn.microsoft.com/library/ms724358.aspx). Permite valor nulo. <br> Para o Linux, retorna NULL. |  
+|**os_language_version**|**Int**|LCID (locale identifier, ID de localidade) do sistema operacional. Para obter uma lista de valores LCID e descrições, consulte [IDs de localidade atribuídas pela Microsoft](http://go.microsoft.com/fwlink/?LinkId=208080). Não pode ser nulo.|  
 
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Essa exibição é semelhante ao [sys.DM os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md), adição de colunas para diferenciar o Windows e Linux.
   
 ## <a name="security"></a>Segurança  
@@ -80,6 +83,6 @@ Aqui está um exemplo conjunto de resultados no Linux:
   
 ## <a name="see-also"></a>Consulte também  
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [sys.DM os_windows_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
+ [sys.dm_os_windows_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
  
 

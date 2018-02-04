@@ -1,5 +1,5 @@
 ---
-title: sys.DM exec_plan_attributes (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_plan_attributes_TSQL
 - dm_exec_plan_attributes
 - sys.dm_exec_plan_attributes
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_plan_attributes dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ae58f948d5219316c59022de477f147cdd4584b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c9a90a964bd8c1fce911e62ac9081b47d349e0a5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,35 +54,35 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|atributo|**varchar (128)**|O nome do atributo associado com este plano. A tabela imediatamente abaixo dessa lista os atributos possíveis, seus tipos de dados e suas descrições.|  
+|atributo|**varchar(128)**|O nome do atributo associado com este plano. A tabela imediatamente abaixo dessa lista os atributos possíveis, seus tipos de dados e suas descrições.|  
 |value|**sql_variant**|Valor do atributo que é associado ao plano.|  
 |is_cache_key|**bit**|Indica se o atributo é usado como parte da chave de consulta de cache para o plano.|  
 
 Na tabela acima, **atributo** pode ter os seguintes valores:
 
-|attribute|Tipo de dados|Description|  
+|Atributo|Tipo de dados|Description|  
 |---------------|---------------|-----------------|  
-|set_options|**int**|Indica os valores de opção com os quais o plano foi compilado.|  
-|objectid|**int**|Uma das chaves principais usadas para pesquisar um objeto no cache. Este é o objeto ID armazenada na [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) para objetos de banco de dados (procedimentos, exibições, gatilhos e assim por diante). Para planos do tipo "Adhoc" ou "Preparado", é um hash interno do texto de lote.|  
-|dbid|**int**|É o identificador do banco de dados que contém a entidade à qual o plano se refere.<br /><br /> Para planos ad hoc ou preparados, é o identificador do banco de dados da partir do qual o lote é executado.|  
-|dbid_execute|**int**|Para objetos de sistema armazenados na **recurso** de banco de dados, a ID de banco de dados do qual o plano armazenado em cache é executado. 0 para todos os outros casos.|  
-|user_id|**int**|Um valor de -2 indica que o lote enviado não depende da resolução de nome implícita e pode ser compartilhado entre usuários diferentes. Este é o método preferencial. Qualquer outro valor representa a identificação do usuário que submete a consulta no banco de dados.| 
+|set_options|**Int**|Indica os valores de opção com os quais o plano foi compilado.|  
+|objectid|**Int**|Uma das chaves principais usadas para pesquisar um objeto no cache. Este é o objeto ID armazenada na [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) para objetos de banco de dados (procedimentos, exibições, gatilhos e assim por diante). Para planos do tipo "Adhoc" ou "Preparado", é um hash interno do texto de lote.|  
+|dbid|**Int**|É o identificador do banco de dados que contém a entidade à qual o plano se refere.<br /><br /> Para planos ad hoc ou preparados, é o identificador do banco de dados da partir do qual o lote é executado.|  
+|dbid_execute|**Int**|Para objetos de sistema armazenados na **recurso** de banco de dados, a ID de banco de dados do qual o plano armazenado em cache é executado. 0 para todos os outros casos.|  
+|user_id|**Int**|Um valor de -2 indica que o lote enviado não depende da resolução de nome implícita e pode ser compartilhado entre usuários diferentes. Este é o método preferencial. Qualquer outro valor representa a identificação do usuário que submete a consulta no banco de dados.| 
 |language_id|**smallint**|A identificação de idioma da conexão que criou o objeto de cache. Para obter mais informações, consulte [sys. syslanguages &#40; Transact-SQL &#41; ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |date_format|**smallint**|O formato de data da conexão que criou o objeto de cache. Para obter mais informações, consulte [SET DATEFORMAT &#40; Transact-SQL &#41; ](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |date_first|**tinyint**|Primeiro valor de data. Para obter mais informações, consulte [SET DATEFIRST &#40; Transact-SQL &#41; ](../../t-sql/statements/set-datefirst-transact-sql.md).|  
-|status|**int**|Bits de status interno que fazem parte da chave de consulta do cache.|  
-|required_cursor_options|**int**|Opções de cursor especificadas pelo usuário, como o tipo de cursor.|  
-|acceptable_cursor_options|**int**|Opções de cursor que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode converter implicitamente para  aceitar a execução da instrução. Por exemplo, o usuário pode especificar um cursor dinâmico, mas o otimizador de consulta pode converter esse tipo de cursor para um cursor estático.|  
-|inuse_exec_context|**int**|Número de lotes em execução que estão usando o plano de consulta.|  
-|free_exec_context|**int**|Número de contextos de execução em cache do plano de consulta que não está sendo utilizado atualmente.|  
-|hits_exec_context|**int**|Número de vezes que o contexto de execução foi obtido do cache de plano e  reutilizado,  economizando a sobrecarga de recompilar a instrução SQL. O valor é uma agregação de todas as execuções de lote até o momento.|  
-|misses_exec_context|**int**|Número de vezes que não foi possível localizar um contexto de execução no cache de plano, resultando na criação de um contexto de execução novo para a execução de lote.|  
-|removed_exec_context|**int**|Número de contextos de execução que foram removidos devido à pressão de memória no plano de cache.|  
-|inuse_cursors|**int**|Número de lotes em execução que contêm um ou mais cursores que estão usando o plano de cache.|  
-|free_cursors|**int**|Número de cursores inativos ou livres no plano de cache.|  
-|hits_cursors|**int**|Número de vezes que um cursor inativo foi obtido do plano de cache e reutilizado. O valor é uma agregação de todas as execuções de lote até o momento.|  
-|misses_cursors|**int**|Número de vezes que não foi possível localizar um cursor inativo no cache.|  
-|removed_cursors|**int**|Número de cursores de que foram removidos devido à pressão de memória no plano de cache.|  
+|status|**Int**|Bits de status interno que fazem parte da chave de consulta do cache.|  
+|required_cursor_options|**Int**|Opções de cursor especificadas pelo usuário, como o tipo de cursor.|  
+|acceptable_cursor_options|**Int**|Opções de cursor que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode converter implicitamente para  aceitar a execução da instrução. Por exemplo, o usuário pode especificar um cursor dinâmico, mas o otimizador de consulta pode converter esse tipo de cursor para um cursor estático.|  
+|inuse_exec_context|**Int**|Número de lotes em execução que estão usando o plano de consulta.|  
+|free_exec_context|**Int**|Número de contextos de execução em cache do plano de consulta que não está sendo utilizado atualmente.|  
+|hits_exec_context|**Int**|Número de vezes que o contexto de execução foi obtido do cache de plano e  reutilizado,  economizando a sobrecarga de recompilar a instrução SQL. O valor é uma agregação de todas as execuções de lote até o momento.|  
+|misses_exec_context|**Int**|Número de vezes que não foi possível localizar um contexto de execução no cache de plano, resultando na criação de um contexto de execução novo para a execução de lote.|  
+|removed_exec_context|**Int**|Número de contextos de execução que foram removidos devido à pressão de memória no plano de cache.|  
+|inuse_cursors|**Int**|Número de lotes em execução que contêm um ou mais cursores que estão usando o plano de cache.|  
+|free_cursors|**Int**|Número de cursores inativos ou livres no plano de cache.|  
+|hits_cursors|**Int**|Número de vezes que um cursor inativo foi obtido do plano de cache e reutilizado. O valor é uma agregação de todas as execuções de lote até o momento.|  
+|misses_cursors|**Int**|Número de vezes que não foi possível localizar um cursor inativo no cache.|  
+|removed_cursors|**Int**|Número de cursores de que foram removidos devido à pressão de memória no plano de cache.|  
 |sql_handle|**varbinary**(64)|O identificador SQL do lote.|  
 |merge_action_type|**smallint**|O tipo de plano de execução de gatilho usado como o resultado de uma instrução MERGE.<br /><br /> 0 indica plano de não gatilho, um plano de gatilho não executado como o resultado de uma instrução MERGE ou um plano de gatilho executado como o resultado de uma instrução MERGE que só especifica uma ação DELETE.<br /><br /> 1 indica um plano de gatilho INSERT que executa como o resultado de uma instrução MERGE.<br /><br /> 2 indica um plano de gatilho UPDATE que executa como o resultado de uma instrução MERGE.<br /><br /> 3 indica um plano de gatilho DELETE que executa como o resultado de uma instrução MERGE  que contém uma ação INSERT ou UPDATE correspondente.<br /><br /> Para gatilhos aninhados executados por cascateamento de ações, este valor é a ação da instrução MERGE que causou a cascata.|  
   
@@ -96,7 +99,7 @@ Na tabela acima, **atributo** pode ter os seguintes valores:
 ### <a name="evaluating-set-options"></a>Avaliando opções de configuração  
  Para converter o valor retornado em **set_options** para as opções com a qual o plano foi compilado, subtraia os valores do **set_options** valor, começando com o maior valor possível, até que você chegar a 0. Cada valor subtraído corresponde a uma opção que foi usada no plano de consulta. Por exemplo, se o valor em **set_options** for 251, as opções que o plano foi compilado com são ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS(32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), Plan(2) paralela e ANSI_PADDING (1).  
   
-|Opção|Valor|  
+|Opção|Value|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |Plano paralelo|2|  
@@ -116,7 +119,7 @@ Na tabela acima, **atributo** pode ter os seguintes valores:
 |DATEFORMAT|32768|  
 |LanguageID|65536|  
 |UPON<br /><br /> Indica que a opção de banco de dados PARAMETERIZATION foi definida como FORCED quando o plano foi compilado.|131072|  
-|ROWCOUNT|**Aplica-se a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
+|ROWCOUNT|**Aplica-se a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
 ## <a name="cursors"></a>Cursores  
  Cursores inativos são colocados em cache em um plano compilado de forma que a memória usada para armazenar o cursor pode ser usada de novo por usuários simultâneos de cursores. Por exemplo, suponha que um lote declara e usa um cursor sem desalocá-lo. Se houver dois usuários executando o mesmo lote, haverá dois cursores ativos. Quando os cursores são desalocados (potencialmente em lotes diferentes), a memória usada para armazenar o cursor é gravada em cache e não é liberada. Esta lista de cursores inativos é mantida no plano compilado. Na próxima vez que um usuário executar o lote, a memória de cursor em cache será usada novamente e inicializada adequadamente como um cursor ativo.  
@@ -124,9 +127,9 @@ Na tabela acima, **atributo** pode ter os seguintes valores:
 ### <a name="evaluating-cursor-options"></a>Avaliando opções de cursor  
  Para converter o valor retornado em **required_cursor_options** e **acceptable_cursor_options** para as opções com a qual o plano foi compilado, subtraia os valores do valor da coluna, começando com o maior valor possível até chegar a 0. Cada valor subtraído corresponde a uma opção cursor que foi usada no plano de consulta.  
   
-|Opção|Valor|  
+|Opção|Value|  
 |------------|-----------|  
-|Nenhum|0|  
+|Nenhuma|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  
@@ -171,12 +174,12 @@ PIVOT (MAX(ecpa.value) FOR ecpa.attribute IN ("set_options", "sql_handle")) AS p
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funções e exibições de gerenciamento dinâmico &#40; relacionadas à execução Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [exec_cached_plans &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys. Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   
 

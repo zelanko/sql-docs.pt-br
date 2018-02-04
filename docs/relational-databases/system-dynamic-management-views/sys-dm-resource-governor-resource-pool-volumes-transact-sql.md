@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_resource_governor_resource_pool_volumes_TSQL
 - dm_resource_governor_resource_pool_volumes
 - sys.dm_resource_governor_resource_pool_volumes
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dm_resource_governor_resource_pool_volumes
 - sys.dm_resource_governor_resource_pool_volumes
 ms.assetid: fa692e56-c561-4533-97c5-bc12c600553f
-caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48468c3ff9f06966161462dafdd7eb9e0a36d416
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a60bd54400d9e9d82c3abbde9d828c1877b0753b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmresourcegovernorresourcepoolvolumes-transact-sql"></a>sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -40,23 +42,23 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|pool_id|**int**|ID do pool de recursos. Não permite valor nulo.|  
+|pool_id|**Int**|ID do pool de recursos. Não permite valor nulo.|  
 |volume_name|**sysname**|O nome do volume de disco. Não permite valor nulo.|  
-|read_io_queued_total|**int**|O total / s lidas enfileiradas desde que o administrador de recursos é redefinido. Não permite valor nulo.|  
-|read_io_issued_total|**int**|O total de E/S lidas emitidas desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo.|  
-|read_ios_completed_total|**int**|O total de E/S lidas concluídas desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo.|  
-|read_ios_throttled_total|**int**|O total de E/S lidas limitadas desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo.|  
+|read_io_queued_total|**Int**|O total / s lidas enfileiradas desde que o administrador de recursos é redefinido. Não permite valor nulo.|  
+|read_io_issued_total|**Int**|O total de E/S lidas emitidas desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo.|  
+|read_ios_completed_total|**Int**|O total de E/S lidas concluídas desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo.|  
+|read_ios_throttled_total|**Int**|O total de E/S lidas limitadas desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo.|  
 |read_bytes_total|**bigint**|O número total de bytes lidos desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo.|  
 |read_io_stall_total_ms|**bigint**|Tempo total (em milissegundos) entre a chegada de E/S de leitura e a conclusão. Não permite valor nulo.|  
 |read_io_stall_queued_ms|**bigint**|Tempo total (em milissegundos) entre a chegada de E/S de leitura e a emissão. Este é o atraso introduzido pela administração do recurso de E/S. Não permite valor nulo.|  
-|write_io_queued_total|**int**|O total de E/Ss de gravação enfileiradas desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo.|  
-|write_io_issued_total|**int**|O total de E/Ss de gravação emitidas desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo.|  
-|write_io_completed_total|**int**|O total de E/Ss de gravação concluídas desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo|  
-|write_io_throttled_total|**int**|O total de E/Ss de gravação limitadas desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo|  
+|write_io_queued_total|**Int**|O total de E/Ss de gravação enfileiradas desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo.|  
+|write_io_issued_total|**Int**|O total de E/Ss de gravação emitidas desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo.|  
+|write_io_completed_total|**Int**|O total de E/Ss de gravação concluídas desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo|  
+|write_io_throttled_total|**Int**|O total de E/Ss de gravação limitadas desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo|  
 |write_bytes_total|**bigint**|O número total de bytes gravados desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo.|  
 |write_io_stall_total_ms|**bigint**|Tempo total (em milissegundos) entre o problema de E/S de gravação e a conclusão. Não permite valor nulo.|  
 |write_io_stall_queued_ms|**bigint**|Tempo total (em milissegundos) entre a chegada de E/S de gravação e a emissão. Este é o atraso introduzido pela administração do recurso de E/S. Não permite valor nulo.|  
-|io_issue_violations_total|**int**|Total de violações de problemas de E/S. Ou seja, o número de vezes em que a taxa de problema de E/S era inferior à taxa reservada. Não permite valor nulo.|  
+|io_issue_violations_total|**Int**|Total de violações de problemas de E/S. Ou seja, o número de vezes em que a taxa de problema de E/S era inferior à taxa reservada. Não permite valor nulo.|  
 |io_issue_delay_total_ms|**bigint**|Tempo total (em milissegundos) entre o problema agendado e o problema real de E/S. Não permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -64,8 +66,8 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [sys.DM resource_governor_workload_groups &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [resource_governor_resource_pools &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
+ [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
+ [sys.resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

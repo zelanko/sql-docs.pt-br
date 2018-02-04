@@ -1,5 +1,5 @@
 ---
-title: cdc_log_scan_sessions (Transact-SQL) | Microsoft Docs
+title: sys.dm_cdc_log_scan_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_cdc_log_scan_sessions_TSQL
 - sys.dm_cdc_log_scan_sessions_TSQL
 - sys.dm_cdc_log_scan_sessions
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - change data capture [SQL Server], log scan reporting
 - sys.dm_cdc_log_scan_sessions dynamic management view
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
-caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6db4f34391cf36757ed086b24ddfe3618ebbe529
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f7d81782bac9590aac7fb1905304aec53f531db1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="change-data-capture---sysdmcdclogscansessions"></a>Change Data Capture - cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,12 +41,12 @@ ms.lasthandoff: 11/17/2017
    
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|ID da sessão.<br /><br /> 0 = os dados retornados nesta linha são uma agregação de todas as sessões como a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que foi iniciada por último.|  
+|**session_id**|**Int**|ID da sessão.<br /><br /> 0 = os dados retornados nesta linha são uma agregação de todas as sessões como a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que foi iniciada por último.|  
 |**start_time**|**datetime**|A hora em que a sessão foi iniciada.<br /><br /> Quando **session_id** = 0, a hora de início da coleta de dados agregados.|  
 |**end_time**|**datetime**|A hora em que a sessão foi encerrada.<br /><br /> NULL = a sessão está ativa.<br /><br /> Quando **session_id** = 0, a hora a última sessão foi encerrada.|  
 |**duration**|**bigint**|A duração da sessão em segundos.<br /><br /> 0 = a sessão não contém transações do Change Data Capture.<br /><br /> Quando **session_id** = 0, a soma da duração (em segundos) de todas as sessões com transações do change data capture.|  
-|**scan_phase**|**nvarchar (200)**|A fase atual da sessão. Estes são os valores possíveis e suas descrições:<br /><br /> 1: configuração de leitura<br />2: verificação primeiro, a criação de tabela de hash<br />3: verificar segundo<br />4: verificação de segundo<br />5: verificar segundo<br />6: controle de versão de esquema<br />7: da última verificação<br />8: concluído<br /><br /> Quando **session_id** = 0, esse valor é sempre "Aggregate".|  
-|**error_count**|**int**|Número de erros encontrados.<br /><br /> Quando **session_id** = 0, o número total de erros em todas as sessões.|  
+|**scan_phase**|**nvarchar(200)**|A fase atual da sessão. Estes são os valores possíveis e suas descrições:<br /><br /> 1: configuração de leitura<br />2: verificação primeiro, a criação de tabela de hash<br />3: verificar segundo<br />4: verificação de segundo<br />5: verificar segundo<br />6: controle de versão de esquema<br />7: da última verificação<br />8: concluído<br /><br /> Quando **session_id** = 0, esse valor é sempre "Aggregate".|  
+|**error_count**|**Int**|Número de erros encontrados.<br /><br /> Quando **session_id** = 0, o número total de erros em todas as sessões.|  
 |**start_lsn**|**nvarchar(23)**|Iniciando LSN para a sessão.<br /><br /> Quando **session_id** = 0, o LSN inicial para a última sessão.|  
 |**current_lsn**|**nvarchar(23)**|LSN atual sendo verificado.<br /><br /> Quando **session_id** = 0, o LSN atual é 0.|  
 |**end_lsn**|**nvarchar(23)**|Encerrando LSN para a sessão.<br /><br /> NULL = a sessão está ativa.<br /><br /> Quando **session_id** = 0, o LSN final da última sessão.|  
@@ -52,16 +54,16 @@ ms.lasthandoff: 11/17/2017
 |**last_commit_lsn**|**nvarchar(23)**|LSN do último registro de log de confirmação processado.<br /><br /> Quando **session_id** = 0, o último registro de log de confirmação LSN para qualquer sessão.|  
 |**last_commit_time**|**datetime**|Hora em que o último registro de log de confirmação foi processado.<br /><br /> Quando **session_id** = 0, a hora em que a confirmação do último registro de log para qualquer sessão.|  
 |**log_record_count**|**bigint**|Número de registros de log verificados.<br /><br /> Quando **session_id** = 0, o número de registros verificados para todas as sessões.|  
-|**schema_change_count**|**int**|Número de operações de linguagem de definição de dados (DDL) detectados. Este contador é populado na fase 6.<br /><br /> Quando **session_id** = 0, o número de operações DDL processadas em todas as sessões.|  
+|**schema_change_count**|**Int**|Número de operações de linguagem de definição de dados (DDL) detectados. Este contador é populado na fase 6.<br /><br /> Quando **session_id** = 0, o número de operações DDL processadas em todas as sessões.|  
 |**command_count**|**bigint**|Número de comandos processados.<br /><br /> Quando **session_id** = 0, o número de comandos processados em todas as sessões.|  
 |**first_begin_cdc_lsn**|**nvarchar(23)**|Primeiro LSN que contém transações do Change Data Capture.<br /><br /> Quando **session_id** = 0, o primeiro LSN que contém transações do change data capture.|  
 |**last_commit_cdc_lsn**|**nvarchar(23)**|LSN do último registro de log de confirmação que contém transações do Change Data Capture.<br /><br /> Quando **session_id** = 0, o último registro de log de confirmação LSN para qualquer sessão que continha transações do change data capture|  
 |**last_commit_cdc_time**|**datetime**|Horário em que o último registro de log de confirmação foi processado que contém transações do Change Data Capture.<br /><br /> Quando **session_id** = 0, a hora em que o último log de confirmação registro para qualquer sessão que continha transações do change data capture.|  
-|**latência**|**int**|A diferença, em segundos, entre **end_time** e **last_commit_cdc_time** na sessão. Este contador é populado no final da fase 7.<br /><br /> Quando **session_id** = 0, o último valor de latência diferente de zero registrado por uma sessão.|  
-|**empty_scan_count**|**int**|Número de sessões sucessivas que não contém nenhuma transação do Change Data Capture.|  
-|**failed_sessions_count**|**int**|Número de sessões que falharam.|  
+|**latency**|**Int**|A diferença, em segundos, entre **end_time** e **last_commit_cdc_time** na sessão. Este contador é populado no final da fase 7.<br /><br /> Quando **session_id** = 0, o último valor de latência diferente de zero registrado por uma sessão.|  
+|**empty_scan_count**|**Int**|Número de sessões sucessivas que não contém nenhuma transação do Change Data Capture.|  
+|**failed_sessions_count**|**Int**|Número de sessões que falharam.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os valores nesta exibição de gerenciamento dinâmico são redefinidos sempre que a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciada.  
   
 ## <a name="permissions"></a>Permissões  
@@ -84,7 +86,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sys.DM cdc_errors &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
+ [sys.dm_cdc_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
   
   
 

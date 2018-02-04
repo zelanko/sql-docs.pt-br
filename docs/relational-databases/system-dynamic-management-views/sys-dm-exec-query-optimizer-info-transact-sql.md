@@ -1,5 +1,5 @@
 ---
-title: sys.DM exec_query_optimizer_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_optimizer_info (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_query_optimizer_info
 - sys.dm_exec_query_optimizer_info_TSQL
 - sys.dm_exec_query_optimizer_info
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_optimizer_info dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_optimizer_info dynamic management view
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d954f21d2cfe9a99701f81a9439c9b4a82bd30a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c7b87cc0b34d33abd8f658a7ff20852200b93a2c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,20 +43,20 @@ ms.lasthandoff: 11/17/2017
   
 |Nome|Tipo de dados|Description|  
 |----------|---------------|-----------------|  
-|**contador**|**nvarchar(4000)**|Nome do evento de estatísticas do otimizador.|  
+|**counter**|**nvarchar(4000)**|Nome do evento de estatísticas do otimizador.|  
 |**ocorrência**|**bigint**|Número de ocorrências do evento de otimização para este contador.|  
-|**valor**|**float**|Valor de propriedade médio por ocorrência de evento.|  
-|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|**value**|**float**|Valor de propriedade médio por ocorrência de evento.|  
+|**pdw_node_id**|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
 ## <a name="permissions"></a>Permissões  
  Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer a permissão VIEW SERVER STATE no servidor.  
   
  Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] camadas Premium requer a permissão VIEW DATABASE STATE no banco de dados. Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] camadas Standard e Basic requer o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] conta de administrador.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sys.DM exec_query_optimizer_info** contém as seguintes propriedades (contadores). Todos os valores de ocorrência são cumulativos, e são definidos em 0 na reinicialização de sistema. Todos os valores dos campos de valores são definidos em NULL, na reinicialização de sistema. Todos os valores da coluna de valor especificam um uso médio do valor de ocorrência da mesma linha como o denominador no cálculo da média. Todas as otimizações de consulta são avaliados quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determina mudanças em **dm_exec_query_optimizer_info**, incluindo as duas consultas geradas pelo usuário e ao sistema. Execução de um plano já armazenado em cache não altera valores em **dm_exec_query_optimizer_info**, só otimizações são significantes.  
   
-|Contador|Ocorrência|Valor|  
+|Contador|Ocorrência|Value|  
 |-------------|----------------|-----------|  
 |otimizações|Número total de otimizações.|Não aplicável|  
 |tempo decorrido|Número total de otimizações.|Tempo médio decorrido por otimização de uma instrução individual (consulta), em segundos.|  

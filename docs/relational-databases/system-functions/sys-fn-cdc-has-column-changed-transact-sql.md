@@ -1,5 +1,5 @@
 ---
-title: fn_cdc_has_column_changed (Transact-SQL) | Microsoft Docs
+title: sys.fn_cdc_has_column_changed (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,33 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server (starting with 2008)
+applies_to:
+- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_has_column_changed_TSQL
 - sys.fn_cdc_has_column_changed
 - fn_cdc_has_column_changed_TSQL
 - fn_cdc_has_column_changed
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.fn_cdc_has_column_changed
 - fn_cdc_has_column_changed
 ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb905bd7dfeb15f65887009e56ee065a356ff3ad
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b2c8918fe44c6534de5829556754a837752b8cfb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfncdchascolumnchanged-transact-sql"></a>sys.fn_cdc_has_column_changed (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +63,7 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
 ## <a name="return-type"></a>Tipo de retorno  
  **bit**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você pode usar esta função para extrair informações de uma máscara de atualização retornada em uma consulta para obter dados de alteração. A máscara de atualização é muito útil na pós-execução, quando é preciso saber se uma coluna particular na linha de alteração associada foi modificada. Para obter mais informações, veja [Sobre a captura de dados de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md).  
   
  Quando essas informações serão retornadas como parte de uma consulta de dados de alteração, é recomendável que você use as funções [fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) e [sys. fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) em vez dessa função. Use a função fn_cdc_get_column_ordinal antes de consultar os dados de alteração, de forma que a ordinal da coluna desejada seja computada somente uma vez. Use fn_cdc_is_bit_set dentro da consulta para extrair as informações da máscara de atualização de cada linha retornada.  
@@ -69,7 +72,7 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
  Requer associação na função de servidor fixa sysadmin ou na função de banco de dados fixa db_owner. Para todos os outros usuários, requer a permissão SELECT em todas as colunas capturadas na tabela de origem e, se uma função associada para a instância de captura tiver sido definida, faça associação nessa função de banco de dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [CDC. &#60; capture_instance &#62; CT &#40; Transact-SQL &#41;](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)   
- [captured_columns &#40; Transact-SQL &#41;](../../relational-databases/system-tables/cdc-captured-columns-transact-sql.md)  
+ [cdc.&#60;capture_instance&#62;_CT &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)   
+ [cdc.captured_columns &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-captured-columns-transact-sql.md)  
   
   

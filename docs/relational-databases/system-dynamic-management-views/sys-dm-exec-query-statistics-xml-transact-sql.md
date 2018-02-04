@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,18 +17,19 @@ f1_keywords:
 - sys.dm_exec_query_statistics_xml_TSQL
 - dm_exec_query_statistics_xml_TSQL
 - dm_exec_query_statistics_xml
-helpviewer_keywords: sys.dm_exec_query_statistics_xml management view
+helpviewer_keywords:
+- sys.dm_exec_query_statistics_xml management view
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea8fbfa2707da63b0b936539281ec578de02285c
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c2e4547a6c0d79f56fa0f732236e16dbde409a45
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +56,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|ID da sessão. Não permite valor nulo.|
-|request_id|**int**|ID da solicitação. Não permite valor nulo.|
+|request_id|**Int**|ID da solicitação. Não permite valor nulo.|
 |sql_handle|**varbinary(64)**|Mapa de hash do texto SQL da solicitação. Anulável.|
 |plan_handle|**varbinary(64)**|Mapa de hash do plano de consulta. Anulável.|
 |query_plan|**xml**|Showplan XML estatísticas parcial. Anulável.|
@@ -110,7 +112,7 @@ CROSS APPLY sys.dm_exec_query_statistics_xml(session_id);
 GO  
 ```   
   
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
   [Sinalizadores de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Exibições de gerenciamento dinâmico relacionadas ao &#40; do banco de dados Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: sys.DM exec_query_profiles (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_profiles (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_query_profiles_TSQL
 - dm_exec_query_profiles
 - sys.dm_exec_query_profiles
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_profiles dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_profiles dynamic management view
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13b3c49133a4e1c26ab879fb0e51e9832de62e97
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c9a7656b78478c321e277ae16577f9bce178aeca
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -41,13 +44,13 @@ ms.lasthandoff: 11/17/2017
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifica a sessão na qual esta consulta é executada. Referencia dm_exec_sessions.session_id.|  
-|request_id|**int**|Identifica a solicitação de destino. Referencia dm_exec_sessions.request_id.|  
+|request_id|**Int**|Identifica a solicitação de destino. Referencia dm_exec_sessions.request_id.|  
 |sql_handle|**varbinary(64)**|Identifica a consulta de destino. Referencia dm_exec_query_stats.sql_handle.|  
 |plan_handle|**varbinary(64)**|Identificar a consulta de destino. Referencia dm_exec_query_stats.plan_handle.|  
 |physical_operator_name|**nvarchar(256)**|Nome do operador físico.|  
-|node_id|**int**|Identifica um nó do operador na árvore de consulta.|  
-|thread_id|**int**|Distingue os threads (para uma consulta paralela) que pertencem ao mesmo nó do operador de consulta.|  
-|task_address|**varbinary (8)**|Identifica a tarefa do sistema operacional SQL que esse thread está usando. Referencia dm_os_tasks.task_address.|  
+|node_id|**Int**|Identifica um nó do operador na árvore de consulta.|  
+|thread_id|**Int**|Distingue os threads (para uma consulta paralela) que pertencem ao mesmo nó do operador de consulta.|  
+|task_address|**varbinary(8)**|Identifica a tarefa do sistema operacional SQL que esse thread está usando. Referencia dm_os_tasks.task_address.|  
 |row_count|**bigint**|Número de linhas retornadas pelo operador até o momento.|  
 |rewind_count|**bigint**|Número de retrocessos até o momento.|  
 |rebind_count|**bigint**|Número de reassociações até o momento.|  
@@ -62,8 +65,8 @@ ms.lasthandoff: 11/17/2017
 |elapsed_time_ms|**bigint**|Tempo total decorrido (em milissegundos) usado por operações do nó de destino até o momento.|  
 |cpu_time_ms|**bigint**|Tempo total de CPU (em milissegundos) usado por operações do nó de destino até o momento.|  
 |database_id|**smallint**|ID do banco de dados que contém o objeto no qual as leituras e gravações estão sendo realizadas.|  
-|object_id|**int**|O identificador do objeto no qual as leituras e gravações estão sendo realizadas. Referências sys.objects.object_id.|  
-|index_id|**int**|O índice (se houver) no qual o conjunto de linhas é aberto.|  
+|object_id|**Int**|O identificador do objeto no qual as leituras e gravações estão sendo realizadas. Referências sys.objects.object_id.|  
+|index_id|**Int**|O índice (se houver) no qual o conjunto de linhas é aberto.|  
 |scan_count|**bigint**|Número de verificações de tabela/índice até o momento.|  
 |logical_read_count|**bigint**|Número de leituras lógicas até o momento.|  
 |physical_read_count|**bigint**|Número de leituras físicas até o momento.|  
@@ -72,8 +75,8 @@ ms.lasthandoff: 11/17/2017
 |lob_logical_read_count|**bigint**|Número de leituras lógicas LOB até o momento.|  
 |lob_physical_read_count|**bigint**|Número de leituras físicas LOB até o momento.|  
 |lob_read_ahead_count|**bigint**|Número de read-aheads LOB até o momento.|  
-|segment_read_count|**int**|Número de read-aheads de segmento até o momento.|  
-|segment_skip_count|**int**|Número de segmentos ignorados até o momento.| 
+|segment_read_count|**Int**|Número de read-aheads de segmento até o momento.|  
+|segment_skip_count|**Int**|Número de segmentos ignorados até o momento.| 
 |actual_read_row_count|**bigint**|Número de linhas lidas por um operador antes da aplicação de predicado residual.| 
 |estimated_read_row_count|**bigint**|**Aplica-se a:** começando com [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Número de linhas estimado para ser lido por um operador antes da aplicação de predicado residual.|  
   

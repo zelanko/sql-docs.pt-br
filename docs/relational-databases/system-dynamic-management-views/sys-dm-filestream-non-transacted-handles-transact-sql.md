@@ -1,5 +1,5 @@
 ---
-title: sys.DM filestream_non_transacted_handles (Transact-SQL) | Microsoft Docs
+title: sys.dm_filestream_non_transacted_handles (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_filestream_non_transacted_handles
 - dm_filestream_non_transacted_handles_TSQL
 - sys.dm_filestream_non_transacted_handles
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_filestream_non_transacted_handles dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_filestream_non_transacted_handles dynamic management view
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
-caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f366cde5a82aa7fc7c198f13bb5fb0ff6d2a8309
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bb4ba44df1372fbad89ac21e24d1e27233a99b27
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmfilestreamnontransactedhandles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,16 +42,16 @@ ms.lasthandoff: 11/17/2017
   
  Para obter mais informações, consulte [Gerenciar FileTables](../../relational-databases/blob/manage-filetables.md).  
   
-|**Coluna**|**Tipo**|**Description**|  
+|**Coluna**|**Tipo**|**Descrição**|  
 |----------------|--------------|---------------------|  
 |database_id|int|ID do banco de dados associado ao identificador.|  
 |object_id|int|ID do objeto da FileTable à qual o identificador está associado.|  
 |handle_id|int|Identificador de contexto de identificador exclusivo. Usado pelo [sp_kill_filestream_non_transacted_handles &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) procedimento armazenado para eliminar um identificador específico.|  
 |file_object_type|int|O tipo do identificador. Indica o nível da hierarquia na qual o identificador foi aberto, ou seja, o banco de dados ou o item.|  
 |file_object_type_desc|nvarchar(120)|“UNDEFINED",<br />“SERVER_ROOT",<br />“DATABASE_ROOT",<br />“TABLE_ROOT",<br />“TABLE_ITEM"|  
-|correlation_process_id|varbinary (8)|Contém um identificador exclusivo para o processo que originou a solicitação.|  
-|correlation_thread_id|varbinary (8)|Contém um identificador exclusivo para o thread que originou a solicitação.|  
-|file_context|varbinary (8)|Ponteiro para o objeto de arquivo usado por este identificador.|  
+|correlation_process_id|varbinary(8)|Contém um identificador exclusivo para o processo que originou a solicitação.|  
+|correlation_thread_id|varbinary(8)|Contém um identificador exclusivo para o thread que originou a solicitação.|  
+|file_context|varbinary(8)|Ponteiro para o objeto de arquivo usado por este identificador.|  
 |state|int|O estado atual do identificador. Pode ser ativo, fechado ou eliminado.|  
 |state_desc|nvarchar(120)|“ACTIVE",<br />“CLOSED",<br />“KILLED"|  
 |current_workitem_type|int|Estado pelo qual este identificador está sendo processado.|  

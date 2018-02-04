@@ -1,5 +1,5 @@
 ---
-title: sys.DM hadr_database_replica_states (Transact-SQL) | Microsoft Docs
+title: sys.dm_hadr_database_replica_states (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/08/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_hadr_database_states
 - dm_hadr_database_states
 - dm_hadr_database_states_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_database_replica_states dynamic management view
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-caps.latest.revision: "84"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4b57d7550f007eb4a85f7db698aae84f133726c9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b9c0d53a9d2a339b59f9696aa02dd0e409d8e95a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmhadrdatabasereplicastates-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,22 +44,22 @@ ms.lasthandoff: 11/17/2017
    
 |Nome da coluna|Tipo de dados|Descrição (sobre a réplica primária)|  
 |-----------------|---------------|----------------------------------------|  
-|**database_id**|**int**|O identificador do banco de dados, exclusivo em uma instância do SQL Server. Este é o mesmo valor, conforme exibido no [sys. Databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) exibição do catálogo.|  
+|**database_id**|**Int**|O identificador do banco de dados, exclusivo em uma instância do SQL Server. Este é o mesmo valor, conforme exibido no [sys. Databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) exibição do catálogo.|  
 |**group_id**|**uniqueidentifier**|O identificador do grupo de disponibilidade ao qual o banco de dados pertence.|  
 |**replica_id**|**uniqueidentifier**|O identificador da réplica de disponibilidade dentro do grupo de disponibilidade.|  
 |**group_database_id**|**uniqueidentifier**|O identificador do banco de dados dentro do grupo de disponibilidade. Esse identificador é idêntico em cada réplica à qual este banco de dados é unido.|  
 |**is_local**|**bit**|Se o banco de dados de disponibilidade é local, um dos seguintes:<br /><br /> 0 = O banco de dados não é local para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = O banco de dados é local para a instância do servidor.|  
 |**is_primary_replica**|**bit**|Retorna 1 se a réplica for primária, ou 0 se for uma réplica secundária. Aplicável ao SQL Server 2014 e acima.|  
 |**synchronization_state**|**tinyint**|Estado da movimentação de dados, um dos valores a seguir.<br /><br /> 0 = não sincronizando. Para um banco de dados primário, indica que o banco de dados não está pronto para sincronizar seu log de transações com os bancos de dados secundários correspondentes. Para um banco de dados secundário, indica que o banco de dados não iniciou a sincronização de log devido a um problema de conexão, está sendo suspenso ou está passando por estados de transição durante a inicialização ou uma troca de função.<br /><br /> 1 = a sincronização. Para um banco de dados primário, indica que o banco de dados está pronto para aceitar uma solicitação de exame de um banco de dados secundário. Para um banco de dados secundário, indica que o movimento de dados ativo está ocorrendo para o banco de dados.<br /><br /> 2 = Synchronized. Um banco de dados primário mostra SYNCHRONIZED em vez de SYNCHRONIZING. Um banco de dados secundário de confirmação síncrona mostrará sincronizado quando o cache local informar que o banco de dados está pronto para failover e quando está sincronizando.<br /><br /> 3 = revertendo. Indica a fase do processo de desfazer em que um banco de dados secundário está obtendo páginas ativamente do banco de dados primário. **Cuidado:** quando um banco de dados em uma réplica secundária estiver no estado REVERTING, forçar o failover para a réplica secundária deixa o banco de dados em um estado no qual ele não pode ser iniciado como um banco de dados primário. O banco de dados precisará ser reconectado como um banco de dados secundário ou você precisará aplicar novos registros de log de um backup de log.<br /><br /> 4 = inicializando. Indica a fase de desfazer em que o log de transações que exigiu que um banco de dados secundário ficasse em dia com o LSN de desfazer está sendo enviado e protegido em uma réplica secundária. **Cuidado:** quando um banco de dados em uma réplica secundária estiver no estado INITIALIZING, forçar failover na réplica secundária deixa o banco de dados em um estado no qual ele pode ser iniciado como um banco de dados primário. O banco de dados precisará ser reconectado como um banco de dados secundário ou você precisará aplicar novos registros de log de um backup de log.|  
-|**synchronization_state_desc**|**nvarchar (60)**|Descrição do estado da movimentação de dados, um dos seguintes:<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
+|**synchronization_state_desc**|**nvarchar(60)**|Descrição do estado da movimentação de dados, um dos seguintes:<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
 |**is_commit_participant**|**bit**|0 = A confirmação da transação não está sincronizada em relação a este banco de dados.<br /><br /> 1 = A confirmação da transação está sincronizada em relação a este banco de dados.<br /><br /> Para um banco de dados em uma réplica de disponibilidade de confirmação assíncrona, este valor é sempre 0.<br /><br /> Para um banco de dados em uma réplica de disponibilidade de confirmação síncrona, este valor é preciso somente no banco de dados primário.|  
 |**synchronization_health**|**tinyint**|Reflete a interseção do estado de sincronização de um banco de dados que está associado ao grupo de disponibilidade na réplica de disponibilidade e o modo de disponibilidade da réplica de disponibilidade (confirmação síncrona ou assíncrona modo de confirmação), uma da os valores a seguir.<br /><br /> 0 = não íntegro. O **synchronization_state** do banco de dados é 0 (NOT SYNCHRONIZING).<br /><br /> 1 = parcialmente íntegro. Um banco de dados em uma réplica de disponibilidade de confirmação síncrona será considerado parcialmente Íntegro se **synchronization_state** for 1 (SYNCHRONIZING).<br /><br /> 2 = Healthy. Um banco de dados em uma réplica de disponibilidade de confirmação síncrona será considerado Íntegro se **synchronization_state** é 2 (SYNCHRONIZED), e um banco de dados em uma réplica de disponibilidade de confirmação assíncrona será considerado Íntegro se **synchronization_state** for 1 (SYNCHRONIZING).|  
-|**synchronization_health_desc**|**nvarchar (60)**|Descrição do **synchronization_health** do banco de dados de disponibilidade.<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
+|**synchronization_health_desc**|**nvarchar(60)**|Descrição do **synchronization_health** do banco de dados de disponibilidade.<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
 |**database_state**|**tinyint**|0 = Online<br /><br /> 1 = Restaurando<br /><br /> 2 = Recuperando<br /><br /> 3 = Recuperação pendente<br /><br /> 4 = Suspeito<br /><br /> 5 = Emergência<br /><br /> 6 = Offline<br /><br /> **Observação:** igual **estado** coluna em sys. Databases.|  
-|**database_state_desc**|**nvarchar (60)**|Descrição do **database_state** da réplica de disponibilidade.<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> EMERGENCY<br /><br /> OFFLINE<br /><br /> **Observação:** igual **estado** coluna em sys. Databases.|  
+|**database_state_desc**|**nvarchar(60)**|Descrição do **database_state** da réplica de disponibilidade.<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> EMERGENCY<br /><br /> OFFLINE<br /><br /> **Observação:** igual **estado** coluna em sys. Databases.|  
 |**is_suspended**|**bit**|Estado do banco de dados, um dos seguintes:<br /><br /> 0 - Retomado<br /><br /> 1 = Suspenso|  
 |**suspend_reason**|**tinyint**|Se o banco de dados estiver suspenso, o motivo do estado de suspensão, um dos seguintes:<br /><br /> 0 = Ação do usuário<br /><br /> 1 = Suspensão do parceiro<br /><br /> 2 = Refazer<br /><br /> 3 = Capturar<br /><br /> 4 = Aplicar<br /><br /> 5 = Reiniciar<br /><br /> 6 = Desfazer<br /><br /> 7 = Revalidação<br /><br /> 8 = Erro no cálculo do ponto de sincronização da réplica secundária|  
-|**suspend_reason_desc**|**nvarchar (60)**|Descrição do motivo do estado da suspensão do banco de dados, um dos seguintes:<br /><br /> SUSPEND_FROM_USER = Uma movimentação de dados suspensa manualmente pelo usuário<br /><br /> SUSPEND_FROM_PARTNER = A réplica do banco de dados é suspensa após um failover forçado<br /><br /> SUSPEND_FROM_REDO = Ocorreu um erro durante a fase refazer<br /><br /> SUSPEND_FROM_APPLY = Ocorreu um erro durante a gravação do log no arquivo (consulte o log de erros)<br /><br /> SUSPEND_FROM_CAPTURE = Ocorreu um erro durante a captura do log na réplica primária<br /><br /> SUSPEND_FROM_RESTART = A réplica do banco de dados foi suspensa antes da reinicialização do banco de dados (consulte o log de erros)<br /><br /> SUSPEND_FROM_UNDO = Ocorreu um erro durante a fase desfazer (consulte o log de erros)<br /><br /> SUSPEND_FROM_REVALIDATION = Incompatibilidade de alteração de log detectada na reconexão (consulte o log de erros)<br /><br /> SUSPEND_FROM_XRF_UPDATE = Não é possível localizar o ponto de log comum (consulte o log de erros)|  
+|**suspend_reason_desc**|**nvarchar(60)**|Descrição do motivo do estado da suspensão do banco de dados, um dos seguintes:<br /><br /> SUSPEND_FROM_USER = Uma movimentação de dados suspensa manualmente pelo usuário<br /><br /> SUSPEND_FROM_PARTNER = A réplica do banco de dados é suspensa após um failover forçado<br /><br /> SUSPEND_FROM_REDO = Ocorreu um erro durante a fase refazer<br /><br /> SUSPEND_FROM_APPLY = Ocorreu um erro durante a gravação do log no arquivo (consulte o log de erros)<br /><br /> SUSPEND_FROM_CAPTURE = Ocorreu um erro durante a captura do log na réplica primária<br /><br /> SUSPEND_FROM_RESTART = A réplica do banco de dados foi suspensa antes da reinicialização do banco de dados (consulte o log de erros)<br /><br /> SUSPEND_FROM_UNDO = Ocorreu um erro durante a fase desfazer (consulte o log de erros)<br /><br /> SUSPEND_FROM_REVALIDATION = Incompatibilidade de alteração de log detectada na reconexão (consulte o log de erros)<br /><br /> SUSPEND_FROM_XRF_UPDATE = Não é possível localizar o ponto de log comum (consulte o log de erros)|  
 |**recovery_lsn**|**numeric(25,0)**|Na réplica primária, o final do log de transações antes de o banco de dados primário gravar outro novo registro de log depois da recuperação ou do failover. Para um determinado banco de dados secundário, se este valor for menor que o LSN protegido atual (last_hardened_lsn), recovery_lsn será o valor para o qual este banco de dados secundário precisaria ressincronizar (ou seja, reverter e reinicializar). Se este valor for maior que ou igual ao LSN protegido atual, a ressincronização será desnecessária e não ocorrerá.<br /><br /> **recovery_lsn** reflete uma ID de bloco de log preenchida com zeros. Não é um LSN (número de sequência de log) real. Para obter informações sobre como esse valor é derivado, consulte [Compreendendo os valores da coluna LSN](#LSNcolumns), mais adiante neste tópico.|  
 |**truncation_lsn**|**numeric(25,0)**|Na réplica primária, para o banco de dados primário, reflete o LSN de truncamento de log mínimo em todos os bancos de dados secundários correspondentes. Se o truncamento de log local estiver bloqueado (como por uma operação de backup), esse LSN poderá ser mais alto que o LSN de truncamento local.<br /><br /> Para um determinado banco de dados secundário, reflete o ponto de truncamento desse banco de dados.<br /><br /> **truncation_lsn** reflete uma ID de bloco de log preenchida com zeros. Não é um número de sequência de log real.|  
 |**last_sent_lsn**|**numeric(25,0)**|O identificador do bloco de log que indica o ponto até o qual todos os blocos de log foram enviados pela primária. Esta é a ID do próximo bloco de log que será enviado, em vez da ID do bloco de log enviado mais recentemente.<br /><br /> **last_sent_lsn** reflete uma ID de bloco de log preenchida com zeros, não é um número de sequência de log real.|  
