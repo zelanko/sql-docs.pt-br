@@ -8,20 +8,21 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 0e6adc54-4d97-4ef0-bf4f-b4538d69f136
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96f28c9cf92402fcecfc15eb0d527becbc9c3ddd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c0799d00819bade1e0f87fceb916aa649aef150a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxedatabasesessionobjectcolumns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns (banco de dados do SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,12 +35,12 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary (8)**|O endereço da memória da sessão de evento. Tem uma relação muitos-para-um com sys.dm_xe_database_sessions.address. Não permite valor nulo.|  
-|column_name|**nvarchar (60)**|O nome do valor de configuração. Não permite valor nulo.|  
-|column_id|**int**|A ID da coluna. É exclusiva no objeto. Não permite valor nulo.|  
-|column_value|**nvarchar (2048)**|O valor configurado da coluna. Permite valor nulo.|  
-|object_type|**nvarchar (60)**|O tipo do objeto.  Não é nullable.object_type é um destes:<br /><br /> event<br /><br /> target|  
-|object_name|**nvarchar (60)**|O nome do objeto ao qual a coluna pertence. Não permite valor nulo.|  
+|event_session_address|**varbinary(8)**|O endereço da memória da sessão de evento. Tem uma relação muitos-para-um com sys.dm_xe_database_sessions.address. Não permite valor nulo.|  
+|column_name|**nvarchar(60)**|O nome do valor de configuração. Não permite valor nulo.|  
+|column_id|**Int**|A ID da coluna. É exclusiva no objeto. Não permite valor nulo.|  
+|column_value|**nvarchar(2048)**|O valor configurado da coluna. Permite valor nulo.|  
+|object_type|**nvarchar(60)**|O tipo do objeto.  Não é nullable.object_type é um destes:<br /><br /> event<br /><br /> target|  
+|object_name|**nvarchar(60)**|O nome do objeto ao qual a coluna pertence. Não permite valor nulo.|  
 |object_package_guid|**uniqueidentifier**|O GUID do pacote que contém o objeto. Não permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  

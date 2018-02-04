@@ -1,5 +1,5 @@
 ---
-title: sys. fn_xe_file_target_read_file (Transact-SQL) | Microsoft Docs
+title: sys.fn_xe_file_target_read_file (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/22/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - fn_xe_file_target_read_file
 - sys.fn_xe_file_target_read_file_TSQL
 - sys.fn_xe_file_target_read_file
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - extended events [SQL Server], functions
 - fn_xe_file_target_read_file function
 - sys.fn_xe_file_target_read_file function
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 603253fffd3d3ea6d5a42b37f9d7f4fc8a3edccd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b21b45c9d4932ca82de404fcb3b984ef2149034a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   Lê arquivos que são criados pelo destino de arquivos assíncronos do mecanismo de Eventos estendidos. É retornado um evento, em formato XML, por linha.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] aceitam resultados de rastreamento gerados no formato XEL e XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Suporte estendido de eventos somente resultados de rastreamento no formato XEL. É recomendável usar o SQL Server Management Studio para ler resultados de rastreamento no formato XEL.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] aceitam resultados de rastreamento gerados no formato XEL e XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Suporte estendido de eventos somente resultados de rastreamento no formato XEL. É recomendável usar o SQL Server Management Studio para ler resultados de rastreamento no formato XEL.    
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,14 +53,14 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *caminho*  
+ *path*  
  O caminho para os arquivos a serem lidos. *caminho* pode conter curingas e incluir o nome de um arquivo. *caminho* é **nvarchar (260)**. Não há nenhum padrão. No contexto do banco de dados do SQL Azure, esse valor é uma URL de HTTP para um arquivo no armazenamento do Azure.
   
  *mdpath*  
  O caminho para o arquivo de metadados que corresponde ao arquivo ou arquivos especificados pelo *caminho* argumento. *mdpath* é **nvarchar (260)**. Não há nenhum padrão. Começando com o SQL Server 2016, esse parâmetro pode ser fornecido como nulo.
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]não exige o *mdpath* parâmetro. No entanto, é mantido para compatibilidade com versões anteriores para arquivos de log gerados nas versões anteriores do SQL Server.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] não exige o *mdpath* parâmetro. No entanto, é mantido para compatibilidade com versões anteriores para arquivos de log gerados nas versões anteriores do SQL Server.  
   
  *initial_file_name*  
  O primeiro arquivo leiam *caminho*. *initial_file_name* é **nvarchar (260)**. Não há nenhum padrão. Se **nulo** é especificado como argumento de todos os arquivos encontrados na *caminho* são lidos.  
@@ -77,12 +79,12 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |package_guid|**uniqueidentifier**|O pacote de evento GUID. Não permite valor nulo.|  
 |object_name|**nvarchar(256)**|O nome do evento. Não permite valor nulo.|  
 |event_data|**nvarchar(max)**|Os conteúdos de evento no formato XML. Não permite valor nulo.|  
-|file_name|**nvarchar (260)**|O nome do arquivo que contém o evento. Não permite valor nulo.|  
+|file_name|**nvarchar(260)**|O nome do arquivo que contém o evento. Não permite valor nulo.|  
 |file_offset|**bigint**|O deslocamento do bloco no arquivo que contém o evento. Não permite valor nulo.|  
 |timestamp_utc|**datetime2**|**Aplica-se a**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />A data e hora (fuso horário UTC) do evento. Não permite valor nulo.|  
 
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Ler resultados grandes define executando **fn_xe_file_target_read_file** em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pode resultar em um erro. Use o **resultados em arquivo** modo (**Ctrl + Shift + F**) para exportar grandes conjuntos de resultados para um arquivo e ler o arquivo em outra ferramenta em vez disso.  
   
 ## <a name="permissions"></a>Permissões  

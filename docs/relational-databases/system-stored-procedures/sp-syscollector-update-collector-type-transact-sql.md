@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collector_type_TSQL
 - sp_syscollector_update_collector_type
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_syscollector_update_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e8f2dbc3024ee7349774c1bccd10d75c0bfffb7
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 484acd19197e5df0cdf8f8b342d67a5e18b66c63
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,16 +54,16 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
  [  **@collector_type_uid =** ] **'***collector_type_uid***'**  
  É o GUID do tipo de coletor. *collector_type_uid* é **uniqueidentifier**, e se for NULL, ele será automaticamente criado e retornado como OUTPUT.  
   
- [  **@name =** ] **'***nome***'**  
+ [ **@name =** ] **'***name***'**  
  É o nome do tipo de coletor. *nome* é **sysname** e deve ser especificado.  
   
- [  **@parameter_schema =** ] **'***parameter_schema***'**  
+ [ **@parameter_schema =** ] **'***parameter_schema***'**  
  É o esquema XML deste tipo de coletor. *parameter_schema* é **xml** e pode ser necessário para determinados tipos de coletor. Se não for necessário, esse argumento poderá ser NULL.  
   
  [  **@collection_package_id =** ] *collection_package_id*  
  É um identificador exclusivo local que aponta para o pacote de coleta do [!INCLUDE[ssIS](../../includes/ssis-md.md)] usado pelo conjunto de coleta. *collection_package_id* é **uniqueidentifer** e é necessária. Para obter o valor de *collection_package_id*, consulte a exibição de sistema syscollector_collector_types no banco de dados msdb.  
   
- [  **@upload_package_id =** ] *upload_package_id*  
+ [ **@upload_package_id =** ] *upload_package_id*  
  É um identificador exclusivo local que aponta para o pacote de carregamento do [!INCLUDE[ssIS](../../includes/ssis-md.md)] usado pelo conjunto de coleta. *upload_package_id* é **uniqueidentifier** e é necessária. Para obter o valor de *upload_package_id*, consulte a exibição de sistema syscollector_collector_types no banco de dados msdb.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

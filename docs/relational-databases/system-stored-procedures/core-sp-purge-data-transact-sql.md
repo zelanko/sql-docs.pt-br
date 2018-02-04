@@ -1,5 +1,5 @@
 ---
-title: sp_purge_data (Transact-SQL) | Microsoft Docs
+title: core.sp_purge_data (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_purge_data_TSQL
 - sp_purge_data
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_purge_data
 - management data warehouse, data collector stored procedures
 - core.sp_purge_data stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b03e5ef5984431f3fe2867e2dc303ca2ba710435
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fb74c4993f7a7d013e56061e3a572052c2939a99
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +56,12 @@ core.sp_purge_data
  [@retention_days =] *retention_days*  
  O número de dias para reter dados nas tabelas do data warehouse de gerenciamento. Dados com um carimbo de hora anterior a *retention_days* é removido. *retention_days* é **smallint**, com um padrão NULL. Se especificado, o valor deverá ser positivo. Quando NULL, o valor na coluna valid_through no modo de exibição snapshots determina as linhas que estão qualificadas para remoção.  
   
- [@instance_name =] '*instance_name*'  
+ [@instance_name = ] '*instance_name*'  
  O nome da instância do conjunto de coleta. *nome_da_instância* é **sysname**, com um padrão NULL.  
   
  *nome_da_instância* deve ser o nome totalmente qualificado da instância, que consiste do nome do computador e o nome da instância no formato *computername*\\*instancename*. Quando NULL, a instância padrão no servidor local será usada.  
   
- [@collection_set_uid =] '*collection_set_uid*'  
+ [@collection_set_uid = ] '*collection_set_uid*'  
  O GUID do conjunto de coleta. *collection_set_uid* é **uniqueidentifier**, com um padrão NULL. Quando NULL, as linhas de qualificação de todos os conjuntos de coleta serão removidas. Para obter esse valor, consulte a exibição do catálogo syscollector_collection_sets.  
   
  [@duration =] *duração*  
@@ -68,7 +70,7 @@ core.sp_purge_data
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Este procedimento seleciona linhas na exibição core.snapshots que se qualificam para remoção com base em um período de retenção. Todas as linhas qualificadas para remoção são excluídas da tabela core.snapshots_internal. A exclusão das linhas precedentes dispara a ação de exclusão em cascata em todas as tabelas do data warehouse de gerenciamento. Isso é feito por meio da cláusula ON DELETE CASCADE definida para todas as tabelas que armazenam dados coletados.  
   
  Cada instantâneo e seus dados associados são excluídos dentro de uma transação explícita e confirmados. Portanto, se a operação de limpeza for interrompida manualmente ou o valor especificado para @duration for excedido, o dados não confirmados permanecerão. Esses dados podem ser removidos na próxima execução do trabalho.  

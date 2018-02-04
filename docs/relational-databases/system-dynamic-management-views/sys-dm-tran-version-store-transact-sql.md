@@ -1,5 +1,5 @@
 ---
-title: tran_version_store (Transact-SQL) | Microsoft Docs
+title: sys.dm_tran_version_store (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_tran_version_store
 - dm_tran_version_store
 - dm_tran_version_store_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_version_store dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_version_store dynamic management view
 ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
-caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea010f2430dc839e05074e49c5854d796fd49071
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: be8779d40624e9f88ee74ea85a1126c1b4b76ebf
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmtranversionstore-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,14 +55,14 @@ sys.dm_tran_version_store
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|Número de sequência da transação que gera a versão de registro.|  
 |**version_sequence_num**|**bigint**|Número de sequência da versão de registro. Este valor é exclusivo dentro da transação que gera a versão.|  
-|**database_id**|**int**|ID do banco de dados do registro com controle de versão.|  
+|**database_id**|**Int**|ID do banco de dados do registro com controle de versão.|  
 |**rowset_id**|**bigint**|ID do conjunto de linhas do registro.|  
 |**status**|**tinyint**|Indica se um registro com controle de versão foi dividido em dois registros. Se o valor for 0, o registro será armazenado em uma página. Se o valor for 1, o registro será dividido em dois registros armazenados em duas páginas diferentes.|  
 |**min_length_in_bytes**|**smallint**|Comprimento mínimo do registro em bytes.|  
 |**record_length_first_part_in_bytes**|**smallint**|Comprimento em bytes da primeira parte do registro com controle de versão.|  
-|**record_image_first_part**|**varbinary (8000)**|Imagem binária da primeira parte do registro com controle de versão.|  
+|**record_image_first_part**|**varbinary(8000)**|Imagem binária da primeira parte do registro com controle de versão.|  
 |**record_length_second_part_in_bytes**|**smallint**|Comprimento em bytes da segunda parte do registro com controle de versão.|  
-|**record_image_second_part**|**varbinary (8000)**|Imagem binária da segunda parte do registro com controle de versão.|  
+|**record_image_second_part**|**varbinary(8000)**|Imagem binária da segunda parte do registro com controle de versão.|  
   
 ## <a name="permissions"></a>Permissões  
 Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   

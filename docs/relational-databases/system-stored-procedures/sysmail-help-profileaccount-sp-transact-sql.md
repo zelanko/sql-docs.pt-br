@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_profileaccount_sp_TSQL
 - sysmail_help_profileaccount_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_profileaccount_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_profileaccount_sp
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30af309db029d4d969fe39eb87e15503b590dfae
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dfe0115ca0e641ca0b6397cd624d093f7d94acff
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +50,16 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@profile_id**  =] *profile_id*  
+ [ **@profile_id** = ] *profile_id*  
  É a ID do perfil a ser listado. *profile_id* é **int**, com um padrão NULL. O *profile_id* ou *profile_name* deve ser especificado.  
   
- [  **@profile_name**  =] **'***profile_name***'**  
+ [ **@profile_name** = ] **'***profile_name***'**  
  É o nome do perfil a ser listado. *profile_name* é **sysname**, com um padrão NULL. O *profile_id* ou *profile_name* deve ser especificado.  
   
- [  **@account_id**  =] *account_id*  
+ [ **@account_id** = ] *account_id*  
  É a ID de conta a ser listada. *account_id* é **int**, com um padrão NULL. Quando *account_id* e *account_name* forem ambos NULL, que lista todas as contas no perfil.  
   
- [  **@account_name**  =] **'***account_name***'**  
+ [ **@account_name** = ] **'***account_name***'**  
  É o nome da conta a ser listada. *account_name* é **sysname**, com um padrão NULL. Quando *account_id* e *account_name* forem ambos NULL, que lista todas as contas no perfil.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -68,13 +71,13 @@ sysmail_help_profileaccount_sp
 ||||  
 |-|-|-|  
 |Nome da coluna|Tipo de dados|Description|  
-|**profile_id**|**int**|O ID do perfil.|  
+|**profile_id**|**Int**|O ID do perfil.|  
 |**profile_name**|**sysname**|O nome do perfil.|  
-|**account_id**|**int**|A ID da conta da conta.|  
+|**account_id**|**Int**|A ID da conta da conta.|  
 |**account_name**|**sysname**|O nome da conta.|  
-|**sequence_number**|**int**|O número de sequência da conta dentro do perfil.|  
+|**sequence_number**|**Int**|O número de sequência da conta dentro do perfil.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando nenhum *profile_id* ou *profile_name* for especificado, esse procedimento armazenado retorna informações para todos os perfis na instância.  
   
  O procedimento armazenado **sysmail_help_profileaccount_sp** está no **msdb** banco de dados e pertence a **dbo** esquema. O procedimento deve ser executado com um nome de três partes se o banco de dados atual não é **msdb**.  

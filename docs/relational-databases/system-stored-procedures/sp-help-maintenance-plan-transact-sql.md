@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_maintenance_plan_TSQL
 - sp_help_maintenance_plan
-dev_langs: TSQL
-helpviewer_keywords: sp_help_maintenance_plan
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_maintenance_plan
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a48991c0baec6c8466d0ce33bee730d0948c97e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e5669438c159010e1b5011418df913c3c2743aff
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,13 +66,13 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |-----------------|---------------|-----------------|  
 |**plan_id**|**uniqueidentifier**|Identificação do plano de manutenção.|  
 |**plan_name**|**sysname**|Nome do plano de manutenção.|  
-|**Date_Created**|**datetime**|Data em que o plano de manutenção foi criado.|  
+|**date_created**|**datetime**|Data em que o plano de manutenção foi criado.|  
 |**proprietário**|**sysname**|Proprietário do plano de manutenção.|  
-|**max_history_rows**|**int**|Número máximo de linhas alocado para o registro do histórico do plano de manutenção na tabela de sistema.|  
-|**remote_history_server**|**int**|O nome do servidor remoto para o qual o relatório de histórico poderia ser escrito.|  
-|**max_remote_history_rows**|**int**|Número máximo de linhas alocado na tabela do sistema em um servidor remoto para o qual o relatório de histórico poderia ser escrito.|  
-|**user_defined_1**|**int**|O padrão é NULL.|  
-|**user_defined_2**|**nvarchar (100)**|O padrão é NULL.|  
+|**max_history_rows**|**Int**|Número máximo de linhas alocado para o registro do histórico do plano de manutenção na tabela de sistema.|  
+|**remote_history_server**|**Int**|O nome do servidor remoto para o qual o relatório de histórico poderia ser escrito.|  
+|**max_remote_history_rows**|**Int**|Número máximo de linhas alocado na tabela do sistema em um servidor remoto para o qual o relatório de histórico poderia ser escrito.|  
+|**user_defined_1**|**Int**|O padrão é NULL.|  
+|**user_defined_2**|**nvarchar(100)**|O padrão é NULL.|  
 |**user_defined_3**|**datetime**|O padrão é NULL.|  
 |**user_defined_4**|**uniqueidentifier**|O padrão é NULL.|  
   
@@ -85,7 +88,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |-----------------|-----------------|  
 |**job_id**|ID de todos os trabalhos associados ao plano de manutenção. *job_id* é **uniqueidentifier**.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_help_maintenance_plan** está no **msdb** banco de dados.  
   
 ## <a name="permissions"></a>Permissões  

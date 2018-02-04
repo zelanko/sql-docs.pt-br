@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_start_sp
 - sysmail_start_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_start_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_start_sp
 ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: abfda7b6f83e30a0d19706fc2182b9f2352435c9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b4bc8f6fda47c152127f4f3ae289a8d4f4b07a56
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailstartsp-transact-sql"></a>sysmail_start_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +54,7 @@ sysmail_start_sp
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nenhuma  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O Database Mail não está habilitado ou instalado na[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalação. Use o Assistente para Configuração do Database Mail para habilitar e instalar objetos do Database Mail.  
   
  Esse procedimento armazenado está no **msdb** banco de dados. Esse procedimento armazenado inicia a fila do Database Mail que contém solicitações de mensagens de saída e habilita a ativação do [!INCLUDE[ssSB](../../includes/sssb-md.md)] para o programa externo.  
@@ -78,7 +81,7 @@ GO
 ## <a name="see-also"></a>Consulte também  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Opção de configuração do servidor do Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)   
- [sysmail_stop_sp &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)   
+ [sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)   
  [Armazenados do Database Mail procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

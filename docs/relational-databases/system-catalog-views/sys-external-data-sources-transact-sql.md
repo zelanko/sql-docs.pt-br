@@ -8,21 +8,23 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 1016db6e-9950-4ae2-a004-bd4171e27359
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b8137f7bf094becc2197b4420aecf81dd8c5c5d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5d58e4282fdb589c909ff36394bdbc94d9e2590d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysexternaldatasources-transact-sql"></a>sys.external_data_sources (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -33,13 +35,13 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|data_source_id|**int**|Identificação do objeto de fonte de dados externa.||  
+|data_source_id|**Int**|Identificação do objeto de fonte de dados externa.||  
 |name|**sysname**|Nome da fonte de dados externa.||  
 |local|**nvarchar(4000)**|A cadeia de conexão, que inclui o protocolo, endereço IP e porta para a fonte de dados externa.||  
 |type_desc|**nvarchar(255)**|Tipo de fonte de dados exibido como uma cadeia de caracteres.|HADOOP, RDBMS, SHARD_MAP_MANAGER, RemoteDataArchiveTypeExtDataSource|  
-|Tipo|**tinyint**|Tipo de fonte de dados exibido como um número.|0 - HADOOP<br /><br /> 1 - RDBMS<br /><br /> 2 - SHARD_MAP_MANAGER<br /><br /> 3 - RemoteDataArchiveTypeExtDataSource|  
+|tipo|**tinyint**|Tipo de fonte de dados exibido como um número.|0 - HADOOP<br /><br /> 1 - RDBMS<br /><br /> 2 - SHARD_MAP_MANAGER<br /><br /> 3 - RemoteDataArchiveTypeExtDataSource|  
 |resource_manager_location|**nvarchar(4000)**|Para digitar HADOOP, o IP e a porta local do Gerenciador de recursos do Hadoop. Isso é usado para enviar um trabalho em uma fonte de dados do Hadoop.<br /><br /> NULL para outros tipos de fontes de dados externas.||  
-|credential_id|**int**|A ID de objeto do banco de dados no escopo a credencial usada para conectar-se à fonte de dados externa.||  
+|credential_id|**Int**|A ID de objeto do banco de dados no escopo a credencial usada para conectar-se à fonte de dados externa.||  
 |database_name|**sysname**|Para tipo de RDBMS, o nome do banco de dados remoto. Para tipo, SHARD_MAP_MANAGER, o nome do banco de Gerenciador de mapa do fragmento. NULL para outros tipos de fontes de dados externas.||  
 |shard_map_name|**sysname**|Para o tipo SHARD_MAP_MANAGER, o nome do mapa do fragmento. NULL para outros tipos de fontes de dados externas.||  
   
@@ -47,8 +49,8 @@ ms.lasthandoff: 11/17/2017
  A visibilidade dos metadados em exibições do catálogo está limitada aos protegíveis que pertencem a um usuário ou para os quais o usuário recebeu permissão. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [sys.external_file_formats &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
- [sys.external_tables &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)   
+ [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
+ [sys.external_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
   
   

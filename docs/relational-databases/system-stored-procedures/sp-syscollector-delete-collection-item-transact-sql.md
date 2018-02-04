@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_collection_item
 - sp_syscollector_delete_collection_item_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_syscollector_delete_collecton_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 9c2b0990-1d3d-4a59-94a0-3cca6fef4681
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27c4668f74ddc987a8a16928f23c87966a2a0567
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 587d7ca6d3610ac2d8950f73eb085b1f942f2e27
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectordeletecollectionitem-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +48,7 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_item_id =] *collection_item_id*  
+ [ @collection_item_id = ] *collection_item_id*  
  É o identificador exclusivo do item de coleta. *collection_item_id* é **int** com um padrão NULL. *collection_item_id* deve ter um valor se *nome* é NULL.  
   
  [ @name =] '*nome*'  
@@ -55,7 +57,7 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  sp_syscollector_delete_collection_item deve ser executado no contexto do banco de dados do sistema msdb. Os itens de coleta não podem ser excluídos dos conjuntos de coletas do sistema.  
   
  O conjunto de coleta que contém o item de coleta é interrompido e reiniciado durante esta operação.  
@@ -73,8 +75,8 @@ EXEC sp_syscollector_delete_collection_item @name = 'MyCollectionItem1';
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_create_collection_item &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
+ [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
+ [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   

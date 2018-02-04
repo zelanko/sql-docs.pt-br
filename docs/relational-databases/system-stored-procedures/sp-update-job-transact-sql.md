@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_job
 - sp_update_job_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_update_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_update_job
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
-caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 772cfb0f8f4a05c2db42e650601f837d12ffeb81
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 03171bfdee98063c9bf460b9555c1a7c5d02568d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,16 +63,16 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  O número de identificação do trabalho a ser atualizado. *job_id*é **uniqueidentifier**.  
   
- [  **@job_name =**] **'***job_name***'**  
- O nome do trabalho. *job_name*é **nvarchar (128)**.  
+ [ **@job_name =**] **'***job_name***'**  
+ O nome do trabalho. *job_name*is **nvarchar(128)**.  
   
 > **Observação:** ou *job_id* ou *job_name* devem ser especificados, mas não podem ser especificados.  
   
- [  **@new_name =**] **'***novo_nome***'**  
- O novo nome do trabalho. *Novo_nome*é **nvarchar (128)**.  
+ [ **@new_name =**] **'***new_name***'**  
+ O novo nome do trabalho. *new_name*is **nvarchar(128)**.  
   
  [  **@enabled =**] *habilitado*  
  Especifica se o trabalho está habilitado (**1**) ou não habilitado (**0**). *habilitado*é **tinyint**.  
@@ -81,15 +84,15 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  O número de identificação da primeira etapa a ser executada para o trabalho. *step_id*é **int**.  
   
  [  **@category_name =**] **'***categoria***'**  
- ID da categoria do trabalho. *categoria de*é **nvarchar (128)**.  
+ ID da categoria do trabalho. *category*is **nvarchar(128)**.  
   
- [  **@owner_login_name =**] **'***login***'**  
+ [ **@owner_login_name =**] **'***login***'**  
  O nome do logon que é o proprietário do trabalho. *logon*é **nvarchar (128)** somente os membros do **sysadmin** função de servidor fixa pode alterar a propriedade do trabalho.  
   
  [  **@notify_level_eventlog =**] *eventlog_level*  
  Especifica quando colocar uma entrada no log de aplicativo do Microsoft Windows para este trabalho. *eventlog_level*é **int**, e pode ser um destes valores.  
   
-|Valor|Descrição (ação)|  
+|Value|Descrição (ação)|  
 |-----------|----------------------------|  
 |**0**|Never|  
 |**1**|Caso haja êxito|  
@@ -117,13 +120,13 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  [  **@delete_level =**] *delete_level*  
  Especifica quando excluir o trabalho. *delete_value*é **int**. *delete_level*usa os mesmos valores como *eventlog_level*.  
   
- [  **@automatic_post =**] *automatic_post*  
+ [ **@automatic_post =**] *automatic_post*  
  Reservado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_update_job** deve ser executado a partir de **msdb** banco de dados.  
   
  **sp_update_job** altera somente essas configurações para quais valores são fornecidos. Se um parâmetro for omitido, a configuração atual será retida.  
@@ -158,8 +161,8 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_delete_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_help_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

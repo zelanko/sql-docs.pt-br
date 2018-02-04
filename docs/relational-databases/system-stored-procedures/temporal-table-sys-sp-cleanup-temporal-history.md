@@ -8,20 +8,21 @@ ms.service: sql-database
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed631f41e1ce49bfa431645b5f439925190198c7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1539ae456b1159cf4fdd458948a905171e3d33aa
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="temporal-table---sysspcleanuptemporalhistory"></a>Tabela temporal - sys.sp_cleanup_temporal_history
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -45,11 +46,11 @@ O nome da tabela temporal para qual a retenção de limpeza é chamada.
 
 O nome do esquema ao qual tabela temporal atual pertence a
 
-*row_count_var* [saída]
+*row_count_var* [OUTPUT]
 
 O parâmetro de saída que retorna o número de linhas excluídas. Esse parâmetro se a tabela de histórico tem columnstore índice clusterizado, irá retornar sempre 0.
   
-## <a name="remarks"></a>Comentários
+## <a name="remarks"></a>Remarks
 Esse procedimento armazenado pode ser usado somente com tabelas temporais que o período de retenção finito especificado.
 Use este procedimento armazenado apenas se você precisa limpar imediatamente todas as linhas antigas da tabela de histórico. Você deve saber o que ele pode ter um impacto significativo sobre o log de banco de dados e o subsistema de e/s, ele exclui todas as linhas qualificadas dentro da mesma transação. 
 

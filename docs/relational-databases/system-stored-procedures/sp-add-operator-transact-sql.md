@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_operator
 - sp_add_operator_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_operator
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc0807d00d85fcdb9f41d4cf13b696bff7566d7a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 534a5b973d0d35d660a07fc85bb8c7934f13a5c5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,13 +59,13 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name=** ] **'***nome***'**  
+ [ **@name=** ] **'***name***'**  
  O nome de um operador (destinatário da notificação). Esse nome deve ser exclusivo e não pode conter a porcentagem (**%**) caracteres. *nome* é **sysname**, sem padrão.  
   
  [  **@enabled=** ] *habilitado*  
  Indica o status atual do operador. *habilitado* é **tinyint**, com um padrão de **1** (habilitado). Se **0**, o operador não está habilitado e não recebe notificações.  
   
- [  **@email_address=** ] **'***email_address***'**  
+ [ **@email_address=** ] **'***email_address***'**  
  O endereço de email do operador. Essa cadeia de caracteres é passada diretamente para o sistema de email. *endereço de email* é **nvarchar (100)**, com um padrão NULL.  
   
  Você pode especificar um endereço de email físico ou um alias para *email_address*. Por exemplo:  
@@ -72,10 +75,10 @@ sp_add_operator [ @name = ] 'name'
 > [!NOTE]  
 >  Você deve usar o endereço de email para Database Mail.  
   
- [  **@pager_address=** ] **'***pager_address***'**  
+ [ **@pager_address=** ] **'***pager_address***'**  
  O endereço de pager do operador. Essa cadeia de caracteres é passada diretamente para o sistema de email. *pager_address* é **narchar(100)**, com um padrão NULL.  
   
- [  **@weekday_pager_start_time=** ] *weekday_pager_start_time*  
+ [ **@weekday_pager_start_time=** ] *weekday_pager_start_time*  
  A hora depois da qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent envia notificação de pager ao operador especificado nos dias de semana, de segunda-feira a sexta-feira. *weekday_pager_start_time*é **int**, com um padrão de **090000**, que indica às 9:00 em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
  [  **@weekday_pager_end_time=** ] *weekday_pager_end_time*  
@@ -84,19 +87,19 @@ sp_add_operator [ @name = ] 'name'
  [  **@saturday_pager_start_time =**] *saturday_pager_start_time*  
  O tempo após o qual **SQLServerAgent** serviço envia notificação por pager ao operador especificado aos sábados. *saturday_pager_start_time* é **int**, com um padrão de 090000, que indica às 9:00 em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
- [  **@saturday_pager_end_time=** ] *saturday_pager_end_time*  
+ [ **@saturday_pager_end_time=** ] *saturday_pager_end_time*  
  O tempo após o qual **SQLServerAgent** service não mais envia notificação de pager ao operador especificado aos sábados. *saturday_pager_end_time*é **int**, com um padrão de **180000**, que indica 18h00. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
- [  **@sunday_pager_start_time=** ] *sunday_pager_start_time*  
+ [ **@sunday_pager_start_time=** ] *sunday_pager_start_time*  
  O tempo após o qual **SQLServerAgent** serviço envia notificação por pager ao operador especificado aos domingos. *sunday_pager_start_time*é **int**, com um padrão de **090000**, que indica às 9:00 em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
  [  **@sunday_pager_end_time =**] *sunday_pager_end_time*  
  O tempo após o qual **SQLServerAgent** service não mais envia notificação de pager ao operador especificado aos domingos. *sunday_pager_end_time*é **int**, com um padrão de **180000**, que indica 18h00. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
- [  **@pager_days=** ] *pager_days*  
+ [ **@pager_days=** ] *pager_days*  
  É um número que indica os dias em que o operador está disponível para páginas (sujeito aos horários de início/término especificados). *pager_days*é **tinyint**, com um padrão de **0** indicando que o operador nunca está disponível para receber uma página. Os valores válidos são de **0** por meio de **127**. *pager_days*é calculado somando os valores individuais para os dias necessários. Por exemplo, de segunda-feira a sexta-feira é **2**+**4**+**8**+**16** + **32** = **62**. A tabela a seguir lista o valor de cada dia da semana.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Segunda-feira|  
@@ -106,10 +109,10 @@ sp_add_operator [ @name = ] 'name'
 |**32**|Sexta-feira|  
 |**64**|Sábado|  
   
- [  **@netsend_address=** ] **'***netsend_address***'**  
+ [ **@netsend_address=** ] **'***netsend_address***'**  
  O endereço de rede do operador para o qual a mensagem de rede é enviada. *netsend_address*é **nvarchar (100)**, com um padrão NULL.  
   
- [  **@category_name=** ] **'***categoria***'**  
+ [ **@category_name=** ] **'***category***'**  
  O nome da categoria para este operador. *categoria de* é **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -118,7 +121,7 @@ sp_add_operator [ @name = ] 'name'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nenhuma  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_add_operator** deve ser executado a partir de **msdb** banco de dados.  
   
  É oferecido suporte à chamada por pager pelo sistema de email, que deve ter um recurso de email para pager se você quiser usar chamada por pager.  
@@ -147,9 +150,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_delete_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_help_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_update_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+ [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

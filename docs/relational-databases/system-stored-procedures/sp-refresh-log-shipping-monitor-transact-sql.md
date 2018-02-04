@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_refresh_log_shipping_monitor
 - sp_refresh_log_shipping_monitor_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_refresh_log_shipping_monitor
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_refresh_log_shipping_monitor
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a2533d1ecd4617fe1aea38e08be16f2b293b386
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7731ce78547a36284e95a43d80464c8e84ceccba
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +50,10 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@agent_id=** ] **'***agent_id***'**  
+ [ **@agent_id=** ] **'***agent_id***'**  
  A ID primária para backup ou ID secundária para cópia ou restauração. *agent_id* é **uniqueidentifier** e não pode ser NULL.  
   
- [  **@agent_type=** ] **'***agent_type***'**  
+ [ **@agent_type=** ] **'***agent_type***'**  
  O tipo de trabalho de envio de log.  
   
  0 = Backup.  
@@ -61,7 +64,7 @@ sp_refresh_log_shipping_monitor
   
  *agent_type* é **tinyint** e não pode ser NULL.  
   
- [  **@database=** ] **'***banco de dados***'**  
+ [ **@database=** ] **'***database***'**  
  O banco de dados primário ou secundário utilizado no log por backup ou agentes de restauração.  
   
  [ **@mode** ] *n*  
@@ -75,9 +78,9 @@ sp_refresh_log_shipping_monitor
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhum.  
+ Nenhuma.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_refresh_log_shipping_monitor** atualiza o **log_shipping_monitor_primary**, **log_shipping_monitor_secondary**, **log_shipping_monitor_history_ detalhes**, e **log_shipping_monitor_error_detail** tabelas com quaisquer informações de sessão que já não foi transferido. Isto lhe permite sincronizar o servidor monitor com o servidor primário ou um secundário quando o monitor sair de sincronia por algum tempo. Além disso, permite-lhe limpar as informações de monitor no servidor monitor, se necessário.  
   
  **sp_refresh_log_shipping_monitor** deve ser executado a partir de **mestre** banco de dados no servidor primário ou secundário.  
@@ -86,7 +89,7 @@ sp_refresh_log_shipping_monitor
  Somente membros do **sysadmin** função fixa de servidor pode executar esse procedimento.  
   
 ## <a name="see-also"></a>Consulte também  
- [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Sobre o envio de logs &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

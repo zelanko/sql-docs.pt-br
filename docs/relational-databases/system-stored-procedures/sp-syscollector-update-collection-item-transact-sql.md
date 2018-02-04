@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_item
 - sp_syscollector_update_collection_item_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_update_collection_item
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2adc56a28af1216b1eaca3b7bcdd48365812dc2c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 680a82e86a1d958a81c9b5c238ac4015307ce51c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +53,7 @@ sp_syscollector_update_collection_item
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_item_id =] *collection_item_id*  
+ [ @collection_item_id = ] *collection_item_id*  
  É o identificador exclusivo que identifica o item de coleta. *collection_item_id* é **int** com um valor padrão de NULL. *collection_item_id* deve ter um valor se *nome* é NULL.  
   
  [ @name =] '*nome*'  
@@ -71,7 +73,7 @@ sp_syscollector_update_collection_item
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se o conjunto de coleta estiver definido para o modo não armazenado em cache, a alteração da frequência será ignorada, pois esse modo faz com que a coleção e o carregamento dos dados ocorram conforme a agenda especificada para o conjunto de coleta. Para exibir o status do conjunto de coleta, execute a consulta a seguir. Substitua `<collection_item_id>` pela ID do item de coleta a ser atualizado.  
   
 ```  
@@ -144,8 +146,8 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_create_collection_item &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
+ [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
+ [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
  [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

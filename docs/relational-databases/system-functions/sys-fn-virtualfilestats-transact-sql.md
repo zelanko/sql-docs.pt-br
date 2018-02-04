@@ -1,5 +1,5 @@
 ---
-title: fn_virtualfilestats (Transact-SQL) | Microsoft Docs
+title: sys.fn_virtualfilestats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/16/2016
 ms.prod: sql-non-specified
@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - fn_virtualfilestats_TSQL
 - fn_virtualfilestats
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - I/O [SQL Server], statistics
 - fn_virtualfilestats function
 - sys.fn_virtualfilestats function
 - statistical information [SQL Server], I/O
 ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f09bc032ffe4de52fcb7d9f46e4fbdd4450c8c14
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ad6314f64509388ac95c9b3ae12c8d7ce8c0f252
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +61,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|ID do banco de dados.|  
 |**FileId**|**smallint**|ID do arquivo.|  
-|**Carimbo de hora**|**bigint**|Carimbo de data/hora do banco de dados do qual os dados foram obtidos. **int** nas versões anteriores [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
+|**TimeStamp**|**bigint**|Carimbo de data/hora do banco de dados do qual os dados foram obtidos. **int** nas versões anteriores [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
 |**NumberReads**|**bigint**|Número de leituras emitidas no arquivo.|  
 |**BytesRead**|**bigint**|Número de bytes lidos emitidos no arquivo.|  
 |**IoStallReadMS**|**bigint**|Período de tempo total, em milissegundos, que os usuários esperaram pela conclusão das E/Ss de leitura no arquivo.|  
@@ -105,9 +107,9 @@ FROM fn_virtualfilestats(NULL,NULL);
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [DB_ID &#40; Transact-SQL &#41;](../../t-sql/functions/db-id-transact-sql.md)   
- [FILE_IDEX &#40; Transact-SQL &#41;](../../t-sql/functions/file-idex-transact-sql.md)   
+## <a name="see-also"></a>Consulte também  
+ [DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)   
+ [FILE_IDEX &#40;Transact-SQL&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_targetserver_TSQL
 - sp_help_targetserver
-dev_langs: TSQL
-helpviewer_keywords: sp_help_targetserver
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_targetserver
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1542bc54c6c40b44f0738e249b4f609ac36b3b67
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c45b6bc34b8003d78cd60916b9db22557fb0f4b1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +47,7 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@server_name=** ] **'***nome_do_servidor***'**  
+ [ **@server_name=** ] **'***server_name***'**  
  O nome do servidor do qual retornar informações. *server_name* é **nvarchar (30)**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -55,17 +58,17 @@ sp_help_targetserver
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**server_id**|**int**|Número de identificação do servidor.|  
-|**server_name**|**nvarchar (30)**|Nome de servidor.|  
-|**local**|**nvarchar (200)**|Localização do servidor especificado.|  
-|**time_zone_adjustment**|**int**|Ajuste de fuso horário, em horas, com base na hora de Greenwich (GMT).|  
+|**server_id**|**Int**|Número de identificação do servidor.|  
+|**server_name**|**nvarchar(30)**|Nome de servidor.|  
+|**location**|**nvarchar(200)**|Localização do servidor especificado.|  
+|**time_zone_adjustment**|**Int**|Ajuste de fuso horário, em horas, com base na hora de Greenwich (GMT).|  
 |**enlist_date**|**datetime**|Data do alistamento do servidor especificado.|  
 |**last_poll_date**|**datetime**|Data da última vez em que o servidor foi  sondado para trabalhos.|  
-|**status**|**int**|Status do servidor especificado.|  
-|**unread_instructions**|**int**|Indica se o servidor tem ordens não lidas. Se todas as linhas tiverem sido baixadas, esta coluna é **0**.|  
+|**status**|**Int**|Status do servidor especificado.|  
+|**unread_instructions**|**Int**|Indica se o servidor tem ordens não lidas. Se todas as linhas tiverem sido baixadas, esta coluna é **0**.|  
 |**local_time**|**datetime**|Data e hora locais do servidor de destino, baseadas na hora local do servidor de destino até a última sondagem do servidor mestre.|  
-|**enlisted_by_nt_user**|**nvarchar (100)**|Usuário de Microsoft Windows que inscreveu o servidor de destino.|  
-|**poll_interval**|**int**|Frequência em segundos com que o servidor de destino sonda o serviço Master SQLServer Agent para baixar trabalhos e carregar o status dos trabalhos.|  
+|**enlisted_by_nt_user**|**nvarchar(100)**|Usuário de Microsoft Windows que inscreveu o servidor de destino.|  
+|**poll_interval**|**Int**|Frequência em segundos com que o servidor de destino sonda o serviço Master SQLServer Agent para baixar trabalhos e carregar o status dos trabalhos.|  
   
 ## <a name="permissions"></a>Permissões  
  Para executar este procedimento armazenado, o usuário deve ser um membro da função de servidor fixa **sysadmin** .  
@@ -95,11 +98,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_add_targetservergroup &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
- [sp_delete_targetserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
- [sp_delete_targetservergroup &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
- [sp_update_targetservergroup &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
- [dbo.sysdownloadlist &#40; Transact-SQL &#41;](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
+ [sp_add_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
+ [sp_delete_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
+ [sp_delete_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
+ [sp_update_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
+ [dbo.sysdownloadlist &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

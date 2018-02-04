@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_monitor_secondary
 - sp_help_log_shipping_monitor_secondary_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_log_shipping_monitor_secondary
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_log_shipping_monitor_secondary
 ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 612571cd299a0474b1d405d8d9885487eba70a16
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 80c3f736037a763b1cda3ee37c92b443ecd07e87
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelplogshippingmonitorsecondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +49,7 @@ sp_help_log_shipping_monitor_secondary
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@secondary_server =** ] '*secondary_server*'  
+ [ **@secondary_server =** ] '*secondary_server*'  
  É o nome do servidor secundário. *secondary_server* é **sysname**, sem padrão.  
   
  [  **@secondary_database =** ] '*secondary_database*'  
@@ -65,7 +68,7 @@ sp_help_log_shipping_monitor_secondary
 |**primary_server**|Nome da instância primária do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs.|  
 |**primary_database**|O nome do banco de dados primário na configuração de envio de log.|  
 |**restore_threshold**|Número de minutos permitidos a decorrer entre operações de restauração antes que um alerta seja gerado.|  
-|**alerta de limite**|Alerta a ser emitido quando o limite da restauração for excedido.|  
+|**threshold_alert**|Alerta a ser emitido quando o limite da restauração for excedido.|  
 |**threshold_alert_enabled**|Determina se os alertas de limite de restauração estão habilitados.<br /><br /> 1 = Habilitado.<br /><br /> 0 = Desabilitado.|  
 |**last_copied_file**|O nome do último arquivo de backup copiado para o servidor secundário.|  
 |**last_copied_date**|A hora e a data da última operação de cópia para o servidor secundário.|  
@@ -75,14 +78,14 @@ sp_help_log_shipping_monitor_secondary
 |**last_restored_date_utc**|Hora e data da última operação de restauração no banco de dados secundário, expressa em UTC (Coordinated Universal Time).|  
 |**history_retention_period**|O período em minutos em que os registros de histórico de envio de logs são retidos em um determinado banco de dados secundário antes de serem excluídos.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_help_log_shipping_monitor_secondary** deve ser executado a partir de **mestre** banco de dados no servidor monitor.  
   
 ## <a name="permissions"></a>Permissões  
  Somente membros do **sysadmin** função fixa de servidor pode executar esse procedimento.  
   
 ## <a name="see-also"></a>Consulte também  
- [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Sobre o envio de logs &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

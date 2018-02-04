@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CHANGETABLE_TSQL
 - CHANGETABLE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CHANGETABLE
 - change tracking [SQL Server], CHANGETABLE
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 233a613024b4e216501ea7baaaf9a363325e5998
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: fd13db35ee0a53d1c752b3ed891ed6c0fedeb557
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +53,7 @@ CHANGETABLE (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- ALTERAÇÕES *tabela* , *last_sync_version*  
+ CHANGES *table* , *last_sync_version*  
  Retorna informações de controle de todas as alterações em uma tabela que ocorreu desde a versão que é especificada pelo *last_sync_version*.  
   
  *table*  
@@ -103,7 +105,7 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Valor de versão associado à última alteração efetuada na linha|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|Valores de versão associados à última operação de inserção.|  
-|SYS_CHANGE_OPERATION|**nchar (1)**|Especifica o tipo de alteração:<br /><br /> **U** = atualização<br /><br /> **Eu** = Insert<br /><br /> **D** = excluir|  
+|SYS_CHANGE_OPERATION|**nchar(1)**|Especifica o tipo de alteração:<br /><br /> **U** = atualização<br /><br /> **Eu** = Insert<br /><br /> **D** = excluir|  
 |SYS_CHANGE_COLUMNS|**varbinary(4100)**|Lista as colunas alteradas desde a last_sync_version (a linha de base). Observe que as colunas computadas nunca são listadas como alteradas.<br /><br /> O valor será NULL quando qualquer uma das condições a seguir for verdadeira:<br /><br /> O controle de alterações da coluna não está habilitado.<br /><br /> A operação é de inserção ou exclusão.<br /><br /> Todas as colunas de chave não primária foram atualizadas em uma operação. Este valor binário não deve ser interpretado diretamente. Em vez disso, para interpretá-lo, use [change_tracking_is_column_in_mask ()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md).|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Alterar as informações de contexto que você pode opcionalmente especificar usando o [WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) cláusula como parte de uma instrução INSERT, UPDATE ou DELETE.|  
 |\<valor da coluna de chave primária >|Igual às colunas de tabela de usuário|Os valores de chave primária da tabela controlada. Esses valores identificam exclusivamente cada linha da tabela do usuário.|  
@@ -214,11 +216,11 @@ WHERE
         0);  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Funções do controle de alterações &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [Controle de alterações de dados &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
- [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40; Transact-SQL &#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
+ [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
  [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40; Transact-SQL &#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
+ [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
   
   

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritytable
 - semanticsimilaritytable_TSQL
-dev_langs: TSQL
-helpviewer_keywords: semanticsimilaritytable function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- semanticsimilaritytable function
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2944708e70d9cc71cddcad33ff060df8a223530d
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8ba25daf71db106e5ecd8877e83edda6e43a5286
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -75,10 +78,10 @@ SEMANTICSIMILARITYTABLE
   
 |Column_name|Tipo|Description|  
 |------------------|----------|-----------------|  
-|**source_column_id**|**int**|ID da coluna da qual um documento de origem foi usado para localizar documentos semelhantes.<br /><br /> Consulte as funções COL_NAME e COLUMNPROPERTY para obter detalhes sobre como recuperar o nome da coluna do column_id e vice-versa.|  
-|**matched_column_id**|**int**|ID da coluna da qual um documento similar foi localizado.<br /><br /> Consulte as funções COL_NAME e COLUMNPROPERTY para obter detalhes sobre como recuperar o nome da coluna do column_id e vice-versa.|  
+|**source_column_id**|**Int**|ID da coluna da qual um documento de origem foi usado para localizar documentos semelhantes.<br /><br /> Consulte as funções COL_NAME e COLUMNPROPERTY para obter detalhes sobre como recuperar o nome da coluna do column_id e vice-versa.|  
+|**matched_column_id**|**Int**|ID da coluna da qual um documento similar foi localizado.<br /><br /> Consulte as funções COL_NAME e COLUMNPROPERTY para obter detalhes sobre como recuperar o nome da coluna do column_id e vice-versa.|  
 |**matched_document_key**|**\***<br /><br /> Essa chave corresponde ao tipo da chave exclusiva na tabela de origem.|Valor da chave exclusiva da extração de texto completo e semântica do documento ou linha que foi localizada como similar ao documento especificado na consulta.|  
-|**pontuação**|**REAL**|Um valor relativo da similaridade deste documento em sua relação com todos os outros documentos similares.<br /><br /> O valor é um valor decimal fracionário no intervalo de [0,0, 1,0] onde uma pontuação mais alta representa uma correspondência mais próxima e 1,0 é uma pontuação perfeita.|  
+|**score**|**REAL**|Um valor relativo da similaridade deste documento em sua relação com todos os outros documentos similares.<br /><br /> O valor é um valor decimal fracionário no intervalo de [0,0, 1,0] onde uma pontuação mais alta representa uma correspondência mais próxima e 1,0 é uma pontuação perfeita.|  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Para obter mais informações, consulte [localizar documentos semelhantes e relacionados com a pesquisa semântica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  

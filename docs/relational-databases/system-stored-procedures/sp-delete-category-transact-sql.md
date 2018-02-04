@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_category_TSQL
 - sp_delete_category
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_category
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2cc7a85623daf6a21c65750b9e15a3d6886f67ad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d2ce1cd0406cbb69b6dd280bc8c36fdbd31c5d2e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +47,16 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@class =**] **'***classe***'**  
+ [ **@class =**] **'***class***'**  
  A classe da categoria. *classe* é **varchar(8)**, sem padrão e deve ter um destes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**TRABALHO**|Exclui uma categoria de trabalho.|  
-|**ALERTA**|Exclui uma categoria de alerta.|  
+|**JOB**|Exclui uma categoria de trabalho.|  
+|**ALERT**|Exclui uma categoria de alerta.|  
 |**OPERADOR**|Exclui uma categoria de operador.|  
   
- [  **@name =**] **'***nome***'**  
+ [ **@name =**] **'***name***'**  
  O nome da categoria a ser removida. *nome* é **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -62,7 +65,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nenhuma  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_delete_category** deve ser executado a partir de **msdb** banco de dados.  
   
  A exclusão de uma categoria recategoriza quaisquer trabalhos, alertas ou operadores nessa categoria para a categoria padrão da classe.  
@@ -84,9 +87,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_add_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_help_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
- [sp_update_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+ [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

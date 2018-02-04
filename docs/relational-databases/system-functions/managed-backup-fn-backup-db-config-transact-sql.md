@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - smart_admin.fn_backup_db_config_TSQL
 - fn_backup_db_config
 - fn_backup_db_config_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - smart_admin.fn_backup_db_config
 - fn_backup_db_config
 ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a5c1d76f634a7d6304a17b5017d46c14022116d
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d18a24bdf8021fd27df0ec51e4937e80ae9c0516
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +64,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 |credential_name|SYSNAME|O nome da credencial de SQL usado para realizar a autenticação na conta de armazenamento. O valor NULL indica que nenhuma credencial do SQL foi definida.|  
 |retention_days|INT|O período de retenção atual em dias. O valor NULL indica que o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] nunca foi configurado para esse banco de dados.|  
 |is_smart_backup_enabled|INT|Indica se o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está habilitado no momento para esse banco de dados. Um valor 1 indica que o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está habilitado no momento e um valor 0 indica que o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está desabilitado para este banco de dados.|  
-|storage_url|NVARCHAR (1024)|A URL da conta de armazenamento.|  
+|storage_url|NVARCHAR(1024)|A URL da conta de armazenamento.|  
 |Encryption_algorithm|NCHAR(20)|Retorna o algoritmo de criptografia atual a ser usado na criptografia do backup.|  
 |Encryptor_type|NCHAR(15)|Retorna a configuração do criptografador: certificado ou chave assimétrica.|  
 |Encryptor_name|NCHAR(max_length_of_cert/asymm_key_name)|O nome do certificado ou da chave assimétrica.|  

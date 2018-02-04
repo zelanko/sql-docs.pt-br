@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_schedule_TSQL
 - sp_attach_schedule
-dev_langs: TSQL
-helpviewer_keywords: sp_attach_schedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_attach_schedule
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8359436d7e220c7bef3068ad9e73ded455ea497
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d78d6c73d28325771460a1c055a6fb0b491c264c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,25 +49,25 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  O número de identificação do trabalho para o qual a agenda é adicionada. *job_id*é **uniqueidentifier**, com um padrão NULL.  
   
- [  **@job_name =** ] **'***job_name***'**  
+ [ **@job_name =** ] **'***job_name***'**  
  O nome do trabalho ao qual a agenda é adicionada. *job_name*é **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  O *job_id* ou *job_name* devem ser especificados, mas não é possível especificar ambos.  
   
- [  **@schedule_id =** ] *schedule_id*  
+ [ **@schedule_id =** ] *schedule_id*  
  O número de identificação da agenda a ser definida para o trabalho. *schedule_id*é **int**, com um padrão NULL.  
   
- [  **@schedule_name =** ] **'***schedule_name***'**  
+ [ **@schedule_name =** ] **'***schedule_name***'**  
  O nome da agenda a ser definida para o trabalho. *schedule_name*é **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
 >  O *schedule_id* ou *schedule_name* devem ser especificados, mas não é possível especificar ambos.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A agenda e o trabalho devem ter o mesmo proprietário.  
   
  Uma agenda pode ser definida para mais de um trabalho. Um trabalho pode ser executado em mais de uma agenda.  
@@ -84,7 +87,7 @@ sp_attach_schedule
   
  Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifica se o usuário possui o trabalho e a agenda.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifica se o usuário possui o trabalho e a agenda.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma agenda chamado `NightlyJobs`. Os trabalhos que usam essa agenda são executados diariamente quando a hora no servidor é `01:00`. O exemplo anexa a agenda ao trabalho `BackupDatabase` e ao trabalho `RunReports`.  
@@ -115,8 +118,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_detach_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_proxy
 - sp_help_proxy_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_proxy
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf5dd28e001919a43d39685e2e50eaeb03e877af
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 19f4df348037b923ac5e7daf643b5ed114256324
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,18 +50,18 @@ sp_help_proxy
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@proxy_id**  =] *id*  
+ [ **@proxy_id** = ] *id*  
  O número de identificação de proxy do proxy para o qual listar informações. O *proxy_id* é **int**, com um padrão NULL. Ambos o *id* ou *proxy_name* pode ser especificado.  
   
- [  **@proxy_name**  =] **'***proxy_name***'**  
+ [ **@proxy_name** = ] **'***proxy_name***'**  
  O nome do proxy para o qual listar informações. O *proxy_name* é **sysname**, com um padrão NULL. Ambos o *id* ou *proxy_name* pode ser especificado.  
   
- [  **@subsystem_name**  =] '*subsystem_name*'  
+ [ **@subsystem_name** = ] '*subsystem_name*'  
  O nome do subsistema para o qual listar proxies. O *subsystem_name* é **sysname**, com um padrão NULL. Quando *subsystem_name* for especificado, *nome* também deve ser especificado.  
   
  A tabela a seguir lista os valores padrão para cada subsistema.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |ActiveScripting|Script do ActiveX|  
 |CmdExec|Sistema Operacional (CmdExec)|  
@@ -72,7 +75,7 @@ sp_help_proxy
 |Dts|Execução do pacote SSIS|  
 |PowerShell|Scripts PowerShell|  
   
- [  **@name**  =] '*nome*'  
+ [ **@name** = ] '*name*'  
  O nome de um login do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o qual listar proxies. O nome é **nvarchar (256)**, com um padrão NULL. Quando *nome* for especificado, *subsystem_name* também deve ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -82,16 +85,16 @@ sp_help_proxy
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**proxy_id**|**int**|Número de identificação de proxy.|  
+|**proxy_id**|**Int**|Número de identificação de proxy.|  
 |**name**|**sysname**|O nome do proxy.|  
 |**credential_identity**|**sysname**|O nome de domínio de Microsoft Windows e o nome de usuário para a credencial associada ao proxy.|  
-|**habilitado**|**tinyint**|Se o proxy está habilitado. { **0** = não habilitado, **1** = habilitado}|  
-|**Descrição**|**nvarchar (1024)**|A descrição para esse proxy.|  
+|**enabled**|**tinyint**|Se o proxy está habilitado. { **0** = não habilitado, **1** = habilitado}|  
+|**description**|**nvarchar(1024)**|A descrição para esse proxy.|  
 |**user_sid**|**varbinary(85)**|A identificação de segurança do Windows do usuário do Windows para esse proxy.|  
-|**credential_id**|**int**|O identificador para a credencial associada a esse proxy.|  
-|**credential_identity_exists**|**int**|Especifica se credential_identity existe. {0 = não existe, 1 = existe}|  
+|**credential_id**|**Int**|O identificador para a credencial associada a esse proxy.|  
+|**credential_identity_exists**|**Int**|Especifica se credential_identity existe. {0 = não existe, 1 = existe}|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando nenhum parâmetro for fornecido, **sp_help_proxy** lista informações para todos os proxies na instância.  
   
  Para determinar quais proxies um login podem usar para um determinado subsistema, especifique *nome* e *subsystem_name*. Quando esses argumentos são fornecidos, **sp_help_proxy** lista os proxies que o logon especificado pode acessar e que pode ser usado para o subsistema especificado.  
@@ -131,7 +134,7 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [Agente do SQL Server armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_proxy &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
+ [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
+ [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
   
   

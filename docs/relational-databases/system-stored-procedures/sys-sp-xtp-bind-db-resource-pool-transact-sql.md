@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sp_xtp_bind_db_resource_pool
 - sys.sp_xtp_bind_db_resource_pool_TSQL
 - sys.sp_xtp_bind_db_resource_pool
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_xtp_bind_db_resource_pool
 - sys.sp_xtp_bind_db_resource_pool
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
-caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8ca783fe598e05a83c32a22e821f9b0ce48760c
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8bcac671ebd335be8e6f22a1385d0c038e61e365
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +72,7 @@ Database 'Hekaton_DB213' does not exist. Make sure that the name is entered corr
 ```  
   
 **Banco de dados é um banco de dados do sistema**  
- As tabelas do [!INCLUDE[hek_2](../../includes/hek-2-md.md)] não podem ser criadas em bancos de dados do sistema.  Portanto, isso é inválido para criar uma associação de memória do [!INCLUDE[hek_2](../../includes/hek-2-md.md)] para esse banco de dados.  O seguinte erro é retornado.  
+ [!INCLUDE[hek_2](../../includes/hek-2-md.md)] não não possível criar tabelas em bancos de dados do sistema.  Portanto, isso é inválido para criar uma associação de memória do [!INCLUDE[hek_2](../../includes/hek-2-md.md)] para esse banco de dados.  O seguinte erro é retornado.  
 *Database_name %s refere-se a um banco de dados do sistema.  Pools de recursos só podem ser acoplados a um banco de dados do usuário.*  
   
 ```  
@@ -97,7 +99,7 @@ Database 'Hekaton_DB' cannot be explicitly bound to the resource pool 'internal'
 ```  
   
 **Banco de dados já está associado a outro Pool de recursos**  
- Um banco de dados pode estar associado a apenas um pool de recursos de cada vez. As associações de banco de dados a pools de recursos devem ser explicitamente removidas antes de serem associadas a outro pool. Consulte [sys.sp_xtp_unbind_db_resource_pool &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md).  
+ Um banco de dados pode estar associado a apenas um pool de recursos de cada vez. As associações de banco de dados a pools de recursos devem ser explicitamente removidas antes de serem associadas a outro pool. See [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md).  
 *Banco de dados %s já está associado ao pool de recursos %s.  Desassocie-o antes de criar uma nova associação.*  
   
 ```  
@@ -156,7 +158,7 @@ END
   
 -   Requer a permissão CONTROL SERVER.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Associar um banco de dados com tabelas com otimização de memória a um pool de recursos](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [sys.sp_xtp_unbind_db_resource_pool &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   

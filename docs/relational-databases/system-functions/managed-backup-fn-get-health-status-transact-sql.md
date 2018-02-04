@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - smart_admin.fn_get_health_status_TSQL
 - smart_admin.fn_get_health_status
 - fn_get_health_status
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - smart_admin.fn_get_health_status
 - fn_get_health_status
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c4314d23f344df87d270f526a64e4d6d0f033dab
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 35cc393aa4521079e44c1dffee403b693a020b23
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -59,13 +61,13 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|INT|Número de erros de conexão quando o programa se conectar à conta de armazenamento do Windows Azure.|  
-|number_of_sql_errors|INT|O número de erros retornados quando o programa se conectar ao SQL Server Engine.|  
-|number_of_invalid_credential_errors|INT|O número de erros retornados quando o programa tentar realizar a autenticação usando Credenciais SQL.|  
-|number_of_other_errors|INT|Número de erros em outras categorias, além de conectividade, SQL ou credencial.|  
-|number_of_corrupted_or_deleted_backups|INT|Número de arquivos de backup excluídos ou corrompidos.|  
-|number_of_backup_loops|INT|O número de vezes que o agente de backup verifica todos os bancos de dados configurados com o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
-|number_of_retention_loops|INT|O número de vezes que os bancos de dados são verificados para avaliar o período de retenção definido.|  
+|number_of_storage_connectivity_errors|int|Número de erros de conexão quando o programa se conectar à conta de armazenamento do Windows Azure.|  
+|number_of_sql_errors|int|O número de erros retornados quando o programa se conectar ao SQL Server Engine.|  
+|number_of_invalid_credential_errors|int|O número de erros retornados quando o programa tentar realizar a autenticação usando Credenciais SQL.|  
+|number_of_other_errors|int|Número de erros em outras categorias, além de conectividade, SQL ou credencial.|  
+|number_of_corrupted_or_deleted_backups|int|Número de arquivos de backup excluídos ou corrompidos.|  
+|number_of_backup_loops|int|O número de vezes que o agente de backup verifica todos os bancos de dados configurados com o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|number_of_retention_loops|int|O número de vezes que os bancos de dados são verificados para avaliar o período de retenção definido.|  
   
 ## <a name="best-practices"></a>Práticas recomendadas  
  Essas contagens agregadas podem ser usadas para monitorar a integridade do sistema. Por exemplo, se a coluna number_ of_retention_loops for 0 por 30 minutos, possivelmente o gerenciamento de retenção está demorando ou talvez nem esteja funcionando corretamente. As colunas de erro diferentes de zero podem indicar problemas, e os logs dos Eventos estendidos devem ser verificados para detectar qualquer problema. Como alternativa, use o procedimento armazenado **managed_backup.sp_get_backup_diagnostics** para obter uma lista dos eventos estendidos para localizar os detalhes do erro.  

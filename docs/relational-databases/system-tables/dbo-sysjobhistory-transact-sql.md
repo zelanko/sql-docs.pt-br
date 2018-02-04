@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dbo.sysjobhistory
 - sysjobhistory
 - sysjobhistory_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysjobhistory system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysjobhistory system table
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1d4790ab20c01be27868696b989ed8228acec6c6
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 70897838b8fa8ce10c83308829cd1f5cba87e40d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,21 +42,21 @@ ms.lasthandoff: 01/02/2018
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**instance_id**|**int**|Identificador exclusivo da linha.|  
+|**instance_id**|**Int**|Identificador exclusivo da linha.|  
 |**job_id**|**uniqueidentifier**|ID do trabalho.|  
-|**step_id**|**int**|ID da etapa no trabalho.|  
+|**step_id**|**Int**|ID da etapa no trabalho.|  
 |**step_name**|**sysname**|Nome da etapa.|  
-|**sql_message_id**|**int**|ID de qualquer mensagem de erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornada se o trabalho falhar.|  
-|**sql_severity**|**int**|Severidade de qualquer erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**sql_message_id**|**Int**|ID de qualquer mensagem de erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornada se o trabalho falhar.|  
+|**sql_severity**|**Int**|Severidade de qualquer erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**message**|**nvarchar(4000)**|Texto, se houver, de um erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**run_status**|**int**|O status da execução do trabalho:<br /><br /> **0** = falha<br /><br /> **1** = foi bem-sucedida<br /><br /> **2** = repetir<br /><br /> **3** = cancelada|  
-|**run_date**|**int**|Data do início da execução do trabalho ou da etapa. Para um histórico Em andamento, esta é a data/hora em que o histórico foi gravado.|  
-|**run_time**|**int**|Hora do início do trabalho ou da etapa.|  
-|**run_duration**|**int**|Tempo decorrido na execução do trabalho ou da etapa no **HHMMSS** formato.|  
-|**operator_id_emailed**|**int**|ID do operador notificado quando o trabalho foi concluído.|  
-|**operator_id_netsent**|**int**|ID do operador notificado por uma mensagem quando o trabalho foi concluído.|  
-|**operator_id_paged**|**int**|ID do operador notificado por pager quando o trabalho foi concluído.|  
-|**retries_attempted**|**int**|Número de tentativas repetidas para o trabalho ou a etapa.|  
+|**run_status**|**Int**|O status da execução do trabalho:<br /><br /> **0** = falha<br /><br /> **1** = foi bem-sucedida<br /><br /> **2** = repetir<br /><br /> **3** = cancelada|  
+|**run_date**|**Int**|Data do início da execução do trabalho ou da etapa. Para um histórico Em andamento, esta é a data/hora em que o histórico foi gravado.|  
+|**run_time**|**Int**|Hora do início do trabalho ou da etapa.|  
+|**run_duration**|**Int**|Tempo decorrido na execução do trabalho ou da etapa no **HHMMSS** formato.|  
+|**operator_id_emailed**|**Int**|ID do operador notificado quando o trabalho foi concluído.|  
+|**operator_id_netsent**|**Int**|ID do operador notificado por uma mensagem quando o trabalho foi concluído.|  
+|**operator_id_paged**|**Int**|ID do operador notificado por pager quando o trabalho foi concluído.|  
+|**retries_attempted**|**Int**|Número de tentativas repetidas para o trabalho ou a etapa.|  
 |**server**|**sysname**|Nome do servidor no qual o trabalho foi executado.|  
   
   ## <a name="example"></a>Exemplo

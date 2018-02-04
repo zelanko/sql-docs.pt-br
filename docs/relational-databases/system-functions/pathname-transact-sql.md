@@ -1,5 +1,5 @@
 ---
-title: Nome do caminho (Transact-SQL) | Microsoft Docs
+title: PathName (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - PathName_TSQL
 - PathName
-dev_langs: TSQL
-helpviewer_keywords: PathName FILESTREAM [SQL Server]
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- PathName FILESTREAM [SQL Server]
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f37b03f60063643472b325c4c3f61e87078794f8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 38687ee01f37cd3e7e8d15a4137dbdbb2c7ee82f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +54,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *@option*  
  Um inteiro [expressão](../../t-sql/language-elements/expressions-transact-sql.md) que define como o componente de servidor do caminho deve ser formatado. *@option*pode ser um dos valores a seguir. O padrão é 0.  
   
-|Valor|Description|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |0|Retorna o nome do servidor convertido no formato de BIOS, por exemplo: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|Retorna o nome do servidor sem conversão, por exemplo: `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -64,7 +67,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Quando o banco de dados pertence a um de disponibilidade AlwaysOn de grupo, em seguida, o valor de *use_replica_computer_name* tem o seguinte efeito na saída de **PathName** função:  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Não especificado.|A função retorna o VNN (nome de rede virtual) no caminho.|  
 |0|A função retorna o VNN (nome de rede virtual) no caminho.|  
@@ -151,9 +154,9 @@ GO
 DROP DATABASE PathNameDB;  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Objeto binário grande &#40;Blob&#41; Dados &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
- [GET_FILESTREAM_TRANSACTION_CONTEXT &#40; Transact-SQL &#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
+ [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [Acessar dados do FILESTREAM com OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
   

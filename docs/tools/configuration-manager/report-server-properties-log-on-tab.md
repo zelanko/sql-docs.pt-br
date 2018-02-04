@@ -8,23 +8,25 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f54be594-f290-4db2-bf18-fd2521728a4a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1b29eb621016e256cc0e5633de0e34089432571
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: f0e9a3e76e2ac271926170afc2bd359864d679a3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="report-server-properties-log-on-tab"></a>Propriedades do servidor de relatório (guia Fazer Logon)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use o **logon** guia do **propriedades do servidor de relatório** caixa de diálogo para especificar a conta usada pelo serviço do servidor de relatório e para iniciar e parar o serviço.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Use a guia **Fazer Logon** da caixa de diálogo **Propriedades de Servidor de Relatório** para especificar a conta usada pelo serviço Servidor de Relatório e para iniciar e parar o serviço.  
   
 ## <a name="options"></a>Opções  
  **Conta Sistema Local**  

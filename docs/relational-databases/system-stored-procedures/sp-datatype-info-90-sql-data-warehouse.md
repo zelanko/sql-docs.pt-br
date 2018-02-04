@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71d31ffc47781bac881e8d1af0116d3adf0731d0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0989c6224160fdad3059083358eb2ef84b5990e3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -41,10 +43,10 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@data_type=** ] *data_type*  
+ [ **@data_type=** ] *data_type*  
  É o número de código do tipo de dados especificado. Para obter uma lista de todos os tipos de dados, omita este parâmetro. *data_type* é **int**, com um padrão de 0.  
   
- [  **@ODBCVer=** ] *odbc_version*  
+ [ **@ODBCVer=** ] *odbc_version*  
  É a versão do ODBC usada. *odbc_version* é **tinyint**, com um padrão de 2.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -56,10 +58,10 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |-----------------|---------------|-----------------|  
 |TYPE_NAME|**sysname**|Tipo de dados dependente do DBMS.|  
 |DATA_TYPE|**smallint**|Código do tipo ODBC para o qual são mapeadas todas as colunas deste tipo.|  
-|PRECISION|**int**|Precisão máxima do tipo de dados na fonte de dados. NULL é retornado para os tipos de dados para os quais a precisão não é aplicável. O valor de retorno da coluna PRECISION está na base 10.|  
-|LITERAL_PREFIX|**varchar (**32**)**|Caractere ou caracteres usados antes de uma constante. Por exemplo, uma aspa simples (**'**) para tipos de caractere e 0x para binário.|  
-|LITERAL_SUFFIX|**varchar (**32**)**|Caractere ou caracteres usados para terminar uma constante. Por exemplo, uma aspa simples (**'**) para tipos de caractere e nenhuma aspa para binário.|  
-|CREATE_PARAMS|**varchar (**32**)**|Descrição dos parâmetros de criação para este tipo de dados. Por exemplo, **decimal** é "precisão, escala", **float** for NULL, e **varchar** é "max_length".|  
+|PRECISION|**Int**|Precisão máxima do tipo de dados na fonte de dados. NULL é retornado para os tipos de dados para os quais a precisão não é aplicável. O valor de retorno da coluna PRECISION está na base 10.|  
+|LITERAL_PREFIX|**varchar(**32**)**|Caractere ou caracteres usados antes de uma constante. Por exemplo, uma aspa simples (**'**) para tipos de caractere e 0x para binário.|  
+|LITERAL_SUFFIX|**varchar(**32**)**|Caractere ou caracteres usados para terminar uma constante. Por exemplo, uma aspa simples (**'**) para tipos de caractere e nenhuma aspa para binário.|  
+|CREATE_PARAMS|**varchar(**32**)**|Descrição dos parâmetros de criação para este tipo de dados. Por exemplo, **decimal** é "precisão, escala", **float** for NULL, e **varchar** é "max_length".|  
 |NULLABLE|**smallint**|Especifica possibilidade de nulidade:<br /><br /> 1 = Permite valores nulos.<br /><br /> 0 = Não permite valores nulos.|  
 |CASE_SENSITIVE|**smallint**|Especifica diferenciação de maiúsculas e minúsculas.<br /><br /> 1 = Todas as colunas deste tipo fazem diferenciação de maiúsculas e minúsculas (para agrupamentos).<br /><br /> 0 = Todas as colunas deste tipo não fazem distinção entre maiúsculas e minúsculas.|  
 |SEARCHABLE|**smallint**|Especifica o recurso de pesquisa do tipo de coluna:<br /><br /> 1 = Não pode ser pesquisado.<br /><br /> 2 = Pesquisável com LIKE.<br /><br /> 3 = Pesquisável com WHERE.<br /><br /> 4 = Pesquisável com WHERE ou LIKE.|  
@@ -71,11 +73,11 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |MAXIMUM_SCALE|**smallint**|Escala máxima do tipo de dados na fonte de dados. Se a escala máxima não estiver definida separadamente na fonte de dados, mas em vez disso estiver definida como sendo a mesma que a precisão máxima, esta coluna conterá o mesmo valor que a coluna PRECISION.|  
 |SQL_DATA_TYPE|**smallint**|Valor do tipo de dados SQL conforme exibido no campo TYPE do descritor. Essa coluna é igual à coluna DATA_TYPE, exceto para o **datetime** e ANSI **intervalo** tipos de dados. Esse campo sempre retorna um valor.|  
 |SQL_DATETIME_SUB|**smallint**|**DateTime** ou ANSI **intervalo** subcódigo se o valor de SQL_DATA_TYPE for SQL_DATETIME ou SQL_INTERVAL. Para tipos de dados diferente de **datetime** e ANSI **intervalo**, este campo é NULL.|  
-|NUM_PREC_RADIX|**int**|Número de bits ou dígitos para calcular o número máximo que uma coluna pode conter. Se o tipo de dados for numérico aproximado, esta coluna conterá o valor 2 para indicar vários bits. Para tipos numéricos exatos, esta coluna contém o valor 10 para indicar vários dígitos decimais. Caso contrário, esta coluna será NULL. Ao combinar a precisão com a base, o aplicativo pode calcular o número máximo que a coluna pode conter.|  
+|NUM_PREC_RADIX|**Int**|Número de bits ou dígitos para calcular o número máximo que uma coluna pode conter. Se o tipo de dados for numérico aproximado, esta coluna conterá o valor 2 para indicar vários bits. Para tipos numéricos exatos, esta coluna contém o valor 10 para indicar vários dígitos decimais. Caso contrário, esta coluna será NULL. Ao combinar a precisão com a base, o aplicativo pode calcular o número máximo que a coluna pode conter.|  
 |INTERVAL_PRECISION|**smallint**|Valor de intervalo de precisão principal se *data_type* é **intervalo**; caso contrário, NULL.|  
 |USERTYPE|**smallint**|**usertype** valor da tabela systypes.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  sp_datatype_info é equivalente à SQLGetTypeInfo no ODBC. Os resultados retornados são ordenados por DATA_TYPE e depois pela proximidade com que o tipo de dados é mapeado ao tipo de dados ODBC SQL correspondente.  
   
 ## <a name="permissions"></a>Permissões  

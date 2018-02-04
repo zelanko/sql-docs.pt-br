@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_profileaccount_sp
 - sysmail_add_profileaccount_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_add_profileaccount_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_add_profileaccount_sp
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
-caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fae8f7a99a01260eeee820fd85b4c3c7c61d6975
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a7755f8285ad6a9afcab7a79ce1eecc777fd4e1f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailaddprofileaccountsp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,25 +48,25 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@profile_id**  =] *profile_id*  
+ [ **@profile_id** = ] *profile_id*  
  A ID do perfil no qual adicionar a conta. *profile_id* é **int**, com um padrão NULL. Ambos os *profile_id* ou o *profile_name* deve ser especificado.  
   
- [  **@profile_name**  =] **'***profile_name***'**  
+ [ **@profile_name** = ] **'***profile_name***'**  
  O nome do perfil no qual adicionar a conta. *profile_name* é **sysname**, com um padrão NULL. Ambos os *profile_id* ou o *profile_name* deve ser especificado.  
   
- [  **@account_id**  =] *account_id*  
+ [ **@account_id** = ] *account_id*  
  A ID da conta a ser adicionada ao perfil. *account_id* é **int**, com um padrão NULL. Ambos o *account_id* ou *account_name* deve ser especificado.  
   
- [  **@account_name**  =] **'***account_name***'**  
+ [ **@account_name** = ] **'***account_name***'**  
  O nome da conta a ser adicionada ao perfil. *account_name* é **sysname**, com um padrão NULL. Ambos o *account_id* ou *account_name* deve ser especificado.  
   
- [  **@sequence_number**  =] *sequence_number*  
+ [ **@sequence_number** = ] *sequence_number*  
  O número de sequência da conta dentro do perfil. *sequence_number* é **int**, sem padrão. O número de sequência determina a ordem na qual as contas são usadas no perfil.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O perfil e a conta já devem existir. Caso contrário, o procedimento armazenado retornará um erro.  
   
  Observe que este procedimento armazenado não altera o número de sequência de uma conta já associada ao perfil especificado. Para obter mais informações sobre como atualizar o número de sequência de uma conta, consulte [sysmail_update_profileaccount_sp &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md).  

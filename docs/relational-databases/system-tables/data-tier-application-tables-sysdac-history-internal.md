@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysdac_history_internal
 - sysdac_history_internal_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysdac_history_internal
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysdac_history_internal
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae5fd7a9f447d8658deb520964e192e29ab67a49
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: b8b8d735800315011eea29b123c8dc3e1652732a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>Tabelas de aplicativo da camada de dados - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,24 +38,24 @@ ms.lasthandoff: 01/02/2018
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**action_id**|**int**|Identificador da ação|  
-|**sequence_id**|**int**|Identifica uma etapa dentro de uma ação.|  
+|**action_id**|**Int**|Identificador da ação|  
+|**sequence_id**|**Int**|Identifica uma etapa dentro de uma ação.|  
 |**instance_id**|**uniqueidentifier**|Identificador da instância do DAC. Esta coluna pode ser unida a **instance_id** coluna [dbo.sysdac_instances &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
-|**action_type**|**tinyint**|Identificador do tipo da ação:<br /><br /> **0** = implantar<br /><br /> **1** = criar<br /><br /> **2** = renomear<br /><br /> **3** = desanexar<br /><br /> **4** = excluir|  
-|**action_type_name**|**varchar (19)**|Nome do tipo de ação.<br /><br /> **implantar**<br /><br /> **criar**<br /><br /> **Renomear**<br /><br /> **Desanexar**<br /><br /> **Excluir**|  
+|**action_type**|**tinyint**|Identificador do tipo da ação:<br /><br /> **0** = deploy<br /><br /> **1** = criar<br /><br /> **2** = renomear<br /><br /> **3** = detach<br /><br /> **4** = excluir|  
+|**action_type_name**|**varchar(19)**|Nome do tipo de ação.<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|Identificador do tipo de objeto afetado pela ação:<br /><br /> **0** = dacpac<br /><br /> **1** = logon<br /><br /> **2** = banco de dados|  
-|**dac_object_type_name**|**varchar(8)**|Nome do tipo de objeto afetado pela ação:<br /><br /> **dacpac** = instância do DAC<br /><br /> **logon**<br /><br /> **banco de dados**|  
+|**dac_object_type_name**|**varchar(8)**|Nome do tipo de objeto afetado pela ação:<br /><br /> **dacpac** = instância do DAC<br /><br /> **login**<br /><br /> **banco de dados**|  
 |**action_status**|**tinyint**|Código que identifica o status atual da ação:<br /><br /> **0** = pendente<br /><br /> **1** = êxito<br /><br /> **2** = falha|  
-|**action_status_name**|**varchar(11)**|Status atual da ação:<br /><br /> **pendente**<br /><br /> **êxito**<br /><br /> **Falha**|  
-|**Necessário**|**bit**|Usada pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] ao reverter uma operação de DAC.|  
+|**action_status_name**|**varchar(11)**|Status atual da ação:<br /><br /> **pending**<br /><br /> **success**<br /><br /> **fail**|  
+|**Required**|**bit**|Usada pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] ao reverter uma operação de DAC.|  
 |**dac_object_name_pretran**|**sysname**|Nome do objeto antes que a transação que contém a ação seja confirmada. Usado somente para bancos de dados e logons.|  
 |**dac_object_name_posttran**|**sysname**|Nome do objeto depois que a transação que contém a ação seja confirmada. Usado somente para bancos de dados e logons.|  
-|**em sqlscript**|**nvarchar(max)**|Script [!INCLUDE[tsql](../../includes/tsql-md.md)] que implementa uma ação em um banco de dados ou logon.|  
-|**carga**|**varbinary(max)**|Definição de pacote do DAC salva em uma cadeia de caracteres codificada binária.|  
+|**sqlscript**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] script que implementa uma ação em um banco de dados ou logon.|  
+|**payload**|**varbinary(max)**|Definição de pacote do DAC salva em uma cadeia de caracteres codificada binária.|  
 |**Comentários**|**varchar(max)**|Registra o logon de um usuário que aceitou perda de dados potencial em uma atualização de DAC.|  
-|**ERROR_STRING**|**nvarchar(max)**|Mensagem de erro gerada se a ação encontrar um erro.|  
-|**criado por**|**sysname**|O logon que iniciou a ação que criou essa entrada.|  
-|**Date_Created**|**datetime**|A data e a hora de criação dessa entrada.|  
+|**error_string**|**nvarchar(max)**|Mensagem de erro gerada se a ação encontrar um erro.|  
+|**created_by**|**sysname**|O logon que iniciou a ação que criou essa entrada.|  
+|**date_created**|**datetime**|A data e a hora de criação dessa entrada.|  
 |**date_modified**|**datetime**|A data e a hora da última alteração feita na entrada.|  
   
 ## <a name="remarks"></a>Remarks  
@@ -83,9 +86,9 @@ WHERE instance_id NOT IN
 ## <a name="permissions"></a>Permissões  
  Requer associação na função de servidor fixa sysadmin. Acesso somente leitura a essa exibição está disponível para todos os usuários com permissões para se conectar ao banco de dados mestre.  
   
-## <a name="see-also"></a>Consulte Também  
- [Aplicativos da Camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [dbo.sysdac_instances &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
- [sysdac_instances_internal &#40; Transact-SQL &#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
+## <a name="see-also"></a>Consulte também  
+ [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
+ [sysdac_instances_internal &#40;Transact-SQL&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   
   

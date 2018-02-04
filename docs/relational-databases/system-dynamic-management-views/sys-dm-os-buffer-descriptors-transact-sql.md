@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_buffer_descriptors_TSQL
 - sys.dm_os_buffer_descriptors
 - dm_os_buffer_descriptors
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_buffer_descriptors dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_buffer_descriptors dynamic management view
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
-caps.latest.revision: "48"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 225d94ec7bf9b8a74289f52462f64d6d444e1d44
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6e35b3cd5c0b10bce5ed66f8c68babcebc96ae95
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,33 +44,33 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|Identificação do banco de dados associada à página no pool de buffer. Permite valor nulo.|  
-|file_id|**int**|Identificação do arquivo que armazena a imagem persistida da página. Permite valor nulo.|  
-|page_id|**int**|Identificação da página no arquivo. Permite valor nulo.|  
-|page_level|**int**|Nível de índice da página. Permite valor nulo.|  
+|database_id|**Int**|Identificação do banco de dados associada à página no pool de buffer. Permite valor nulo.|  
+|file_id|**Int**|Identificação do arquivo que armazena a imagem persistida da página. Permite valor nulo.|  
+|page_id|**Int**|Identificação da página no arquivo. Permite valor nulo.|  
+|page_level|**Int**|Nível de índice da página. Permite valor nulo.|  
 |allocation_unit_id|**bigint**|ID da unidade de alocação da página. Esse valor pode ser usado para unir sys.allocation_units. Permite valor nulo.|  
-|page_type|**nvarchar (60)**|Tipo da página, como: página de Dados ou página de Índice. Permite valor nulo.|  
-|row_count|**int**|Número de linhas na página. Permite valor nulo.|  
-|free_space_in_bytes|**int**|Quantidade de espaço livre disponível, em bytes, na página. Permite valor nulo.|  
+|page_type|**nvarchar(60)**|Tipo da página, como: página de Dados ou página de Índice. Permite valor nulo.|  
+|row_count|**Int**|Número de linhas na página. Permite valor nulo.|  
+|free_space_in_bytes|**Int**|Quantidade de espaço livre disponível, em bytes, na página. Permite valor nulo.|  
 |is_modified|**bit**|1 = A página foi modificada depois de lida no disco. Permite valor nulo.|  
-|numa_node|**int**|Nó de acesso à memória não uniforme do buffer. Permite valor nulo.|  
+|numa_node|**Int**|Nó de acesso à memória não uniforme do buffer. Permite valor nulo.|  
 |read_microsec|**bigint**|A hora real (em microssegundos) necessária para ler a página no buffer. Este número é redefinido quando o buffer é reutilizado. Permite valor nulo.|  
 |is_in_bpool_extension|**bit**|1 = página está na extensão do pool de buffers. Permite valor nulo.|  
-|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|pdw_node_id|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
 ## <a name="permissions"></a>Permissões  
 Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
 Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `VIEW DATABASE STATE` no banco de dados. Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, requer o **administrador do servidor** ou um **administrador do Active Directory do Azure** conta.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  sys.DM os_buffer_descriptors retorna páginas que estão sendo usadas pelo banco de dados do recurso. sys.DM os_buffer_descriptors não retorna informações sobre páginas livres ou roubadas ou sobre páginas que apresentaram erros quando foram lidas.  
   
 |De|Para|Em|Relação|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|muitos para um|  
-|sys.dm_os_buffer_descriptors|\<userdb >. allocation_units|allocation_unit_id|muitos para um|  
-|sys.dm_os_buffer_descriptors|\<userdb >. sys. database_files|file_id|muitos para um|  
-|sys.dm_os_buffer_descriptors|sys.DM os_buffer_pool_extension_configuration|file_id|muitos para um|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|muitos para um|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys.database_files|file_id|muitos para um|  
+|sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|muitos para um|  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -115,11 +118,11 @@ ORDER BY cached_pages_count DESC;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sys. allocation_units &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
  [Sistema operacional SQL Server relacionadas exibições de gerenciamento dinâmico &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Banco de dados de recursos](../../relational-databases/databases/resource-database.md)   
- [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
+ [sys.DM os_buffer_pool_extension_configuration &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
   
 

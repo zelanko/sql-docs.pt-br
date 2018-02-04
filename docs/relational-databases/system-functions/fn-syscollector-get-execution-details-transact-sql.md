@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - fn_syscollector_get_execution_details_TSQL
 - fn_syscollector_get_execution_details
-dev_langs: TSQL
-helpviewer_keywords: fn_syscollector_get_execution_details function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- fn_syscollector_get_execution_details function
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd44ed098f4dbf15e529df6cbe4026d065dfa2a5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dc7d5c47c294bb553f76fc9ee22e75cf9a350308
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="fnsyscollectorgetexecutiondetails-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +51,9 @@ fn_syscollector_get_execution_details ( log_id )
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|id|**int**|O identificador exclusivo da entrada do log.|  
+|id|**Int**|O identificador exclusivo da entrada do log.|  
 |event|**sysname**|O nome do evento que gerou a entrada do log.|  
 |computer|**nvarchar**|O computador no qual o pacote foi executado quando a entrada do log foi gerada.|  
 |operador|**nvarchar**|O nome de usuário da pessoa ou agente que executou o pacote que gerou a entrada do log.|  
@@ -59,8 +62,8 @@ fn_syscollector_get_execution_details ( log_id )
 |executionid|**uniqueidentifier**|A GUID da instância de execução do executável que gerou a entrada do log.|  
 |starttime|**datetime**|A hora em que o pacote começou a ser executado.|  
 |endtime|**datetime**|A hora em que o pacote foi concluído.|  
-|datacode|**int**|Um valor inteiro que identifica o evento associado à entrada do log. "0" indica que o evento não forneceu nenhum identificador.|  
-|databytes|**imagem**|Uma matriz de bytes que identifica um valor de retorno.|  
+|datacode|**Int**|Um valor inteiro que identifica o evento associado à entrada do log. "0" indica que o evento não forneceu nenhum identificador.|  
+|databytes|**image**|Uma matriz de bytes que identifica um valor de retorno.|  
 |message|**nvarchar**|Uma descrição do evento e as informações associadas a ele.|  
   
 ## <a name="permissions"></a>Permissões  

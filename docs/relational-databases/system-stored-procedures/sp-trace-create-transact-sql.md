@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_create_TSQL
 - sp_trace_create
-dev_langs: TSQL
-helpviewer_keywords: sp_trace_create
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_trace_create
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ca00a949b0fe0122f6aba9b8fecfa072374e96f3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d370ebe5730f9b87d7303c067b9edc1a14d27509
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sptracecreate-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +57,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
  [  **@traceid=** ] *trace_id*  
  É o número atribuído por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao novo rastreamento. Qualquer entrada fornecida pelo usuário será ignorada. *trace_id* é **int**, com um padrão NULL. O usuário emprega o *trace_id* valor para identificar, modificar e controlar o rastreamento definido por esse procedimento armazenado.  
   
- [  **@options=** ] *option_value*  
+ [ **@options=** ] *option_value*  
  Especifica as opções definida para o rastreamento. *option_value* é **int**, sem padrão. Os usuários podem escolher uma combinação destas opções especificando o valor de soma das opções escolhidas. Por exemplo, para ativar as opções TRACE_FILE_ROLLOVER e SHUTDOWN_ON_ERROR, especifique **6** para *option_value*.  
   
  A tabela a seguir lista as opções, as descrições e seus valores.  
@@ -65,14 +68,14 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |SHUTDOWN_ON_ERROR|**4**|Especifica que, se o rastreamento não puder ser gravado no arquivo por qualquer motivo, o SQL Server será encerrado. Esta opção é útil ao executar rastreamentos de auditoria de segurança.|  
 |TRACE_PRODUCE_BLACKBOX|**8**|Especifica que um registro dos últimos 5 MB de informações de rastreamento produzidas pelo servidor será salvo pelo servidor. TRACE_PRODUCE_BLACKBOX é incompatível com todas as outras opções.|  
   
- [  **@tracefile=** ] *'**trace_file**'*  
+ [ **@tracefile=** ] *'**trace_file**'*  
  Especifica o local e o nome de arquivo no qual o rastreamento será gravado. *trace_file* é **nvarchar(245)** sem nenhum padrão. *trace_file* pode ser um diretório local (como N 'C:\MSSQL\Trace\trace.trc') ou um UNC até um compartilhamento ou caminho (N'\\\\*Servername*\\*Sharename* \\ *Diretório*\trace.trc').  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]acrescentará um **. TRC** extensão para todos os nomes de arquivo de rastreamento. Se a opção TRACE_FILE_ROLLOVER e um *max_file_size* forem especificados, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria um novo arquivo de rastreamento quando o arquivo de rastreamento original chega ao seu tamanho máximo. O novo arquivo tem o mesmo nome que o arquivo original, mas _ *n*  é adicionado para indicar a sequência, começando com **1**. Por exemplo, se o primeiro arquivo de rastreamento é chamado **filename.trc**, o segundo arquivo de rastreamento é denominado **nomedoarquivo_1.TRC**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acrescentará um **. TRC** extensão para todos os nomes de arquivo de rastreamento. Se a opção TRACE_FILE_ROLLOVER e um *max_file_size* forem especificados, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria um novo arquivo de rastreamento quando o arquivo de rastreamento original chega ao seu tamanho máximo. O novo arquivo tem o mesmo nome que o arquivo original, mas _ *n*  é adicionado para indicar a sequência, começando com **1**. Por exemplo, se o primeiro arquivo de rastreamento é chamado **filename.trc**, o segundo arquivo de rastreamento é denominado **nomedoarquivo_1.TRC**.  
   
  Se você usa a opção TRACE_FILE_ROLLOVER, é recomendável que não use caracteres de sublinhado no nome de arquivo de rastreamento original. Se você usar sublinhados, ocorrerá o seguinte comportamento:  
   
--   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]não automaticamente a carga ou solicitará que você carregar os arquivos de substituição (se qualquer uma dessas opções de substituição de arquivo é configurada).  
+-   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] não automaticamente a carga ou solicitará que você carregar os arquivos de substituição (se qualquer uma dessas opções de substituição de arquivo é configurada).  
   
 -   A função fn_trace_gettable não carregar arquivos de substituição (quando especificado usando o *number_files* argumento) onde o nome do arquivo original termina com um sublinhado e um valor numérico. (Isso não se aplica ao sublinhado e ao número que são acrescentados automaticamente quando um arquivo é substituído.)  
   
@@ -81,17 +84,17 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  *trace_file* não pode ser especificado quando a opção TRACE_PRODUCE_BLACKBOX é usada.  
   
- [  **@maxfilesize=** ] *max_file_size*  
+ [ **@maxfilesize=** ] *max_file_size*  
  Especifica o tamanho máximo em megabytes (MB) de um arquivo de rastreamento. *max_file_size* é **bigint**, com um valor padrão de **5**.  
   
  Se esse parâmetro for especificado sem a opção TRACE_FILE_ROLLOVER, o rastreamento é interrompido gravação para o arquivo quando o espaço em disco usado excede o valor especificado pelo *max_file_size*.  
   
- [  **@stoptime=** ] **'***stop_time***'**  
+ [ **@stoptime=** ] **'***stop_time***'**  
  Especifica a data e a hora em que o rastreamento será interrompido. *stop_time* é **datetime**, com um padrão NULL. Se for NULL, o rastreamento será executado até que seja parado manualmente ou até que o servidor seja encerrado.  
   
  Se ambos os *stop_time* e *max_file_size* forem especificados, e TRACE_FILE_ROLLOVER não for especificado, o rastreamento topo quando o tempo de interrupção especificado ou o tamanho máximo do arquivo for atingido. Se *stop_time*, *max_file_size*e TRACE_FILE_ROLLOVER forem especificados, o rastreamento é interrompido no momento especificado, supondo que o rastreamento não encherá a unidade.  
   
- [  **@filecount=** ] **'***max_rollover_files***'**  
+ [ **@filecount=** ] **'***max_rollover_files***'**  
  Especifica o número máximo ou os arquivos de rastreamento a serem mantidos com o mesmo nome de arquivo base. *max_rollover_files* é **int**, maior que um. Este parâmetro só será válido se a opção TRACE_FILE_ROLLOVER for especificada. Quando *max_rollover_files* for especificado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta manter não mais de *max_rollover_files* arquivos de rastreamento excluindo o arquivo de rastreamento mais antigo antes de abrir um novo arquivo de rastreamento. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rastreia a idade dos arquivos de rastreamento adicionando um número ao nome de arquivo base.  
   
  Por exemplo, quando o *trace_file* parâmetro for especificado como "c:\mytrace", um arquivo com o nome "c:\mytrace_123.trc" é mais antigo que um arquivo com o nome "c:\mytrace_124.trc". Se *max_rollover_files* é definido como 2, em seguida, o SQL Server exclui o arquivo "c:\mytrace_123.trc" antes de criar o arquivo de rastreamento "c:\mytrace_125.TRC.".  
@@ -111,7 +114,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |14|Horário de parada inválido. Retornado quando o horário de parada especificado já aconteceu.|  
 |15|Parâmetros inválidos. Retornado quando o usuário forneceu parâmetros incompatíveis.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_trace_create** é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimento armazenado que executa muitas das ações anteriormente executadas por **xp_trace _\***  disponíveis em versões anteriores do SQL Server de procedimentos armazenados estendidos. Use **sp_trace_create** em vez de:  
   
 -   **xp_trace_addnewqueue**  
@@ -157,7 +160,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
  O usuário deve ter a permissão ALTER TRACE.  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_trace_generateevent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   

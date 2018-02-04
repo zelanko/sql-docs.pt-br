@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_enum_sqlagent_subsystems
 - sp_enum_sqlagent_subsystems_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_enum_sqlagent_subsystems
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_enum_sqlagent_subsystems
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a088866b645cacad3813ce7c2ae15e9e9831f299
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 946c623004db5efaeb470b26b74daaba9f5271bb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spenumsqlagentsubsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,17 +55,17 @@ sp_enum_sqlagent_subsystems
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**subsistema**|**nvarchar (40)**|Nome do subsistema.|  
-|**Descrição**|**nvarchar(512)**|Descrição do subsistema.|  
+|**subsystem**|**nvarchar(40)**|Nome do subsistema.|  
+|**description**|**nvarchar(512)**|Descrição do subsistema.|  
 |**subsystem_dll**|**nvarchar(510)**|Módulo DLL que contém o subsistema.|  
 |**agent_exe**|**nvarchar(510)**|Módulo executável usado pelo subsistema.|  
-|**start_entry_point**|**nvarchar (30)**|Procedimento que o SQL Server Agent chama durante a execução da etapa de trabalho.|  
-|**event_entry_point**|**nvarchar (30)**|Procedimento que o SQL Server Agent chama durante a execução da etapa de trabalho.|  
-|**stop_entry_point**|**nvarchar (30)**|Procedimento que o SQL Server Agent chama durante a execução da etapa de trabalho.|  
-|**max_worker_threads**|**int**|Número de máximo de threads que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent iniciará para este subsistema.|  
-|**subsystem_id**|**int**|Identificador do subsistema.|  
+|**start_entry_point**|**nvarchar(30)**|Procedimento que o SQL Server Agent chama durante a execução da etapa de trabalho.|  
+|**event_entry_point**|**nvarchar(30)**|Procedimento que o SQL Server Agent chama durante a execução da etapa de trabalho.|  
+|**stop_entry_point**|**nvarchar(30)**|Procedimento que o SQL Server Agent chama durante a execução da etapa de trabalho.|  
+|**max_worker_threads**|**Int**|Número de máximo de threads que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent iniciará para este subsistema.|  
+|**subsystem_id**|**Int**|Identificador do subsistema.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Este procedimento lista os subsistemas disponíveis na instância.  
   
 ## <a name="permissions"></a>Permissões  

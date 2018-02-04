@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobs_in_schedule_TSQL
 - sp_help_jobs_in_schedule
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobs_in_schedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobs_in_schedule
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff12f4e1ee3f994a74360969cacd51d9e479a70e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: aac7c4d1cb1199f17e060c9c9d0d4437d8a3220c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobsinschedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +48,10 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@schedule_id =** ] *schedule_id*  
+ [ **@schedule_id =** ] *schedule_id*  
  O identificador da agenda para o qual listar informações. *schedule_id* é **int**, sem padrão. O *schedule_id* ou *schedule_name* pode ser especificado.  
   
- [  **@schedule_name =** ] **'***schedule_name***'**  
+ [ **@schedule_name =** ] **'***schedule_name***'**  
  O nome da agenda para a qual listar informações. *schedule_name* é **sysname**, sem padrão. O *schedule_id* ou *schedule_name* pode ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -60,39 +63,39 @@ sp_help_jobs_in_schedule
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|A ID exclusiva do trabalho.|  
-|**originating_server**|**nvarchar (30)**|Nome do servidor do qual o trabalho originou.|  
+|**originating_server**|**nvarchar(30)**|Nome do servidor do qual o trabalho originou.|  
 |**name**|**sysname**|Nome do trabalho.|  
-|**habilitado**|**tinyint**|Indica se o trabalho está habilitado para ser executado.|  
-|**Descrição**|**nvarchar(512)**|Descrição do trabalho.|  
-|**start_step_id**|**int**|ID da etapa do trabalho em que a execução deve começar.|  
-|**categoria**|**sysname**|Categoria do trabalho.|  
+|**enabled**|**tinyint**|Indica se o trabalho está habilitado para ser executado.|  
+|**description**|**nvarchar(512)**|Descrição do trabalho.|  
+|**start_step_id**|**Int**|ID da etapa do trabalho em que a execução deve começar.|  
+|**category**|**sysname**|Categoria do trabalho.|  
 |**proprietário**|**sysname**|Proprietário do trabalho.|  
-|**notify_level_eventlog**|**int**|Bitmask que indica sob quais circunstâncias um evento de notificação deve ser registrado no log de aplicativos do Microsoft Windows. Pode ser um destes valores:<br /><br /> **0** = nunca<br /><br /> **1** = quando um trabalho for bem-sucedido<br /><br /> **2** = quando o trabalho falhar<br /><br /> **3** = sempre que o trabalho for concluído (independentemente do resultado do trabalho)|  
-|**notify_level_email**|**int**|Bitmask que indica sob quais circunstâncias um email de notificação deve ser enviado quando um trabalho é concluído. Os valores possíveis são os mesmos para **notify_level_eventlog**.|  
-|**notify_level_netsend**|**int**|Bitmask que indica sob quais circunstâncias uma mensagem de rede deve ser enviada quando um trabalho é concluído. Os valores possíveis são os mesmos para **notify_level_eventlog**.|  
-|**notify_level_page**|**int**|Bitmask que indica sob quais circunstâncias uma página deve ser enviada quando um trabalho é concluído. Os valores possíveis são os mesmos para **notify_level_eventlog**.|  
+|**notify_level_eventlog**|**Int**|Bitmask que indica sob quais circunstâncias um evento de notificação deve ser registrado no log de aplicativos do Microsoft Windows. Pode ser um destes valores:<br /><br /> **0** = nunca<br /><br /> **1** = quando um trabalho for bem-sucedido<br /><br /> **2** = quando o trabalho falhar<br /><br /> **3** = sempre que o trabalho for concluído (independentemente do resultado do trabalho)|  
+|**notify_level_email**|**Int**|Bitmask que indica sob quais circunstâncias um email de notificação deve ser enviado quando um trabalho é concluído. Os valores possíveis são os mesmos para **notify_level_eventlog**.|  
+|**notify_level_netsend**|**Int**|Bitmask que indica sob quais circunstâncias uma mensagem de rede deve ser enviada quando um trabalho é concluído. Os valores possíveis são os mesmos para **notify_level_eventlog**.|  
+|**notify_level_page**|**Int**|Bitmask que indica sob quais circunstâncias uma página deve ser enviada quando um trabalho é concluído. Os valores possíveis são os mesmos para **notify_level_eventlog**.|  
 |**notify_email_operator**|**sysname**|Nome de email do operador a ser notificado.|  
 |**notify_netsend_operator**|**sysname**|Nome do computador ou usuário usado ao enviar mensagens de rede.|  
 |**notify_page_operator**|**sysname**|Nome do computador ou usuário usado ao enviar uma página.|  
-|**delete_level**|**int**|Bitmask que indica sob quais circunstâncias o trabalho deve ser excluído quando for concluído. Os valores possíveis são os mesmos para **notify_level_eventlog**.|  
-|**Date_Created**|**datetime**|Data em que o trabalho foi criado.|  
+|**delete_level**|**Int**|Bitmask que indica sob quais circunstâncias o trabalho deve ser excluído quando for concluído. Os valores possíveis são os mesmos para **notify_level_eventlog**.|  
+|**date_created**|**datetime**|Data em que o trabalho foi criado.|  
 |**date_modified**|**datetime**|Data em que o trabalho foi modificado pela última vez.|  
-|**número_da_versão**|**int**|Versão do trabalho (atualizada automaticamente sempre que o trabalho é modificado).|  
-|**last_run_date**|**int**|Data da última execução do trabalho.|  
-|**last_run_time**|**int**|Hora da última execução do trabalho.|  
-|**last_run_outcome**|**int**|Resultado do trabalho na última vez em que foi executado:<br /><br /> **0** = falha<br /><br /> **1** = foi bem-sucedida<br /><br /> **3** = cancelada<br /><br /> **5** = desconhecido|  
-|**next_run_date**|**int**|Próxima data em que o trabalho foi agendado para ser executado.|  
-|**next_run_time**|**int**|Próxima hora em que o trabalho foi agendado para ser executado.|  
-|**next_run_schedule_id**|**int**|Número de identificação do próximo agendamento de execução.|  
-|**current_execution_status**|**int**|Status de execução atual.|  
+|**version_number**|**Int**|Versão do trabalho (atualizada automaticamente sempre que o trabalho é modificado).|  
+|**last_run_date**|**Int**|Data da última execução do trabalho.|  
+|**last_run_time**|**Int**|Hora da última execução do trabalho.|  
+|**last_run_outcome**|**Int**|Resultado do trabalho na última vez em que foi executado:<br /><br /> **0** = falha<br /><br /> **1** = foi bem-sucedida<br /><br /> **3** = cancelada<br /><br /> **5** = desconhecido|  
+|**next_run_date**|**Int**|Próxima data em que o trabalho foi agendado para ser executado.|  
+|**next_run_time**|**Int**|Próxima hora em que o trabalho foi agendado para ser executado.|  
+|**next_run_schedule_id**|**Int**|Número de identificação do próximo agendamento de execução.|  
+|**current_execution_status**|**Int**|Status de execução atual.|  
 |**current_execution_step**|**sysname**|Etapa de execução atual no trabalho.|  
-|**current_retry_attempt**|**int**|Se o trabalho estiver em execução e a etapa foi repetida, esta é a tentativa de repetição atual.|  
-|**has_step**|**int**|Número de etapas que o trabalho possui.|  
-|**has_schedule**|**int**|Número de agendamentos que o trabalho possui.|  
-|**has_target**|**int**|Número de servidores de destino que o trabalho possui.|  
-|**tipo**|**int**|Tipo do trabalho:<br /><br /> **1** = trabalho local.<br /><br /> **2** = trabalho multisservidor.<br /><br /> **0** = trabalho não tem nenhum servidor de destino.|  
+|**current_retry_attempt**|**Int**|Se o trabalho estiver em execução e a etapa foi repetida, esta é a tentativa de repetição atual.|  
+|**has_step**|**Int**|Número de etapas que o trabalho possui.|  
+|**has_schedule**|**Int**|Número de agendamentos que o trabalho possui.|  
+|**has_target**|**Int**|Número de servidores de destino que o trabalho possui.|  
+|**type**|**Int**|Tipo do trabalho:<br /><br /> **1** = trabalho local.<br /><br /> **2** = trabalho multisservidor.<br /><br /> **0** = trabalho não tem nenhum servidor de destino.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Este procedimento lista informações sobre trabalhos anexados à agenda especificada.  
   
 ## <a name="permissions"></a>Permissões  
@@ -122,9 +125,9 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [Agente do SQL Server armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_detach_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

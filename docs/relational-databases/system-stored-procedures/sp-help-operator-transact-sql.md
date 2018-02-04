@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_operator
 - sp_help_operator_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_operator
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_operator
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 392586d2f3ea34b6914cb7bf34757d0481e890a9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fc89c5f6689b64aea7be0410850f373d75d876e6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpoperator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +49,10 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@operator_name=** ] **'***operator_name***'**  
+ [ **@operator_name=** ] **'***operator_name***'**  
  O nome do operador. *operator_name* é **sysname**. Se *operator_name* não é especificado, serão retornadas informações sobre todos os operadores.  
   
- [  **@operator_id=** ] *operator_id*  
+ [ **@operator_id=** ] *operator_id*  
  O número de identificação do operador para o qual as informações são solicitadas. *operator_id*é **int**, com um padrão NULL.  
   
 > [!NOTE]  
@@ -60,30 +63,30 @@ sp_help_operator
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|Número de identificação do operador.|  
+|**id**|**Int**|Número de identificação do operador.|  
 |**name**|**sysname**|Nome do operador.|  
-|**habilitado**|**tinyint**|Operador está disponível para receber qualquer notificação:<br /><br /> **1** = Sim<br /><br /> **0** = não|  
-|**endereço de email**|**nvarchar (100)**|Endereço de email do operador.|  
-|**last_email_date**|**int**|Data em que o operador foi notificado pela última vez por email.|  
-|**last_email_time**|**int**|Hora em que o operador foi notificado pela última vez por email.|  
-|**pager_address**|**nvarchar (100)**|Endereço de pager do operador.|  
-|**last_pager_date**|**int**|Data em que o operador foi notificado pela última vez por pager.|  
-|**last_pager_time**|**int**|Hora em que o operador foi notificado pela última vez por pager.|  
-|**weekday_pager_start_time**|**int**|O início do período durante o qual o operador está disponível para receber notificações de pager em um dia da semana.|  
-|**weekday_pager_end_time**|**int**|O fim do período durante o qual o operador está disponível para receber notificações de pager em um dia da semana.|  
-|**saturday_pager_start_time**|**int**|O início do período durante o qual o operador está disponível para receber notificações de pager aos sábados.|  
-|**saturday_pager_end_time**|**int**|O fim do período durante o qual o operador está disponível para receber notificações de pager aos sábados.|  
-|**sunday_pager_start_time**|**int**|O início do período durante o qual o operador está disponível para receber notificações de pager aos domingos.|  
-|**sunday_pager_end_time**|**int**|O fim do período durante o qual o operador está disponível para receber notificações de pager aos domingos.|  
+|**enabled**|**tinyint**|Operador está disponível para receber qualquer notificação:<br /><br /> **1** = Sim<br /><br /> **0** = No|  
+|**email_address**|**nvarchar(100)**|Endereço de email do operador.|  
+|**last_email_date**|**Int**|Data em que o operador foi notificado pela última vez por email.|  
+|**last_email_time**|**Int**|Hora em que o operador foi notificado pela última vez por email.|  
+|**pager_address**|**nvarchar(100)**|Endereço de pager do operador.|  
+|**last_pager_date**|**Int**|Data em que o operador foi notificado pela última vez por pager.|  
+|**last_pager_time**|**Int**|Hora em que o operador foi notificado pela última vez por pager.|  
+|**weekday_pager_start_time**|**Int**|O início do período durante o qual o operador está disponível para receber notificações de pager em um dia da semana.|  
+|**weekday_pager_end_time**|**Int**|O fim do período durante o qual o operador está disponível para receber notificações de pager em um dia da semana.|  
+|**saturday_pager_start_time**|**Int**|O início do período durante o qual o operador está disponível para receber notificações de pager aos sábados.|  
+|**saturday_pager_end_time**|**Int**|O fim do período durante o qual o operador está disponível para receber notificações de pager aos sábados.|  
+|**sunday_pager_start_time**|**Int**|O início do período durante o qual o operador está disponível para receber notificações de pager aos domingos.|  
+|**sunday_pager_end_time**|**Int**|O fim do período durante o qual o operador está disponível para receber notificações de pager aos domingos.|  
 |**pager_days**|**tinyint**|Um bitmask (**1** = domingo, **64** = sábado) de dias da semana indicando quando o operador está disponível para receber notificações por pager.|  
-|**netsend_address**|**nvarchar (100)**|Endereço de operador para notificações pop-up de rede.|  
-|**last_netsend_date**|**int**|Data em que o operador foi notificado pela última vez por pop-up de rede.|  
-|**last_netsend_time**|**int**|Hora em que o operador foi notificado pela última vez por pop-up de rede.|  
+|**netsend_address**|**nvarchar(100)**|Endereço de operador para notificações pop-up de rede.|  
+|**last_netsend_date**|**Int**|Data em que o operador foi notificado pela última vez por pop-up de rede.|  
+|**last_netsend_time**|**Int**|Hora em que o operador foi notificado pela última vez por pop-up de rede.|  
 |**category_name**|**sysname**|Nome da categoria de operador ao qual esse operador pertence.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_help_operator** deve ser executado a partir de **msdb** banco de dados.  
   
 ## <a name="permissions"></a>Permissões  
@@ -110,9 +113,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_add_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_delete_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_update_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+ [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

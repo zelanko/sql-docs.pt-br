@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collection_set_TSQL
 - sp_syscollector_create_collection_set
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_create_collection_set
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23015f77f4d2bc9dafe10fb12b660cec31484985
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 50e5c77d8af3ae4ab42ef74ee18f7b49db2a7c57
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,10 +79,10 @@ sp_syscollector_create_collection_set
   
  O valor padrão para *collection_mode* é 0. Quando *collection_mode* é 0, *schedule_uid* ou *schedule_name* deve ser especificado.  
   
- [  **@days_until_expiration =** ] *days_until_expiration*  
+ [ **@days_until_expiration =** ] *days_until_expiration*  
  É o número de dias durante os quais os dados coletados são salvos no data warehouse de gerenciamento. *days_until_expiration* é **smallint** com um valor padrão de 730 (dois anos). *days_until_expiration* deve ser 0 ou um número inteiro positivo.  
   
- [  **@proxy_id =** ] *proxy_id*  
+ [ **@proxy_id =** ] *proxy_id*  
  É o identificador exclusivo de uma conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. *proxy_id* é **int** com um valor padrão de NULL. Se especificado, *proxy_name* deve ser NULL. Para obter *proxy_id*, consultar a tabela do sistema sysproxies. A função de banco de dados fixa dc_admin deve ter permissão para acessar o proxy. Para obter mais informações, consulte [criar um Proxy do SQL Server Agent](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988).  
   
  [  **@proxy_name =** ] '*proxy_name*'  
@@ -94,7 +96,7 @@ sp_syscollector_create_collection_set
  [  **@schedule_name =** ] '*schedule_name*'  
  É o nome da agenda. *schedule_name* é **sysname** com um valor padrão de NULL. Se especificado, *schedule_uid* deve ser NULL. Para obter *schedule_name*, consultar a tabela de sistema sysschedules.  
   
- [  **@logging_level =** ] *logging_level*  
+ [ **@logging_level =** ] *logging_level*  
  É o nível de registro em log. *logging_level* é **smallint** com um dos seguintes valores:  
   
  0 - informações de execução de log e eventos [!INCLUDE[ssIS](../../includes/ssis-md.md)] que monitoram:  
@@ -120,16 +122,16 @@ sp_syscollector_create_collection_set
  [  **@description =** ] '*descrição*'  
  É a descrição do conjunto de coleta. *Descrição* é **nvarchar (4000)** com um valor padrão de NULL.  
   
- [  **@collection_set_id =** ] *collection_set_id*  
+ [ **@collection_set_id =** ] *collection_set_id*  
  É o identificador local exclusivo do conjunto de coleta. *collection_set_id* é **int** com saída e é necessária.  
   
- [  **@collection_set_uid =** ] '*collection_set_uid*'  
+ [ **@collection_set_uid =** ] '*collection_set_uid*'  
  É o GUID do conjunto de coleta. *collection_set_uid* é **uniqueidentifier** com OUTPUT com um valor padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  sp_syscollector_create_collection_set deve ser executado no contexto do banco de dados de sistema msdb.  
   
 ## <a name="permissions"></a>Permissões  
@@ -173,7 +175,7 @@ EXEC dbo.sp_syscollector_create_collection_set
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
+ [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
  [Criar um conjunto de coleta personalizado que usa o tipo de coletor de Consultas T-SQL genérico &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  

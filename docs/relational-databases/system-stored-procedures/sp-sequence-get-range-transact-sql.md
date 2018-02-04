@@ -8,30 +8,32 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_sequence_get_range
 - sp_sequence_get_range_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sequence number object, sp_sequence_get_range procedure
 - sp_sequence_get_range
 ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2af750abc8715d2bcf2240ef08f765c6d2d7bff3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 58c36ec947eab4fbcc9511c67efae1af858ab6d0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   Retorna um intervalo de valores de sequência de um objeto de sequência. O objeto de sequência gera e emite o número de valores solicitado e fornece o aplicativo com metadados relacionados ao intervalo.  
   
@@ -55,34 +57,34 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@sequence_name**  =] **N**'*sequência*'  
+ [ **@sequence_name** = ] **N**'*sequence*'  
  O nome do objeto de sequência. O esquema é opcional. *sequence_name* é **nvarchar(776)**.  
   
- [  **@range_size**  =] *range_size*  
+ [ **@range_size** = ] *range_size*  
  O número de valores a ser buscado da sequência. **@range_size**é **bigint**.  
   
- [  **@range_first_value**  =] *range_first_value*  
+ [ **@range_first_value** = ] *range_first_value*  
  O parâmetro de saída retorna o primeiro valor (mínimo ou máximo) do objeto de sequência usado para calcular o intervalo solicitado. **@range_first_value**é **sql_variant** com o mesmo tipo base que o objeto de sequência usado na solicitação.  
   
- [  **@range_last_value**  =] *range_last_value*  
+ [ **@range_last_value** = ] *range_last_value*  
  O parâmetro de saída opcional retorna o último valor do intervalo solicitado. **@range_last_value**é **sql_variant** com o mesmo tipo base que o objeto de sequência usado na solicitação.  
   
  [  **@range_cycle_count**  =] range_cycle_count  
  O parâmetro de saída opcional retorna o número de vezes que o objeto de sequência realizou um ciclo a fim de retornar o intervalo solicitado. **@range_cycle_count**é **int**.  
   
- [  **@sequence_increment**  =] *sequence_increment*  
+ [ **@sequence_increment** = ] *sequence_increment*  
  O parâmetro de saída opcional retorna o incremento do objeto de sequência usado para calcular o intervalo solicitado. **@sequence_increment**é **sql_variant** com o mesmo tipo base que o objeto de sequência usado na solicitação.  
   
- [  **@sequence_min_value**  =] *sequence_min_value*  
+ [ **@sequence_min_value** = ] *sequence_min_value*  
  O parâmetro de saída opcional retorna o valor mínimo do objeto de sequência. **@sequence_min_value**é **sql_variant** com o mesmo tipo base que o objeto de sequência usado na solicitação.  
   
- [  **@sequence_max_value**  =] *sequence_max_value*  
+ [ **@sequence_max_value** = ] *sequence_max_value*  
  O parâmetro de saída opcional retorna o valor máximo do objeto de sequência. **@sequence_max_value**é **sql_variant** com o mesmo tipo base que o objeto de sequência usado na solicitação.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  sp_sequence_get_rangeis no sys. esquema e pode ser referenciado como sys.sp_sequence_get_range.  
   
 ### <a name="cycling-sequences"></a>Sequências de ciclo  
@@ -193,9 +195,9 @@ Console.WriteLine(firstValueInRange.Value);
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar SEQUÊNCIA de &#40; Transact-SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [ALTER SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [DROP SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
+ [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
  [PRÓXIMO valor para &#40; Transact-SQL &#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
  [Números de sequência](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   

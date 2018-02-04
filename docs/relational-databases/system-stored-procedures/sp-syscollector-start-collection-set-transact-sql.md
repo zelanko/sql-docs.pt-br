@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_start_collection_set_TSQL
 - sp_syscollector_start_collection_set
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_start_collection_set
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 32ab8a570febc69a91346e39c8f200a36a263aa8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 54381b4d9b0baab7d9b726fd209a3cfb598fb8e1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorstartcollectionset-transact-sql"></a>sp_syscollector_start_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +50,7 @@ sp_syscollector_start_collection_set
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@collection_set_id =** ] *collection_set_id*  
+ [ **@collection_set_id =** ] *collection_set_id*  
  É o identificador local exclusivo do conjunto de coleta. *collection_set_id* é **int** com um valor padrão de NULL. *collection_set_id* deve ter um valor se *nome* é NULL.  
   
  [  **@name =** ] '*nome*'  
@@ -57,7 +59,7 @@ sp_syscollector_start_collection_set
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  sp_syscollector_create_collection_set deve ser executado no contexto do banco de dados do sistema msdb e o SQL Server Agent deve estar habilitado.  
   
  Este procedimento falha quando executado em um conjunto de coleta que não tem uma agenda. Se o conjunto de coleta não tem uma agenda (porque seu modo de coleta está definido como não cache, por exemplo), use o [sp_syscollector_run_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md) procedimento armazenado para iniciar o conjunto de coleta.  
@@ -80,7 +82,7 @@ EXEC sp_syscollector_start_collection_set @collection_set_id = 1;
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
+ [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

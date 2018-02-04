@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_queue_sp
 - sysmail_help_queue_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_queue_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_queue_sp
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 233187d223f7d22c5a950fcb2d29063f37be7c7d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5e83aba8601f4329a496229eca329035a95b283c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@queue_type**  =] **'***queue_type***'**  
+ [ **@queue_type** = ] **'***queue_type***'**  
  Argumento opcional exclui emails do tipo especificado como o *queue_type*. *QUEUE_TYPE* é **nvarchar(6)** sem nenhum padrão. As entradas válidas são **mail** e **status**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -53,13 +56,13 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**QUEUE_TYPE**|**nvarchar(6)**|O tipo de fila. Os valores possíveis são **mail** e **status**.|  
-|**comprimento**|**int**|O número de itens de email na fila especificada.|  
-|**estado**|**nvarchar (64)**|Estado do monitor. Os valores possíveis são **inativo** (a fila é inativa), **NOTIFIED** (fila foi notificado recebimento ocorra), e **RECEIVES_OCCURRING** (a fila está recebendo).|  
-|**last_empty_rowset_time**|**DATA E HORA**|A data e a hora em que a fila estava vazia pela última vez. Em formato de hora militar e fuso horário GMT.|  
-|**last_activated_time**|**DATA E HORA**|A data e a hora em que a fila foi ativada pela última vez. Em formato de hora militar e fuso horário GMT.|  
+|**queue_type**|**nvarchar(6)**|O tipo de fila. Os valores possíveis são **mail** e **status**.|  
+|**comprimento**|**Int**|O número de itens de email na fila especificada.|  
+|**state**|**nvarchar(64)**|Estado do monitor. Os valores possíveis são **inativo** (a fila é inativa), **NOTIFIED** (fila foi notificado recebimento ocorra), e **RECEIVES_OCCURRING** (a fila está recebendo).|  
+|**last_empty_rowset_time**|**DATETIME**|A data e a hora em que a fila estava vazia pela última vez. Em formato de hora militar e fuso horário GMT.|  
+|**last_activated_time**|**DATETIME**|A data e a hora em que a fila foi ativada pela última vez. Em formato de hora militar e fuso horário GMT.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Ao solucionar problemas do Database Mail, use **sysmail_help_queue_sp** para ver quantos itens estão na fila, o status da fila, e quando ele foi ativado.  
   
 ## <a name="permissions"></a>Permissões  

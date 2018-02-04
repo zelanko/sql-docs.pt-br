@@ -1,5 +1,5 @@
 ---
-title: sys.DM hadr_availability_replica_states (Transact-SQL) | Microsoft Docs
+title: sys.dm_hadr_availability_replica_states (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/16/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_hadr_availability_replica_states_TSQL
 - sys.dm_hadr_availability_replica_states
 - dm_hadr_availability_replica_states_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_availability_replica_states dynamic management view
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bf08e1c4aa40e78f9a6e3cb345aff501804d5736
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9adddf8b74848948bfdd45fdf93813ed7489d40a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmhadravailabilityreplicastates-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,18 +47,18 @@ ms.lasthandoff: 11/17/2017
 |**replica_id**|**uniqueidentifier**|Identificador exclusivo da réplica.|  
 |**group_id**|**uniqueidentifier**|Identificador exclusivo do grupo de disponibilidade.|  
 |**is_local**|**bit**|Se a réplica é local, um de:<br /><br /> 0 = indica uma réplica secundária remota em um grupo de disponibilidade cuja réplica primária é hospedada pela instância do servidor local. Esse valor ocorre apenas no local da réplica primária.<br /><br /> 1 = indica uma réplica local. Em réplicas secundárias, esse é o único valor disponível para o grupo de disponibilidade ao qual a réplica pertence.|  
-|**função**|**tinyint**|Atual [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] função de uma réplica local ou uma réplica remota conectada, um destes:<br /><br /> 0 = Resolvendo<br /><br /> 1 = Primária<br /><br /> 2 = Secundária<br /><br /> Para obter informações sobre as funções do [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], confira [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
-|**role_desc**|**nvarchar (60)**|Descrição do **função**, um de:<br /><br /> RESOLVING<br /><br /> PRIMARY<br /><br /> SECONDARY|  
+|**role**|**tinyint**|Atual [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] função de uma réplica local ou uma réplica remota conectada, um destes:<br /><br /> 0 = Resolvendo<br /><br /> 1 = Primária<br /><br /> 2 = Secundária<br /><br /> Para obter informações sobre as funções do [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], confira [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
+|**role_desc**|**nvarchar(60)**|Descrição do **função**, um de:<br /><br /> RESOLVING<br /><br /> PRIMARY<br /><br /> SECONDARY|  
 |**operational_state**|**tinyint**|Estado operacional atual da réplica, um de:<br /><br /> 0 = Failover pendente<br /><br /> 1 = pendente<br /><br /> 2 = Online<br /><br /> 3 = off-line<br /><br /> 4 = Falha<br /><br /> 5 = Com falha, sem quorum<br /><br /> NULL = A réplica não é local.<br /><br /> Para obter mais informações, consulte [funções e estados operacionais](#RolesAndOperationalStates), mais adiante neste tópico.|  
-|**operacional\_estado\_desc**|**nvarchar (60)**|Descrição do **operacionais\_estado**, um de:<br /><br /> PENDING_FAILOVER<br /><br /> PENDING<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> FAILED<br /><br /> FAILED_NO_QUORUM<br /><br /> NULL|  
-|**recuperação\_integridade**|**tinyint**|Pacote cumulativo de atualizações do **banco de dados\_estado** coluna o [sys.DM hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) exibição de gerenciamento dinâmico. Estes são os valores possíveis e suas descrições.<br /><br /> 0: em andamento.  Pelo menos um banco de dados Unido tem um estado de banco de dados diferente de ONLINE (**banco de dados\_estado** é não a 0).<br /><br /> 1: on-line. Bancos de dados Unidos têm um estado de banco de dados de ONLINE (**database_state** é 0).<br /><br /> NULL: **is_local** = 0|  
-|**recovery_health_desc**|**nvarchar (60)**|Descrição do **recovery_health**, um de:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
-|**sincronização\_integridade**|**tinyint**|Reflete um rollup do estado de sincronização de banco de dados (**synchronization_state**) de todos os bancos de dados de disponibilidade de associado (também conhecido como *réplicas*) e o modo de (a réplica de disponibilidade confirmação síncrona ou assíncrona modo de confirmação). Pacote cumulativo de atualizações refletirá o estado acumulado mais íntegro dos bancos de dados na réplica. Abaixo estão os valores possíveis e suas descrições.<br /><br /> 0: não está íntegro.   Pelo menos um banco de dados unido está no estado NOT SYNCHRONIZING.<br /><br /> 1: parcialmente íntegro. Algumas réplicas não estão no estado de sincronização designado: as réplicas de confirmação síncrona devem ser sincronizadas e as réplicas de confirmação assíncrona devem estar sincronizando.<br /><br /> 2: íntegro. Todas as réplicas estão no estado de sincronização designado: as réplicas de confirmação síncrona estão sincronizadas e as réplicas de confirmação assíncrona estão sincronizando.|  
-|**synchronization_health_desc**|**nvarchar (60)**|Descrição do **synchronization_health**, um de:<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
+|**operational\_state\_desc**|**nvarchar(60)**|Descrição do **operacionais\_estado**, um de:<br /><br /> PENDING_FAILOVER<br /><br /> PENDING<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> FAILED<br /><br /> FAILED_NO_QUORUM<br /><br /> NULL|  
+|**recovery\_health**|**tinyint**|Pacote cumulativo de atualizações do **banco de dados\_estado** coluna o [sys.DM hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) exibição de gerenciamento dinâmico. Estes são os valores possíveis e suas descrições.<br /><br /> 0: em andamento.  Pelo menos um banco de dados Unido tem um estado de banco de dados diferente de ONLINE (**banco de dados\_estado** é não a 0).<br /><br /> 1 : Online. Bancos de dados Unidos têm um estado de banco de dados de ONLINE (**database_state** é 0).<br /><br /> NULL : **is_local** = 0|  
+|**recovery_health_desc**|**nvarchar(60)**|Descrição do **recovery_health**, um de:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
+|**synchronization\_health**|**tinyint**|Reflete um rollup do estado de sincronização de banco de dados (**synchronization_state**) de todos os bancos de dados de disponibilidade de associado (também conhecido como *réplicas*) e o modo de (a réplica de disponibilidade confirmação síncrona ou assíncrona modo de confirmação). Pacote cumulativo de atualizações refletirá o estado acumulado mais íntegro dos bancos de dados na réplica. Abaixo estão os valores possíveis e suas descrições.<br /><br /> 0: não está íntegro.   Pelo menos um banco de dados unido está no estado NOT SYNCHRONIZING.<br /><br /> 1: parcialmente íntegro. Algumas réplicas não estão no estado de sincronização designado: as réplicas de confirmação síncrona devem ser sincronizadas e as réplicas de confirmação assíncrona devem estar sincronizando.<br /><br /> 2: íntegro. Todas as réplicas estão no estado de sincronização designado: as réplicas de confirmação síncrona estão sincronizadas e as réplicas de confirmação assíncrona estão sincronizando.|  
+|**synchronization_health_desc**|**nvarchar(60)**|Descrição do **synchronization_health**, um de:<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
 |**connected_state**|**tinyint**|Se uma réplica secundária está conectada atualmente à réplica primária. Os valores possíveis são mostrados abaixo e suas descrições.<br /><br /> 0: desconectado. A resposta de uma réplica de disponibilidade para o estado desconectado depende de sua função: na réplica primária, se uma réplica secundária estiver desconectada, seus bancos de dados secundários são marcados como NOT SYNCHRONIZED na réplica primária, que aguarda o secundário reconectar; Em uma réplica secundária, ao detectar que está desconectada, a réplica secundária tentará reconectar-se à réplica primária.<br /><br /> 1: conectado.<br /><br /> Cada réplica primária acompanha o estado da conexão para cada réplica secundária no mesmo grupo de disponibilidade. As réplicas secundárias acompanham o estado da conexão apenas da réplica primária.|  
-|**connected_state_desc**|**nvarchar (60)**|Descrição do **connection_state**, um de:<br /><br /> DISCONNECTED<br /><br /> CONNECTED|  
-|**last_connect_error_number**|**int**|O número do último erro de conexão.|  
-|**last_connect_error_description**|**nvarchar (1024)**|Texto do **last_connect_error_number** mensagem.|  
+|**connected_state_desc**|**nvarchar(60)**|Descrição do **connection_state**, um de:<br /><br /> DISCONNECTED<br /><br /> CONNECTED|  
+|**last_connect_error_number**|**Int**|O número do último erro de conexão.|  
+|**last_connect_error_description**|**nvarchar(1024)**|Texto do **last_connect_error_number** mensagem.|  
 |**last_connect_error_timestamp**|**datetime**|Carimbo de data e hora que indica quando o **last_connect_error_number** erro.|  
   
 ##  <a name="RolesAndOperationalStates"></a>Funções e estados operacionais  

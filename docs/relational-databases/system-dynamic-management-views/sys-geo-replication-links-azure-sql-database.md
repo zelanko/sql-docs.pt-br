@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - sys.dm_geo_replication_links dynamic management view
 - dm_geo_replication_links dynamic management view
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ed6e04bacbe8ee1fcf911d0e2e4b73da12fc585
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5eb8f74023e90966200aca7603b82f685e0eb9db
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysgeoreplicationlinks-azure-sql-database"></a>sys.geo_replication_links (banco de dados do SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|ID do banco de dados atual no modo de exibição de sys. Databases.|  
+|database_id|**Int**|ID do banco de dados atual no modo de exibição de sys. Databases.|  
 |start_date|**datetimeoffset**|Hora UTC em um datacenter regional do banco de dados SQL quando a replicação de banco de dados foi iniciada|  
 |modify_date|**datetimeoffset**|Hora UTC no datacenter regional do banco de dados SQL quando a replicação geográfica do banco de dados foi concluída. O novo banco de dados está sincronizado com o banco de dados primário a partir desse momento. .|  
 |link_guid|**uniqueidentifier**|ID exclusiva do link de replicação geográfica.|  
@@ -48,8 +49,8 @@ ms.lasthandoff: 11/17/2017
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
 |função|**tinyint**|Função de replicação geográfica, um de:<br /><br /> 0 = primário. O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.<br /><br /> 1 = secundário.  O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
-|secondary_allow_connections|**tinyint**|O tipo de secundário, um de:<br /><br /> 0 = Não. O banco de dados secundário não está acessível até que o failover.<br /><br /> 1 = somente leitura. O banco de dados secundário é acessível somente para conexões de cliente com ApplicationIntent = ReadOnly.<br /><br /> 2 = Todos. O banco de dados secundário é acessível para qualquer conexão de cliente.|  
-|secondary_allow_connections _desc|**nvarchar(256)**|Não<br /><br /> Todos<br /><br /> Somente leitura|  
+|secondary_allow_connections|**tinyint**|O tipo de secundário, um de:<br /><br /> 0 = Não. O banco de dados secundário não está acessível até que o failover.<br /><br /> 1 = ReadOnly. O banco de dados secundário é acessível somente para conexões de cliente com ApplicationIntent = ReadOnly.<br /><br /> 2 = Todos. O banco de dados secundário é acessível para qualquer conexão de cliente.|  
+|secondary_allow_connections _desc|**nvarchar(256)**|não<br /><br /> Todos<br /><br /> Somente leitura|  
   
 ## <a name="permissions"></a>Permissões  
  Essa exibição só está disponível na **mestre** banco de dados para o logon principal no nível de servidor.  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - connection strings [Database Engine], TCP/IP
 - aliases [SQL Server], TCP/IP
 ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 462427bd676d23a3a490d6c04b87c71a716c3a5c
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 869aff413da127fac11244e8d2613696c963c323
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>Criando uma cadeia de conexão válida usando TCP/IP
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Para criar uma cadeia de caracteres de conexão válida usando TCP/IP, você deve:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Para criar uma cadeia de conexão válida usando TCP/IP, deve você:  
   
 -   Especificar um **Nome de Alias**.  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/17/2018
 > [!NOTE]  
 >  O Firewall do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows fecha a porta 1433 por padrão. Porque [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se comunica pela porta 1433, reabra a porta se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para escutar conexões de cliente usando TCP/IP. Para obter informações sobre como configurar um firewall, consulte "Como configurar um firewall para acessar o SQL Server" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ou verifique a documentação do firewall.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client dar suporte total ao protocolo IP versão 4 (IPv4) e protocolo IP versão 6 (IPv6). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager aceita IPv4 e IPv6 formatos para endereços IP. Para obter informações sobre IPv6, consulte "Conectando com o uso de IPv6" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client dão suporte total ao protocolo IP versão 4 (IPv4) e versão 6 (IPv6). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager aceita IPv4 e IPv6 formatos para endereços IP. Para obter informações sobre IPv6, consulte "Conectando com o uso de IPv6" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="connecting-to-the-local-server"></a>Conectando-se ao servidor local  
  Ao conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executado no mesmo computador que o cliente, você pode usar `(local)` como o nome do servidor. Esse procedimento não é incentivado, pois leva a ambiguidade. No entanto, ele pode ser útil quando se sabe que o cliente está sendo executado no computador pretendido. Por exemplo, ao criar um aplicativo para usuários móveis desconectados, como uma força de vendas, em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será executado em computadores laptop e armazenará dados de projeto, um cliente conectado a `(local)` sempre se conectaria ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executado no laptop. A palavra `localhost` ou um ponto (**.**) pode ser usado no lugar de `(local)`.  

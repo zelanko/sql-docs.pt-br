@@ -1,5 +1,5 @@
 ---
-title: sys.DM xe_session_object_columns (Transact-SQL) | Microsoft Docs
+title: sys.dm_xe_session_object_columns (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_xe_session_object_columns_TSQL
 - dm_xe_session_object_columns
 - sys.dm_xe_session_object_columns
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - xe
 - sys.dm_xe_session_object_columns dynamic management view
 ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1082f7c1784b758626b7e439ac414c4ba8f832d0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2fb09b402bcd7873e6786eedde20720e6a42bad2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxesessionobjectcolumns-transact-sql"></a>sys.dm_xe_session_object_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,12 +41,12 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary (8)**|O endereço da memória da sessão de evento. Tem uma relação muitos para um com sys.dm_xe_sessions.address. Não permite valor nulo.|  
-|column_name|**nvarchar (60)**|O nome do valor de configuração. Não permite valor nulo.|  
-|column_id|**int**|A ID da coluna. É exclusiva no objeto. Não permite valor nulo.|  
-|column_value|**nvarchar (2048)**|O valor configurado da coluna. Permite valor nulo.|  
-|object_type|**nvarchar (60)**|O tipo do objeto. Não permite valor nulo. object_type é um de:<br /><br /> event<br /><br /> target|  
-|object_name|**nvarchar (60)**|O nome do objeto ao qual a coluna pertence. Não permite valor nulo.|  
+|event_session_address|**varbinary(8)**|O endereço da memória da sessão de evento. Tem uma relação muitos para um com sys.dm_xe_sessions.address. Não permite valor nulo.|  
+|column_name|**nvarchar(60)**|O nome do valor de configuração. Não permite valor nulo.|  
+|column_id|**Int**|A ID da coluna. É exclusiva no objeto. Não permite valor nulo.|  
+|column_value|**nvarchar(2048)**|O valor configurado da coluna. Permite valor nulo.|  
+|object_type|**nvarchar(60)**|O tipo do objeto. Não permite valor nulo. object_type é um de:<br /><br /> event<br /><br /> target|  
+|object_name|**nvarchar(60)**|O nome do objeto ao qual a coluna pertence. Não permite valor nulo.|  
 |object_package_guid|**uniqueidentifier**|O GUID do pacote que contém o objeto. Não permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  

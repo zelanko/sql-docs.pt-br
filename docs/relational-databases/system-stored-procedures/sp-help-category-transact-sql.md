@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_category
 - sp_help_category_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efec4c1ef04ef95e74ef13479b5f51cfe2d84bdb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: debc3b8cef2aeb0a9f4893ff5e9287a2a5fdd016
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,28 +49,28 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@class=**] **'***classe***'**  
+ [ **@class=**] **'***class***'**  
  A classe sobre a qual as informações são solicitadas. *classe* é **varchar(8)**, com um valor padrão de **trabalho**. *classe* pode ser um destes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**TRABALHO**|Fornece informações sobre uma categoria de trabalho.|  
-|**ALERTA**|Fornece informações sobre uma categoria de alerta.|  
+|**JOB**|Fornece informações sobre uma categoria de trabalho.|  
+|**ALERT**|Fornece informações sobre uma categoria de alerta.|  
 |**OPERADOR**|Fornece informações sobre uma categoria de operador.|  
   
- [  **@type=** ] **'***tipo***'**  
+ [ **@type=** ] **'***type***'**  
  O tipo de categoria para a qual as informações são solicitadas. *tipo* é **varchar(12)**, com um padrão NULL, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**LOCAL**|Categoria de trabalho local.|  
-|**MULTI-SERVER**|Categoria de trabalho multisservidor.|  
+|**MULTI -SERVER**|Categoria de trabalho multisservidor.|  
 |**NONE**|Categoria de uma classe diferente de **trabalho**.|  
   
- [  **@name=** ] **'***nome***'**  
+ [ **@name=** ] **'***name***'**  
  O nome da categoria para a qual as informações são solicitadas. *nome* é **sysname**, com um padrão NULL.  
   
- [  **@suffix=** ] *sufixo*  
+ [ **@suffix=** ] *suffix*  
  Especifica se o **category_type** coluna no conjunto de resultados é uma ID ou um nome. *sufixo* é **bit**, com um padrão de **0**. **1** mostra o **category_type** como um nome, e **0** mostra como uma ID.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -78,19 +81,19 @@ sp_help_category [ [ @class = ] 'class' ]
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**category_id**|**int**|ID da categoria|  
-|**category_type**|**tinyint**|Tipo de categoria:<br /><br /> **1** = local<br /><br /> **2** = multisservidor<br /><br /> **3** = nenhum|  
+|**category_id**|**Int**|ID da categoria|  
+|**category_type**|**tinyint**|Tipo de categoria:<br /><br /> **1** = Local<br /><br /> **2** = multisservidor<br /><br /> **3** = nenhum|  
 |**name**|**sysname**|Nome da categoria|  
   
  Quando  **@suffix**  é **1**, **sp_help_category** retorna o conjunto de resultados a seguir:  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**category_id**|**int**|ID da categoria|  
+|**category_id**|**Int**|ID da categoria|  
 |**category_type**|**sysname**|Tipo de categoria. Um dos **LOCAL**, **MULTISSERVIDOR**, ou **NONE**|  
 |**name**|**sysname**|Nome da categoria|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_help_category** deve ser executado a partir de **msdb** banco de dados.  
   
  Se nenhum parâmetro for especificado, o conjunto de resultados fornecerá informações sobre todas as categorias de trabalho.  
@@ -134,9 +137,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_add_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

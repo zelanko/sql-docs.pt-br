@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorresults
 - sp_dbmmonitorresults_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_dbmmonitorresults
 - database mirroring [SQL Server], monitoring
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
-caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9dd87ba18696c5787c3ee2220846a3dde857b660
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ce88354c3d378dbfa2e7bc71acd57ed52aaf5131
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,22 +91,22 @@ sp_dbmmonitorresults database_name
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nome de um banco de dados espelho.|  
-|**função**|**int**|Função de espelhamento atual da instância do servidor:<br /><br /> 1 = Principal<br /><br /> 2 = Espelhamento|  
-|**mirroring_state**|**int**|Estado do banco de dados:<br /><br /> 0 = suspenso<br /><br /> 1 = desconectado<br /><br /> 2 = Sincronização<br /><br /> 3 = Failover pendente<br /><br /> 4 = Sincronizado|  
-|**witness_status**|**int**|O status da conexão da testemunha na sessão de espelhamento de banco de dados pode ser:<br /><br /> 0 = Desconhecido<br /><br /> 1 = conectado<br /><br /> 2 = Desconectado|  
-|**log_generation_rate**|**int**|Quantidade de log gerado desde a atualização anterior do status de espelhamento deste banco de dados em kilobytes/segundo.|  
-|**unsent_log**|**int**|Tamanho de log não enviado na fila de envio do principal em kilobytes.|  
-|**send_rate**|**int**|Taxa de envio de logs do principal para o espelhamento em kilobytes/segundo.|  
-|**unrestored_log**|**int**|Tamanho da fila de restauração do espelhamento em kilobytes.|  
-|**recovery_rate**|**int**|Taxa de restauração do espelhamento em kilobytes/segundo.|  
-|**transaction_delay**|**int**|Atraso total de todas as transações em milissegundos.|  
-|**transactions_per_sec**|**int**|Número de transações que estão ocorrendo por segundo na instância do servidor principal.|  
-|**average_delay**|**int**|Espera média na instância de servidor principal para cada transação devido ao espelhamento de banco de dados. Em modo de alto desempenho (isto é, quando a propriedade SAFETY é definida em OFF), este valor geralmente é 0.|  
+|**role**|**Int**|Função de espelhamento atual da instância do servidor:<br /><br /> 1 = Principal<br /><br /> 2 = Espelhamento|  
+|**mirroring_state**|**Int**|Estado do banco de dados:<br /><br /> 0 = suspenso<br /><br /> 1 = desconectado<br /><br /> 2 = Sincronização<br /><br /> 3 = Failover pendente<br /><br /> 4 = Sincronizado|  
+|**witness_status**|**Int**|O status da conexão da testemunha na sessão de espelhamento de banco de dados pode ser:<br /><br /> 0 = Desconhecido<br /><br /> 1 = conectado<br /><br /> 2 = Desconectado|  
+|**log_generation_rate**|**Int**|Quantidade de log gerado desde a atualização anterior do status de espelhamento deste banco de dados em kilobytes/segundo.|  
+|**unsent_log**|**Int**|Tamanho de log não enviado na fila de envio do principal em kilobytes.|  
+|**send_rate**|**Int**|Taxa de envio de logs do principal para o espelhamento em kilobytes/segundo.|  
+|**unrestored_log**|**Int**|Tamanho da fila de restauração do espelhamento em kilobytes.|  
+|**recovery_rate**|**Int**|Taxa de restauração do espelhamento em kilobytes/segundo.|  
+|**transaction_delay**|**Int**|Atraso total de todas as transações em milissegundos.|  
+|**transactions_per_sec**|**Int**|Número de transações que estão ocorrendo por segundo na instância do servidor principal.|  
+|**average_delay**|**Int**|Espera média na instância de servidor principal para cada transação devido ao espelhamento de banco de dados. Em modo de alto desempenho (isto é, quando a propriedade SAFETY é definida em OFF), este valor geralmente é 0.|  
 |**time_recorded**|**datetime**|Hora em que a linha foi registrada pelo monitor de espelhamento de banco de dados. Essa é a hora do relógio do sistema do principal.|  
 |**time_behind**|**datetime**|Hora de relógio do sistema aproximada do principal para o qual o banco de dados espelho é atualmente atualizado. Este valor é significante somente na instância de servidor principal.|  
 |**local_time**|**datetime**|Hora de relógio de sistema na instância de servidor local quando esta linha foi atualizada.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_dbmmonitorresults** pode ser executado somente no contexto da **msdb** banco de dados.  
   
 ## <a name="permissions"></a>Permissões  
@@ -123,10 +125,10 @@ EXEC sp_dbmmonitorresults AdventureWorks2012, 2, 0;
   
 ## <a name="see-also"></a>Consulte também  
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [sp_dbmmonitorchangemonitoring &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
- [sp_dbmmonitoraddmonitoring &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
- [sp_dbmmonitordropmonitoring &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
- [sp_dbmmonitorhelpmonitoring &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
+ [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
+ [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
+ [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
+ [sp_dbmmonitorhelpmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
  [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
   

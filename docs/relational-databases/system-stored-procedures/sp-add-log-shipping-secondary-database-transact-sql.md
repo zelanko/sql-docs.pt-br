@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_shipping_secondary_database
 - sp_add_log_shipping_secondary_database_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_log_shipping_secondary_database
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_log_shipping_secondary_database
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e66faa24b29b3d3279b3d85b5c834f7420b96abf
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 965f2191ba9dbdbba5be91412c1459064972c22c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddlogshippingsecondarydatabase-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,19 +63,19 @@ sp_add_log_shipping_secondary_database
  [  **@secondary_database**  =] '*secondary_database*'  
  É o nome do banco de dados secundário. *secondary_database* é **sysname**, sem padrão.  
   
- [  **@primary_server**  =] '*primary_server*'  
+ [ **@primary_server** = ] '*primary_server*'  
  O nome da instância primária do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs. *primary_server* é **sysname** e não pode ser NULL.  
   
  [  **@primary_database**  =] '*primary_database*'  
  É o nome do banco de dados do servidor primário. *primary_database* é **sysname**, sem padrão.  
   
- [  **@restore_delay**  =] '*restore_delay*'  
+ [ **@restore_delay** = ] '*restore_delay*'  
  A quantidade de tempo, em minutos, que o servidor secundário espera antes de restaurar um determinado arquivo de backup. *restore_delay* é **int** e não pode ser NULL. O valor padrão é 0.  
   
- [  **@restore_all**  =] '*restore_all*'  
+ [ **@restore_all** = ] '*restore_all*'  
  Se definido como 1, o servidor secundário restaura todos os backups de log de transações disponíveis quando o trabalho de restauração é executado. Caso contrário, ele será interrompido depois que um arquivo for restaurado. *restore_all* é **bit** e não pode ser NULL.  
   
- [  **@restore_mode**  =] '*restore_mode*'  
+ [ **@restore_mode** = ] '*restore_mode*'  
  O modo de restauração do banco de dados secundário.  
   
  0 = Log de restauração com NORECOVERY.  
@@ -81,22 +84,22 @@ sp_add_log_shipping_secondary_database
   
  *Restaurar* é **bit** e não pode ser NULL.  
   
- [  **@disconnect_users**  =] '*disconnect_users*'  
+ [ **@disconnect_users** = ] '*disconnect_users*'  
  Se definido como 1, os usuários são desconectados do banco de dados secundário quando uma operação de restauração é executada. Padrão = 0. *Desconectar* usuários é **bit** e não pode ser NULL.  
   
- [  **@block_size**  =] '*block_size*'  
+ [ **@block_size** = ] '*block_size*'  
  Tamanho, em bytes, usado como tamanho de bloco para o dispositivo de backup. *block_size* é **int** com um valor padrão de -1.  
   
  [  **@buffer_count**  =] '*buffer_count*'  
  Número total de buffers usado pela operação de backup ou restauração. *buffer_count* é **int** com um valor padrão de -1.  
   
- [  **@max_transfer_size**  =] '*max_transfer_size*'  
+ [ **@max_transfer_size** = ] '*max_transfer_size*'  
  O tamanho, em bytes, da solicitação máxima de entrada ou de saída emitida por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o dispositivo de backup. *max_transfersize* é **int** e pode ser NULL.  
   
- [  **@restore_threshold**  =] '*restore_threshold*'  
+ [ **@restore_threshold** = ] '*restore_threshold*'  
  Número de minutos permitidos a decorrer entre operações de restauração antes que um alerta seja gerado. *restore_threshold* é **int** e não pode ser NULL.  
   
- [  **@threshold_alert**  =] '*threshold_alert*'  
+ [ **@threshold_alert** = ] '*threshold_alert*'  
  É o alerta a ser gerado quando o limite do backup for excedido. *threshold_alert* é **int**, com um padrão de 14.420.  
   
  [  **@threshold_alert_enabled**  =] '*threshold_alert_enabled*'  
@@ -111,7 +114,7 @@ sp_add_log_shipping_secondary_database
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nenhuma  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_add_log_shipping_secondary_database** deve ser executado a partir de **mestre** banco de dados no servidor secundário. Esse procedimento armazenado faz o seguinte:  
   
 1.  **sp_add_log_shipping_secondary_primary** deve ser chamado antes deste procedimento armazenado para inicializar as informações de banco de dados no servidor secundário de envio de logs primário.  
@@ -143,7 +146,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Sobre o envio de logs &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

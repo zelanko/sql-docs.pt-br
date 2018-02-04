@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_configure_sp_TSQL
 - sysmail_configure_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_configure_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_configure_sp
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
-caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d56f348ef849e98cf0e9445382d00ec6b66e5b81
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 934f108783b76e070a15723543cafae59b80b705
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailconfiguresp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +48,10 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@parameter_name**  =] **'***parameter_name***'**  
+ [**@parameter_name** = ] **'***parameter_name***'**  
  O nome do parâmetro a ser alterado.  
   
- [ **@parameter_value**  =] **'***parameter_value***'**  
+ [**@parameter_value** = ] **'***parameter_value***'**  
  O novo valor do parâmetro.  
   
  [ **@description**  =] **'***descrição***'**  
@@ -60,7 +63,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nenhuma  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O Database Mail usa os seguintes parâmetros:  
   
 ||||  
@@ -100,7 +103,7 @@ EXECUTE msdb.dbo.sysmail_configure_sp
   
 ## <a name="see-also"></a>Consulte também  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [sysmail_help_configure_sp &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)   
+ [sysmail_help_configure_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)   
  [Armazenados do Database Mail procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

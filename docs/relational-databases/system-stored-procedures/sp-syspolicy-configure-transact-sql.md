@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_configure
 - sp_syspolicy_configure_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_configure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_configure
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40462cdd0cce0725bf9fbf42d3efb33480530a8c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e4ff49cd5be072fb288bb721b781474da93b7ba9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicyconfigure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +47,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name =** ] **'***nome***'**  
+ [ **@name =** ] **'***name***'**  
  É o nome do parâmetro que você deseja configurar. *nome* é **sysname**, é necessário e não pode ser nulo ou uma cadeia de caracteres vazia.  
   
  *nome* pode ser qualquer um dos seguintes valores:  
@@ -55,7 +58,7 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   'LogOnSuccess' - Especifica se o Gerenciamento Baseado em Políticas registra em log avaliações de política com êxito.  
   
- [  **@value =** ] *valor*  
+ [ **@value =** ] *value*  
  É o valor que está associado com o valor especificado para *nome*. *valor* é **sql_variant**e é necessário.  
   
 -   Se você especificar 'Enabled' para *nome*, você pode usar qualquer um dos seguintes valores:  
@@ -75,7 +78,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você deve executar sp_syspolicy_configure no contexto do banco de dados de sistema msdb.  
   
  Para exibir os valores atuais dessas configurações, consulte a exibição do sistema msdb.dbo.syspolicy_configuration.  
@@ -116,8 +119,8 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciamento baseado em políticas armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_set_config_enabled &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-enabled-transact-sql.md)   
- [sp_syspolicy_set_config_history_retention &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
- [sp_syspolicy_set_log_on_success &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-log-on-success-transact-sql.md)  
+ [sp_syspolicy_set_config_enabled &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-enabled-transact-sql.md)   
+ [sp_syspolicy_set_config_history_retention &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
+ [sp_syspolicy_set_log_on_success &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-log-on-success-transact-sql.md)  
   
   

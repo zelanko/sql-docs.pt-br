@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_account_sp_TSQL
 - sysmail_help_account_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_account_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_account_sp
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
-caps.latest.revision: "48"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dfc032a279abad7949e67f4c232cbe30219baa30
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b811fef9f1c2a89590e1e03f4fbe1b214ddc902d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpaccountsp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +46,10 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@account_id**  =] *account_id*  
+ [ **@account_id** = ] *account_id*  
  A ID da conta para a qual as informações serão listadas. *account_id* é **int**, com um padrão NULL.  
   
- [  **@account_name**  =] **'***account_name***'**  
+ [ **@account_name** = ] **'***account_name***'**  
  O nome da conta para a qual listar informações. *account_name* é **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -58,20 +61,20 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ||||  
 |-|-|-|  
 |Nome da coluna|Tipo de dados|Description|  
-|**account_id**|**int**|O ID da conta.|  
+|**account_id**|**Int**|O ID da conta.|  
 |**name**|**sysname**|O nome da conta.|  
-|**Descrição**|**nvarchar(256)**|A descrição da conta.|  
-|**endereço de email**|**nvarchar (128)**|O endereço de email a partir do qual as mensagens serão enviadas.|  
-|**display_name**|**nvarchar (128)**|O nome para exibição da conta.|  
-|**replyto_address**|**nvarchar (128)**|O endereço onde as respostas às mensagens desta conta são enviadas.|  
-|**tipo do servidor**|**sysname**|O tipo de servidor de email da conta.|  
-|**nome do servidor**|**sysname**|O nome do servidor de email da conta.|  
-|**port**|**int**|O número da porta usada pelo servidor de email.|  
-|**nome de usuário**|**nvarchar (128)**|O nome de usuário a ser usado para fazer logon no servidor de email, se o servidor de email usar autenticação. Quando **username** for NULL, o Database Mail não usa autenticação para esta conta.|  
+|**description**|**nvarchar(256)**|A descrição da conta.|  
+|**email_address**|**nvarchar(128)**|O endereço de email a partir do qual as mensagens serão enviadas.|  
+|**display_name**|**nvarchar(128)**|O nome para exibição da conta.|  
+|**replyto_address**|**nvarchar(128)**|O endereço onde as respostas às mensagens desta conta são enviadas.|  
+|**servertype**|**sysname**|O tipo de servidor de email da conta.|  
+|**servername**|**sysname**|O nome do servidor de email da conta.|  
+|**port**|**Int**|O número da porta usada pelo servidor de email.|  
+|**username**|**nvarchar(128)**|O nome de usuário a ser usado para fazer logon no servidor de email, se o servidor de email usar autenticação. Quando **username** for NULL, o Database Mail não usa autenticação para esta conta.|  
 |**use_default_credentials**|**bit**|Especifica se o email deve ser enviado ao servidor SMTP com as credenciais do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** é bit, sem padrão. Quando este parâmetro for 1, o Database Mail usa as credenciais do serviço [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Quando esse parâmetro é 0, o Database Mail usa o  **@username**  e  **@password**  para autenticação no servidor SMTP. Se  **@username**  e  **@password**  forem NULL, o Database Mail usa a autenticação anônima. Consulte o administrador de SMTP antes de especificar esse parâmetro.|  
 |**enable_ssl**|**bit**|Especifica se o Database Mail criptografa a comunicação usando o Protocolo SSL. Use esta opção se o SSL for exigido em seu servidor SMTP. **enable_ssl** é bit, sem padrão. 1 indica que o Database Mail criptografa a comunicação usando SSL. 0 indica que o Database Mail envia o email sem criptografia SSL.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando nenhum *account_id* ou *account_name* for fornecido, **sysmail_help_account** lista informações sobre todas as contas do Database Mail na instância do Microsoft SQL Server.  
   
  O procedimento armazenado **sysmail_help_account_sp** está no **msdb** banco de dados e pertence a **dbo** esquema. O procedimento deve ser executado com um nome de três partes se o banco de dados atual não é **msdb**.  

@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31eb71e09e041f6d23c0c88e1ca1423f3693faa7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 75e4229fde3cae66cdd2172c0f2bea0cbf63bf10
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,20 +33,20 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|ID da tabela subjacente. Essa é a tabela física no nó de computação, não o object_id da tabela lógico no nó de controle. Por exemplo, object_id não coincide com o object_id em sys. Tables.<br /><br /> Para unir com Sys. Tables, use sys.pdw_index_mappings.|  
-|**index_id**|**int**|ID do índice columnstore clusterizado em *object_id* tabela.|  
-|**número_da_partição**|**int**|ID da partição de tabela que contém o grupo de linhas *row_group_id*. Você pode usar *número_da_partição* para adicionar esse DMV a sys. Partitions.|  
-|**row_group_id**|**int**|ID deste grupo de linhas. Isso é exclusivo dentro da partição.|  
+|**object_id**|**Int**|ID da tabela subjacente. Essa é a tabela física no nó de computação, não o object_id da tabela lógico no nó de controle. Por exemplo, object_id não coincide com o object_id em sys. Tables.<br /><br /> Para unir com Sys. Tables, use sys.pdw_index_mappings.|  
+|**index_id**|**Int**|ID do índice columnstore clusterizado em *object_id* tabela.|  
+|**partition_number**|**Int**|ID da partição de tabela que contém o grupo de linhas *row_group_id*. Você pode usar *número_da_partição* para adicionar esse DMV a sys. Partitions.|  
+|**row_group_id**|**Int**|ID deste grupo de linhas. Isso é exclusivo dentro da partição.|  
 |**dellta_store_hobt_id**|**bigint**|O hobt_id para grupos de linhas delta ou NULL se o tipo de grupo de linhas não for delta. Um grupo de linhas delta é um grupo de linhas de leitura/gravação que está aceitando novos registros. Um grupo de linhas delta tem o **abrir** status. Um grupo de linhas delta ainda está no formato rowstore e não foi compactado para o formato columnstore.|  
-|**estado**|**tinyint**|O número de ID associado a state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
-|**state_desccription**|**nvarchar (60)**|Descrição do estado persistente do grupo de linhas:<br /><br /> OPEN – Um grupo de linhas de leitura/gravação que está aceitando novos registros. Um grupo de linhas aberto ainda está no formato rowstore e não foi compactado para o formato columnstore.<br /><br /> CLOSED – Um grupo de linhas que foi preenchido, mas ainda não compactado pelo processo Tuple Mover.<br /><br /> COMPRESSED – Um grupo de linhas que foi preenchido e compactado.|  
+|**state**|**tinyint**|O número de ID associado a state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
+|**state_desccription**|**nvarchar(60)**|Descrição do estado persistente do grupo de linhas:<br /><br /> OPEN – Um grupo de linhas de leitura/gravação que está aceitando novos registros. Um grupo de linhas aberto ainda está no formato rowstore e não foi compactado para o formato columnstore.<br /><br /> CLOSED – Um grupo de linhas que foi preenchido, mas ainda não compactado pelo processo Tuple Mover.<br /><br /> COMPRESSED – Um grupo de linhas que foi preenchido e compactado.|  
 |**total_rows**|**bigint**|Total de linhas fisicamente armazenadas no grupo de linhas. Algumas podem ter sido excluídas, mas ainda estão armazenadas. O número máximo de linhas em um grupo de linhas é 1.048.576 (FFFFF hexadecimal).|  
 |**deleted_rows**|**bigint**|Número de linhas fisicamente armazenadas no grupo de linhas que são marcados para exclusão.<br /><br /> Sempre 0 para DELTA grupos de linhas.|  
-|**size_in_bytes**|**int**|Tamanho combinado, em bytes, de todas as páginas neste grupo de linhas. Esse tamanho não inclui o tamanho necessário para armazenar metadados ou dicionários compartilhados.|  
-|**pdw_node_id**|**int**|Id exclusiva de um [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nó.|  
-|**distribution_id**|**int**|Id exclusiva da distribuição.|
+|**size_in_bytes**|**Int**|Tamanho combinado, em bytes, de todas as páginas neste grupo de linhas. Esse tamanho não inclui o tamanho necessário para armazenar metadados ou dicionários compartilhados.|  
+|**pdw_node_id**|**Int**|Id exclusiva de um [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nó.|  
+|**distribution_id**|**Int**|Id exclusiva da distribuição.|
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Retorna uma linha para cada grupo de linhas columnstore para cada tabela que tem um índice columnstore clusterizado ou não clusterizado.  
   
  Use **sys.pdw_nodes_column_store_row_groups** para determinar o número de linhas incluídas no grupo de linhas e o tamanho do grupo de linhas.  
@@ -111,8 +113,8 @@ ORDER BY 1, 2
   
 ## <a name="see-also"></a>Consulte também  
  [SQL Data Warehouse e exibições de catálogo do Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [Criar índice COLUMNSTORE &#40; Transact-SQL &#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys.pdw_nodes_column_store_segments &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [sys.pdw_nodes_column_store_dictionaries &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
+ [sys.pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
+ [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   

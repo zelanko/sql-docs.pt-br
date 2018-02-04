@@ -8,28 +8,30 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_keymappings_TSQL
 - sp_fulltext_keymappings
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - full-text indexes [SQL Server], key column
 - sp_fulltext_keymappings
 - full-text indexes [SQL Server], troubleshooting
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0f99180f5b55808bc1bb7602d7dec7800febe68
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9d0a2bb541e1984e8d992ae00303d47838204ed5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -52,14 +54,14 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
  *docid*  
  É o identificador de um documento interno (DocId) que corresponde ao valor da chave. Um valor *docid* inválido não retorna nenhum resultado.  
   
- *chave*  
+ *key*  
  É o valor da chave de texto completo da tabela especificada. Um valor *key* inválido não retorna nenhum resultado. Para obter informações sobre valores de chave de texto completo, consulte [gerenciar índices de texto completo](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
   
 > [!IMPORTANT]  
 >  Para obter informações sobre como usar um, dois ou três parâmetros, consulte "Comentários", posteriormente neste tópico.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhum.  
+ Nenhuma.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -73,14 +75,14 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="permissions"></a>Permissões  
  Esta função é pública e não requer permissões especiais.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela a seguir descreve o efeito de usar um, dois ou três parâmetros.  
   
 |Esta lista de parâmetros...|Tem este resultado...|  
 |--------------------------|----------------------|  
 |*table_id*|Quando invocado apenas com o *table_id* parâmetro, sp_fulltext_keymappings retorna todos os valores de chave de texto completo (Key) da tabela base especificada, juntamente com o DocId que corresponde a cada chave. Isso inclui as chaves que estão com exclusão pendente.<br /><br /> Essa função é útil para solucionar vários problemas. É especialmente útil para ver o conteúdo do índice de texto completo quando a chave de texto completo selecionada não é do tipo de dados de números inteiros. Isso envolve a junção de resultados de sp_fulltext_keymappings com os resultados de **sys.DM fts_index_keywords_by_document**. Para obter mais informações, consulte [sys.DM fts_index_keywords_by_document &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> Em geral, no entanto, recomendamos que, se possível, você execute sp_fulltext_keymappings com os parâmetros que especificam uma chave de texto completo específica ou DocId. Isso é muito mais eficiente do que retornar um mapa de chaves inteiro, especialmente para uma tabela muito grande para a qual o custo de desempenho de retornar um mapa de chaves inteiro pode ser substancial.|  
 |*table_id*, *docid*|Se apenas o *table_id* e *docid* forem especificados, *docid* devem ser não nulos e especificar um DocId válido na tabela especificada. Essa função é útil para isolar a chave de texto completo personalizada a partir da tabela base que corresponde ao DocId de um índice de texto completo específico.|  
-|*table_id*, NULL, *chave*|Se houver três parâmetros, o segundo parâmetro deve ser NULL, e *chave* devem ser não nulos e especifique um valor de chave de texto completo válido da tabela especificada. Essa função é útil no isolamento do DocId que corresponde a uma chave de texto completo específica da tabela base.|  
+|*table_id*, NULL, *key*|Se houver três parâmetros, o segundo parâmetro deve ser NULL, e *chave* devem ser não nulos e especifique um valor de chave de texto completo válido da tabela especificada. Essa função é útil no isolamento do DocId que corresponde a uma chave de texto completo específica da tabela base.|  
   
  Um erro é retornado em qualquer uma das condições a seguir:  
   

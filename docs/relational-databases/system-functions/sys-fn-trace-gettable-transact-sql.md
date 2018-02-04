@@ -1,5 +1,5 @@
 ---
-title: fn_trace_gettable (Transact-SQL) | Microsoft Docs
+title: sys.fn_trace_gettable (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - fn_trace_gettable
 - fn_trace_gettable_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_trace_gettable function
 - sys.fn_trace_gettable function
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a70966342cbc7ec85e8322d00e1ff7ff46ec4f66
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8babbdce1e0ab090af85a39f163965d322ac38f7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfntracegettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +56,7 @@ fn_trace_gettable ( 'filename' , number_files )
  *number_files*  
  Especifica o número de arquivos de substituição a serem lidos. Esse número inclui o arquivo inicial especificado em *filename*. *number_files* é um **int**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se *number_files* é especificado como **padrão**, **fn_trace_gettable** lerá todos os arquivos de substituição até atingir o final do rastreamento. **fn_trace_gettable** retorna uma tabela com todas as colunas válidas para o rastreamento especificado. Para obter mais informações, consulte [sp_trace_setevent &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
  Lembre-se de que a função fn_trace_gettable não carregará arquivos de substituição (quando esta opção é especificada usando o *number_files* argumento) onde o nome do arquivo de rastreamento original termina com um sublinhado e um valor numérico. (Isso não se aplica ao sublinhado e ao número que são acrescentados automaticamente quando um arquivo é substituído.) Como alternativa, você pode renomear os arquivos de rastreamento para remover os sublinhados no nome de arquivo original. Por exemplo, se o arquivo original é chamado **Trace_Oct_5.trc** e o arquivo de substituição nomeado **Trace_Oct_5_1.trc**, você pode renomear os arquivos a serem **TraceOct5.trc** e  **TraceOct5_1.trc**.  
@@ -89,7 +91,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_trace_generateevent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  

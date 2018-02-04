@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_jobstep
 - sp_update_jobstep_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_update_jobstep
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_update_jobstep
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b2d420dd6ce746f758593b24783e1c00f4e6f8df
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c81c22e3fb6de374b378df4ef52b316efe65fdb6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,10 +68,10 @@ sp_update_jobstep
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  O número de identificação do trabalho ao qual a etapa pertence. *job_id*é **uniqueidentifier**, com um padrão NULL. O *job_id* ou *job_name* devem ser especificados, mas não podem ser especificados.  
   
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  O nome do trabalho ao qual a etapa pertence. *job_name*é **sysname**, com um padrão NULL. O *job_id* ou *job_name* devem ser especificados, mas não podem ser especificados.  
   
  [  **@step_id =**] *step_id*  
@@ -77,7 +80,7 @@ sp_update_jobstep
  [  **@step_name =**] **'***step_name***'**  
  É um novo nome para a etapa. *step_name*é **sysname**, com um padrão NULL.  
   
- [  **@subsystem =**] **'***subsistema***'**  
+ [ **@subsystem =**] **'***subsystem***'**  
  O subsistema usado pelo Microsoft SQL Server Agent para executar *comando*. *subsistema* é **nvarchar (40)**, com um padrão NULL.  
   
  [  **@command =**] **'***comando***'**  
@@ -92,31 +95,31 @@ sp_update_jobstep
  [  **@on_success_action =**] *success_action*  
  A ação a ser executada se a etapa tiver êxito. *success_action* é **tinyint**, com um padrão NULL, e pode ser um destes valores.  
   
-|Valor|Descrição (ação)|  
+|Value|Descrição (ação)|  
 |-----------|----------------------------|  
 |**1**|Sair com êxito.|  
 |**2**|Sair com falha.|  
 |**3**|Ir para a próxima etapa.|  
 |**4**|Vá para a etapa *success_step_id.*|  
   
- [  **@on_success_step_id =**] *success_step_id*  
+ [ **@on_success_step_id =**] *success_step_id*  
  O número de identificação da etapa neste trabalho a ser executado se a etapa tiver êxito e *success_action* é **4**. *success_step_id* é **int**, com um padrão NULL.  
   
  [  **@on_fail_action =**] *fail_action*  
  A ação a ser executada se a etapa falhar. *fail_action* é **tinyint**, com um padrão de NULL e pode ter um destes valores.  
   
-|Valor|Descrição (ação)|  
+|Value|Descrição (ação)|  
 |-----------|----------------------------|  
 |**1**|Sair com êxito.|  
 |**2**|Sair com falha.|  
 |**3**|Ir para a próxima etapa.|  
-|**4**|Vá para a etapa *fail_step_id**.*|  
+|**4**|Vá para a etapa *fail_step_id * *.*|  
   
- [  **@on_fail_step_id =**] *fail_step_id*  
+ [ **@on_fail_step_id =**] *fail_step_id*  
  O número de identificação da etapa neste trabalho a ser executado se a etapa falhar e *fail_action* é **4**. *fail_step_id* é **int**, com um padrão NULL.  
   
- [  **@server =**] **'***servidor***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*servidor* é **nvarchar (128)**, com um padrão NULL.  
+ [  **@server =**] **'***server***'**  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *servidor* é **nvarchar (128)**, com um padrão NULL.  
   
  [  **@database_name =**] **'***banco de dados***'**  
  O nome do banco de dados no qual executar uma etapa [!INCLUDE[tsql](../../includes/tsql-md.md)]. *banco de dados*é **sysname**. Os nomes entre colchetes ([ ]) não são permitidos. O valor padrão é NULL.  
@@ -140,10 +143,10 @@ sp_update_jobstep
   
  **@output_file_name = ' '**  
   
- [  **@flags =**] *sinalizadores*  
+ [ **@flags =**] *flags*  
  Uma opção que controla comportamento. *sinalizadores de* é **int**, e pode ser um destes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0** (padrão)|Substitui o arquivo de saída.|  
 |**2**|Anexa a um arquivo de saída|  
@@ -151,16 +154,16 @@ sp_update_jobstep
 |**8**|Grava o log na tabela (substitui o histórico existente)|  
 |**16**|Grava o log na tabela (anexa ao histórico existente)|  
   
- [  **@proxy_id** =] *proxy_id*  
+ [ **@proxy_id**= ] *proxy_id*  
  O número da ID do proxy com o qual a etapa de trabalho é executada. *proxy_id* é do tipo **int**, com um padrão NULL. Se nenhum *proxy_id* for especificado, nenhum *proxy_name* for especificado e não *user_name* for especificado, a etapa de trabalho é executado como a conta de serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
- [  **@proxy_name** =] **'***proxy_name***'**  
+ [ **@proxy_name**= ] **'***proxy_name***'**  
  O nome do proxy com o qual a etapa de trabalho é executada. *proxy_name* é do tipo **sysname**, com um padrão NULL. Se nenhum *proxy_id* for especificado, nenhum *proxy_name* for especificado e não *user_name* for especificado, a etapa de trabalho é executado como a conta de serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_update_jobstep** deve ser executado a partir de **msdb** banco de dados.  
   
  A atualização de uma etapa de trabalho incrementa o número de versão do trabalho.  
@@ -196,8 +199,8 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [Exibir ou modificar trabalhos](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
- [sp_delete_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_help_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

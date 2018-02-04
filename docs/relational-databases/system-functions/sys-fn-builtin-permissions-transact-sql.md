@@ -1,5 +1,5 @@
 ---
-title: sys. fn_builtin_permissions (Transact-SQL) | Microsoft Docs
+title: sys.fn_builtin_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - sys.fn_builtin_permissions_TSQL
 - fn_builtin_permissions_TSQL
 - sys.fn_builtin_permissions
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - compact permissions types
 - viewing permission hierarchy
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - displaying permission hierarchy
 - sys.fn_builtin_permissions function
 ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a52966aaa6bd8cc58c58eeb7fbf16bc6ab31afa
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 659efe9cd24a9040101f48e0e42f65355fe6d077
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,19 +73,19 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  *empty_string*  
  Equivalente a DEFAULT.  
   
- **'**< securable_class >**'**  
- Quando for chamado com o nome de uma classe protegível, sys. fn_builtin_permissions retornará todas as permissões que se aplicam à classe. < securable_class > é uma cadeia de caracteres literal que requer aspas. **nvarchar (60)**  
+ **'**<securable_class>**'**  
+ Quando for chamado com o nome de uma classe protegível, sys. fn_builtin_permissions retornará todas as permissões que se aplicam à classe. < securable_class > é uma cadeia de caracteres literal que requer aspas. **nvarchar(60)**  
   
 ## <a name="tables-returned"></a>Tabelas retornadas  
   
 |Nome da coluna|Tipo de dados|Agrupamento|Description|  
 |-----------------|---------------|---------------|-----------------|  
-|class_desc|**nvarchar (60)**|Agrupamento do servidor|Descrição da classe de protegível.|  
-|permission_name|**nvarchar (60)**|Agrupamento do servidor|Nome de permissão.|  
-|Tipo|**varchar(4)**|Agrupamento do servidor|Código de tipo de permissão compacto. Consulte a tabela a seguir.|  
-|covering_permission_name|**nvarchar (60)**|Agrupamento do servidor|Se não for NULL, será o nome da permissão nessa classe que indica as outras permissões dela.|  
-|parent_class_desc|**nvarchar (60)**|Agrupamento do servidor|Se não for NULL, será o nome da classe pai que contém a classe atual.|  
-|parent_covering_permission_name|**nvarchar (60)**|Agrupamento do servidor|Se não for NULL, será o nome da permissão nessa classe pai que indica todas as outras permissões dela.|  
+|class_desc|**nvarchar(60)**|Agrupamento do servidor|Descrição da classe de protegível.|  
+|permission_name|**nvarchar(60)**|Agrupamento do servidor|Nome de permissão.|  
+|tipo|**varchar(4)**|Agrupamento do servidor|Código de tipo de permissão compacto. Consulte a tabela a seguir.|  
+|covering_permission_name|**nvarchar(60)**|Agrupamento do servidor|Se não for NULL, será o nome da permissão nessa classe que indica as outras permissões dela.|  
+|parent_class_desc|**nvarchar(60)**|Agrupamento do servidor|Se não for NULL, será o nome da classe pai que contém a classe atual.|  
+|parent_covering_permission_name|**nvarchar(60)**|Agrupamento do servidor|Se não for NULL, será o nome da permissão nessa classe pai que indica todas as outras permissões dela.|  
   
 ### <a name="permission-types"></a>Tipos de permissão  
   
@@ -224,9 +226,9 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO|ADMINISTRAR OPERAÇÕES EM LOTE DO BANCO DE DADOS<br /> **Aplica-se a**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|DATABASE|  
-|DL|Delete (excluir)|DATABASE|  
-|DL|Delete (excluir)|OBJECT|  
-|DL|Delete (excluir)|SCHEMA|  
+|DL|DELETE|DATABASE|  
+|DL|DELETE|OBJECT|  
+|DL|DELETE|SCHEMA|  
 |EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |EX|Execute|DATABASE|  
 |EX|Execute|OBJECT|  
@@ -366,13 +368,13 @@ SELECT * FROM sys.fn_builtin_permissions(DEFAULT)
     WHERE permission_name = 'SELECT';  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [Hierarquia de permissões &#40;Mecanismo de banco de dados&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+## <a name="see-also"></a>Consulte também  
+ [Hierarquia de permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [Criar esquema &#40; Transact-SQL &#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [DROP SCHEMA &#40; Transact-SQL &#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
+ [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+ [DROP SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

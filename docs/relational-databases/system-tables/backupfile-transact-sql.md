@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - backupfile
 - backupfile_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - file backups [SQL Server], backupfile system table
 - backupfile system table
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f51eff63650e1cf3572b7b2e8ea77a89eb4a8265
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 84b26ca09b8cd537ed40f0af8844f3f0c7627c86
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,21 +39,21 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**backup_set_id**|**int**|Número de identificação exclusivo do arquivo que contém o conjunto de backup. Referências **backupset (backup_set_id)**.|  
+|**backup_set_id**|**Int**|Número de identificação exclusivo do arquivo que contém o conjunto de backup. Referências **backupset (backup_set_id)**.|  
 |**first_family_number**|**tinyint**|Número de família da primeira mídia que contém este arquivo de backup. Pode ser NULL.|  
 |**first_media_number**|**smallint**|Número de mídia da primeira mídia que contém este arquivo de backup. Pode ser NULL.|  
-|**filegroup_name**|**nvarchar (128)**|Nome do grupo de arquivos que contém um arquivo de banco de dados do qual foi feito backup. Pode ser NULL.|  
-|**page_size**|**int**|Tamanho da página em bytes.|  
+|**filegroup_name**|**nvarchar(128)**|Nome do grupo de arquivos que contém um arquivo de banco de dados do qual foi feito backup. Pode ser NULL.|  
+|**page_size**|**Int**|Tamanho da página em bytes.|  
 |**file_number**|**numeric(10,0)**|Número de identificação do arquivo exclusivo dentro de um banco de dados (corresponde ao **sys. database_files**. **file_id**).|  
 |**backed_up_page_count**|**numeric(10,0)**|Número de páginas das quais foi feito backup. Pode ser NULL.|  
-|**file_type**|**char (1)**|Arquivo do qual foi feito backup, um dos seguintes:<br /><br /> D = Arquivo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> L = Arquivo de log do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> F = Catálogo de texto completo.<br /><br /> Pode ser NULL.|  
+|**file_type**|**char(1)**|Arquivo do qual foi feito backup, um dos seguintes:<br /><br /> D = Arquivo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> L = Arquivo de log do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> F = Catálogo de texto completo.<br /><br /> Pode ser NULL.|  
 |**source_file_block_size**|**numeric(10,0)**|Dispositivo no qual os dados originais ou o arquivo de log residiram durante o backup. Pode ser NULL.|  
 |**file_size**|**numeric(20,0)**|Comprimento do arquivo do qual é feito backup em bytes. Pode ser NULL.|  
-|**logical_name**|**nvarchar (128)**|Nome lógico do arquivo do qual é feito backup. Pode ser NULL.|  
-|**physical_drive**|**nvarchar (260)**|Unidade física ou nome de partição. Pode ser NULL.|  
-|**physical_name**|**nvarchar (260)**|Lembrete do nome de arquivo físico (sistema operacional). Pode ser NULL.|  
-|**estado**|**tinyint**|Estado do arquivo, um dos seguintes:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = DESCARTADO<br /><br /> Observação: O valor 5 é ignorado para que esses valores correspondem aos valores de estados de banco de dados.|  
-|**state_desc**|**nvarchar (64)**|Descrição do estado do arquivo, uma das seguintes:<br /><br /> ONLINE RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
+|**logical_name**|**nvarchar(128)**|Nome lógico do arquivo do qual é feito backup. Pode ser NULL.|  
+|**physical_drive**|**nvarchar(260)**|Unidade física ou nome de partição. Pode ser NULL.|  
+|**physical_name**|**nvarchar(260)**|Lembrete do nome de arquivo físico (sistema operacional). Pode ser NULL.|  
+|**state**|**tinyint**|Estado do arquivo, um dos seguintes:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = DESCARTADO<br /><br /> Observação: O valor 5 é ignorado para que esses valores correspondem aos valores de estados de banco de dados.|  
+|**state_desc**|**nvarchar(64)**|Descrição do estado do arquivo, uma das seguintes:<br /><br /> ONLINE RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|Número da sequência de log na qual o arquivo foi criado.|  
 |**drop_lsn**|**numeric(25,0)**|Número de sequência de log no qual o arquivo foi descartado. Pode ser NULL.<br /><br /> Se o arquivo não tiver sido descartado, esse valor será NULL.|  
 |**file_guid**|**uniqueidentifier**|Identificador exclusivo do arquivo.|  
@@ -64,7 +66,7 @@ ms.lasthandoff: 11/17/2017
 |**is_readonly**|**bit**|1 = Arquivo somente leitura.|  
 |**is_present**|**bit**|1 = Arquivo contido no conjunto de backup.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY preenche as colunas da **backupmediaset** tabela com os valores apropriados do cabeçalho de conjunto de mídias.  
   
  Para reduzir o número de linhas nessa tabela e em outras tabelas de histórico e de backup, execute o [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) procedimento armazenado.  
@@ -75,6 +77,6 @@ ms.lasthandoff: 11/17/2017
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
  [conjunto de backup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [Tabelas do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_maintenance_plan
 - sp_add_maintenance_plan_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_maintenance_plan
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_maintenance_plan
 ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed1cd1c66e277e9705a89b07cee5e6564455040d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 44a663e97610514204c6209c13be4d515197af33
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +52,16 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@plan_name =**] **'***plan_name***'**  
+ [ **@plan_name =**] **'***plan_name***'**  
  Especifica o nome do plano de manutenção a ser adicionado. *plan_name* é **varchar (128)**.  
   
- **@plan_id= '** *plan_id* **'**  
+ **@plan_id = '** *plan_id* **'**  
  Especifica a ID do plano de manutenção. *plan_id* é **uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_add_maintenance_plan** deve ser executado a partir de **msdb** cria um plano de manutenção novos, mas vazio e o banco de dados. Para adicionar um ou mais bancos de dados e associá-los a um trabalho ou trabalhos, execute **sp_add_maintenance_plan_db** e **sp_add_maintenance_plan_job**.  
   
 ## <a name="permissions"></a>Permissões  

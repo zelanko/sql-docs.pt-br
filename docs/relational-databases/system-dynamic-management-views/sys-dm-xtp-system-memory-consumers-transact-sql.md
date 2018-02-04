@@ -1,5 +1,5 @@
 ---
-title: sys.DM xtp_system_memory_consumers (Transact-SQL) | Microsoft Docs
+title: sys.dm_xtp_system_memory_consumers (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_xtp_system_memory_consumers_TSQL
 - sys.dm_xtp_system_memory_consumers
 - dm_xtp_system_memory_consumers_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_xtp_system_memory_consumers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_xtp_system_memory_consumers dynamic management view
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e48ffede3b2aea0ff69c9dce9fc7abd2fe4bc4f9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a7b5e11f35e5ae6665d32355da60fb7e1e2b5f6d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -45,18 +48,18 @@ select * from sys.dm_xtp_system_memory_consumers
 |Nome da coluna|Tipo|Description|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|ID interna do consumidor de memória.|  
-|memory_consumer_type|**int**|Um inteiro que representa o tipo do consumidor de memória com um dos seguintes valores:<br /><br /> 0 – Não deve ser exibido. Agrega o uso de memória de dois ou mais consumidores.<br /><br /> 1 – LOOKASIDE: Rastreia o consumo de memória para a parte de um sistema.<br /><br /> 2 - VARHEAP: Rastreia o consumo de memória para um heap de comprimento variável.<br /><br /> 4 - pool da página e/s: rastreia o consumo de memória para um pool de página do sistema usado para operações de e/s.|  
+|memory_consumer_type|**Int**|Um inteiro que representa o tipo do consumidor de memória com um dos seguintes valores:<br /><br /> 0 – Não deve ser exibido. Agrega o uso de memória de dois ou mais consumidores.<br /><br /> 1 – LOOKASIDE: Rastreia o consumo de memória para a parte de um sistema.<br /><br /> 2 - VARHEAP: Rastreia o consumo de memória para um heap de comprimento variável.<br /><br /> 4 - pool da página e/s: rastreia o consumo de memória para um pool de página do sistema usado para operações de e/s.|  
 |memory_consumer_type_desc|**nvarchar(16)**|A descrição do tipo do consumidor de memória:<br /><br /> 0 – Não deve ser exibido.<br /><br /> 1 – LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
-|memory_consumer_desc|**nvarchar (64)**|Descrição da instância do consumidor de memória:<br /><br /> VARHEAP: <br />Heap do sistema. Uso geral. Atualmente usado apenas para alocar itens de trabalho de coleta de lixo.<br />-Ou-<br />A parte de heap. Usado por partes quando o número de itens contidos na lista de partes alcançar um valor predeterminado (normalmente em torno de 5.000 itens).<br /><br /> PGPOOL: Para o sistema de e/s existe pools são três pool da página sistema 4K tamanhos diferentes, o pool de página do sistema 64K e pool da página sistema 256K.|  
+|memory_consumer_desc|**nvarchar(64)**|Descrição da instância do consumidor de memória:<br /><br /> VARHEAP: <br />Heap do sistema. Uso geral. Atualmente usado apenas para alocar itens de trabalho de coleta de lixo.<br />-Ou-<br />A parte de heap. Usado por partes quando o número de itens contidos na lista de partes alcançar um valor predeterminado (normalmente em torno de 5.000 itens).<br /><br /> PGPOOL: Para o sistema de e/s existe pools são três pool da página sistema 4K tamanhos diferentes, o pool de página do sistema 64K e pool da página sistema 256K.|  
 |lookaside_id|**bigint**|A ID do provedor de memória de direções de local de thread.|  
 |pagepool_id|**bigint**|A ID do provedor de memória do pool de páginas de local de thread.|  
 |allocated_bytes|**bigint**|Número de bytes reservados para o consumidor.|  
 |used_bytes|**bigint**|Bytes usados por este consumidor. Aplica-se somente a consumidores de memória de varheap.|  
-|allocation_count|**int**|Número de alocações.|  
-|partition_count|**int**|Somente para uso interno.|  
-|sizeclass_count|**int**|Somente para uso interno.|  
-|min_sizeclass|**int**|Somente para uso interno.|  
-|max_sizeclass|**int**|Somente para uso interno.|  
+|allocation_count|**Int**|Número de alocações.|  
+|partition_count|**Int**|Somente para uso interno.|  
+|sizeclass_count|**Int**|Somente para uso interno.|  
+|min_sizeclass|**Int**|Somente para uso interno.|  
+|max_sizeclass|**Int**|Somente para uso interno.|  
 |memory_consumer_address|**varbinary**|Endereço interno do consumidor.|  
   
 ## <a name="permissions"></a>Permissões  

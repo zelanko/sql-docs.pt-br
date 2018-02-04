@@ -8,25 +8,28 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_wait_for_database_copy_sync_TSQL
 - sp_wait_for_database_copy_sync
-dev_langs: TSQL
-helpviewer_keywords: sp_wait_for_database_copy_sync
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_wait_for_database_copy_sync
 ms.assetid: 7068da7f-cb74-47f2-b064-eb076a0d3885
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7b2d41c9c87b483ab500ad351361a511ca66004
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6ca693b57fe2178a1b817ca76579ad3e7194f7c0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="active-geo-replication---spwaitfordatabasecopysync"></a>Replicação geográfica ativa - sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,7 +48,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @target_server =] 'server_name'  
+ [ @target_server = ] 'server_name'  
  O nome do servidor do Banco de Dados SQL que hospeda o banco de dados secundário ativo. server_name é sysname, sem padrão.  
   
  [ @target_database =] 'database_name'  
@@ -65,7 +68,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ## <a name="permissions"></a>Permissões  
  Qualquer usuário no banco de dados primário pode chamar este procedimento armazenado do sistema. O logon deve ser um usuário nos bancos de dados primário e secundário ativo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Todas as transações confirmadas antes de um **sp_wait_for_database_copy_sync** chamada são enviadas para o banco de dados secundário ativo.  
   
 ## <a name="examples"></a>Exemplos  

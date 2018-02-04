@@ -8,28 +8,30 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_load_thesaurus_file
 - sp_fulltext_load_thesaurus_file_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_fulltext_load_thesaurus_file
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], editing
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8bb9a1b28c321e65bb6e03e6ba99c70d555069e3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: de4468120488b4f7d8942ecf540c36370a36de7f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +54,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  **@loadOnlyIfNotLoaded** = *ação*  
  Especifica se o arquivo de dicionário de sinônimos é carregado nas tabelas de dicionário de sinônimos mesmo que ele já tenha sido carregado. *ação* é um de:  
   
-|Valor|Definição|  
+|Value|Definição|  
 |-----------|----------------|  
 |**0**|Carrega o arquivo de dicionário de sinônimos independentemente dele já ter sido carregado. Esse é o comportamento padrão de **sp_fulltext_load_thesaurus_file**.|  
 |1|Carregar o arquivo de dicionário de sinônimos apenas se ele ainda não tiver sido carregado.|  
@@ -63,7 +65,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nenhuma  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Arquivos de dicionários de sinônimos são carregados automaticamente por consultas de texto completo que usam o dicionário de sinônimos. Para evitar esse impacto de desempenho pela primeira vez em consultas de texto completo, é recomendável que você execute **sp_fulltext_load_thesaurus_file**.  
   
  Use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**' para atualizar a lista de idiomas registrados na pesquisa de texto completo.  
@@ -92,7 +94,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [FULLTEXTSERVICEPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
+ [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Configurar e gerenciar arquivos de dicionário de sinônimos para pesquisa de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
  [Configurar e gerenciar arquivos de dicionário de sinônimos para pesquisa de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)  

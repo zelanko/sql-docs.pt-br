@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_change_log_shipping_primary_database
 - sp_change_log_shipping_primary_database_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_change_log_shipping_primary_database
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_change_log_shipping_primary_database
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8ceffb4fc8cc9c58b9bc455685d2f9dc383e041
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9ea80f811016ec3502bea583c20edf4894753e83
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +69,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  [  **@backup_retention_period =** ] '*backup_retention_period*'  
  É o período de tempo, em minutos, para reter o arquivo de backup de logs no diretório de backup no servidor primário. *backup_retention_period* é **int**, sem padrão, e não pode ser NULL.  
   
- [  **@monitor_server_security_mode =** ] '*monitor_server_security_mode*'  
+ [ **@monitor_server_security_mode =** ] '*monitor_server_security_mode*'  
  O modo de segurança usado para conexão ao servidor monitor.  
   
  1 = Autenticação do Windows.  
@@ -75,10 +78,10 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  *monitor_server_security_mode* é **bit** e não pode ser NULL.  
   
- [  **@monitor_server_login =** ] '*monitor_server_login*'  
+ [ **@monitor_server_login =** ] '*monitor_server_login*'  
  É o nome de usuário da conta usada para acessar o servidor monitor.  
   
- [  **@monitor_server_password =** ] '*monitor_server_password*'  
+ [ **@monitor_server_password =** ] '*monitor_server_password*'  
  Senha da conta usada para acessar o servidor monitor.  
   
  [  **@backup_threshold =** ] '*backup_threshold*'  
@@ -99,7 +102,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  [  **@history_retention_period =** ] '*history_retention_period*'  
  É o período em minutos no qual o histórico é retido. *history_retention_period* é **int**. O valor 14420 será usado se nenhum valor for especificado.  
   
- [  **@backup_compression** =] *backup_compression_option*  
+ [ **@backup_compression**= ] *backup_compression_option*  
  Especifica se uma configuração de envio de log usa [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Este parâmetro é suportado somente no [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou em uma versão posterior).  
   
  0 = Desabilitado. Nunca compacte backups de log.  
@@ -114,7 +117,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nenhuma  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_change_log_shipping_primary_database** deve ser executado a partir de **mestre** banco de dados no servidor primário. Esse procedimento armazenado faz o seguinte:  
   
 1.  Altera as configurações de **log_shipping_primary_database** registrar, se necessário.  
@@ -144,8 +147,8 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Sobre o envio de logs &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [log_shipping_primary_databases &#40; Transact-SQL &#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
+ [log_shipping_primary_databases &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   
   

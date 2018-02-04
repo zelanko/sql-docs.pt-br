@@ -8,7 +8,8 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - Browser Service
 - SQL Server Browser service
 ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 98a5f763d57c6cfb3a6c11d308fbe71e53ded7f4
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 5018082d7a9ee06c1015925e3efad92eecc5133b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-browser-service"></a>Serviço Navegador do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O programa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser é executado como um serviço Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Escuta as solicitações de entrada de recursos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornece informações sobre as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas no computador. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O browser contribui para as seguintes ações:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+O programa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser é executado como um serviço Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Escuta as solicitações de entrada de recursos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornece informações sobre as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas no computador. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O browser contribui para as seguintes ações:  
   
 -   Navegando em uma lista de servidores disponíveis  
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/17/2018
   
  Para cada instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e do [!INCLUDE[ssAS](../../includes/ssas-md.md)], o serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sqlbrowser) fornece o nome da instância e o número da versão. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser é instalado com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser pode ser configurado durante a instalação ou usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Configuration Manager. Por padrão, o serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado automaticamente:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser pode ser configurado durante a instalação ou por meio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Por padrão, o serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado automaticamente:  
   
 -   Quando uma instalação é atualizada.  
   
@@ -88,7 +90,7 @@ ms.lasthandoff: 01/17/2018
 -   A porta que você escolhe para cada instância pode ser utilizada por outro serviço ou aplicativo no servidor, tornando a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indisponível.  
   
 ## <a name="clustering"></a>Clustering  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Navegador não é um recurso de cluster e não oferece suporte a failover de um nó de cluster para outro. Portanto, no caso de um cluster, o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser instalado e ativado para cada nó do cluster. Em clusters, o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta em IP_ANY.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser não é um recurso clusterizado e não dá suporte ao failover de um nó de cluster para outro. Portanto, no caso de um cluster, o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser instalado e ativado para cada nó do cluster. Em clusters, o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta em IP_ANY.  
   
 > [!NOTE]  
 >  Quando escutar em IP_ANY e habilitar a escuta em IPs específicos, o usuário deverá configurar a mesma porta do TCP em cada IP, pois o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna ao primeiro par de IP/porta que ele encontrar.  
@@ -98,7 +100,7 @@ ms.lasthandoff: 01/17/2018
   
  O serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será desinstalado quando a última instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for removida.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Navegador pode ser iniciado no prompt de comando para solução de problemas, usando o **- c** alternar:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser pode ser iniciado no prompt de comando para a solução de problemas por meio da opção **-c** :  
   
 ```  
 <drive>\<path>\sqlbrowser.exe -c  
@@ -107,7 +109,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="security"></a>Segurança  
   
 ### <a name="account-privileges"></a>Privilégios da conta  
- O Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta em uma porta UDP e aceita as solicitações não autenticadas usando SSRP ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Navegador deve ser executado no contexto de segurança de um usuário com privilégios baixos para minimizar exposição a um ataque mal-intencionado. A conta de logon pode ser alterada com o Gerenciador de Configurações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os direitos mínimos do usuário para o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são os seguintes:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser escuta em uma porta UDP e aceita as solicitações não autenticadas usando o protocolo SSRP ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Navegador deve ser executado no contexto de segurança de um usuário com privilégios baixos para minimizar exposição a um ataque mal-intencionado. A conta de logon pode ser alterada com o Gerenciador de Configurações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os direitos mínimos do usuário para o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são os seguintes:  
   
 -   Negar acesso a este computador pela rede  
   

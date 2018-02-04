@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_addmessage
 - sp_addmessage_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_addmessage
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_addmessage
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: efb582779e55287699cd60f642b50a88205ee992
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1b8b71c14da2b38bbc16c63b39143fd0a85ebf30
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +49,16 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@msgnum* =** ] *msg_id*  
+ [ **@msgnum****=** ] *msg_id*  
  É a ID da mensagem. *msg_id* é **int** com um padrão NULL. *msg_id* erro definido pelo usuário de mensagens podem ser um inteiro entre 50.001 e 2.147.483.647. A combinação de *msg_id* e *idioma* deve ser exclusiva; um erro será retornado se a ID já existe para o idioma especificado.  
   
  [  **@severity =** ]*severidade*  
  É o nível de gravidade do erro. *severidade* é **smallint** com um padrão NULL. Os níveis válidos são de 1 a 25. Para obter mais informações sobre severidades, consulte [Severidade de erro do mecanismo de banco de dados](../../relational-databases/errors-events/database-engine-error-severities.md).  
   
- [  **@msgtext =** ] **'***msg***'**  
+ [ **@msgtext =** ] **'***msg***'**  
  É o texto da mensagem de erro. *msg* é **nvarchar (255)** com um padrão NULL.  
   
- [  **@lang =** ] **'***idioma***'**  
+ [ **@lang =** ] **'***language***'**  
  É o idioma desta mensagem. *idioma* é **sysname** com um padrão NULL. Como vários idiomas podem ser instalados no mesmo servidor, *idioma* Especifica o idioma em que cada mensagem é gravada. Quando *idioma* for omitido, o idioma é o idioma padrão para a sessão.  
   
  [  **@with_log =** ] { **'**TRUE**'** | **'FALSE'** }  
@@ -64,7 +67,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 > [!NOTE]  
 >  Se uma mensagem for gravada no log do aplicativo do Windows, ela também será gravada no arquivo de log de erros do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- [  **@replace**   *=*  ] **'***substituir***'**  
+ [ **@replace** *=* ] **'***replace***'**  
  Se for especificado como a cadeia de caracteres *substituir*, uma mensagem de erro existente será substituída com o novo nível de gravidade e texto da mensagem. *substituir* é **varchar(7)** com um padrão NULL. Essa opção deve ser especificada se *msg_id* já existe. Se você substituir uma mensagem Mensagem em inglês, o nível de severidade será substituída para todas as mensagens em todos os outros idiomas que têm o mesmo *msg_id*.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -73,7 +76,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nenhuma  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não estão em inglês, a versão em inglês dos EUA de uma mensagem já deverá existir para que a mensagem possa ser adicionada usando outro idioma. A severidade das duas versões da mensagem deve corresponder.  
   
  Ao localizar mensagens contendo parâmetros, use números de parâmetro que correspondem aos parâmetros da mensagem original. Insira um ponto de exclamação (!) depois de cada número de parâmetro.  
@@ -168,8 +171,8 @@ GO                                       -- parameters.
   
 ## <a name="see-also"></a>Consulte também  
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_altermessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
- [sp_dropmessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
+ [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

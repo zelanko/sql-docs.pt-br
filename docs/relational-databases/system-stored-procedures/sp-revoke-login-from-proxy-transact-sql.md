@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_revoke_login_from_proxy_TSQL
 - sp_revoke_login_from_proxy
-dev_langs: TSQL
-helpviewer_keywords: sp_revoke_login_from_proxy
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_revoke_login_from_proxy
 ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efb329d4bdbdaef250e9843ed1f4641d0a679181
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c4e91618e5b1eb8ec5020bdd4815e65ff5edd1bf
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sprevokeloginfromproxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +49,19 @@ sp_revoke_login_from_proxy
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name=** ] **'***nome***'**  
+ [ **@name=** ] **'***name***'**  
  O nome do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon, a função de servidor ou **msdb** função de banco de dados para remover o acesso para. *nome* é **nvarchar (256)** sem nenhum padrão.  
   
- [  **@proxy_id=** ] *id*  
+ [ **@proxy_id=** ] *id*  
  A ID do proxy do qual o acesso será removido. O *id* ou *proxy_name* devem ser especificados, mas não é possível especificar ambos. O *id* é **int**, com um padrão NULL.  
   
- [  **@proxy_name=** ] **'***proxy_name***'**  
+ [ **@proxy_name=** ] **'***proxy_name***'**  
  O nome do proxy do qual o acesso será removido. O *id* ou *proxy_name* devem ser especificados, mas não é possível especificar ambos. O *proxy_name* é **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os trabalhos que pertencem ao logon que referencia esse proxy não serão executados.  
   
 ## <a name="permissions"></a>Permissões  
@@ -79,7 +82,7 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [Agente do SQL Server armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_grant_login_to_proxy &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
- [sp_help_proxy &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  
+ [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
+ [sp_help_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  
   
   
