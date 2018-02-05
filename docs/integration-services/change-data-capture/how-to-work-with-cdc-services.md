@@ -55,7 +55,7 @@ ms.lasthandoff: 01/25/2018
   
          O caixa de diálogo Novo Serviço do Oracle CDC é aberta.  
   
-         Para obter informações sobre como usar essa caixa de diálogo, consulte [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md). Para obter informações sobre como criar ou editar um serviço CDC, consulte [How to Create and Edit a CDC Service](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md).  
+         Para obter informações sobre como usar essa caixa de diálogo, consulte [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md). Para obter informações sobre como criar ou editar um serviço CDC, consulte [Como criar e editar um Serviço CDC](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md).  
   
          O logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado pelo Serviço Oracle CDC somente precisa ser um membro da função `public` de servidor fixa, nenhum outro privilégio será necessário. Porém, para criar o Serviço Oracle CDC, o logon deve ter permissão de gravação no banco de dados MSXDBCDC, por exemplo, a função de banco de dados **db_owner** deve ser atribuída ao logon. Quando um logon sem permissão de gravação para o banco de dados MSXDBDCDC tenta criar uma nova instância Oracle CDC, uma mensagem de erro é exibida. Clique em **OK** nessa caixa de diálogo para exibir a caixa de diálogo Conecte-se ao SQL Server.  
   
