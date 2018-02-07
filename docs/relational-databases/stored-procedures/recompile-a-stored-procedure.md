@@ -8,7 +8,8 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stored-Procs
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - recompiling stored procedures
 - stored procedures [SQL Server], recompiling
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 60eeccf774507cd6f4a949b7f0b5baf07b0bd960
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 53384581291b653d119d08932c66bf3fb6f8db44
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="recompile-a-stored-procedure"></a>Recompilar um procedimento armazenado
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este tópico descreve como recompilar um procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Há três modos de fazer isso: a opção **WITH RECOMPILE** na definição do procedimento ou quando o procedimento é chamado, a dica de consulta **RECOMPILE** em instruções individuais ou usando o procedimento armazenado do sistema **sp_recompile** . Este tópico descreve como usar a opção WITH RECOMPILE ao criar uma definição de procedimento e executar um procedimento existente. Também descreve como usar o procedimento armazenado do sistema sp_recompile para recompilar um procedimento existente.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Este tópico descreve como recompilar um procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Há três modos de fazer isso: a opção **WITH RECOMPILE** na definição do procedimento ou quando o procedimento é chamado, a dica de consulta **RECOMPILE** em instruções individuais ou usando o procedimento armazenado do sistema **sp_recompile** . Este tópico descreve como usar a opção WITH RECOMPILE ao criar uma definição de procedimento e executar um procedimento existente. Também descreve como usar o procedimento armazenado do sistema sp_recompile para recompilar um procedimento existente.  
   
  **Neste tópico**  
   

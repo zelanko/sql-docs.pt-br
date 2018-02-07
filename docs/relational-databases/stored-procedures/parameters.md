@@ -8,26 +8,28 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - stored procedures [SQL Server], parameters
 - user-defined functions [SQL Server], parameters
 ms.assetid: c1f9bd93-3271-4098-a23b-7bd7a19ab65b
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 697268f348d50079d2d3f740ea56b9dd28944792
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ab101583f2e16a13dc42d8b8800c2befec2f536f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="parameters"></a>Parâmetros
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Parâmetros são usados para troca de dados entre procedimentos armazenados e funções e entre o aplicativo ou a ferramenta que chamou o procedimento armazenado ou a função: 
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+São usados parâmetros para troca de dados entre procedimentos armazenados e funções e entre o aplicativo ou a ferramenta que chamam o procedimento armazenado ou a função: 
 
 *  Os parâmetros de entrada permitem que o chamador transfira valores de dados para procedimentos armazenados ou funções.
 *  Os parâmetros de entrada permitem que os procedimentos armazenados passem valores de dados ou variável de cursor de volta ao chamador. As funções definidas pelo usuário não podem especificar parâmetros de saída.
@@ -86,7 +88,7 @@ GO
 
 Um aplicativo pode usar marcadores de parâmetro associados a variáveis de programa para trocar dados entre variáveis de aplicativo, parâmetros e códigos de retorno.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)   

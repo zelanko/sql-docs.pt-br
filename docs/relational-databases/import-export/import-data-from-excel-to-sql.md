@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: efa9c31464572543c67edde5fa6a740d659d4d48
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 158a6c72c0c172b061d79bb52a276bacc22c0fcd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importar dados do Excel para o SQL Server ou Banco de Dados SQL do Azure
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Há várias maneiras de importar dados de arquivos do Excel para o SQL Server ou para o Banco de Dados SQL do Azure. Este artigo resume cada uma dessas opções e fornece links para instruções mais detalhadas.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Há várias maneiras de importar dados de arquivos do Excel para o SQL Server ou para o Banco de Dados SQL do Azure. Este artigo resume cada uma dessas opções e fornece links para instruções mais detalhadas.
 -   Você pode importar dados em uma única etapa do Excel para SQL, usando uma das ferramentas a seguir:
     -   O Assistente de importação e exportação do SQL Server
     -   SQL Server Integration Services (SSIS)

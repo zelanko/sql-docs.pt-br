@@ -8,29 +8,31 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stored-Procs
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.spassistededitor.storedprocedure.f1
 - sql13.swb.spproperties.general.f1
 ms.assetid: 8ee433b6-3931-47e8-b1cf-332806f71161
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73b418977e357145b7a4a04018dcc139d7a3c8a4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7132c45e5ea0fe66235b4c77de823b0fa3384319
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="stored-procedure-properties-general-page"></a>Propriedades do procedimento armazenado (página Geral)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Exibe informações sobre um procedimento armazenado. Todas as informações são somente leitura.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Exibe informações sobre um procedimento armazenado. Todas as informações são somente leitura.  
   
 ## <a name="options"></a>Opções  
- **Banco de dados**  
+ **Backup de banco de dados**  
  O nome do banco de dados que contém esse procedimento armazenado.  
   
  **Servidor**  
@@ -66,7 +68,7 @@ ms.lasthandoff: 11/17/2017
  **Recompilar**  
  Indica se o objeto foi criado com a opção RECOMPILE.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)  

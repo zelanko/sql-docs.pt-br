@@ -11,7 +11,8 @@ ms.custom:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.portal.f1
+f1_keywords:
+- sql13.portal.f1
 helpviewer_keywords:
 - documentation [SQL Server], home page
 - Help [SQL Server]
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - Books Online [SQL Server], home page
 - portal page [SQL Server]
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
-caps.latest.revision: "106"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 15e4d0a993dbc4b97413f94ccdb2620fc2baf24a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5e6b2ffe7735bf8c7cb2fe7e9f76b7d4b675ceef
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sql-server-documentation"></a>Documentação do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ O SQL Server é uma parte central da plataforma de dados Microsoft. O SQL Server
 |Novidades  | Notas de versão  |
 |---------|---------|
 |[Novidades no SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [Notas de Versão do SQL Server 2017.](../sql-server/sql-server-2017-release-notes.md)        |
-|[Novidades no SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Notas de Versão do SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
+|[Novidades no SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Notas de Versão do SQL Server 2016.](../sql-server/sql-server-2016-release-notes.md)        |
 |[Novidades do SQL Server 2014](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)     | [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)        |
    
 **Experimente o SQL Server!**
@@ -56,9 +57,9 @@ O SQL Server é uma parte central da plataforma de dados Microsoft. O SQL Server
     
 |||    
 |-|-|    
-|![Mecanismo do Banco de Dados SQL](../sql-server/media/sql-database-engine.png "Mecanismo do Banco de Dados SQL")|**[Mecanismo de Banco de Dados](../database-engine/configure-windows/sql-server-database-engine.md)**<br /><br /> O Mecanismo de Banco de Dados é o serviço principal para armazenamento, processamento e segurança de dados. O Mecanismo de Banco de Dados fornece acesso controlado e processamento rápido de transações para atender aos requisitos dos aplicativos de consumo de dados mais exigentes dentro de sua empresa. O Mecanismo de Banco de Dados também fornece suporte rico para sustentar alta disponibilidade.|
+|![Mecanismo do Banco de Dados SQL](../sql-server/media/sql-database-engine.png "Mecanismo do Banco de Dados SQL")|**[Mecanismo de Banco de Dados](../database-engine/sql-server-database-engine-overview.md)**<br /><br /> O Mecanismo de Banco de Dados é o serviço principal para armazenamento, processamento e segurança de dados. O Mecanismo de Banco de Dados fornece acesso controlado e processamento rápido de transações para atender aos requisitos dos aplicativos de consumo de dados mais exigentes dentro de sua empresa. O Mecanismo de Banco de Dados também fornece suporte rico para sustentar alta disponibilidade.|
 |![Integration Services](../sql-server/media/integration-services.png "Integration Services")|**[Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é uma plataforma para construir soluções para integração de dados de alto desempenho, inclui também pacotes que fornecem processamento de extração, transformação, e carregamento (ETL) para armazenamento de dados.|    
-|![Analysis Services](../sql-server/media/analysis-services.png "Analysis Services")|**[Analysis Services](../analysis-services/analysis-services.md)**<br /><br /> O[!INCLUDE[ssASnoversion_md](../includes/ssasnoversion-md.md)] é uma plataforma de dados analíticos e um conjunto de ferramentas para pessoal, equipe e business intelligence corporativo. Os servidores e designers de cliente dão suporte a soluções OLAP tradicionais, novas soluções de modelagem de tabela, bem como análises de autoatendimento e colaboração por meio do [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], o Excel e um ambiente do SharePoint Server. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] também inclui Mineração de Dados para que você possa descobrir os padrões e as relações ocultas dentro de grandes volumes de dados.|    
+|![Analysis Services](../sql-server/media/analysis-services.png "Analysis Services")|**[Analysis Services](../analysis-services/analysis-services.md)**<br /><br /> [!INCLUDE[ssASnoversion_md](../includes/ssasnoversion-md.md)] é uma plataforma de dados analíticos e um conjunto de ferramentas para pessoal, equipe e business intelligence corporativo. Os servidores e designers de cliente dão suporte a soluções OLAP tradicionais, novas soluções de modelagem de tabela, bem como análises de autoatendimento e colaboração por meio do [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], o Excel e um ambiente do SharePoint Server. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] também inclui Mineração de Dados para que você possa descobrir os padrões e as relações ocultas dentro de grandes volumes de dados.|    
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> O Reporting Services oferece a funcionalidade de relatórios corporativos habilitados para a Web.  É possível criar relatórios que se conectam a conteúdos de várias fontes de dados, publicar relatórios em diversos formatos e centralizar o gerenciamento de segurança e de assinaturas.|
 |![R Server](../sql-server/media/r-server.png "R Server")|**[Serviços de Machine Learning](../advanced-analytics/r-services/r-services.md)**<br /><br /> Os serviços do Microsoft Machine Learning dão suporte à integração de aprendizado de máquina em fluxos de trabalho da empresa usando as linguagens populares R e Python.<br /><br /> Os Serviços de Machine Learning (no banco de dados) integram R e Python com o SQL Server, facilitando a criação, a readaptação e a pontuação dos modelos ao chamar procedimentos armazenados.  O Microsoft Machine Learning Server dá suporte de nível corporativo para R e Python, sem a necessidade do SQL Server.|
 |![Data Quality Services](../sql-server/media/data-quality-services.png "Data Quality Services")|**[Data Quality Services](../data-quality-services/data-quality-services.md)**<br /><br /> O SQL Server Data Quality Services (DQS) fornece uma solução de limpeza de dados controlada por conhecimento. O DQS permite que você crie uma base de dados de conhecimento e use-a para realizar a correção de dados e a eliminação de duplicação de seus dados, usando meios interativos e por computador. Você pode usar serviços de dados de referência baseados em nuvem e criar uma solução de gerenciamento de dados que integra o DQS com o SQL Server Integration Services e o Master Data Services.|

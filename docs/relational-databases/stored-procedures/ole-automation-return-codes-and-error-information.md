@@ -8,7 +8,8 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-ole
+ms.technology:
+- dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - OLE Automation [SQL Server], return codes
 - OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f51c1f609a1ab0556e3ba0494e23dc18cb4c9aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d2621860c2090c3c3efe1fa72bbd4c9e4315c68d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Informações sobre erros e códigos de retorno de automação OLE
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Os procedimentos armazenados do sistema de Automação de OLE retornam um código de retorno **int** que é o HRESULT retornado pela operação de Automação de OLE adjacente. O HRESULT de 0 indica sucesso. HRESULT diferente de zero é um código de erro OLE de formato hexadecimal 0x800*nnnnn*, mas ao ser retornado com o valor **int** em um código de retorno de procedimento armazenado, o HRESULT assume o formato 214*nnnnnnn*.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Os procedimentos armazenados do sistema de Automação OLE retornam um código de retorno **int** que é o HRESULT retornado pela operação de Automação OLE adjacente. O HRESULT de 0 indica sucesso. HRESULT diferente de zero é um código de erro OLE de formato hexadecimal 0x800*nnnnn*, mas ao ser retornado com o valor **int** em um código de retorno de procedimento armazenado, o HRESULT assume o formato 214*nnnnnnn*.  
   
  Por exemplo, passar um nome de objeto inválido (SQLDMO.Xyzzy) para sp_OACreate faz o procedimento retornar um HRESULT **int** de 2147221005, que é 0x800401f3 em número hexadecimal.  
   

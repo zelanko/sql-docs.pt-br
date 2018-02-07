@@ -8,24 +8,26 @@ ms.service:
 ms.component: views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-views
+ms.technology:
+- dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: views [SQL Server], about views
+helpviewer_keywords:
+- views [SQL Server], about views
 ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
-caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0606a99500fcc797b00988664951137c01e0d40d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7ba650c638d855556ec2afe992f26ff3f6ad2460
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="views"></a>Exibições
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)] Uma exibição é uma tabela virtual cujos conteúdos são definidos por uma consulta. Como uma tabela, uma exibição consiste em um conjunto de colunas nomeadas e linhas de dados. Exceto se indexada, uma exibição não existe como um conjunto armazenado de valores de dados em um banco de dados. As linhas e colunas dos dados vêm de tabelas referidas em consultas que definem a exibição e são produzidas, dinamicamente, quando a exibição é referenciada.  
+# <a name="views"></a>exibições
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+Uma exibição é uma tabela virtual cujos conteúdos são definidos por uma consulta. Como uma tabela, uma exibição consiste em um conjunto de colunas nomeadas e linhas de dados. Exceto se indexada, uma exibição não existe como um conjunto armazenado de valores de dados em um banco de dados. As linhas e colunas dos dados vêm de tabelas referidas em consultas que definem a exibição e são produzidas, dinamicamente, quando a exibição é referenciada.  
   
  Uma exibição atua como um filtro nas tabelas subjacentes na exibição. A consulta que define a exibição pode ser de uma ou mais tabelas ou de outras exibições dos bancos de dados atuais ou outros. As consultas distribuídas podem também ser usadas para definir as exibições que usam os dados de diversas fontes heterogêneas. Isso é útil, por exemplo, se você deseja combinar dados estruturados de forma semelhante de diferentes servidores, cada um dos quais armazena dados para uma região diferente de sua organização.  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |Descreve como retornar informações sobre uma exibição como a definição de exibição.|[Obter informações sobre uma exibição](../../relational-databases/views/get-information-about-a-view.md)|  
 |Descreve como renomear uma exibição.|[Renomear exibições](../../relational-databases/views/rename-views.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar exibições sobre colunas XML](../../relational-databases/xml/create-views-over-xml-columns.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)  
   
