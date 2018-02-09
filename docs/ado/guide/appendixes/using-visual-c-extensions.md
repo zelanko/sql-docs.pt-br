@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7722a67ea07a6a5e0b033d8b0131c494e5e6bd11
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 304b814ee6e190e3b29dfbbd1a4ce2ee48ff1763
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-extensions"></a>Extensões do Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>A Interface IADORecordBinding
@@ -91,35 +93,35 @@ Update(CADORecordBinding *binding)
  Para obter mais informações, consulte [tipos de dados do apêndice a:](http://msdn.microsoft.com/en-us/e3a0533a-2196-4eb0-a31e-92fe9556ada6), de referência do OLE DB do programador.
 
 ### <a name="begin-binding-entries"></a>Iniciar associação de entradas
- **BEGIN_ADO_BINDING**(*classe*)
+ **BEGIN_ADO_BINDING**(*Class*)
 
 ### <a name="fixed-length-data"></a>Dados de comprimento fixo
- **ADO_FIXED_LENGTH_ENTRY**(*Ordinal, o tipo de dados, o Buffer, o Status de modificar*)
+ **ADO_FIXED_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Status, Modify*)
 
- **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, tipo de dados, Buffer, modificar*)
+ **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Modify*)
 
 ### <a name="numeric-data"></a>Dados numéricos
  **ADO_NUMERIC_ENTRY**(*Ordinal, tipo de dados, Buffer, precisão, escala, Status, modificar*)
 
- **ADO_NUMERIC_ENTRY2**(*Ordinal, o tipo de dados, o Buffer, precisão, escala, modificar*)
+ **ADO_NUMERIC_ENTRY2**(*Ordinal, DataType, Buffer, Precision, Scale, Modify*)
 
 ### <a name="variable-length-data"></a>Dados de comprimento variável
- **ADO_VARIABLE_LENGTH_ENTRY**(*Ordinal, tipo de dados, Buffer, tamanho, Status, comprimento, modificar*)
+ **ADO_VARIABLE_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Size, Status, Length, Modify*)
 
- **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, tipo de dados, Buffer, tamanho, Status, modificar*)
+ **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Size, Status, Modify*)
 
- **ADO_VARIABLE_LENGTH_ENTRY3**(*Ordinal, tipo de dados, Buffer, tamanho, comprimento, modificar*)
+ **ADO_VARIABLE_LENGTH_ENTRY3**(*Ordinal, DataType, Buffer, Size, Length, Modify*)
 
- **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordinal, o tipo de dados, o Buffer, o tamanho, modificar*)
+ **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordinal, DataType, Buffer, Size, Modify*)
 
 ### <a name="end-binding-entries"></a>Entradas de associação de término
- **END_ADO_BINDING**)
+ **END_ADO_BINDING**()
 
 |Parâmetro|Description|
 |---------------|-----------------|
 |*Classe*|Classe na qual as entradas de associação e variáveis de C/C++ são definidos.|
 |*Ordinal*|Um número ordinal, contando a partir de um, do **registros** campo correspondente à sua variável de C/C++.|
-|*Tipo de dados*|Tipo de dados ADO equivalente da variável C/C++ (consulte [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) para obter uma lista de tipos de dados válidos). O valor de **registros** campo será convertido para esse tipo de dados, se necessário.|
+|*DataType*|Tipo de dados ADO equivalente da variável C/C++ (consulte [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) para obter uma lista de tipos de dados válidos). O valor de **registros** campo será convertido para esse tipo de dados, se necessário.|
 |*Buffer*|Nome da variável C/C++ em que o **registros** campo será armazenado.|
 |*Tamanho*|Tamanho máximo em bytes do *Buffer*. Se *Buffer* conterá uma cadeia de caracteres de comprimento variável, espaço para um encerramento zero.|
 |*Status*|Nome de uma variável que indica se o conteúdo de *Buffer* são válidos e se a conversão do campo a ser *DataType* foi bem-sucedida.<br /><br /> Os dois valores mais importantes para essa variável são **adFldOK**, que significa que a conversão foi bem sucedida; e **adFldNull**, que significa que o valor do campo deve ser uma VARIANTE do tipo VT_NULL e não simplesmente vazio.<br /><br /> Os valores possíveis para *Status* são listadas na tabela a seguir, "Valores de Status".|
@@ -133,7 +135,7 @@ Update(CADORecordBinding *binding)
 
  Ao definir os dados, *Status* pode ser definida como **adFldNull** para indicar o **registros** campo deve ser definido como null.
 
-|Constante|Valor|Description|
+|Constante|Value|Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Um valor de campo não-nulo foi retornado.|
 |**adFldBadAccessor**|1|Associação era inválida.|
@@ -150,5 +152,5 @@ Update(CADORecordBinding *binding)
 |**adFldBadStatus**|12|Ao atualizar o parâmetro de status inválido.|
 |**adFldDefault**|13|Durante a atualização, um valor padrão foi usado.|
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
  [Exemplo de extensões do Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md) [cabeçalho de extensões do Visual C++](../../../ado/guide/appendixes/visual-c-extensions-header.md)

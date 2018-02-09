@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,26 +13,28 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: FieldStatusEnum
-helpviewer_keywords: FieldStatusEnum enumeration [ADO]
+f1_keywords:
+- FieldStatusEnum
+helpviewer_keywords:
+- FieldStatusEnum enumeration [ADO]
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12e543a4baa7bbcc46ea39e906d57d001ea5f078
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e04f98c5691a66b02a4c5daa8d745f529a9820e0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 Especifica o [status](../../../ado/reference/ado-api/status-property-ado-field.md) de um [campo objeto](../../../ado/reference/ado-api/field-object.md).  
   
  O **adFieldPending\***  valores indicam a operação que causou o status a ser definido e pode ser combinada com outros valores de status.  
   
-|Constante|Valor|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|Indica que o campo especificado já existe.|  
 |**adFieldBadStatus**|12|Indica que um valor de status inválida foi enviado do ADO para o provedor OLE DB. Possíveis causas incluem um 1.0 OLE DB ou provedor 1.1 ou uma combinação incorreta de [valor](../../../ado/reference/ado-api/value-property-ado.md) e [Status](../../../ado/reference/ado-api/status-property-ado-field.md).|  
@@ -64,7 +67,7 @@ Especifica o [status](../../../ado/reference/ado-api/status-property-ado-field.m
 |**adFieldUnavailable**|8|Indica que o provedor não pôde determinar o valor durante a leitura da fonte de dados. Por exemplo, a linha acabou de ser criada, o valor padrão para a coluna não estava disponível e um novo valor ainda não tivesse sido especificado.|  
 |**adFieldVolumeNotFound**|21|Indica que o provedor não é possível localizar o volume de armazenamento indicado pela URL.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
+## <a name="adowfc-equivalent"></a>ADO/WFC Equivalent  
  Constantes não têm equivalentes do ADO/WFC.  
   
 ## <a name="applies-to"></a>Aplica-se a  

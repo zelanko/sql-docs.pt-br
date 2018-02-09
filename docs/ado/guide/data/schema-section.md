@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Schema section [ADO]
+helpviewer_keywords:
+- Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65b56003d7fd7723dce57a0c8c6fae2ecee6da06
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 51c10f0fb21bdab8c83d799d635153b62c2c6e58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="schema-section"></a>Seção de esquema
 A seção de esquema é necessária. Como mostra o exemplo anterior, o ADO gravará detalhados de metadados sobre cada coluna para preservar a semântica dos valores de dados tanto quanto possível para a atualização. No entanto, para carregar no XML, ADO requer somente os nomes das colunas e o conjunto de linhas ao qual pertencem. Aqui está um exemplo de um esquema mínimo:  
@@ -179,5 +181,5 @@ A seção de esquema é necessária. Como mostra o exemplo anterior, o ADO grava
   
  Para obter mais informações sobre o OLE DB constrói disponíveis para uso dentro do esquema de um documento XML para OLE DB, consulte a definição de "urn: schemas-microsoft-com:rowset" e o guia do programador do DB OLE.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

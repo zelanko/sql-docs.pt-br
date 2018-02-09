@@ -8,23 +8,24 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 31bab8e6bf0207b740d89fbaec1b1b97ea7db585
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 29ba7f266a86e53f95668b8bf8ca4ce879bb62f8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitorar o desempenho usando o Repositório de Consultas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/18/2018
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse em um banco de dados e clique em **Propriedades**.  
   
     > [!NOTE]  
-    >  Exige, no mínimo, a versão 16 do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+    > Exige, no mínimo, a versão 16 do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 2.  Na caixa de diálogo **Propriedades do Banco de Dados** , selecione a página **Repositório de Consultas** .  
   
@@ -49,18 +50,18 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="use-transact-sql-statements"></a>Usar Instruções Transact-SQL  
   
-1.  Use a instrução **ALTER DATABASE** para habilitar o repositório de consultas. Por exemplo:  
+Use a instrução **ALTER DATABASE** para habilitar o repositório de consultas. Por exemplo:  
   
-    ```sql  
-    ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
-    ```  
+```sql  
+ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
+```  
   
-     Para obter mais opções de sintaxe relacionadas ao repositório de consultas, consulte [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+Para obter mais opções de sintaxe relacionadas ao repositório de consultas, consulte [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 > [!NOTE]  
 >  Não é possível habilitar o repositório de consultas no banco de dados **mestre** ou **tempdb** .  
  
-##  <a name="About"></a> Informações no Repositório de Consultas  
+## <a name="About"></a> Informações no Repositório de Consultas  
  Planos de execução para qualquer consulta específica no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente envolvem horas extras por vários motivos diferentes, como alterações de estatísticas, alterações de esquema, criação/exclusão de índices, etc. O cache de procedimento (no qual os planos de consulta em cache são armazenados) armazena apenas o plano de execução mais recente. Os planos também são removidos do cache do plano devido à pressão da memória. Como resultado, as regressões do desempenho de consulta causadas por alterações no plano de execução podem não ser triviais e podem ter resolução lenta.  
   
  Como o repositório de consultas mantém vários planos de execução por consulta, ele pode impor políticas para direcionar o processador de consultas para usar um plano de execução específico para uma consulta. Isso é conhecido como imposição de plano. A imposição de plano no repositório de consultas é fornecida usando um mecanismo semelhante à dica de consulta [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md) , mas não requer nenhuma alteração nos aplicativos do usuário. A imposição de plano pode resolver uma regressão de desempenho de consulta causada por uma alteração do plano em um período muito curto.  
@@ -70,32 +71,28 @@ ms.lasthandoff: 01/18/2018
  Cenários comuns para o uso do recurso Repositório de Consultas são:  
   
 -   Localizar e corrigir rapidamente uma regressão de desempenho do plano, forçando o plano de consulta anterior. Corrigir consultas com regressão recente no desempenho devido a alterações no plano de execução.  
-  
 -   Determinar o número de vezes que uma consulta foi executada em determinada janela de tempo, auxiliando um DBA na solução de problemas de recurso de desempenho.  
-  
 -   Identificar as principais consultas *n* (por tempo de execução, consumo de memória, etc.) nas últimas *x* horas.  
-  
 -   Fazer auditoria de histórico dos planos de consulta para determinada consulta.  
-  
 -   Analisar os padrões de uso dos recursos (CPU, E/S e memória) para determinado banco de dados.  
 -   Identifique as principais n consultas que estão esperando em recursos. 
 -   Entenda a natureza de espera de um plano ou de uma consulta específica.
   
 O Repositório de Consultas contém três repositórios:
-- um **repositório de plano** para persistir as informações do plano de execução.
-- um **repositório de estatísticas de tempo de execução** para manter as informações de estatísticas de execução.
-- um **repositório de estatísticas de espera** para manter as informações de estatísticas de espera.
+- um **repositório de plano** para persistir as informações do plano de execução.     
+- um **repositório de estatísticas de tempo de execução** para manter as informações de estatísticas de execução.    
+- um **repositório de estatísticas de espera** para manter as informações de estatísticas de espera.     
  
- O número de planos exclusivos que pode ser armazenado para uma consulta no repositório de planos é limitado pela opção de configuração **max_plans_per_query** . Para melhorar o desempenho, as informações são gravadas nos repositórios de forma assíncrona. Para otimizar o uso do espaço, as estatísticas de tempo de execução no repositório de estatísticas de tempo de execução são agregadas em uma janela de tempo fixa. As informações nesses repositórios são visíveis consultando as exibições de catálogo do repositório de consultas.  
+O número de planos exclusivos que pode ser armazenado para uma consulta no repositório de planos é limitado pela opção de configuração **max_plans_per_query** . Para melhorar o desempenho, as informações são gravadas nos repositórios de forma assíncrona. Para otimizar o uso do espaço, as estatísticas de tempo de execução no repositório de estatísticas de tempo de execução são agregadas em uma janela de tempo fixa. As informações nesses repositórios são visíveis consultando as exibições de catálogo do repositório de consultas.  
   
- A consulta a seguir retorna informações sobre consultas e planos no repositório de consultas.  
+A consulta a seguir retorna informações sobre consultas e planos no repositório de consultas.  
   
 ```sql  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
 FROM sys.query_store_plan AS Pl  
-JOIN sys.query_store_query AS Qry  
+INNER JOIN sys.query_store_query AS Qry  
     ON Pl.query_id = Qry.query_id  
-JOIN sys.query_store_query_text AS Txt  
+INNER JOIN sys.query_store_query_text AS Txt  
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
  
@@ -111,7 +108,7 @@ JOIN sys.query_store_query_text AS Txt
  Para impor um plano, selecione uma consulta e um plano e, em seguida, clique em **Impor Plano.** Você pode impor apenas planos que foram salvos pelo recurso de plano de consulta e ainda são mantidos no cache do plano de consulta.  
 ##  <a name="Waiting"></a> Localizando consultas de espera
 
-A partir do SQL Server 2017 CTP 2.0 e do Banco de Dados SQL do Azure, as estatísticas de espera por consulta estão disponíveis para clientes do Repositório de Consultas. No Repositório de Consultas os tipos de espera são combinados em **categorias de espera**. O mapeamento completo está disponível aqui [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)
+Começando com o [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 e o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], as estatísticas de espera por consulta ao longo do tempo estão disponíveis no Repositório de Consultas. No Repositório de Consultas, os tipos de espera são combinados em **categorias de espera**. O mapeamento das categorias de espera para tipos de espera está disponível em [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).
 
 As **categorias de espera** combinam tipos diferentes de espera em buckets semelhantes por natureza. Categorias de espera diferentes exigem um acompanhamento de análise diferente para resolver o problema, mas os tipos de espera da mesma categoria levam a experiências de solução de problemas muito semelhantes e fornecer a consulta afetada com base nas esperas seria a peça que faltava para concluir a maioria dessas investigações de com êxito.
 
@@ -129,38 +126,38 @@ Aqui estão alguns exemplos de como você pode obter mais informações sobre su
 
 As seguintes opções estão disponíveis para configurar parâmetros de repositório de consulta.
 
- `OPERATION_MODE`  
- Pode ser **READ_WRITE** (padrão) ou READ_ONLY.  
+*OPERATION_MODE*  
+Pode ser **READ_WRITE** (padrão) ou READ_ONLY.  
   
- `CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)`  
- Configure o argumento STALE_QUERY_THRESHOLD_DAYS para especificar o número de dias que os dados devem ser mantidos no repositório de consultas. O valor padrão é 30. Para o [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition, o padrão é **7** dias.
+*CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)*  
+Configure o argumento `STALE_QUERY_THRESHOLD_DAYS` para especificar o número de dias que os dados devem ser mantidos no repositório de consultas. O valor padrão é 30. Para o [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition, o padrão é **7** dias.
   
- `DATA_FLUSH_INTERVAL_SECONDS`  
- Determina a frequência na qual os dados gravados no repositório de consultas é persistida no disco. Para otimizar o desempenho, os dados coletados pelo repositório de consultas são gravados de maneira assíncrona no disco. A frequência em que essa transferência assíncrona ocorre é configurada via DATA_FLUSH_INTERVAL_SECONDS. O valor padrão é **900** (15 min).  
+*DATA_FLUSH_INTERVAL_SECONDS*  
+Determina a frequência na qual os dados gravados no repositório de consultas é persistida no disco. Para otimizar o desempenho, os dados coletados pelo repositório de consultas são gravados de maneira assíncrona no disco. A frequência em que essa transferência assíncrona ocorre é configurada via `DATA_FLUSH_INTERVAL_SECONDS`. O valor padrão é **900** (15 min).  
   
- `MAX_STORAGE_SIZE_MB`  
- Configura o tamanho máximo do repositório de consultas. Se os dados no repositório de consultas atingir o limite MAX_STORAGE_SIZE_MB, o repositório de consultas alterará automaticamente o status de somente gravação para somente leitura e interromperá a coleta de novos dados.  O valor padrão é 100 Mb. Para o [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition, o padrão é **1 GB** e, para o [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition, o padrão é **10 MB**.
+*MAX_STORAGE_SIZE_MB*  
+Configura o tamanho máximo do repositório de consultas. Se os dados no repositório de consultas atingirem o limite `MAX_STORAGE_SIZE_MB`, o repositório de consultas alterará automaticamente o status de somente gravação para somente leitura e interromperá a coleta de novos dados.  O valor padrão é 100 MB. Para o [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition, o padrão é **1 GB** e, para o [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition, o padrão é **10 MB**.
   
- `INTERVAL_LENGTH_MINUTES`  
- Determina o intervalo de tempo em que os dados de estatísticas de execução do tempo de execução são agregados no repositório de consultas. Para otimizar o uso de espaço, as estatísticas de execução de tempo de execução no repositório de estatísticas de tempo de execução são agregadas em uma janela de tempo fixa. Essa janela de tempo fixa é configurada usando INTERVAL_LENGTH_MINUTES. O valor padrão é **60**. 
+*INTERVAL_LENGTH_MINUTES*  
+Determina o intervalo de tempo em que os dados de estatísticas de execução do tempo de execução são agregados no repositório de consultas. Para otimizar o uso de espaço, as estatísticas de execução de tempo de execução no repositório de estatísticas de tempo de execução são agregadas em uma janela de tempo fixa. Essa janela de tempo fixa é configurada usando `INTERVAL_LENGTH_MINUTES`. O valor padrão é **60**. 
   
- `SIZE_BASED_CLEANUP_MODE`  
- Controla se o processo de limpeza será ativado automaticamente quando o volume total de dados se aproximar do tamanho máximo. Pode ser **AUTO** (padrão) ou OFF.  
+*SIZE_BASED_CLEANUP_MODE*  
+Controla se o processo de limpeza será ativado automaticamente quando o volume total de dados se aproximar do tamanho máximo. Pode ser **AUTO** (padrão) ou OFF.  
   
- `QUERY_CAPTURE_MODE`  
- Indica se o Repositório de Consultas captura todas as consultas ou consultas relevantes com base no consumo de recursos e na contagem de execuções, ou se ele para de adicionar novas consultas e rastreia apenas as consultas atuais. Pode ser ALL (capturar todas as consultas), AUTO (ignorar incomum e consultas com duração de compilação e execução insignificante) ou NONE (parar de capturar novas consultas). O valor padrão no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) é **ALL**, enquanto no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] do Azure é AUTO.
+*QUERY_CAPTURE_MODE*  
+Indica se o Repositório de Consultas captura todas as consultas ou consultas relevantes com base no consumo de recursos e na contagem de execuções, ou se ele para de adicionar novas consultas e rastreia apenas as consultas atuais. Pode ser **ALL** (capturar todas as consultas), AUTO (ignorar incomum e consultas com duração de compilação e execução insignificante) ou NONE (parar de capturar novas consultas). O valor padrão no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) é ALL, enquanto no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] do Azure é AUTO.
   
- `MAX_PLANS_PER_QUERY`  
- Um número inteiro que representa a quantidade máxima de planos de manutenção para cada consulta. O valor padrão é **200**.  
+*MAX_PLANS_PER_QUERY*  
+Um número inteiro que representa a quantidade máxima de planos de manutenção para cada consulta. O valor padrão é **200**.  
  
- `WAIT_STATS_CAPTURE_MODE`  
- Controla se o Repositório de Consultas captura informações de estatísticas de espera. Pode ser OFF ou **ON** (padrão).  
+*WAIT_STATS_CAPTURE_MODE*  
+Controla se o Repositório de Consultas captura informações de estatísticas de espera. Pode ser OFF ou **ON** (padrão).  
  
- Consulte a exibição **sys.database_query_store_options** para determinar as opções atuais do repositório de consultas. Para obter mais informações sobre os valores, consulte [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).  
+Consulte a exibição **sys.database_query_store_options** para determinar as opções atuais do repositório de consultas. Para obter mais informações sobre os valores, consulte [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).  
   
- Para obter mais informações sobre como definir opções usando instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , consulte [Gerenciamento de opção](#OptionMgmt).  
+Para obter mais informações sobre como definir opções usando instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , consulte [Gerenciamento de opção](#OptionMgmt).  
   
-##  <a name="Related"></a> Exibições, Funções e Procedimentos Relacionados  
+## <a name="Related"></a> Exibições, Funções e Procedimentos Relacionados  
  Exiba e gerencie o Repositório de Consultas por meio do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou usando as exibições e os procedimentos a seguir.  
 
 ### <a name="query-store-functions"></a>Funções do Repositório de Consultas  
@@ -311,9 +308,8 @@ DEALLOCATE adhoc_queries_cursor;
   
  O exemplo acima usa o procedimento armazenado estendido **sp_query_store_remove_query** para remover dados desnecessários. Você também pode usar:  
   
--   **sp_query_store_reset_exec_stats** – para limpar as estatísticas de tempo de execução para um plano específico.  
-  
--   **sp_query_store_remove_plan** – para remover um único plano.  
+-   **sp_query_store_reset_exec_stats** para limpar as estatísticas de tempo de execução para um plano específico.  
+-   **sp_query_store_remove_plan** para remover um único plano.  
  
   
 ###  <a name="Peformance"></a> Auditoria e solução de problemas de desempenho  
@@ -554,7 +550,6 @@ ORDER BY additional_duration_workload DESC
 OPTION (MERGE JOIN);  
 ```  
  
-  
 ###  <a name="Stability"></a> Manter a estabilidade do desempenho da consulta  
  Para consultas executadas várias vezes, você pode perceber que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa diferentes planos, resultando em diferentes utilizações de recurso e duração. Com o Repositório de Consultas, você pode detectar quando o desempenho da consulta regrediu e determinar o plano ideal dentro de um período de interesse. Em seguida, você pode impor esse plano ideal para execução futura da consulta.  
   

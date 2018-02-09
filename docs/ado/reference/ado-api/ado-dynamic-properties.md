@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - dynamic properties [ADO]
 - properties [ADO], dynamic
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 98b2e7a1c4cbd7063379249b9d7fb0ac3264a56f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 254372b292229f5ab65dacdbf1b021209a8ecb9a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-dynamic-properties"></a>Propriedades dinâmicas do ADO
 Propriedades dinâmicas que podem ser adicionadas para o [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleções do [Conexão](../../../ado/reference/ado-api/connection-object-ado.md), [comando](../../../ado/reference/ado-api/command-object-ado.md), ou [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objetos. A fonte para essas propriedades é um provedor de dados, como o [OLE DB Provider para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), ou um provedor de serviços, como o [do serviço Microsoft Cursor do OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Consulte a documentação do provedor de serviço para obter mais informações sobre uma propriedade dinâmica específica ou provedor de dados apropriado.  
@@ -36,13 +37,13 @@ Propriedades dinâmicas que podem ser adicionadas para o [propriedades](../../..
 |||  
 |-|-|  
 |[Otimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Especifica se um índice deve ser criado neste campo.|  
-|[Solicitar](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Especifica se o provedor OLE DB deve solicitar ao usuário informações de inicialização.|  
+|[Prompt](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Especifica se o provedor OLE DB deve solicitar ao usuário informações de inicialização.|  
 |[Alterar a forma de nome](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Especifica um nome para o **registros** objeto.|  
 |[Sincronizar de comando](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Especifica um comando fornecido pelo usuário de cadeia de caracteres que o **Resync** problemas de método para atualizar os dados na tabela chamada no **tabela exclusiva** propriedades dinâmicas.|  
 |[Tabela exclusiva, o esquema exclusivo, o catálogo exclusivo](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**Tabela exclusiva** Especifica o nome da tabela base na qual as atualizações, inserções e exclusões são permitidas.<br /><br /> **Esquema exclusivo** Especifica o esquema ou o nome do proprietário da tabela.<br /><br /> **Catálogo exclusivo** Especifica o catálogo ou o nome do banco de dados que contém a tabela.|  
 |[Ressincronização de atualização](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)|Especifica se o **UpdateBatch** método é seguido por um implícita **Resync** operação de método e nesse caso, o escopo dessa operação.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência da API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Coleções de ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Constantes enumeradas do ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   

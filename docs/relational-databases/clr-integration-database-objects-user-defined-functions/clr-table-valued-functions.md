@@ -20,19 +20,20 @@ helpviewer_keywords:
 - table-valued functions [CLR integration]
 - TVFs [CLR integration]
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
-caps.latest.revision: "88"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 220c83c7378e634745a7edc71f521d30c3f812b6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b39532e93eba5784bbc9925f3140c26ced977ede
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-table-valued-functions"></a>Funções com valor de tabela CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Uma função com valor de tabela é uma função definida pelo usuário que retorna uma tabela.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Uma função com valor de tabela é uma função definida pelo usuário que retorna uma tabela.  
   
  A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estende a funcionalidade das funções com valor de tabela permitindo definir uma função com valor de tabela em qualquer idioma gerenciado. Dados são retornados de uma função com valor de tabela por meio de um **IEnumerable** ou **IEnumerator** objeto.  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/08/2018
  Para obter mais informações sobre funções com valor de tabela CLR, check-out 'MSSQLTips [funções com valor de tabela de Introdução ao SQL Server CLR!](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Diferenças entre as funções com valor de tabela Transact-SQL e CLR  
- As funções com valor de tabela do [!INCLUDE[tsql](../../includes/tsql-md.md)] materializam os resultados chamando a função em uma tabela intermediária. Como elas usam uma tabela intermediária, podem dar suporte a restrições e índices exclusivos nos resultados. Esses recursos podem ser extremamente úteis quando resultados grandes são retornados.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] funções com valor de tabela materializam os resultados da chamada de função em uma tabela intermediária. Como elas usam uma tabela intermediária, podem dar suporte a restrições e índices exclusivos nos resultados. Esses recursos podem ser extremamente úteis quando resultados grandes são retornados.  
   
  Em contrapartida, as funções com valor de tabela do CLR representam uma alternativa de streaming. Não há nenhum requisito de que todo o conjunto de resultados deva ser materializado em uma única tabela. O **IEnumerable** objeto retornado pela função gerenciada é diretamente chamado pelo plano de execução da consulta que chama a função com valor de tabela e os resultados são consumidos de maneira incremental. Este modelo de streaming garante que os resultados possam ser consumidos imediatamente depois que a primeira linha estiver disponível, em vez de aguardar até que toda a tabela seja populada. Ele também será a melhor alternativa, se você tiver uma grande quantidade de linhas retornadas, pois elas não precisam ser totalmente materializadas na memória. Por exemplo, uma função com valor de tabela gerenciada pode ser usada para analisar um arquivo de texto e retornar todas as linhas como uma linha.  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 01/08/2018
  Implemente as funções com valor de tabela como métodos em uma classe em um assembly do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. O código de função com valor de tabela deve implementar o **IEnumerable** interface. O **IEnumerable** interface é definida no .NET Framework. Tipos que representam matrizes e coleções do .NET Framework já implementam a **IEnumerable** interface. Isso facilita a gravação de funções com valor de tabela que convertem uma coleção ou uma matriz em um conjunto de resultados.  
   
 ## <a name="table-valued-parameters"></a>Parâmetros com valor de tabela  
- Os parâmetros com valor de tabela são tipos de tabela definidos pelo usuário, transmitidos em um procedimento ou função e fornecem uma maneira eficiente de passar várias linhas de dados para o servidor. Os parâmetros com valor de tabela fornecem funcionalidade semelhante para matrizes de parâmetros, mas oferecem maior flexibilidade e integração maior com o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Eles também fornecem o potencial para melhor desempenho. Os parâmetros com valor de tabela também ajudam a reduzir o número de viagens de ida e volta para o servidor. Em vez de enviar várias solicitações ao servidor, como com uma lista de parâmetros escalares, os dados podem ser enviados ao servidor como um parâmetro com valor de tabela. Um tipo de tabela definido pelo usuário não pode ser passado como um parâmetro com valor de tabela para, ou ser retornado de, um procedimento armazenado ou uma função gerenciada(o) que é executada(o) no processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre parâmetros com valor de tabela, consulte [usar parâmetros &#40; mecanismo de banco de dados &#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Os parâmetros com valor de tabela são tipos de tabela definidos pelo usuário, transmitidos em um procedimento ou função e fornecem uma maneira eficiente de passar várias linhas de dados para o servidor. Os parâmetros com valor de tabela fornecem funcionalidade semelhante para matrizes de parâmetros, mas oferecem maior flexibilidade e integração maior com o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Eles também fornecem o potencial para melhor desempenho. Os parâmetros com valor de tabela também ajudam a reduzir o número de viagens de ida e volta para o servidor. Em vez de enviar várias solicitações ao servidor, como com uma lista de parâmetros escalares, os dados podem ser enviados ao servidor como um parâmetro com valor de tabela. Um tipo de tabela definido pelo usuário não pode ser passado como um parâmetro com valor de tabela para, ou ser retornado de, um procedimento armazenado ou uma função gerenciada(o) que é executada(o) no processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre parâmetros com valor de tabela, consulte [usar parâmetros &#40; mecanismo de banco de dados &#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>Parâmetros de saída e funções com valor de tabela  
  As informações podem ser retornadas de funções com valor de tabela que usam parâmetros de saída. O parâmetro correspondente na função com valor de tabela do código de implementação deve usar um parâmetro de passagem por referência como o argumento. Observe que o Visual Basic não suporta parâmetros de saída da mesma maneira que o Visual C#. Você deve especificar o parâmetro por referência e aplicar o \<out () > atributo para representar um parâmetro de saída, como no exemplo a seguir:  

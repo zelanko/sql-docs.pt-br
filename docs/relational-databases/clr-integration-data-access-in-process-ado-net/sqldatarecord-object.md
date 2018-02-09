@@ -15,19 +15,20 @@ helpviewer_keywords:
 - SqlDataRecord object
 - custom result sets [CLR integration]
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f9336adaca5a3e0aebd1e18dce5c58e97b1d2be
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d9fa7d4465af4de1534e220ffa06d39cf854c3b8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sqldatarecord-object"></a>Objeto SqlDataRecord
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O **SqlDataRecord** objeto representa uma única linha de dados, juntamente com seus metadados relacionados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+O objeto **SqlDataRecord** representa uma única linha de dados, junto com seus metadados relacionados.  
   
  Os procedimentos armazenados gerenciados podem enviar conjuntos de resultados ao cliente que não sejam de um **SqlDataReader**. A classe **SqlDataRecord** , junto com os métodos **SendResultsStart**, **SendResultsRow**e **SendResultsEnd** do objeto **SqlPipe** permite que os procedimentos armazenados enviem conjuntos de resultados personalizados ao cliente.  
   
@@ -92,7 +93,7 @@ Public Shared Sub  CreateNewRecordVBProc ()
 End Sub  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Objeto SqlPipe](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)  
   
   

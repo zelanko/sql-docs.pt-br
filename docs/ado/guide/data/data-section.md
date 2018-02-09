@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: data section [ADO]
+helpviewer_keywords:
+- data section [ADO]
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 486c936681adca59a90dae6a5e304be6f8b4dba5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8da8004ffc31efb53db196e37f48ae0942a872f6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="data-section"></a>Seção de dados
 A seção de dados define os dados do conjunto de linhas juntamente com quaisquer atualizações, inserções ou exclusões pendentes. A seção de dados pode conter zero ou mais linhas. Ele só pode conter dados de um conjunto de linhas em que a linha é definida pelo esquema. Além disso, conforme observado anteriormente, colunas sem dados podem ser omitidas. Se um atributo ou subelemento é usado na seção de dados e essa construção não foi definida na seção de esquema, ele será ignorado silenciosamente.  
@@ -89,5 +91,5 @@ A seção de dados define os dados do conjunto de linhas juntamente com quaisque
   
  Uma atualização sempre contém os dados da linha original inteiro seguidos dos dados de linha alterada. A linha alterada pode conter todas as colunas ou apenas as colunas que realmente foram alterados. No exemplo anterior, a linha da transportadora 2 não é alterada, e somente a coluna de telefone foi alterado valores para 3 da transportadora e, portanto, é a única coluna incluída na linha alterada. As linhas inseridas para transportadoras 12, 13 e 14 são em lote juntos marca de rs: inserir em uma. Observe que as linhas excluídas podem também ser agrupadas, embora isso não é mostrado no exemplo anterior.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Axis
-helpviewer_keywords: Axis object [ADO MD]
+f1_keywords:
+- Axis
+helpviewer_keywords:
+- Axis object [ADO MD]
 ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 075cccb08756fe6459db87bbbc091700ae333400
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cdf9844445a4512a9ec81b1178e110da3410c475
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="axis-object-ado-md"></a>Objeto de eixo (ADO MD)
 Representa uma posição ou o eixo do filtro de um conjunto de células que contém os membros selecionados de uma ou mais dimensões.  
@@ -46,7 +49,7 @@ Representa uma posição ou o eixo do filtro de um conjunto de células que cont
   
 -   [Propriedades, métodos e eventos](../../../ado/reference/ado-md-api/axis-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Exemplo de eixo (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Coleção de eixos (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
  [Coleção de posições (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   

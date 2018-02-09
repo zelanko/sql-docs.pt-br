@@ -1,6 +1,7 @@
 ---
 title: "Métodos RDS | Microsoft Docs"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - RDS methods [ADO]
 - methods [ADO], RDS
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb8a99f35605a9ae46e6d6d32eddf380fda57826
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 5b2f4f52ffde70ad0d045acf5228045ad3baf84c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-methods"></a>Métodos RDS
 > [!IMPORTANT]
@@ -39,10 +40,10 @@ ms.lasthandoff: 12/20/2017
 |[Método Execute (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|Executar a solicitação e criar um conjunto de linhas de dados avançados (para uso com o ADO 2.5 e superior).|  
 |[Método Execute21 (RDS)](../../../ado/reference/rds-api/execute21-method-rds.md)|Executar a solicitação e criar um conjunto de linhas de dados avançados (para uso com o ADO 2.1).|  
 |[InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md)|Retorna um ponteiro para a interface solicitada em uma versão maior capacidade do objeto.|  
-|[MoveFirst, MoveLast, MoveNext e MovePrevious (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|Move para a primeira, última, registro anterior ou seguinte em um especificado **registros** objeto.|  
+|[MoveFirst, MoveLast, MoveNext, MovePrevious (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|Move para a primeira, última, registro anterior ou seguinte em um especificado **registros** objeto.|  
 |[Consulta (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|Usa uma cadeia de caracteres de consulta SQL válida para retornar um **registros**.|  
 |[Atualização (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)|Repete a consulta de fonte de dados especificada no **conectar** propriedade e atualizações os resultados da consulta.|  
-|[Redefinir (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|Executa a classificação ou o filtro em um cliente **registros**, com base nas propriedades de classificação e filtro especificadas.|  
+|[Reset (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|Executa a classificação ou o filtro em um cliente **registros**, com base nas propriedades de classificação e filtro especificadas.|  
 |[SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Envia as alterações de localmente em cache e atualizáveis pendentes **registros** à fonte de dados especificado no **conectar** propriedade.|  
 |[Método Synchronize (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Sincronize o conjunto de registros fornecido com o banco de dados especificado pela cadeia de conexão (para uso com o ADO 2.5 e superior).|  
 |[Método Synchronize21 (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Sincronize o conjunto de registros fornecido com o banco de dados especificado pela cadeia de conexão (para uso com o ADO 2.1).|

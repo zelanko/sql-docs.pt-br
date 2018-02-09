@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Field20::GetUnderlyingValue
 - Field20::get_UnderlyingValue
 - Field20::UnderlyingValue
-helpviewer_keywords: UnderlyingValue property
+helpviewer_keywords:
+- UnderlyingValue property
 ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c49f65c2f75e83765c8d4ede18881cc2f8fcdcb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 739852d4cbfa4aaf2cf45a59b81b60e23617597f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="underlyingvalue-property"></a>Propriedade UnderlyingValue
 Indica o valor atual de um [campo](../../../ado/reference/ado-api/field-object.md) objeto no banco de dados.  
@@ -48,7 +50,7 @@ Indica o valor atual de um [campo](../../../ado/reference/ado-api/field-object.m
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Exemplo de propriedades de UnderlyingValue (VB) e OriginalValue](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
  [Exemplo de propriedades de UnderlyingValue (VC + +) e OriginalValue](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
  [Propriedade OriginalValue (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   

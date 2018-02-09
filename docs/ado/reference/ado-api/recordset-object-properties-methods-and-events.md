@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Recordset object [ADO], members
+helpviewer_keywords:
+- Recordset object [ADO], members
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 01b32c615391bbceb768ddad1b65891206a480af
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e813eb36109759560fbe057e32004bdc725c5cea
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto de conjunto de registros
 ## <a name="propertiescollections"></a>Propriedades/coleções  
@@ -126,7 +128,7 @@ ms.lasthandoff: 12/21/2017
  [Método UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)  
   
 ## <a name="events"></a>Eventos  
- [Evento EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
+ [EndOfRecordset Event](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
   
  [Evento FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)  
   
@@ -140,5 +142,5 @@ ms.lasthandoff: 12/21/2017
   
  [Eventos de MoveComplete e WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

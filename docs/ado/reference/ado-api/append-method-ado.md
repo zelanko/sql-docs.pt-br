@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: _DynaCollection::Append
-helpviewer_keywords: Append method [ADO]
+f1_keywords:
+- _DynaCollection::Append
+helpviewer_keywords:
+- Append method [ADO]
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d0c0c887da52e8c91caeab582c2b1973b491e81d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9a192286d39660580968305d16cb159480b6a09a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="append-method-ado"></a>(ADO) do método append
 Anexa um objeto para uma coleção. Se a coleção é [campos](../../../ado/reference/ado-api/fields-collection-ado.md), um novo [campo](../../../ado/reference/ado-api/field-object.md) objeto pode ser criado antes que ele é adicionado à coleção.  
@@ -38,10 +41,10 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *coleção*  
+ *collection*  
  Um objeto de coleção.  
   
- *campos*  
+ *fields*  
  Um **campos** coleção.  
   
  *objeto*  
@@ -94,7 +97,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
 - [Coleção Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
 - [Coleção Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Anexar e exemplo dos métodos CreateParameter (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
  [Anexar e exemplo dos métodos CreateParameter (VC + +)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
  [Método CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   

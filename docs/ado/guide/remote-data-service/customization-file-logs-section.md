@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - logs section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80f9b0a4d00326d7e9a81554d96b07bbf0817c43
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 10f6e47bcf8cede8c59a406fef4951a11cbd56bd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customization-file-logs-section"></a>Seção de Logs do arquivo de personalização
 O **logs** seção contém uma entrada de arquivo de log, que especifica o nome de um arquivo que registra erros durante a operação do **DataFactory**.  
@@ -46,12 +47,12 @@ FileName
   
 |Parte|Description|  
 |----------|-----------------|  
-|**Err**|Uma cadeia de caracteres literal que indica que isso é uma entrada de arquivo de log.|  
+|**err**|Uma cadeia de caracteres literal que indica que isso é uma entrada de arquivo de log.|  
 |*FileName*|Um nome de arquivo e caminho completo. O nome de arquivo comum é **c:\msdfmap.log**.|  
   
  O arquivo de log conterá o nome de usuário, o HRESULT, a data e a hora de cada erro.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Arquivo de personalização de conectar-se a seção](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [Seção SQL do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [Seção do arquivo UserList de personalização](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

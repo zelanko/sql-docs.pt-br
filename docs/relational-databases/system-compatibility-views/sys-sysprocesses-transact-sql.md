@@ -1,5 +1,5 @@
 ---
-title: sys. sysprocesses (Transact-SQL) | Microsoft Docs
+title: sys.sysprocesses (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.sysprocesses_TSQL
 - sys.sysprocesses
 - sysprocesses
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.sysprocesses compatibility view
 - sysprocesses system table
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
-caps.latest.revision: "57"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8589b865843b0ec7a8d4a087dee5bbc0a646b289
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 551d266374d6fd367eb4bba9e1d76a6322461c31
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +44,7 @@ ms.lasthandoff: 11/27/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|spid|**smallint**|ID da sessão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|spid|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID da sessão.|  
 |kpid|**smallint**|ID do thread do Windows.|  
 |blocked|**smallint**|ID da sessão que está bloqueando a solicitação. Se esta coluna for NULL, a solicitação não estará bloqueada ou as informações da sessão de bloqueio não estarão disponíveis (ou não podem ser identificadas).<br /><br /> -2 = O recurso de bloqueio pertence a uma transação distribuída órfã.<br /><br /> -3 = O recurso de bloqueio pertence a uma transação de recuperação adiada.<br /><br /> -4 = A ID da sessão do proprietário da trava de bloqueio não pôde ser determinada devido a transições internas de estado da trava.|  
 |waittype|**binary(2)**|Reservado.|  
@@ -51,9 +53,9 @@ ms.lasthandoff: 11/27/2017
 |waitresource|**nchar(256)**|Representação textual de um recurso de bloqueio.|  
 |dbid|**smallint**|ID do banco de dados usado atualmente pelo processo.|  
 |uid|**smallint**|ID do usuário que executou o comando. Excederá ou retornará NULL se o número de usuários e funções exceder 32.767.|  
-|cpu|**int**|Tempo de CPU cumulativo para o processo. A entrada é atualizada para todos os processos, independentemente da opção SET STATISTICS TIME ser ON ou OFF.|  
+|cpu|**Int**|Tempo de CPU cumulativo para o processo. A entrada é atualizada para todos os processos, independentemente da opção SET STATISTICS TIME ser ON ou OFF.|  
 |physical_io|**bigint**|Leituras e gravações de disco cumulativas para o processo.|  
-|memusage|**int**|Número de páginas no cache de procedimento que estão atualmente alocadas para este processo. Um número negativo indica que o processo está liberando memória alocada por outro processo.|  
+|memusage|**Int**|Número de páginas no cache de procedimento que estão atualmente alocadas para este processo. Um número negativo indica que o processo está liberando memória alocada por outro processo.|  
 |login_time|**datetime**|Hora na qual um processo de cliente efetuou logon no servidor.|  
 |last_batch|**datetime**|Última vez que um processo de cliente executou uma chamada de procedimento armazenado remoto ou uma instrução EXECUTE.|  
 |ecid|**smallint**|ID do contexto de execução usado para identificar exclusivamente os subthreads que operam em nome de um único processo.|  
@@ -71,11 +73,11 @@ ms.lasthandoff: 11/27/2017
 |loginame|**nchar(128)**|Nome de logon.|  
 |context_info|**binary(128)**|Dados armazenados em um lote usando a instrução SET CONTEXT_INFO.|  
 |sql_handle|**binary(20)**|Representa o lote ou o objeto atualmente em execução.<br /><br /> **Observação** esse valor é derivado do lote ou memória do endereço do objeto. Esse valor não é calculado usando o algoritmo com base em hash do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|stmt_start|**int**|Deslocamento inicial da instrução SQL atual para o sql_handle especificado.|  
-|stmt_end|**int**|Deslocamento final da instrução SQL atual para o sql_handle especificado.<br /><br /> -1 = A instrução atual é executada até o final dos resultados retornados pela função fn_get_sql do sql_handle especificado.|  
-|request_id|**int**|ID da solicitação. Usado para identificar solicitações em execução em uma sessão específica.|  
+|stmt_start|**Int**|Deslocamento inicial da instrução SQL atual para o sql_handle especificado.|  
+|stmt_end|**Int**|Deslocamento final da instrução SQL atual para o sql_handle especificado.<br /><br /> -1 = A instrução atual é executada até o final dos resultados retornados pela função fn_get_sql do sql_handle especificado.|  
+|request_id|**Int**|ID da solicitação. Usado para identificar solicitações em execução em uma sessão específica.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se um usuário tiver permissão VIEW SERVER STATE no servidor, ele verá todas as sessões em execução na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; caso contrário, verá apenas a sessão atual.  
   
 ## <a name="see-also"></a>Consulte também  

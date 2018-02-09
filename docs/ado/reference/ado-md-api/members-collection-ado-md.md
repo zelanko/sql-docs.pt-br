@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Level::Members
 - Members
 - Position::Members
-helpviewer_keywords: Members collection [ADO MD]
+helpviewer_keywords:
+- Members collection [ADO MD]
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc86aad4176a2f5bac9e9fd70331109c89aa445c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 087809ddb783b323a094a509aedd4c5b88005764
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="members-collection-ado-md"></a>Coleção de membros (ADO MD)
 Contém o [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objetos de um nível ou uma posição em um eixo.  
@@ -53,6 +55,6 @@ Contém o [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) ob
   
 -   [Propriedades, métodos e eventos](../../../ado/reference/ado-md-api/members-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Exemplo de membros (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
  [Objeto Member (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)

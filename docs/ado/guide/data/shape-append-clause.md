@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6f5a67559ea2137110dc72d77a56bacc8da39a8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8f4c9bf19fd1df07bb4271a8db94311548a4e092
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="shape-append-clause"></a>Cláusula APPEND de forma
 A cláusula de ACRÉSCIMO de comando de forma acrescenta uma coluna ou colunas para um **registros**. Com frequência, essas colunas são colunas de capítulo, o que fazer referência a um filho **registros**.  
@@ -39,7 +40,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
 ## <a name="description"></a>Description  
  As partes dessa cláusula são da seguinte maneira:  
   
- *comando pai*  
+ *parent-command*  
  Zero ou um dos seguintes (você pode omitir o *comando pai* completamente):  
   
 -   Um comando de provedor entre chaves ("{") que retorna um **registros** objeto. O comando é emitido para o provedor de dados subjacente e sua sintaxe depende dos requisitos do provedor. Isso geralmente será a linguagem SQL, embora o ADO não requer qualquer linguagem de consulta específica.  
@@ -48,10 +49,10 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
   
 -   A tabela a palavra-chave, seguida do nome de uma tabela no provedor de dados.  
   
- *alias pai*  
+ *parent-alias*  
  Um alias opcional que se refere ao pai **registros**.  
   
- *lista de colunas*  
+ *column-list*  
  Um ou mais dos seguintes:  
   
 -   Uma coluna de agregação.  
@@ -71,7 +72,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 ```  
   
 ## <a name="remarks"></a>Remarks  
- *conjunto de registros filho*  
+ *child-recordset*  
  -   Um comando de provedor entre chaves ("{") que retorna um **registros** objeto. O comando é emitido para o provedor de dados subjacente e sua sintaxe depende dos requisitos do provedor. Isso geralmente será a linguagem SQL, embora o ADO não requer qualquer linguagem de consulta específica.  
   
 -   Inserido comando de outra forma entre parênteses.  
@@ -80,19 +81,19 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 -   A tabela a palavra-chave, seguida do nome de uma tabela no provedor de dados.  
   
- *alias de filho*  
+ *child-alias*  
  Um alias que se refere ao filho **registros**.  
   
- *coluna pai*  
+ *parent-column*  
  Uma coluna no **registros** retornado pelo *comando pai.*  
   
- *coluna filho*  
+ *child-column*  
  Uma coluna no **registros** retornado pelo *filho comando*.  
   
- *número de parâmetro*  
+ *param-number*  
  Consulte [operação de comandos parametrizados](../../../ado/guide/data/operation-of-parameterized-commands.md).  
   
- *alias de capítulo*  
+ *chapter-alias*  
  Um alias que se refere à coluna de capítulo acrescentada ao pai.  
   
 > [!NOTE]
@@ -126,7 +127,7 @@ SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO 
   
 -   [Cláusulas COMPUTE de forma de intervenção](../../../ado/guide/data/intervening-shape-compute-clauses.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Exemplo de modelagem de dados](../../../ado/guide/data/data-shaping-example.md)   
  [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
  [Modelar comandos em geral](../../../ado/guide/data/shape-commands-in-general.md)

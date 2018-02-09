@@ -1,6 +1,6 @@
 ---
 title: "Problemas conhecidos de serviços de aprendizado de máquina | Microsoft Docs"
-ms.date: 01/31/2018
+ms.date: 02/05/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 5a262bb73d5989ebf3ad961ee7c2e84e75415f26
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2c3bd4ada6d234015ef1ab4d8b474f7ab45c4b85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problemas conhecidos nos serviços de aprendizado de máquina
 
@@ -71,17 +71,31 @@ Para evitar problemas com pacotes de R, você também pode atualizar a versão d
 
 **Aplica-se a:** SQL Server 2016 R Services, com R Server versão 9.0.0 ou anterior
 
+### <a name="r-components-missing-from-cu3-setup"></a>Componentes de R ausente da configuração CU3
+
+Um número limitado de máquinas virtuais do Azure foram provisionado sem os arquivos de instalação do R que devem ser incluídos com o SQL Server. O problema se aplica a máquinas virtuais provisionadas no período de 2018-01-05 para 2018-01-23. Esse problema também pode afetar as instalações locais, se você aplicou a atualização CU3 para SQL Server 2017 durante o período de 2018-01-05 a 2018-01-23.
+
+Uma versão de serviço foi fornecida que inclui a versão correta dos arquivos de instalação de R.
+
++ [Pacote de atualização cumulativa 3 para SQL Server 2017 KB4052987](https://www.microsoft.com/en-us/download/details.aspx?id=56128).
+
+Para instalar os componentes e reparar CU3 de 2017 do SQL Server, você deve desinstalar CU3 e reinstale a versão atualizada:
+
+1. Baixe o arquivo de instalação CU3 atualizado, que inclui os instaladores de R.
+2. Desinstale CU3. No painel de controle, procure **desinstalar uma atualização**e, em seguida, selecione "Hotfix 3015 para o SQL Server de 2017 (KB4052987) (64 bits)". Prossiga com as etapas de desinstalação.
+3. Reinstalar a atualização de CU3, clicando duas vezes sobre a atualização para KB4052987 que você acabou de baixar: `SQLServer2017-KB4052987-x64.exe`. Siga as instruções de instalação.
+
 ### <a name="unable-to-install-python-components-in-offline-installations-of-sql-server-2017-ctp-20-or-later"></a>Não é possível instalar componentes do Python em offline instalações do SQL Server de 2017 CTP 2.0 ou posterior
 
 Se você instalar uma versão de pré-lançamento do SQL Server 2017 em um computador sem acesso à internet, o instalador pode falhar exibir a página que solicita a localização dos componentes do Python baixados. Nesse caso, você pode instalar o recurso Serviços de aprendizado de máquina, mas não os componentes do Python.
 
-Esse problema é corrigido na versão de lançamento. Se você encontrar esse problema, como alternativa, você pode habilitar temporariamente o acesso à internet durante a instalação. Essa limitação não se aplica a R.
+Esse problema é corrigido na versão de lançamento. Além disso, essa limitação não se aplica aos componentes de R.
 
 **Aplica-se a:** SQL Server 2017 com Python
 
 ### <a name="bkmk_sqlbindr"></a>Quando você conecta a uma versão mais antiga do SQL Server R Services de um cliente por meio de aviso de versão incompatível[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
-Quando você executa o código R em um contexto de computação do SQL Server 2016, você verá um erro semelhante ao seguinte:
+Quando você executar o código R contexto de computação de um SQL Server 2016, você poderá ver o seguinte erro:
 
 > *Você está executando a versão 9.0.0 do Cliente do Microsoft R em seu computador, que é incompatível com o Microsoft R Server versão 8.0.3. Baixe e instale uma versão compatível.*
 
@@ -170,13 +184,13 @@ Para mais problemas conhecidos que podem afetar a soluções de R, consulte o [S
 
 Se a instância do SQL Server foi instalada em um local diferente do padrão, como fora de `Program Files` pasta, o aviso ACCESS_DENIED é gerado quando você tentar executar scripts que instalam um pacote. Por exemplo:
 
-> *Em normalizePath(path.expand(path), winslash, mustWork): o caminho [2] = "~ExternalLibraries/R/8/1": acesso negado*
+> *Em `normalizePath(path.expand(path), winslash, mustWork)` : caminho [2] = "~ExternalLibraries/R/8/1": acesso negado*
 
 O motivo é que uma função R tenta ler o caminho e falhará se o grupo de usuários internos **SQLRUserGroup**, não tem acesso de leitura. O aviso é gerado não bloqueia a execução do script R atual, mas o aviso pode ocorrer repetidamente, sempre que o usuário executa qualquer outro script de R.
 
 Se você tiver instalado o SQL Server para o local padrão, esse erro não ocorrer, porque todos os usuários do Windows têm permissões de leitura no `Program Files` pasta.
 
-Esse problema será corrigido em uma versão futura do serviço. Como alternativa, forneça o grupo **SQLRUserGroup**, com acesso de leitura para todas as pastas pai dos `ExternalLibraries`.
+Esse problema ia resolvido em uma versão futura do serviço. Como alternativa, forneça o grupo **SQLRUserGroup**, com acesso de leitura para todas as pastas pai dos `ExternalLibraries`.
 
 ### <a name="serialization-error-between-old-and-new-versions-of-revoscaler"></a>Erro de serialização entre versões antigas e novas de RevoScaleR
 
@@ -192,13 +206,13 @@ O erro não aparecer se a versão da API é o mesmo, ou se você estiver movendo
 
 Em outras palavras, use a mesma versão do RevoScaleR para operações de serialização e desserialização.
 
-### <a name="real-time-scoring-does-not-correctly-handle-the-learningrate-parameter-in-tree-and-forest-models"></a>A pontuação em tempo real não manipula corretamente o parâmetro learningRate em modelos de árvore e de floresta
+### <a name="real-time-scoring-does-not-correctly-handle-the-learningrate-parameter-in-tree-and-forest-models"></a>A pontuação em tempo real não manipula corretamente o _learningRate_ parâmetro em modelos de árvore e de floresta
 
 Se você cria um modelo usando um método de floresta de decisão ou uma árvore de decisão e especificar a taxa de aprendizagem, você poderá ver resultados inconsistentes quando usando `sp_rxpredict` ou o SQL `PREDICT` função, em comparação com o `rxPredict`.
 
 A causa é um erro na API que modelos de processos serializados e está limitada ao `learningRate` parâmetro: por exemplo, em [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees), ou
 
-Esse problema será corrigido em uma versão futura do serviço.
+Esse problema é resolvido em uma versão futura do serviço.
 
 ### <a name="limitations-on-processor-affinity-for-r-jobs"></a>Limitações na afinidade do processador para trabalhos do R
 
@@ -376,7 +390,7 @@ Há várias possíveis soluções alternativas:
 
 + Quando você instala os modelos pré-treinado, escolha um local personalizado.
 + Se possível, instale a instância do SQL Server em um caminho de instalação personalizada com um caminho mais curto, como C:\SQL\MSSQL14. MSSQLSERVER.
-+ Use o utilitário Windows [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx) para criar um vínculo físico que mapeia o arquivo de modelo para um caminho mais curto. 
++ Use o utilitário Windows [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx) para criar um link físico que mapeia o arquivo de modelo para um caminho mais curto.
 + Atualize para a versão mais recente do serviço.
 
 ### <a name="error-when-saving-serialized-model-to-sql-server"></a>Erro ao salvar serializado modelo para o SQL Server

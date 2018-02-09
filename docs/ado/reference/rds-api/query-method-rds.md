@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Query method [ADO]
+helpviewer_keywords:
+- Query method [ADO]
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ceedab6dd52492c5660165b3b1377def3a51f253
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 01174a253f5157cf43f577ebf495819f557f2d4a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="query-method-rds"></a>Método Query (RDS)
 Usa uma cadeia de caracteres de consulta SQL válida para retornar um [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -39,7 +41,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Conjunto de registros*  
+ *Recordset*  
  Uma variável de objeto que representa um **registros** objeto.  
   
  *DataFactory*  
@@ -57,7 +59,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Exemplo do método CreateObject, do método Query e objeto DataFactory (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
 
 

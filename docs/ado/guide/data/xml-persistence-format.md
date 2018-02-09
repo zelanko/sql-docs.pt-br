@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: XML persistence [ADO], persistence format
+helpviewer_keywords:
+- XML persistence [ADO], persistence format
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d56fbae28f2c1d5192f2ac1e1c4f8939d7e4b027
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 832f79408a348ef0e0aa40075214357d147f2644
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xml-persistence-format"></a>Formato de persistência XML
 ADO usa codificação UTF-8 para o fluxo XML que ele persistir.  
@@ -75,5 +77,5 @@ xmlns:z="#RowsetSchema">
   
  A seção de dados tem três linhas que contém informações sobre transportadores. Para um conjunto de linhas vazio, a seção de dados pode estar vazia, mas o \<: dados do rs > marcas devem estar presentes. Sem dados, você poderia escrever a abreviação de marca simplesmente \<: dados do rs / >. Qualquer marca prefixada com "rs" indica que é o namespace definido pelo urn: schemas-microsoft-com:rowset.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

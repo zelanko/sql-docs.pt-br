@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Catalog object [ADOX], members
+helpviewer_keywords:
+- Catalog object [ADOX], members
 ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fdad5ed8bc837a2207b2712baa5c9a08adeef7a1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8f3a863e00e874dc28868563f60b9bcf3018728a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="catalog-object-properties-methods-and-events"></a>Propriedades do objeto de catálogo, métodos e eventos
 ## <a name="propertiescollections"></a>Propriedades/coleções  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/21/2017
  [Método SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)  
   
 ## <a name="events"></a>Eventos  
- Nenhum.  
+ Nenhuma.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)

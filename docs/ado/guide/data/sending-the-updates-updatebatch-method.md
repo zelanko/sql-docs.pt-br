@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,16 +13,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2b1043286735c1fc44caed21650e098dfc923d0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 061435976bb08c644705e80c0d1d605ee944f304
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>Enviar as atualizações: método UpdateBatch
 O código a seguir abre um conjunto de registros em modo de lote, definindo a propriedade LockType adLockBatchOptimistic e CursorLocation para adUseClient. Adiciona dois novos registros e altera o valor de um campo em um registro existente, salvar os valores originais e, em seguida, chama UpdateBatch para enviar que as alterações de volta para a fonte de dados.  
@@ -60,5 +61,5 @@ O código a seguir abre um conjunto de registros em modo de lote, definindo a pr
   
  Se você estiver editando o registro atual ou adicionar um novo registro, quando você chama o método UpdateBatch, ADO automaticamente chamar o método de atualização para salvar as alterações pendentes para o registro atual antes de transmitir as alterações em lotes para o provedor.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Modo de lote](../../../ado/guide/data/batch-mode.md)

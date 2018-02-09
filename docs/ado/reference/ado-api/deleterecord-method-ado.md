@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Record::raw_DeleteRecord
 - _Record::DeleteRecord
-helpviewer_keywords: DeleteRecord method [ADO]
+helpviewer_keywords:
+- DeleteRecord method [ADO]
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eedc8d14c94ec89554651cdfce03af0eb63315cf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5088293b3866f74f39e608a8de8f300d4e3980c1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deleterecord-method-ado"></a>Método ExcluirRegistro (ADO)
 Exclui uma entidade representada por um [registro](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -42,7 +44,7 @@ Record.DeleteRecord Source, Async
  *Origem*  
  Opcional. Um **cadeia de caracteres** valor que contém uma URL que identifica a entidade (por exemplo, o arquivo ou diretório) a ser excluído. Se *fonte* for omitido ou especifica uma cadeia de caracteres vazia, a entidade representada por atual [registro](../../../ado/reference/ado-api/record-object-ado.md) é excluído. Se o registro é um registro de coleção ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) de **adCollectionRecord**, como um diretório) todos os filhos (por exemplo, subdiretórios) também serão excluídos.  
   
- *Assíncrono*  
+ *Async*  
  Opcional. Um **booliano** valor que, quando **True**, especifica que a operação de exclusão é assíncrona.  
   
 ## <a name="remarks"></a>Remarks  
@@ -56,7 +58,7 @@ Record.DeleteRecord Source, Async
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Método Delete (coleção de campos do ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
  [Excluir método (coleção de parâmetros do ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
  [Método Delete (Conjunto de registros ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)

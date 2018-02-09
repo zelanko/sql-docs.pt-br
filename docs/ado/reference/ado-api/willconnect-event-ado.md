@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,20 +16,21 @@ apitype: COM
 f1_keywords:
 - WillConnect
 - Connection::WillConnect
-helpviewer_keywords: WillConnect event [ADO]
+helpviewer_keywords:
+- WillConnect event [ADO]
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 45e9a6fb4dcc55b836195065c279627e50c74511
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f80b08a53784a215d58d7f36697207f4d8c3c942
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="willconnect-event-ado"></a>Evento WillConnect (ADO)
+# <a name="willconnect-event-ado"></a>WillConnect Event (ADO)
 O **WillConnect** evento é chamado antes do início de uma conexão.  
   
  **Aplica-se a:** [o objeto de Conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
@@ -44,7 +46,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *ConnectionString*  
  Um **cadeia de caracteres** que contém informações de conexão para a conexão pendente.  
   
- *ID de usuário*  
+ *UserID*  
  Um **cadeia de caracteres** que contém um nome de usuário para a conexão pendente.  
   
  *Senha*  
@@ -68,6 +70,6 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
   
  Quando esse evento é cancelado, **ConnectComplete** será chamada com seu *adStatus* parâmetro definido como **adStatusErrorsOccurred**.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Exemplo de modelo de eventos do ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Resumo do manipulador de eventos ADO](../../../ado/guide/data/ado-event-handler-summary.md)

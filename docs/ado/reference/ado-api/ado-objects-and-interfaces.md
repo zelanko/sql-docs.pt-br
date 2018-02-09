@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - ADO, objects and interfaces
 - objects [ADO]
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad14c7327d3dc7186ff86c3ca0ba84d206143973
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 76115318e0205c0b0f0bf4746dd482f39f4a8b89
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-objects-and-interfaces"></a>Interfaces e ADO
 As relações entre esses objetos são representadas no [modelo de objeto ADO](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -44,11 +45,11 @@ As relações entre esses objetos são representadas no [modelo de objeto ADO](.
 |[Campo](../../../ado/reference/ado-api/field-object.md)|Representa uma coluna de dados com um tipo de dados comum.|  
 |[Parâmetro](../../../ado/reference/ado-api/parameter-object.md)|Representa um parâmetro ou um argumento associado com um **comando** objeto com base em um procedimento armazenado ou uma consulta parametrizada.<br /><br /> O **parâmetro** o objeto não é seguro para script.|  
 |[Propriedade](../../../ado/reference/ado-api/property-object-ado.md)|Representa uma característica dinâmica de um objeto ADO que é definido pelo provedor.|  
-|[Registro](../../../ado/reference/ado-api/record-object-ado.md)|Representa uma linha de um **registros**, ou um diretório ou arquivo em um sistema de arquivos. O **registro** objeto é seguro para script.|  
-|[Conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)|Representa o conjunto de registros de uma tabela base ou os resultados de um comando executado. A qualquer momento, o **registros** objeto se refere a um único registro dentro do conjunto de como o registro atual.<br /><br /> O **registros** objeto é seguro para script.|  
-|[Fluxo](../../../ado/reference/ado-api/stream-object-ado.md)|Representa um fluxo binário de dados.<br /><br /> O **fluxo** objeto é seguro para script.|  
+|[Record](../../../ado/reference/ado-api/record-object-ado.md)|Representa uma linha de um **registros**, ou um diretório ou arquivo em um sistema de arquivos. O **registro** objeto é seguro para script.|  
+|[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|Representa o conjunto de registros de uma tabela base ou os resultados de um comando executado. A qualquer momento, o **registros** objeto se refere a um único registro dentro do conjunto de como o registro atual.<br /><br /> O **registros** objeto é seguro para script.|  
+|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|Representa um fluxo binário de dados.<br /><br /> O **fluxo** objeto é seguro para script.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência da API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Coleções de ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Propriedades dinâmicas do ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

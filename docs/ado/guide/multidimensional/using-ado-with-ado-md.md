@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: ADO, using with ADO MD
+helpviewer_keywords:
+- ADO, using with ADO MD
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6fde39095f4c1b68393711f2b5ca9c188cf01de
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d3761a5553b13dc65a15862c5e9b27cdc5634b52
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-ado-with-ado-md"></a>Usando o ADO com ADO MD
 ADO e o ADO MD são modelos de objeto relacionado, mas separado. ADO fornece objetos para conectar-se a fontes de dados, executar comandos, recuperando dados de tabela e metadados de esquema em um formato tabular e exibindo informações de erro do provedor. ADO MD fornece objetos para recuperar dados multidimensionais e exibindo metadados do esquema multidimensional.  
@@ -49,7 +51,7 @@ ADO e o ADO MD são modelos de objeto relacionado, mas separado. ADO fornece obj
   
  Para obter mais informações sobre os objetos do ADO e métodos, consulte o [referência da API ADO](../../../ado/reference/ado-api/ado-api-reference.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Modelo de objeto ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO (Multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [Visão geral de esquemas Multidimensional e de dados](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   

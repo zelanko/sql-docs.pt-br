@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: ADO, using with Visual C++
+dev_langs:
+- C++
+helpviewer_keywords:
+- ADO, using with Visual C++
 ms.assetid: 07d25fc0-4958-4e12-b616-36257ead812b
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c2a1caf78d709255f3e329a45d8d60b69ce55199
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 06876cd97c588b7373e5de00fbcf68c6cca3de20
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-ado-with-microsoft-visual-c"></a>Usando o ADO com o Microsoft Visual C++
 Para obter informações sobre como usar ADO com o Visual C++, consulte as seções a seguir:  
@@ -38,7 +41,7 @@ Para obter informações sobre como usar ADO com o Visual C++, consulte as seç�
   
 -   [Exemplo de extensões do Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [ADO para índice de sintaxe do Visual C++ para COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
  [ADO para o índice de sintaxe de C++ Visual com #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   

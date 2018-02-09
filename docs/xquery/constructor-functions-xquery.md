@@ -8,23 +8,27 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
-helpviewer_keywords: constructor functions [XQuery]
+applies_to:
+- SQL Server
+dev_langs:
+- XML
+helpviewer_keywords:
+- constructor functions [XQuery]
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7592e3880cf0248efef68f7c49133ca869bce3c8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 882f5ed7260a195e815482a0fb44240fda48e138
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="constructor-functions-xquery"></a>Funções do construtor (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +52,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  *TYP*  
  Qualquer tipo XSD interno.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Há suporte para construtores de tipos base e XSD derivados atômicos. No entanto, os subtipos de **xs: Duration**, que inclui **XDT: yearmonthduration e XDT: daytimeduration**, e **xs: QName**, **xs: NMTOKEN**, e **xs: Notation** não têm suporte. Tipos atômicos definidos pelo usuário, que estejam disponíveis nas coleções de esquemas associadas também estarão disponíveis, desde que eles sejam direta ou indiretamente derivados dos tipos a seguir.  
   
 #### <a name="supported-base-types"></a>Tipos de base com suporte  

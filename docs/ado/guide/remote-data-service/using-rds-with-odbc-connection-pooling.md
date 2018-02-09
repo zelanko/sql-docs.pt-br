@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: connection pooling in RDS [ADO]
+helpviewer_keywords:
+- connection pooling in RDS [ADO]
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3098b4ea9bc73a4193eb5c00ad8e2a1efaf991c9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 40a7469e2d5a264138b108d4ba8ea274b3c0b7ae
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Usando o RDS com Conexão ODBC Pooling
 Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no Internet Information Services (IIS) do pool de conexão para alcançar a manipulação de alto desempenho de carga do cliente. Pooling de Conexão é um Gerenciador de recursos para conexões, manter o estado aberto em conexões usadas com frequência.  
@@ -59,7 +61,7 @@ Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no In
   
 5.  Clique em Continuar para concluir e sair da instalação.  
   
-### <a name="in-microsoft-sql-server-70"></a>No Microsoft SQL Server 7.0:  
+### <a name="in-microsoft-sql-server-70"></a>In Microsoft SQL Server 7.0:  
   
 1.  No menu Iniciar, aponte para programas, aponte para Microsoft SQL Server 7.0 e, em seguida, clique em utilitário de rede do servidor.  
   
@@ -88,7 +90,7 @@ Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no In
   
 4.  Clique em concluído para salvar as alterações e saia do utilitário.  
   
-### <a name="for-microsoft-sql-server-70"></a>Para o Microsoft SQL Server 7.0:  
+### <a name="for-microsoft-sql-server-70"></a>For Microsoft SQL Server 7.0:  
   
 1.  No menu Iniciar, aponte para programas, aponte para Microsoft SQL Server 7.0 e, em seguida, clique em utilitário de rede do cliente.  
   
@@ -116,7 +118,7 @@ Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no In
   
 6.  Clique em concluído.  
   
-### <a name="for-microsoft-sql-server-70"></a>Para o Microsoft SQL Server 7.0:  
+### <a name="for-microsoft-sql-server-70"></a>For Microsoft SQL Server 7.0:  
   
 1.  No menu Iniciar, aponte para programas, aponte para Microsoft SQL Server 7.0 e, em seguida, clique em utilitário de configuração do cliente.  
   
@@ -128,7 +130,7 @@ Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no In
   
 5.  Clique em Okey e Okey novamente para sair do utilitário.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Conceitos básicos do RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

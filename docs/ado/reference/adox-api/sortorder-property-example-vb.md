@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: SortOrder property [ADOX]
+dev_langs:
+- VB
+helpviewer_keywords:
+- SortOrder property [ADOX]
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77ac31157edfe36af85b112fffeaca6bb6cca86b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5c65caf4436eead9a18df18b29b5d509691c0240
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sortorder-property-example-vb"></a>Exemplo de propriedade SortOrder (VB)
 Este exemplo demonstra o [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) propriedade de um [coluna](../../../ado/reference/adox-api/column-object-adox.md) que foi acrescentado para o [colunas](../../../ado/reference/adox-api/columns-collection-adox.md) coleção de um [índice](../../../ado/reference/adox-api/index-object-adox.md). O código acrescenta um índice em ordem crescente para a coluna de país de **funcionários** tabela, em seguida, exibe os registros. Em seguida, o código acrescenta um índice decrescente para a coluna de país de **funcionários** tabela e exibe os registros novamente. A diferença entre crescente e decrescente índices é mostrada.  
@@ -140,7 +143,7 @@ End Sub
 ' EndSortOrderVB  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Objeto de coluna (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Coleção de colunas (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Objeto de índice (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   

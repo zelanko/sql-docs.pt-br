@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_WriteText
 - _Stream::WriteText
-helpviewer_keywords: WriteText method [ADO]
+helpviewer_keywords:
+- WriteText method [ADO]
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c744551b835ce814f8a6baf9781e04e67b6139d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ce6482cf6b3b640f737ced8dedda66279245a0cd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="writetext-method"></a>Método WriteText
 Grava uma cadeia de caracteres de texto especificado para um [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
@@ -58,5 +60,5 @@ Stream.WriteText Data, Options
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Método Write](../../../ado/reference/ado-api/write-method.md)

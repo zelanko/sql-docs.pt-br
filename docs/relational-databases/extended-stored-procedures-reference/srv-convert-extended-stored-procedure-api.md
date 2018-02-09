@@ -8,31 +8,36 @@ ms.service:
 ms.component: extended-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: srv_convert
-apilocation: opends60.dll
+apiname:
+- srv_convert
+apilocation:
+- opends60.dll
 apitype: DLLExport
-dev_langs: C++
-helpviewer_keywords: srv_convert
+dev_langs:
+- C++
+helpviewer_keywords:
+- srv_convert
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06ed0a352786acba1c22499987ef52aea47c987a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 15833b00d82ddb6451309b517a779b10ee5eb4fb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="srvconvert-extended-stored-procedure-api"></a>srv_convert (API de procedimento armazenado estendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use a integração CLR em vez disso.  
   
  Altera dados de um tipo de dados para outro.  
   
@@ -91,7 +96,7 @@ destlen
 ## <a name="returns"></a>Retorna  
  O comprimento dos dados convertidos, em bytes, caso a conversão do tipo de dados tenha êxito. Quando **srv_convert** encontra uma solicitação para uma conversão para a qual não dá suporte, ele chama o manipulador de erro fornecido pelo desenvolvedor, se houver, define um número de erro global e retorna -1.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A função **srv_willconvert** determina se uma conversão específica é permitida.  
   
  A conversão para os tipos de dados numéricos aproximados SRVFLT4 ou SRVFLT8 pode resultar em uma certa perda de precisão. A conversão dos tipos de dados numéricos aproximados SRVFLT4 ou SRVFLT8 em SRVCHAR ou SRVTEXT também pode resultar em alguma perda de precisão.  

@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: d7f9dec114fd17025081c4a139537b11dd4fde45
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: bfd36553e4ac30b6d551e60cde02d57a7eec8fbc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Sempre em grupos de disponibilidade no Linux
 
@@ -147,7 +147,7 @@ A instância associada com o endereço IP fornecido, em seguida, torna-se o coor
 
 Um grupo de disponibilidade que tem um tipo de cluster de externo ou um que seja WSFC não pode ter suas réplicas cruzada plataformas. Isso é verdadeiro se o grupo de disponibilidade é [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)] ou [!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)]. Isso significa que em uma configuração de grupo de disponibilidade tradicional com um cluster subjacente, uma réplica não pode ser um WSFC e a outra no Linux com Pacemaker.
 
-Um grupo de disponibilidade com um tipo de cluster de None pode ter suas réplicas ultrapassar os limites do sistema operacional, portanto poderá haver ambas as réplicas com base em Linux e Windows o mesmo grupo de disponibilidade. Um exemplo é mostrado abaixo em que a réplica primária é baseado no Windows, enquanto o secundário está em um das distribuições do Linux.
+Um grupo de disponibilidade com um tipo de cluster de NONE pode ter suas réplicas ultrapassar os limites do sistema operacional, portanto poderá haver ambas as réplicas com base em Linux e Windows o mesmo grupo de disponibilidade. Um exemplo é mostrado abaixo em que a réplica primária é baseado no Windows, enquanto o secundário está em um das distribuições do Linux.
 
 ![Híbrido None](./media/sql-server-linux-availability-group-overview/image1.png)
 
@@ -170,4 +170,6 @@ If using automatic seeding with a distributed availability group that crosses OS
 [Adicionar grupo de disponibilidade do recurso de Cluster em SLES](sql-server-linux-availability-group-cluster-sles.md)
 
 [Adicionar grupo de disponibilidade do recurso de Cluster no Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
+
+[Configurar um grupo de disponibilidade da plataforma cruzada](sql-server-linux-availability-group-cross-platform.md)
 

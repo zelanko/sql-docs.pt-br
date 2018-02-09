@@ -4,30 +4,32 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: ADO, glossary
+helpviewer_keywords:
+- ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ddc7cab1de929354827a316770f373c0792828e8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1b27ecc0b3905a12d453cc53d6ac941fc80708f9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-glossary-terms"></a>Glossário de termos de ADO
 Este tópico define condições relevantes para ADO.
 
-## <a name="a"></a>Um
+## <a name="a"></a>A
  absoluto URL uma URL totalmente qualificada que especifica o local de um recurso que reside na Internet ou intranet. Consulte também *URL* e *URL relativa*.
 
  Componente COM o registro automático, no processo que geralmente tem um elemento visual no tempo de design ou no tempo de execução de controles ActiveX. Controles ActiveX também têm a capacidade de se comunicar com um contêiner de documento ativo, como o Microsoft Internet Explorer.
@@ -90,7 +92,7 @@ Este tópico define condições relevantes para ADO.
 
  Um número de arquivos individuais, agrupadas em um arquivo físico. Cada arquivo individual em um arquivo composto pode ser acessado como se fosse um único arquivo físico.
 
- constante de um valor numérico ou cadeia de caracteres que não é alterado. Enumerações de ADO nomeadas (constantes enumeradas) podem ser usadas em seu código em vez de valores reais, por exemplo, **adUseClient** é uma constante cujo valor é 3. (AdUseClient const = 3). Consulte também *enumeração*.
+ constante de um valor numérico ou cadeia de caracteres que não é alterado. Enumerações de ADO nomeadas (constantes enumeradas) podem ser usadas em seu código em vez de valores reais, por exemplo, **adUseClient** é uma constante cujo valor é 3. (Const adUseClient = 3). Consulte também *enumeração*.
 
  Um elemento de banco de dados que controla a visibilidade das alterações feitas no banco de dados por outros usuários, capacidade de atualização de dados e navegação de registros do cursor.
 

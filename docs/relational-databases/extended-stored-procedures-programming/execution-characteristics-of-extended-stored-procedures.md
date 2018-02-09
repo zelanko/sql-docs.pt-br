@@ -15,22 +15,22 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], executing
 - executing extended stored procedures [SQL Server]
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5905d1032bdd7f9f28699b2bcf1c98fcb6f06217
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 01bf617e937f512f8015aa5ec6a2e8379e4aff7d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>Características de execução de procedimentos armazenados estendidos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
   
  A execução de um procedimento armazenado estendido tem as seguintes características:  
   
@@ -66,7 +66,7 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 > [!CAUTION]  
 >  Os procedimentos armazenados estendidos oferecem aprimoramentos de desempenho e estendem a funcionalidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Porém, como a DLL do procedimento armazenado estendido e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compartilham o mesmo espaço de endereço, um procedimento problemático pode afetar adversamente o funcionamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Embora as exceções lançadas pela DLL do procedimento armazenado estendido sejam tratadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é possível danificar áreas de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como precaução de segurança, apenas os administradores do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem adicionar procedimentos armazenados estendidos ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esses procedimentos devem ser extensivamente testados antes ser instalados.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Programando procedimentos armazenados estendidos](../../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)   
  [Consulta de procedimentos armazenados estendidos no SQL Server](../../relational-databases/extended-stored-procedures-programming/querying-extended-stored-procedures-installed-in-sql-server.md)  
   

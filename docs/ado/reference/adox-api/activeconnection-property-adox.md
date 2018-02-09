@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -20,18 +21,19 @@ f1_keywords:
 - _Catalog::putref_ActiveConnection
 - _Catalog::ActiveConnection
 - _Catalog::GetActiveConnection
-helpviewer_keywords: ActiveConnection property [ADOX]
+helpviewer_keywords:
+- ActiveConnection property [ADOX]
 ms.assetid: 25fff69b-7556-4a28-b6f5-600a4bb0f607
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6edb5e36a0b8da56dd1761b188427b403ad5b153
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 44d7173ddce5577cdb62a4208ed005d7e40daad8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="activeconnection-property-adox"></a>Propriedade ActiveConnection (ADOX)
 Indica o ADO [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto ao qual o [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) pertence.  
@@ -45,7 +47,7 @@ Indica o ADO [Conexão](../../../ado/reference/ado-api/connection-object-ado.md)
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Exemplo de propriedade ActiveConnection do catálogo (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [Exemplo de propriedades de CommandText (VB) e comando](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Método Close da Conexão, exemplo de propriedade de tipo de tabela (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   

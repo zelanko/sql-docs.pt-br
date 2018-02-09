@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - connect section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b18fd84d31e95aa2973dd0d5377fbc8f51fafe4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 859324a8cbf2f08bfae2ac18e86525a9e65914d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customization-file-connect-section"></a>Arquivo de personalização de conectar-se a seção
 O comportamento padrão do manipulador é negar todas as conexões. O **conectar** seção especifica exceções a esse comportamento. Por exemplo, se todos os **conectar** seções foram ausente ou vazia, em seguida, por padrão não foi possível estabelecer conexões.  
@@ -61,14 +62,14 @@ connectionString
   
 |Parte|Description|  
 |----------|-----------------|  
-|**Connect**|Uma cadeia de caracteres literal que indica que isso é uma entrada de cadeia de caracteres de conexão.|  
+|**Conectar**|Uma cadeia de caracteres literal que indica que isso é uma entrada de cadeia de caracteres de conexão.|  
 |***connectionString***|Uma cadeia de caracteres que substitui a cadeia de caracteres de conexão de cliente inteira.|  
 |**Acesso**|Uma cadeia de caracteres literal que indica que isso é uma entrada de acesso.|  
 |***accessRight***|Um dos seguintes direitos de acesso:<br /><br /> -   **NoAccess** — usuário não pode acessar a fonte de dados.<br />-   **ReadOnly** — o usuário pode ler a fonte de dados.<br />-   **ReadWrite** — usuário pode ler ou gravar para a fonte de dados.|  
   
  Se você deseja permitir qualquer conexão (em vigor, desabilitando o comportamento de manipulador padrão), defina a entrada de acesso **conexão padrão** seção `Access=ReadWrite`e exclua ou comente a qualquer outro **conectar** *identificador* seção.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Seção de Logs do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [Seção SQL do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [Seção do arquivo UserList de personalização](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

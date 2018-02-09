@@ -4,29 +4,31 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - LockType property [ADO], VC++ example
 - EditMode property [ADO], VC++ example
 - CursorType property [ADO], VC++ example
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e514d34b2eb04e4afd37149a3b1279603420dd22
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9ab38e935694c17d27d8a451465e217129b1b3a0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>Exemplo de propriedades EditMode (VC + +), CursorType e LockType
 Este exemplo mostra a configuração de [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) e [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) propriedades antes de abrir um [registros](../../../ado/reference/ado-api/recordset-object-ado.md). Ele também mostra o valor de [EditMode](../../../ado/reference/ado-api/editmode-property.md) propriedade em várias condições. A função EditModeOutput é necessária executar este procedimento.  
@@ -166,7 +168,7 @@ void PrintComError(_com_error &e) {
  **EditMode = adEditNone**  
 **Depois de editar:**   
  **EditMode = adEditInProgress**   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Propriedade CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [Propriedade EditMode](../../../ado/reference/ado-api/editmode-property.md)   
  [Propriedade LockType (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   

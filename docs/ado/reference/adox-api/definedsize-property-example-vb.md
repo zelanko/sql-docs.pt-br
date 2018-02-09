@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: DefinedSize property [ADOX], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- DefinedSize property [ADOX], Visual Basic example
 ms.assetid: 4dda2239-7ab5-4729-9c63-eb530803f7d9
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f2908e130d96384e177ad4f6a3f01806ccdab1d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2b509fdcd8b8c76ecdda29f6867012f2b39dd1d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="definedsize-property-example-vb"></a>Exemplo de propriedade DefinedSize (VB)
 Este exemplo demonstra o [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) propriedade de um [coluna](../../../ado/reference/adox-api/column-object-adox.md). O código irá redefinir o tamanho da coluna de nome de **funcionários** tabela do *Northwind* banco de dados. Em seguida, a alteração nos valores do nome [campo](../../../ado/reference/ado-api/field-object.md) de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) com base no **funcionários** tabela é exibida. Observe que por padrão, o campo de nome se torna preenchido com espaços após você redefinir o **DefinedSize** propriedade.  
@@ -153,6 +156,6 @@ End Sub
 ' EndDefinedSizeVB  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Objeto de coluna (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Propriedade DefinedSize (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)

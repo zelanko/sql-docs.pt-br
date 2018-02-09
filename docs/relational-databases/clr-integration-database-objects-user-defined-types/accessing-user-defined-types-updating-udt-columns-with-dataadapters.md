@@ -25,19 +25,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
-caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fae91b291c11e3993b2182414bf4845fb91969fb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ac456dc7617804afbc78ca423ff8e4651c5ccef5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Acessando tipos definidos pelo usuário - Atualizando colunas UDT com DataAdapters
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Tipos definidos pelo usuário (UDTs) têm suporte usando um **dataset** e um **System.Data.SqlClient.SqlDataAdapter** para recuperar e modificar dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Tipos definidos pelo usuário (UDTs) têm suporte usando um **dataset** e um **System.Data.SqlClient.SqlDataAdapter** para recuperar e modificar dados.  
   
 ## <a name="populating-a-dataset"></a>Populando um conjunto de dados  
  Você pode usar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT para selecionar valores de coluna UDT a fim de popular um conjunto de dados usando um adaptador de dados. O exemplo a seguir pressupõe que você tenha um **pontos** tabela definida com a seguinte estrutura e alguns dados de exemplo. O seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções criam os **pontos** tabela e insira algumas linhas.  
@@ -375,7 +376,7 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Acessando tipos definidos pelo usuário no ADO.NET](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
   
   

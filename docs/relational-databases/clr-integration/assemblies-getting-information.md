@@ -16,41 +16,42 @@ helpviewer_keywords:
 - status information [SQL Server], assemblies
 - metadata [SQL Server], assemblies
 ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: faae880f2751179d5cc0903714062b47893e2dfe
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c96fde4198ff475f53aa94e09a400e62f26fc8b3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies---getting-information"></a>Assemblies - Obtendo informações
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]As seguintes exibições do catálogo e funções podem ser consultadas por metadados sobre assemblies.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+As exibições do catálogo e as funções a seguir podem ser consultadas para pesquisar metadados sobre assemblies.  
   
  **Para obter informações sobre assemblies individuais**  
   
--   [ASSEMBLYPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/assemblyproperty-transact-sql.md)  
+-   [ASSEMBLYPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/assemblyproperty-transact-sql.md)  
   
  **Para obter informações sobre todos os assemblies no banco de dados**  
   
--   [sys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
+-   [sys.assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   
  **Para obter informações sobre arquivos de assembly, inclusive binários de assembly, arquivos de origem e arquivos de depuração**  
   
--   [assembly_files &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)  
+-   [sys.assembly_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)  
   
  **Para obter informações sobre referências entre assemblies**  
   
--   [sys.assembly_references &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)  
+-   [sys.assembly_references &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)  
   
  **Para obter informações de assembly sobre tipos definidos pelo usuário**  
   
--   [sys.assembly_types &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)  
+-   [sys.assembly_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)  
   
--   [Types &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
+-   [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   
  **Para obter informações de assembly sobre common language runtime (CLR) armazenado procedimentos, gatilhos e funções**  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Assemblies &#40; mecanismo de banco de dados &#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Criando Assemblies](../../relational-databases/clr-integration/assemblies-designing.md)   
  [Implementando Assemblies](../../relational-databases/clr-integration/assemblies-implementing.md)  

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 45c072e5a21e04488a45bb8dc978a663f734ac08
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5dedcc3c1326c8b71844637c24f81835472ae9e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="more-about-recordset-persistence"></a>Mais informações sobre a persistência de conjunto de registros
 O objeto de conjunto de registros ADO dá suporte ao armazenar o conteúdo de um **registros** objeto em um arquivo usando seu [salvar](../../../ado/reference/ado-api/save-method.md) método. O arquivo armazenado persistentemente pode existir em um local da unidade, server, ou como uma URL em uma Web sites. Posteriormente, o arquivo pode ser restaurado com o o [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) método do **registros** objeto ou o [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) método do [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  
@@ -83,7 +84,7 @@ dc.SQL = "c:\yourFile.adtg"
 dc.Refresh  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Método GetString (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [Provedor de persistência do Microsoft OLE DB (provedor de serviços de ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   

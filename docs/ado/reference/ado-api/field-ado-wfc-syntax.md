@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Field collection [ADO], ADO/WFC syntax
+helpviewer_keywords:
+- Field collection [ADO], ADO/WFC syntax
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 42748fb897d2ec6a7ed226f35852b828ddf82f71
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0ca92f0ab46f11fad94d4dacd6399bc2c97dd8b4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="field-ado---wfc-syntax"></a>Campo (ADO - WFC sintaxe)
 ## <a name="package-commswfcdata"></a>pacote com.ms.wfc.data  
@@ -73,7 +75,7 @@ public AdoProperties getProperties()
   
  ADO/WFC implementa o **valor** propriedade com o **getValue** método, que retorna um objeto de VARIANTE; e o **setValue** método, que usa uma VARIANTE como um argumento. Variantes são altamente eficientes em determinados idiomas, como o Microsoft Visual Basic.  
   
- Além de **valor** propriedade ADO/WFC fornece *acessador* métodos que usam tipos de dados Java para obter e definir o conteúdo de **campo** objetos. A maioria desses métodos têm nomes no formato **obter***DataType* ou **definir***DataType*.  
+ Além de **valor** propriedade ADO/WFC fornece *acessador* métodos que usam tipos de dados Java para obter e definir o conteúdo de **campo** objetos. A maioria desses métodos têm nomes no formato **obter * DataType* ou **definir * DataType*.  
   
  Há duas exceções notáveis: uma da **getObject** métodos retorna um objeto forçado em uma determinada classe. Não há nenhum **getNull** propriedade; em vez disso, há um **isNull** propriedade que retorna um valor booliano que indica se o campo é nulo.  
   
@@ -103,5 +105,5 @@ public Object getObject(Class c)
 public void setObject(Object value)  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)

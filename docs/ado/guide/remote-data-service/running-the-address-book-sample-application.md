@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a09bacb8adeabaefd925e34b613bef3d2dad5097
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 24b1cac0950ec41087998edfe2c1393509cac8ab
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="running-the-address-book-sample-application"></a>Executando o aplicativo de exemplo do catálogo de endereços
 > [!IMPORTANT]
@@ -47,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  Em seguida, você pode tentar vários cenários em que o aplicativo de exemplo do catálogo de endereços, como procurar por uma pessoa com base no seu nome de email, listando todas as pessoas com o título "Gerente de programas", ou existente de edição de registros. Clique em **localizar** para preencher a grade de dados com todos os nomes disponíveis.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Objeto de associação de dados do catálogo de endereço](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)
 
 

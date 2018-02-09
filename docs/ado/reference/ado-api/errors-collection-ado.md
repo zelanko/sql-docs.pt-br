@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Connection15::Errors
 - Connection15::get_Errors
 - Connection15::GetErrors
-helpviewer_keywords: Errors collection [ADO]
+helpviewer_keywords:
+- Errors collection [ADO]
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66afd514c40c646fad62d5fc0302bc486af7e653
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 011d5956b7d2f9d752f15028ce0b09e3a35a0c71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="errors-collection-ado"></a>Coleção de erros (ADO)
 Contém todos os [erro](../../../ado/reference/ado-api/error-object.md) objetos criados em resposta a uma única falha de provedor.  
@@ -50,6 +52,6 @@ Contém todos os [erro](../../../ado/reference/ado-api/error-object.md) objetos 
   
 -   [Eventos, métodos e propriedades de coleção de erros](../../../ado/reference/ado-api/errors-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Objeto Error](../../../ado/reference/ado-api/error-object.md)   
  [Apêndice A: Provedores](../../../ado/guide/appendixes/appendix-a-providers.md)

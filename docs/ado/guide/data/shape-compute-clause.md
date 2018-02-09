@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c20aec7585c33a7165fac4e93b446e4ce3aaf4e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 53ebeab9edfa1d9fc339f080d4a9de995053f77a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
 Uma cláusula COMPUTE de forma gera um pai **registros**, cujas colunas consistem em uma referência para o filho **registros**; opcional colunas cujo conteúdo é capítulo, novo, ou colunas calculadas, ou o resultado da execução de funções de agregação no filho **Recordset** ou de forma anteriormente **Recordset**; e todas as colunas de filho **Recordset** listados em opcional pela cláusula.  
@@ -41,7 +42,7 @@ SHAPE child-command [AS] child-alias
 ## <a name="description"></a>Description  
  As partes dessa cláusula são da seguinte maneira:  
   
- *comando filho*  
+ *child-command*  
  Consiste em uma das seguintes opções:  
   
 -   Um comando de consulta dentro de chaves ("{}") que retornará um filho **registros** objeto. O comando é emitido para o provedor de dados subjacente e sua sintaxe depende dos requisitos do provedor. Isso geralmente será a linguagem SQL, embora o ADO não requer qualquer linguagem de consulta específica.  
@@ -52,13 +53,13 @@ SHAPE child-command [AS] child-alias
   
 -   A tabela a palavra-chave, seguida do nome de uma tabela no provedor de dados.  
   
- *alias de filho*  
+ *child-alias*  
  Um alias usado para se referir a **registros** retornado pelo *comando filho.* O *filho alias* é necessária na lista de colunas na cláusula COMPUTE e define a relação entre pai e filho **registros** objetos.  
   
- *Lista anexada de colunas*  
+ *appended-column-list*  
  Uma lista na qual cada elemento define uma coluna no pai gerado. Cada elemento contém uma coluna de capítulo, uma nova coluna, uma coluna calculada ou um valor resultante de uma função de agregação no filho **registros**.  
   
- *lista de campos GRP*  
+ *grp-field-list*  
  Uma lista de colunas pai e filho **registros** objetos que especifica como as linhas devem ser agrupadas no filho.  
   
  Para cada coluna a *grp--lista de campos,* uma coluna correspondente no pai e filho **registros** objetos. Para cada linha no pai **registros**, o *grp lista de campos* colunas têm valores exclusivos e o filho **registros** referenciado pelo pai linha consiste exclusivamente filho linhas cuja *lista de campos grp* colunas têm os mesmos valores da linha pai.  
@@ -138,7 +139,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |OU|Portland|400,000|  
 |OU|Corvallis|300,000|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Acessar linhas em um conjunto de registros hierárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Visão geral de modelagem de dados](../../../ado/guide/data/data-shaping-overview.md)   
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   

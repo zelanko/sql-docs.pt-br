@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - events [ADO], about event handlers
 - event handlers [ADO]
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c00af6ce5dcdff509b04d25bc09a42a6e9e89fd7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d9e182d5b1e1b8755250cbf620ac102a7eacde0f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-connection-and-recordset-events"></a>Conexão do ADO e o conjunto de registros eventos
 Dois objetos ADO podem gerar eventos: o [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto e o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto. O **ConnectionEvent** família pertence às operações no **Conexão** objeto e o **RecordsetEvent** família pertence às operações no  **Conjunto de registros** objeto.
@@ -38,7 +39,7 @@ Dois objetos ADO podem gerar eventos: o [Conexão](../../../ado/reference/ado-ap
 |ConnectionEvent|Description|
 |---------------------|-----------------|
 |[BeginTransComplete, CommitTransComplete, RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**Gerenciamento de transações** — uma notificação de que a transação atual em que a conexão foi iniciado, confirmada ou revertida.|
-|[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md), [ConnectComplete, desconectar](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**Gerenciamento de Conexão** — uma notificação de que a conexão atual será iniciado, começou ou terminou.|
+|[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md), [ConnectComplete, Disconnect](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**Gerenciamento de Conexão** — uma notificação de que a conexão atual será iniciado, começou ou terminou.|
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md), [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|**Gerenciamento de execução do comando** — uma notificação de que a execução do comando atual em que a conexão será iniciado ou terminou.|
 |[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**Informação** — notificação de que há informações adicionais sobre a operação atual.|
 
@@ -50,5 +51,5 @@ Dois objetos ADO podem gerar eventos: o [Conexão](../../../ado/reference/ado-ap
 |[WillChangeRecord, RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|**Gerenciamento de alterações de linha** — notificação de que algo na linha atual do **registros** alterará ou foi alterada.|
 |[WillChangeRecordset, RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**Gerenciamento de alterações de conjunto de registros** — a notificação de que algo no atual **registros** alterará ou foi alterada.|
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
  [Instanciação de evento ADO pela linguagem](../../../ado/guide/data/ado-event-instantiation-by-language.md) [ADO eventos](../../../ado/reference/ado-api/ado-events.md) [parâmetros de evento](../../../ado/guide/data/event-parameters.md) [como manipuladores de eventos funcionam juntos](../../../ado/guide/data/how-event-handlers-work-together.md) [tipos de eventos](../../../ado/guide/data/types-of-events.md)

@@ -8,29 +8,30 @@ ms.service:
 ms.component: extended-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - extended stored procedures [SQL Server], data types
 - data types [SQL Server], extended stored procedures
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7901c888d06d88bb24f10f5a9ec6b1a26f63b158
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a69f167e3979a975deb506270843886142244dc4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Tipos de dados (API de procedimentos armazenados estendidos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use a integração CLR em vez disso.  
   
  Para usar os tipos de dados de API de procedimento armazenado estendido, inclua o arquivo de cabeçalho Srv.h em seu programa.  
   
@@ -52,20 +53,20 @@ ms.lasthandoff: 11/17/2017
 |SRVFLT4|**real**|Tipo de dados **real** de 4 bytes.|  
 |SRVFLT8|**float**|Tipo de dados **float** de 8 bytes.|  
 |SRVFLTN|**real** &#124; **float null**|Tipo de dados **real** ou **float**, com valores nulos permitidos.|  
-|SRVIMAGE|**imagem**|Tipo de dados **image**.|  
+|SRVIMAGE|**image**|Tipo de dados **image**.|  
 |SRVINT1|**tinyint**|Tipo de dados **tinyint** de 1 byte.|  
 |SRVINT2|**smallint**|Tipo de dados **smallint** de 2 bytes.|  
-|SRVINT4|**int**|Tipo de dados **int** de 4 bytes.|  
-|SRVINTN|**tinyint** &#124; **smallint** &#124; **int null**|Tipo de dados **tinyint**, **smallint** ou **int**, com valores nulos permitidos.|  
+|SRVINT4|**Int**|Tipo de dados **int** de 4 bytes.|  
+|SRVINTN|**tinyint** &#124; **smallint** &#124; **int nulo**|Tipo de dados **tinyint**, **smallint** ou **int**, com valores nulos permitidos.|  
 |SRVMONEY4|**smallmoney**|Tipo de dados **smallmoney** de 4 bytes.|  
 |SRVMONEY|**money**|Tipo de dados **money** de 8 bytes.|  
-|SRVMONEYN|**money** &#124; **smallmoney null**|Tipo de dados **smallmoney** ou **money**, com valores nulos permitidos.|  
+|SRVMONEYN|**dinheiro** &#124; **smallmoney nulo**|Tipo de dados **smallmoney** ou **money**, com valores nulos permitidos.|  
 |SRVNCHAR|**nchar**|Tipo de dados de **caractere** Unicode.|  
 |SRVNTEXT|**ntext**|Tipo de dados **text** Unicode.|  
 |SRVNUMERIC|**numeric**|Tipo de dados **numeric**.|  
 |SRVNUMERICN|**numeric null**|Tipo de dados **numeric**, com valores nulos permitidos.|  
 |SRVNVARCHAR|**nvarchar**|Tipo de dados de **caractere** Unicode de comprimento variável.|  
-|SRVTEXT|**texto**|Tipo de dados **text**.|  
+|SRVTEXT|**text**|Tipo de dados **text**.|  
 |SRVVARBINARY|**varbinary**|Tipo de dados **binary** de comprimento variável.|  
 |SRVVARCHAR|**varchar**|Tipo de dados de **caractere** de comprimento variável.|  
   

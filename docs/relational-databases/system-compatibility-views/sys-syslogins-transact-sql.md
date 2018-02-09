@@ -1,5 +1,5 @@
 ---
-title: sys. syslogins (Transact-SQL) | Microsoft Docs
+title: sys.syslogins (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/08/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - syslogins
 - sys.syslogins
 - sys.syslogins_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.syslogins compatibility view
 - syslogins system table
 ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
-caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ea9ceaa622c6ad7b39bed9c3e3d2439e56a57210
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1b5b0d9ec9b28236816062fefdb0d022a0c9a498
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,34 +46,34 @@ ms.lasthandoff: 11/17/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**SID**|**varbinary(85)**|Identificador de segurança.|  
+|**sid**|**varbinary(85)**|Identificador de segurança.|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**CREATEDATE formato**|**datetime**|Data em que o logon foi adicionado.|  
+|**createdate**|**datetime**|Data em que o logon foi adicionado.|  
 |**updatedate**|**datetime**|Data em que o logon foi atualizado.|  
 |**accdate**|**datetime**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**totcpu**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**totio**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**spacelimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**timelimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**resultlimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**totcpu**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**totio**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**spacelimit**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**timelimit**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**resultlimit**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**name**|**sysname**|Nome de logon do usuário.|  
-|**DBName**|**sysname**|Nome do banco de dados padrão do usuário quando uma conexão é estabelecida.|  
-|**senha**|**nvarchar (128)**|Retorna NULL.|  
-|**idioma**|**sysname**|Idioma padrão do usuário.|  
-|**denylogin**|**int**|1 = O logon é um usuário ou grupo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows que teve o acesso negado.|  
-|**hasaccess**|**int**|1 = O logon teve o acesso ao servidor concedido.|  
-|**isntname**|**int**|1 = O logon é um usuário ou grupo do Windows.<br /><br /> 0 = O logon é um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**isntgroup**|**int**|1 = O logon é um grupo do Windows.|  
-|**isntuser**|**int**|1 = O logon é um usuário do Windows.|  
-|**sysadmin**|**int**|1 = logon é um membro do **sysadmin** função de servidor.|  
-|**securityadmin**|**int**|1 = logon é um membro do **securityadmin** função de servidor.|  
-|**serveradmin**|**int**|1 = logon é um membro do **serveradmin** função de servidor fixa.|  
-|**setupadmin**|**int**|1 = logon é um membro do **setupadmin** função de servidor fixa.|  
-|**processadmin**|**int**|1 = logon é um membro do **processadmin** função de servidor fixa.|  
-|**diskadmin**|**int**|1 = logon é um membro do **diskadmin** função de servidor fixa.|  
-|**dbcreator**|**int**|1 = logon é um membro do **dbcreator** função de servidor fixa.|  
-|**bulkadmin**|**int**|1 = logon é um membro do **bulkadmin** função de servidor fixa.|  
-|**LoginName**|**nvarchar (128)**|Nome de logon do usuário. Fornecido para compatibilidade com versões anteriores.|  
+|**dbname**|**sysname**|Nome do banco de dados padrão do usuário quando uma conexão é estabelecida.|  
+|**password**|**nvarchar(128)**|Retorna NULL.|  
+|**language**|**sysname**|Idioma padrão do usuário.|  
+|**denylogin**|**Int**|1 = O logon é um usuário ou grupo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows que teve o acesso negado.|  
+|**hasaccess**|**Int**|1 = O logon teve o acesso ao servidor concedido.|  
+|**isntname**|**Int**|1 = O logon é um usuário ou grupo do Windows.<br /><br /> 0 = O logon é um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**isntgroup**|**Int**|1 = O logon é um grupo do Windows.|  
+|**isntuser**|**Int**|1 = O logon é um usuário do Windows.|  
+|**sysadmin**|**Int**|1 = logon é um membro do **sysadmin** função de servidor.|  
+|**securityadmin**|**Int**|1 = logon é um membro do **securityadmin** função de servidor.|  
+|**serveradmin**|**Int**|1 = logon é um membro do **serveradmin** função de servidor fixa.|  
+|**setupadmin**|**Int**|1 = logon é um membro do **setupadmin** função de servidor fixa.|  
+|**processadmin**|**Int**|1 = logon é um membro do **processadmin** função de servidor fixa.|  
+|**diskadmin**|**Int**|1 = logon é um membro do **diskadmin** função de servidor fixa.|  
+|**dbcreator**|**Int**|1 = logon é um membro do **dbcreator** função de servidor fixa.|  
+|**bulkadmin**|**Int**|1 = logon é um membro do **bulkadmin** função de servidor fixa.|  
+|**loginname**|**nvarchar(128)**|Nome de logon do usuário. Fornecido para compatibilidade com versões anteriores.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Mapeando tabelas do sistema para exibições do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

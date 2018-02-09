@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: MarshalOptions property [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- MarshalOptions property [ADO], VC++ example
 ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 972e35fef6e4e1bab80a3f1774c36621a4e84667
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0aa8adad99b9451fb6aeaea7864152ea683297e0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="marshaloptions-property-example-vc"></a>Exemplo de propriedade MarshalOptions (VC + +)
 Este exemplo usa o [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) propriedade para especificar quais linhas são enviadas ao servidor, todas as linhas ou somente as linhas modificadas.  
@@ -248,5 +251,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Propriedade MarshalOptions (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)

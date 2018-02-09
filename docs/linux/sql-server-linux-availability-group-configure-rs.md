@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: e2ce8a7cd87e188fce0f1b0f62bde148324373a5
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 9d8528d227f45e212141e97308718082d6c59cea
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Configurar um grupo de disponibilidade do SQL Server para a escala de leitura no Linux
 
@@ -36,21 +36,21 @@ Você pode configurar um SQL Server sempre na disponibilidade de grupo (AG) para
 
 Crie o grupo de disponibilidade. Set `CLUSTER_TYPE = NONE`. Além disso, defina cada réplica com `FAILOVER_MODE = NONE`. Aplicativos cliente executar a análise ou cargas de trabalho de emissão de relatórios diretamente pode se conectar aos bancos de dados secundários. Você também pode criar uma lista de roteamento somente leitura. Conexões com a réplica primária para a frente leiam solicitações de conexão para cada uma das réplicas secundárias a lista de roteamento em uma forma round-robin.
 
-Script Transact-SQL a seguir cria um grupo de disponibilidade denominado `ag1`. O script configura as réplicas de AG com `SEEDING_MODE = AUTOMATIC`. Essa configuração faz com que o SQL Server criar automaticamente o banco de dados em cada servidor secundário depois que ela é adicionada para o grupo de disponibilidade. Atualize o script a seguir para o seu ambiente. Substitua o `**<node1>**` e `**<node2>**` valores com os nomes das instâncias do SQL Server que hospedam as réplicas. Substitua o `**<5022>**` valor com a porta configurada para o ponto de extremidade. Execute o seguinte script do Transact-SQL na réplica primária do SQL Server:
+Script Transact-SQL a seguir cria um grupo de disponibilidade denominado `ag1`. O script configura as réplicas de AG com `SEEDING_MODE = AUTOMATIC`. Essa configuração faz com que o SQL Server criar automaticamente o banco de dados em cada servidor secundário depois que ela é adicionada para o grupo de disponibilidade. Atualize o script a seguir para o seu ambiente. Substitua o `<node1>` e `<node2>` valores com os nomes das instâncias do SQL Server que hospedam as réplicas. Substitua o `<5022>` valor com a porta configurada para o ponto de extremidade. Execute o seguinte script do Transact-SQL na réplica primária do SQL Server:
 
 ```SQL
 CREATE AVAILABILITY GROUP [ag1]
     WITH (CLUSTER_TYPE = NONE)
     FOR REPLICA ON
-        N'**<node1>**' WITH (
-            ENDPOINT_URL = N'tcp://**<node1>:**<5022>**',
+        N'<node1>' WITH (
+            ENDPOINT_URL = N'tcp://<node1>:<5022>',
             AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
             FAILOVER_MODE = MANUAL,
             SEEDING_MODE = AUTOMATIC,
                     SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL)
             ),
-        N'**<node2>**' WITH ( 
-            ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**', 
+        N'<node2>' WITH ( 
+            ENDPOINT_URL = N'tcp://<node2>:<5022>', 
             AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
             FAILOVER_MODE = MANUAL,
             SEEDING_MODE = AUTOMATIC,

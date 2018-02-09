@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: EventStatusEnum
-helpviewer_keywords: EventStatusEnum enumeration [ADO]
+f1_keywords:
+- EventStatusEnum
+helpviewer_keywords:
+- EventStatusEnum enumeration [ADO]
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82518cbfd6572f03cbe0b742b52bb5e4acd3d8e9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 213d511098daa616043e7dd3078025d63ba2333c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 Especifica o status atual da execução de um evento.  
   
-|Constante|Valor|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adStatusCancel**|4|Cancelamento de solicitações de operação que causou o evento ocorra.|  
 |**adStatusCantDeny**|3|Indica que a operação não é possível solicitar o cancelamento da operação pendente.|  
@@ -37,8 +40,8 @@ Especifica o status atual da execução de um evento.
 |**adStatusOK**|1|Indica que a operação que causou o evento foi bem-sucedida.|  
 |**adStatusUnwantedEvent**|5|Impede que as notificações subsequentes antes do método de evento concluiu a execução.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
- Pacote: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC Equivalent  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

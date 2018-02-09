@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: ActiveConnection property [ADOX], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- ActiveConnection property [ADOX], Visual Basic example
 ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8122300ca528db3e775d306ab43bff72654e7a12
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: df20fb67ed3669c9c93dc99dce510b43ab0e1d92
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>Exemplo de propriedade ActiveConnection do catálogo (VB)
 Definindo o [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) o catálogo de propriedade para uma conexão válida, abra "abre". De um catálogo aberto, você pode acessar os objetos do esquema contidos no catálogo.  
@@ -69,7 +72,7 @@ End Sub
 Attribute VB_Name = "Catalog"  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Propriedade ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Objeto de tabela (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   

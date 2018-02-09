@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: DataFactory handler in RDS [ADO]
+helpviewer_keywords:
+- DataFactory handler in RDS [ADO]
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae0e7f5ebf8126168c8d759ca7b5e8c17864fb26
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5f542390110169a88b387856ca887a8b3183e01b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="required-client-settings"></a>Configurações de cliente necessárias
 > [!IMPORTANT]
@@ -53,7 +55,7 @@ SQL="SELECT * FROM Customers WHERE CustomerID = ?"
   
  Os trechos de código a seguir são escritos em Visual Basic:  
   
-## <a name="rdsdatacontrol-version"></a>RDS. Versão DataControl  
+## <a name="rdsdatacontrol-version"></a>RDS.DataControl Version  
   
 ```  
 Dim dc as New RDS.DataControl  
@@ -80,7 +82,7 @@ rs.CursorLocation = adUseClient
 "Remote Server=http://yourServer"  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Arquivo de personalização de conectar-se a seção](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [Seção SQL do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [Seção do arquivo UserList de personalização](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

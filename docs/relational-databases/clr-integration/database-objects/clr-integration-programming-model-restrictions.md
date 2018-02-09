@@ -17,19 +17,20 @@ helpviewer_keywords:
 - programming model restrictions [CLR integration]
 - assemblies [CLR integration], runtime checks
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23972fb78bafaca778b37fc7226d3db4f53083e8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3d282b317a5ea31fe8170a847f5b425bcd1af4fd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restrições do modelo de programação da Integração CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Quando você estiver criando um procedimento armazenado gerenciado ou outro objeto de banco de dados gerenciado, há determinadas verificações de código realizadas pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que precisam ser consideradas. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]realiza verificações no assembly de código gerenciado quando ele é registrado pela primeira vez no banco de dados, usando o **CREATE ASSEMBLY** instrução e também em tempo de execução. O código gerenciado também é verificado em tempo de execução porque, em um assembly, talvez haja caminhos de código que jamais possam ser alcançados em tempo de execução.  Isso proporciona flexibilidade para registrar, especialmente, assemblies de terceiros, logo um assembly não seria bloqueado quando houvesse um código 'não seguro' projetado para execução em um ambiente do cliente, mas que jamais seria executado no CLR hospedado. Os requisitos que o código gerenciado deve atender dependem se o assembly é registrado como **seguro**, **EXTERNAL_ACCESS**, ou **UNSAFE**, **SAFE** sendo mais rigorosos e estão listadas abaixo.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Quando você estiver criando um procedimento armazenado gerenciado ou outro objeto de banco de dados gerenciado, há determinadas verificações de código realizadas pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que precisam ser consideradas. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]realiza verificações no assembly de código gerenciado quando ele é registrado pela primeira vez no banco de dados, usando o **CREATE ASSEMBLY** instrução e também em tempo de execução. O código gerenciado também é verificado em tempo de execução porque, em um assembly, talvez haja caminhos de código que jamais possam ser alcançados em tempo de execução.  Isso proporciona flexibilidade para registrar, especialmente, assemblies de terceiros, logo um assembly não seria bloqueado quando houvesse um código 'não seguro' projetado para execução em um ambiente do cliente, mas que jamais seria executado no CLR hospedado. Os requisitos que o código gerenciado deve atender dependem se o assembly é registrado como **seguro**, **EXTERNAL_ACCESS**, ou **UNSAFE**, **SAFE** sendo mais rigorosos e estão listadas abaixo.  
   
  Além das restrições colocadas nos assemblies de código gerenciado, também há permissões de segurança de código que são concedidas. O CLR (Common Language Runtime) oferece suporte a um modelo de segurança chamado segurança de acesso do código (CAS) destinado ao código gerenciado. Nesse modelo, são concedidas permissões a assemblies com base na identidade do código. **SEGURANÇA**, **EXTERNAL_ACCESS**, e **UNSAFE** assemblies têm permissões CAS diferentes. Para obter mais informações, consulte [segurança de acesso do código de integração de CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
   
@@ -43,9 +44,9 @@ ms.lasthandoff: 01/08/2018
   
 -   O assembly é um daqueles para os quais há suporte. Para obter mais informações, consulte [suporte para bibliotecas do .NET Framework](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
--   Você está usando **criar ASSEMBLY de***\<local >,* e todos os assemblies referenciados e suas dependências estão disponíveis em  *\<local >* .  
+-   Você está usando **CREATE ASSEMBLY FROM *\<local >,* e todos os assemblies referenciados e suas dependências estão disponíveis em  *\<local >*.  
   
--   Você está usando **criar ASSEMBLY de***\<bytes... >,* e todas as referências são especificadas por meio do espaço de bytes separados.  
+-   Você está usando **CREATE ASSEMBLY FROM *\<bytes... >,* e todas as referências são especificadas por meio do espaço de bytes separados.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Todos os **EXTERNAL_ACCESS** assemblies devem atender aos seguintes critérios:  
@@ -122,10 +123,10 @@ ms.lasthandoff: 01/08/2018
 ### <a name="safe"></a>SAFE  
  Todos os **EXTERNAL_ACCESS** condições são atendidas.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Bibliotecas com suporte do .NET Framework](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)   
  [Segurança de acesso do código de integração de CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [Atributos de proteção de host e programação da integração CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
- [Criando um assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
+ [Criando um Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
   
   

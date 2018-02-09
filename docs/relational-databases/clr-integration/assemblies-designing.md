@@ -15,19 +15,20 @@ helpviewer_keywords:
 - designing assemblies [SQL Server]
 - assemblies [CLR integration], designing
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9273db56dfc99f76325ee9938678d2dc24aad8e8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d5e491f922a034a55cb65e432e0c005f6cc18fc0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies---designing"></a>Assemblies - criação
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Este tópico descreve os seguintes fatores que você deve considerar ao projetar assemblies:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico descreve os seguintes fatores que você deve considerar ao projetar assemblies:  
   
 -   Empacotando assemblies  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/08/2018
  Além disso, especificando UNSAFE permite que o código no assembly execute operações consideradas como tipo inseguro pelo verificador CLR. Essas operações podem potencialmente acessar buffers de memória no espaço de processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma maneira descontrolada. Assemblies UNSAFE também podem potencialmente subverter o sistema de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do CLR. Somente permissões UNSAFE devem ser concedidas a assemblies altamente confiáveis por desenvolvedores ou administradores experientes. Somente membros do **sysadmin** função de servidor fixa pode criar assemblies UNSAFE.  
   
 ## <a name="restrictions-on-assemblies"></a>Restrições em assemblies  
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coloca certas restrições em código gerenciado em assemblies para verificar se eles podem ser executados de uma maneira segura e evolutiva. Isso significa que não são permitidas certas operações que podem comprometer a robustez do servidor em assemblies SAFE e EXTERNAL_ACCESS.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coloca certas restrições em código gerenciado em assemblies para certificar-se de que ele podem ser executado de maneira confiável e escalonável. Isso significa que não são permitidas certas operações que podem comprometer a robustez do servidor em assemblies SAFE e EXTERNAL_ACCESS.  
   
 ### <a name="disallowed-custom-attributes"></a>Atributos personalizados não permitidos  
  Assemblies não podem ser anotados com os seguintes atributos personalizados:  
@@ -122,7 +123,7 @@ System.Data.OracleClient
 System.Configuration  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Assemblies &#40; mecanismo de banco de dados &#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Segurança da integração CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   

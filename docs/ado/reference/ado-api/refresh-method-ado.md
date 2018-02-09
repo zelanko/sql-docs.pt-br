@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - _Collection::Refresh
 - Parameters::Refresh
 - Properties::Refresh
-helpviewer_keywords: Refresh method [ADO]
+helpviewer_keywords:
+- Refresh method [ADO]
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 100d2e917b3510f1ebdba06dbd54ef7bdfd0842b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 422f04618e6e63b6143a8459c869316e47450796
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="refresh-method-ado"></a>Atualizar o método (ADO)
 Atualiza os objetos em uma coleção para refletir os objetos disponíveis do e específico ao provedor.  
@@ -70,7 +72,7 @@ collection.Refresh
 |[Coleção de propriedades](../../../ado/reference/ado-api/properties-collection-ado.md)|[Coleção de tabelas](../../../ado/reference/adox-api/tables-collection-adox.md)|[Coleção de usuários](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Coleção de exibições](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Atualizar exemplo de método (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Atualizar exemplo de método (VC + +)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   
  [Propriedade Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   

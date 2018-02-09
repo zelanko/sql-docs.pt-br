@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - Keyset cursors [ADO]
 - cursors [ADO], Keyset
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1845d39b63dcd399b99a74f12d42fca2ee4e8017
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c59e2b203f6b33d94a1f615c53c2507964a13a65
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="keyset-cursors"></a>Cursores
 O cursor keyset fornece funcionalidade entre static e um cursor dinâmico em sua capacidade de detectar alterações. Como um cursor estático, ele não detectar sempre alterações para a associação e a ordem do conjunto de resultados. Como um cursor dinâmico, ele detecta as alterações dos valores de linhas no conjunto de resultados.  
@@ -43,7 +44,7 @@ O cursor keyset fornece funcionalidade entre static e um cursor dinâmico em sua
   
  O cursor controlado por conjunto de chaves é difícil de usar corretamente porque a sensibilidade a alterações de dados depende de muitas circunstâncias diferentes, conforme descrito acima. No entanto, se seu aplicativo não está preocupado com atualizações simultâneas, programaticamente pode lidar com chaves inválidas e deve acessar diretamente determinadas linhas com chave, o cursor controlado por pode funcionar para você. Use o **adOpenKeyset CursorTypeEnum** para indicar que você deseja usar um cursor de conjunto de chaves no ADO.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Cursores de somente avanço](../../../ado/guide/data/forward-only-cursors.md)   
  [Cursores estáticos](../../../ado/guide/data/static-cursors.md)   
  [Cursores dinâmicos](../../../ado/guide/data/dynamic-cursors.md)

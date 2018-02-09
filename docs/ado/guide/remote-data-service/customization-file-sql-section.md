@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - SQL section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0cb92bcd2ea9580fa8824a50b15a1f60cdf35c3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 06b3a79e97c50df8c7eed17b1343030ca2280426
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customization-file-sql-section"></a>Seção SQL do arquivo de personalização
 O **sql** seção pode conter uma nova cadeia de caracteres SQL que substitui a cadeia de caracteres de comando do cliente. Se não houver nenhuma cadeia de caracteres SQL da seção, a seção será ignorada.  
@@ -48,7 +49,7 @@ SQL = " "
 ## <a name="syntax"></a>Sintaxe  
  É uma entrada de cadeia de caracteres SQL da substituição do formulário:  
   
- **SQL =**   
+ **SQL=**   
  ***sqlString***  
   
 |Parte|Description|  
@@ -56,7 +57,7 @@ SQL = " "
 |**SQL**|Uma cadeia de caracteres literal que indica que isso é uma entrada de seção do SQL.|  
 |***sqlString***|Uma cadeia de caracteres SQL que substitui a cadeia de caracteres do cliente.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Arquivo de personalização de conectar-se a seção](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [Seção de Logs do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [Seção do arquivo UserList de personalização](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

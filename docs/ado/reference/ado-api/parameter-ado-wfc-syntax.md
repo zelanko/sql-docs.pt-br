@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Parameter collection [ADO], ADO/WFC syntax
+helpviewer_keywords:
+- Parameter collection [ADO], ADO/WFC syntax
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 370528b6a58ab987f95ae551ab5473f3b8e549e7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 05f3e2f6f6b3985c1c68604e6e9829c1b1f3eef1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Parâmetro (ADO - WFC sintaxe)
 ## <a name="package-commswfcdata"></a>pacote com.ms.wfc.data  
@@ -74,7 +76,7 @@ public AdoProperties getProperties()
   
  ADO/WFC implementa o **valor** propriedade com o **getValue** método, que retorna um objeto de VARIANTE; e o **setValue** método, que usa uma VARIANTE como um argumento. Variantes são altamente eficientes em determinados idiomas, como o Microsoft Visual Basic.  
   
- Além de **valor** propriedade ADO/WFC fornece *acessador* métodos que usam tipos de dados Java para obter e definir o conteúdo de **parâmetro** objetos. A maioria desses métodos têm nomes no formato **obter***DataType* ou **definir***DataType*.  
+ Além de **valor** propriedade ADO/WFC fornece *acessador* métodos que usam tipos de dados Java para obter e definir o conteúdo de **parâmetro** objetos. A maioria desses métodos têm nomes no formato **obter * DataType* ou **definir * DataType*.  
   
  Há uma exceção notável: não há nenhum **getNull** propriedade; em vez disso, há um **isNull** propriedade que retorna um valor booliano que indica se o campo é nulo.  
   
@@ -99,5 +101,5 @@ public boolean isNull()
 public void setNull()  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)

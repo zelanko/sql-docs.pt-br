@@ -20,26 +20,27 @@ helpviewer_keywords:
 - managed code [SQL Server], vs. extended stored procedures
 - execution at client vs. execution at server [CLR integration]
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f506da16cb9a5a98b2a270116ca7948f75c26ce8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fce42787904d67dbe7e023321138fb57bd74b408
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration---overview"></a>Integração do CLR - visão geral
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O common language runtime (CLR) é a essência do Microsoft .NET Framework e fornece o ambiente de execução para todo o código do .NET Framework. O código executado no CLR é chamado de código gerenciado. O CLR fornece diversas funções e serviços necessários para a execução de programas, incluindo a compilação JIT (Just-In-Time), alocação e gerenciamento de memória, imposição de segurança de tipos, tratamento de exceções, gerenciamento de threads e segurança.  Consulte o SDK do .NET Framework para obter mais informações.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+O CLR (Common Language Runtime) é o centro do Microsoft .NET Framework; ele fornece o ambiente de execução para todo o código do .NET Framework. O código executado no CLR é chamado de código gerenciado. O CLR fornece diversas funções e serviços necessários para a execução de programas, incluindo a compilação JIT (Just-In-Time), alocação e gerenciamento de memória, imposição de segurança de tipos, tratamento de exceções, gerenciamento de threads e segurança.  Consulte o SDK do .NET Framework para obter mais informações.  
   
  Com o CLR hospedado no Microsoft SQL Server (a chamada integração CLR), você pode criar procedimentos armazenados, gatilhos, funções definidas pelo usuário, tipos definidos pelo usuário e agregações definidas pelo usuário no código gerenciado. Como o código gerenciado é compilado em código nativo antes da execução, você pode obter aumentos significativos de desempenho em alguns cenários.  
   
  O código gerenciado usa a CAS (segurança de acesso do código) para impedir que os assemblies executem determinadas operações. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa a CAS para ajudar a proteger o código gerenciado e evitar o comprometimento do sistema operacional ou do servidor de banco de dados.  
   
 ## <a name="advantages-of-clr-integration"></a>Vantagens da integração CLR  
- O [!INCLUDE[tsql](../../includes/tsql-md.md)] foi especificamente projetado para a manipulação e o acesso direto a dados no banco de dados. Embora o [!INCLUDE[tsql](../../includes/tsql-md.md)] se destaque no gerenciamento e no acesso a dados, ele não é uma linguagem de programação totalmente desenvolvida. Por exemplo, o [!INCLUDE[tsql](../../includes/tsql-md.md)] não oferece suporte a matrizes, coleções, loops for-each, deslocamento de bit ou classes. Embora algumas dessas construções possam ser simuladas no [!INCLUDE[tsql](../../includes/tsql-md.md)], o código gerenciado oferece suporte integrado a elas. Dependendo do cenário, esses recursos podem representar um motivo convincente para implementar determinada funcionalidade de banco de dados no código gerenciado.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] foi projetado especificamente para acesso direto a dados e manipulação no banco de dados. Embora o [!INCLUDE[tsql](../../includes/tsql-md.md)] se destaque no gerenciamento e no acesso a dados, ele não é uma linguagem de programação totalmente desenvolvida. Por exemplo, o [!INCLUDE[tsql](../../includes/tsql-md.md)] não oferece suporte a matrizes, coleções, loops for-each, deslocamento de bit ou classes. Embora algumas dessas construções possam ser simuladas no [!INCLUDE[tsql](../../includes/tsql-md.md)], o código gerenciado oferece suporte integrado a elas. Dependendo do cenário, esses recursos podem representar um motivo convincente para implementar determinada funcionalidade de banco de dados no código gerenciado.  
   
  O Microsoft Visual Basic .NET e o Microsoft Visual C# oferecem recursos orientados a objeto, como encapsulamento, herança e polimorfismo. Agora, o código relacionado pode ser facilmente organizado em classes e namespaces. Ao trabalhar com grandes quantidades de código de servidor, isso permite organizar e manter seu código de forma mais fácil.  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="choosing-between-extended-stored-procedures-and-managed-code"></a>Escolhendo entre procedimentos armazenados estendidos e o código gerenciado  
  Os procedimentos armazenados estendidos podem ser criados de forma a executar funcionalidades que não são possíveis com os procedimentos armazenados do [!INCLUDE[tsql](../../includes/tsql-md.md)]. Porém, os procedimentos armazenados estendidos podem comprometer a integridade do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o que não ocorre com o código gerenciado, que é verificado para assegurar que é fortemente tipado. Além disso, o gerenciamento da memória, o agendamento de threads e fibras, e os serviços de sincronização são integrados de forma mais aprofundada entre o código gerenciado do CLR e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Com a integração CLR, você tem uma forma mais segura do que os procedimentos armazenados estendidos para gravar os procedimentos armazenados necessários à execução de tarefas que não são possíveis no [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para obter mais informações sobre a integração de CLR e procedimentos armazenados estendidos, consulte [desempenho da integração do CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Instalando o .NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [Arquitetura da integração CLR](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
  [Acesso a dados de objetos de banco de dados CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   

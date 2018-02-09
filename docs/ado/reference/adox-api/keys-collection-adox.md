@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Table::Keys
 - Keys
-helpviewer_keywords: Keys collection [ADOX]
+helpviewer_keywords:
+- Keys collection [ADOX]
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b832a459e5eac0a6e208517457eccba8b10e74c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 31b99b28a878048a59b6fd5b79760a1b70c1cd56
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="keys-collection-adox"></a>Coleção de chaves (ADOX)
 Contém todos os [chave](../../../ado/reference/adox-api/key-object-adox.md) objetos de um [tabela](../../../ado/reference/adox-api/table-object-adox.md).  
@@ -50,7 +52,7 @@ Contém todos os [chave](../../../ado/reference/adox-api/key-object-adox.md) obj
   
 -   [Propriedades, Métodos e Eventos da coleção Indexes](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Chaves de acrescentar o método, tipo de chave, RelatedColumn, RelatedTable e exemplo de propriedades de UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Propriedades de coleção de chaves, métodos e eventos](../../../ado/reference/adox-api/keys-collection-properties-methods-and-events.md)   
  [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

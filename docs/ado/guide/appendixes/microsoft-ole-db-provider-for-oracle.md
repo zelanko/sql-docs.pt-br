@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - OLE DB provider for Oracle [ADO]
 - Oracle provider [ADO]
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eb8cf771b758dc81bb80e38bc709c611d8125921
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35bd07e150d1d56a1ea94542b0bd5b3c1b46d3d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Provedor Microsoft OLE DB para visão geral do Oracle
 > [!IMPORTANT]
@@ -73,8 +74,8 @@ MSDAORA
 |**Identificador de janela**|Indica o identificador de janela a ser usado para solicitar informações adicionais.|
 |**Identificador de Localidade**|Indica um número de 32 bits exclusivo (por exemplo, 1033) que especifica as preferências de idioma do usuário. Essas preferências indicam como datas e horas são formatadas, os itens são classificados em ordem alfabética, cadeias de caracteres são comparadas e assim por diante.|
 |**Serviços do OLE DB**|Indica um bitmask que especifica os serviços de OLE DB para habilitar ou desabilitar.|
-|**Solicitar**|Indica se o usuário enquanto está sendo estabelecida uma conexão.|
+|**Prompt**|Indica se o usuário enquanto está sendo estabelecida uma conexão.|
 |**Propriedades estendidas**|Uma cadeia de caracteres que contém informações de conexão específicas do provedor, estendido. Use essa propriedade somente para informações de conexão específicas do provedor que não podem ser descritas por meio do mecanismo de propriedade.|
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
  [Propriedade ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [propriedade do provedor (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [o objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

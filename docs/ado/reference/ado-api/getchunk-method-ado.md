@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Field20::raw_GetChunk
 - Field20::GetChunk
-helpviewer_keywords: GetChunk method [ADO]
+helpviewer_keywords:
+- GetChunk method [ADO]
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b6f0aed8689fb17b4cc5750c2b6b6b1f966e8c2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b479146e26196e42836ce381e3f5e555dd0a9a6b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getchunk-method-ado"></a>Método GetChunk (ADO)
 Retorna todos os ou uma parte do conteúdo de um texto grande ou dados binários [campo](../../../ado/reference/ado-api/field-object.md) objeto.  
@@ -62,7 +64,7 @@ variable = field.GetChunk(Size)
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [AppendChunk e GetChunk métodos exemplo (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
  [AppendChunk e GetChunk métodos exemplo (VC + +)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
  [Método AppendChunk (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   

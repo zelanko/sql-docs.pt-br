@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: StayInSync property [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- StayInSync property [ADO], VC++ example
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 255374c9de27825d716c42789fbcfc36426423a5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b668da2e9a4c2104d8b4e7c31091d7eeddf9d244
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="stayinsync-property-example-vc"></a>Exemplo de propriedade StayInSync (VC + +)
 Este exemplo demonstra como o [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) propriedade facilita acessar linhas em hierárquico [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -147,7 +150,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Coleção de campos (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Propriedade StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)

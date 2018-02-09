@@ -4,30 +4,32 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - ReadText method [ADO], Visual Basic example
 - Write method [ADO], Visual Basic example
 - Read method [ADO], Visual Basic example
 - WriteText method [ADO], Visual Basic example
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4811b1ad46663baa1aadf0e4f89313520913974e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c51ca097f3c1a9c71dbd75d00f7411b6dd61d03b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Exemplo dos métodos WriteText (VB), ReadText, gravação e leitura
 Este exemplo demonstra como ler o conteúdo de uma caixa de texto em ambos os texto [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) e um binário **fluxo**. Outras propriedades e métodos mostrados incluem [posição](../../../ado/reference/ado-api/position-property-ado.md), [tamanho](../../../ado/reference/ado-api/size-property-ado-parameter.md), [Charset](../../../ado/reference/ado-api/charset-property-ado.md), e [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
@@ -115,7 +117,7 @@ End Sub
 'EndReadVB  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Propriedade de conjunto de caracteres (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)   
  [Propriedade Position (ADO)](../../../ado/reference/ado-api/position-property-ado.md)   
  [Método Read](../../../ado/reference/ado-api/read-method.md)   

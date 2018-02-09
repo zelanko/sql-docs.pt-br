@@ -16,19 +16,20 @@ helpviewer_keywords:
 - common language runtime [SQL Server], compilation process
 - performance [CLR integration]
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5dd392ca57706e595b6df5f44b512cf11dacdff
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 327c531d44fc883afa144252dda3ba43d188682a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-architecture----performance"></a>Arquitetura de integração de CLR - desempenho
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Este tópico discute algumas das opções de design que aprimoram o desempenho de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integração com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] runtime de linguagem comum (CLR) do .NET Framework.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico discute algumas das opções de design que aprimoram o desempenho de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integração com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] runtime de linguagem comum (CLR) do .NET Framework.  
   
 ## <a name="the-compilation-process"></a>O processo de compilação  
  Durante a compilação de expressões SQL, quando é encontrada uma referência a uma rotina, é gerado um stub do MSIL ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Intermediate Language). Esse stub inclui código para realizar marshaling dos parâmetros de rotina do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o CLR, invocar a função e retornar o resultado. Este código de "cola" se baseia no tipo de parâmetro e na direção do parâmetro (de entrada, de saída ou de referência).  
@@ -58,7 +59,7 @@ ms.lasthandoff: 01/08/2018
  Quando os cursores [!INCLUDE[tsql](../../includes/tsql-md.md)] devem atravessar dados que são expressos mais facilmente como uma matriz, é possível usar código gerenciado com ganhos de desempenho significativos.  
   
 ### <a name="string-data"></a>Dados de cadeia de caracteres  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dados de caractere, como **varchar**, pode ser do tipo SqlString ou SqlChars em funções gerenciadas. As variáveis SqlString criam uma instância do valor inteiro na memória. As variáveis SqlChars fornecem uma interface de streaming que pode ser usada para obter um melhor desempenho e escalabilidade por não criar uma instância do valor inteiro na memória. Isso se torna especialmente importante no caso de dados LOB (objeto grande). Além disso, os dados XML do servidor pode ser acessado por meio de uma interface de streaming retornada por **SqlXml.CreateReader()**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados de caractere, como **varchar**, pode ser do tipo SqlString ou SqlChars em funções gerenciadas. As variáveis SqlString criam uma instância do valor inteiro na memória. As variáveis SqlChars fornecem uma interface de streaming que pode ser usada para obter um melhor desempenho e escalabilidade por não criar uma instância do valor inteiro na memória. Isso se torna especialmente importante no caso de dados LOB (objeto grande). Além disso, os dados XML do servidor pode ser acessado por meio de uma interface de streaming retornada por **SqlXml.CreateReader()**.  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR vs. Procedimentos armazenados estendidos  
  As APIs Microsoft.SqlServer.Server que permitem que procedimentos gerenciados enviem conjuntos de resultados de volta ao cliente têm um desempenho melhor que as APIs ODS (Open Data Services) usadas por procedimentos armazenados estendidos. Além disso, os APIs System.Data.SqlServer suporte a tipos de dados como **xml**, **varchar (max)**, **nvarchar (max)**, e **varbinary (max)**, apresentada no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], enquanto as APIs ODS não foram estendidas para oferecer suporte a novos tipos de dados.  
@@ -83,7 +84,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="scalable-memory-usage"></a>Uso da memória escalonável  
  Para que coleta de lixo gerenciada seja executada e bem-escalada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], evite uma única alocação grande. As alocações com mais de 88 quilobytes (KB) serão colocadas no heap de objetos grandes, que fará o desempenho e a escala da coleta de lixo serem muito piores que no caso de várias alocações menores. Por exemplo, se você precisar alocar uma matriz multidimensional grande, é melhor alocar uma matriz denteada (dispersa).  
   
-## <a name="see-also"></a>Consulte Também  
- [Tipos definidos pelo usuário do CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+## <a name="see-also"></a>Consulte também  
+ [Tipos CLR definidos pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

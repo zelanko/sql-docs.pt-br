@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset::ExecuteComplete
 - ExecuteComplete
-helpviewer_keywords: FetchComplete event [ADO]
+helpviewer_keywords:
+- FetchComplete event [ADO]
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c8575cd7423217702a0e2b98580e8ed2e7a45ac
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a8332a6332f27a8e2022975a80814be9c28cf4da
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fetchcomplete-event-ado"></a>Evento FetchComplete (ADO)
 O **FetchComplete** eventos é chamado depois que todos os registros em uma operação assíncrona demorada foram recuperados para o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -53,6 +55,6 @@ FetchComplete pError, adStatus, pRecordset
 ## <a name="remarks"></a>Remarks  
  Para usar **FetchComplete** com o Microsoft Visual Basic, Visual Basic 6.0 ou posterior é necessário.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Exemplo de modelo de eventos do ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Resumo do manipulador de eventos ADO](../../../ado/guide/data/ado-event-handler-summary.md)

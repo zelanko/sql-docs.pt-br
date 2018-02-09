@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Mode property [ADO], VC++ example
 - IsolationLevel property [ADO], VC++ example
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8dc518af8f16854f4c069d14ce0e234265325c62
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dfb9da4ee435ef3ebbf6980f6d9dfd9822c3450d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>Exemplo de propriedades de modo (VC + +) e IsolationLevel
 Este exemplo usa o [modo](../../../ado/reference/ado-api/mode-property-ado.md) propriedade para abrir uma conexão exclusiva e o [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) propriedade para abrir uma transação que é realizada em isolamento de outras transações.  
@@ -248,6 +250,6 @@ void PrintComError(_com_error &e) {
 **Onions, Leeks e Garlic: culinária segredos de Mediterrâneo - trad_cook**  
 **50 anos em Buckingham Palace cozinhas - trad_cook**  
 **Sushi, qualquer pessoa? -trad_cook**   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Propriedade IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Propriedade Mode (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

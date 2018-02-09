@@ -1,6 +1,22 @@
-Cada grupo de disponibilidade tem apenas uma réplica primária. A réplica primária permite leituras e gravações. Para alterar qual réplica é primária, você pode fazer failover. Em um grupo de disponibilidade para alta disponibilidade, o gerenciador de cluster automatiza o processo de failover. Em um grupo de disponibilidade de escala de leitura, o processo de failover é manual. 
+---
+title: "SQL Server forçar o failover para o grupo de disponibilidade"
+description: "Forçar o failover para o grupo de disponibilidade com o tipo de cluster de NONE"
+services: 
+author: MikeRayMSFT
+ms.service: 
+ms.topic: include
+ms.date: 02/05/2018
+ms.author: mikeray
+ms.custom: include file
+ms.openlocfilehash: 10a2af2cb5bc9e98605a3ee988439e3c3be60c1e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2018
+---
+Cada grupo de disponibilidade tem apenas uma réplica primária. A réplica primária permite leituras e gravações. Para alterar qual réplica é primária, você pode fazer failover. Em um grupo de disponibilidade para alta disponibilidade, o Gerenciador de cluster automatiza o processo de failover. Em um grupo de disponibilidade com o tipo de cluster NONE, o processo de failover é manual. 
 
-Há duas maneiras de fazer failover a réplica primária em um grupo de disponibilidade de escala de leitura:
+Há duas maneiras de fazer failover a réplica primária em um grupo de disponibilidade com o tipo de cluster NONE:
 
 - Failover manual forçado com perda de dados
 - Failover manual sem perda de dados
@@ -25,7 +41,7 @@ Para failover manual sem perda de dados:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
-        MODIFY REPLICA ON N'**<node2>*' 
+        MODIFY REPLICA ON N'<node2>' 
         WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
    ```
 
@@ -69,4 +85,4 @@ Para failover manual sem perda de dados:
    ```  
 
    > [!NOTE] 
-   > Para excluir um grupo de disponibilidade, use [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql). Para um grupo de disponibilidade criado com CLUSTER_TYPE NONE ou externo, o comando deve ser executado em todas as réplicas que fazem parte do grupo de disponibilidade.
+   > Para excluir um grupo de disponibilidade, use [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql). Para um grupo de disponibilidade criado com cluster, digite NONE ou externo, o comando deve ser executado em todas as réplicas que fazem parte do AG.

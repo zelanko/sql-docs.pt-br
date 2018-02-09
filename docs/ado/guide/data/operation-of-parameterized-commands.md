@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 658d0dc9baa22006b327d826effb5687ccbc1822
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7d826d5407aabce4baa82b0952cff6c8344944e8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="operation-of-parameterized-commands"></a>Operação de comandos com parâmetros
 Se você estiver trabalhando com um grande filho **registros**, especialmente em comparação com o tamanho do pai **registros**, mas que precisam acessar apenas alguns capítulos de filho, talvez seja mais eficiente usar um comando com parâmetros.  
@@ -94,7 +95,7 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
 > [!NOTE]
 >  Quando usar as cláusulas WHERE, parâmetros não podem usar os tipos de dados SQL para text, ntext e image ou ocorrerá um erro que contém a seguinte descrição: `Invalid operator for data type`.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Exemplo de modelagem de dados](../../../ado/guide/data/data-shaping-example.md)   
  [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
  [Modelar comandos em geral](../../../ado/guide/data/shape-commands-in-general.md)

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Record::MoveRecord
 - _Record::raw_MoveRecord
-helpviewer_keywords: MoveRecord method [ADO]
+helpviewer_keywords:
+- MoveRecord method [ADO]
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d15de5adfe707e1fd32a3ce005d865d6bee16da
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a626e6f86d2e44fed972f8043b556d233fdf1d17
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="moverecord-method-ado"></a>Método MoveRecord (ADO)
 Move a entidade representada por um [registro](../../../ado/reference/ado-api/record-object-ado.md) para outro local.  
@@ -54,7 +56,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *Opções*  
  Opcional. Um [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) valor cujo valor padrão é **adMoveUnspecified**. Especifica o comportamento desse método.  
   
- *Assíncrono*  
+ *Async*  
  Opcional. Um **booliano** valor que, quando **True**, especifica que esta operação deve ser assíncrona.  
   
 ## <a name="return-value"></a>Valor de retorno  
@@ -78,7 +80,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Método Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [MoveFirst, MoveLast, MoveNext e MovePrevious métodos (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [Métodos MoveFirst, MoveLast, MoveNext e MovePrevious (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

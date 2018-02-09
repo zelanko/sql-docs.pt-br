@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Connection15::raw_Open
 - Connection15::Open
 - _Connection::Open
-helpviewer_keywords: Open method [ADO]
+helpviewer_keywords:
+- Open method [ADO]
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 41850de804523a50dbf0d489e678b93c9f29b6ae
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: aecc064b9030adb40347737dc68998de3eee4d64
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-connection"></a>Método Open (Conexão ADO)
 Abre uma conexão a uma fonte de dados.  
@@ -43,7 +45,7 @@ connection.Open ConnectionString, UserID, Password, Options
  *ConnectionString*  
  Opcional. Um **cadeia de caracteres** valor que contém informações de conexão. Consulte o [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriedade para obter detalhes sobre as configurações válidas.  
   
- *ID de usuário*  
+ *UserID*  
  Opcional. Um **cadeia de caracteres** valor que contém um nome de usuário a ser usado ao estabelecer a conexão.  
   
  *Senha*  
@@ -70,7 +72,7 @@ connection.Open ConnectionString, UserID, Password, Options
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Exemplo dos métodos de abertura e fechamento (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Exemplo dos métodos de abertura e fechamento (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [Exemplo dos métodos de abertura e fechamento (VC + +)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   

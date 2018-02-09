@@ -19,14 +19,15 @@ ms.date: 09/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: a37ba047d17dda983d3fbed247df38ebb3a1aaf8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1c0f95e02d7b214d9a1ed295c55e42f8416451f0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>Parceiros de alta disponibilidade e recuperação de desastre do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para fornecer alta disponibilidade e recuperação de desastre para seus serviços do SQL Server, escolha entre as várias ferramentas líderes do setor.  Este artigo destaca empresas parceiras da Microsoft com soluções de recuperação de desastres e disponibilidade alta com suporte ao Microsoft SQL Server.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Para fornecer alta disponibilidade e recuperação de desastres para seus serviços do SQL Server, escolha entre as várias ferramentas do setor.  Este artigo destaca empresas parceiras da Microsoft com soluções de recuperação de desastres e disponibilidade alta com suporte ao Microsoft SQL Server.
 
 ## <a name="our-high-availability-and-disaster-recovery-partners"></a>Nossos parceiros de alta disponibilidade e recuperação de desastre
 <!--|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
@@ -38,6 +39,7 @@ ms.lasthandoff: 12/05/2017
 |![dh2i][2] |**DH2i**<br>DxEnterprise é software de Disponibilidade Inteligente para Windows, Linux e Docker que ajuda você a alcançar o tempo de inatividade planejado ou não planejado praticamente nulo, permite grande economia nos custos, simplifica drasticamente o gerenciamento e permite uma consolidação física e lógica.<br><br>SQL Server 2005+, Windows Server 2008R2+, Ubuntu 16+, RHEL 7+, CentOS 7+|[Site][dh2i_website]<br>[Folha de dados][dh2i_datasheet]<br>[Twitter][dh2i_twitter]<br>[Vídeo][dh2i_youtube]|
 |![hpe][4] |**HPE Serviceguard**<br>Proteja suas cargas críticas de trabalho do SQL Server 2017 no Linux®, de tempo de inatividade planejado ou não até uma grande quantidade de falhas de infraestrutura e de aplicativos em ambientes físicos e virtuais, em qualquer distância, com o HPE Serviceguard para Linux (SGLX). Como parte do programa Beta, o HPE SGLX oferece opções de monitoramento e recuperação sensíveis ao contexto para a Instância de Cluster de Failover e as cargas de trabalho dos Grupos de Disponibilidade Always On do SQL Server. Maximize o tempo de atividade com HPE SGLX sem comprometer a integridade de dados e o desempenho.<br><br>SQL Server 2017 no Linux – RedHat 7.3, 7.4, SUSE 12 SP2, SP3|[Site][hpe_website]<br>[Folha de dados][hpe]<br>[Baixar Beta][hpe_download]<br>[Blog][hpe_download]<br>[Twitter][hpe_twitter]
 |![idera][3]|**IDERA**<br>SQL Safe Backup é uma solução de backup e recuperação de alto desempenho para o SQL Server que economiza dinheiro, reduz o tempo de backup do banco de dados e o tamanho do arquivo de backup, além de fornecer acesso instantâneo a leitura e gravação para bancos de dados em arquivos de backup.<br><br>Microsoft SQL Server: 2005 SP1 ou mais recente, 2008, 2008 R2, 2012, 2014, 2016; todas as edições |[Site][idera_website]|
+|![nec][7]|**NEC**<br>O ExpressCluster é uma solução abrangente e totalmente automatizada de alta disponibilidade e recuperação de desastres para todas as falhas principais, incluindo falhas de hardware, software, rede e site para o SQL Server e para aplicativos associados em execução em máquinas virtuais ou físicas locais ou em ambientes de nuvem.<br><br>Microsoft SQL Server: 2005 ou posterior; todas as edições |[Site][necec_website]<br>[Folha de dados][necec_datasheet]<br>[Vídeo][necec_youtube]<br>[Download][necec_download]|
 |![portworx][6] |**Portworx**<br>Portworx é a solução para contêineres com monitoramento de estado em execução na produção. Com Portworx, os usuários podem gerenciar qualquer banco de dados ou o serviço de monitoramento de estado em qualquer infraestrutura usando qualquer agendador de contêiner, incluindo Kubernetes, Mesosphere DC/OS e Docker Swarm. Portworx resolve as cinco ocorrências mais comuns que as equipes de DevOps encontram ao executar bancos de dados em contêineres e outros serviços com monitoramento de estado na produção: persistência, alta disponibilidade, automação de data, suporte para vários repositórios de dados e infraestrutura, e a segurança.<br><br>SQL Server 2017 no Docker |[Site][portworx_website]<br>[Documentação][portworx_docs]<br>[Vídeo][portworx_youtube]|
 |![veeam][1] |**Veeam**<br>Veeam Backup & Replication é uma solução de backup e disponibilidade avançada, fácil de usar e acessível. Ela fornece recuperação de dados e aplicações de forma rápida, flexível e confiável, reunindo backup de VM (máquina virtual) e replicação em uma solução única de software e aplicativos virtualizados. Veeam Backup & Replication oferece suporte premiada para os ambientes virtuais de VMware vSphere e Microsoft Hyper-V.<br><br>SQL Server 2005 SP4 – SQL Server 2016 no Windows |[Site][veeam_website]<br>[Folha de dados][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[Vídeo][veeam_youtube]|
 
@@ -53,6 +55,8 @@ Para saber mais sobre alguns dos nossos outros parceiros, consulte [monitorament
 [4]: ./media/partner-hadr-sql-server/hpe_pri_grn_pos_rgb.png
 [5]: ./media/partner-hadr-sql-server/azure_logo.png
 [6]: ./media/partner-hadr-sql-server/portworx_logo.png
+[7]: ./media/partner-hadr-sql-server/nec_logo.png
+
 
 <!--Article links-->
 [mon_partners]: ./partner-monitor-sql-server.md
@@ -65,6 +69,7 @@ Para saber mais sobre alguns dos nossos outros parceiros, consulte [monitorament
 [idera_website]:https://www.idera.com/productssolutions/sqlserver
 [hpe_website]: https://www.hpe.com/us/en/product-catalog/detail/pip.376220.html
 [azure_website]: http://docs.microsoft.com/azure/site-recovery/site-recovery-sql
+[necec_website]: https://www.necam.com/ExpressCluster/
 [portworx_website]: https://portworx.com/
 
 <!--Get Started Links-->
@@ -73,6 +78,7 @@ Para saber mais sobre alguns dos nossos outros parceiros, consulte [monitorament
 [veeam_datasheet]:https://www.veeam.com/veeam_backup_9_5_datasheet_en_ds.pdf
 [dh2i_datasheet]:http://dh2i.com/wp-content/uploads/DxE-Win-QuickFacts.pdf
 [hpe]:https://www.hpe.com/h20195/v2/default.aspx?cc=us&lc=en&oid=376220
+[necec_datasheet]: https://www.necam.com/docs/?id=0d9ef7a7-f935-4909-b6bb-20a47b3
 [azure_datasheet]: http://docs.microsoft.com/azure/site-recovery/site-recovery-sql#site-recovery-support
 
 <!--Marketplace Links -->
@@ -85,6 +91,7 @@ Para saber mais sobre alguns dos nossos outros parceiros, consulte [monitorament
 [dh2i_youtube]:https://www.youtube.com/user/dh2icompany 
 [idera_youtube]:https://www.idera.com/resourcecentral/videos/sql-safe-overview
 [azure_youtube]: https://mva.microsoft.com/en-US/training-courses/is-your-lack-of-a-disaster-recovery-site-keeping-you-up-at-night-8680?l=oF7YrFH1_7504984382
+[necec_youtube]: https://www.youtube.com/watch?v=9La3Cw1Q1Jk
 [portworx_youtube]: https://www.youtube.com/channel/UCSexpvQ9esSRgiS_Q9_3mLQ 
 
 <!--Twitter links-->
@@ -98,6 +105,6 @@ Para saber mais sobre alguns dos nossos outros parceiros, consulte [monitorament
 
 <!--Download links-->
 [hpe_download]: http://downloads.linux.hpe.com/SDR/project/sglx/sglx-beta/
-
+[necec_download]: https://www.necam.com/ExpressCluster/30daytrial/
 <!--Blog links-->
 [hpe_blog]: https://community.hpe.com/t5/Servers-The-Right-Compute/SQL-Server-for-Linux-Is-Here-and-A-New-Chapter-for-Mission/ba-p/6977571#.WiHWW0xFwUE

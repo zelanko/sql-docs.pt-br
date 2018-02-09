@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - ADO collections [ADO]
 - collections [ADO]
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 911a1225bc9dd14cbf7bdc68ceb67af77ff819bb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0894c9d4e69000ad274b4b8a31b41ff0a2474900
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-collections"></a>Coleções de ADO
 As relações entre essas coleções e os objetos do ADO são representadas no [modelo de objeto ADO](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -38,7 +39,7 @@ As relações entre essas coleções e os objetos do ADO são representadas no [
 |[Parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md)|Contém todos os **parâmetro** objetos de um **comando** objeto.|  
 |[Propriedades](../../../ado/reference/ado-api/properties-collection-ado.md)|Contém todos os **propriedade** objetos para uma instância específica de um objeto.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência da API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Propriedades dinâmicas do ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Constantes enumeradas do ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
