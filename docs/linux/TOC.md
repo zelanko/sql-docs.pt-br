@@ -35,7 +35,7 @@
 ### [Instalar o SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 ### [Instalar a pesquisa de texto completo do SQL Server](sql-server-linux-setup-full-text-search.md)
 ### [Instalar o SQL Server Integration Services](sql-server-linux-setup-ssis.md)
-### [Registrar repositório GA](sql-server-linux-change-repo.md)
+### [Configurar repositórios](sql-server-linux-change-repo.md)
 
 ## Configurar
 ### [Configurar com mssql-conf](sql-server-linux-configure-mssql-conf.md)
@@ -85,6 +85,7 @@
 ##### [Operar](sql-server-linux-availability-group-failover-ha.md)
 #### [Criar para escala de leitura apenas]()
 ##### [Configurar grupo de disponibilidade](sql-server-linux-availability-group-configure-rs.md)
+#### [Configurar multiplataforma (Windows e Linux)](sql-server-linux-availability-group-cross-platform.md)
 
 ## [Segurança](sql-server-linux-security-overview.md)
 ### [Introdução a recursos de segurança](sql-server-linux-security-get-started.md)
