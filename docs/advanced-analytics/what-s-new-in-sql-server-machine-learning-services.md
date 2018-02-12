@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6aff043a-8b37-4f3f-9827-10a671e1ad1c
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: abbc7043f4eefe2c6f33a3f9fbc61fe0a97ceff9
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: c5f9810dfb057045fd1ec0ba25fd7651b2e10ea1
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>O que há de novo nos serviços de aprendizado de máquina no SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 No SQL Server 2016, a Microsoft introduziu o SQL Server R Services, um recurso que oferece suporte a ciência de dados de grande porte, integrando a linguagem R com o mecanismo de banco de dados do SQL Server.
 
@@ -60,7 +61,7 @@ Python em execução no banco de dados não envolve apenas de aprendizado de má
 
 + Suporte a Python no aprendizado de máquina do Microsoft Server (autônomo)
 
-    [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]inclui a opção para instalar uma versão autônoma do servidor de aprendizado de máquina do Microsoft. Usando o servidor de aprendizado de máquina, você pode distribuir e dimensionar o código de R ou Python sem usar o SQL Server.
+    [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] inclui a opção para instalar uma versão autônoma do servidor de aprendizado de máquina do Microsoft. Usando o servidor de aprendizado de máquina, você pode distribuir e dimensionar o código de R ou Python sem usar o SQL Server.
 
 ### <a name="linux-support"></a>Suporte para Linux
 

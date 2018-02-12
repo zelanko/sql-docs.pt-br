@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7c04ae30-d391-4369-9742-d2b275e14c0d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: b45c1a9c58ede0342953caae58c3bd6822501c24
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8178f4a1347ef58fd7ee143fbe843e3525ac4cf0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-tools-included-with-sql-server-setup"></a>Ferramentas de R incluídas com a instalação do SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Quando você instala o R com o SQL Server, você obtém as mesmas ferramentas de R que são instaladas com qualquer **base** instalação do R, como RGui, Rterm e assim por diante. Portanto, tecnicamente, você tem todas as ferramentas que você precisa para desenvolver e testar o código de R.
 
@@ -48,7 +49,7 @@ As seguintes ferramentas de R padrão são incluídas em um *base instalação* 
 
 Para localizar essas ferramentas, determine a biblioteca de R instalado quando você configurar o SQL Server ou a recurso de aprendizado de máquina autônomo. Por exemplo, em uma instalação padrão, as ferramentas de R estão localizadas nessas pastas:
 
-+ SQL Server 2016 R Services:`~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
++ SQL Server 2016 R Services: `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
 + Microsoft R Server autônomo:`~\Program Files\Microsoft R\R_SERVER\bin\x64`
 + SQL Server 2017 aprendizado de máquina serviços:`~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
 + Server (autônomo) de aprendizado de máquina:`~\Program Files\Microsoft\ML Server\R_SERVER\bin\x64`

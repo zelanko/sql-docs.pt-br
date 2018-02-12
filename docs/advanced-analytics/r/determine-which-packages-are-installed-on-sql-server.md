@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9a7f7e43-b568-406c-9434-5a2ec64ec5f5
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e76a42ead115c8ee4fa89599b192d722ecfbb2ee
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5db9405b6ef2e7c1423fa2affe6ad8bca58e5d68
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="determine-which-r-packages-are-installed-on-sql-server"></a>Determinar quais pacotes de R são instalados no SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Quando você instala o aprendizado de máquina no SQL Server com a opção de linguagem R, uma biblioteca de pacote de R é criada especificamente para ser usada pela instância. Cada instância do servidor tem sua própria biblioteca de pacote. Bibliotecas de pacote não podem ser compartilhadas entre instâncias.
 
