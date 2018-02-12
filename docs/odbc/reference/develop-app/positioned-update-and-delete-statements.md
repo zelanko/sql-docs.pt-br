@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,23 +18,23 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 0c39c0081ee0cd671ee31bd7e11c02a72adc7558
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="positioned-update-and-delete-statements"></a>Posicionada instruções Update e Delete
 Aplicativos podem atualizar ou excluir a linha atual em um conjunto de resultados com uma atualização posicionada ou instrução delete. Posicionado update e delete instruções são suportadas por algumas fontes de dados, mas não todas. Para determinar se um suporte de fonte de dados posicionado instruções update e delete, um aplicativo chama **SQLGetInfo** com SQL_DYNAMIC_CURSOR_ATTRIBUTES1 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ ATTRIBUTES1 ou SQL_STATIC_CURSOR_ATTRIBUTES1 *informação* (dependendo do tipo de cursor). Observe que a biblioteca de cursores ODBC simula posicionado instruções update e delete.  
   
  Para usar uma atualização posicionada ou instrução de exclusão, o aplicativo deve criar um conjunto de resultados com um **Selecione para atualizar** instrução. A sintaxe dessa instrução é:  
   
- **Selecione** [**todos os** &#124; **DISTINCT**] *lista de select*  
+ **SELECT** [**ALL** &#124; **DISTINCT**] *select-list*  
   
  **DE** *lista de referências de tabela*  
   
@@ -43,11 +44,11 @@ Aplicativos podem atualizar ou excluir a linha atual em um conjunto de resultado
   
  O aplicativo, em seguida, posiciona o cursor na linha a ser atualizada ou excluída. Ele pode fazer isso chamando **SQLFetchScroll** para recuperar um conjunto de linhas que contém a linha necessária e chamando **SQLSetPos** para posicionar o cursor de conjunto de linhas em que a linha. O aplicativo executa a instrução delete ou atualização posicionada em uma instrução diferente que a instrução que está sendo usada pelo conjunto de resultados. A sintaxe das instruções a seguir é:  
   
- **ATUALIZAÇÃO** *nome de tabela*  
+ **UPDATE** *table-name*  
   
- **DEFINIR** *identificador de coluna*  **=**  {*expressão* &#124; **Nulo**}  
+ **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
- [**,** *identificador de coluna*  **=**  {*expressão* &#124; **Nulo**}]...  
+ [**,** *column-identifier* **=** {*expression* &#124; **NULL**}]...  
   
  **WHERE CURRENT OF** *nome de cursor*  
   
