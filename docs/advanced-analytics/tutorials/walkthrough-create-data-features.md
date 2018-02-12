@@ -10,21 +10,24 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 79cc7e334c3aab4fb7702e368a3188db98eaaced
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9b447f8c8faa834bea4360844308e468bf15d89c
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>Criar recursos de dados usando R e SQL (passo a passo)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 A engenharia de dados é uma parte importante do aprendizado de máquina. Dados geralmente requerem transformação antes que você pode usá-lo para modelagem de previsão. Se os dados não tiverem os recursos necessários, você deverá criá-los com base em valores existentes.
 
@@ -33,7 +36,7 @@ Para esta tarefa de modelagem, em vez de usar os valores brutos de latitude e lo
 Nesta etapa, vamos comparar dois métodos diferentes para criar um recurso de dados:
 
 - Usando uma função personalizada de R
-- Usando uma função personalizada do T-SQL em[!INCLUDE[tsql](../../includes/tsql-md.md)]
+- Usando uma função personalizada do T-SQL em [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
 O objetivo é criar um novo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjunto de dados que inclui as colunas originais e o novo recurso numérico, *direct_distance*.
 

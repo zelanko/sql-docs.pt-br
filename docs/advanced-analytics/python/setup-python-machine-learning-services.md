@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: abc79124569635f3aafaaa309e25e2c827fa5d9b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9ecd54dcb1fe829c51e0e05346abf04d80af3cf9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>Configurar os serviços de aprendizado de máquina do Python (no banco de dados)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   Este artigo descreve como instalar os componentes necessários para Python executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de instalação e seguir as instruções interativas.
 
@@ -273,7 +274,7 @@ Se você tiver o SQL Server Enterprise Edition, use o administrador de recursos 
   
      [Opções Server memory de configuração de servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)
   
--   Alterar o número de contas de trabalho que podem ser iniciados por[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]
+-   Alterar o número de contas de trabalho que podem ser iniciados por [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]
   
      [Modificar o pool de conta de usuário do SQL Server R Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md)
 

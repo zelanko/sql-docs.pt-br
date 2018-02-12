@@ -1,5 +1,5 @@
 ---
-title: "Palavras-chave de cadeia de caracteres de Conexão e fonte de dados (DSNs) de nomes | Microsoft Docs"
+title: Conectando ao SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,36 +17,28 @@ helpviewer_keywords:
 - connection string keywords
 - DSNs
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2020ce16f722354b49a7e35e4a3f1e1706b6a2d5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b6ad6278da1a3e325356058df51238dc34018bf0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="connection-string-keywords-and-data-source-names-dsns"></a>Palavras-chave de cadeia de conexão e nomes de fontes de dados (DSNs)
+# <a name="connecting-to-sql-server"></a>Conectar-se ao SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Este tópico discute como você pode criar uma conexão para um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] banco de dados.  
   
 ## <a name="connection-properties"></a>Propriedades da conexão  
-Para esta versão do [!INCLUDE[msCoName](../../../includes/msconame_md.md)] o Driver ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] em Linux ou macOS, você pode usar as seguintes palavras-chave da conexão:  
-  
-||||||  
-|-|-|-|-|-|  
-|`Addr`|`Address`|`ApplicationIntent`|`AutoTranslate`|`Database`|
-|`Driver`|`DSN`|`Encrypt`|`FileDSN`|`MARS_Connection`|  
-|`MultiSubnetFailover`|`PWD`|`Server`|`Trusted_Connection`|`TrustServerCertificate`|  
-|`UID`|`WSID`|`ColumnEncryption`|`TransparentNetworkIPResolution`||  
+
+Consulte [DSN e palavras-chave de cadeia de caracteres de Conexão e atributos](../../../connect/odbc/dsn-connection-string-attribute.md) para todas as palavras-chave de cadeia de caracteres de conexão e os atributos de suporte para Linux e Mac
 
 > [!IMPORTANT]  
 > Ao se conectar a um banco de dados que use o espelhamento de banco de dados (tem um parceiro de failover), não especifique o nome do banco de dados na cadeia de conexão. Em vez disso, enviam um **usar** *database_name* comando para se conectar ao banco de dados antes de executar suas consultas.  
-  
-Para obter mais informações sobre essas palavras-chave, consulte a seção sobre ODBC de [Usando palavras-chave da cadeia de conexão com o SQL Server Native Client](http://go.microsoft.com/fwlink/?LinkID=126696).  
   
 O valor passado para o **Driver** palavra-chave pode ser um dos seguintes:  
   
@@ -71,7 +64,7 @@ Opcionalmente, você pode especificar o protocolo e a porta para se conectar ao 
 Para se conectar a uma instância nomeada em uma porta estática, use <b>Server =</b>*servername*,**port_number**. Não há suporte para a conexão com uma porta dinâmica.  
 
 Como alternativa, você pode adicionar as informações de DSN para um arquivo de modelo e execute o seguinte comando para adicionar ao `~/.odbc.ini` :
- - **Odbcinst -i -s -f** *template_file*  
+ - **odbcinst -i -s -f** *template_file*  
  
 Você pode verificar se o driver está funcionando usando `isql` testar a conexão, ou você pode usar este comando:
  - **master.INFORMATION_SCHEMA.TABLES BCP out OutFile.dat -S <server> - U <name> - P<password>**  
@@ -85,10 +78,10 @@ Para obter mais informações, consulte [criptografando conexões com o SQL Serv
 
 Independentemente das configurações para **Encrypt** e **TrustServerCertificate**, as credenciais de logon do servidor (nome de usuário e senha) sempre são criptografadas. A tabela a seguir mostra o efeito das configurações de **Encrypt** e **TrustServerCertificate** .  
 
-||**TrustServerCertificate = não**|**TrustServerCertificate = yes**|  
+||**TrustServerCertificate=no**|**TrustServerCertificate=yes**|  
 |-|-------------------------------------|------------------------------------|  
-|**Criptografar = não**|O certificado do servidor não é verificado.<br /><br />Os dados enviados entre cliente e servidor não são criptografados.|O certificado do servidor não é verificado.<br /><br />Os dados enviados entre cliente e servidor não são criptografados.|  
-|**Criptografar = Sim**|O certificado do servidor é verificado.<br /><br />Os dados enviados entre cliente e servidor são criptografados.<br /><br />O nome (ou endereço IP) em uma entidade CN (nome comum) ou assunto SAN (nome alternativo) em um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] certificado SSL deve corresponder exatamente, o servidor nome (ou endereço IP) especificado na cadeia de conexão.|O certificado do servidor não é verificado.<br /><br />Os dados enviados entre cliente e servidor são criptografados.|  
+|**Encrypt=no**|O certificado do servidor não é verificado.<br /><br />Os dados enviados entre cliente e servidor não são criptografados.|O certificado do servidor não é verificado.<br /><br />Os dados enviados entre cliente e servidor não são criptografados.|  
+|**Encrypt=yes**|O certificado do servidor é verificado.<br /><br />Os dados enviados entre cliente e servidor são criptografados.<br /><br />O nome (ou endereço IP) em uma entidade CN (nome comum) ou assunto SAN (nome alternativo) em um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] certificado SSL deve corresponder exatamente, o servidor nome (ou endereço IP) especificado na cadeia de conexão.|O certificado do servidor não é verificado.<br /><br />Os dados enviados entre cliente e servidor são criptografados.|  
 
 Por padrão, conexões criptografadas sempre verificam o certificado do servidor. No entanto, se você se conectar a um servidor que tenha um certificado autoassinado, adicione também a `TrustServerCertificate` opção para ignorar a verificação do certificado com a lista de autoridades de certificação confiáveis:  
 
@@ -100,15 +93,18 @@ O SSL usa a biblioteca OpenSSL. A tabela a seguir mostra as versões mínimas co
 
 |Plataforma|Versão mínima do OpenSSL|Local do repositório de confiança de certificado padrão|  
 |------------|---------------------------|--------------------------------------------|
-|Debian 8.71 |1.0.1T|/etc/ssl/certs|
-|macOS 10.12|1.0.2k|/usr/local/etc/OpenSSL/certs|
-|OS X 10.11|1.0.2J|/usr/local/etc/OpenSSL/certs|
-|Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|  
-|Red Hat Enterprise Linux 7|1.0.1E|/etc/pki/tls/cert.pem|
-|SuSE Linux Enterprise 12 |1.0.1I|/etc/ssl/certs|
-|Ubuntu 15.10 |1.0.2D|/etc/ssl/certs|
-|Ubuntu 16.04 |1.0.2G|/etc/ssl/certs|
-|Ubuntu 16.10 |1.0.2G|/etc/ssl/certs|
+|Debian 9|1.1.0|/etc/ssl/certs|
+|Debian 8.71 |1.0.1|/etc/ssl/certs|
+|macOS 10.13|1.0.2|/usr/local/etc/openssl/certs|
+|macOS 10.12|1.0.2|/usr/local/etc/openssl/certs|
+|OS X 10.11|1.0.2|/usr/local/etc/openssl/certs|
+|Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
+|Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
+|SuSE Linux Enterprise 12 |1.0.1|/etc/ssl/certs|
+|SuSE Linux Enterprise 11 |0.9.8|/etc/ssl/certs|
+|Ubuntu 17.10 |1.0.2|/etc/ssl/certs|
+|Ubuntu 16.10 |1.0.2|/etc/ssl/certs|
+|Ubuntu 16.04 |1.0.2|/etc/ssl/certs|
   
 Você também pode especificar criptografia na cadeia de conexão usando o `Encrypt` ao usar a opção **SQLDriverConnect** para se conectar.
 

@@ -10,18 +10,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 76b0c3cd2b472b0d4794a171510906cf05e34d5c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5d9f60684cc749c35674233fbdaaa222953396d9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>Instalar pré-treinado modelos no SQL Server de aprendizado de máquina
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo descreve como adicionar modelos pré-treinado a uma instância do SQL Server que já tem o R Services ou serviços de aprendizado de máquina instalado.
 
@@ -42,8 +43,8 @@ Atualmente, os modelos que estão disponíveis são modelos de rede neurais prof
 A configuração de cada rede baseia as implementações de referência a seguir:
 
 + ResNet-18
-+ 50 ResNet
-+ ResNet 101
++ ResNet-50
++ ResNet-101
 + AlexNet
 
 Para obter mais informações sobre esses modelos, consulte [modelos para detecção de imagem e análise de sentimento de aprendizado de máquina previamente treinada](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)
@@ -119,14 +120,14 @@ Para obter mais informações sobre redes de aprendizado e sua implementação u
 
     + Versão Release candidate 0: **9.1.0.0**
     + Versão Release candidate 1: **9.2.0.22**
-    + NA VERSÃO RTM: **9.2.0.100**
+    + RTM: **9.2.0.100**
     + A atualização cumulativa 1: **9.2.0.24**
 
 6. Se a instalação for bem-sucedida, os modelos a seguir devem ser adicionados ao seu R\_serviços ou PYTHON\_pastas de serviços:
 
     - AlexNet\_Updated.model
     - ImageNet1K\_mean.xml
-    - pretrained.Model
+    - pretrained.model
     - ResNet\_101\_Updated.model
     - ResNet\_18\_Updated.model
     - ResNet\_50\_Updated.model

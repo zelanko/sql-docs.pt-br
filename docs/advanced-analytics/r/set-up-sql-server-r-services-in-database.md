@@ -16,18 +16,19 @@ keywords:
 - "Configurar os serviços de R"
 - "instalar o aprendizado de máquina do SQL"
 ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 04f2502853e21968f2edaac927247eb45730d000
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4d18a45b40c7f80ae2b46514f6c8245b80f6b142
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>Configurar serviços de aprendizado de máquina do SQL Server (no banco de dados)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este tópico descreve como instalar e configurar a seguinte recursos que oferecem suporte à análise no banco de dados no SQL Server de aprendizado de máquina:
 
@@ -41,7 +42,7 @@ Este tópico descreve como instalar e configurar a seguinte recursos que oferece
 
 + Um servidor de aprendizado de máquina com **sem** do SQL Server
 
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a instalação também inclui a opção para instalar uma versão de "autônomo" da componentes de aprendizado de máquina que não exigem o mecanismo de banco de dados e não será executado no SQL Server.  Geralmente, é recomendável que você instale essa opção em um computador diferente do computador que hospeda o SQL Server.
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a instalação também inclui a opção para instalar uma versão de "autônomo" da componentes de aprendizado de máquina que não exigem o mecanismo de banco de dados e não será executado no SQL Server.  Geralmente, é recomendável que você instale essa opção em um computador diferente do computador que hospeda o SQL Server.
     
     [Configurar um servidor autônomo aprendizado de máquina](create-a-standalone-r-server.md).
 

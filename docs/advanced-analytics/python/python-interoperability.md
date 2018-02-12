@@ -14,19 +14,20 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 71b578fb47a7bd7881f2681206a0f69f5c37facb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1edd059c283a0f780f6dd1419d70ed2bedb23f03
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="python-interoperability-with-sql-server"></a>Interoperabilidade do Python com o SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este tópico descreve os componentes do Python que são instalados quando você habilitar o recurso **serviços de aprendizado de máquina (no banco de dados)** e selecione Python como o idioma.
 
 ## <a name="python-components"></a>Componentes do Python
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]Não modifique os executáveis de Python. O tempo de execução do Python é instalado, independentemente das ferramentas do SQL e é executado fora do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] processo.
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Não modifique os executáveis de Python. O tempo de execução do Python é instalado, independentemente das ferramentas do SQL e é executado fora do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] processo.
 
 A distribuição que está associada um determinado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instância pode ser encontrada na pasta associada à instância.
 
@@ -71,6 +72,6 @@ Você pode trabalhar com dados locais, obter dados do SQL Server ou outras fonte
 
 Como parte da instalação dos serviços de aprendizado de máquina com Python, você deve concordar com os termos da licença pública GNU.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
 [Bibliotecas Python e tipos de dados](python-libraries-and-data-types.md)

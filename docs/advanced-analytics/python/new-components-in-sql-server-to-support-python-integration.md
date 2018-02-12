@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 519422bad57d384466b2ff705b331a0731506caf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 495b7757073cea48773dd7c03f32f7ccf4240cd0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>Componentes do SQL Server para dar suporte à integração do Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 A partir do SQL Server 2017, serviços de aprendizado de máquina dá suporte a Python como uma linguagem externa que pode ser executada de T-SQL ou executado remotamente usando o SQL Server como o contexto de computação.
 
@@ -116,7 +117,7 @@ Quando você executa o Python "internos" [!INCLUDE[ssNoVersion_md](../../include
 
 Depois que o script foi incorporado no procedimento armazenado, qualquer aplicativo que pode fazer um procedimento armazenado chamada pode iniciar a execução do código Python.  Depois disso [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] gerencia a execução de código, como resumido no diagrama a seguir.
 
-![script em python de banco de dados](../../advanced-analytics/python/media/script-in-db-python2.png)
+![script-in-db-python](../../advanced-analytics/python/media/script-in-db-python2.png)
 
 1. Uma solicitação para o tempo de execução do Python é indicada pelo parâmetro `@language='Python'` passado para o procedimento armazenado. SQL Server envia a solicitação para o serviço Launchpad.
 2. O serviço Launchpad inicia o iniciador apropriado; Nesse caso, PythonLauncher.
@@ -124,7 +125,7 @@ Depois que o script foi incorporado no procedimento armazenado, qualquer aplicat
 4. BxlServer coordena com o tempo de execução do Python para gerenciar a troca de dados e o armazenamento de resultados de trabalho.
 5. Satélite de SQL gerencia comunicações sobre tarefas relacionadas e processa a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 6. O BxlServer usa Satélite SQL para comunicar o status e os resultados para o [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
-7. O [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] obtém resultados e fecha os processos e tarefas relacionados.
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] obtém resultados e fecha a processos e tarefas relacionadas.
 
 ### <a name="python-scripts-executed-from-a-remote-client"></a>Scripts de Python executados a partir de um cliente remoto
 
@@ -135,7 +136,7 @@ Você pode executar scripts Python em um computador remoto, como um laptop e sej
 
 O diagrama a seguir resume o fluxo de trabalho geral quando os scripts forem enviados de um computador remoto.
 
-![sqlcc remoto do python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
+![remote-sqlcc-from-python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
 
 1. Para as funções que têm suporte em **revoscalepy**, o tempo de execução do Python chama uma função de vinculação, que por sua vez chama BxlServer.
 2. BxlServer está incluído com os serviços de aprendizado de máquina (no banco de dados) e é executado em um processo separado do tempo de execução do Python.
@@ -145,7 +146,7 @@ O diagrama a seguir resume o fluxo de trabalho geral quando os scripts forem env
 6. PythonLauncher faz uma chamada para a instância do Python que está instalado no [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] computador.
 7. Os resultados são retornados ao BxlServer.
 8. O Satélite SQL gerencia a comunicação com o [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e a limpeza dos objetos de trabalho relacionados.
-9. O [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] passa os resultados de volta para o cliente.
+9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] passa os resultados ao cliente.
 
 ## <a name="next-steps"></a>Próximas etapas
 

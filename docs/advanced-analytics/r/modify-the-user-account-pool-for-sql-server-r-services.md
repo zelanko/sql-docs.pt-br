@@ -10,24 +10,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 58b79170-5731-46b5-af8c-21164d28f3b0
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 2e31ecde894070c9b7b38dbe5e2c9e310ad71c5f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d12de2f8298e23d5396d7caf2496b293f1bf28ed
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="modify-the-user-account-pool-for-sql-server-machine-learning"></a>Modificar o pool de conta de usuário para o aprendizado de máquina do SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Como parte do processo de instalação para os [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], um novo *pool de contas de usuário* do Windows é criado para dar suporte à execução de tarefas pelo serviço [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]. O objetivo dessas contas de trabalho é isolar a execução simultânea de scripts externos por diferentes usuários do SQL.
 
 Este artigo descreve a configuração padrão, a segurança e a capacidade para as contas de trabalho e como alterar a configuração padrão.
 
-**Aplica-se a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**Aplica-se a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ## <a name="worker-accounts-used-for-external-script-execution"></a>Contas de trabalho usadas para a execução do script externo
 
@@ -61,7 +62,7 @@ O número de contas nesse pool determina quantas sessões de script externo pode
 
 Quando o mesmo usuário executa vários scripts externos ao mesmo tempo, todas as sessões de execução que o usuário usam a mesma conta de trabalho. Por exemplo, um único usuário pode ter diferentes 100 scripts de R em execução simultaneamente, contanto que permitem que recursos, mas todos os scripts seriam executados usando uma conta de trabalho único.
 
-O número de contas de trabalho que você pode dar suporte e o número de sessões simultâneas que qualquer usuário pode executar, é limitado apenas pelos recursos de servidor. Normalmente, a memória é o primeiro afunilamento que você encontrará ao usar o tempo de execução de R.
+O número de contas de trabalho que você pode dar suporte e o número de sessões simultâneas que qualquer usuário pode executar, é limitado apenas pelos recursos de servidor. Normalmente, a memória é o primeiro gargalo que você encontrará ao usar o tempo de execução de R.
 
 Os recursos que podem ser usados pelos scripts Python ou R são administrados pelo SQL Server. É recomendável monitorar o uso de recursos usando DMVs do SQL Server ou examinar os contadores de desempenho no objeto de trabalho associado do Windows, para então ajustar o uso de memória do servidor de acordo com isso. Se você tiver o SQL Server Enterprise Edition, você pode alocar recursos usados para a execução de scripts externos, configurando uma [pool de recursos externos](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md).
 

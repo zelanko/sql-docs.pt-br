@@ -15,13 +15,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 737087692cff4d5b76336b1a31b58e2f9390abfc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4272a0f421bc8286fc9be7be44e3b7ef8cc13905
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>Visão geral da arquitetura de serviços de aprendizado de máquina do SQL Server 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este tópico descreve as metas da estrutura de extensibilidade que dá suporte à execução de script de Python e R no SQL Server.
 
@@ -108,6 +109,6 @@ Não tem certeza qual solução de aprendizado de máquina atende às suas neces
 
   Uma interface de arrastar e soltar baseado em nuvem para a criação de fluxos de trabalho aprendizado de máquina, juntamente com a capacidade de automatizar e integrar aplicativos por meio de serviços web e PowerShell
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
 [Comparar os produtos de servidor de aprendizado de máquina e Microsoft R](https://docs.microsoft.com/machine-learning-server/what-is-r-server-interoperability)

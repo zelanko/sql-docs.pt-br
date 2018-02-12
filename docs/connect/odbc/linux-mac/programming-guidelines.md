@@ -1,5 +1,5 @@
 ---
-title: "Diretrizes de programação | Microsoft Docs"
+title: "Diretrizes de programação (Driver ODBC para SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/11/2018
 ms.prod: sql-non-specified
@@ -8,18 +8,19 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 118099ee43fa1644c8026f968dc041ea148588f1
-ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
+ms.openlocfilehash: fd8952f28f389fa5f1b8f82072998676c5a4196e
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="programming-guidelines"></a>Diretrizes de programação
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 01/12/2018
 
 Os recursos de programação do [!INCLUDE[msCoName](../../../includes/msconame_md.md)] o Driver ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] em macOS e Linux são baseados em ODBC no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client é baseado em ODBC no Windows Data Access Components ([referência do programador de ODBC](http://go.microsoft.com/fwlink/?LinkID=45250)).  
 
-Um aplicativo ODBC pode usar vários conjuntos de MARS (resultados ativos) e outros [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] recursos específicos, incluindo `/usr/local/include/msodbcsql.h` depois de incluir os cabeçalhos de unixODBC (`sql.h`, `sqlext.h`, `sqltypes.h`, e `sqlucode.h`). Em seguida, usar os mesmos nomes simbólicos para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-itens específicos que você usaria em seus aplicativos de ODBC do Windows.
+Um aplicativo ODBC pode usar vários conjuntos de MARS (resultados ativos) e outros [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] recursos específicos, incluindo `/usr/local/include/msodbcsql.h` depois de incluir os cabeçalhos de unixODBC (`sql.h`, `sqlext.h`, `sqltypes.h`, e `sqlucode.h`). Em seguida, usar os mesmos nomes simbólicos para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-itens específicos que você deseja usar em seus aplicativos de ODBC do Windows.
 
 ## <a name="available-features"></a>Recursos disponíveis  
 As seções a seguir do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] documentação Native Client para ODBC ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) são válidas ao usar o driver ODBC no macOS e Linux:  
@@ -54,7 +55,7 @@ As seções a seguir do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.
 Os recursos a seguir não foram confirmados para funcionar corretamente nesta versão do driver ODBC no macOS e Linux:
 
 -   Conexão de Cluster de failover
--   [Resolução IP de rede transparente](https://docs.microsoft.com/en-us/sql/connect/odbc/linux/using-transparent-network-ip-resolution)
+-   [Resolução IP de rede transparente](https://docs.microsoft.com/en-us/sql/connect/odbc/linux/using-transparent-network-ip-resolution) (antes do Driver ODBC 17)
 -   [Rastreamento de Driver Avançado](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
 
 Os seguintes recursos não estão disponíveis nesta versão do driver ODBC no macOS e Linux: 
@@ -83,8 +84,8 @@ Para o ODBC Driver 13 e 13.1, os dados SQLCHAR devem ser UTF-8. Não há outras 
 |-|-|
 |UTF-8|Unicode|
 |CP437|Latino MS-DOS dos EUA|
-|CP850|MS-DOS Latino 1|
-|CP874|Latino/tailandês|
+|CP850|MS-DOS Latin 1|
+|CP874|Latin/Thai|
 |CP932|Japonês Shift JIS|
 |CP936|Chinês simplificado, GBK|
 |CP949|Coreano, EUC-KR|
@@ -94,27 +95,27 @@ Para o ODBC Driver 13 e 13.1, os dados SQLCHAR devem ser UTF-8. Não há outras 
 |CP1256|Árabe|
 |CP1257|Báltico|
 |CP1258|Vietnamita|
-|ISO 8859-1 / CP1252|Latin-1|
-|ISO 8859-2 / CP1250|Latino-2|
-|ISO 8859-3|Latino-3|
-|ISO 8859-4|4-latino|
-|ISO 8859-5|Latino/cirílico|
+|ISO-8859-1 / CP1252|Latin-1|
+|ISO-8859-2 / CP1250|Latino-2|
+|ISO-8859-3|Latino-3|
+|ISO-8859-4|4-latino|
+|ISO-8859-5|Latino/cirílico|
 |ISO-8859-6|Latino/árabe|
 |ISO-8859-7|Latino/grego|
 |ISO-8859-8 / CP1255|Hebraico|
 |ISO-8859-9 / CP1254|Turco|
 |ISO-8859-13|7-latino|
-|ISO 8859-15|Latino 9|
+|ISO-8859-15|Latino 9|
 
-Após a conexão, o driver detecta a localidade atual do processo, que ele é carregado no. Se usar uma das codificações acima, o driver usará a codificação para os dados SQLCHAR (caractere estreito); Caso contrário, o padrão é UTF-8. Como todos os processos de iniciar na localidade "C" por padrão (e, portanto, fazer com que o driver padrão para UTF-8), se um aplicativo precisar usar uma das codificações acima, ele deve usar o **setlocale** função para definir a localidade adequadamente antes conexão; especificando o local desejado explicitamente ou usar uma cadeia de caracteres vazia, por exemplo `setlocale(LC_ALL, "")` para usar as configurações de localidade do ambiente.
+Após a conexão, o driver detecta a localidade atual do processo, que ele é carregado no. Se usar uma das codificações acima, o driver usa a codificação para os dados SQLCHAR (caractere estreito); Caso contrário, o padrão é UTF-8. Como todos os processos de iniciar na localidade "C" por padrão (e, portanto, fazer com que o driver padrão para UTF-8), se um aplicativo precisar usar uma das codificações acima, ele deve usar o **setlocale** função para definir a localidade adequadamente antes conexão; especificando o local desejado explicitamente ou usando uma cadeia de caracteres vazia como `setlocale(LC_ALL, "")` para usar as configurações de localidade do ambiente.
 
-Assim, em um típico Linux ou Mac ambiente onde a codificação UTF-8, os usuários de ODBC Driver 17 atualizar do 13 ou 13.1 não observará diferenças. No entanto, os aplicativos que usam uma codificação não-UTF-8 na lista acima via `setlocale()` precisará usar a codificação de dados para/do driver em vez de UTF-8.
+Assim, em um típico Linux ou Mac ambiente onde a codificação UTF-8, os usuários de ODBC Driver 17 atualizar do 13 ou 13.1 não observará diferenças. No entanto, aplicativos que usam uma codificação não-UTF-8 na lista acima via `setlocale()` precisa usar a codificação de dados para/do driver em vez de UTF-8.
 
 Os dados SQLWCHAR devem ser UTF-16LE (Little Endian).
 
 Ao associar parâmetros de entrada com SQLBindParameter, se o tipo de SQL de um caractere estreito, como SQL_VARCHAR for especificado, o driver converte os dados fornecidos do cliente de codificação para o padrão (normalmente página de código 1252) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] codificação. Parâmetros de saída, o driver converte da codificação especificada nas informações de agrupamento associadas aos dados para o cliente de codificação. No entanto, é possível a perda de dados---caracteres na codificação de origem não representáveis na codificação de destino serão convertidos para um ponto de interrogação ('? ').
 
-Para evitar a perda de dados ao associar parâmetros de entrada, especifique um tipo de caractere SQL Unicode, como SQL_NVARCHAR. Nesse caso, o driver converterá do cliente codificação como UTF-16, o que pode representar todos os caracteres Unicode. Além disso, a coluna de destino ou o parâmetro do servidor também deve ser um tipo de Unicode (**nchar**, **nvarchar**, **ntext**) ou um arquivo com uma agrupamento/codificação que pode representa todos os caracteres da fonte de dados original. Para evitar perda de dados com parâmetros de saída, especifique um tipo SQL Unicode e qualquer um Unicode tipo C (SQL_C_WCHAR), fazendo com que o driver retornar dados como UTF-16. ou um estreito C digite e certifique-se de que o cliente a codificação pode representar todos os caracteres da fonte de dados (Isso é sempre possível com UTF-8.)
+Para evitar a perda de dados ao associar parâmetros de entrada, especifique um tipo de caractere SQL Unicode, como SQL_NVARCHAR. Nesse caso, o driver converte do cliente codificação como UTF-16, o que pode representar todos os caracteres Unicode. Além disso, a coluna de destino ou o parâmetro do servidor também deve ser um tipo de Unicode (**nchar**, **nvarchar**, **ntext**) ou um arquivo com uma agrupamento/codificação, que pode representa todos os caracteres da fonte de dados original. Para evitar perda de dados com parâmetros de saída, especifique um tipo SQL Unicode e qualquer um Unicode tipo C (SQL_C_WCHAR), fazendo com que o driver retornar dados como UTF-16. ou um estreito C digite e certifique-se de que o cliente a codificação pode representar todos os caracteres da fonte de dados (Isso é sempre possível com UTF-8.)
 
 Para obter mais informações sobre codificações e agrupamentos, consulte [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md).
 
