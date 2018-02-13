@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect (Driver de acesso) | Microsoft Docs
+title: SQLDriverConnect (Access Driver) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,26 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Access driver [ODBC], SQLDriverConnect
 - SQLDriverConnect function [ODBC], Access Driver
 ms.assetid: 9d133e9b-7545-464d-aa3c-677fa7e2a41d
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 7362786d12678d90554cb0e7dab2d612fd061d2b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
-# <a name="sqldriverconnect-access-driver"></a>SQLDriverConnect (Driver de acesso)
+# <a name="sqldriverconnect-access-driver"></a>SQLDriverConnect (Access Driver)
 > [!NOTE]  
 >  Este tópico fornece informações específicas de Driver de acesso. Para obter informações gerais sobre esta função, consulte o tópico apropriado em [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
@@ -42,4 +43,4 @@ ms.lasthandoff: 12/21/2017
   
 |Driver|Palavras-chave necessárias|Exemplos|  
 |------------|-----------------------|--------------|  
-|Microsoft Access|Driver, DBQ|Driver = {Driver do Microsoft Access (*.mdb)}; DBQ = c:\\\temp\\\sample.mdb|
+|Microsoft Access|Driver, DBQ|Driver={Microsoft Access Driver (*.mdb)}; DBQ=c:\\\temp\\\sample.mdb|

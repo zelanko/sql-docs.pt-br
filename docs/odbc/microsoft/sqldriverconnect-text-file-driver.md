@@ -8,23 +8,24 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLDriverConnect function [ODBC], Text File Driver
 - text file driver [ODBC], SQLDriverConnect
 ms.assetid: d7769021-bd18-4d8e-96e0-e184a82d6ca3
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: fffb547846ce9ac3c6c50ac3421b08677cedee66
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sqldriverconnect-text-file-driver"></a>SQLDriverConnect (Driver do arquivo de texto)
 > [!NOTE]  
@@ -41,4 +42,4 @@ ms.lasthandoff: 12/21/2017
   
 |Driver|Palavras-chave necessárias|Exemplos|  
 |------------|-----------------------|--------------|  
-|Texto|Driver|Driver = {Driver de texto da Microsoft (*. txt;\*. CSV)}; DefaultDir = c:\temp|
+|Texto|Driver|Driver={Microsoft Text Driver (*.txt;\*.csv)}; DefaultDir=c:\temp|

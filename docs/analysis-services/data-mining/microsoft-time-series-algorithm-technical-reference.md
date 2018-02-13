@@ -29,19 +29,20 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 40d0c34ea4bb7e95d77ff6aa37695da4080c20ac
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Referência técnica do algoritmo MTS
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo MTS inclui dois algoritmos separados para análise de série temporal:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O algoritmo MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) inclui dois algoritmos separados para análise de série temporal:  
   
 -   O algoritmo ARTXP, introduzido no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], foi otimizado para prever o próximo valor provável em uma série.  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 01/08/2018
 >  O algoritmo MTS está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; no entanto, alguns recursos avançados, incluindo parâmetros para personalização da análise de série temporal, têm suporte apenas em edições específicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).  
   
 ### <a name="detection-of-seasonality"></a>Detecção de periodicidade  
- Os algoritmos ARIMA e de ARTXP dão suporte à detecção de sazonalidade ou periodicidade. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa transformação Fast Fourier para detectar sazonalidade antes de treinar. No entanto, é possível afetar a detecção de sazonalidade e os resultados de análise de série temporal, com a definição de parâmetros de algoritmo.  
+ Os algoritmos ARIMA e de ARTXP dão suporte à detecção de sazonalidade ou periodicidade. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa transformação Fast Fourier para detectar sazonalidade antes de treinar. No entanto, é possível afetar a detecção de sazonalidade e os resultados de análise de série temporal, com a definição de parâmetros de algoritmo.  
   
 -   Com a alteração do valor de *AUTODETECT_SEASONALITY*, é possível influenciar o número de segmentos de tempo possíveis que são gerados.  
   
@@ -142,7 +143,7 @@ ms.lasthandoff: 01/08/2018
 |*FORECAST_METHOD*|Especifica qual algoritmo deve ser usado para análise e previsão. Os valores possíveis são ARTXP, ARIMA e MIXED. O padrão é MIXED.|  
 |*HISTORIC_MODEL_COUNT*|Especifica o número de modelos de histórico que será criado. O padrão é 1.<br /><br /> Observação: esse parâmetro está disponível apenas em algumas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*HISTORICAL_MODEL_GAP*|Especifica o intervalo de tempo entre dois modelos de histórico consecutivos. O padrão é 10. O valor representa um número de unidades de tempo, onde a unidade é definida pelo modelo.<br /><br /> Por exemplo, a configuração desse valor como g resulta na criação de modelos de histórico para dados truncados por frações de tempo em intervalos de g, 2*g, 3\*g e assim por diante.<br /><br /> Observação: esse parâmetro está disponível apenas em algumas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|*INSTABILITY_SENSITIVITY*|Controla o ponto no qual a variância de previsão excede determinado limite, depois do qual o algoritmo ARTXP suprime previsões. O valor padrão é 1.<br /><br /> Observação: esse parâmetro não se aplica a modelos que usam apenas ARIMA.<br /><br /> O valor padrão de 1 fornece o mesmo comportamento como no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] monitora o desvio padrão normalizado para cada previsão. Assim que esse valor excede o limite de qualquer previsão, o algoritmo de série temporal retorna NULL e interrompe o processo de previsão.<br /><br /> Um valor de [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] interrompe a detecção de instabilidade. Isso significa que você pode criar um número infinito de previsões, independentemente da variação.<br /><br /> Observação: esse parâmetro pode ser modificado somente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa somente o valor padrão 1.|  
+|*INSTABILITY_SENSITIVITY*|Controla o ponto no qual a variância de previsão excede determinado limite, depois do qual o algoritmo ARTXP suprime previsões. O valor padrão é 1.<br /><br /> Observação: esse parâmetro não se aplica a modelos que usam apenas ARIMA.<br /><br /> O valor padrão de 1 fornece o mesmo comportamento como no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] monitora o desvio padrão normalizado para cada previsão. Assim que esse valor excede o limite de qualquer previsão, o algoritmo de série temporal retorna NULL e interrompe o processo de previsão.<br /><br /> Um valor de [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] interrompe a detecção de instabilidade. Isso significa que você pode criar um número infinito de previsões, independentemente da variação.<br /><br /> Observação: esse parâmetro pode ser modificado somente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa somente o valor padrão 1.|  
 |*MAXIMUM_SERIES_VALUE*|Especifica o valor máximo para usar em previsões. Esse parâmetro é usado, juntamente com *MINIMUM_SERIES_VALUE*, para restringir as previsões a algum intervalo esperado. Por exemplo, você pode especificar que a quantidade de vendas prevista para qualquer dia nunca deve exceder o número de produtos no inventário.<br /><br /> Observação: esse parâmetro está disponível apenas em algumas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*MINIMUM_SERIES_VALUE*|Especifica o valor mínimo que pode ser previsto. Esse parâmetro é usado, juntamente com *MAXIMUM_SERIES_VALUE*, para restringir as previsões a algum intervalo esperado. Por exemplo, você pode especificar que a quantidade de vendas prevista nunca deve ser um número negativo.<br /><br /> Observação: esse parâmetro está disponível apenas em algumas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*MINIMUM_SUPPORT*|Especifica o número mínimo de intervalos de tempo necessário para gerar uma divisão em cada árvore de série temporal. O padrão é 10.|  
@@ -164,7 +165,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="input-and-predictable-columns"></a>Colunas de entrada e colunas previsíveis  
  O algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series oferece suporte a tipos de conteúdo da coluna de entrada, tipos de conteúdo da coluna previsível e sinalizadores de modelagem específicos, relacionados na tabela a seguir:  
   
-|coluna|Tipos de conteúdo|  
+|Coluna|Tipos de conteúdo|  
 |------------|-------------------|  
 |Atributo de entrada|Continuous, Key, Key Time e Table|  
 |Atributo previsível|Continuous e Table|  
@@ -172,9 +173,9 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Os tipos de conteúdo Cíclico e Ordenado têm suporte, mas o algoritmo os trata como valores discretos e não executa processamento especial.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Algoritmo MTS](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Exemplos de consulta de modelo de série temporal](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de série temporal &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de série temporal &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

@@ -14,12 +14,12 @@ description: "Descreve como os dados de backup e restauração works para SQL Se
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
-caps.latest.revision: "50"
+caps.latest.revision: 
 ms.openlocfilehash: 06863b600ed62d795db82aa5aa3ae5c88578833a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="backup-and-restore"></a>Backup e restauração
 Descreve como os dados de backup e restauração works para SQL Server Parallel Data Warehouse (PDW). Operações de backup e restauração são usadas para recuperação de desastres. Backup e restauração também podem ser usados para copiar um banco de dados de um dispositivo para outro dispositivo.  
@@ -129,11 +129,11 @@ Por exemplo, ao restaurar um banco de dados de 60 GB de um dispositivo de 2 nós
   
 Após a redistribuição cada nó de computação contém menos dados reais e mais espaço livre do que cada nó de computação no dispositivo de origem menor. Use o espaço adicional para adicionar mais dados ao banco de dados. Se o tamanho do banco de dados restaurado é maior do que o necessário, você pode usar [ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md) para reduzir o tamanho dos arquivos de banco de dados.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Backup e restauração tarefas|Description|  
 |---------------------------|---------------|  
-|Prepare um servidor como um servidor de backup.|[Adquirir e configurar um servidor de backup](acquire-and-configure-backup-server.md)|  
+|Prepare um servidor como um servidor de backup.|[Adquirir e configurar um servidor de backup ](acquire-and-configure-backup-server.md)|  
 |Fazer backup de um banco de dados.|[BANCO DE DADOS DE BACKUP](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
 |Restaure um banco de dados.|[RESTAURAR BANCO DE DADOS](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
 <!-- MISSING LINKS
