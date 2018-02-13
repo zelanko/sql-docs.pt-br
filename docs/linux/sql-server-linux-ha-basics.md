@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: d53e54c6e8e74970316de557ddf3bd60a09e9ffe
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fd2079b0b0186192fc3b55e7a6ccefd25c1a46bc
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Noções básicas de disponibilidade do SQL Server para implantações do Linux
 
@@ -32,7 +32,7 @@ Além de backup e restauração, os mesmos recursos de disponibilidade de três 
 -   Sempre em instâncias de Cluster de Failover (FCIs)
 -   [Envio de log](sql-server-linux-use-log-shipping.md)
 
-No Windows, FCIs sempre requerem um cluster de failover subjacente do Windows Server (WSFC). Dependendo do cenário de implantação, um grupo de disponibilidade geralmente não requer um WSFC subjacente, com a exceção que está sendo a nova variante em [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Um WSFC não existe no Linux. Clustering de implementação no Linux é abordado abaixo em [Pacemaker para cluster de failover e grupos de disponibilidade AlwaysOn instâncias no Linux](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux).
+No Windows, FCIs sempre requerem um cluster de failover subjacente do Windows Server (WSFC). Dependendo do cenário de implantação, um grupo de disponibilidade geralmente não requer um WSFC subjacente, com a exceção que está sendo a nova variante em [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Um WSFC não existe no Linux. Clustering de implementação no Linux é discutida na seção [Pacemaker para cluster de failover e grupos de disponibilidade AlwaysOn instâncias no Linux](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux).
 
 ## <a name="a-quick-linux-primer"></a>Uma rápida introdução do Linux
 Embora algumas instalações Linux podem ser instaladas com uma interface, a maioria não é, que significa que quase tudo na camada de sistema operacional é feito por meio da linha de comando. O termo comuns para esta linha de comando no mundo Linux é um *bash shell*.
@@ -59,9 +59,9 @@ Alguns comandos comuns, cada um deles tem várias opções que podem ser pesquis
 Esta seção aborda as tarefas que são comuns a todos os baseados em Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] implantações.
 
 ### <a name="ensure-that-files-can-be-copied"></a>Certifique-se de que os arquivos podem ser copiados
-Uma coisa que qualquer pessoa usando [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Linux deve ser capaz de fazer é copiar os arquivos de um servidor para outro. Essa tarefa é muito importante para as configurações do grupo de disponibilidade.
+Copiar arquivos de um servidor para outro é uma tarefa que qualquer pessoa usando [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Linux deve ser capaz de fazer. Essa tarefa é muito importante para as configurações do grupo de disponibilidade.
 
-Coisas como problemas de permissão podem existir no Linux, bem como em instalações baseadas em Windows. No entanto, aqueles que estão familiarizados com a cópia de servidor para servidor no Windows podem não estar familiarizados com como é feito no Linux. Um método comum é usar o utilitário de linha de comando `scp`, que significa de cópia seguro. Nos bastidores, `scp` usa OpenSSH. SSH significa do secure shell. Dependendo da distribuição de Linux, OpenSSH em si não pode ser instalado. Se não estiver, OpenSSH precisará ser instalado primeiro. Para obter mais informações sobre como configurar OpenSSH, consulte as informações nos seguintes links para cada distribuição:
+Coisas como problemas de permissão podem existir no Linux, bem como em instalações baseadas em Windows. No entanto, aqueles que estão familiarizados com a cópia de servidor para servidor no Windows podem não estar familiarizados com como é feito no Linux. Um método comum é usar o utilitário de linha de comando `scp`, que significa de cópia seguro. Nos bastidores, `scp` usa OpenSSH. SSH significa do secure shell. Dependendo da distribuição de Linux, OpenSSH em si não pode ser instalado. Se não estiver, OpenSSH precisa ser instalado primeiro. Para obter mais informações sobre como configurar OpenSSH, consulte as informações nos seguintes links para cada distribuição:
 -   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-OpenSSH.html)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
@@ -135,7 +135,7 @@ Quando grupos de disponibilidade ou FCIs são configuradas em uma configuração
 Os pacotes opcionais para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] pesquisa de texto completo (*fts do mssql server*) e [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql servidor é*), não são necessário para alta disponibilidade, para uma FCI ou um grupo de disponibilidade.
 
 ## <a name="pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux"></a>Pacemaker para grupos de disponibilidade AlwaysOn e instâncias de cluster de failover no Linux
-Conforme observado acima, o único mecanismo de clustering com suporte no momento pela Microsoft para grupos de disponibilidade e FCIs é Pacemaker com Corosync. Esta seção aborda as informações básicas para entender a solução, bem como planejar e implantá-lo para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] configurações.
+Anterior como observado, o único mecanismo de clustering com suporte no momento pela Microsoft para grupos de disponibilidade e FCIs é Pacemaker com Corosync. Esta seção aborda as informações básicas para entender a solução, bem como planejar e implantá-lo para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] configurações.
 
 ### <a name="ha-add-onextension-basics"></a>Noções básicas de add-on/extensão de alta disponibilidade
 Todas as distribuições com suporte no momento enviar uma alta disponibilidade add-on/extensão, que se baseia o Pacemaker clustering pilha. Esta pilha incorpora dois componentes principais: Pacemaker e Corosync. Todos os componentes da pilha são:
@@ -247,7 +247,7 @@ Atualmente, não há nenhuma maneira direta de um WSFC e um cluster Pacemaker pa
 -   Um AG distribuída, que é um tipo especial de grupo de disponibilidade que permite que dois grupos de disponibilidade diferentes a ser configurado como seu próprio grupo de disponibilidade. Para obter mais informações sobre grupos de disponibilidade distribuídas, consulte a documentação [grupos de disponibilidade distribuída](../database-engine/availability-groups/windows/distributed-availability-groups.md).
 
 #### <a name="other-linux-distributions"></a>Outras distribuições do Linux
-No Linux, todos os nós de um cluster de Pacemaker devem ser no mesmo de distribuição. Por exemplo, isso significa que um nó RHEL não pode ser parte de um cluster de Pacemaker que tem um nó SLES. O principal motivo para isso foi mencionado acima: as distribuições podem ter diferentes versões e funcionalidades, então as coisas podem não funcionar corretamente. Combinação de distribuições tem o mesmo texto como misturar WSFCs e Linux: usar nenhum ou distribuído grupos de disponibilidade.
+No Linux, todos os nós de um cluster de Pacemaker devem ser no mesmo de distribuição. Por exemplo, isso significa que um nó RHEL não pode ser parte de um cluster de Pacemaker que tem um nó SLES. O principal motivo para isso foi mencionado anteriormente: as distribuições podem ter diferentes versões e funcionalidades, então as coisas podem não funcionar corretamente. Combinação de distribuições tem o mesmo texto como misturar WSFCs e Linux: usar nenhum ou distribuído grupos de disponibilidade.
 
 ## <a name="next-steps"></a>Próximas etapas
 [Implantar um cluster de Pacemaker para o SQL Server no Linux](sql-server-linux-deploy-pacemaker-cluster.md)
