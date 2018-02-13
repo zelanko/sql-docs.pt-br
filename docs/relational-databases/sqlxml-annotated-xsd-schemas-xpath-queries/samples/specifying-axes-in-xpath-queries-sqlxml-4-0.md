@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - parent axis
 - axes [SQLXML]
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c89170aabd6734292fb6193a90161bb5001bf11
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aa306b70eaa1c91b352a6e2e19e7b76c4aabf52c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Especificando eixos em consultas XPath (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Os exemplos a seguir mostram como os eixos são especificados em consultas XPath.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Os seguintes exemplos mostram como os eixos são especificados em consultas XPath.  
   
  As consultas XPath nesses exemplos são especificadas com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre esse esquema de exemplo, consulte [anotado de exemplo de esquema XSD para exemplos de XPath &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
@@ -167,7 +169,7 @@ ms.lasthandoff: 11/17/2017
   
  Se a consulta XPath é especificada como `Customer/Order/OrderDetail`, de cada nó que corresponde a  **\<cliente >** navega a consulta para seu  **\<ordem >** elementos. E para cada nó que corresponde a  **\<ordem >**, a consulta adiciona nós  **\<OrderDetail >** ao resultado. Somente  **\<OrderDetail >** é retornado no conjunto de resultados.  
   
-### <a name="c-use--to-specify-the-parent-axis"></a>C. Usar .. para especificar o eixo pai  
+### <a name="c-use--to-specify-the-parent-axis"></a>C. Usar . para especificar o eixo pai  
  A consulta a seguir recupera todos os  **\<ordem >** elementos com um pai  **\<cliente >** elemento com um **CustomerID** atributo valor de 1. A consulta usa o **filho** eixo no predicado para localizar o pai do  **\<ordem >** elemento.  
   
 ```  

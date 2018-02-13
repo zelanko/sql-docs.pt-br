@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Active
-ms.openlocfilehash: 14119be0cc95be9f7acb324553b0c0598896c5d9
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: caf053ca9dc50df6d3433a11e992e097f2147d7a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Use o código do Visual Studio para criar e executar scripts Transact-SQL para SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este tópico mostra como usar o **mssql** extensão para o código do Visual Studio (VS código) para desenvolver bancos de dados do SQL Server.
+Este artigo mostra como usar o **mssql** extensão para o código do Visual Studio (VS código) para desenvolver bancos de dados do SQL Server.
 
 Código do Visual Studio é um editor de código gráfica para Linux, macOS e Windows que oferece suporte a extensões. O [**mssql** extensão para código VS] permite que você se conectar ao SQL Server, a consulta com o Transact-SQL (T-SQL) e exibir os resultados.
 
@@ -105,7 +105,7 @@ As etapas a seguir mostram como se conectar ao SQL Server com o código de VS.
    | **[Opcional] Insira um nome para este perfil** | O nome do perfil de Conexão. Por exemplo, você pode nomear o perfil **localhost perfil**. 
 
    > [!Tip] 
-   > Você pode criar e editar perfis de conexão no arquivo de configurações do usuário (settings.json). Abra o arquivo de configurações selecionando **preferência** e **as configurações do usuário** no menu de código VS. Para obter mais detalhes, consulte [gerenciar perfis de conexão].
+   > Você pode criar e editar perfis de conexão no arquivo de configurações do usuário (settings.json). Abra o arquivo de configurações selecionando **preferência** e **as configurações do usuário** no menu de código VS. Para obter mais informações, consulte [gerenciar perfis de conexão].
 
 6. Pressione a tecla **ESC** para fechar a mensagem de informações que informa que o perfil está criado e conectado.
 

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - mapping schema [SQLXML], queries
 - XPath queries [SQLXML], samples
 ms.assetid: 1595c2d4-0e9c-4969-84c8-a793a32df57d
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 56b2782416b3d980fa6e821272f2bf78976fbaf2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f74a4c80ca1536d0a2d326ef7a89ab791ec0ad7f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>Consultas XPath de exemplo (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Esta seção fornece exemplos de consultas XPath para SQLXML 4.0. Para fins de ilustração, essas consultas XPath de exemplo são especificadas em um modelo executado usando o ADO. Por isso, você deve usar um arquivo de esquema de mapeamento, SampleSchema1.xml, também fornecido nesta seção. Salve este arquivo no diretório onde seus modelos estão armazenados.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Esta seção apresenta exemplos de consultas XPath para SQLXML 4.0. Para fins de ilustração, essas consultas XPath de exemplo são especificadas em um modelo executado usando o ADO. Por isso, você deve usar um arquivo de esquema de mapeamento, SampleSchema1.xml, também fornecido nesta seção. Salve este arquivo no diretório onde seus modelos estão armazenados.  
   
 > [!NOTE]  
 >  As consultas de exemplo desta seção são agrupadas pelo tipo de operação XPath é executada pela consulta.  

@@ -22,19 +22,20 @@ helpviewer_keywords:
 - notifications [WMI]
 - WMI Provider for Server Events, security
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dd4fd5dbd42a132dd5f3ab8f6eef376f1b6fc3dc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: da5cc9e2163ba86ebb26f631c8b35d8590de27c5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>Trabalhando com o Provedor WMI para Eventos de Servidor
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Este tópico fornece diretrizes que você deve considerar antes de programar usando o provedor WMI para eventos de servidor.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Este tópico fornece diretrizes que você deve considerar antes de programar o uso do Provedor WMI para Eventos de Servidor.  
   
 ## <a name="enabling-service-broker"></a>Habilitando o Service Broker  
  O Provedor WMI para Eventos de Servidor funciona traduzindo consultas WQL de eventos para notificações de eventos no banco de dados de destino. Um entendimento de como funcionam as notificações de eventos pode ser útil ao programar com base no provedor. Para obter mais informações, consulte [Provedor WMI para conceitos de eventos de servidor](http://technet.microsoft.com/library/ms180560.aspx).  
@@ -117,7 +118,7 @@ WHERE DatabaseName = "AdventureWorks2012"
 ## <a name="working-with-event-data-on-the-client-side"></a>Trabalhando com dados de evento no lado do cliente  
  Depois que o provedor WMI para eventos de servidor cria a notificação de evento solicitada no banco de dados de destino, a notificação de evento envia dados de evento para o serviço de destino no MSBD chamado **notificações/SQL/ProcessWMIEventProviderNotification /v1.0**. O serviço de destino coloca o evento em uma fila em **msdb** que é chamada de **WMIEventProviderNotificationQueue**. (O serviço e a fila são criados dinamicamente pelo provedor quando ele se conecta pela primeira vez ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) O provedor lê os dados de evento XML dessa fila e os transforma em MOF (formato de objeto gerenciado) antes de devolvê-los ao aplicativo cliente. Os dados MOF consistem nas propriedades do evento que é solicitado pela consulta WQL como uma definição de classe de modelo CIM. Cada propriedade tem um tipo CIM correspondente. Por exemplo, a propriedade `SPID` é retornada como tipo CIM **Sint32**. Os tipos CIM para cada propriedade são listados sob cada classe de evento em [provedor WMI para Classes de eventos do servidor e as propriedades](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Provedor WMI para conceitos de eventos de servidor](http://technet.microsoft.com/library/ms180560.aspx)  
   
   

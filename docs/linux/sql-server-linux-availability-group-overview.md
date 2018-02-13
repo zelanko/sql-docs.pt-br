@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: bfd36553e4ac30b6d551e60cde02d57a7eec8fbc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b9dd4b05cf69b8556c4c021e2ede576b1a805c5e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Sempre em grupos de disponibilidade no Linux
 
@@ -65,9 +65,9 @@ Há três valores que podem ser definidos para `required_synchronized_secondarie
 -   1 – uma réplica secundária deve estar em um estado sincronizado com o primário; é possível o failover automático. O banco de dados primário não está disponível até que uma réplica de síncrona secundária está disponível.
 -   2 – ambas as réplicas secundárias em uma configuração de AG três ou mais nós devem ser sincronizadas com o primário; é possível o failover automático.
 
-`required_synchronized_secondaries_to_commit`Controla não apenas o comportamento de failover com réplicas síncronas, mas a perda de dados. Com um valor de 1 ou 2, uma réplica secundária sempre é necessária para ser sincronizada, que sempre será a redundância de dados. Isso significa que nenhuma perda de dados.
+`required_synchronized_secondaries_to_commit` Controla não apenas o comportamento de failover com réplicas síncronas, mas a perda de dados. Com um valor de 1 ou 2, uma réplica secundária sempre é necessária para ser sincronizada, que sempre será a redundância de dados. Isso significa que nenhuma perda de dados.
 
-Para alterar o valor de `required_synchronized_secondaries_to_commit`, use a sintaxe a seguir.
+Para alterar o valor de `required_synchronized_secondaries_to_commit`, use a seguinte sintaxe:
 
 >[!NOTE]
 >A alteração do valor faz com que o recurso de reinicialização, que significa que uma breve interrupção. A única maneira de evitar isso é definir o recurso a não ser gerenciado pelo cluster temporariamente.
@@ -147,11 +147,11 @@ A instância associada com o endereço IP fornecido, em seguida, torna-se o coor
 
 Um grupo de disponibilidade que tem um tipo de cluster de externo ou um que seja WSFC não pode ter suas réplicas cruzada plataformas. Isso é verdadeiro se o grupo de disponibilidade é [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)] ou [!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)]. Isso significa que em uma configuração de grupo de disponibilidade tradicional com um cluster subjacente, uma réplica não pode ser um WSFC e a outra no Linux com Pacemaker.
 
-Um grupo de disponibilidade com um tipo de cluster de NONE pode ter suas réplicas ultrapassar os limites do sistema operacional, portanto poderá haver ambas as réplicas com base em Linux e Windows o mesmo grupo de disponibilidade. Um exemplo é mostrado abaixo em que a réplica primária é baseado no Windows, enquanto o secundário está em um das distribuições do Linux.
+Um grupo de disponibilidade com um tipo de cluster de NONE pode ter suas réplicas ultrapassar os limites do sistema operacional, portanto poderá haver ambas as réplicas com base em Linux e Windows o mesmo grupo de disponibilidade. Um exemplo é mostrado aqui onde a réplica primária é baseado no Windows, enquanto o secundário está em um das distribuições do Linux.
 
 ![Híbrido None](./media/sql-server-linux-availability-group-overview/image1.png)
 
-Um grupo de disponibilidade distribuído também pode atravessar limites de sistema operacional. Os grupos de disponibilidade subjacentes são associados pelas regras de como eles são configurados, como aquele configurado com externo que está sendo somente Linux, mas o grupo de disponibilidade que ele é adicionado ao pode ser configurado com um WSFC. Um exemplo é mostrado a seguir.
+Um grupo de disponibilidade distribuído também pode atravessar limites de sistema operacional. Os grupos de disponibilidade subjacentes são associados pelas regras de como eles são configurados, como aquele configurado com externo que está sendo somente Linux, mas o grupo de disponibilidade que ele é adicionado ao pode ser configurado com um WSFC. Considere o seguinte exemplo:
 
 ![Híbrido Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 

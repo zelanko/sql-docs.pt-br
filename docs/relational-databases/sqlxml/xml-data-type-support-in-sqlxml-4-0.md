@@ -8,26 +8,28 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, xml data type support
 - xml data type [SQL Server], SQLXML
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 581472d13c4bb9e11d52a8a71965f9b8f64bf0c4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dfdb6b2fba95fc3e723122e9402e70caede522b1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>Suporte ao tipo de dados xml no SQLXML 4.0
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Começando com [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a XML digitado dados usando o **xml** tipo de dados. Este tópico fornece informações sobre como o SQLXML 4.0 reconhece instâncias do **xml** tipo de dados e implementa o suporte para eles.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Começando com [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a XML digitado dados usando o **xml** tipo de dados. Este tópico fornece informações sobre como o SQLXML 4.0 reconhece instâncias do **xml** tipo de dados e implementa o suporte para eles.  
   
 ## <a name="working-with-xml-data-types"></a>Trabalhando com tipos de dados xml  
  Para saber mais sobre como trabalhar com tabelas SQL que implementam **xml** colunas de tipo de dados são fornecidos os exemplos a seguir:  
@@ -50,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 -   O SQLXML 4.0 conta com o suporte de análise de XML fornecido no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um **xml** coluna pode ser mapeada como XML tipado ou de XML não digitado. Em qualquer um desses casos, o SQLXML 4.0 não valida o XML de entrada.  Se o XML de entrada não for válido nem bem formado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o informará para o SQLXML e propagará todas as informações de erro relevantes retornadas pelo servidor para o usuário.  
   
--   O SQLXML 4.0 conta com o suporte limitado para DTDs fornecido no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]permite um DTD interno nos **xml** tipo de dados, que pode ser usado para fornecer valores padrão e para substituir referências a entidades pelo conteúdo expandido correspondente. SQLXML transmite os dados de XML "como estão" (incluindo o DTD interno) para o servidor. É possível converter documentos DTDs em Esquema XML (XSD) usando ferramentas de terceiros e carregar os dados com esquemas XSD embutidos no banco de dados.  
+-   O SQLXML 4.0 conta com o suporte limitado para DTDs fornecido no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite um DTD interno nos **xml** tipo de dados, que pode ser usado para fornecer valores padrão e para substituir referências a entidades pelo conteúdo expandido correspondente. SQLXML transmite os dados de XML "como estão" (incluindo o DTD interno) para o servidor. É possível converter documentos DTDs em Esquema XML (XSD) usando ferramentas de terceiros e carregar os dados com esquemas XSD embutidos no banco de dados.  
   
 -   O SQLXML 4.0 não preserva instruções de processamento de declaração XML (por exemplo), com base no comportamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Em vez disso, a declaração XML é tratada como uma diretiva para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analisador XML e seus atributos (versão, a codificação e autônoma) são perdidos após a conversão de dados para o **xml** tipo de dados. Os dados XML são armazenados internamente como UCS-2. Todas as outras instruções de processamento na instância XML são preservadas; elas são permitidas no **xml** coluna e podem ser aceitas por SQLXML.  
   

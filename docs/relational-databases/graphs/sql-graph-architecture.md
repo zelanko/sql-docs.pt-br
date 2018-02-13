@@ -8,23 +8,24 @@ ms.service:
 ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, architecture
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale;barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30748d9c5cf8a53b7e04c9897ba2fe70fa32972e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b8652d59a4a2a6ad980c2d7659940ac0552bfeed
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-graph-architecture"></a>Arquitetura do gráfico do SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ Uma tabela de borda representa uma relação em um gráfico. As bordas são semp
 
 |Nome da coluna    |Description  |
 |---   |---  |
-|`$edge_id`   |Identifica exclusivamente uma borda fornecida no banco de dados. É uma coluna gerada e o valor é uma combinação de object_id da tabela de borda e um valor gerado internamente bigint. No entanto, quando o `$edge_id` coluna for selecionada, um valor calculado na forma de uma cadeia de caracteres JSON é exibido. `$edge_id`é uma coluna pseudo, que é mapeado para um nome interno com a cadeia de caracteres hexadecimal nele. Quando você seleciona `$edge_id` da tabela, o nome da coluna será exibido como `$edge_id_\<hex_string>`. Usando nomes de colunas pseudo em consultas é a maneira recomendada de consulta interna `$edge_id` coluna e usando o nome interno com a cadeia de caracteres hexadecimal devem ser evitados. |
+|`$edge_id`   |Identifica exclusivamente uma borda fornecida no banco de dados. É uma coluna gerada e o valor é uma combinação de object_id da tabela de borda e um valor gerado internamente bigint. No entanto, quando o `$edge_id` coluna for selecionada, um valor calculado na forma de uma cadeia de caracteres JSON é exibido. `$edge_id` é uma coluna pseudo, que é mapeado para um nome interno com a cadeia de caracteres hexadecimal nele. Quando você seleciona `$edge_id` da tabela, o nome da coluna será exibido como `$edge_id_\<hex_string>`. Usando nomes de colunas pseudo em consultas é a maneira recomendada de consulta interna `$edge_id` coluna e usando o nome interno com a cadeia de caracteres hexadecimal devem ser evitados. |
 |`$from_id`   |Armazena o `$node_id` do nó, de onde se origina a borda.  |
 |`$to_id`   |Armazena o `$node_id` do nó, em que a borda termina. |
 
@@ -99,7 +100,7 @@ A tabela a seguir lista os valores válidos para `graph_type` coluna
 |8  |GRAPH_TO_ID_COMPUTED  |
 
 
-`sys.columns`também armazena informações sobre as colunas implícitas criadas em tabelas de borda ou nó. Informações a seguir pode ser recuperada de Columns, no entanto, os usuários não é possível selecionar essas colunas de uma tabela de borda ou nó. 
+`sys.columns` também armazena informações sobre as colunas implícitas criadas em tabelas de borda ou nó. Informações a seguir pode ser recuperada de Columns, no entanto, os usuários não é possível selecionar essas colunas de uma tabela de borda ou nó. 
 
 Colunas implícitas em uma tabela de nó  
 |Nome da coluna    |Tipo de Dados  |is_hidden  |Comentário  |
@@ -139,7 +140,7 @@ Aprenda a [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensões introduzidas
 ### <a name="data-definition-language-ddl-statements"></a>Instruções de Definition Language (DDL) de dados
 |Tarefa   |Tópico relacionado  |Observações
 |---  |---  |---  |
-|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE `Agora é estendida para dar suporte à criação de uma tabela como nó ou como borda. Observe que uma tabela de borda pode ou pode não ter qualquer atributos definidos pelo usuário.  |
+|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` Agora é estendida para dar suporte à criação de uma tabela como nó ou como borda. Observe que uma tabela de borda pode ou pode não ter qualquer atributos definidos pelo usuário.  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Tabelas de nó e de borda podem ser alteradas da mesma forma que uma tabela relacional, usando o `ALTER TABLE`. Os usuários podem adicionar ou modificar colunas definidas pelo usuário, índices ou restrições. No entanto, como a alteração de colunas do gráfico interno, `$node_id` ou `$edge_id`, resultará em erro.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Os usuários podem criar índices em colunas pseudo e colunas definidas pelo usuário nas tabelas de nó e borda. Todos os tipos de índice têm suporte, incluindo índices columnstore clusterizados e não clusterizados.  |
 |DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Tabelas de nó e de borda podem ser descartadas da mesma forma que uma tabela relacional, usando o `DROP TABLE`. No entanto, nesta versão, não há restrições para garantir que não há bordas apontam para um nó excluído e não há suporte para a exclusão em cascata de bordas, após a exclusão de um nó ou uma tabela de nó. É recomendável que, se um nó de tabela for descartado, usuários descartar qualquer Bordas conectadas a nós nessa tabela nó manualmente para manter a integridade do gráfico.  |
@@ -148,10 +149,10 @@ Aprenda a [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensões introduzidas
 ### <a name="data-manipulation-language-dml-statements"></a>Instruções do Data Manipulation Language (DML)
 |Tarefa   |Tópico relacionado  |Observações
 |---  |---  |---  |
-|INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|Inserindo em uma tabela de nó não é diferente de inserção em uma tabela relacional. Os valores para `$node_id` coluna é gerada automaticamente. Tentativa de inserir um valor em `$node_id` ou `$edge_id` coluna resultará em erro. Os usuários devem fornecer valores para `$from_id` e `$to_id` colunas ao inserir em uma tabela de borda. `$from_id`e `$to_id` são o `$node_id` valores de nós que um determinado borda conecta.  |
+|INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|Inserindo em uma tabela de nó não é diferente de inserção em uma tabela relacional. Os valores para `$node_id` coluna é gerada automaticamente. Tentativa de inserir um valor em `$node_id` ou `$edge_id` coluna resultará em erro. Os usuários devem fornecer valores para `$from_id` e `$to_id` colunas ao inserir em uma tabela de borda. `$from_id` e `$to_id` são o `$node_id` valores de nós que um determinado borda conecta.  |
 |DELETE | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Dados de tabelas de borda ou nó podem ser excluídos na mesma forma como ele é excluído do tabelas relacionais. No entanto, nesta versão, não há restrições para garantir que não há bordas apontam para um nó excluído e não há suporte para a exclusão em cascata de bordas, após a exclusão de um nó. Recomenda-se que sempre que um nó é excluído, todas as bordas de conexão para esse nó também são excluídas, para manter a integridade do gráfico.  |
 |UPDATE |[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  |Valores em colunas definidas pelo usuário podem ser atualizados usando a instrução UPDATE. Atualizar as colunas do gráfico interno, `$node_id`, `$edge_id`, `$from_id` e `$to_id` não é permitido.  |
-|MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE`Não há suporte para a instrução em uma tabela de borda ou nó.  |
+|MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` Não há suporte para a instrução em uma tabela de borda ou nó.  |
 
 
 ### <a name="query-statements"></a>Instruções de consulta

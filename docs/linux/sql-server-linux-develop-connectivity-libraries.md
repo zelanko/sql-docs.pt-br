@@ -9,25 +9,25 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 ms.workload: Inactive
-ms.openlocfilehash: 2f9d7d8697aa82caf3822cefefe83a2525a72e24
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 0e5a08655bcfea396bcf599ef65e7a8e1f126575
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Bibliotecas de conectividade e estruturas para o Microsoft SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Confira nosso [obter tutoriais de Introdução](http://aka.ms/sqldev) começar com linguagens de programação como c#, Java, Node.js, PHP e Python e compilar um aplicativo usando o SQL Server no Linux ou Windows ou o Docker no macOS rapidamente.
+Check-out de [obter tutoriais de Introdução](http://aka.ms/sqldev) começar com linguagens de programação como c#, Java, Node.js, PHP e Python e compilar um aplicativo usando o SQL Server no Linux ou Windows ou o Docker no macOS rapidamente.
 
-A tabela a seguir lista as bibliotecas de conectividade ou *drivers* que aplicativos cliente podem usar de uma variedade de idiomas para conectar e usar o Microsoft SQL Server em execução no local ou na nuvem, no Linux, o Windows ou o Docker e também para o banco de dados do SQL Azure e o Azure SQL Data Warehouse. 
+A tabela a seguir lista as bibliotecas de conectividade ou *drivers* que aplicativos cliente podem usar de uma variedade de idiomas para conectar e usar o Microsoft SQL Server em execução no local ou na nuvem, no Linux, o Windows ou o Docker e também banco de dados SQL do Azure para e do Azure SQL Data Warehouse. 
 
 | Idioma | Plataforma | Recursos adicionais | Download | Introdução |
 | :-- | :-- | :-- | :-- | :-- |
@@ -39,7 +39,7 @@ A tabela a seguir lista as bibliotecas de conectividade ou *drivers* que aplicat
 | Ruby | Windows, Linux, macOS | [Ruby Driver para SQL Server](../connect/ruby/ruby-driver-for-sql-server.md) | [Introdução](https://www.microsoft.com/en-us/sql-server/developer-get-started/ruby/ubuntu)
 | C++ | Windows, Linux, macOS | [Microsoft ODBC Driver for SQL Server](https://msdn.microsoft.com/en-us/library/mt654048(v=sql.1).aspx) | [Download](https://msdn.microsoft.com/en-us/library/mt654048(v=sql.1).aspx) |  
 
-A tabela a seguir lista alguns exemplos de estruturas de mapeamento relacional objeto (ORM) e frameworks da web que aplicativos cliente podem usar com o Microsoft SQL Server em execução no local ou na nuvem, no Linux, o Windows ou o Docker e também para o banco de dados do SQL Azure e o Azure SQL Data Warehouse. 
+A tabela a seguir lista alguns exemplos de estruturas de mapeamento relacional objeto (ORM) e frameworks da web que aplicativos cliente podem usar com o Microsoft SQL Server em execução no local ou na nuvem, no Linux, o Windows ou o Docker e também para o banco de dados do SQL Azure e Depósito de dados do SQL Azure. 
 
 | Idioma | Plataforma | ORM(s) |
 | :-- | :-- | :-- |

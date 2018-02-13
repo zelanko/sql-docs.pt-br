@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - data types [SQLXML], mapping data types
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 358a75a6cbc2ddd716c14297daa21881ea5c3304
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c4c5d33454cebe84fb14a5bb154f7ee30a57de51
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Coerções de tipo de dados e a anotação de sql:datatype (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Em um esquema XSD, o **xsd: Type** atributo especifica o tipo de dados XSD de um elemento ou atributo. Quando um esquema XSD é usado para extrair dados do banco de dados, o tipo de dados especificado é usado para formatar os dados.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Em um esquema XSD, o **xsd: Type** atributo especifica o tipo de dados XSD de um elemento ou atributo. Quando um esquema XSD é usado para extrair dados do banco de dados, o tipo de dados especificado é usado para formatar os dados.  
   
  Além de especificar um tipo XSD em um esquema, você também pode especificar um Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados usando o **SQL: DataType** anotação. O **xsd: Type** e **SQL: DataType** atributos controlam o mapeamento entre tipos de dados XSD e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados.  
   
@@ -48,7 +50,7 @@ ms.lasthandoff: 11/17/2017
 |-------------------|---------------------------|  
 |Booliano|CONVERT(bit, COLUMN)|  
 |Data|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
-|decimal|CONVERT(money, COLUMN)|  
+|Decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |Hora|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
@@ -62,15 +64,15 @@ ms.lasthandoff: 11/17/2017
   
 |Tipo de dados do SQL Server|Tipo de dados XSD|  
 |--------------------------|-------------------|  
-|**bigint**|**Longas**|  
+|**bigint**|**long**|  
 |**binary**|**base64Binary**|  
 |**bit**|**booleano**|  
 |**char**|**cadeia de caracteres**|  
 |**datetime**|**dateTime**|  
 |**decimal**|**decimal**|  
 |**float**|**double**|  
-|**imagem**|**base64Binary**|  
-|**int**|**int**|  
+|**image**|**base64Binary**|  
+|**Int**|**Int**|  
 |**money**|**decimal**|  
 |**nchar**|**cadeia de caracteres**|  
 |**ntext**|**cadeia de caracteres**|  
@@ -78,11 +80,11 @@ ms.lasthandoff: 11/17/2017
 |**numeric**|**decimal**|  
 |**real**|**float**|  
 |**smalldatetime**|**dateTime**|  
-|**smallint**|**curto**|  
+|**smallint**|**short**|  
 |**smallmoney**|**decimal**|  
 |**sql_variant**|**cadeia de caracteres**|  
 |**sysname**|**cadeia de caracteres**|  
-|**texto**|**cadeia de caracteres**|  
+|**text**|**cadeia de caracteres**|  
 |**timestamp**|**dateTime**|  
 |**tinyint**|**unsignedByte**|  
 |**varbinary**|**base64Binary**|  

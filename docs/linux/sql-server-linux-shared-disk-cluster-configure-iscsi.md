@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 9720eb3b4254f2592e3c237bc2af16bc5360d2ad
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 19a7f03471af7aaf9e55fe371e02f9201cf1464f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurar a instância de cluster de failover - iSCSI – SQL Server no Linux
 
@@ -41,7 +41,7 @@ O mais importante para garantir que é concluída no destino é que os discos qu
 
 Esta seção aborda como configurar um iniciador iSCSI em servidores que servirá como nós de FCI. As instruções devem funcionar como em RHEL e Ubuntu.
 
-Para obter informações adicionais sobre o iniciador iSCSI para as distribuições com suporte, consulte os links a seguir:
+Para obter mais informações sobre o iniciador iSCSI para as distribuições com suporte, consulte os links a seguir:
 - [Red Hat](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
 - [SUSE](http://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
 - [Ubuntu](https://help.ubuntu.com/lts/serverguide/iscsi-initiator.html)
@@ -210,7 +210,7 @@ Para obter informações adicionais sobre o iniciador iSCSI para as distribuiç�
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
     ``` 
 
-    \<VolumeGroupName > é o nome do grupo de volumes e \<LogicalVolumeName > é o nome do volume lógico que foi criado. A sintaxe de exemplo abaixo corresponde ao grupo de volumes e o volume lógico criado acima.
+    \<VolumeGroupName > é o nome do grupo de volumes e \<LogicalVolumeName > é o nome do volume lógico que foi criado. A seguinte sintaxe de exemplo corresponde ao grupo de volumes e o volume lógico do comando anterior.
 
     ```bash
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
@@ -278,7 +278,7 @@ Para obter informações adicionais sobre o iniciador iSCSI para as distribuiç�
     mkdir <FolderName>
     ```
 
-    \<Nome da pasta > é o nome da pasta. Caminho completo da pasta precisa ser especificado se não está no local correto. O exemplo a seguir cria uma pasta chamada /var/opt/mssql/userdata.
+    \<Nome da pasta > é o nome da pasta. Caminho completo da pasta deve ser especificado se não está no local correto. O exemplo a seguir cria uma pasta chamada /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata

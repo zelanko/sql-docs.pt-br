@@ -33,10 +33,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 77962f05ede4b2650db4af59fdbde5ec42fdf1d5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="working-with-images-with-the-script-task"></a>Trabalhando com imagens com a tarefa Script
   Um banco de dados de produtos ou usuários costuma incluir imagens além de texto e dados numéricos. O namespace **System.Drawing** no Microsoft .NET Framework fornece classes para manipular imagens.  

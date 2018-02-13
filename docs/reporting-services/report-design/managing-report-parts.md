@@ -18,10 +18,10 @@ ms.author: maggies
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0728592148787403783279f0be8d42e52f5237a2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="managing-report-parts"></a>Gerenciando partes de relatório
   Partes de relatório podem ser reutilizadas em relatórios paginados por vários usuários e em vários relatórios. Os usuários podem pesquisar partes de relatório no servidor e adicioná-las a um relatório.  Também podem ser informados de atualizações para a parte de relatório no servidor e republicar novas versões de uma parte de relatório. Essas ações de criação de relatório podem ser afetadas e controladas pelas permissões de segurança dos serviços de relatório.  Este tópico revisa as propriedades de parte de relatório e o comportamento depois que elas estão no servidor.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/09/2018
  Quando as partes de relatório são publicadas de um aplicativo de criação de relatório, como o Construtor de Relatórios em um servidor de relatório em modo integrado do SharePoint, o catálogo de servidor de relatório também é atualizado e as pesquisas da galeria refletem com precisão a parte de relatório nova ou atualizada.  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>Carregando partes de relatório diretamente para uma pasta do SharePoint  
- Se uma parte de relatório for carregada diretamente em uma pasta de documentos do SharePoint, em vez de publicada de um aplicativo de criação de relatório, o catálogo do servidor de relatório também não será atualizado. As pesquisas da galeria de partes de relatório não localizarão a parte de relatório carregada. Para ajudar a manter suas pastas do SharePoint e o catálogo do servidor de relatório sincronizados, você pode ativar o recurso de sincronização de arquivos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no servidor do SharePoint. Para obter mais informações, consulte [Ativar o recurso de sincronização de relatório do Servidor de Relatório na Administração Central do SharePoint](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
+ Se uma parte de relatório for carregada diretamente em uma pasta de documentos do SharePoint, em vez de publicada de um aplicativo de criação de relatório, o catálogo do servidor de relatório também não será atualizado. As pesquisas da galeria de partes de relatório não localizarão a parte de relatório carregada. Para ajudar a manter suas pastas do SharePoint e o catálogo do servidor de relatório sincronizados, você pode ativar o recurso de sincronização de arquivos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no servidor do SharePoint. Para obter mais informações, consulte [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
   
  Os arquivos também podem ser sincronizados usando a chamada de algumas das APIs de gerenciamento de serviços de relatório, como GetProperties e SetProperties.  
   

@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: dd9d35a7fa6e8a8a0e826d584a4f78ca2581d9bc
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 303629364a954fec1328d571ec3b6f3df57b6527
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Implantar um cluster de Pacemaker para o SQL Server no Linux
 
@@ -151,7 +151,7 @@ Configurar Ubuntu é semelhante ao RHEL. No entanto, há uma grande diferença: 
    
 2. Siga as etapas na seção RHEL para criar o cluster Pacemaker.
 
-**SLES**
+SLES
 
 O processo para criar um cluster Pacemaker é completamente diferente em SLES em RHEL e Ubuntu. As etapas a seguir documentam como criar um cluster com SLES.
 1. Inicie o processo de configuração de cluster, executando 
@@ -200,7 +200,7 @@ O processo para criar um cluster Pacemaker é completamente diferente em SLES em
 12. Repita as etapas 8 a 11 para todos os outros servidores a serem adicionados ao cluster.
 
 ## <a name="install-the-sql-server-ha-and-sql-server-agent-packages"></a>Instalar os pacotes de HA do SQL Server e SQL Server Agent
-Use os comandos a seguir para instalar o pacote de HA do SQL Server e [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente, se eles não estiverem instalados. Instalando o pacote de alta disponibilidade depois de instalar [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] requer a reinicialização do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para ser usado. Essas instruções pressupõem que os repositórios para os pacotes da Microsoft já foram configurados, desde [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] deve ser instalado neste ponto.
+Use os seguintes comandos para instalar o pacote de HA do SQL Server e [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente, se eles não estiverem instalados. Instalando o pacote de alta disponibilidade depois de instalar [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] requer a reinicialização do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para ser usado. Essas instruções pressupõem que os repositórios para os pacotes da Microsoft já foram configurados, desde [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] deve ser instalado neste ponto.
 > [!NOTE]
 > - Se você não usar [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente de envio de logs ou qualquer outro uso, ele não tem que ser instalado, portanto pacote *mssql-server-agente* pode ser ignorada.
 > - Os pacotes opcionais para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] pesquisa de texto completo (*fts do mssql server*) e [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql servidor é*), não são necessário para alta disponibilidade, para uma FCI ou um grupo de disponibilidade.
@@ -219,7 +219,7 @@ sudo apt-get install mssql-server-ha mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-**SLES**
+SLES
 
 ```bash
 sudo zypper install mssql-server-ha mssql-server-agent

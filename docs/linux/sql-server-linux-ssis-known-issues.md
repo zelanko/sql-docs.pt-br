@@ -10,18 +10,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: edff09c1c66a1b3c97a80d42d5a1d9702dca3e0c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fc2455ea79931b051c83677fc918c0382afcab3b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitações e problemas conhecidos do SSIS no Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este artigo descreve as limitações atuais e problemas conhecidos para o SQL Server Integration Services (SSIS) no Linux.
 
@@ -40,7 +42,7 @@ Os recursos a seguir não têm suporte nesta versão do SSIS no Linux:
 
 Para outras limitações e problemas conhecidos com o SSIS no Linux, consulte o [notas de versão](sql-server-linux-release-notes.md#ssis).
 
-## <a name="components"></a>Componentes compatíveis e sem suportados
+## <a name="components"></a> Componentes compatíveis e sem suportados
 
 Os seguintes componentes internos do Integration Services têm suporte no Linux. Algumas delas têm limitações na plataforma Linux, conforme descrito nas tabelas a seguir.
 
@@ -84,13 +86,13 @@ Componentes internos que não estão listados aqui não têm suporte no Linux.
 | Destino e origem do ADO.NET | Suportam apenas o provedor de dados SQLClient. |
 | Fonte de arquivo simples e de destino | Somente dão suporte a caminhos de arquivo de estilo do Windows, aos quais a regra de mapeamento de caminho padrão é aplicada. Por exemplo `D:\home\ssis\travel.csv` torna-se `/home/ssis/travel.csv`. |
 | Fonte OData | Suporta apenas a autenticação básica. |
-| Origem ODBC e destino | Dá suporte a drivers de ODBC Unicode de 64 bits no Linux. Depende do Gerenciador de driver UnixODBC no Linux. |
+| Origem e destino ODBC | Dá suporte a drivers de ODBC Unicode de 64 bits no Linux. Depende do Gerenciador de driver UnixODBC no Linux. |
 | Origem de OLE DB e de destino | Apenas suporte do SQL Server Native Client 11.0 e o Microsoft OLE DB Provider para SQL Server. |
 | | |
 
 ### <a name="supported-data-flow-transformations"></a>Suporte para transformações de fluxo de dados
 - Agregado
-- Auditoria
+- Auditar o
 - Balanced Data Distributor
 - Mapa de Caracteres
 - Divisão Condicional
@@ -108,7 +110,7 @@ Componentes internos que não estão listados aqui não têm suporte no Linux.
 - Dinâmico
 - Contagem de Linhas
 - Dimensão de Alteração Lenta
-- Sort
+- Classificação
 - Pesquisa de Termos
 - Union All
 - Não Dinâmico

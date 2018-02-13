@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
-ms.openlocfilehash: fc2fa01902fee76b85c4b348d701166845a6d95e
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 9760b93a1e224c35617b4161d8996ff0ed3dff67
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server no cliente do Linux VDI especificação do SDK
 
@@ -146,7 +146,7 @@ Este capítulo contém descrições de cada uma das funções de cliente. As des
 | |**VD_E_INVALID** |O nome do dispositivo é inválido. Não é um dos nomes de conhecido que compõem o conjunto.
 
 **Comentários** VD_E_OPEN podem ser retornados sem problema. O cliente pode chamar OpenDevice por meio de um loop até que este código é retornado.
-Se mais de um dispositivo estiver configurado, por exemplo  *n*  dispositivos, o conjunto de dispositivo virtual retornará  *n*  interfaces de dispositivo exclusivo.
+Se mais de um dispositivo estiver configurado, por exemplo * n * dispositivos, o conjunto de dispositivo virtual retornará * n * interfaces de dispositivo exclusivo.
 
 O `GetConfiguration` função pode ser usada para aguardar até que os dispositivos podem ser abertos.
 Se essa função não for bem-sucedida, um valor nulo é retornado por meio de ppVirtualDevice.

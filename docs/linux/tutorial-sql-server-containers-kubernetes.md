@@ -9,16 +9,16 @@ ms.topic: tutorial
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: mvc
+ms.custom: sql-linux,mvc
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 4ada1034b64f710f4eeae995b771ef8be5bf4fe2
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: a21856b3a864373f84ad304484ecdd88ac17f52a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>Configurar um contêiner do SQL Server no Kubernetes para alta disponibilidade
 
@@ -119,7 +119,7 @@ Configurar um [volume persistente](http://kubernetes.io/docs/concepts/storage/pe
    kubectl apply -f <Path to pvc.yaml file>
    ```
 
-   `<Path to pvc.yaml file>`é o local onde você salvou o arquivo.
+   `<Path to pvc.yaml file>` é o local onde você salvou o arquivo.
 
    O volume persistente é automaticamente criado como uma conta de armazenamento do Azure e associado à declaração de volume persistente. 
 
@@ -131,7 +131,7 @@ Configurar um [volume persistente](http://kubernetes.io/docs/concepts/storage/pe
    kubectl describe pvc <PersistentVolumeClaim>
    ```
 
-   `<PersistentVolumeClaim>`é o nome da declaração do volume persistente.
+   `<PersistentVolumeClaim>` é o nome da declaração do volume persistente.
 
    Na etapa anterior, a declaração de volume persistente é denominada `mssql-data`. Para ver os metadados sobre a declaração de volume persistente, execute o seguinte comando:
 
@@ -153,7 +153,7 @@ Configurar um [volume persistente](http://kubernetes.io/docs/concepts/storage/pe
    kubectl describe pv
    ```
 
-   `kubectl`retorna metadados sobre o volume persistente que foi criado e associado à declaração de volume persistente automaticamente. 
+   `kubectl` retorna metadados sobre o volume persistente que foi criado e associado à declaração de volume persistente automaticamente. 
 
 ## <a name="create-the-deployment"></a>Criar a implantação
 
@@ -242,7 +242,7 @@ Nesta etapa, crie um manifesto para descrever o contêiner com base no SQL Serve
    kubectl apply -f <Path to sqldeployment.yaml file>
    ```
 
-   `<Path to sqldeployment.yaml file>`é o local onde você salvou o arquivo.
+   `<Path to sqldeployment.yaml file>` é o local onde você salvou o arquivo.
 
    ![Captura de tela do comando de implantação](media/tutorial-sql-server-containers-kubernetes/04_deploy_cmd.png)
 
@@ -267,7 +267,7 @@ Nesta etapa, crie um manifesto para descrever o contêiner com base no SQL Serve
 
    ![Captura de tela de comando de serviço get](media/tutorial-sql-server-containers-kubernetes/06_get_service_cmd.png)
 
-   Para obter informações adicionais sobre o status dos objetos no cluster Kubernetes, execute:
+   Para obter mais informações sobre o status dos objetos no cluster Kubernetes, execute:
 
    ```azurecli
    az aks browse --resource-group <MyResourceGroup> --name <MyKubernetesClustername>
@@ -293,8 +293,8 @@ Você pode usar os seguintes aplicativos para se conectar à instância do SQL S
 
    Substitua os seguintes valores:
       
-    - `<External IP Address>`com o endereço IP para o `mssql-deployment` serviço 
-    - `MyC0m9l&xP@ssw0rd`com sua senha
+    - `<External IP Address>` com o endereço IP para o `mssql-deployment` serviço 
+    - `MyC0m9l&xP@ssw0rd` com sua senha
 
 ## <a name="verify-failure-and-recovery"></a>Verifique se a falha e recuperação
 
@@ -313,7 +313,7 @@ Para verificar a falha e recuperação, você pode excluir o pod. Siga as etapas
    ```azurecli
    kubectl delete pod mssql-deployment-0
    ```
-   `mssql-deployment-0`o valor é retornado da etapa anterior para nome pod. 
+   `mssql-deployment-0` o valor é retornado da etapa anterior para nome pod. 
 
 Kubernetes automaticamente recria pod para recuperar uma instância do SQL Server e conectar-se para o armazenamento persistente. Use `kubectl get pods` para verificar se um novo pod é implantado. Use `kubectl get services` para verificar se o endereço IP para o novo contêiner é o mesmo. 
 

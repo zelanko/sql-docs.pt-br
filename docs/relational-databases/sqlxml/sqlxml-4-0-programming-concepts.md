@@ -8,28 +8,30 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, about SQLXML
 - SQLXML
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3e47e3a55ebc0bf94dabbb2ca71c78f42ce3231
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 99780e4985f2406d5f0a394ae427ad6342106bb6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sqlxml-40-programming-concepts"></a>Conceitos de programação do SQLXML 4.0
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]SQLXML 3.0 foi fornecido como uma versão da Web para fornecer funcionalidade adicional de XML do lado do cliente e melhorias em recursos existentes, como esquemas XSD anotados, XML em massa de carga, suporte do Web services (SOAP) e diagramas de atualização.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+O SQLXML 3.0 foi fornecido como uma versão da Web para oferecer funcionalidade XML do cliente e aprimoramentos adicionais aos recursos existentes, como esquemas XSD anotados, carregamento em massa XML, suporte a serviços Web (SOAP) e diagramas de atualização.  
   
- O [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] apresentou o SQLXML 4.0, que continua oferecendo a mesma funcionalidade que o SQLXML 3.0, mais as atualizações adicionais fornecidas para acomodar os novos recursos introduzidos com o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] apresentou o SQLXML 4.0, que continua oferecendo a mesma funcionalidade que o SQLXML 3.0 além de atualizações adicionais fornecidas para acomodar os novos recursos introduzidos com [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
  Esta seção fornece informações sobre o SQLXML 4.0.  
   

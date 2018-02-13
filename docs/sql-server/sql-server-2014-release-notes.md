@@ -12,19 +12,20 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-caps.latest.revision: "100"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 4bbb387c935dc07e467125921ef11986ea004c21
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)] Este documento Notas de Versão descreve problemas conhecidos sobre os quais você deve ler antes de instalar ou solucionar problemas do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+Este documento Notas de Versão descreve problemas conhecidos sobre os quais você deve ler antes de instalar ou solucionar problemas do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 ## <a name="top"></a>Conteúdo  
 [1.0 Antes da instalação](#BeforeInstall)  
@@ -297,7 +298,7 @@ Se você já tiver o problema com valores de instance_id incompatíveis, a únic
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Suplemento para produtos do SharePoint  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Serviço Compartilhado do SharePoint  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint  
   
 A instalação lado a lado impede que o Serviço do Windows no modo nativo do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inicie. Exemplos de mensagens de erro que aparecerão no Log de Eventos do Windows:  
   
@@ -362,11 +363,11 @@ Isso se deve ao fato dos ouvintes do grupo de disponibilidade exigirem a atribui
   
 1.  Baixe o provedor MSOLAP.5 do [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Instale o provedor nos servidores de aplicativos que executam os Serviços do Excel. Para obter mais informações, consulte a seção "Microsoft Analysis Services OLE DB Provider para Microsoft SQL Server 2012 SP1" [Microsoft SQL Server 2012 SP1 Feature Pack](http://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Registre o MSOLAP.5 como um provedor confiável em Serviços do Excel do SharePoint. Para obter mais informações, consulte [Adicionar MSOLAP.5 como um provedor de dados confiável em Serviços do Excel](http://technet.microsoft.com/library/hh758436.aspx).  
+2.  Registre o MSOLAP.5 como um provedor confiável em Serviços do Excel do SharePoint. Para obter mais informações, consulte [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
   
 **Mais Informações:**  
   
--   O[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] inclui MSOLAP.6. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssGemini](../includes/ssgemini-md.md)] usam MSOLAP.5. Se o MSOLAP.5 não estiver instalado no computador que executa os Serviços do Excel, os Serviços do Excel não poderão carregar os modelos de dados.  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] inclui MSOLAP.6. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssGemini](../includes/ssgemini-md.md)] usam MSOLAP.5. Se o MSOLAP.5 não estiver instalado no computador que executa os Serviços do Excel, os Serviços do Excel não poderão carregar os modelos de dados.  
   
 ### <a name="62-msolap5-must-be-downloaded-installed-and-registered-for-a-sharepoint-2013-new-farm-configured-with-sql-server-2014"></a>6.2 O MSOLAP.5 deve ser baixado, instalado e registrado para um novo farm do SharePoint 2013 configurado com o SQL Server 2014  
 **Problema:**  
@@ -377,11 +378,11 @@ Isso se deve ao fato dos ouvintes do grupo de disponibilidade exigirem a atribui
   
 1.  Baixe o provedor MSOLAP.5 do [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Instale o provedor nos servidores de aplicativos que executam os Serviços do Excel. Para obter mais informações, consulte a seção "Microsoft Analysis Services OLE DB Provider para Microsoft SQL Server 2012 SP1" [Microsoft SQL Server 2012 SP1 Feature Pack](http://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Registre o MSOLAP.5 como um provedor confiável em Serviços do Excel do SharePoint. Para obter mais informações, consulte [Adicionar MSOLAP.5 como um provedor de dados confiável em Serviços do Excel](http://technet.microsoft.com/library/hh758436.aspx).  
+2.  Registre o MSOLAP.5 como um provedor confiável em Serviços do Excel do SharePoint. Para obter mais informações, consulte [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
   
 **Mais Informações:**  
   
--   O[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] inclui MSOLAP.6. mas as pastas de trabalho PowerPivot do SQL Server 2014 usam MSOLAP.5. Se o MSOLAP.5 não estiver instalado no computador que executa os Serviços do Excel, os Serviços do Excel não poderão carregar os modelos de dados.  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] inclui MSOLAP.6. mas as pastas de trabalho PowerPivot do SQL Server 2014 usam MSOLAP.5. Se o MSOLAP.5 não estiver instalado no computador que executa os Serviços do Excel, os Serviços do Excel não poderão carregar os modelos de dados.  
   
 ### <a name="63-corrupt-data-refresh-schedules"></a>6.3 Agenda de atualização de dados corrompidos  
 **Problema:**  

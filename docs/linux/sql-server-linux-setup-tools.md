@@ -1,6 +1,6 @@
 ---
 title: Instalar ferramentas de linha de comando do SQL Server no Linux | Microsoft Docs
-description: "Este tópico descreve como instalar as ferramentas do SQL Server no Linux."
+description: Este artigo descreve como instalar as ferramentas do SQL Server no Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: 16a2366541809237609c88f8458a3930a5569c3a
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 7a23c561b34668a46f86aaad006ff6faacb41f49
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Instalar as ferramentas de linha de comando do SQL Server de sqlcmd e bcp em Linux
 
@@ -38,7 +38,7 @@ Instale as ferramentas para a sua plataforma:
 - [macOS](#macos)
 - [Docker](#docker)
 
-Este tópico descreve como instalar as ferramentas de linha de comando. Se você estiver procurando por exemplos de como usar **sqlcmd** ou **bcp**, consulte o [links](#next-steps) no final deste tópico.
+Este artigo descreve como instalar as ferramentas de linha de comando. Se você estiver procurando por exemplos de como usar **sqlcmd** ou **bcp**, consulte o [links](#next-steps) no final deste tópico.
 
 ## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>Instalar as ferramentas em RHEL 7
 
@@ -180,7 +180,7 @@ Use as etapas a seguir para instalar o **mssql ferramentas** no SUSE Linux Enter
    source ~/.bashrc
    ```
 
-## <a id="macos"></a>Instalar as ferramentas em macOS
+## <a id="macos"></a> Instalar as ferramentas em macOS
 
 Uma visualização de **sqlcmd** e **bcp** agora está disponível em macOS. Para obter mais informações, consulte o [comunicado](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/).
 
@@ -196,7 +196,7 @@ brew install --no-sandbox mssql-tools
 #ACCEPT_EULA=y brew install --no-sandbox mssql-tools
 ```
 
-## <a id="docker"></a>Docker
+## <a id="docker"></a> Docker
 
 A partir do SQL Server de 2017 CTP 2.0, as ferramentas de linha de comando do SQL Server são incluídas na imagem do Docker. Se você anexar a imagem com um prompt de comando interativo, você pode executar as ferramentas localmente.
 

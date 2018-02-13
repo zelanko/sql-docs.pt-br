@@ -1,6 +1,6 @@
 ---
 title: "Práticas recomendadas de desempenho para o SQL Server no Linux | Microsoft Docs"
-description: "Este tópico fornece diretrizes e práticas recomendadas de desempenho para a execução de 2017 do SQL Server no Linux."
+description: "Este artigo fornece diretrizes e práticas recomendadas de desempenho para a execução de 2017 do SQL Server no Linux."
 author: rgward
 ms.author: bobward
 manager: craigg
@@ -9,20 +9,22 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 565ede5c15f6e4e34a7a5cbbdcd6fa7d145c8ff5
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: a5cc1b84780ce8b3ea471ee567a7296ab2b183b9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Práticas recomendadas e diretrizes de configuração para 2017 do SQL Server no Linux
 
-Este tópico fornece as práticas recomendadas e recomendações para maximizar o desempenho de aplicativos de banco de dados que se conectar ao SQL Server no Linux. Essas recomendações são específicas para execução na plataforma Linux. Todas as recomendações normais do SQL Server, como criação de índice, ainda se aplicam.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+Este artigo fornece as práticas recomendadas e recomendações para maximizar o desempenho de aplicativos de banco de dados que se conectar ao SQL Server no Linux. Essas recomendações são específicas para execução na plataforma Linux. Todas as recomendações normais do SQL Server, como criação de índice, ainda se aplicam.
 
 As diretrizes a seguir contém recomendações sobre como configurar o SQL Server e o sistema operacional Linux.
 
@@ -34,7 +36,7 @@ As diretrizes a seguir contém recomendações sobre como configurar o SQL Serve
 
 - **Usar a AFINIDADE de processo para o nó e/ou CPUs**
 
-   É recomendável usar `ALTER SERVER CONFIGURATION` definir `PROCESS AFFINITY` para todos os **NUMANODEs** e/ou CPUs está usando para o SQL Server (que normalmente é para todos os nós e CPUs) em um sistema operacional Linux. Afinidade do processador ajuda a manter o comportamento eficiente do Linux e agendamento de SQL. Usando o **NUMANODE** opção é o método mais simples. Observe que você deve usar **a AFINIDADE do processo** mesmo se você tiver apenas um único nó em seu computador.  Consulte o [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) documentação para obter mais detalhes sobre como definir **a AFINIDADE do processo**.
+   É recomendável usar `ALTER SERVER CONFIGURATION` definir `PROCESS AFFINITY` para todos os **NUMANODEs** e/ou CPUs está usando para o SQL Server (que normalmente é para todos os nós e CPUs) em um sistema operacional Linux. Afinidade do processador ajuda a manter o comportamento eficiente do Linux e agendamento de SQL. Usando o **NUMANODE** opção é o método mais simples. Observe que você deve usar **a AFINIDADE do processo** mesmo se você tiver apenas um único nó em seu computador.  Consulte o [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) documentação para obter mais informações sobre como definir **a AFINIDADE do processo**.
 
 - **Configurar vários arquivos de dados tempdb**
 

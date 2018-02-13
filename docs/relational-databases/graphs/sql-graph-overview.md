@@ -8,28 +8,29 @@ ms.service:
 ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, overview
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale;barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3a0828b1e50472ecec5f256c9ddfe13e8f0db8b7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 77a50d48ee5c6d5baa8b05b327146e74b5eff815
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Gráfico de processamento com o SQL Server e banco de dados do SQL Azure
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oferece recursos de banco de dados do gráfico para o modelo de relações de muitos-para-muitos. As relações de gráfico estão integradas [!INCLUDE[tsql-md](../../includes/tsql-md.md)] e obtenha os benefícios de usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como o sistema de gerenciamento de banco de dados básico.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece recursos de banco de dados do gráfico para o modelo de relações de muitos-para-muitos. As relações de gráfico estão integradas [!INCLUDE[tsql-md](../../includes/tsql-md.md)] e obtenha os benefícios de usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como o sistema de gerenciamento de banco de dados básico.
 
 
 ## <a name="what-is-a-graph-database"></a>O que é um banco de dados do gráfico?  
@@ -46,12 +47,12 @@ Não há nada que pode atingir um banco de dados do gráfico, que não pode ser 
 -   Seu aplicativo tem relações complexas de muitos-para-muitos; como o aplicativo evoluir, novas relações são adicionadas.
 -   Você precisa analisar os dados interconectados e relações.
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>Recursos de gráfico introduzidos no[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>Recursos de gráfico introduzidos no [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 Estamos começando a adicionar extensões de gráfico para o SQL Server, para facilitar a armazenar e consultar dados do gráfico. Recursos a seguir são introduzidos na primeira versão. 
 
 
 ### <a name="create-graph-objects"></a>Criar objetos de gráfico
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)]extensões permitirá aos usuários criar tabelas de nó ou borda. Nós e bordas podem ter propriedades associadas a eles. Como nós e bordas são armazenadas como tabelas, todas as operações que têm suporte em tabelas relacionais são suportadas na tabela de borda ou nó. A seguir está um exemplo:  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensões permitirá aos usuários criar tabelas de nó ou borda. Nós e bordas podem ter propriedades associadas a eles. Como nós e bordas são armazenadas como tabelas, todas as operações que têm suporte em tabelas relacionais são suportadas na tabela de borda ou nó. A seguir está um exemplo:  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;

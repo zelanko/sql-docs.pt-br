@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - attribute mapping [SQLXML], excluding schema elements
 - table/view mapping [SQLXML], excluding schema elements
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 660fe866db09675916d90cdf8130b2b99980b2ec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 104c3958a6964967629c32ad22a5371a41226f67
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Excluindo elementos de esquema do documento XML usando sql: mapeado
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Cada elemento e atributo no esquema XSD é mapeado para um banco de dados de tabela/exibição e a coluna devido ao mapeamento padrão. Se você quiser criar um elemento no esquema XSD que não é mapeado para nenhuma tabela de banco de dados (exibição) ou coluna e que não aparece no XML, você pode especificar o **sql: mapeado** anotação.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Todo elemento e atributo no esquema XSD é mapeado para uma tabela/exibição e uma coluna do banco de dados devido ao mapeamento padrão. Se você quiser criar um elemento no esquema XSD que não é mapeado para nenhuma tabela de banco de dados (exibição) ou coluna e que não aparece no XML, você pode especificar o **sql: mapeado** anotação.  
   
  O **sql: mapeado** anotação é especialmente útil se o esquema não pode ser modificado ou se o esquema é usado para validar o XML de outras fontes e ainda contém dados que não são armazenados no banco de dados. O **sql: mapeado** difere de anotação **sql: constante é** em que os atributos e elementos não mapeados não aparecem no documento XML.  
   

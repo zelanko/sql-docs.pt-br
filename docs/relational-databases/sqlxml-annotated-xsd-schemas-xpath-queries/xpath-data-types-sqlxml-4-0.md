@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -29,19 +30,20 @@ helpviewer_keywords:
 - XPath data types [SQLXML]
 - operators [SQLXML]
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d028ddf781edba7cc610966facc2e08b6bba58bb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d36d141e552750650ede74ba2aba92b203825558
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Tipos de dados XPath (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath e esquema XML (XSD) têm tipos de dados muito diferentes. Por exemplo, o XPath não tem tipos de dados de data ou inteiros, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o XSD têm muitos. O XSD usa precisão de nanossegundos para valores de tempo, e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa precisão de no máximo 1/300 segundo. Consequentemente, o mapeamento de um tipo de dados para outro nem sempre é possível. Para obter mais informações sobre o mapeamento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados para tipos de dados XSD, consulte [coerções de tipo de dados e a anotação SQL: DataType &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  O [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath e Esquema XML (XSD) têm tipos de dados bem diferentes. Por exemplo, o XPath não tem tipos de dados de data ou inteiros, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o XSD têm muitos. O XSD usa precisão de nanossegundos para valores de tempo, e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa precisão de no máximo 1/300 segundo. Consequentemente, o mapeamento de um tipo de dados para outro nem sempre é possível. Para obter mais informações sobre o mapeamento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados para tipos de dados XSD, consulte [coerções de tipo de dados e a anotação SQL: DataType &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   
  XPath tem três tipos de dados: **cadeia de caracteres**, **número**, e **booliano**. O **número** tipo de dados é sempre um IEEE 754 de precisão dupla de ponto flutuante. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float(53)** tipo de dados é o mais semelhante ao XPath **número**. No entanto, **float(53)** não é exatamente IEEE 754. Por exemplo, nem NaN (não é um número) nem infinidade é usado. Tentativa de converter uma cadeia de caracteres não numérica para **número** e tentar dividir por zero resulta em erro.  
   
@@ -75,7 +77,7 @@ ms.lasthandoff: 11/17/2017
  As conversões de conjuntos de nós nem sempre são intuitivas. Um conjunto de nós é convertido em um **cadeia de caracteres** colocando o valor de cadeia de caracteres de apenas o primeiro nó no conjunto. Um conjunto de nós é convertido em **número** , convertendo-o para **cadeia de caracteres**e, em seguida, converter **cadeia de caracteres** para **número**. Um conjunto de nós é convertido em **booliano** testando sua existência.  
   
 > [!NOTE]  
->  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não executa a seleção posicional nos conjuntos de nós: por exemplo, a consulta do XPath `Customer[3]` significa o terceiro cliente; não há suporte a esse tipo de seleção posicional no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Portanto, o nó-definir-para-**cadeia de caracteres** ou nó de-conjunto-para-**número** conversões conforme descrito pela especificação do XPath não são implementadas. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa "qualquer" semântica sempre que a especificação do XPath define "primeira" semântica. Por exemplo, com base na especificação XPath do W3C, a consulta XPath `Order[OrderDetail/@UnitPrice > 10.0]` seleciona os pedidos com a primeira **OrderDetail** que tem um **UnitPrice** maior do que 10.0. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa consulta XPath seleciona os pedidos com qualquer **OrderDetail** que tem um **UnitPrice** maior do que 10.0.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não executa a seleção posicional nos conjuntos de nós: por exemplo, a consulta XPath `Customer[3]` significa o terceiro cliente; não há suporte para esse tipo de seleção posicional no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Portanto, o nó-definir-para-**cadeia de caracteres** ou nó de-conjunto-para-**número** conversões conforme descrito pela especificação do XPath não são implementadas. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa "qualquer" semântica sempre que a especificação do XPath define "primeira" semântica. Por exemplo, com base na especificação XPath do W3C, a consulta XPath `Order[OrderDetail/@UnitPrice > 10.0]` seleciona os pedidos com a primeira **OrderDetail** que tem um **UnitPrice** maior do que 10.0. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa consulta XPath seleciona os pedidos com qualquer **OrderDetail** que tem um **UnitPrice** maior do que 10.0.  
   
  A conversão em **booliano** gera a existência de uma teste; portanto, a consulta XPath `Products[@Discontinued=true()]` é equivalente à expressão SQL "Discontinued is not null", não à expressão SQL "Discontinued = 1". Para tornar a consulta equivalente à última expressão SQL, primeiro converta o conjunto de nós em uma não -**booliano** tipo, como **número**. Por exemplo, `Products[number(@Discontinued) = true()]`.  
   

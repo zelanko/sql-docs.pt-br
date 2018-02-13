@@ -1,8 +1,8 @@
 ##  <a name="infotipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) Obter ajuda 
-- [Você tem um comentário ou sugestão para aprimorar o SQL Server?](https://feedback.azure.com/forums/908035-sql-server)
+- [UserVoice - sugestão para aprimorar o SQL Server?](https://feedback.azure.com/forums/908035-sql-server)
 - [Stack Overflow (marcação sql-server) – faça perguntas sobre desenvolvimento em SQL](http://stackoverflow.com/questions/tagged/sql-server)
-- [Fóruns do MSDN – faça perguntas técnicas](https://social.msdn.microsoft.com/Forums/home?forum=sqldatabaseengine%2Csqlsetupandupgrade)
-- [Fórum das ferramentas de cliente MSDN SQL](https://social.msdn.microsoft.com/Forums/home?forum=sqltool)
+- [Instalação e atualização - Fórum do MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
+- [SQL Server Data Tools - Fórum do MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
 - [Reddit - discussão geral sobre o SQL Server](https://www.reddit.com/r/SQLServer/)
 - [Informações e termos de licença do Microsoft SQL Server](https://www.microsoft.com/download/details.aspx?id=39299)
 - [Opções de suporte para usuários empresariais](https://support.microsoft.com/gp/support-options-for-business)

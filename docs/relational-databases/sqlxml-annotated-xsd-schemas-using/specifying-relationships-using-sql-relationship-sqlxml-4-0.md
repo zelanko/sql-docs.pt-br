@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -30,19 +31,20 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - named relationships [SQLXML]
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce5968efc9238e44be3d66b2533da8951e28c907
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bb997dc9775115708cfd5e39162dfd8d474d2838
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Especificando relações usando sql:relationship (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Os elementos em um documento XML podem estar relacionados. Eles podem ser aninhados hierarquicamente e as relações ID, IDREF ou IDREFS entre os elementos podem ser especificadas.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Os elementos em um documento XML podem ser relacionados. Eles podem ser aninhados hierarquicamente e as relações ID, IDREF ou IDREFS entre os elementos podem ser especificadas.  
   
  Por exemplo, em um esquema XSD, um  **\<cliente >** elemento contém  **\<ordem >** elementos filho. Quando o esquema é mapeado para o banco de dados AdventureWorks, o  **\<cliente >** elemento é mapeado para a tabela Sales. Customer e o  **\<ordem >** elemento é mapeado para o Tabela Sales. SalesOrderHeader. Estas tabelas subjacentes, Sales. Customer e Sales. SalesOrderHeader, estão relacionadas porque os clientes fazem pedidos. O elemento CustomerID na tabela Sales.SalesOrderHeader é uma chave estrangeira que se refere à chave primária CustomerID na tabela Sales.Customer. Você pode estabelecer estas relações entre elementos de esquema de mapeamento usando o **SQL: Relationship** anotação.  
   
@@ -62,13 +64,13 @@ ms.lasthandoff: 11/17/2017
  **Pai**  
  Especifica a relação pai (tabela). Este é um atributo opcional. Se o atributo não for especificado, o nome da tabela pai será obtido das informações na hierarquia filha no documento. Se o esquema especificar duas hierarquias pai-filho que usam os mesmos  **\<SQL: Relationship >** mas elementos pai diferente, você não especificar o atributo pai em  **\<sql: relação >**. Essas informações são obtidas da hierarquia no esquema.  
   
- **chave pai**  
+ **parent-key**  
  Especifica a chave pai do pai. Se a chave pai for composta por várias colunas, os valores serão especificados com um espaço entre eles. Há um mapeamento posicional entre os valores que são especificados para a chave de várias colunas e para a chave filha correspondente.  
   
- **Filho**  
+ **Child**  
  Especifica a relação de filho (tabela).  
   
- **chave filho**  
+ **child-key**  
  Especifica a chave filha no filho que se refere à parent-key no pai. Se a chave filha for composta por vários atributos (colunas), os valores de child-key serão especificados com um espaço entre eles. Há um mapeamento posicional entre os valores que são especificados para a chave de várias colunas e para a chave pai correspondente.  
   
  **Inverso**  
@@ -390,9 +392,9 @@ ms.lasthandoff: 11/17/2017
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D. Especificando sql:relationship em vários elementos  
  Neste exemplo, o esquema XSD anotado contém o  **\<cliente >**,  **\<ordem >**, e  **\<OrderDetail >** elementos.  
   
- O  **\<ordem >** é um elemento filho do  **\<cliente >** elemento. **\<SQL: Relationship >** é especificado no  **\<ordem >** elemento filho; portanto, os pedidos que pertencem a um cliente aparecem como elementos filho do  **\<cliente >** .  
+ O  **\<ordem >** é um elemento filho do  **\<cliente >** elemento. **\<SQL: Relationship >** é especificado no  **\<ordem >** elemento filho; portanto, os pedidos que pertencem a um cliente aparecem como elementos filho do  **\<cliente >**.  
   
- O  **\<ordem >** elemento inclui o  **\<OrderDetail >** elemento filho. **\<SQL: Relationship >** é especificada em  **\<OrderDetail >** elemento filho, para que os detalhes do pedido que pertençam a um pedido apareçam como elementos filho que  **\<ordem >** elemento.  
+ O  **\<ordem >** elemento inclui o  **\<OrderDetail >** elemento filho. **\<SQL: Relationship >** é especificada em  **\<OrderDetail >** elemento filho, para que os detalhes do pedido que pertençam a um pedido apareçam como elementos filho que  **\<ordem >**  elemento.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

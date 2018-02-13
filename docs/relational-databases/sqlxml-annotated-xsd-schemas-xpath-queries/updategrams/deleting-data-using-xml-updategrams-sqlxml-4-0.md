@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - mapping-schema attribute
 - record deletions [SQLXML]
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: adb763c45800ac1d64eeb8643134dddf5e7185db
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ec9979c3c6f474cfd0702da990fa71be57d37bbf
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>Excluindo dados usando diagramas de atualização XML (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Um diagrama de atualização indica uma operação de exclusão quando uma instância de registro aparece no  **\<antes >** blocos sem registros correspondentes no  **\<depois >** bloco. Nesse caso, o diagrama exclui o registro de  **\<antes >** blocos do banco de dados.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Um diagrama de atualização indica uma operação de exclusão quando uma instância de registro aparece no  **\<antes >** blocos sem registros correspondentes no  **\<depois >** bloco. Nesse caso, o diagrama exclui o registro de  **\<antes >** blocos do banco de dados.  
   
  Este é o formato do diagrama de atualização em uma operação de exclusão:  
   

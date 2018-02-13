@@ -1,6 +1,6 @@
 ---
 title: "Visão geral do SQL Server no Linux | Microsoft Docs"
-description: "Este tópico descreve como o SQL Server é executado no Linux e fornece informações sobre como saber mais."
+description: "Este artigo descreve como o SQL Server é executado no Linux e fornece informações sobre como saber mais."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,19 +9,21 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: 8804f2e9748c692e8489a3aed837e08b7d28ab1e
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: d0047c61b5b02ad392da9e4b88deedc2033d070a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-on-linux"></a>SQL Server no Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server 2017 agora é executado no Linux. É o mesmo mecanismo de banco de dados do SQL Server, com muitos recursos e serviços, independentemente de seu sistema operacional semelhante.
 

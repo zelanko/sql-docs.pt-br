@@ -1,7 +1,7 @@
 ---
 title: "Tabela de modelagem (nível de compatibilidade 1200) | Microsoft Docs"
 ms.custom: 
-ms.date: 01/17/2018
+ms.date: 02/10/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -11,23 +11,24 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 keywords:
 - Analysis Services
 - Modelo de tabela
 - Tutorial
 - SSAS
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 20248d68dc0371ef158f287d1f3a8bc9e87360d3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3bf21d3debd7c24ea7b2e5ddcea56392e0f33400
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>Modelagem de tabela (nível de compatibilidade 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -37,7 +38,7 @@ Este tutorial fornece lições sobre como criar um modelo de tabela do Analysis 
 Se você estiver usando 2017 do SQL Server ou do Azure Analysis Services, e você deseja criar seu modelo na compatibilidade de 1400 nível, use o [Azure Analysis Services – tutorial do Adventure Works](https://review.docs.microsoft.com/azure/analysis-services/tutorials/aas-adventure-works-tutorial?branch=master). Essa versão atualizada usa o recurso obter dados novo e moderno para se conectar e importar dados de origem e usa a linguagem M configurar partições.
  
   
-## <a name="what-youll-learn"></a>O que você aprenderá   
+## <a name="what-you-learn"></a>O que você aprenderá   
   
 -   Como criar um novo projeto de modelo de tabela no SSDT.
   
@@ -47,7 +48,7 @@ Se você estiver usando 2017 do SQL Server ou do Azure Analysis Services, e voc�
   
 -   Como criar e gerenciar cálculos, medidas e Indicadores Chave de Desempenho que ajudam os usuários a analisar dados de modelo.  
   
--   Como criar e gerenciar perspectivas e hierarquias que ajudam os usuários a navegar com mais facilidade pelos dados de modelo, fornecendo pontos de vista específicos de empresas e aplicativos.  
+-   Como criar e gerenciar perspectivas e hierarquias que ajudam os usuários mais facilmente procurar dados de modelo, fornecendo pontos de vista específicos do aplicativo e de negócios.  
   
 -   Como criar partições que dividem dados de tabela em partes lógicas menores que podem ser processadas independentemente de outras partições.  
   
@@ -60,22 +61,22 @@ Este tutorial baseia-se em Adventure Works Cycles, uma empresa fictícia. A Adve
   
 Para respaldar melhor as necessidades de análise de dados das equipes de vendas e de marketing e da gerência sênior, você fica encarregado de criar um modelo de tabela para que os usuários analisem dados de vendas pela Internet no banco de dados de exemplo AdventureWorksDW.  
   
-Para concluir o tutorial e o modelo de tabela Adventure Works Internet Sales, você deve concluir várias lições. Em cada lição, há várias tarefas; a execução de cada uma delas na ordem é necessária para concluir a lição. Enquanto em uma lição específica pode haver várias tarefas que geram um resultado semelhante, mas como você conclui cada tarefa é ligeiramente diferente. Isso é para mostrar que geralmente há mais de uma maneira para concluir uma tarefa específica e para desafiá-lo a usar as habilidades que você aprendeu nas tarefas anteriores.  
+Para concluir o tutorial e o modelo de tabela Adventure Works Internet Sales, você deve concluir várias lições. Cada lição é um número de tarefas. conclusão de cada tarefa na ordem é necessária para concluir a lição. Enquanto em uma lição específica pode haver várias tarefas que geram um resultado semelhante, mas como você conclui cada tarefa é ligeiramente diferente. Isso é para mostrar que geralmente há mais de uma maneira para concluir uma tarefa específica e para desafiá-lo a usar as habilidades que você aprendeu nas tarefas anteriores.  
   
-A finalidade das lições é orientar você durante a criação de um modelo de tabela básico executado no modo na memória usando muitos dos recursos incluídos no SSDT. Como cada lição é criada após a lição anterior, você deve concluir as lições na ordem. Depois de concluir todas as lições, você terá criado e implantado o modelo de tabela de exemplo Adventure Works Internet Sales em um servidor do Analysis Services.  
+A finalidade das lições é orientar você durante a criação de um modelo de tabela básico executado no modo na memória usando muitos dos recursos incluídos no SSDT. Como cada lição é criada após a lição anterior, você deve concluir as lições na ordem. Depois de concluir todas as lições, você criou e implantou o modelo de tabela de exemplo Adventure Works Internet Sales em um servidor do Analysis Services.  
   
 Este tutorial não fornece lições ou informações sobre como gerenciar um banco de dados modelo de tabela implantado usando o SQL Server Management Studio ou usando um aplicativo cliente de relatórios para se conectar a um modelo implantado para procurar dados de modelo.  
   
 ## <a name="prerequisites"></a>Prerequisites  
-Para concluir este tutorial, você precisará dos seguintes pré-requisitos:  
+Para concluir este tutorial, você precisa dos seguintes pré-requisitos:  
   
--   A versão mais recente do [! INCLUIR[ssBIDevStudioFull](../ssdt/download-sql-server-data-tools-ssdt.md).
+-   A versão mais recente do [SSDT](../ssdt/download-sql-server-data-tools-ssdt.md).
 
 -   A versão mais recente do SQL Server Management Studio. [Obter a versão mais recente](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms). 
   
--   Um aplicativo cliente como [Power BI Desktop](https://powerbi.microsoft.com/desktop/) ou [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel.    
+-   Um aplicativo cliente como [Power BI Desktop](https://powerbi.microsoft.com/desktop/) ou Excel.    
   
--   Uma instância do SQL Server com o banco de dados de exemplo Adventure Works DW 2014. Este banco de dados de exemplo inclui os dados necessários para concluir este tutorial. [Obter a versão mais recente](http://go.microsoft.com/fwlink/?LinkID=335807).  
+-   Uma instância do SQL Server com o banco de dados de exemplo Adventure Works DW. Este banco de dados de exemplo inclui os dados necessários para concluir este tutorial. [Obter a versão mais recente](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
   
 
 -   Um Azure Analysis Services ou SQL Server 2016 ou posterior instância do Analysis Services para implantar seu modelo. [Inscreva-se para uma avaliação gratuita do Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/).

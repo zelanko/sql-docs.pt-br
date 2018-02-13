@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], annotations
 - schemas [SQLXML]
 ms.assetid: eecd0d5f-d3dd-4d20-9586-19820410ad47
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 42ce6e12d3a51dbba5219c8ebdac9fc199fdcbe4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 986e771127cb517d44a1aac1b2bb67988ec888f3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>Esquemas XSD anotados em SQLXML 4.0
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Esta seção fornece informações sobre como usar esquemas XSD anotados no SQLXML 4.0. Em versões anteriores de SQLXML, uma funcionalidade semelhante era fornecida com os esquemas XDR (Dados XML reduzidos). Esta seção também apresenta informações sobre XDR para aplicativos herdados.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Esta seção fornece informações sobre como usar esquemas XSD anotados no SQLXML 4.0. Em versões anteriores de SQLXML, uma funcionalidade semelhante era fornecida com os esquemas XDR (Dados XML reduzidos). Esta seção também apresenta informações sobre XDR para aplicativos herdados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Introdução aos esquemas XSD anotados &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  

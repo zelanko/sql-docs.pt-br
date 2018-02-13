@@ -1,6 +1,6 @@
 ---
 title: "Introdução à segurança do SQL Server no Linux | Microsoft Docs"
-description: "Este tópico descreve as ações de segurança típica."
+description: "Este artigo descreve as ações de segurança típica."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,19 +9,21 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: d927bf68b06050c8067d6f6d63d737f084219341
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 00c222c601cdf314f04db3cb9e3b818d9ea3a65f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Instruções passo a passo para os recursos de segurança do SQL Server no Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Se você for um usuário do Linux que há de novo para o SQL Server, as tarefas a seguir mostram algumas das tarefas de segurança. Eles não são exclusivas ou específicas para o Linux, mas ajuda a dar uma ideia de áreas para investigar mais. Em cada exemplo é fornecido um link para a documentação detalhada para a área.
 
@@ -38,7 +40,7 @@ CREATE LOGIN Larry WITH PASSWORD = '************';
 ```
 
 >  [!NOTE]
->  Use sempre uma senha forte em vez dos asteriscos acima.
+>  Sempre use uma senha forte em vez dos asteriscos no comando anterior.
 
 Logons podem se conectar ao SQL Server e tem acesso (com permissões limitadas) para o banco de dados mestre. Para se conectar a um banco de dados do usuário, um logon precisa de uma identidade correspondente no nível do banco de dados, chamado de usuário de banco de dados. Os usuários são específicos para cada banco de dados e devem ser criados separadamente em cada banco de dados para conceder acesso a eles. O exemplo a seguir move o cursor para o banco de dados AdventureWorks2014 e, em seguida, usa o [CREATE USER](../t-sql/statements/create-user-transact-sql.md) instrução para criar um usuário chamado Larry que está associado com o logon nomeado Larry. Embora o logon e o usuário relacionados (mapeado para outro), eles são objetos diferentes. O logon é um princípio de nível de servidor. O usuário é uma entidade de segurança de nível de banco de dados.
 
@@ -101,7 +103,7 @@ Para obter mais informações sobre o sistema de permissão, consulte [Introduç
 
 [Segurança em nível de linha](../relational-databases/security/row-level-security.md) permite que você restrinja o acesso a linhas em um banco de dados com base no usuário que está executando uma consulta. Esse recurso é útil para cenários como garantir que os clientes possam acessar somente seus próprios dados ou que os funcionários possam acessar somente dados que são relevantes para seu departamento.   
 
-As etapas a seguir o passo a passo de configuração de dois usuários com diferentes nível de linha acessem o `Sales.SalesOrderHeader` tabela. 
+As etapas a seguir orientam durante a configuração de dois usuários com acesso de nível de linha diferente para o `Sales.SalesOrderHeader` tabela. 
 
 Crie duas contas de usuário para testar a segurança em nível de linha:    
    
@@ -247,7 +249,7 @@ ALTER DATABASE AdventureWorks2014
 SET ENCRYPTION ON;   
 ```
 
-Para remover a TDE, execute`ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
+Para remover a TDE, execute `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
 
 As operações de criptografia e descriptografia são agendadas em threads em segundo plano pelo SQL Server. É possível exibir o status dessas operações usando exibições do catálogo e de gerenciamento dinâmico na lista mostrada posteriormente neste tópico.   
 
