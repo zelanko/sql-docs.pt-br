@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Exchange Spill event class
+helpviewer_keywords:
+- Exchange Spill event class
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bbbac6c6e2fd126ab40cddf9b21aa426b69d04dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 542f3a89a81184fe78375fb987f6d7ceb9f7281f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="exchange-spill-event-class"></a>classe de evento Exchange Spill
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento **Exchange Spill** indica que os buffers de comunicação em um plano de consulta paralelo foram temporariamente gravados no banco de dados **tempdb**. Isso ocorre raramente e somente quando um plano de consulta tiver exames de vários intervalos.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+A classe de evento **Exchange Spill** indica que os buffers de comunicação em um plano de consulta paralelo foram temporariamente gravados no banco de dados **tempdb** . Isso ocorre raramente e somente quando um plano de consulta tiver exames de vários intervalos.  
   
  Normalmente, a consulta do [!INCLUDE[tsql](../../includes/tsql-md.md)] que gera tais exames de intervalo tem muitos operadores BETWEEN, cada um dos quais seleciona um intervalo de linhas de uma tabela ou um índice. Uma alternativa é obter vários intervalos usando expressões como (T.a > 10 AND T.a < 20) ou (T.a > 100 AND T.a < 120). Além disso, os planos de consulta devem exigir que esses intervalos sejam examinados em ordem, porque existe uma cláusula ORDER BY em T.a ou um iterador do plano requer que ele consuma as tuplas na ordem classificada.  
   
@@ -52,32 +55,32 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="exchange-spill-event-class-data-columns"></a>Colunas de dados da classe de evento Exchange Spill  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Description|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**ClientProcessID**|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
 |**DatabaseID**|**int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**DatabaseName**|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
-|**EventClass**|**int**|Tipo de evento = 127.|27|Não|  
-|**EventSequence**|**int**|Sequência de um determinado evento na solicitação.|51|Não|  
+|**EventClass**|**int**|Tipo de evento = 127.|27|não|  
+|**EventSequence**|**int**|Sequência de um determinado evento na solicitação.|51|não|  
 |**EventSubClass**|**int**|Tipo de subclasse de evento.<br /><br /> 1= Início do derramamento<br /><br /> 2= Término do derramamento|21|Sim|  
 |**GroupID**|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |**HostName**|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
 |**LoginName**|**nvarchar**|Nome de logon do usuário (logon de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou as credenciais de logon do Windows no formato *\<DOMAIN>\\<username\>*).|11|Sim|  
-|**LoginSid**|**image**|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na tabela **syslogins** do banco de dados **master** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
+|**LoginSid**|**imagem**|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na tabela **syslogins** do banco de dados **master** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
 |**NTDomainName**|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |**NTUserName**|**nvarchar**|Nome do usuário do Windows.|6|Sim|  
 |**ObjectID**|**int**|ID de objeto atribuída pelo sistema. Corresponde à ID do nó nos Showplans.|22|Sim|  
 |**RequestID**|**int**|ID da solicitação que contém a instrução.|49|Sim|  
-|**ServerName**|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
+|**ServerName**|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|não|  
 |**SessionLoginName**|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, o **SessionLoginName** mostrará o Logon1 e o **LoginName** mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |**SPID**|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |**StartTime**|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |**XactSequence**|**bigint**|Token que descreve a transação atual.|50|Sim|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Opções Set Index](../../relational-databases/indexes/set-index-options.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  

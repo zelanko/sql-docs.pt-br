@@ -1,9 +1,10 @@
 título: "Classe de evento Auto Stats | Microsoft Docs" ms.custom: "" ms.date: "14/03/2017" ms.prod: "sql-non-specified" ms.prod_service: "database-engine, sql-database" ms.service: "" ms.component: "event-classes" ms.reviewer: "" ms.suite: "sql" ms.technology: 
   - "database-engine" ms.tgt_pltfrm: "" ms.topic: "article" helpviewer_keywords: 
-  - "Classe de evento Auto Stats" ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e caps.latest.revision: 34 autor: "JennieHubbard" ms.author: "jhubbard" gerente: "jhubbard" ms.workload: "Inativa"
+  - "Auto Stats event class" ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e caps.latest.revision: 34 author: "stevestein" ms.author: "sstein" manager: "craigg" ms.workload: "Inactive"
 ---
 # <a name="auto-stats-event-class"></a>Classe de evento Auto Stats
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento **Auto Stats** indica que ocorreu uma atualização automática de estatísticas de índice e coluna.  A **Auto Stats** também é disparada quando as estatísticas estão sendo carregadas para uso pelo otimizador.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+A classe de evento **Auto Stats** indica que ocorreu uma atualização automática de estatísticas de índice e coluna.  A **Auto Stats** também é disparada quando as estatísticas estão sendo carregadas para uso pelo otimizador.
   
 ## <a name="auto-stats-event-class-data-columns"></a>Colunas de dados da classe de evento Auto Stats  
   

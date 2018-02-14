@@ -8,7 +8,8 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-transaction-log
+ms.technology:
+- dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - transaction logs [SQL Server], full log
 - full transaction logs [SQL Server]
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 42620b8d28d8a2663d5cb4ddc66f551c8801084d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e7aa56db8223c76b3d597da5c00ffe5be250aae7
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Solução de problemas em um log de transação completa (SQL Server Erro 9002)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico aborda as respostas possíveis a um log de transações completo e sugere como evitar isso no futuro. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico aborda as respostas possíveis a um log de transações completo e sugere como evitar isso no futuro. 
   
   Quando o log de transações fica completo, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] emite um **erro 9002**. O log pode ficar completo quando o banco de dados estiver online ou em recuperação. Se o log ficar completo enquanto o banco de dados estiver online, o banco de dados permanecerá online, mas só poderá ser lido e não atualizado. Se o log ficar completo durante uma recuperação, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] marcará o banco de dados como RESOURCE PENDING. Em qualquer caso, é necessária a ação do usuário para liberar espaço no log.  
   

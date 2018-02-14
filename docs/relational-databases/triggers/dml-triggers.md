@@ -8,7 +8,8 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-dml
+ms.technology:
+- dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - DML triggers, about DML triggers
 - triggers [SQL Server]
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
-caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: afb92fc71dcb3581024950cfaac84c5b2dac7968
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 52773af792848bd628c238e0120f08f7441c2d6f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dml-triggers"></a>Gatilhos DML
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Os gatilhos DML são um tipo especial de procedimento armazenado que entra em vigor automaticamente quando um evento DML (linguagem de manipulação de dados) ocorre e afeta a tabela ou exibição definida no gatilho. Os eventos DML são instruções INSERT, UPDATE ou DELETE. Os gatilhos DML podem ser usados para impor regras de negócios e integridade de dados, consultar outras tabelas e incluir instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] complexas. O gatilho e a instrução que o dispara são tratados como uma transação simples, que pode ser revertida dentro do gatilho. Se um erro grave for detectado (espaço em disco insuficiente, por exemplo), toda a transação será revertida automaticamente.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Os gatilhos DML são um tipo especial de procedimento armazenado que entra em vigor automaticamente quando um evento DML (linguagem de manipulação de dados) ocorre e afeta a tabela ou exibição definida no gatilho. Os eventos DML são instruções INSERT, UPDATE ou DELETE. Os gatilhos DML podem ser usados para impor regras de negócios e integridade de dados, consultar outras tabelas e incluir instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] complexas. O gatilho e a instrução que o dispara são tratados como uma transação simples, que pode ser revertida dentro do gatilho. Se um erro grave for detectado (espaço em disco insuficiente, por exemplo), toda a transação será revertida automaticamente.  
   
 ## <a name="dml-trigger-benefits"></a>Benefícios do gatilho DML  
  Os gatilhos DML são semelhantes a restrições, pois podem impor integridade de entidade ou integridade de domínio. Em geral, a integridade da entidade sempre deve ser imposta no menor nível por índices que fazem parte das restrições PRIMARY KEY e UNIQUE ou que são criados independentemente de restrições. A integridade de domínio deve ser imposta por restrições CHECK e a RIN (integridade referencial) deve ser imposta por restrições FOREIGN KEY. Os gatilhos DML são muito úteis quando os recursos suportados por restrições não atendem às necessidades funcionais do aplicativo.  
@@ -73,7 +75,7 @@ ms.lasthandoff: 11/17/2017
  Gatilhos CLR  
  Um gatilho CLR pode ser um gatilho AFTER ou INSTEAD OF. Um gatilho CLR também pode ser um gatilho DDL. Em vez de executar um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] , um gatilho CLR executa um ou mais métodos gravados em código gerenciado que são membros de um assembly criado no .NET Framework e carregado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Tarefa|Tópico|  
 |----------|-----------|  
@@ -88,7 +90,7 @@ ms.lasthandoff: 11/17/2017
 |Descreve como excluir ou desabilitar gatilhos DML.|[Excluir ou desabilitar gatilhos DML](../../relational-databases/triggers/delete-or-disable-dml-triggers.md)|  
 |Descreve como gerenciar a segurança do gatilho.|[Gerenciar a segurança dos gatilhos](../../relational-databases/triggers/manage-trigger-security.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

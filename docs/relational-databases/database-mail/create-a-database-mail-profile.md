@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mail
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - profiles [SQL Server], Database Mail
 - public profiles [Database Mail]
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bddbe07f996ec575d2c25b1dd948b407190186d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a30265b02ca821a3d787162b60847e71e7260fa1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-a-database-mail-profile"></a>Criar um perfil do Database Mail
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use o **Assistente para Configuração do Database Mail** ou o [!INCLUDE[tsql](../../includes/tsql-md.md)] para criar perfis públicos e privados do Database Mail. Para obter mais informações sobre perfis de email, consulte [Perfil do Database Mail](https://msdn.microsoft.com/library/ms175100.aspx#Anchor_2).
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Use o **Assistente para Configuração do Database Mail** ou o [!INCLUDE[tsql](../../includes/tsql-md.md)] para criar perfis públicos e privados do Database Mail. Para obter mais informações sobre perfis de email, consulte [Perfil do Database Mail](https://msdn.microsoft.com/library/ms175100.aspx#Anchor_2).
   
 -   **Antes de começar:** [Pré-requisitos](#Prerequisites), , [Segurança](#Security)  
   

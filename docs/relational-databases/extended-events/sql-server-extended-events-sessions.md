@@ -18,16 +18,16 @@ helpviewer_keywords:
 - sessions
 - extend events [SQL Server]
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bea1e28b3bd0530658611334ea55af7312c5aa93
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 09eae3690643f45896325c141bd79ac218f27c04
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessões de eventos estendidos do SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
  Mencionando a figura precedente, observe que o estado da sessão é alterado quando os comandos DDL diferentes são emitidos para uma sessão de evento. Essas alterações de estado são descritas na tabela a seguir.  
   
-|Rótulo de ilustração|instrução DDL|Descrição|  
+|Rótulo de ilustração|instrução DDL|Description|  
 |------------------------|-------------------|-----------------|  
 |Criar|CREATE EVENT SESSION|O processo do host cria um objeto de sessão que contém os metadados fornecidos pela CREATE EVENT SESSION. O processo do host valida a definição de sessão, valida o nível de permissão do usuário, e armazena os metadados no banco de dados mestre. Neste momento a sessão não está ativa.|  
 |Alter|ALTER EVENT SESSION, STATE=START|O processo do host inicia a sessão. O processo do host lê os metadados armazenados, valida a definição da sessão, verifica o nível de permissão do usuário e cria a sessão. Objetos de sessão, como eventos e destinos, são carregados e a manipulação de eventos está ativa.|  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
   
  A arquitetura de eventos estendidos oferece um sistema flexível que permite a utilização de diversos objetos para serem usados em conjunto na solução de problemas específicos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)  
   
   

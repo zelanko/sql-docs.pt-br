@@ -17,21 +17,21 @@ helpviewer_keywords:
 - extended events [SQL Server]
 - xe
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 97398ffda5f94b9a76adea40111c2f5bd9c3137a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 12c46e8d5a1496d21f2f4b0ab40956020a8ac612
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="extended-events"></a>Eventos estendidos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Os Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] têm uma arquitetura altamente escalonável e configurável que permite aos usuários coletar o máximo ou o mínimo de informações, conforme necessário, para solucionar ou identificar um problema.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] têm uma arquitetura altamente escalonável e configurável que permite aos usuários coletar o máximo ou o mínimo de informações, conforme necessário, para solucionar ou identificar um problema.  
 
 Você pode encontrar mais informações sobre os Eventos Estendidos em:
 
@@ -103,7 +103,7 @@ Usando o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou [!INCLUDE[
 |Descreve como obter informações sobre os campos associados aos eventos.|[Obter os campos de todos os eventos](http://msdn.microsoft.com/library/4e4ee03f-5bca-42ed-a37c-db1c82e3aad2)|  
 |Descreve como descobrir quais eventos estão disponíveis nos pacotes registrados.|[Exibir os eventos de pacotes registrados](http://msdn.microsoft.com/library/9a90b1a2-aa69-43f6-bdeb-cc5f57a26c6f)|  
 |Descreve como determinar quais destinos de Eventos Estendidos estão disponíveis nos pacotes registrados.|[Exibir os destinos dos Eventos Estendidos de pacotes registrados](http://msdn.microsoft.com/library/4985aa5f-ac99-49f6-852c-9d25916549e9)|  
-|Descreve como exibir os eventos e as ações dos Eventos Estendidos que são equivalentes a cada evento de Rastreamento do SQL e suas colunas associadas.|[Exibir os Eventos Estendidos equivalentes às classes de evento de Rastreamento do SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
+|Descreve como exibir os eventos e as ações dos Eventos Estendidos que são equivalentes a cada evento de Rastreamento do SQL e suas colunas associadas.|[Exibir os Eventos Estendidos equivalentes às classes de rastreamento de eventos do SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
 |Descreve como localizar os parâmetros que você pode definir para o uso do argumento ADD TARGET em CREAT EVENT SESSION ou ALTER EVENT SESSION.|[Obter os parâmetros configuráveis para o argumento ADD TARGET](http://msdn.microsoft.com/library/08454543-c5c8-4ca3-9af9-f1d82264471c)|  
 |Descreve como converter um script existente de Rastreamento do SQL em uma sessão de Eventos Estendidos.|[Converter um script existente de Rastreamento do SQL em uma sessão de Eventos Estendidos](../../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
 |Descreve como determinar quais consultas estão mantendo o bloqueio, o plano da consulta e a pilha [!INCLUDE[tsql](../../includes/tsql-md.md)] no momento em que o bloqueio foi realizado.|[Determinar quais consultas estão mantendo bloqueios](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
@@ -112,8 +112,8 @@ Usando o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou [!INCLUDE[
 | Usando Exibições de catálogo e DMVs (Exibições de gerenciamento dinâmico) para eventos estendidos | [Seleções e junções em exibições do sistema dos Eventos Estendidos no SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
 
   
-## <a name="see-also"></a>Consulte também  
- [Aplicativos da camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Aplicativos da Camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Suporte ao DAC para objetos e versões do SQL Server](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
  [Implantar um aplicativo da camada de dados](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [Monitorar aplicativos da camada de dados](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)   
