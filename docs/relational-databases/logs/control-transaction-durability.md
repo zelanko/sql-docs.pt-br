@@ -8,28 +8,29 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-transaction-log
+ms.technology:
+- dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - delayed durability
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c55b9f3bc4df4048c2edb058e7c70579fb80bdba
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 0f54b24d7395584a8182b607bfc491179e314336
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="control-transaction-durability"></a>Controlar a durabilidade da transação
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  As confirmações de transações do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser totalmente duráveis, o padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ou duráveis atrasadas (também conhecido como confirmação lenta).    
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] As confirmações de transações podem ser totalmente duráveis, o padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou duráveis atrasadas (também conhecido como confirmação lenta).    
     
  As confirmações de transações totalmente duráveis são síncronas e relatam uma confirmação como bem-sucedida, devolvendo o controle ao cliente somente após a gravação dos registros de log da transação em disco. As confirmações de transações duráveis atrasadas são assíncronas e relatam uma confirmação como bem-sucedida antes que os registros de log da transação sejam gravados no disco. É necessário gravar as entradas de log das transações em disco para que uma transação seja durável. As transações duráveis atrasadas tornam-se duráveis quando as entradas de log de transações são liberadas para o disco.    
     
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/02/2018
 -   O sistema não puder tolerar perda de dados.     
     Consulte a seção [Onde posso perder os dados?](../../relational-databases/logs/control-transaction-durability.md#bkmk_DataLoss) para obter mais informações sobre quando você pode perder alguns dos seus dados.    
     
--   O afunilamento não seja devido à latência de gravação do log de transações.    
+-   O gargalo não seja devido à latência de gravação do log de transações.    
     
  A durabilidade da transação atrasada reduz a latência devido à E/S do log mantendo os registros do log de transações na memória e gravando no log de transações em lotes, exigindo assim menos operações de E/S. A durabilidade da transação atrasada potencialmente reduz a contenção de E/S de log, reduzindo a espera no sistema.    
     
@@ -71,7 +72,7 @@ ms.lasthandoff: 01/02/2018
  **Você pode tolerar alguma perda de dados.**    
  Se você puder tolerar alguma perda de dados, por exemplo, nos casos em que os registros individuais não sejam críticos desde que você tenha a maioria dos dados, poderá ser válido considerar a durabilidade atrasada. Se você não puder tolerar perda de dados, não use a durabilidade de transação atrasada.    
     
- **Você está observando um afunilamento em gravações de log de transações.**    
+ **Você está observando um gargalo em gravações de log de transações.**    
  Se seus problemas de desempenho forem devido à latência em gravações do log de transações, seu aplicativo provavelmente se beneficiará do uso da durabilidade de transação atrasada.    
     
  **Suas cargas de trabalho têm uma taxa alta de contenção.**    

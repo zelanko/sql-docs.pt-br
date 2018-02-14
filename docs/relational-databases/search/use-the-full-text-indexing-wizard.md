@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,19 +26,20 @@ helpviewer_keywords:
 - Full-Text Indexing Wizard
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cfca84ed59bd6922a6667a0b214668836e421ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85be544c13310a98863b03d8bd515c5a1990a5ba
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Usar o Assistente para Indexação de Texto Completo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] O Assistente para Indexação de Texto Completo do SSMS descreve uma série de etapas criadas para lhe ajudar a criar um índice de texto completo.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+O Assistente para Indexação de Texto Completo do SSMS descreve uma série de etapas criadas para ajudá-lo a criar um índice de texto completo.  
   
 ## <a name="create-a--full-text-index"></a>Criar um índice de Texto Completo 
 
@@ -84,15 +86,15 @@ ms.lasthandoff: 11/17/2017
 
      **Selecionar um catálogo:** selecione um catálogo de texto completo na lista. O catálogo padrão para o banco de dados será o item selecionado por padrão na lista. Se não houver catálogos disponíveis, a lista permanecerá desabilitada e a caixa de seleção **Criar um novo catálogo** estará marcada e desabilitada.  
   
-  ou
+  OU
   
  10. **Criar um novo catálogo**
  - Selecione o catálogo de texto completo.  
   
-    a. **Nome**  
+    A. **Nome**  
      Insira um nome para o novo catálogo de texto completo.  
   
-     b. **Definir como catálogo padrão**  
+     B. **Definir como catálogo padrão**  
      Marque para tornar este o catálogo padrão do banco de dados.  
   
      c. **Distinção de acentos**  
@@ -102,7 +104,7 @@ ms.lasthandoff: 11/17/2017
      Especifique o grupo de arquivos no qual criar o índice de texto completo.  
   
      e. Selecione um valor:  
-      |Value|Descrição|  
+      |Valor|Description|  
       |-----------|-----------------|
       |**<default>**| Se a tabela ou exibição não for particionada, selecione para usar o mesmo grupo de arquivos da tabela ou exibição subjacente. Se a tabela ou a exibição for particionada, o grupo de arquivos primário será utilizado|
       |**PRIMARY**|Selecione para usar o grupo de arquivos primário para o novo índice de texto completo.|
@@ -116,7 +118,7 @@ ms.lasthandoff: 11/17/2017
   
      Selecione um destes valores:  
   
-   |Value|Descrição|  
+   |Valor|Description|  
     |-----------|-----------------|  
     |**<system>**|Selecione para usar a lista de palavras irrelevantes do sistema no novo índice de texto completo. Esse é o padrão.|  
     |**<off>**|Selecione para desabilitar as listas de palavras irrelevantes para o novo índice de texto completo.|  

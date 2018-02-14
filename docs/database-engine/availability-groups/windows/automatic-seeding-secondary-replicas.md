@@ -10,20 +10,22 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Automatic seeding [SQL Server], secondary replica
+helpviewer_keywords:
+- Automatic seeding [SQL Server], secondary replica
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 86282a01e4c9027d9dc340d348a814f61c0f4b3b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 60bb5a01191de574b7fcac4eb11d73190c94aac8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Propagação automática para réplicas secundárias
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +37,7 @@ No SQL Server 2012 e 2014, a única maneira de inicializar uma réplica secundá
 As considerações para o uso da propagação automática incluem:
 
 * [Impacto do log de transações e de desempenho sobre a réplica primária](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [Layout de disco](#disk-layout)
+* [Layout de disco](#disklayout)
 * [Segurança](#security)
 
 
@@ -154,9 +156,6 @@ Se ela for bem-sucedida, os bancos de dados serão criados automaticamente na r�
 <a name="sql-server-log"></a> Além das [Exibições de Gerenciamento Dinâmico](#dynamic-management-views) descritas abaixo, o início e a conclusão da propagação automática podem ser vistos no Log do SQL Server:
 
 ![Log do SQL Server][2]
-
-
-
 
 ## <a name="combine-backup-and-restore-with-automatic-seeding"></a>Combinar o backup e a restauração com a propagação automática
 

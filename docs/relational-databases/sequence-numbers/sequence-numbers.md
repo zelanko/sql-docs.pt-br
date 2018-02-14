@@ -8,7 +8,8 @@ ms.service:
 ms.component: sequence-numbers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - sequence numbers [SQL Server]
 - sequence number object
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2d9ff3876144ce984c29e804016ec9a69bbd38b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4369c402254e0b0de8082c1670171b834585b2d5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sequence-numbers"></a>Números de sequência
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Uma sequência é um objeto associado a um esquema definido pelo usuário que gera uma sequência de valores numéricos de acordo com a especificação com a qual a sequência foi criada. A sequência de valores numéricos é gerada em ordem crescente ou decrescente em um intervalo definido e pode seguir um ciclo (repetir-se) conforme solicitado. As sequências, ao contrário das colunas de identidade, não são associadas a tabelas. Um aplicativo se refere a um objeto de sequência para receber seu próximo valor. A relação entre sequências e tabelas é controlada pelo aplicativo. Os aplicativos de usuário podem referenciar um objeto de sequência e coordenar as chaves de valores em várias linhas e tabelas.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Uma sequência é um objeto associado a um esquema definido pelo usuário que gera uma sequência de valores numéricos de acordo com a especificação com a qual a sequência foi criada. A sequência de valores numéricos é gerada em ordem crescente ou decrescente em um intervalo definido e pode seguir um ciclo (repetir-se) conforme solicitado. As sequências, ao contrário das colunas de identidade, não são associadas a tabelas. Um aplicativo se refere a um objeto de sequência para receber seu próximo valor. A relação entre sequências e tabelas é controlada pelo aplicativo. Os aplicativos de usuário podem referenciar um objeto de sequência e coordenar as chaves de valores em várias linhas e tabelas.  
   
  Uma sequência é criada independentemente das tabelas com o uso da instrução **CREATE SEQUENCE** . Opções permitem que você controle o incremento, os valores máximo e mínimo, o ponto de partida, o recurso de reinício automático e o cache para melhorar desempenho. Para obter informações sobre as opções, veja [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md).  
   
@@ -393,7 +395,7 @@ GO
   
 ```  
   
- As instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que usam `SELECT *` receberão a nova coluna como a última coluna, e não a primeira. Se isso não for aceitável, você deverá criar uma tabela totalmente nova, mover os dados para ela e recriar as permissões na nova tabela.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] As instruções que usam `SELECT *` receberão a nova coluna como a última coluna, e não a primeira. Se isso não for aceitável, você deverá criar uma tabela totalmente nova, mover os dados para ela e recriar as permissões na nova tabela.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)  

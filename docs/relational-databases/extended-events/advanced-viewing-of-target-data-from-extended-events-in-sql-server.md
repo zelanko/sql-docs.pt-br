@@ -8,19 +8,20 @@ ms.service:
 ms.component: extended-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: xevents
+ms.technology:
+- xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: 1733064f1503f9a8a0e082835b58f91ff195cd9e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+manager: craigg
+ms.openlocfilehash: 7415e768584c9256eaa600cb2302c7cc9aa0d529
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Exibição avançada de dados de destino dos Eventos Estendidos no SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ Este artigo ilustra como você pode usar os recursos avançados do SQL Server Ma
 
 
 
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 O presente artigo pressupõe que você já saiba como criar e iniciar uma sessão de evento. Confira as instruções sobre como criar uma sessão de evento no início do seguinte artigo:
 
@@ -289,7 +290,7 @@ Agrupar linhas por valores correspondentes em determinada coluna é a primeira e
 #### <a name="d41-grouping"></a>D.4.1 Agrupamento
 
 
-Na barra de ferramentas de eventos estendidos, o botão **Agrupamento** inicia uma caixa de diálogo que pode ser usada para agrupar os dados exibidos por determinada coluna. A próxima captura de tela mostra uma caixa de diálogo usada para agrupar pela coluna *name* .
+Na barra de ferramentas de eventos estendidos, o botão **Agrupamento** inicia uma caixa de diálogo que pode ser usada para agrupar os dados exibidos por determinada coluna. A próxima captura de tela mostra uma caixa de diálogo usada para agrupar pela coluna *name*.
 
 ![Barra de ferramentas > botão Agrupamento e a caixa de diálogo Agrupamento](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
 

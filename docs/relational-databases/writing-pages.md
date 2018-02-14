@@ -8,21 +8,23 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: pages
+helpviewer_keywords:
+- pages
 ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e116782bb7c78f69a1d7c90755e746e4587d4426
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f8db9e1c466e787e4c8608b0a47bef1ff8f52c8f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="writing-pages"></a>Gravando páginas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,6 +61,6 @@ Uma página suja é gravada no disco de três formas:
 
 Os processos de gravação lenta, gravação adiantada e ponto de verificação não esperam a conclusão da operação de E/S. Eles sempre usam a E/S assíncrona (ou sobreposta) e continuam com outro trabalho, verificando o êxito da E/S posteriormente. Isso permite ao SQL Server maximizar os recursos de CPU e de E/S para as tarefas apropriadas.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 [Guia de arquitetura de página e extensões](../relational-databases/pages-and-extents-architecture-guide.md)   
  [Lendo Páginas](../relational-databases/reading-pages.md)

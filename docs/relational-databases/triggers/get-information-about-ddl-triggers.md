@@ -8,7 +8,8 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-ddl
+ms.technology:
+- dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - status information [SQL Server], DDL triggers
 - DDL triggers, metadata
 ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 728f32ec8bbd47eb5d7234b8ff8c633c440a854c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8ae01a87b0697165fe9ed66d80645f87fc8a5f19
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="get-information-about-ddl-triggers"></a>Obter informações sobre gatilhos DDL
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Pode-se usar as exibições do catálogo listadas nesta seção para obter informações sobre gatilhos DDL.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Pode-se usar as exibições do catálogo listadas nesta seção para obter informações sobre gatilhos DDL.  
   
  **Para obter informações sobre os eventos ou grupos de evento nos quais um gatilho DDL pode ser acionado.**  
   
@@ -76,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [sys.server_assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gatilhos DDL](../../relational-databases/triggers/ddl-triggers.md)  
   
   

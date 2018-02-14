@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - event classes [SQL Server], Object Type column values
 - Object Type column values [SQL Server]
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1c0753ed19215c5d45610aa5582fbce2c906cd6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 063bab84aeaa695ace1087df518640b611749b5f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="objecttype-trace-event-column"></a>Coluna de evento de rastreamento ObjectType
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A coluna de evento de rastreamento Tipo de Objeto é usada em diversos eventos de rastreamento. Este tópico descreve os possíveis valores dessa coluna e as definições a ela associadas.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+A coluna Object Type é usada em diversos eventos de rastreamento. Este tópico descreve os possíveis valores dessa coluna e as definições a ela associadas.  
   
 ## <a name="object-type-column-values"></a>Valores da coluna Object Type  
   
@@ -46,11 +48,11 @@ ms.lasthandoff: 11/17/2017
 |8278|Exibição|  
 |8280|Procedimento armazenado estendido|  
 |16724|Gatilho CLR|  
-|16964|Banco de dados|  
-|16975|Objeto|  
+|16964|banco de dados|  
+|16975|Object|  
 |17222|Catálogo de texto completo|  
 |17232|Procedimento armazenado CLR|  
-|17235|Esquema|  
+|17235|esquema|  
 |17475|Credencial|  
 |17491|Evento DDL|  
 |17741|Evento de gerenciamento|  
@@ -69,7 +71,7 @@ ms.lasthandoff: 11/17/2017
 |19283|ObfusKey|  
 |19521|Logon de chave assimétrica|  
 |19523|Logon de certificado|  
-|19538|Função|  
+|19538|Role|  
 |19539|Logon do SQL|  
 |19543|Logon do Windows|  
 |20034|Associação de serviço remoto|  
@@ -107,7 +109,7 @@ ms.lasthandoff: 11/17/2017
 |22611|Esquema XML|  
 |22868|Tipo|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

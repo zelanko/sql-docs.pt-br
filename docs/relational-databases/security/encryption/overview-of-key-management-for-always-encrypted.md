@@ -8,20 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-security
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 00fbddda37b58442e37618a25347576bc88caf07
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fbe87e904a8e46ae19d6dcb06600352a29949dc2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Overview of Key Management for Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,7 +101,7 @@ Para garantir que Always Encrypted seja eficaz na prevenção desses tipos de at
 - Nunca gere chaves mestras de coluna ou as chaves de criptografia de coluna em um computador que hospeda o banco de dados. Em vez disso, gere as chaves em um computador separado, dedicado para o gerenciamento de chaves ou que hospeda aplicativos que também precisarão de acesso às chaves. Isso significa que **você nunca deve executar ferramentas usadas para gerar as chaves no computador que hospeda o banco de dados** , pois se um invasor acessar um computador usado para provisionar ou manter as chaves Always Encrypted, ele poderá potencialmente obter suas chaves, mesmo se elas aparecerem somente na memória da ferramenta por um curto período.
 - Para garantir que o processo de gerenciamento de chaves não revele inadvertidamente as chaves mestras de coluna ou as chaves de criptografia de coluna, é essencial identificar os possíveis adversários e ameaças de segurança antes de definir e implementar um processo de gerenciamento de chaves. Por exemplo, se sua meta é garantir que os DBAs não tenham acesso a dados confidenciais, um DBA não pode ser o responsável por gerar as chaves. Um DBA, no entanto, *pode* gerenciar metadados de chave no banco de dados, pois os metadados não contêm as chaves de texto não criptografado.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>Next Steps
 
 - [Criar e armazenar chaves mestras de coluna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
 - [Configurar chaves do Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)

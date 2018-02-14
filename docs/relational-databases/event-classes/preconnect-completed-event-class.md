@@ -8,35 +8,38 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: PreConnect:Completed Event Class
+helpviewer_keywords:
+- PreConnect:Completed Event Class
 ms.assetid: 7ed2f620-6511-4985-9961-d2927c2b1759
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ba5e00939d88a810ac709c451d3d9a26706d218
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 380092bc284bdd6ba85f7f7a3d624734b65559ae
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="preconnectcompleted-event-class"></a>Classe de evento PreConnect:Completed
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento PreConnect:Completed indica quando a execução de um gatilho LOGON ou da função de classificação do Resource Governor é concluída.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+A classe de evento PreConnect:Completed indica quando um gatilho LOGON ou a função de classificação do Administrador de Recursos conclui a execução.  
   
 ## <a name="preconnectcompleted-event-class-data-columns"></a>Colunas de dados da classe de evento PreConnect:Completed  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Description|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|EventClass|**int**|216|27|Não|  
+|EventClass|**int**|216|27|não|  
 |SPID|**int**|O ID de processo de servidor que dispara este evento.|12|Sim|  
 |EventSubClass|**int**|1 para a função de classificador definida pelo usuário.|21|Sim|  
 |StartTime|**datetime**|A hora que inicia a função de classificador definida pelo usuário.|14|Sim|  
 |EndTime|**datetime**|A hora que inicia a função de classificador definida pelo usuário.|15|Sim|  
-|Duration|**bigint**|O número de hora, em microssegundo, usado pela função de classificação.|13|Sim|  
+|Duração|**bigint**|O número de hora, em microssegundo, usado pela função de classificação.|13|Sim|  
 |ObjectID|**int**|A ID do objeto do classificador definido pelo usuário.|22|Sim|  
 |CPU|**int**|Uso de CPU em milissegundos.|18|Sim|  
 |Reads|**int**|O número de leituras lógicas.|16|Sim|  
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/17/2017
 |TargetUserName|**sysname**|O valor de retorno (nome do grupo de cargas de trabalho) para a função de classificação definida pelo usuário, caso o sistema não consiga encontrar um grupo ativo correspondente. Caso contrário, essa coluna será definida como NULL.|39|Sim|  
 |ObjectName|**nvarchar(256)**|O nome de duas partes da função de classificador definida pelo usuário. Por exemplo, dbo.classifier.|34|Sim|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)   
  [Classe de evento PreConnect:Starting](../../relational-databases/event-classes/preconnect-starting-event-class.md)   
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)  

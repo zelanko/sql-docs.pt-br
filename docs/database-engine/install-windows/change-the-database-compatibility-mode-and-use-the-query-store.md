@@ -21,14 +21,15 @@ caps.latest.revision:
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6fa6e9e16be729fba7334b26b130c8e22525e479
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2701a951f0c8847b028e3a87717ad9ac3a965529
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="change-the-database-compatibility-mode-and-use-the-query-store"></a>Alterar o modo de compatibilidade do banco de dados e usar o repositório de consultas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], algumas alterações são habilitadas somente quando o [nível de compatibilidade do banco de dados](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) é alterado. Isso foi feito por vários motivos:  
   
@@ -37,8 +38,10 @@ Do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../
 - Alterações no processador de consulta podem ter efeitos complexos. Até mesmo uma alteração “boa” para o sistema pode ser ótima para a maioria das cargas de trabalho – ela pode causar uma regressão inaceitável em uma consulta importante para outros. Separar essa lógica do processo de atualização permite que determinados recursos, assim como o Repositório de Consultas, façam rapidamente a mitigação das escolhas de plano ou até mesmo evitem-nas completamente em servidores de produção.  
   
 > [!IMPORTANT]  
-> Se o nível de compatibilidade de um banco de dados de usuário era 100 ou mais alto antes da atualização, ele permanecerá o mesmo depois da atualização. Se o nível de compatibilidade de um banco de dados do usuário era 90 antes da atualização, no banco de dados atualizado esse nível será definido como 100, que é o mais baixo com suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Os níveis de compatibilidade dos bancos de dados tempdb, model, msdb e Resource são definidos para o nível de compatibilidade atual após o upgrade.
-> O banco de dados do sistema mestre retém o nível de compatibilidade anterior ao upgrade. 
+> Se o nível de compatibilidade de um banco de dados de usuário era 100 ou mais alto antes da atualização, ele permanecerá o mesmo depois da atualização.    
+> Se o nível de compatibilidade de um banco de dados do usuário era 90 antes da atualização, no banco de dados atualizado esse nível será definido como 100, que é o mais baixo com suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].    
+> Os níveis de compatibilidade dos bancos de dados tempdb, model, msdb e Resource são definidos para o nível de compatibilidade atual após o upgrade.   
+> O banco de dados do sistema mestre retém o nível de compatibilidade anterior ao upgrade.    
   
 O processo de atualização para habilitar a nova funcionalidade do processador de consulta está relacionado ao modelo de manutenção pós-lançamento do produto.  Algumas dessas correções são liberadas sob o [sinalizador de rastreamento 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199).  Clientes que precisam de correções podem optar por aceitar essas correções sem causar regressões inesperadas para outros clientes. O modelo de manutenção pós-lançamento para hotfixes do processador de consulta é documentado [aqui](http://support.microsoft.com/kb/974006). Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a mudança para um novo nível de compatibilidade implica no sinalizador de rastreamento 4199 não ser mais necessário, porque essas correções agora estão habilitadas por padrão no último modo de compatibilidade. Portanto, como parte do processo de atualização, é importante validar que o 4199 não está habilitado quando o processo de atualização for concluído.  
 

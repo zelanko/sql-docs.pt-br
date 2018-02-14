@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - SQL Server event classes, Stored Procedures event category
 - event classes [SQL Server], Stored Procedures event category
 ms.assetid: 71bebaa3-a05a-4695-b349-078cecd0949a
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd92c647ab35396dc36f3065605b6e0071964e49
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 392e922e32dcae4f6765503c5af24cf0b58b81e6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="stored-procedures-event-category"></a>Categoria de evento dos procedimentos armazenados
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A categoria de evento **Stored Procedures** contém eventos de procedimentos armazenados gerais.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+A categoria de evento **Procedimentos armazenados** contém eventos de procedimentos gerais armazenados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|Description|  
 |-----------|-----------------|  
 |[Classe de evento RPC:Completed](../../relational-databases/event-classes/rpc-completed-event-class.md)|Indica que uma RPC (chamada de procedimento remoto) foi completada.|  
 |[Classe de evento PreConnect:Completed](../../relational-databases/event-classes/preconnect-completed-event-class.md)|Indica quando a função de classificação Administrador de Recursos conclui a execução.|  
@@ -47,9 +49,9 @@ ms.lasthandoff: 11/17/2017
 |[Classe de evento SP:Recompile](../../relational-databases/event-classes/sp-recompile-event-class.md)|Indica que o procedimento armazenado foi recompilado.|  
 |[Classe de evento SP:Starting](../../relational-databases/event-classes/sp-starting-event-class.md)|Indica que a execução do procedimento armazenado está iniciando.|  
 |[Classe de evento SP:StmtCompleted](../../relational-databases/event-classes/sp-stmtcompleted-event-class.md)|Indica que uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] em um procedimento armazenado foi concluída.|  
-|[Classe de evento SP:StmtStarting](../../relational-databases/event-classes/sp-stmtstarting-event-class.md)|Indica que uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] em um procedimento armazenado foi iniciada.|  
+|[Classe de evento SP: StmtStarting](../../relational-databases/event-classes/sp-stmtstarting-event-class.md)|Indica que uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] em um procedimento armazenado foi iniciada.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

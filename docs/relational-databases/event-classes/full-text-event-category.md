@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - Full Text event category [SQL Server]
 - SQL Server event classes, Full Text event category
 ms.assetid: 8107a3ea-f891-4134-946b-c64e3a8e92e8
-caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 160d58f5f6212e2366042c2911671c82d017ea18
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 36fb20df6ac2be1bcd09bcbf5761ae66eacbbe19
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="full-text-event-category"></a>Categoria de evento Full Text
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A categoria de evento **Full Text** contém eventos gerais de texto completo.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+A categoria de evento **Full Text** contém eventos gerais de texto completo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|Description|  
 |-----------|-----------------|  
 |[Classe de evento FT:Crawl Aborted](../../relational-databases/event-classes/ft-crawl-aborted-event-class.md)|Indica que um rastreamento de texto completo encontrou uma exceção.|  
 |[Classe de evento FT:Crawl Started](../../relational-databases/event-classes/ft-crawl-started-event-class.md)|Indica que um rastreamento de texto completo foi iniciado.|  

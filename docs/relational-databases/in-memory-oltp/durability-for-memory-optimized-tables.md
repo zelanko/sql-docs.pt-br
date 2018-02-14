@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31182384eaf0b9ae13cca070ac18eba76a14df1e
-ms.sourcegitcommit: 8b774eff53c1043dc3d4305ce8329fcab8945615
+ms.openlocfilehash: 206337e355352ce6b1f1a13cd36f90f18937de91
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidade de tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 12/18/2017
  Para obter detalhes sobre as limitações de tamanho para tabelas duráveis, veja [Estimar requisitos de memória para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md). 
   
 ## <a name="transaction-log"></a>Log de Transações  
- Todas as alterações feitas nas tabelas baseadas em disco ou tabelas duráveis com otimização de memória são capturadas em um ou mais registros de log de transações. Depois da confirmação de uma transação, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] grava os registros de log associados com a transação no disco antes de comunicar ao aplicativo ou à sessão de usuário que a transação foi confirmada. Isso garante que as alterações feitas pela transação sejam duráveis. O log de transações para tabelas com otimização de memória está totalmente integrado ao mesmo fluxo de log usado por tabelas baseadas em disco. Essa integração permite que operações existentes de backup, recuperação e restauração do log de transações continuem funcionando, sem exigir etapas adicionais. No entanto, como [!INCLUDE[hek_2](../../includes/hek-2-md.md)] pode aumentar consideravelmente a taxa de transferência da transação de sua carga de trabalho, a E/S de log pode se tornar um afunilamento de desempenho. Para manter essa taxa de transferência maior, verifique se o subsistema de E/S de log pode lidar com o aumento de carga.  
+ Todas as alterações feitas nas tabelas baseadas em disco ou tabelas duráveis com otimização de memória são capturadas em um ou mais registros de log de transações. Depois da confirmação de uma transação, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] grava os registros de log associados com a transação no disco antes de comunicar ao aplicativo ou à sessão de usuário que a transação foi confirmada. Isso garante que as alterações feitas pela transação sejam duráveis. O log de transações para tabelas com otimização de memória está totalmente integrado ao mesmo fluxo de log usado por tabelas baseadas em disco. Essa integração permite que operações existentes de backup, recuperação e restauração do log de transações continuem funcionando, sem exigir etapas adicionais. No entanto, como [!INCLUDE[hek_2](../../includes/hek-2-md.md)] pode aumentar consideravelmente a taxa de transferência da transação de sua carga de trabalho, a E/S de log pode se tornar um gargalo de desempenho. Para manter essa taxa de transferência maior, verifique se o subsistema de E/S de log pode lidar com o aumento de carga.  
   
 ## <a name="data-and-delta-files"></a>Arquivos delta e de dados  
  Os dados nas tabelas com otimização de memória são armazenados como as linhas de dados de forma livre em uma estrutura de dados de heap na memória, e são vinculadas por meio de um ou mais índices na memória. Não há nenhuma estrutura de página para linhas de dados, como as usadas para tabelas baseadas em disco. Para a persistência de longo prazo e para permitir o truncamento do log de transações, as operações em tabelas com otimização de memória são mantidas em um conjunto de arquivos delta e de dados. Esses arquivos são gerados com base no log de transações, usando um processo assíncrono em segundo plano. Os dados e os arquivos delta estão localizados em um ou mais contêineres (com o mesmo mecanismo usado para dados FILESTREAM). Esses contêineres fazem parte de um grupo de arquivos com otimização de memória.  

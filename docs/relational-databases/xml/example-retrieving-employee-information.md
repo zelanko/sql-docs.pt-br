@@ -8,24 +8,27 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: EXPLICIT mode
+helpviewer_keywords:
+- EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 069bf210891435de0cdd60e5c715ebbdd16ecc19
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: c3c7b4150738ac5dbf878014004c3bda20092e33
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-retrieving-employee-information"></a>Exemplo: Recuperando informações de funcionários
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Este exemplo recupera uma ID e um nome de funcionário para cada funcionário. No banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , a employeeID pode ser obtida na coluna BusinessEntityID da tabela Employee. Nomes de funcionários podem ser obtidos da tabela Person. A coluna BusinessEntityID pode ser usada para unir as tabelas.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Este exemplo recupera uma ID e um nome de funcionário para cada funcionário. No banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , a employeeID pode ser obtida na coluna BusinessEntityID da tabela Employee. Nomes de funcionários podem ser obtidos da tabela Person. A coluna BusinessEntityID pode ser usada para unir as tabelas.  
   
  Digamos que você queira a transformação de FOR XML EXPLICIT para gerar XML, conforme mostrado aqui:  
   
