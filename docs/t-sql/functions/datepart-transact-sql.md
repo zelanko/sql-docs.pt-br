@@ -68,7 +68,7 @@ DATEPART ( datepart , date )
 |**DAYOFYEAR**|**dy**, **y**|  
 |**dia**|**dd**, **d**|  
 |**semana**|**wk**, **ww**|  
-|**dia da semana**|**data warehouse**|  
+|**dia da semana**|**dw**|  
 |**hora**|**hh**|  
 |**minuto**|**min, n**|  
 |**segundo**|**SS**, **s**|  
