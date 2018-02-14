@@ -29,13 +29,13 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7353125066cfcfe8d1d244bd04d98b51eedc884c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="integration-services-roles-ssis-service"></a>Funções do Integration Services (Serviço do SSIS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece certas funções fixas no nível de banco de dados para ajudar a proteger o acesso a pacotes armazenados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As funções disponíveis são diferentes dependendo se você estiver salvando pacotes no SSISDB (banco de dados de Catálogo do SSIS) ou no banco de dados msdb.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece certas funções fixas no nível de banco de dados para ajudar a proteger o acesso a pacotes que estão armazenados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As funções disponíveis são diferentes dependendo se você estiver salvando pacotes no SSISDB (banco de dados de Catálogo do SSIS) ou no banco de dados msdb.  
   
 ## <a name="roles-in-the-ssis-catalog-database-ssisdb"></a>Funções do SSISDB (banco de dados de Catálogo do SSIS)  
  O SSISDB (banco de dados de Catálogo do SSIS) fornece as funções fixas de nível de banco de dados a seguir para ajudar a proteger o acesso a pacotes e informações sobre pacotes.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
      A lista de modos de exibição inclui: [catalog].[projects], [catalog].[packages], [catalog].[operations], [catalog].[extended_operation_info], [catalog].[operation_messages], [catalog].[event_messages], [catalog].[execution_data_statistics], [catalog].[execution_component_phases], [catalog].[execution_data_taps], [catalog].[event_message_context], [catalog].[executions], [catalog].[executables], [catalog].[executable_statistics], [catalog].[validations], [catalog].[execution_parameter_values] e [catalog].[execution_property_override_values].  
   
 ## <a name="roles-in-the-msdb-database"></a>Funções do banco de dados msdb  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui as três funções fixas de nível de banco de dados, **db_ssisadmin**, **db_ssisltduser**e **db_ssisoperator**, para controlar o acesso a pacotes que são salvos no banco de dados **msdb** . Você atribui funções a um pacote por meio do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. As tarefas das funções são salvas no banco de dados **msdb** .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui as três funções fixas no nível de banco de dados, **db_ssisadmin**, **db_ssisltduser**e **db_ssisoperator**, para controlar o acesso a pacotes que são salvos no banco de dados **msdb**. Você atribui funções a um pacote por meio do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. As tarefas das funções são salvas no banco de dados **msdb** .  
   
 ### <a name="read-and-write-actions"></a>Ações de leitura e gravação  
  A tabela a seguir descreve as ações de leitura e gravação do Windows e as funções fixas no nível de banco de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

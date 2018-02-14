@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 3233c1433d1e09038d66af3db7e84a732e81926a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Relatórios móveis do SQL Server: Passo a passo completo
 Realize a criação de relatórios móveis para qualquer tamanho de tela com o [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] no portal da Web do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , e exiba-os nos aplicativos móveis do Power BI.
@@ -31,7 +31,7 @@ Crie relatórios móveis em uma superfície de design com linhas de grade e colu
 Este artigo orienta você pela:   
   
 - Criação de uma fonte de dados e conjunto de dados compartilhados no portal da Web do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , usando o banco de dados AdventureWorks como uma fonte de dados de exemplo.  
-- Criação de um relatório móvel do Reporting Services no [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
+- Criar um relatório móvel do Reporting Services no [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
 - Publicação do relatório móvel no portal da Web do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] .  
 - Exibição do relatório móvel no aplicativo móvel do Power BI.  
   
@@ -151,7 +151,7 @@ Ao abrir pela primeira vez o [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilerep
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)
 
-   O[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] é aberto na grade de layout mestre.  
+   [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] é aberto na grade de layout mestre.  
   
 2. Na guia **Layout** , role para baixo até a seção Gráficos.  
   

@@ -7,7 +7,8 @@ ms.reviewer:
 ms.suite: sql
 ms.prod_service: database-engine, sql-database
 ms.component: search
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - languages [SQL Server], full-text indexes
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d70cc0b053c776f56041fbf961de711c4ad5c26
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 14f63ec1dd20561721c7713183835e5296b79470
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Escolher um idioma ao criar um índice de texto completo
 
@@ -67,7 +68,7 @@ ms.lasthandoff: 12/21/2017
   
      Os separadores de palavras foram reformulados, e testes mostraram que os novos separadores de palavras proporcionam melhor qualidade semântica do que os anteriores. Isso aumenta a precisão da recuperação.  
   
--   Cobertura de uma lista extensa de idiomas e separadores de palavras que estão são incluídos no SQL Server prontos para uso e habilitados por padrão.  
+-   Cobertura para obter uma lista extensa de idiomas. Separadores de palavras são incluídos no SQL Server prontos para uso e habilitados por padrão.  
   
  Para obter uma lista dos idiomas para os quais o SQL Server inclui um separador de palavras e lematizadores, veja [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 12/21/2017
   
   
 ##  <a name="breaking"></a> Quebra de palavras  
- Um separador de palavras cria tokens do texto que está sendo indexado em limites de palavra, que são específicos de idioma. Por isso, o comportamento da separação de palavras é diferente entre diferentes idiomas. Se você usar o idioma x para indexar vários idiomas {x, y e ,z}, o comportamento de alguns deles poderá gerar resultados inesperados. Por exemplo, um traço (-) ou uma vírgula (,) pode ser um elemento de separação de palavras que será acionado em um idioma, mas não em outro. Além disso, pode ocorrer um comportamento de lematização raramente inesperado porque uma dada palavra pode ter um comportamento de lematização diferente em outro idioma. Por exemplo, no idioma inglês, os limites de palavras normalmente são espaços em branco ou alguma forma de pontuação. Em outros idiomas, como no alemão, palavras ou caracteres podem ser combinados. Portanto, o idioma no nível de coluna escolhido deve representar o idioma que você espera que será armazenado em linhas dessa coluna.  
+ Um separador de palavras transforma em token o texto que está sendo indexado nos limites de palavras, os quais são específicos a um idioma. Por isso, o comportamento da separação de palavras é diferente entre diferentes idiomas. Se você usar um idioma x para indexar um número de idiomas {x, y e z}, o comportamento de alguns deles pode causar resultados inesperados. Por exemplo, um traço (-) ou uma vírgula (,) pode ser um elemento de separação de palavras que será acionado em um idioma, mas não em outro. Além disso, pode ocorrer um comportamento de lematização raramente inesperado porque uma dada palavra pode ter um comportamento de lematização diferente em outro idioma. Por exemplo, no idioma inglês, os limites de palavras normalmente são espaços em branco ou alguma forma de pontuação. Em outros idiomas, como no alemão, palavras ou caracteres podem ser combinados. Portanto, o idioma no nível de coluna escolhido deve representar o idioma que você espera que será armazenado em linhas dessa coluna.  
   
 ### <a name="western-languages"></a>Idiomas ocidentais  
  No caso da família de idiomas ocidentais, se você não tiver certeza de quais idiomas serão armazenados em uma coluna ou se espera que mais de um seja armazenado, uma alternativa é usar um separador de palavras para o idioma mais complexo que poderá ser armazenado na coluna. Por exemplo, talvez você espere armazenar conteúdo em inglês, espanhol e alemão em uma única coluna. Esses três idiomas ocidentais têm padrões do separação de palavras muito parecidos, sendo que os padrões do alemão são os mais complexos. Por isso, uma boa opção nesse caso seria usar o separador de palavras do idioma alemão, que deverá poder processar os textos em inglês e espanhol corretamente. Por outro lado, o separador de palavras do inglês pode não processar textos em alemão perfeitamente por causa das palavras compostas do idioma.  
@@ -105,7 +106,7 @@ ms.lasthandoff: 12/21/2017
   
   
 ##  <a name="stemming"></a> Lematização  
- Outro aspecto que você deve levar em consideração quando escolher o idioma no nível de coluna é a lematização. Em consultas de texto completo,*lematização* é o processo de procurar todas as formas lematizadas (flexivas) de uma palavra em determinado idioma. Quando você usa um separador de palavras genérico para processar vários idiomas, o processo de lematização só funcionará para o idioma especificado para a coluna, e não para os outros idiomas da coluna. Por exemplo, os lematizados de alemão não funcionam para inglês ou espanhol (e assim por diante). Isso poderia afetar a recuperação, dependendo do idioma escolhido no momento da consulta.  
+ Outro aspecto que você deve levar em consideração quando escolher o idioma no nível de coluna é a lematização. Em consultas de texto completo,*lematização* é o processo de procurar todas as formas lematizadas (flexivas) de uma palavra em determinado idioma. Quando você usa um separador de palavras genérico para processar vários idiomas, o processo de lematização só funcionará para o idioma especificado para a coluna, e não para os outros idiomas da coluna. Por exemplo, os lematizados de alemão não funcionam para inglês ou espanhol (e assim por diante). Isso pode afetar seu recall dependendo de qual idioma for escolhido no momento da consulta.  
   
   
 ##  <a name="type"></a> Efeito do tipo de coluna na pesquisa de texto completo  
