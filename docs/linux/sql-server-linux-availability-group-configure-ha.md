@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: 76a5ed98ddd1aa69c11cd371586ce963ebcd97de
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: c1d84ae8ac797775759bc53a29cc55acd1323f32
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurar SQL Server sempre no grupo de disponibilidade para alta disponibilidade no Linux
 
@@ -164,7 +164,7 @@ Executar **apenas um** dos scripts a seguir:
 
 - Criar grupo de disponibilidade com duas réplicas síncronas
 
-   Inclua duas réplicas com o modo de disponibilidade síncrona. Por exemplo, o script a seguir cria um grupo de disponibilidade chamado `ag1`. `node1`e `node2` hospedam réplicas de modo síncrono, com failover automático e a propagação automática.
+   Inclua duas réplicas com o modo de disponibilidade síncrona. Por exemplo, o script a seguir cria um grupo de disponibilidade chamado `ag1`. `node1` e `node2` hospedam réplicas de modo síncrono, com failover automático e a propagação automática.
 
    >[!IMPORTANT]
    >Somente execute o script a seguir para criar um grupo de disponibilidade com duas réplicas síncronas. Não execute o script a seguir se você executou o script anterior. 

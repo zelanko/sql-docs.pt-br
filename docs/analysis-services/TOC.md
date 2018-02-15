@@ -92,20 +92,18 @@
 ## [Eventos de rastreamento](../analysis-services/trace-events/analysis-services-trace-events.md)
 
 # Desenvolvedor
-## Modelos de tabela
-### [Nível de compatibilidade 1200 e superior de programação do modelo tabular](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
-#### [TMSL (linguagem de script de modelo de tabela)](tabular-model-scripting-language-tmsl-reference.md)
-#### [Comandos TMSL (linguagem de script de modelo de tabela)](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
-#### [Objetos TMSL (linguagem de script de modelo de tabela)](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
-### [Níveis de compatibilidade 1050 e 1103 de programação do modelo tabular](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
+## [Nível de compatibilidade 1200 e superior de programação do modelo tabular](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
+### [TMSL (linguagem de script de modelo de tabela)](tabular-model-scripting-language-tmsl-reference.md)
+### [Comandos TMSL (linguagem de script de modelo de tabela)](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
+### [Objetos TMSL (linguagem de script de modelo de tabela)](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
+## [Níveis de compatibilidade 1050 e 1103 de programação do modelo tabular](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
 
-## Modelos multidimensionais
-### [ASSL (linguagem de script do Analysis Services)](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
-### [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)
-### [Objetos de gerenciamento de análises +](../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)
-### [Lógica de OLAP +](../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
-### [OLAP físico +](../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)
-### [Estendendo o OLAP +](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
+## [ASSL (linguagem de script do Analysis Services)](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
+## [Objetos de Gerenciamento de Análise (AMO)+](../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)
+## [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)
+## [Lógica de OLAP +](../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
+## [OLAP físico +](../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)
+## [Estendendo o OLAP +](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
 
 ## [Conjuntos de linhas de esquema](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)
 ## [Linguagem de Script do Analysis Services (ASSL para XMLA)](scripting/analysis-services-scripting-language-assl-for-xmla.md)

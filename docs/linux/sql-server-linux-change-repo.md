@@ -9,18 +9,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: 82a1f6d840897311dbb52ffbbf2620c8ec3994ec
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: bf9a129df2e76f0eafc6992fc0d81f1a397df963
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configure repositórios para instalar e atualizar o SQL Server no Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este artigo descreve como configurar o repositório correto para atualizações e instalações de 2017 do SQL Server no Linux.
 
@@ -37,7 +39,7 @@ Quando você instala o SQL Server no Linux, você deve configurar um repositóri
 | **CU** | **mssql-server-2017** | Repositório do SQL Server de 2017 atualização cumulativa (CU). |
 | **GDR** | **mssql-server-2017-gdr** | Repositório do SQL Server de 2017 GDR somente para atualizações críticas. |
 
-## <a id="cuversusgdr"></a>Atualização cumulativa versus GDR
+## <a id="cuversusgdr"></a> Atualização cumulativa versus GDR
 
 É importante observar que há dois tipos principais de repositórios para cada distribuição:
 
@@ -50,7 +52,7 @@ Cada versão de atualização Cumulativa e GDR contém o pacote completo do SQL 
 > [!NOTE]
 > Você pode atualizar de uma versão GDR a atualização Cumulativa de versão a qualquer momento alterando repositórios. Atualizando uma atualização cumulativa versão para uma versão GDR não tem suporte. 
 
-## <a id="configure"></a>Configurar um repositório
+## <a id="configure"></a> Configurar um repositório
 
 As seções a seguir descrevem como verificar e configurar um repositório para as seguintes plataformas com suporte:
 
@@ -58,7 +60,7 @@ As seções a seguir descrevem como verificar e configurar um repositório para 
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#sles)
 
-## <a id="rhel"></a>Configure os repositórios RHEL
+## <a id="rhel"></a> Configure os repositórios RHEL
 Use as etapas a seguir para configurar os repositórios em Red Hat Enterprise Server (RHEL).
 
 ### <a name="check-for-previously-configured-repositories-rhel"></a>Verificar se há repositórios configurados anteriormente (RHEL)
@@ -97,7 +99,7 @@ Configure o novo repositório a ser usado para atualizações e instalações do
 | **CU** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | **GDR** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
-## <a id="sles"></a>Configure os repositórios SLES
+## <a id="sles"></a> Configure os repositórios SLES
 Use as etapas a seguir para configurar os repositórios em SLES.
 
 ### <a name="check-for-previously-configured-repositories-sles"></a>Verificar se há repositórios configurados anteriormente (SLES)
@@ -128,7 +130,7 @@ Configure o novo repositório a ser usado para atualizações e instalações do
 | **CU** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
 | **GDR** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
 
-## <a id="ubuntu"></a>Configure os repositórios Ubuntu
+## <a id="ubuntu"></a> Configure os repositórios Ubuntu
 Use as etapas a seguir para configurar repositórios no Ubuntu.
 
 ### <a name="check-for-previously-configured-repositories-ubuntu"></a>Verificar se há repositórios configurados anteriormente (Ubuntu)
