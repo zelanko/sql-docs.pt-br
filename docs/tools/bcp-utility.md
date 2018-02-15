@@ -1,14 +1,15 @@
 ---
 title: "Utilitário bcp | Microsoft Docs"
 ms.custom: 
-ms.date: 09/26/2016
+ms.date: 02/12/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
 ms.component: bcp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,22 +30,24 @@ helpviewer_keywords:
 - file importing [SQL Server]
 - column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
-caps.latest.revision: "222"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1598d16877f42d0aef9f4a997e47492bd3fee1c7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d394c689e4f4220781342dca687906d46a673c8e
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="bcp-utility"></a>Utilitário bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > Para conteúdo relacionado a versões anteriores do SQL Server, consulte [utilitário bcp](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx).
 
+
+ > Para obter informações detalhadas sobre como usar o bcp com o Azure SQL Data Warehouse, consulte [carregar dados com bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
   O utilitário **bcp**( **b**ulk **c**opy**p**rogram) copia dados em massa entre uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e um arquivo de dados em um formato especificado pelo usuário. O utilitário **bcp** pode ser usado para importar grande número de novas linhas para tabelas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou para exportar dados de tabelas para arquivos de dados. Exceto quando usado com a opção **queryout** , o utilitário não requer conhecimento de [!INCLUDE[tsql](../includes/tsql-md.md)]. Para importar dados para uma tabela, você deve usar um arquivo de formato criado para aquela tabela ou entender a estrutura da tabela e os tipos de dados válidos para suas colunas.  
   
@@ -66,6 +69,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#E">-E</a>]
     [<a href="#f">-f format_file</a>]
     [<a href="#F">-F first_row</a>]
+    [<a href="#G">-G Azure Active Directory Authentication</a>]
     [<a href="#h">-h"hint [,...n]"</a>]
     [<a href="#i">-i input_file</a>]
     [<a href="#k">-k</a>]
@@ -98,7 +102,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  Você também pode especificar explicitamente o nome de banco de dados com **d-**.  
   
- **em** *data_file* | **out** *data_file* | **queryout**  *data_file* | **Formatar nul**  
+ **em** *data_file* | **out** *data_file* | **queryout** *data_ arquivo* | **Formatar nul**  
  Especifica a direção da cópia em massa, do seguinte modo:  
   
 -   **in**<a name="in"></a> copia de um arquivo em uma tabela ou exibição de banco de dados.  
@@ -112,7 +116,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  ***owner***<a name="schema"></a>  
  Corresponde ao nome do proprietário da tabela ou exibição. O*owner* será opcional se o usuário que estiver executando a operação for o proprietário da tabela ou exibição especificada. Se *owner* não estiver especificado e o usuário que está executando a operação não for proprietário da tabela ou exibição especificada, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] retornará uma mensagem de erro e a operação será cancelada.  
   
-**"** ***query*** **"**<a name="query"></a> Is a [!INCLUDE[tsql](../includes/tsql-md.md)] query that returns a result set. Se a consulta retornar vários conjuntos de resultados, somente o primeiro conjunto de resultados será copiado no arquivo de dados; os conjuntos de resultados subsequentes serão ignorados. Coloque a consulta entre aspas duplas e qualquer coisa incorporada na consulta entre aspas simples. **queryout** também deve ser especificado quando você copiar dados em massa de uma consulta.  
+**"** ***consulta*** **"** <a name="query"> </a> é um [!INCLUDE[tsql](../includes/tsql-md.md)] consulta que retorna um conjunto de resultados. Se a consulta retornar vários conjuntos de resultados, somente o primeiro conjunto de resultados será copiado no arquivo de dados; os conjuntos de resultados subsequentes serão ignorados. Coloque a consulta entre aspas duplas e qualquer coisa incorporada na consulta entre aspas simples. **queryout** também deve ser especificado quando você copiar dados em massa de uma consulta.  
   
  A consulta pode fazer referência a um procedimento armazenado desde que todas as tabelas referenciadas no procedimento armazenado existam antes da execução da instrução bcp. Por exemplo, se o procedimento armazenado gerar uma tabela temporária, ocorrerá uma falha com a instrução **bcp** , pois a tabela temporária ficará disponível somente durante o tempo de execução e não durante o tempo de execução da instrução. Nesse caso, considere a inserção do resultado do procedimento armazenado em uma tabela e, em seguida, use **bcp** para copiar os dados da tabela em um arquivo de dados.  
   
@@ -145,7 +149,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
 |Valor da página de código|Descrição|  
 |---------------------|-----------------|  
-|ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252).|  
+|ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252).|  
 |OEM|Página de código padrão usada pelo cliente. Essa é a página de código padrão usada se **-C** não for especificado.|  
 |RAW|Não ocorre nenhuma conversão de uma página de código para outra. Essa é a opção mais rápida porque não acontece nenhuma conversão.|  
 |*code_page*|Um número de página de código específico, por exemplo, 850.<br /><br /> As versões anteriores à versão 13 ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) não dão suporte à página de código 65001 (codificação UTF-8). As versões a partir da 13 podem importar a codificação UTF-8 para versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
@@ -177,10 +181,49 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  Se *format_file* começar com um hífen (-) ou uma barra (/), não inclua um espaço entre **-f** e o valor *format_file* .  
   
- **-F** ***first_row***<a name="F"></a>  
+**-F** ***first_row***<a name="F"></a>  
  Especifica o número da primeira linha que deve ser exportada de uma tabela ou importada de um arquivo de dados. Esse parâmetro requer um valor maior do que (>) 0, mas menor do que (<) ou igual ao (=) número total de linhas. Na ausência desse parâmetro, o padrão é a primeira linha do arquivo.  
   
  *first_row* pode ser um inteiro positivo com um valor de até 2^63-1. **-F** *first_row* is 1-based.  
+
+**-G**<a name="G"></a>  
+ Essa opção é usada pelo cliente ao se conectar ao banco de dados do SQL Azure ou Azure SQL Data Warehouse para especificar que o usuário seja autenticado usando a autenticação do Active Directory do Azure. Requer a opção -G [versão 14.0.3008.27 ou posterior](http://go.microsoft.com/fwlink/?LinkID=825643). Para determinar a versão, execute bcp - v. Para obter mais informações, consulte [uso do Azure autenticação do Active Directory para autenticação com o banco de dados SQL ou SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
+
+> [!TIP]
+>  Para verificar se sua versão do bcp inclui suporte para o tipo de autenticação de diretório Active do Azure (AAD) **bcp--** (bcp\<espaço >\<dash >\<dash >) e verifique se que você vê - G na lista de argumentos disponíveis.
+
+- **Nome de usuário do Azure Active Directory e senha:** 
+
+    Quando desejar usar um nome de usuário do Azure Active Directory e uma senha, você poderá fornecer a opção **- G** e também usar o nome de usuário e a senha fornecendo as opções **-U** e **-P** . 
+
+    O exemplo a seguir exporta dados usando o nome de usuário do Azure AD e a senha em que o usuário e a senha é uma credencial do AAD. O exemplo exporta tabela `bcptest` do banco de dados `testdb` do servidor do Azure `aadserver.database.windows.net` e armazena os dados no arquivo `c:\last\data1.dat`:
+    ``` 
+    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
+    ``` 
+
+    O exemplo a seguir importa dados usando o nome de usuário do Azure AD e a senha em que o usuário e a senha é uma credencial do AAD. O exemplo importa dados do arquivo `c:\last\data1.dat` na tabela `bcptest` para banco de dados `testdb` no servidor do Azure `aadserver.database.windows.net` usando usuário/senha do AD do Azure:
+    ```
+    bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
+    ```
+
+
+
+- **Integração ao Azure Active Directory** 
+ 
+    Para a autenticação integrada do Active Directory do Azure, forneça o **- G** opção sem um nome de usuário ou senha. Esta configuração pressupõe que a conta de usuário atual do Windows (a conta que está executando o comando bcp em) é federada com o Azure AD: 
+
+    O exemplo a seguir exporta dados usando a conta integrado do AD do Azure. O exemplo exporta tabela `bcptest` do banco de dados `testdb` usando o Azure AD integrado do servidor do Azure `aadserver.database.windows.net` e armazena os dados no arquivo `c:\last\data2.dat`:
+
+    ```
+    bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
+    ```
+
+    O exemplo a seguir importa dados usando a autenticação integrada do AD do Azure O exemplo importa dados do arquivo `c:\last\data2.txt` na tabela `bcptest` para banco de dados `testdb` no servidor do Azure `aadserver.database.windows.net` usando a autenticação integrada do AD do Azure:
+
+    ```
+    bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
+    ```
+
   
 **-h** ***"load hints***[ ,... *n*]**"**<a name="h"></a> Especifica a dica ou dicas a serem usadas durante uma importação de dados em massa para uma tabela ou exibição.  
   
@@ -321,7 +364,7 @@ Executa a operação de cópia em massa usando os tipos de dados nativos (banco 
   
  **90** = [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]  
   
- **100** = [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
+ **100**  =  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
   
  **110** = [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
@@ -364,7 +407,7 @@ O utilitário bcp também pode ser baixado separadamente do [Feature Pack do Mic
  Colunas computadas e **timestamp** são copiadas em massa do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em um arquivo de dados, como sempre.  
   
 ## <a name="specifying-identifiers-that-contain-spaces-or-quotation-marks"></a>Especificando identificadores que contêm espaços ou aspas  
- Os identificadores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] podem incluir caracteres como espaços inseridos e aspas. Tais identificadores devem ser tratados do seguinte modo:  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] podem incluir caracteres como espaços inseridos e aspas. Tais identificadores devem ser tratados do seguinte modo:  
   
 -   Quando você especificar um identificador ou nome de arquivo que inclua um espaço ou aspas no prompt de comando, coloque o identificador entre aspas ("").  
   

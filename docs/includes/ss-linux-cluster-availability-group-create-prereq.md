@@ -1,4 +1,4 @@
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Antes de criar o grupo de disponibilidade, você precisa:
 
@@ -138,15 +138,15 @@ CREATE CERTIFICATE dbm_certificate
 
 ## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>Criar os pontos de extremidade de espelhamento de banco de dados em todas as réplicas
 
-Pontos de extremidade de espelhamento do banco de dados usam o protocolo de controle de transmissão (TCP) para enviar e receber mensagens entre instâncias do servidor que participam de sessões de espelhamento de banco de dados ou hospedam réplicas de disponibilidade. O ponto de extremidade de espelhamento de banco de dados escuta em um exclusivo número de porta TCP. O ouvinte TCP requer um endereço IP do ouvinte. O endereço IP do ouvinte deve ser um endereço IPv4. Você também pode usar `0.0.0.0`. 
+Pontos de extremidade de espelhamento do banco de dados usam o protocolo de controle de transmissão (TCP) para enviar e receber mensagens entre instâncias do servidor que participam de sessões de espelhamento de banco de dados ou hospedam réplicas de disponibilidade. O ponto de extremidade de espelhamento de banco de dados escuta em um exclusivo número de porta TCP. 
 
-Script Transact-SQL a seguir cria um ponto de extremidade de escutando chamado `Hadr_endpoint` para o grupo de disponibilidade. Ele inicia o ponto de extremidade e concede permissão de conexão para o usuário que você criou. Antes de executar o script, substitua os valores entre `**< ... >**`.
+Script Transact-SQL a seguir cria um ponto de extremidade de escutando chamado `Hadr_endpoint` para o grupo de disponibilidade. Ele inicia o ponto de extremidade e concede permissão de conexão para o usuário que você criou. Antes de executar o script, substitua os valores entre `**< ... >**`. Opcionalmente, você pode incluir um endereço IP `LISTENER_IP = (0.0.0.0)`. O endereço IP do ouvinte deve ser um endereço IPv4. Você também pode usar `0.0.0.0`. 
 
 Atualize o script Transact-SQL a seguir para o seu ambiente em todas as instâncias do SQL Server: 
 
 ```SQL
 CREATE ENDPOINT [Hadr_endpoint]
-    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    AS TCP (LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
         ROLE = ALL,
         AUTHENTICATION = CERTIFICATE dbm_certificate,
@@ -161,7 +161,7 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 
 ```SQL
 CREATE ENDPOINT [Hadr_endpoint]
-    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    AS TCP (LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
         ROLE = WITNESS,
         AUTHENTICATION = CERTIFICATE dbm_certificate,
