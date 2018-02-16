@@ -18,19 +18,20 @@ helpviewer_keywords:
 - Data Mining Designer
 - data mining [Analysis Services], modifying
 ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8ba0683192d2e0aabfce9e8c340692e48053a7f8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="data-mining-designer"></a>Data Mining Designer
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Designer de mineração de dados é o ambiente principal na qual você trabalha com modelos de mineração no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Você pode acessar o designer selecionando uma estrutura de mineração existente ou usando o Assistente de Mineração de Dados para criar uma nova estrutura e um novo modelo de mineração. É possível usar o Designer de Mineração de Dados para executar as seguintes tarefas:  
+# <a name="data-mining-designer"></a>Designer de Mineração de Dados
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O Designer de Mineração de Dados é o ambiente primário para trabalhar com modelos de mineração no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Você pode acessar o designer selecionando uma estrutura de mineração existente ou usando o Assistente de Mineração de Dados para criar uma nova estrutura e um novo modelo de mineração. É possível usar o Designer de Mineração de Dados para executar as seguintes tarefas:  
   
 -   Modificar a estrutura de mineração e o modelo de mineração criados inicialmente pelo Assistente de Mineração de Dados.  
   
@@ -45,9 +46,9 @@ ms.lasthandoff: 01/08/2018
 ## <a name="mining-structure-tab"></a>Guia Estrutura de Mineração  
  Use a guia **Estrutura de Mineração** para adicionar colunas e modificar as propriedades de uma estrutura de mineração existente. As seguintes tarefas e tópicos fornecem mais informações sobre o trabalho com estruturas de mineração:  
   
- [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Estruturas de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
- [Tarefas e instruções da estrutura de mineração](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Tarefas de estrutura de mineração e instruções](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
 ## <a name="mining-models-tab"></a>Guia Modelos de Mineração  
  Use a guia **Modelos de Mineração** para administrar modelos de mineração existentes e criar novos modelos. Os modelos de mineração sempre se baseiam em uma estrutura de mineração existente.  
@@ -56,27 +57,27 @@ ms.lasthandoff: 01/08/2018
   
  Consulte os seguintes tópicos para obter mais informações sobre o trabalho com modelos de mineração:  
   
- [Modelos de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Modelos de mineração &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
- [Tarefas e instruções do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Tutoriais e tarefas do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
 ## <a name="mining-model-viewer-tab"></a>Guia Visualizador do Modelo de Mineração  
  Use a guia **Visualizador do Modelo de Mineração** para explorar seus modelos de mineração visualmente. Cada modelo de mineração é associado a um visualizador personalizado que exibe o conteúdo específico desse modelo. Você também pode exibir o conteúdo de modelo de mineração usando o visualizador de conteúdo.  
   
  Consulte os seguintes tópicos para obter mais informações sobre a exploração de modelos de mineração com os visualizadores de mineração de dados:  
   
- [Visualizadores do Modelo de Mineração de Dados](../../analysis-services/data-mining/data-mining-model-viewers.md)  
+ [Visualizadores do modelo de mineração de dados](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
- [Tarefas e instruções do visualizador do modelo de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+ [Tarefas do Visualizador do modelo e instruções de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
 ## <a name="mining-accuracy-chart-tab"></a>Guia Gráfico de Precisão de Mineração  
  Use a guia **Gráfico de Precisão de Mineração** para testar a precisão de previsão de um único modelo de mineração ou comparar a eficiência de vários modelos de mineração contidos em uma estrutura de mineração. A guia contém ferramentas para filtrar dados, selecionar modelos de mineração e exibir os resultados em um gráfico de comparação de precisão, gráfico de ganho ou matriz de classificação.  
   
  Consulte os seguintes tópicos para obter mais informações sobre o teste e a validação de modelos de mineração:  
   
- [Teste e validação &#40;Mineração de dados&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Teste e validação &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
- [Tarefas de teste e validação e instruções &#40;Mineração de dados&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Teste e validação de tarefas e instruções &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
 ## <a name="mining-model-prediction-tab"></a>Guia Previsão do Modelo de Mineração  
  A guia **Previsão do Modelo de Mineração** inclui o Construtor de Consultas de Previsão, que pode ser usado para criar uma consulta de previsão de extensões DMX. A guia contém ferramentas para especificar modelos de mineração e tabelas de entrada, mapear as colunas no modelo de mineração para colunas na tabela de entrada, adicionar funções a uma consulta e especificar critérios para cada coluna.  
@@ -87,9 +88,9 @@ ms.lasthandoff: 01/08/2018
   
  [Consultas de mineração de dados](../../analysis-services/data-mining/data-mining-queries.md)  
   
- [Tarefas e instruções de consulta de mineração de dados](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)  
+ [Tutoriais e tarefas de consulta de mineração de dados](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Soluções de mineração de dados](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   

@@ -17,19 +17,20 @@ helpviewer_keywords:
 - neural network algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8a5fbba7e01d56f77d376f41ac259744b1a4344d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algoritmo Regressão Logística da Microsoft
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Regressão logística é uma técnica estatística conhecida que é usada para modelar resultados binários.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+A regressão logística é uma técnica estatística conhecida, usada para modelar resultados binários.  
   
  Há várias implementações de regressão logística em pesquisa de estatísticas, usando técnicas de aprendizagem diferentes. O algoritmo Regressão Logística da [!INCLUDE[msCoName](../../includes/msconame-md.md)] foi implementado usando uma variação do algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Este algoritmo compartilha muitas das qualidades de redes neurais mas é mais fácil treinar.  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Não dá suporte ao uso de PMML para criar modelos de mineração.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Referência técnica do algoritmo de regressão logística de Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
  [Exemplos de consulta de modelo de regressão logística](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)  

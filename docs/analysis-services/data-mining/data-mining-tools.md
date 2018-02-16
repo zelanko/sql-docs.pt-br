@@ -17,19 +17,20 @@ helpviewer_keywords:
 - data mining [Analysis Services], tools
 - data mining [Analysis Services], development
 ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 130c8098a7083019671b3b799246b16757fd1b5b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-tools"></a>Ferramentas de mineração de dados
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece as seguintes ferramentas que você pode usar para criar soluções de mineração de dados:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece as seguintes ferramentas que podem ser usadas para criar soluções de mineração de dados:  
   
 -   O **Assistente de Mineração de Dados** no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] facilita a criação de estruturas e modelos de mineração usando fontes de dados relacionais ou dados multidimensionais em cubos.  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 01/08/2018
   
  **Para obter mais informações:** [Assistente de Mineração de Dados &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
-## <a name="data-mining-designer"></a>Data Mining Designer  
+## <a name="data-mining-designer"></a>Designer de Mineração de Dados  
  Após ter criado uma estrutura de mineração e um modelo de mineração usando o Assistente de Mineração de Dados, você pode utilizar o Designer de Mineração de Dados do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para trabalhar com modelos e estruturas existentes.  
   
  O designer inclui ferramentas para estas tarefas:  
@@ -93,10 +94,10 @@ ms.lasthandoff: 01/08/2018
   
  **Para obter mais informações:** [Projetos relacionados a soluções de mineração de dados](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
   
-## <a name="see-also"></a>Consulte Também  
- [Referência de DMX &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)   
- [Tarefas e instruções do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Tarefas e instruções do visualizador do modelo de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+## <a name="see-also"></a>Consulte também  
+ [Extensões de mineração de dados &#40; DMX &#41; Referência](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Tutoriais e tarefas do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Tarefas do Visualizador do modelo e instruções de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Soluções de mineração de dados](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   

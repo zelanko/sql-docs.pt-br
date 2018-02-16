@@ -18,19 +18,20 @@ helpviewer_keywords:
 - Data Mining Designer
 - mining models [Analysis Services], modifying
 ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c43da2044b4f3231d947c88626cb43081fb29f6a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="moving-data-mining-objects"></a>Movendo objetos de mineração de dados
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Os cenários mais comuns para mover objetos de mineração de dados são implantar um modelo de um ambiente de teste ou análise para um ambiente de produção ou compartilhar modelos com outros usuários.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Os cenários mais comuns para mover objetos de mineração de dados são implantar um modelo de um ambiente de teste ou análise para um ambiente de produção ou compartilhar modelos com outros usuários.  
   
  Este tópico descreve como você pode usar as ferramentas e as linguagens de scripts fornecidas pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], para mover objetos de mineração de dados.  
   
@@ -72,23 +73,23 @@ ms.lasthandoff: 01/08/2018
  Para obter mais informações, consulte [Desenvolvendo com ASSL &#40;linguagem de script do Analysis Services&#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
   
 ### <a name="backup-and-restore"></a>Backup e restauração  
- Backup e restauração de um banco de dados inteiro do Analysis Services é o método preferencial se a sua solução de mineração de dados utiliza objetos OLAP. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece a funcionalidade de backup e restauração que agiliza e simplifica os backups de banco de dados.  
+ Backup e restauração de um banco de dados inteiro do Analysis Services é o método preferencial se a sua solução de mineração de dados utiliza objetos OLAP. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]fornece a funcionalidade de backup e restauração que faz backups do banco de dados mais rápidos e fácil.  
   
  Para obter informações sobre o backup, consulte [Backup e restauração de Bancos de Dados do Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md).  
   
 ### <a name="exporting-and-importing"></a>Exportando e importando  
  Exportar e, em seguida, reimportar os modelos e as estruturas de mineração usando instruções DMX é a maneira mais fácil de mover ou fazer backup de objetos de mineração de dados relacionais individuais. Para obter mais informações sobre a sintaxe DMX para essas operações, consulte os seguintes tópicos:  
   
--   [EXPORT &#40;DMX&#41;](../../dmx/export-dmx.md)  
+-   [EXPORTAR &#40; DMX &#41;](../../dmx/export-dmx.md)  
   
--   [IMPORT &#40;DMX&#41;](../../dmx/import-dmx.md)  
+-   [IMPORTAR &#40; DMX &#41;](../../dmx/import-dmx.md)  
   
  Se você especificar a opção INCLUDE DEPENDENCIES, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também exportará a definição de qualquer exibição da fonte de dados necessária e, quando você importar o modelo ou a estrutura, ele recriará a exibição da fonte de dados no servidor de destino. Depois que você terminar de importar o modelo, defina as permissões de mineração necessárias no objeto.  
   
 > [!NOTE]  
 >  Não é possível exportar e importar modelos OLAP usando DMX. Se o modelo de mineração se basear em um cubo OLAP, você deverá usar a funcionalidade fornecida pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para fazer backup e restauração de um banco de dados inteiro, ou reimplantar o cubo e seus modelos.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Gerenciamento de soluções de mineração de dados e objetos](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

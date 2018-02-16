@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
 ms.openlocfilehash: 969a3952f113521b5f584533fd0676b33b873b53
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Comparando soluções tabulares e multidimensionais
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -151,9 +151,9 @@ ms.lasthandoff: 01/22/2018
   
 -   Bancos de dados modelo multidimensionais podem usar dimensão e segurança em nível de célula, usando permissões baseadas em função.  
 
--   As pastas de trabalho[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] são protegidas no nível de arquivo, usando permissões do SharePoint.  
+-   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] são protegidas no nível de arquivo, usando permissões do SharePoint.  
   
- As pastas de trabalho[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] podem ser restauradas para um servidor de modo tabular. Quando o arquivo for restaurado, ele será desacoplado do SharePoint, permitindo que você use todos os recursos de modelagem de tabela, incluindo segurança em nível de linha.  
+ [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] podem ser restauradas para um servidor de modo tabular. Quando o arquivo for restaurado, ele será desacoplado do SharePoint, permitindo que você use todos os recursos de modelagem de tabela, incluindo segurança em nível de linha.  
   
 ##  <a name="bkmk_designer"></a> Ferramentas de design  
  As habilidades de modelagem de dados e a experiência técnica podem variar amplamente entre usuários que têm a tarefa de criar modelos analíticos. Se a familiaridade com a ferramenta ou a experiência do usuário for uma consideração para sua solução, compare as seguintes experiências para a criação do modelo.  
