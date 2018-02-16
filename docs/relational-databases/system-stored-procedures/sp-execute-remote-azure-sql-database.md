@@ -25,10 +25,10 @@ ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a63fcd61563499894205c3cc55323480e8a805d7
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (banco de dados do SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -55,15 +55,15 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  Identifica a fonte de dados externa em que a instrução é executada. Consulte [criar fonte de dados externa &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md). Fonte de dados externa pode ser do tipo "RDBMS" ou "SHARD_MAP_MANAGER".  
   
  [ @stmt= ] *statement*  
- É uma cadeia de caracteres Unicode que contém um [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote. @stmtdeve ser uma constante Unicode ou uma variável Unicode. Mais expressões Unicode complexas, como concatenar duas cadeias de caracteres com o operador +, não são permitidas. Constantes de caracteres não são permitidas. Se uma constante Unicode for especificada, ele deve ser prefixado com um **N**. Por exemplo, a constante Unicode **n' sp_who'** é válido, mas a constante de caractere **'sp_who'** não é. O tamanho da cadeia de caracteres é limitado apenas pela memória disponível do servidor de banco de dados. Em servidores de 64 bits, o tamanho da cadeia de caracteres é limitado a 2 GB, o tamanho máximo de **nvarchar (max)**.  
+ É uma cadeia de caracteres Unicode que contém um [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote. @stmt deve ser uma constante Unicode ou uma variável Unicode. Mais expressões Unicode complexas, como concatenar duas cadeias de caracteres com o operador +, não são permitidas. Constantes de caracteres não são permitidas. Se uma constante Unicode for especificada, ele deve ser prefixado com um **N**. Por exemplo, a constante Unicode **n' sp_who'** é válido, mas a constante de caractere **'sp_who'** não é. O tamanho da cadeia de caracteres é limitado apenas pela memória disponível do servidor de banco de dados. Em servidores de 64 bits, o tamanho da cadeia de caracteres é limitado a 2 GB, o tamanho máximo de **nvarchar (max)**.  
   
 > [!NOTE]  
->  @stmtpode conter parâmetros com a mesma forma que um nome de variável, por exemplo:`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  @stmt pode conter parâmetros com a mesma forma que um nome de variável, por exemplo: `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
  Cada parâmetro incluído em @stmt deve ter uma entrada correspondente na lista de definições de parâmetro @params e na lista de valores de parâmetro.  
   
  [ @params=] N'@*parameter_name * * data_type* [,... *n* ] '  
- É uma cadeia de caracteres que contém as definições de todos os parâmetros inseridos em @stmt. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n*é um espaço reservado que indica definições de parâmetro adicionais. Todo parâmetro especificado em @stmtmust ser definido em @params. Se a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ou lote em @stmt não contiverem parâmetros, @params não será necessário. O valor padrão para este parâmetro é NULL.  
+ É uma cadeia de caracteres que contém as definições de todos os parâmetros inseridos em @stmt. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetro adicionais. Todo parâmetro especificado em @stmtmust ser definido em @params. Se a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ou lote em @stmt não contiverem parâmetros, @params não será necessário. O valor padrão para este parâmetro é NULL.  
   
  [ @param1=] '*value1*'  
  É um valor para o primeiro parâmetro definido na cadeia de caracteres de parâmetro. O valor pode ser uma constante Unicode ou uma variável Unicode. Deve haver um valor de parâmetro fornecido para cada parâmetro incluído em @stmt. Os valores não são necessários quando a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ou lote em @stmt não tiver nenhum parâmetro.  
@@ -81,13 +81,13 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  Requer a permissão `ALTER ANY EXTERNAL DATA SOURCE`.  
   
 ## <a name="remarks"></a>Remarks  
- `sp_execute_remote`parâmetros devem ser inseridos na ordem específica, conforme descrito na seção de sintaxe acima. Se os parâmetros forem inseridos na ordem incorreta, uma mensagem de erro será exibida.  
+ `sp_execute_remote` parâmetros devem ser inseridos na ordem específica, conforme descrito na seção de sintaxe acima. Se os parâmetros forem inseridos na ordem incorreta, uma mensagem de erro será exibida.  
   
- `sp_execute_remote`tem o mesmo comportamento que [EXECUTE &#40; Transact-SQL &#41; ](../../t-sql/language-elements/execute-transact-sql.md) em relação a lotes e o escopo de nomes. A instrução Transact-SQL ou lote no sp_execute_remote  *@stmt*  parâmetro não é compilado até que a instrução sp_execute_remote seja executada.  
+ `sp_execute_remote` tem o mesmo comportamento que [EXECUTE &#40; Transact-SQL &#41; ](../../t-sql/language-elements/execute-transact-sql.md) em relação a lotes e o escopo de nomes. A instrução Transact-SQL ou lote no sp_execute_remote  *@stmt*  parâmetro não é compilado até que a instrução sp_execute_remote seja executada.  
   
- `sp_execute_remote`Adiciona uma coluna adicional para o conjunto de resultados chamado '$ShardName' que contém o nome do banco de dados remoto que gerou a linha.  
+ `sp_execute_remote` Adiciona uma coluna adicional para o conjunto de resultados chamado '$ShardName' que contém o nome do banco de dados remoto que gerou a linha.  
   
- `sp_execute_remote`pode ser usado como [sp_executesql &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).  
+ `sp_execute_remote` pode ser usado como [sp_executesql &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
 ### <a name="simple-example"></a>Exemplo simples  

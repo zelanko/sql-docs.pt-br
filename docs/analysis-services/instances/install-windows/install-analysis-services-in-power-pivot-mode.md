@@ -20,16 +20,17 @@ ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: f3b10fdee9956b28273553755365b9251d073964
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Instale o Analysis Services no modo do Power Pivot.
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Os procedimentos neste tópico guiá-lo por meio de uma instalação de servidor único de um [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] servidor [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modo de implantação do SharePoint. As etapas incluem a execução do assistente de instalação do SQL Server, bem como as tarefas de configuração que usam a Administração Central do SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Os procedimentos neste tópico conduzem você pela instalação de servidor único de um servidor [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] de implantação do SharePoint. As etapas incluem a execução do assistente de instalação do SQL Server, bem como as tarefas de configuração que usam a Administração Central do SharePoint.  
   
 ##  <a name="bkmk_background"></a> Plano de fundo  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint é uma coleção de serviços de camada intermediária e back-end que fornece acesso a dados [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] em um farm do SharePoint 2016 ou SharePoint 2013.  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint é uma coleção de serviços de camada intermediária e back-end que fornece [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] acesso a dados em um farm do SharePoint 2016 ou SharePoint 2013.  
   
 -   **Serviços de back-end:** se você usar o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para Excel para criar pastas de trabalho que contêm dados analíticos, será necessário ter o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint para acessar esses dados em um ambiente de servidor. Você pode executar a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um computador que tenha o SharePoint Server instalado, ou em um computador diferente que não tenha o SharePoint. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] não tem nenhuma dependência no SharePoint.  
   
