@@ -21,19 +21,20 @@ helpviewer_keywords:
 - user access rights [Analysis Services]
 - granting permissions [Analysis Services], users
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 956638a01fc1280d16bb6fd7a7ddade1978ceb2f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorizando o acesso a objetos e operações (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Acesso de usuário não administrativo para cubos, dimensões e modelos de mineração dentro de um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados é concedido por meio da associação em uma ou mais funções de banco de dados. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Os administradores criam essas funções de banco de dados, concedem permissões de leitura ou leitura/gravação em objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e atribuem usuários e grupos do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] a cada função.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O acesso do usuário não administrativo a objetos como cubos, dimensões e modelos de mineração em um banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é concedido por meio de associação em uma ou mais funções de banco de dados. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Os administradores criam essas funções de banco de dados, concedem permissões de leitura ou leitura/gravação em objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e atribuem usuários e grupos do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] a cada função.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determina as permissões efetivas para um usuário ou grupo específico do Windows combinando as permissões associadas a cada função de banco de dados à qual o usuário ou grupo pertence. Em resultado, se uma função de banco de dados não fornecer a um usuário ou grupo permissão para exibir uma dimensão, medida ou atributo, mas uma função de banco de dados diferente conceder essa permissão, o usuário ou grupo terá permissão para exibir o objeto.  
   
@@ -96,7 +97,7 @@ ms.lasthandoff: 01/08/2018
   
  Usar uma abordagem como essa minimiza a variação para definições de função e associação de função no modelo, além de fornecer visibilidade das atribuições de função que tornam as permissões do cubo mais fáceis de implantar e manter.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Conceder direitos de administração de servidor a uma instância do Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Funções e permissões &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   
  [Metodologias de autenticação com suporte no Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)  

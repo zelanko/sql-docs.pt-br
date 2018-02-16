@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 59471831fc651827944e958898ad5d2d8e5cb879
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="log-operations-in-analysis-services"></a>Operações de log no Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma instância do Analysis Services registrará notificações do servidor, erros e avisos no arquivo msmdsrv.log, um para cada instância instalada. Os administradores consultam esse log para compreender eventos de rotina e extraordinários. Nas versões mais recentes, o registro em log foi aprimorado para incluir mais informações. Registros de log agora incluem informações de versão e edição do produto, bem como processador, memória, conectividade e eventos de bloqueio. Você pode revisar a lista inteira de alterações em [Aprimoramentos de log](http://support.microsoft.com/kb/2965035).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Uma instância do Analysis Services registrará notificações do servidor, erros e avisos no arquivo msmdsrv.log, um para cada instância instalada. Os administradores consultam esse log para compreender eventos de rotina e extraordinários. Nas versões mais recentes, o registro em log foi aprimorado para incluir mais informações. Registros de log agora incluem informações de versão e edição do produto, bem como processador, memória, conectividade e eventos de bloqueio. Você pode revisar a lista inteira de alterações em [Aprimoramentos de log](http://support.microsoft.com/kb/2965035).  
   
  Além do recurso de registro em log integrado, muitos administradores e desenvolvedores também usam ferramentas fornecidas pela comunidade do Analysis Services para coletar dados sobre as operações do servidor, tal como o **ASTrace**. Consulte [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) (Exemplos da Comunidade do Microsoft SQL Server: Analysis Services) para obter os links de download.  
   
@@ -158,7 +159,7 @@ ms.lasthandoff: 01/08/2018
   
  A definição de configuração tem mais probabilidade de ser modificada é a **CreateAndSendCrashReports** usada para determinar se um arquivo de despejo de memória será gerado.  
   
-|Valor|Description|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |0|Desativa o arquivo de despejo de memória. Todas as outras configurações na seção Exceção são ignoradas.|  
 |1|(Padrão) Habilita, mas não envia o arquivo de despejo de memória.|  
@@ -185,7 +186,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Use ASTrace2012 em vez de um log de consulta para descobrir o que está consultando cubos. O log de consultas normalmente é usado para fornecer sugestões para o Assistente de Otimização com Base no Uso e os dados capturados não são fácil de ler ou interpretar. O ASTrace2012 é uma ferramenta de comunidade, amplamente utilizada, que captura as operações de consulta. Consulte [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)(Exemplos da comunidade do Microsoft SQL Server: Analysis Services).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Gerenciamento de instância do Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
  [Introdução ao monitoramento do Analysis Services com o SQL Server Profiler](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
  [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  

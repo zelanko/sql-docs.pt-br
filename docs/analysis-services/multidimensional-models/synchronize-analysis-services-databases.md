@@ -17,19 +17,20 @@ helpviewer_keywords:
 - Synchronize Database Wizard
 - synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 3bb86dbcb264f7073847cce62dc9c3e200208821
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizar bancos de dados do Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui um recurso de sincronização de banco de dados que torna dois [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bancos de dados equivalentes copiando os dados e metadados de um banco de dados em um servidor de origem para um banco de dados em um servidor de destino. Use o recurso Sincronizar Banco de Dados para realizar as tarefas a seguir:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui um recurso de sincronização de banco de dados que torna dois bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] equivalentes copiando os dados e os metadados de um banco de dados em um servidor de origem para um banco de dados de um servidor de destino. Use o recurso Sincronizar Banco de Dados para realizar as tarefas a seguir:  
   
 -   Implantar um banco de dados de um servidor de preparo em um servidor de produção.  
   
@@ -189,12 +190,12 @@ ms.lasthandoff: 01/08/2018
   
 8.  Clique em **Concluir** para sincronizar. Depois de verificar as opções na página **Concluindo o Assistente** , clique em **Concluir** novamente.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
  Se você não sincronizou funções ou associação, lembre-se de especificar agora as permissões de acesso de usuário no banco de dados de destino.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Elemento Synchronize &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
- [Implantar soluções de modelo usando XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
- [Implantar soluções de modelo usando o Assistente de implantação](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [Implantar soluções modelo usando XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
+ [Implantar soluções modelo usando o Assistente de implantação](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

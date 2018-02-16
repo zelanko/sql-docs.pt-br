@@ -11,33 +11,35 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: fd8afbe7-b57d-4b47-862d-eb7b2489c327
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 4e15a18c55318373b41c8a4fabe7377aad5d9f00
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="kpigoal-element-csdlbi"></a>Elemento KpiGoal (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O elemento KpiGoal fornece uma referência à coluna que é usada para definir a meta do KPI (indicador) chave de desempenho.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+O elemento KpiGoal fornece uma referência à coluna que é usada para definir a meta do KPI (Indicador Chave de Desempenho).  
   
  Em um CSDLBI, os KPIs se baseiam em medidas e o elemento Measure contém a fórmula (se houver), enquanto outros metadados associados ao KPI são definidos como parte do [elemento KPI &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md).  O elemento Kpigoal é um subtipo do elemento Kpi.  
   
 ## <a name="elements-and-attributes"></a>Elementos e atributos  
  A tabela a seguir lista os atributos que definem o elemento KpiGoal.  
   
-|Nome|É obrigatório|Description|  
+|Nome|É obrigatório|Descrição|  
 |----------|-----------------|-----------------|  
 |PropertyRef|Sim|Uma referência à coluna que contém o valor de meta do KPI.<br /><br /> O elemento Kpigoal deve conter exatamente um elemento PropertyRef.<br /><br /> Consulte [PropertyRef Element &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/propertyref-element-csdlbi.md).|  
   
 ## <a name="example"></a>Exemplo  
- **Tabular**  
+ **Tabela**  
   
  O exemplo a seguir, na versão 1.1 da CSDLBI, mostra um KPI do modelo de exemplo da AdventureWorks.  
   
@@ -83,7 +85,7 @@ ms.lasthandoff: 01/08/2018
   
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Elemento KPI &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md)  
   
   

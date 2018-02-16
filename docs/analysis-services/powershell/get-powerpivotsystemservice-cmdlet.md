@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 33231250-3880-4d75-936b-d70662a01855
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 20c13c68abadafcbe4cc357345a4b3ba7d0668f7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="get-powerpivotsystemservice-cmdlet"></a>Cmdlet Get-PowerPivotSystemService
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Retorna as propriedades globais do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] objeto de serviço do sistema em um farm. 
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Retorna as propriedades globais do objeto do Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um farm. 
 
 >[!NOTE] 
 >Este artigo pode conter informações desatualizadas e exemplos. Use o cmdlet Get-Help para a versão mais recente.
@@ -42,7 +43,7 @@ Get-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [<Com
   
 ## <a name="parameters"></a>Parâmetros  
   
-### <a name="-identity-powerpivotmidtierservicepipebind"></a>-Identity \<PowerPivotMidTierServicePipeBind >  
+### <a name="-identity-powerpivotmidtierservicepipebind"></a>-Identity \<PowerPivotMidTierServicePipeBind>  
  Especifica o objeto pai a ser obtido. O valor deve ser um GUID válido que identifica exclusivamente o objeto no farm.  
   
 |||  
@@ -53,7 +54,7 @@ Get-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [<Com
 |Aceitar entrada de pipeline?|true|  
 |Aceitar caracteres curinga?|false|  
   
-### <a name="commonparameters"></a>\<CommonParameters >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  Este cmdlet oferece suporte aos parâmetros comuns: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer e OutVariable. Para obter mais informações, consulte [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
 ## <a name="inputs-and-outputs"></a>Entradas e saídas  
@@ -61,8 +62,8 @@ Get-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [<Com
   
 |||  
 |-|-|  
-|Entradas|Nenhum.|  
-|Saídas|Nenhum.|  
+|Entradas|Nenhuma.|  
+|Saídas|Nenhuma.|  
   
 ## <a name="example-1"></a>Exemplo 1  
   

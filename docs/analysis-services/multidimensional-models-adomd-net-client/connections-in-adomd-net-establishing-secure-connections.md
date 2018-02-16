@@ -1,7 +1,7 @@
 ---
 title: "Estabelecendo conexões seguras no ADOMD.NET | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,24 +11,25 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - connections [ADOMD.NET]
 - security [ADOMD.NET]
 ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a6665fb3cc1ca653a35224300e6dc021646547d2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6916e57fc0135fc5688c6569eaeb8341caa23b82
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connections-in-adomdnet---establishing-secure-connections"></a>Conexões no ADOMD.NET - estabelecer conexões seguras
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando você usa uma conexão no ADOMD.NET, o método de segurança que é usado para a conexão depende do valor da **ProtectionLevel** propriedade da cadeia de caracteres de conexão usada ao chamar o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> método o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
+  Quando você usa uma conexão no ADOMD.NET, o método de segurança que é usado para a conexão depende do valor da **ProtectionLevel** propriedade da cadeia de caracteres de conexão usada ao chamar o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> método o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
   
  O **ProtectionLevel** propriedade oferece quatro níveis de segurança: não autenticado, autenticado, assinado e criptografado. A tabela a seguir descreve esses vários níveis de segurança.  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 01/08/2018
 |Nível de segurança|Valor de ProtectionLevel|  
 |--------------------|---------------------------|  
 |*conexão não autenticada*<br /> Uma conexão não autenticada não faz nenhuma forma de autenticação. Esse tipo de conexão representa a forma de conexão mais suportada, mas também a menos segura.|**Nenhuma**|  
-|*conexão autenticada*<br /> Uma conexão autenticada autentica o usuário que está fazendo a conexão, mas não protege comunicações adicionais. Esse tipo de conexão é útil para que você possa estabelecer a identidade do usuário ou do aplicativo que estiver se conectando a uma fonte de dados analíticos.|**Connect**|  
+|*conexão autenticada*<br /> Uma conexão autenticada autentica o usuário que está fazendo a conexão, mas não protege comunicações adicionais. Esse tipo de conexão é útil para que você possa estabelecer a identidade do usuário ou do aplicativo que estiver se conectando a uma fonte de dados analíticos.|**Conectar**|  
 |*conexão assinada*<br /> Uma conexão assinada autentica o usuário que está solicitando a conexão e garante que as transmissões não serão modificadas. Esse tipo de conexão é útil quando a autenticidade dos dados transferidos deve ser verificada. No entanto, uma conexão assinada só impede a modificação do conteúdo do pacote de dados. Ele ainda poderá ser exibido em trânsito.<br /><br /><br /><br /> Observe que uma conexão assinada só há suporte para o provedor XML for Analysis fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|**Integridade do PCT** ou **PktIntegrity**|  
 |*conexão criptografada*<br /> Uma conexão criptografada é o tipo de conexão padrão usado pelo ADOMD.NET. Esse tipo de conexão autentica o usuário que está solicitando a conexão e então também criptografa os dados transmitidos. Uma conexão criptografada é a forma mais segura de conexão que pode ser criada pelo ADOMD.NET. O conteúdo do pacote de dados não pode ser exibido ou modificado, protegendo assim os dados durante o trânsito.<br /><br /><br /><br /> Uma conexão criptografada só há suporte para o provedor XML for Analysis fornecido pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|**Privacidade do PCT** ou **PktPrivacy**|  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 01/08/2018
 |Valor de ProtectionLevel|Usar com conexão TCP?|Resultados|  
 |---------------------------|------------------------------|-------------|  
 |**Nenhuma**|Sim|Especifica uma conexão não autenticada.<br /><br /> Um fluxo TCP é solicitado do provedor, mas não há nenhuma forma de autenticação executada no usuário que está solicitando o fluxo.|  
-|**Connect**|Sim|Especifica uma conexão autenticada.<br /><br /> Um fluxo TCP é solicitado do provedor e, em seguida, o contexto de segurança do usuário que está solicitando o fluxo é autenticado no servidor: se a autenticação tiver êxito, nenhuma outra ação será tomada. Se a autenticação falhar, o objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> se desconectará da fonte de dados multidimensional e uma exceção será lançada.<br /><br /> Depois que a autenticação tiver êxito ou falhar, o contexto de segurança usado para autenticar a conexão será descartado.|  
+|**Conectar**|Sim|Especifica uma conexão autenticada.<br /><br /> Um fluxo TCP é solicitado do provedor e, em seguida, o contexto de segurança do usuário que está solicitando o fluxo é autenticado no servidor: se a autenticação tiver êxito, nenhuma outra ação será tomada. Se a autenticação falhar, o objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> se desconectará da fonte de dados multidimensional e uma exceção será lançada.<br /><br /> Depois que a autenticação tiver êxito ou falhar, o contexto de segurança usado para autenticar a conexão será descartado.|  
 |**Integridade do PCT** ou **PktIntegrity**|Sim|Especifica uma conexão assinada.<br /><br /> Um fluxo TCP é solicitado do provedor e, em seguida, o contexto de segurança do usuário que está solicitando o fluxo é autenticado no servidor:<br /><br /> <br /><br /> Se a autenticação tiver êxito, o objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> fechará o fluxo TCP existente e abrirá um fluxo TCP assinado para manipular todas as solicitações. Cada solicitação de dados ou de metadados é autenticada por meio do contexto de segurança usado para abrir a conexão. Adicionalmente, cada pacote é assinado digitalmente para garantir que a carga do pacote TCP não tenha sido alterada de qualquer forma.<br /><br /> <br /><br /> Se a autenticação falhar, o objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> se desconectará da fonte de dados multidimensional e uma exceção será lançada.|  
 |**Privacidade do PCT** ou **PktPrivacy**|Sim|Especifica uma conexão criptografada.<br /><br /> <br /><br /> Observe que você também pode especificar uma conexão criptografada não definindo a **ProtectionLevel** propriedade na cadeia de conexão.<br /><br /> <br /><br /> Um fluxo TCP é solicitado do provedor e o contexto de segurança do usuário que está solicitando o fluxo é autenticado no servidor:<br /><br /> <br /><br /> Se a autenticação tiver êxito, o objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> fechará o fluxo TCP existente e abrirá um fluxo TCP criptografado para manipular todas as solicitações. Cada solicitação de dados ou de metadados é autenticada por meio do contexto de segurança usado para abrir a conexão. Adicionalmente, a carga de cada pacote TCP será criptografada usando o maior método de criptografia suportado pelo provedor e pela fonte de dados multidimensional.<br /><br /> <br /><br /> Se a autenticação falhar, o objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> se desconectará da fonte de dados multidimensional e uma exceção será lançada.|  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 01/08/2018
 |Valor de ProtectionLevel|Usar com HTTP ou HTTPS|  
 |---------------------------|----------------------------|  
 |**Nenhuma**|não|  
-|**Connect**|HTTP|  
+|**Conectar**|HTTP|  
 |**Integridade do PCT** ou **PktIntegrity**|não|  
 |**Privacidade do PCT** ou **PktPrivacy**|HTTPS|  
   
@@ -119,7 +120,7 @@ End Function
   
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Estabelecendo conexões no ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net.md)  
   
   

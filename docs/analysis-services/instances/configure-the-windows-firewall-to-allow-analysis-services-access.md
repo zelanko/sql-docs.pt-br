@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Windows Firewall [Analysis Services]
 - firewall systems [Analysis Services]
 ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
 ms.openlocfilehash: 0cb0930e6fd3faf0b44c5b8ac46359ec959b85c9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Configurar o Firewall do Windows para permitir o acesso ao Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma primeira etapa essencial para tornar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] está disponível na rede determinar se você precisa desbloquear portas em um firewall. A maioria das instalações exigirão que você crie, pelo menos, uma regra de firewall de entrada que permita conexões com o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Uma primeira etapa essencial para tornar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] disponível na rede é determinar se você precisa desbloquear portas em um firewall A maioria das instalações exigirão que você crie, pelo menos, uma regra de firewall de entrada que permita conexões com o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  Os requisitos de configuração de firewall variam de acordo com a maneira como você instalou o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -110,7 +111,7 @@ ms.lasthandoff: 01/08/2018
 8.  Para verificar que conexões remotas são habilitadas, abra o SQL Server Management Studio ou o Excel em outro computador e conecte-se ao [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , especificando o nome de rede do servidor em **Nome do servidor**.  
   
     > [!NOTE]  
-    >  Outros usuários não terão acesso a esse servidor até você conceder as devidas permissões. Para saber mais, veja [Autorizar o acesso a objetos e operações &#40;Analysis Services 41](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
+    >  Outros usuários não terão acesso a esse servidor até você conceder as devidas permissões. Para saber mais, veja [Autorizar o acesso a objetos e operações &amp;#40;Analysis Services 41](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   
 #### <a name="netsh-advfirewall-syntax"></a>Sintaxe de Netsh AdvFirewall  
   
@@ -237,7 +238,7 @@ ms.lasthandoff: 01/08/2018
   
  Se você estiver usando o SharePoint 2010, não precisa abrir portas no Firewall do Windows. O SharePoint abre as portas necessárias e os suplementos como o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint funcionam no ambiente do SharePoint. Em uma instalação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2010, o Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] tem uso exclusivo da instância de serviço local do SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) que é instalada com ele no mesmo computador. Ele usa conexões locais, e não de rede, para acessar o serviço de mecanismo local Analysis Services que carrega, consulta e processa dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no servidor do SharePoint. Para solicitar dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de aplicativos cliente, solicitações são roteadas através de portas que são abertas pela Instalação de SharePoint (especificamente, regras de entrada são definidas para permitir o acesso ao SharePoint – 80, Administração Central do SharePoint v4, Serviços Web de SharePoint e SPUserCodeV4). Como os serviços Web do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são executados em um farm do SharePoint, as regras de firewall do SharePoint são suficientes para o acesso remoto a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um farm do SharePoint.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Serviço SQL Server Browser &#40;Mecanismo de Banco de Dados e SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, o SQL Server Agent ou o serviço SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [Configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  

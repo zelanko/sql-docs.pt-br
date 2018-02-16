@@ -12,23 +12,24 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 264e09ecf72a638230a85ccf64c34ea66ccf86b3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>Use feeds de dados (Power Pivot para SharePoint)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Feeds de dados são um ou mais fluxos de dados que são gerados a partir de uma fonte de dados online e transmitidos para um documento de destino ou o aplicativo. Se você estiver usando o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel, os feeds de dados poderão ajudá-lo a obter dados corporativos ou de negócios existentes de fontes de dados arbitrárias dentro da janela do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] na pasta de trabalho do Excel 2010. Depois de importar um feed de dados para uma pasta de trabalho, você poderá referenciá-lo posteriormente em qualquer operação de atualização de dados agendada em um servidor do SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Feeds de dados são um ou mais fluxos de dados gerados de uma fonte de dados online e transmitidos para um documento ou aplicativo de destino. Se você estiver usando o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel, os feeds de dados poderão ajudá-lo a obter dados corporativos ou de negócios existentes de fontes de dados arbitrárias dentro da janela do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] na pasta de trabalho do Excel 2010. Depois de importar um feed de dados para uma pasta de trabalho, você poderá referenciá-lo posteriormente em qualquer operação de atualização de dados agendada em um servidor do SharePoint.  
   
  A maneira como você usa um feed de dados depende de você estar usando recursos de exportação internos em aplicativos que dão suporte a feeds de dados Atom ou estar criando e usando serviços de dados personalizados. Aplicativos que podem publicar e ler dados XML do Atom fornecem transferência de dados transparente que oculta as mecânicas dos feeds de dados e serviços de dados de usuários. Para um usuário, os dados são simplesmente movidos de um aplicativo para outro.  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o Microsoft SharePoint Server 2010 fornecem feeds de dados que podem ser usados em pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Você pode usar as informações deste tópico para aprender como acessar feeds de dados de relatórios e listas já existentes.  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o Microsoft SharePoint Server 2010 fornecem dados feeds que podem ser usados em [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pastas de trabalho. Você pode usar as informações deste tópico para aprender como acessar feeds de dados de relatórios e listas já existentes.  
   
  Este tópico contém as seguintes seções:  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 01/08/2018
   
 6.  Insira um **Nome de Tabela**, uma tabela para cada feed. Esse valor é necessário. O nome de tabela é usado por um aplicativo cliente que consome o feed de dados. No [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel, o nome de tabela é usado para nomear tabelas na janela do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que conterá os dados importados.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Ativar a Integração de Recursos do Power Pivot para as Coleções de Sites na Administração Central](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)   
  [Compartilhar feeds de dados usando uma biblioteca de feed de dados &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   

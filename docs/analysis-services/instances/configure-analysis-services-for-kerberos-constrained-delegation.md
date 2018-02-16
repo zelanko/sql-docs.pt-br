@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 5b6f6c1561997970811e729a498383cef08f4ac3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Configurar a delegação restrita do Analysis Services para Kerberos)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ao configurar o Analysis Services para a autenticação Kerberos, você provavelmente está mais interessado em atingir um ou ambos os seguintes resultados: com o Analysis Services representar uma identidade de usuário ao consultar dados. ou com o Analysis Services delegar uma identidade de usuário a um serviço de nível inferior. Cada cenário tem requisitos de configuração ligeiramente diferentes. Nos dois cenários, é necessário que a verificação assegure que a configuração foi feita corretamente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Ao configurar o Analysis Services para autenticação Kerberos, você provavelmente está mais interessado em obter um destes resultados ou ambos: fazer com que o Analysis Services represente uma identidade de usuário ao consultar dados ou fazer com que o Analysis Services delegue uma identidade de usuário a um serviço de nível inferior. Cada cenário tem requisitos de configuração ligeiramente diferentes. Nos dois cenários, é necessário que a verificação assegure que a configuração foi feita corretamente.  
   
 > [!TIP]  
 >  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** é uma ferramenta de diagnóstico que ajuda a solucionar problemas de Kerberos relativos à conectividade com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
@@ -117,11 +118,11 @@ ms.lasthandoff: 01/08/2018
   
  Além disso, consulte [A caixa de diálogo mais confusa no Active Directory](http://windowsitpro.com/windows/most-confusing-dialog-box-active-directory) para obter uma descrição completa de cada opção na guia Delegação da caixa de diálogo de propriedades do objeto do Active Directory. Este artigo também explica como usar o LDP para testar e interpretar os resultados dos testes.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Autenticação e delegação de identidade do Microsoft BI](http://go.microsoft.com/fwlink/?LinkID=286576)   
  [Autenticação mútua usando Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
- [Conectar ao Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
+ [Conecte-se ao Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Registro de SPN de uma instância do Analysis Services](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
- [Propriedades de cadeia de conexão &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [Propriedades de cadeia de caracteres de Conexão &#40; Analysis Services &#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

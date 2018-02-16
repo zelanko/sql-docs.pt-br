@@ -15,19 +15,20 @@ helpviewer_keywords:
 - slicer axis
 - filtering data [MDX]
 ms.assetid: c56b0a70-cdec-427f-990e-425290344e7d
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 3aaee6261a0209a2c6504c7b0809e2dc57c079d7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-slicer-axis"></a>Consulta MDX e o eixo da segmentação de dados - especificar o conteúdo de um eixo do Slicer
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O eixo do slicer filtra os dados retornados da instrução SELECT MDX (Multidimensional Expressions), restringindo os dados retornados para que somente os dados da intersecção com os membros especificados serão retornados. Pode ser considerado como um eixo adicional invisível em uma consulta. O eixo de slicer é definido na cláusula WHERE da instrução MDX SELECT.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+O eixo de slicer filtra os dados retornados pela instrução MDX SELECT, restringindo os dados retornados para que somente os dados da intersecção com os membros especificados sejam retornados. Pode ser considerado como um eixo adicional invisível em uma consulta. O eixo de slicer é definido na cláusula WHERE da instrução MDX SELECT.  
   
 ## <a name="slicer-axis-syntax"></a>Sintaxe de eixo de slicer  
  Para especificar um eixo de slicer explicitamente, use a `<SELECT slicer axis clause>` no formato MDX, como descrita na sintaxe a seguir:  

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b7222318-7307-4afb-b585-9358426103a0
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: de9f32a826273ed1efaf9395c8a0e67030b1b573
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="delete-power-pivot-gallery"></a>Excluir Galeria do Power Pivot
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Excluindo um [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Galeria também exclui todos os seus itens, incluindo o histórico de atualização de dados para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pastas de trabalho que estão configuradas para atualização de dados agendada.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Excluir uma Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] também exclui todos os seus itens, inclusive o histórico de atualização de dados para pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , que são configuradas para atualização de dados agendada.  
   
 > [!NOTE]  
 >  Este tópico fornece instruções sobre como excluir uma biblioteca do SharePoint. Para obter instruções sobre como excluir documentos individuais na biblioteca, consulte [Usar Galeria do Power Pivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md).  
@@ -55,7 +56,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  Em Permissões e Gerenciamento, clique em **Excluir esta biblioteca**.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Galeria do Power Pivot](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)  
   
   

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 60e8c6ab0537a8757d6a75b05e4788dc4a29768f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Configurar a coleta de dados de uso para o Power Pivot para SharePoint
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Coleta de dados de uso é um recurso no nível do farm do SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint usa e estende esse sistema para fornecer relatórios no Painel de Gerenciamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que mostram como os dados e serviços do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são usados. Dependendo da forma como você instala o SharePoint, a coleta de dados de uso poderá ser desativada para o farm. Um administrador de farm deve habilitar o registro em log de uso para criar os dados de uso exibidos no Painel de Gerenciamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+A coleta de dados de uso é um recurso do SharePoint em nível de farm. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint usa e estende esse sistema para fornecer relatórios no Painel de Gerenciamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que mostram como os dados e serviços do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são usados. Dependendo da forma como você instala o SharePoint, a coleta de dados de uso poderá ser desativada para o farm. Um administrador de farm deve habilitar o registro em log de uso para criar os dados de uso exibidos no Painel de Gerenciamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  Para obter informações sobre os dados de uso no Painel de Gerenciamento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , consulte [Painel de Gerenciamento Power Pivot e dados de uso](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
@@ -187,7 +188,7 @@ ms.lasthandoff: 01/08/2018
   
 |Configuração|Valor padrão|Tipo|Intervalo válido|  
 |-------------|-------------------|----------|-----------------|  
-|**Eventos de uso do Analysis Services** (Conexão, Carregamento, Descarregamento, Solicitações)|\<habilitado >|Booliano|Estes valores são habilitados ou desabilitados.|  
+|**Eventos de uso do Analysis Services** (Conexão, Carregamento, Descarregamento, Solicitações)|\<enabled>|Booliano|Estes valores são habilitados ou desabilitados.|  
 |**Query Reporting interval**|300 (em segundos)|Integer|1 até qualquer inteiro positivo. O padrão é 5 minutos.|  
 |**Usage data history**|365 (em dias)|Integer|0 especifica ilimitado, mas você também pode definir um limite superior para expirar dados históricos e permitir sua exclusão automática. Valores válidos para um período de retenção limitado variam de 1 a 5000 (em dias).|  
 |Limite Superior de Resposta Trivial|500 (em milissegundos)|Integer|Define um limite superior que define uma troca de solicitação-resposta trivial. Qualquer solicitação concluída entre 0 e 500 milissegundos é uma solicitação trivial e ignorada para fins de relatórios.|  
@@ -195,7 +196,7 @@ ms.lasthandoff: 01/08/2018
 |Limite superior de resposta esperada|3000 (em milissegundos)|Integer|Define um limite superior que define uma troca de solicitação-resposta esperada.|  
 |Limite Superior de Respostas Demoradas|10000 (em milissegundos)|Integer|Define um limite superior que define uma troca de solicitação-resposta demorada. Qualquer solicitação que exceda esse limite superior entrará na categoria Excedida, que não tem limite superior.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Referência de parâmetro de configuração &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Coleta de dados de uso do Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   

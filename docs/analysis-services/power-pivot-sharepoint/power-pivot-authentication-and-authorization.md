@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 691bf8b3fd2e26a3f906c88fbc8ceb840b636f6c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Autenticação e autorização do Power Pivot
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint a implantação é executado em um farm do SharePoint 2010 usa o modelo de autenticação subsistema e autorização fornecidos pelos servidores do SharePoint. A infraestrutura de segurança do SharePoint se estende ao conteúdo e às operações do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] porque todo o conteúdo relacionado ao [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]é armazenado nos bancos de dados de conteúdo do SharePoint, e todas as operações relacionadas ao [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]são executadas pelos serviços compartilhados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no farm. Os usuários que solicitam uma pasta de trabalho que contém dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são autenticados, usando uma identidade de usuário do SharePoint que é baseada na respectiva identidade de usuário do Windows. As permissões de exibição na pasta de trabalho determinam se a solicitação é concedida ou negada.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Uma implantação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, executada dentro de um farm do SharePoint 2010, usa o subsistema de autenticação e o modelo de autorização fornecidos pelos servidores do SharePoint. A infraestrutura de segurança do SharePoint se estende ao conteúdo e às operações do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] porque todo o conteúdo relacionado ao [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]é armazenado nos bancos de dados de conteúdo do SharePoint, e todas as operações relacionadas ao [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]são executadas pelos serviços compartilhados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no farm. Os usuários que solicitam uma pasta de trabalho que contém dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são autenticados, usando uma identidade de usuário do SharePoint que é baseada na respectiva identidade de usuário do Windows. As permissões de exibição na pasta de trabalho determinam se a solicitação é concedida ou negada.  
   
  Como a integração com os Serviços do Excel é necessária para análises de dados de autoatendimento, a proteção de um servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] exige que você também compreenda a segurança dos Serviços do Excel. Quando um usuário consulta um Tabela Dinâmica que tem uma conexão de dados a dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , os Serviços do Excel encaminham uma solicitação de conexão de dados a um servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no farm para carregar os dados. Essa interação entre os servidores exige que você compreenda como configurar parâmetros de segurança para ambos os servidores.  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 01/08/2018
 |Administrador de farm ou serviço|Instalar, habilitar e configurar serviços e aplicativos.<br /><br /> Usar o Painel de Gerenciamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e exibir relatórios administrativos.|  
 |Controle total|Ativar a integração de recursos do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no nível de conjunto de sites.<br /><br /> Criar uma biblioteca da Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Criar uma biblioteca de feeds de dados.|  
 |Contribuir|Adicionar, editar, excluir e baixar as pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Configurar a atualização de dados<br /><br /> Criar novas pastas de trabalho e relatórios com base em pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um site do SharePoint.<br /><br /> Criar documentos de serviço de dados em uma biblioteca de feed de dados|  
-|leitura|Acessar pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] como uma fonte de dados externa, em que a URL da pasta de trabalho é inserida explicitamente em uma caixa de diálogo de conexão (por exemplo, no Assistente de Conexão de Dados do Excel).|  
+|Leitura|Acessar pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] como uma fonte de dados externa, em que a URL da pasta de trabalho é inserida explicitamente em uma caixa de diálogo de conexão (por exemplo, no Assistente de Conexão de Dados do Excel).|  
 |Exibir Apenas|Exibir pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Exibir o histórico de atualizações de dados.<br /><br /> Conectar uma pasta de trabalho local a uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um site do SharePoint, para adaptar seus dados de outros modos.<br /><br /> Baixar um instantâneo da pasta de trabalho. O instantâneo é uma cópia estática dos dados, sem segmentações de dados, fórmulas ou conexões de dados. O conteúdo do instantâneo é semelhante à cópia de valores de células da janela do navegador.|  
   
 ##  <a name="excel"></a> Considerações de segurança dos Serviços do Excel para pastas de trabalho do Power Pivot  
@@ -104,7 +105,7 @@ ms.lasthandoff: 01/08/2018
  Nos Serviços do Excel, as configurações relacionadas à segurança são especificadas em locais confiáveis, provedores de dados confiáveis e bibliotecas de conexão de dados confiáveis. A tabela a seguir descreve as configurações que permitem ou aprimoram o acesso a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se uma configuração não estiver listada aqui, ela não terá nenhum efeito nas conexões com o servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para saber como especificar essas configurações passo a passo, consulte a seção "Habilitar Serviços do Excel" em [Configuração inicial (Power Pivot para SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).  
   
 > [!NOTE]  
->  A maioria das configurações relacionadas à segurança se aplicam a locais confiáveis. Se quiser preservar valores padrão ou usar valores diferentes para sites diferentes, você poderá criar mais um local confiável para sites que contenham dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e, então, configurar os seguintes parâmetros apenas para esse site. Para obter mais informações, consulte [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+>  A maioria das configurações relacionadas à segurança se aplicam a locais confiáveis. Se quiser preservar valores padrão ou usar valores diferentes para sites diferentes, você poderá criar mais um local confiável para sites que contenham dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e, então, configurar os seguintes parâmetros apenas para esse site. Para obter mais informações, consulte [Criar um local confiável para sites do PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 |Área|Configuração|Description|  
 |----------|-------------|-----------------|  
@@ -116,7 +117,7 @@ ms.lasthandoff: 01/08/2018
 |Bibliotecas de conexão de dados confiáveis|Opcional.|Você pode usar os arquivos da Conexão de Dados do Office (.odc) em pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se você usar arquivos .odc para fornecer informações de conexão a pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] locais, poderá adicionar os mesmos arquivos .odc a essa biblioteca.|  
 |Assembly de função definida pelo usuário|Não aplicável.|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint ignora os assemblies de funções definidas pelo usuário que você implanta para os Serviços do Excel. Se você confiar em assemblies definidos pelo usuário para um comportamento específico, saiba que o processamento de consultas do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] não usará as funções definidas pelo usuário que você criou.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Configurar contas de serviço Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
  [Configurar o Power Pivot (Power Pivot para SharePoint) da conta de atualização de dados autônoma](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)   
  [Criar um local confiável para sites do PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   

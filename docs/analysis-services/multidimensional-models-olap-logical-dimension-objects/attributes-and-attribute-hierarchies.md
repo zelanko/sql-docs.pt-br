@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - regular attributes [Analysis Services]
 - parent attributes [Analysis Services]
@@ -25,19 +26,20 @@ helpviewer_keywords:
 - attributes [Analysis Services]
 - relationships [Analysis Services], attributes
 ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 012caa5210886a9c2f6e72a6c1b7338154358d1f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>Atributos e hierarquias de atributos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]As dimensões são coleções de atributos que estão associados a uma ou mais colunas em uma tabela ou exibição na exibição da fonte de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+As dimensões são coleções de atributos, vinculados a uma ou mais colunas na tabela ou exibição na exibição de fonte de dados.  
   
 ## <a name="key-attribute"></a>Atributo de chave  
  Cada dimensão contém um atributo de chave. Cada atributo está associado a uma ou mais colunas em uma tabela de dimensões. O atributo de chave é o atributo em uma dimensão que identifica as colunas na tabela de dimensões principal usada em relações de chave estrangeira com a tabela de fatos. Normalmente, o atributo de chave representa a coluna ou colunas de chave primária na tabela de dimensões. Você pode definir uma chave primária lógica em uma tabela na exibição de fonte de dados, que não tenha a chave primária física na fonte de dados subjacente. **Para obter mais informações**, consulte [definir chaves primárias lógicas em uma exibição da fonte de dados &#40; Analysis Services &#41; ](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). Ao definir os atributos de chave, o Assistente para Cubos e o Assistente para Dimensões tentam usar as colunas de chave primária da tabela de dimensões na exibição da fonte de dados. Se a tabela de dimensões não tem uma chave lógica primária ou uma chave física primária definida, os assistentes não definirão corretamente os atributos da chave da dimensão.  
@@ -53,7 +55,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="attribute-relationships-star-schemas-and-snowflake-schemas"></a>Relações de atributo, esquemas em estrela e esquemas floco de neve  
  Por padrão, em um esquema em estrela, todos os atributos estão diretamente relacionados ao atributo de chave, o que permite que os usuários pesquisem os fatos no cubo com base em qualquer hierarquia de atributos na dimensão. Em um esquema floco de neve, um atributo estará diretamente vinculado ao atributo de chave se a tabela subjacente estiver diretamente vinculada à tabela de fatos, ou vinculado indiretamente pelos atributos associados à chave na tabela subjacente, que vincula a tabela floco de neve à tabela vinculada diretamente.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Criar hierarquias definidas pelo usuário](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [Definir relações de atributo](../../analysis-services/multidimensional-models/attribute-relationships-define.md)   
  [Referência de propriedades de atributo de dimensão](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  

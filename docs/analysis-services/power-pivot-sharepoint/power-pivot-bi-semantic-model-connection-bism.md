@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 78b908cfe8e5601ecd5d8fcea6c6816459d6e73a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-bi-semantic-model-connection-bism"></a>Conexão de modelo semântico de BI (.bism) do Power Pivot
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma conexão de modelo semântico de BI (. bism) é uma conexão portátil que conecta o Excel ou relatórios do Power View para um banco de dados de modelo de tabela do Analysis Services ou uma instância do Analysis Services no modo multidimensional. Se você estiver familiarizado com arquivos de conexão de dados (.odc) do Office, observará uma semelhança em como um arquivo de conexão .bism é definido e usado.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Uma conexão de modelo semântico de BI (.bism) é uma conexão portátil que conecta relatórios do Excel ou do Power View a um banco de dados do modelo Tabular do Analysis Services ou uma instância do Analysis Services no modo multidimensional. Se você estiver familiarizado com arquivos de conexão de dados (.odc) do Office, observará uma semelhança em como um arquivo de conexão .bism é definido e usado.  
   
  Uma conexão de modelo semântico de BI é criada e acessada pelo SharePoint. A criação de conexões de modelo semântico de BI habilita comandos de início rápido em uma conexão de modelo semântico de BI em uma biblioteca. Os comandos de início rápido abrem uma nova pasta de trabalho do Excel ou opções para editar o arquivo de conexão. Se os Reporting Services estiverem instalados, você também verá um comando para criar um relatório do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   
@@ -79,11 +80,11 @@ ms.lasthandoff: 01/08/2018
   
  [Criar uma conexão de modelo semântico de BI para uma pasta de trabalho do Power Pivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [Criar uma conexão de modelo semântico de BI com um modelo de banco de dados de tabela](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [Criar uma conexão de modelo semântico de BI com um banco de dados de modelo de tabela](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
  [Usar uma conexão de modelo semântico de BI no Excel ou Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Determina o Modo de Servidor de uma instância do Analysis Services.](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Conectar ao Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   

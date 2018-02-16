@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2474c5ec55301da4793ed23272059c2f93e6e730
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Create a trusted location for Power Pivot sites in Central Administration
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Os serviços do Excel permite que você especifique quais locais são repositórios válidos para pastas de trabalho que você abrir em um servidor do SharePoint. Esses locais são chamados de "locais confiáveis" e você pode usar diferentes definições de configuração para cada local confiável que você criar. Para uma implantação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, você pode considerar criar um local confiável para sites que tenham pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , de forma que você possa aplicar as configurações que funcionam melhor para acesso a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , enquanto preserva valores padrão para o resto do farm.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Os Serviços do Excel permitem especificar quais locais são repositórios válidos para pastas de trabalho que você abrir em um servidor do SharePoint. Esses locais são chamados de "locais confiáveis" e você pode usar diferentes definições de configuração para cada local confiável que você criar. Para uma implantação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, você pode considerar criar um local confiável para sites que tenham pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , de forma que você possa aplicar as configurações que funcionam melhor para acesso a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , enquanto preserva valores padrão para o resto do farm.  
   
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/08/2018
   
 11. Clique em **OK**.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Galeria do Power Pivot](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)   
  [Criar e personalizar a Galeria do Power Pivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
  [Usar Galeria do Power Pivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  

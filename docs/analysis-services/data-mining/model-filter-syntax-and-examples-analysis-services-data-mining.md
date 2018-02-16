@@ -17,19 +17,20 @@ helpviewer_keywords:
 - filters [data mining]
 - filters [Analysis Services]
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: daf31a5100ced2272b74b1bcad982f84bbbe5916
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Sintaxe de filtro de modelo e exemplos (Analysis Services - Mineração de dados)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Esta seção fornece informações detalhadas sobre a sintaxe para filtros de modelo, junto com exemplos de expressões.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Esta seção fornece informações detalhadas sobre a sintaxe de filtros de modelo, além de expressões de exemplo.  
   
  [Sintaxe de Filtro](#bkmk_Syntax)  
   
@@ -317,8 +318,8 @@ FILTER (EXISTS (Products))
  Por exemplo, se você quiser filtrar os resultados da central de atendimento para mostrar apenas fins de semana, será possível criar uma expressão na exibição da fonte de dados que extrai o nome do dia da semana para cada data e, em seguida, usar o valor do nome desse dia da semana para entrada ou como um valor discreto na filtragem. Basta se lembrar de que, como valores repetidos podem afetar o modelo, você só deve usar uma das colunas, e não a coluna de data mais o valor derivado.  
   
   
-## <a name="see-also"></a>Consulte Também  
- [Filtros para modelos de mineração &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [Teste e validação &#40;Mineração de dados&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>Consulte também  
+ [Filtros para modelos de mineração &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [Teste e validação &#40; mineração de dados &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

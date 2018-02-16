@@ -12,24 +12,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ed5bd7197fa455d5ea93f39e529961a16828ba77
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Criar um Cubo de um modelo sem usar uma Exibição da Fonte de Dados
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Selecione **criar o cubo sem usar uma fonte de dados** na primeira página do Assistente de cubo para criar um cubo sem usar uma exibição da fonte de dados. Posteriormente, o Assistente de Geração de Esquema pode ser usado para gerar o esquema relacional para a exibição da fonte de dados com base na estrutura do cubo e possivelmente outros objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para obter mais informações sobre como gerar um esquema, consulte [Assistente de Geração de Esquema &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Selecione **Criar o cubo sem usar uma fonte de dados** na primeira página do Assistente para Cubos para criar um cubo sem usar uma exibição da fonte de dados. Posteriormente, o Assistente de Geração de Esquema pode ser usado para gerar o esquema relacional para a exibição da fonte de dados com base na estrutura do cubo e possivelmente outros objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter mais informações sobre como gerar um esquema, consulte [Assistente de Geração de Esquema &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
   
 ## <a name="selecting-the-build-method"></a>Selecionando o Método de Criação  
- No Assistente para Cubos, na página **Selecionar Método de Criação** , clique em **Criar o cubo sem usar uma fonte de dados**. Para criar o cubo usando um modelo de cubo existente, marque a caixa de seleção **Usar modelo de cubo** . para obter informações sobre a ferramenta de configuração e recursos adicionais. Se você não selecionar para usar um modelo, deverá definir as opções manualmente.  
+ No Assistente para Cubos, na página **Selecionar Método de Criação** , clique em **Criar o cubo sem usar uma fonte de dados**. Para criar o cubo usando um modelo de cubo existente, marque a caixa de seleção **Usar modelo de cubo** . . Se você não selecionar para usar um modelo, deverá definir as opções manualmente.  
   
- Os modelos de cubo contêm medidas predefinidas, grupos de medidas, dimensões, hierarquias e atributos. Se você selecionar um modelo, o assistente usará as definições de objeto nos modelos como a base para definir opções nas páginas seguintes. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é instalado com vários modelos para cubos padrão. O administrador do servidor também pode adicionar modelos de cubo ou de dimensão que são criados especificamente para obter os dados de sua organização.  
+ Os modelos de cubo contêm medidas predefinidas, grupos de medidas, dimensões, hierarquias e atributos. Se você selecionar um modelo, o assistente usará as definições de objeto nos modelos como a base para definir opções nas páginas seguintes. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é instalado com vários modelos para cubos padrão. O administrador do servidor também pode adicionar modelos de cubo ou de dimensão que são criados especificamente para obter os dados de sua organização.  
   
 ## <a name="selecting-dimensions"></a>Selecionando dimensões  
  Use a página **Selecionar Dimensões** do assistente para adicionar dimensões ao cubo. Esta página será exibida somente se já houver dimensões compartilhadas sem uma fonte de dados no projeto ou banco de dados. Ela não lista dimensões que têm uma fonte de dados.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
  As grades **Selecionar medidas do modelo** e **Adicionar novas medidas** exibem valores nas colunas descritas na tabela a seguir. Você pode clicar em um valor em qualquer lista para alterá-lo.  
   
-|coluna|Description|  
+|Coluna|Description|  
 |------------|-----------------|  
 |**Nome da Medida**|Um valor nessa coluna define o nome de uma medida no cubo. Clique em um valor nessa coluna para digitar um nome. Clique em **Adicionar nova medida** nesta coluna para criar uma nova medida. Essa coluna define a propriedade **Name** no objeto de medida.|  
 |**Grupo de Medidas**|O nome do grupo de medidas que contém a medida. Clique nesse valor para escolher ou digitar um nome. Se você excluir todas as medidas que pertencem a um grupo de medidas específico, o grupo de medidas também será removido. Essa coluna define a propriedade **Name** no objeto de grupo de medidas.|  
@@ -61,7 +62,7 @@ ms.lasthandoff: 01/08/2018
   
  As grades **Selecionar dimensões do modelo** e **Adicionar novas dimensões** exibem valores nas colunas descritas na tabela a seguir. Você pode clicar em um valor em qualquer lista para alterá-lo.  
   
-|coluna|Description|  
+|Coluna|Description|  
 |------------|-----------------|  
 |**Tipo**|Exibe o tipo de dimensão para uma dimensão de modelo. Clique nesta célula para alterar o tipo de dimensão para uma dimensão. Essa coluna define a propriedade **Type** para o objeto de dimensão.|  
 |**Nome**|Exibe o nome da dimensão. Clique nessa célula para digitar um nome diferente. Esse valor define a propriedade **Name** para o objeto de dimensão.|  

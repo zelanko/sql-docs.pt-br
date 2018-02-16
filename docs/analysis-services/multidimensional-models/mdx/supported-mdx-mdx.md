@@ -15,46 +15,47 @@ helpviewer_keywords:
 - MDX [Analysis Services], statements
 - MDX [Analysis Services], functions
 ms.assetid: 308bc0b3-4fd6-4435-972b-5e40d9e3c99b
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1c4f6573ce8f72c0fa907f58a1f4264709809f11
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="supported-mdx-mdx"></a>Suporte para MDX (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]As instruções e funções a seguir têm suporte no Script MDX (Multidimensional Expressions):  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+As instruções e funções a seguir são suportadas em scripts MDX:  
   
- [&#40;Comentário&#41; &#40;MDX&#41;](../../../mdx/comment-mdx-double-slash.md)  
+ [&#40; Comentário &#41; &#40; MDX &#41;](../../../mdx/comment-mdx-double-slash.md)  
   
- [-- &#40;Comentário&#41; &#40;MDX&#41;](../../../mdx/comment-mdx-operator-reference.md)  
+ [– &#40; Comentário &#41; &#40; MDX &#41;](../../../mdx/comment-mdx-operator-reference.md)  
   
- [Comentário &#40;MDX&#41;](../../../mdx/comment-mdx.md)  
+ [Comentário &#40; MDX &#41;](../../../mdx/comment-mdx.md)  
   
- [Instrução ALTER CUBE &#40;MDX&#41;](../../../mdx/mdx-data-definition-alter-cube.md)  
+ [Instrução ALTER CUBE &#40; MDX &#41;](../../../mdx/mdx-data-definition-alter-cube.md)  
   
 > [!NOTE]  
 >  Apenas a alteração do membro padrão é suportada pelo script MDX.  
   
- [Instrução CALCULATE &#40;MDX&#41;](../../../mdx/mdx-scripting-calculate.md)  
+ [CALCULAR instrução &#40; MDX &#41;](../../../mdx/mdx-scripting-calculate.md)  
   
- [Instrução CASE &#40;MDX&#41;](../../../mdx/case-statement-mdx.md)  
+ [Instrução CASE &#40; MDX &#41;](../../../mdx/case-statement-mdx.md)  
   
- [Instrução CREATE CELL CALCULATION &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [Criar instrução de CÁLCULO de CÉLULA &#40; MDX &#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
- [Instrução CREATE MEMBER &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)  
+ [Criar declaração de membro &#40; MDX &#41;](../../../mdx/mdx-data-definition-create-member.md)  
   
- [Instrução CREATE SET &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-set.md)  
+ [CRIAR a instrução SET &#40; MDX &#41;](../../../mdx/mdx-data-definition-create-set.md)  
   
- [Palavra-chave EXISTING &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)  
+ [Palavra-chave existente &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)  
   
- [Instrução FREEZE &#40;MDX&#41;](../../../mdx/mdx-scripting-freeze.md)  
+ [CONGELAR instrução &#40; MDX &#41;](../../../mdx/mdx-scripting-freeze.md)  
   
- [Instrução IF &#40;MDX&#41;](../../../mdx/mdx-scripting-if.md)  
+ [Se instrução &#40; MDX &#41;](../../../mdx/mdx-scripting-if.md)  
   
  [Este &#40;MDX&#41;](../../../mdx/this-mdx.md)  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/08/2018
   
  [Instrução SCOPE &#40;MDX&#41;](../../../mdx/mdx-scripting-scope.md)  
   
-## <a name="see-also"></a>Consulte Também  
- [O script básico de MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
+## <a name="see-also"></a>Consulte também  
+ [O Script básico de MDX &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
   
   

@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 5b159965ba0428c267b62fd712cd34bc26cca833
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tables---key-performance-indicator-representation"></a>Tabelas - representação de indicador chave de desempenho
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Um KPI é usado para medir o desempenho de um valor, definido por uma medida Base, com um valor de destino  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Um KPI é usado para medir o desempenho de um valor, definido por uma medida base, em relação a um valor de destino  
   
 ## <a name="key-performance-indicator-representation"></a>Representação de indicador chave de desempenho  
  Em modelos de objeto de tabela, um indicador chave de desempenho –kpi- é uma medida com informações adicionais para o aplicativo cliente exibi-lo graficamente. Um kpi normalmente tem informações sobre uma meta a ser obtida, o status da medida comparada à meta e informações para a ferramenta de cliente sobre como exibir o status graficamente.  

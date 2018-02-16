@@ -1,7 +1,7 @@
 ---
 title: "Trabalhando com conexões e sessões no ADOMD.NET | Microsoft Docs"
 ms.custom: 
-ms.date: 03/03/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,24 +11,25 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - sessions [ADOMD.NET]
 - connections [ADOMD.NET]
 ms.assetid: 72b43c06-f3e4-42c3-a696-4a3419c3b884
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 46135ecf59b66a3e742d3241489e1967152ad952
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a4f51a9e0939612e490ed96c93c06a6931fa3f21
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connections-in-adomdnet---working-with-connections-and-sessions"></a>Conexões no ADOMD.NET - trabalhar com conexões e sessões
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]XML for Analysis (XMLA), sessões dão suporte para operações com monitoração de estado durante o acesso a dados analíticos. As sessões enquadram o escopo e o contexto de comandos e de transações para uma fonte de dados analíticos. Os elementos XMLA usados para gerenciar sessões são [BeginSession](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md), [Session](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)e [EndSession](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md).  
+  No XMLA (XML for Analysis), sessões dão suporte a operações de estado durante o acesso a dados analíticos. As sessões enquadram o escopo e o contexto de comandos e de transações para uma fonte de dados analíticos. Os elementos XMLA usados para gerenciar sessões são [BeginSession](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md), [Session](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)e [EndSession](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md).  
   
  O ADOMD.NET usa esses três elementos de sessão XMLA quando você inicia uma sessão, executa consultas ou recupera dados durante a sessão e fecha uma sessão.  
   
@@ -109,7 +110,7 @@ static string CreateSession(string connectionString)
 }  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Estabelecendo conexões no ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net.md)  
   
   

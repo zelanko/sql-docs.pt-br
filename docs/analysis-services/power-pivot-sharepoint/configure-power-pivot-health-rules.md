@@ -12,20 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1bd59f4d64395ee1def3d8e1c1eaf31942a6533c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-health-rules"></a>Configurar regras de integridade do Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]para SharePoint inclui regras de integridade do SharePoint que ajudarão-lo a monitoram e solucionar problemas de disponibilidade e configuração do servidor. Regras de integridade que se aplicam ao [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint aparecem na página Examinar definições de regra.  
+[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint inclui regras de integridade do SharePoint que o ajudam a monitorar e solucionar problemas de disponibilidade e configuração do servidor. Regras de integridade que se aplicam ao [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint aparecem na página Examinar definições de regra.  
   
  Regras de integridade fornecem a detecção de problemas de servidor que podem acabar resultando em interrupções de serviço. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint fornece vários regras para ajudá-lo a identificar e corrigir problemas antes que afetem seus usuários. Você pode personalizar muitas destas regras para ajustá-las às características exclusivas de sua implantação. Por exemplo, se você desejar mais tempo para tratar de avisos sobre espaço em disco, poderá aumentar o percentual de espaço disponível em disco de 5% para 10% de forma que receba o aviso mais cedo.  
   
@@ -134,7 +134,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
      Este parâmetro de configuração corresponde à definição de regra a seguir na página **Examinar problemas e soluções**: **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: dados de uso não são atualizados com a frequência esperada.**  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Configurar o uso do espaço em disco &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)   
  [Painel de Gerenciamento Power Pivot e dados de uso](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
   

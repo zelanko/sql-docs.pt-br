@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 5ca13d8c-1c5d-4f02-869c-72e0defce6d7
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ca5bf33d2d528b8e216915170d7df528589a85c3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-restorelocation-cmdlet"></a>Cmdlet New-RestoreLocation
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Especifica informações usadas para restaurar um banco de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Especifica as informações usadas para restaurar um banco de dados.  
 
 >[!NOTE] 
 >Este artigo pode conter informações desatualizadas e exemplos. Use o cmdlet Get-Help para a versão mais recente.
@@ -73,7 +74,7 @@ ms.lasthandoff: 01/08/2018
 |Aceitar entrada de pipeline?|false|  
 |Aceitar caracteres curinga?|false|  
   
-### <a name="-datasourcetype-asrestoredatasourcetype"></a>-DataSourceType \<as. RestoreDataSourceType >  
+### <a name="-datasourcetype-asrestoredatasourcetype"></a>-DataSourceType \<AS.RestoreDataSourceType>  
  Especifica se a fonte de dados é remota ou local, com base no local da partição.  
   
 |||  
@@ -137,8 +138,8 @@ ms.lasthandoff: 01/08/2018
   
 |||  
 |-|-|  
-|Entradas|Nenhum|  
-|Saídas|Nenhum|  
+|Entradas|Nenhuma|  
+|Saídas|Nenhuma|  
   
 ## <a name="examples"></a>Exemplos  
   

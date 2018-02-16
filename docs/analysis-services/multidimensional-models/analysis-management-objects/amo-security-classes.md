@@ -1,7 +1,7 @@
 ---
 title: "Classes de segurança AMO | Microsoft Docs"
 ms.custom: 
-ms.date: 03/03/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Analysis Management Objects, security
 - security [AMO]
 - AMO, security
 ms.assetid: e3d5012a-8121-40de-9244-1fc824228693
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c06206ff2d9c66230a496e49e3681edd2bb5f312
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 151642efa920091a95002f0dad8857986ed98861
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-security-classes"></a>Classes de segurança AMO
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Este tópico contém as seções a seguir:  
+  Este tópico contém as seguintes seções:  
   
 -   [Objetos role e RoleMember](#RolesMembers)  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/08/2018
   
  Para obter mais informações sobre os métodos e propriedades disponíveis, consulte <xref:Microsoft.AnalysisServices.Permission> em <xref:Microsoft.AnalysisServices>.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.AnalysisServices>   
  [Programando objetos de segurança AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-security-objects.md)   
  [Permissões e direitos de acesso &#40; Analysis Services - dados multidimensionais &#41;](http://msdn.microsoft.com/library/59fa3573-f985-46cb-8042-7da71bd59a7b)   

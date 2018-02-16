@@ -11,10 +11,13 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: Analysis Services Scripting Language XML Element Hierarchy
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Analysis Services Scripting Language XML Element Hierarchy
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Analysis Services Scripting Language, elements
 - elements [Analysis Services Scripting Language]
@@ -22,19 +25,20 @@ helpviewer_keywords:
 - objects [Analysis Services Scripting Language]
 - hierarchies [Analysis Services Scripting Language]
 ms.assetid: 343dbab9-4c2c-49b9-8f35-efc65f2216f1
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: b45f5737bacd5b86d10584f8c6e0b131e1e658cf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-scripting-language-xml-element-hierarchy-assl"></a>Hierarquia de elemento XML da ASSL (Analysis Services Scripting Language)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A tabela a seguir exibe a hierarquia de objetos no Scripting linguagem ASSL (Analysis Services).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+A tabela a seguir exibe a hierarquia de objetos na ASSL (Analysis Services Scripting Language).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -1938,7 +1942,7 @@ ms.lasthandoff: 01/08/2018
 </Server>  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Elementos XML de linguagem de script &#40; do Analysis Services ASSL &#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-elements-assl.md)   
  [Analysis Services Scripting Language hierarquia de tipo de dados XML &#40; ASSL &#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-data-type-hierarchy-assl.md)   
  [Analysis Services Scripting Language &#40; ASSL para XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  

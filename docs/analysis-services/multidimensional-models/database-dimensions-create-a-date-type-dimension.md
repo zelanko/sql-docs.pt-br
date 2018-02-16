@@ -19,19 +19,20 @@ helpviewer_keywords:
 - calendars [Analysis Services]
 - time intelligence [Analysis Services]
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0d930adaecb3d2148a07a54797b902162c6d2a89
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>Dimensões de banco de dados - criar uma dimensão de tipo de data
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], uma dimensão de tempo é um tipo de dimensão cujos atributos representam períodos de tempo, como anos, semestres, trimestres, meses e dias. Os períodos em uma dimensão de tempo fornecem níveis de granularidade baseados em tempo para análises e geração de relatórios. Os atributos são organizados em hierarquias e a granularidade da dimensão de tempo é determinada em maior parte pelos requisitos de negócios e reporte de dados históricos. Por exemplo, a maioria dos dados financeiros e de vendas dos aplicativos de business intelligence usa uma granularidade mensal ou trimestral.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], uma dimensão de tempo é um tipo de dimensão cujos atributos representam períodos, como anos, semestres, trimestres, meses e dias. Os períodos em uma dimensão de tempo fornecem níveis de granularidade baseados em tempo para análises e geração de relatórios. Os atributos são organizados em hierarquias e a granularidade da dimensão de tempo é determinada em maior parte pelos requisitos de negócios e reporte de dados históricos. Por exemplo, a maioria dos dados financeiros e de vendas dos aplicativos de business intelligence usa uma granularidade mensal ou trimestral.  
   
  Normalmente, os cubos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incorporam uma dimensão de tempo de uma outra forma. Um cubo pode conter mais de uma dimensão de tempo ou várias hierarquias provenientes da mesma dimensão de tempo, dependendo da granularidade dos dados e dos requisitos de reporte. Contudo, nem todos os cubos requerem uma dimensão de tempo. Alguns aplicativos OLAP, como os de custos por atividade, não precisam de uma dimensão de tempo porque a geração de custos em uma dimensão baseada em atividades usa as atividades em vez do tempo.  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Não é possível usar o Assistente de Business Intelligence para adicionar inteligência de tempo a dimensões de tempo de servidor. O Assistente de Business Intelligence adiciona uma hierarquia para oferecer suporte à inteligência de tempo e ela deve ser associada a uma coluna da tabela da dimensão de tempo. As dimensões de tempo de servidor não possuem uma tabela de dimensão de tempo correspondente e, portanto, não comportam essa hierarquia adicional.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Criar uma dimensão de tempo ao gerar uma tabela de tempo](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
  [Ajuda de F1 do Assistente do Business Intelligence](http://msdn.microsoft.com/library/155ac80c-63ae-47aa-9e86-9396e3d920eb)   
  [Tipos de dimensão](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  

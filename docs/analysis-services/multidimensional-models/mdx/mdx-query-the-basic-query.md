@@ -18,19 +18,20 @@ helpviewer_keywords:
 - SELECT statement [MDX]
 - cubes [Analysis Services], SELECT statement
 ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
 ms.openlocfilehash: 9abd75f8cbed78630caac64447b8df59cde3ea56
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-query---the-basic-query"></a>Consulta MDX - a consulta básica
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]A consulta básica de MDX (Multidimensional Expressions) é a instrução SELECT — usados com mais frequência consulta em MDX. Entendendo como a instrução MDX SELECT deve especificar um conjunto de resultados, como é sua sintaxe e como criar uma consulta simples usando a instrução SELECT, você terá uma compreensão sólida de como usar a linguagem MDX para consultar dados multidimensionais.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+A consulta básica das expressões multidimensionais (MDX) é a instrução SELECT, a consulta MDX mais usada. Entendendo como a instrução MDX SELECT deve especificar um conjunto de resultados, como é sua sintaxe e como criar uma consulta simples usando a instrução SELECT, você terá uma compreensão sólida de como usar a linguagem MDX para consultar dados multidimensionais.  
   
 ## <a name="specifying-a-result-set"></a>Especificando um conjunto de resultados  
  Na linguagem MDX, a instrução SELECT especifica um conjunto de resultados que contém um subconjunto de dados multidimensionais retornados a partir de um cubo. Para especificar um conjunto de resultados, a consulta MDX deve conter as seguintes informações:  
@@ -47,7 +48,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Uma cláusula SELECT que determina os eixos de consulta de uma instrução MDX SELECT. Para obter mais informações sobre a construção de eixos de consulta em uma cláusula SELECT, consulte [Especificação do conteúdo de um eixo de consulta &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md).  
   
--   Uma cláusula FROM que determina qual cubo será consultado. Para obter mais informações sobre a cláusula FROM, consulte [Instrução SELECT &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md).  
+-   Uma cláusula FROM que determina qual cubo será consultado. Para obter mais informações sobre a cláusula FROM, consulte [SELECT Statement &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md).  
   
 -   Uma cláusula WHERE opcional que determina quais membros ou tuplas usar no eixo da segmentação de dados para restringir os dados retornados. Para obter mais informações sobre a construção de eixos de segmentação de dados em uma cláusula WHERE, consulte [Especificação do conteúdo de um eixo de segmentação de dados &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
   
@@ -66,7 +67,7 @@ FROM <SELECT subcube clause>
 [ <SELECT cell property list clause> ]  
 ```  
   
- A instrução MDX SELECT oferece suporte à sintaxe opcional, como a palavra-chave WITH, ao uso de funções MDX para criar membros calculados para inclusão no eixo ou no eixo da segmentação de dados e à capacidade de retornar os valores das propriedades da célula específica como parte da consulta. Para obter mais informações sobre a instrução MDX SELECT, consulte [Instrução SELECT &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md).  
+ A instrução MDX SELECT oferece suporte à sintaxe opcional, como a palavra-chave WITH, ao uso de funções MDX para criar membros calculados para inclusão no eixo ou no eixo da segmentação de dados e à capacidade de retornar os valores das propriedades da célula específica como parte da consulta. Para obter mais informações sobre a instrução MDX SELECT, consulte [SELECT Statement &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md).  
   
 ### <a name="comparing-the-syntax-of-the-mdx-select-statement-to-sql"></a>Comparando a sintaxe da instrução MDX SELECT com o SQL  
  O formato da sintaxe da instrução MDX SELECT é similar à sintaxe do SQL. No entanto, há várias diferenças fundamentais:  
@@ -114,8 +115,8 @@ WHERE ( [Sales Territory].[Southwest] )
   
  Para obter exemplos mais detalhados, consulte [Especificação do conteúdo de um eixo de consulta &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)e [Especificação do conteúdo de um eixo de segmentação de dados &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
   
-## <a name="see-also"></a>Consulte Também  
- [Principais conceitos em MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+## <a name="see-also"></a>Consulte também  
+ [Principais conceitos em MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Instrução SELECT &#40; MDX &#41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   

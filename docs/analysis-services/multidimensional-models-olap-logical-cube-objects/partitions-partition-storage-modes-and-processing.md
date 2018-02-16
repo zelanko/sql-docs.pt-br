@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], partitions
 - hybrid OLAP
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - MOLAP
 - ROLAP
 ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 2d5eab13f606ada93eaf927e8c01ecb09644b7ac
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>Partições - modos de armazenamento de partição e processamento
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O modo de armazenamento de uma partição afeta a consulta e processamento de desempenho, requisitos de armazenamento e locais de armazenamento da partição e seu grupo de medidas pai e o cubo. A escolha do modo de armazenamento também afeta escolhas de processamento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O modo de armazenamento de uma partição afeta o desempenho de consulta e processamento, requisitos de armazenamento e locais de armazenamento da partição e seu grupo de medidas e cubo pai. A escolha do modo de armazenamento também afeta escolhas de processamento.  
   
  Uma partição pode usar um de três modos de armazenamento básicos:  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 01/08/2018
   
 -   OLAP híbrido (HOLAP)  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte a todos os três modos de armazenamento básico. Ele também oferece suporte o cache pró-ativo, que permite combinar as características do armazenamento ROLAP e MOLAP para desempenho de dados e de consulta imediato. Para obter mais informações, consulte [Cache pró-ativo &#40;Partições&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte a todos os três modos de armazenamento básico. Ele também oferece suporte o cache pró-ativo, que permite combinar as características do armazenamento ROLAP e MOLAP para desempenho de dados e de consulta imediato. Para obter mais informações, consulte [Cache pró-ativo &#40;Partições&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
 ## <a name="molap"></a>MOLAP  
  O modo de armazenamento MOLAP faz com que as agregações da partição e uma cópia dos dados de origem sejam armazenados em uma estrutura multidimensional no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quando a partição for processada. Essa estrutura MOLAP é altamente otimizada para maximizar o desempenho de consulta. O local de armazenamento pode ser o computador onde a partição foi definida ou em outro computador executando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Como uma cópia dos dados fonte reside na estrutura multidimensional, as consultas podem ser resolvidas sem acessar os dados de origem da partição. Os tempos de resposta de consulta podem ser diminuídos substancialmente usando agregações. Os dados na estrutura MOLAP da partição são apenas atuais como o mais recente processamento da partição.  
@@ -79,7 +81,7 @@ ms.lasthandoff: 01/08/2018
   
     -   QUOTED_IDENTIFIER  
   
--   O tamanho total da chave de índice no [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] não pode exceder 900 bytes. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]declarará essa condição com base nas colunas de chave de comprimento fixo quando a instrução CREATE INDEX for processada. No entanto, se houver colunas de comprimento variável na chave de índice, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] também declarará essa condição para cada atualização nas tabelas base. Como agregações diferentes possuem definições de exibição diferentes, o processamento ROLAP, usando exibições indexadas pode ser bem-sucedido ou falhar dependendo do projeto da agregação.  
+-   O tamanho total da chave de índice no [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] não pode exceder 900 bytes. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] declarará essa condição com base nas colunas de chave de comprimento fixo quando a instrução CREATE INDEX for processada. No entanto, se houver colunas de comprimento variável na chave de índice, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] também declarará essa condição para cada atualização nas tabelas base. Como agregações diferentes possuem definições de exibição diferentes, o processamento ROLAP, usando exibições indexadas pode ser bem-sucedido ou falhar dependendo do projeto da agregação.  
   
 -   A sessão que cria a exibição indexada deve ter as seguintes opções definidas como ON: ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING e ANSI_WARNING. Essa configuração pode ser feita no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -90,9 +92,9 @@ ms.lasthandoff: 01/08/2018
   
  As partições armazenadas como HOLAP são menores que as partições MOLAP equivalentes, pois elas não contêm dados de origem e respondem mais rapidamente que as partições ROLAP para consultas envolvendo dados resumidos. O modo de armazenamento HOLAP é geralmente adequado a partições em cubos que requerem resposta rápida a consultas de resumos com base em uma grande quantidade de dados de origem. Entretanto, quando os usuários geram consultas que atingem os dados no nível folha, como ao calcular valores de média, o MOLAP geralmente é a melhor escolha.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [O cache pró-ativo &#40; Partições &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
  [Sincronizar bancos de dados do Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partições &#40; Analysis Services - dados multidimensionais &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

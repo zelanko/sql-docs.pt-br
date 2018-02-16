@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: ecb1a5b33ede8c99150fd8b3ce1cf9babdb1f519
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um nome de entidade de serviço (SPN) identifica exclusivamente uma instância de serviço em um domínio do Active Directory quando Kerberos é usado para autenticar identidades de cliente e de serviço mutuamente. Um SPN é associado à conta de logon na qual a instância do serviço é executada.  
+# <a name="spn-registration-for-an-analysis-services-instance"></a>Registro de SPN de uma instância do Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Um nome de entidade de serviço (SPN) identifica exclusivamente uma instância de serviço em um domínio do Active Directory quando a autenticação Kerberos é usada para autenticar identidades de cliente e de serviço mutuamente. Um SPN é associado à conta de logon na qual a instância do serviço é executada.  
   
  Para aplicativos cliente que se conectam ao Analysis Services através da autenticação Kerberos, as bibliotecas de cliente do Analysis Services criam um SPN usando o nome de host da cadeia de conexão e outras variáveis conhecidas, como a classe de serviço, que são corrigidos em qualquer versão especificada do Analysis Services.  
   
@@ -168,17 +169,17 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
   
  Uma instância do Analysis Services só pode realizar a escuta em uma única porta. Não há suporte para o uso de várias portas. Para obter mais informações sobre a configuração da porta, consulte [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Autenticação e delegação de identidade do Microsoft BI](http://go.microsoft.com/fwlink/?LinkID=286576)   
  [Autenticação mútua usando Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
- [Como configurar o SQL Server 2008 Analysis Services e SQL Server 2005 Analysis Services para usar a autenticação Kerberos](http://support.microsoft.com/kb/917409)   
- [Nomes de entidade de serviço (SPNs) sintaxe de SetSPN (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [Como configurar o SQL Server 2008 Analysis Services e o SQL Server 2005 Analysis Services para usar a autenticação Kerberos](http://support.microsoft.com/kb/917409)   
+ [Sintaxe SetSPN (Setspn.exe) de SPNs (nomes de entidade de serviço)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [Que SPN eu utilizo e como ele é colocado lá?](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
  [Guia passo a passo de contas de serviço](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
- [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [Como usar os SPNs quando você configura aplicativos Web hospedados no serviços de informações da Internet](http://support.microsoft.com/kb/929650)   
- [Novidades em contas de serviço](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
+ [Configurar contas de serviço do Windows e permissões](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
+ [Como usar os SPNs quando você configura aplicativos Web hospedados em Serviços de Informações da Internet](http://support.microsoft.com/kb/929650)   
+ [o que há de novo em contas de serviço](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
  [Configurar a autenticação Kerberos para produtos do SharePoint 2010 (white paper)](http://technet.microsoft.com/library/ff829837.aspx)  
   
   

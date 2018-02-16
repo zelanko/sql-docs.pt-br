@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e2df021da6f2cf8c32e0b0581c5d5d61a422d5ef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-configuration-tools"></a>Power Pivot Configuration Tools
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Configure, repare ou remova um [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] com o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ferramentas de configuração.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Configure, repare ou remova um [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] com as Ferramentas de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  O Assistente de Instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não instala o as ferramentas de configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. As ferramentas de configuração estarão disponíveis para download em uma versão futura do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

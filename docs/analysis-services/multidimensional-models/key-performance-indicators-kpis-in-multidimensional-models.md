@@ -21,19 +21,20 @@ helpviewer_keywords:
 - parent KPIs [Analysis Services]
 - child KPIs
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 396ac061fca578b06766830948001387c65b036e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>KPIs (indicadores chave de desempenho) em modelos multidimensionais
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Na terminologia empresarial, um indicador chave de desempenho (KPI) é uma medida quantificável para medir o sucesso nos negócios.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Na terminologia empresarial, um KPI (indicador chave de desempenho) é uma medida quantificável para medir o sucesso empresarial.  
   
  No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], um KPI é uma coleção de cálculos associada a um grupo de medidas em um cubo usado para avaliar o sucesso nos negócios. Normalmente, esses cálculos são uma combinação de MDX ou membros calculados. Os KPIs também contêm metadados adicionais que fornecem informações sobre como os aplicativos cliente devem exibir os resultados de cálculos de KPIs.  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/08/2018
 |Termo|Definição|  
 |----------|----------------|  
 |Meta|Uma expressão numérica MDX ou um cálculo que retorna o valor alvo do KPI.|  
-|Valor|Uma expressão numérica MDX que retorna o valor real do KPI.|  
+|Value|Uma expressão numérica MDX que retorna o valor real do KPI.|  
 |Status|Uma expressão MDX que representa o estado do KPI em um point-in-time.<br /><br /> O status da expressão MDX deve retornar um valor normalizado entre -1 e 1. Valores iguais ou menores que -1 serão interpretados como "ruim" ou "baixo". Um valor de zero (0) será interpretado como "aceitável" ou "médio". Os valores iguais ou maiores que 1 serão interpretados como "bom" ou "alto".<br /><br /> Um número ilimitado de valores intermediários pode ser opcionalmente retornado e pode ser usado para exibir qualquer número de estados adicionais, caso tenham suporte pelo aplicativo cliente.|  
 |Tendência|Uma expressão MDX que avalia o valor do KPI ao longo do tempo. A tendência pode ser qualquer critério com base no tempo e que seja útil em um contexto empresarial específico.<br /><br /> A expressão MDX de tendência permite que um usuário empresarial determine se o KPI está melhorando ou piorando ao longo do tempo.|  
 |Indicador de status|Um elemento visual que fornece uma indicação rápida do status de um KPI. A exibição do elemento é determinada pelo valor da expressão MDX que avalia o status.|  

@@ -20,19 +20,20 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 - event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 98e15a75b97eae9c4b2fa4093f03f9c8ccf92000
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-trace-events"></a>Eventos de rastreamento do Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode acompanhar a atividade de uma instância do Microsoft SQL Server Analysis Services (SSAS) capturando e analisando os eventos de rastreamento gerados pela instância.  Os eventos de rastreamento são agrupados de forma que você possa localizar facilmente eventos de rastreamento relacionados.  Cada evento de rastreamento contém um conjunto de dados relevantes para o evento; nem todos os dados são relevantes para todos os eventos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Você pode acompanhar a atividade de uma instância do Microsoft SQL Server Analysis Services (SSAS) capturando e analisando os eventos de rastreamento gerados pela instância.  Os eventos de rastreamento são agrupados de forma que você possa localizar facilmente eventos de rastreamento relacionados.  Cada evento de rastreamento contém um conjunto de dados relevantes para o evento; nem todos os dados são relevantes para todos os eventos.  
   
  Eventos de rastreamento podem ser iniciados e capturados usando **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**, consulte [Usar o SQL Server Profiler para monitorar o Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md), ou podem ser iniciados de um comando XMLA como **Eventos Estendidos do SQL Server** e, depois, analisados. Consulte [Monitorar o Analysis Services com os Eventos Estendidos do SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).  
   
@@ -190,7 +191,7 @@ ms.lasthandoff: 01/08/2018
 |42|Existing Session|Sessão existente.|  
 |43|Session Initialize|Inicialização de sessão.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Usar o SQL Server Profiler para monitorar o Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
   
   

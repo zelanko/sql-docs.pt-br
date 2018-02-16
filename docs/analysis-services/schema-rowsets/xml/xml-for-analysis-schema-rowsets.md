@@ -11,26 +11,28 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - rowsets [Analysis Services], XML for Analysis
 - XML for Analysis, schema rowsets
 - schema rowsets [Analysis Services], XML for Analysis
 - schema rowsets [XML for Analysis]
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 44c9f6740001c80fd01eaaf53f735bc539f39036
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis Schema Rowsets
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML para o provedor de análise (XMLA) inclui conjuntos de linhas de esquema que retornam metadados sobre o estado do servidor, atividade e objetos. Recuperar metadados será necessário se você estiver desenvolvendo um aplicativo cliente que se conecta a um modelo do Analysis Services cujas características e estrutura sejam variáveis.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+O provedor do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) inclui conjuntos de linhas de esquema que retornam metadados sobre estado de servidor, atividade e objetos. Recuperar metadados será necessário se você estiver desenvolvendo um aplicativo cliente que se conecta a um modelo do Analysis Services cujas características e estrutura sejam variáveis.  
   
  Os conjuntos de linhas de esquema também proporcionam uma perspectiva de processos internos e operações que podem lhe ajudar a monitorar o servidor e solucionar problemas. Para oferecer melhor suporte a tarefas administrativas ad hoc, você pode executar uma consulta DMV (Exibição de Gerenciamento Dinâmico) na maioria dos conjuntos de linhas de esquema. As consultas DMV retornam resultados em um formato tabular legível que você pode exibir no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
@@ -38,7 +40,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Conjunto de linhas<sup>1</sup>|Description|  
+|Rowset<sup>1</sup>|Description|  
 |------------------------|-----------------|  
 |[Conjunto de linhas DISCOVER_CALC_DEPENDENCY](../../../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md)|Retorna informações sobre dependências entre tabelas, colunas, medidas e fórmulas de coluna calculadas.<br /><br /> Aplica-se a modelos tabulares implantados em uma instância do Analysis Services e [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modelos em pastas de trabalho do Excel que são executados em um ambiente do SharePoint.|  
 |[Conjunto de linhas DISCOVER_CONNECTIONS](../../../analysis-services/schema-rowsets/xml/discover-connections-rowset.md)|Oferece uso de recursos e de informações de atividade sobre as conexões atualmente abertas no servidor.|  
@@ -76,7 +78,7 @@ ms.lasthandoff: 01/08/2018
   
  <sup>1</sup> todas as linhas do esquema listadas aqui são suportadas pelo provedor de fonte de dados MSOLAP para o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] provedor XMLA.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Desenvolvendo com XMLA no Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
  [Usar dinâmico exibições de gerenciamento &#40; DMVs &#41; para monitorar o Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
  [Recuperando metadados de uma fonte de dados analíticos](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  

@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: d4703c9e-5594-472e-a85b-0f5bd0d73d6f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 4ae8366ecec5bf25e1fd27a63d22ac796c080660
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="entityset-element-csdlbi"></a>Elemento EntitySet (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O elemento EntitySet define uma coleção de entidades de um determinado tipo em um modelo de dados da CSDLBI.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+O elemento EntitySet define uma coleção de entidades de um determinado tipo em um modelo de dados da CSDLBI.  
   
  O EntitySet deve especificar cada um dos tipos de entidade inclusos no modelo de dados. Informações sobre essas entidades de modelo são especificadas por meio da lista de entidades filho do tipo de elemento Entity. Para obter mais informações, consulte [Elemento EntityType &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entitytype-element-csdlbi.md).  
   
@@ -34,15 +36,15 @@ ms.lasthandoff: 01/08/2018
 ## <a name="elements-and-attributes"></a>Elementos e atributos  
  A tabela abaixo lista os elementos e atributos que definem um EntitySet.  
   
-|Nome do Atributo|É obrigatório|Description|  
+|Nome do Atributo|É obrigatório|Descrição|  
 |--------------------|-----------------|-----------------|  
-|Legenda|não|Uma descrição amigável do conjunto de entidades.|  
-|CollectionCaption|não|Uma cadeia de caracteres que contém o nome plural da entidade.|  
-|ReferenceName|não|Contém o nome não mesclado e totalmente qualificado da entidade. Em um modelo multidimensional, isso corresponde ao nome CubeDimension.|  
-|Hidden|não|Indica se a entidade está oculta. Por padrão, as entidades não são ocultas.|  
+|Caption|Não|Uma descrição amigável do conjunto de entidades.|  
+|CollectionCaption|Não|Uma cadeia de caracteres que contém o nome plural da entidade.|  
+|ReferenceName|Não|Contém o nome não mesclado e totalmente qualificado da entidade. Em um modelo multidimensional, isso corresponde ao nome CubeDimension.|  
+|Oculto|Não|Indica se a entidade está oculta. Por padrão, as entidades não são ocultas.|  
   
 ## <a name="example"></a>Exemplo  
- **Tabular**  
+ **Tabela**  
   
  O exemplo a seguir, na versão 1.1 da CSDLBI, mostra as definições das tabelas Date e Geography, do modelo de tabela da AdventureWorks.  
   
@@ -77,7 +79,7 @@ ms.lasthandoff: 01/08/2018
 </EntitySet>  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [Referência técnica para Anotações de BI para CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+## <a name="see-also"></a>Consulte também  
+ [Referência técnica para anotações de BI para CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

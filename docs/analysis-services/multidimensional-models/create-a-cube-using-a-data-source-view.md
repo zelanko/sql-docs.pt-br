@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1a78f2353c7d6afa88adc0bd76c4031b9224363b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Criar um cubo usando uma Exibição da Fonte de Dados
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Use esse método para criar um novo cubo se você pretende usar uma exibição da fonte de dados existente. Com esse método, você especifica uma exibição de fonte de dados e seleciona tabelas de fatos e dimensões que deseja usar na exibição da fonte de dados. Em seguida, escolha as dimensões e as medidas que deseja incluir no cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Use este método de criar um novo cubo se você pretender usar uma exibição existente de fonte de dados. Com esse método, você especifica uma exibição de fonte de dados e seleciona tabelas de fatos e dimensões que deseja usar na exibição da fonte de dados. Em seguida, escolha as dimensões e as medidas que deseja incluir no cubo.  
   
  Para criar um cubo com uma fonte de dados, no Gerenciador de Soluções, clique com o botão direito do mouse em **Cubos** e selecione **Novo Cubo**. O Assistente para Cubos é aberto.  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Na guia **Diagrama** , você pode ampliar ou maximizar a janela do assistente para exibir o esquema.  
   
- Se houver uma tabela de dimensão de tempo na exibição da fonte de dados, selecione-a na lista **Tabela de dimensões de tempo** . Se não houver nenhum, deixe  **\<nenhum >** selecionado. Este é o item padrão na lista. Selecionar uma tabela como a tabela de dimensão de tempo também a seleciona como uma tabela de dimensão nas guias **Tabelas** e **Diagrama** .  
+ Se houver uma tabela de dimensão de tempo na exibição da fonte de dados, selecione-a na lista **Tabela de dimensões de tempo**. Se não houver nenhum, deixe  **\<nenhum >** selecionado. Este é o item padrão na lista. Selecionar uma tabela como a tabela de dimensão de tempo também a seleciona como uma tabela de dimensão nas guias **Tabelas** e **Diagrama** .  
   
 ## <a name="defining-time-periods"></a>Definindo períodos de tempo  
  Se você especificou uma tabela de dimensão de tempo enquanto selecionava tipos de tabela, use a página **Definir períodos de tempo** do assistente para especificar as colunas na tabela que correspondem a períodos de tempo padrão. Procure os períodos padrão em **Nome da Propriedade de Tempo**. Para cada linha que tem uma coluna correspondente na tabela de dimensão de tempo, escolha a coluna correta em **Colunas da Tabela de Tempo**. O assistente usa as associações que você especifica para criar atributos e sugerir hierarquias de tempo que fazem sentido para seus dados. Estas associações também definem a propriedade **Tipo** para os atributos correspondentes na nova dimensão de tempo. O assistente cria uma dimensão de tempo com base em uma tabela de dimensão de tempo.  

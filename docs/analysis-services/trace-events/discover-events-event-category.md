@@ -16,19 +16,20 @@ helpviewer_keywords:
 - discover events [Analysis Services]
 - event classes [Analysis Services], discover events
 ms.assetid: fb964bac-dc68-4ad0-80f5-aeb677277169
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 40cbdf890c45c965217e038420e4fea4b108a08e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discover-events-event-category"></a>categoria Discover Events
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A categoria Discover Events tem as classes de evento descritas na tabela a seguir.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+A categoria Discover Events tem as classes de evento descritas na tabela a seguir.  
   
 |Event Class|ID do evento|Description|  
 |-----------------|--------------|-----------------|  
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/08/2018
   
  Para obter informações sobre as colunas associadas a cada classe de evento Discover Events, consulte [Colunas de dados Discover Events](../../analysis-services/trace-events/discover-events-data-columns.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Eventos de rastreamento do Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

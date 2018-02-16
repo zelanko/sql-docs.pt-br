@@ -16,19 +16,20 @@ helpviewer_keywords:
 - relationships [Analysis Services], data source views
 - data source views [Analysis Services], relationships
 ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d1975eb94bc8ad2d69808279a5358b7a40180866
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Definir relações lógicas em uma exibição da fonte de dados (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O Assistente de exibição de fonte de dados e o Designer de exibição de fonte de dados definem relações entre tabelas adicionadas a uma exibição da fonte de dados (DSV) com base em relações de banco de dados subjacente ou o nome correspondente aos critérios especificados por você.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O Assistente de Exibição da Fonte de Dados e o Designer de Exibição da Fonte de Dados definem relações entre as tabelas adicionadas a uma DSV (exibição da fonte de dados) com base nas relações do banco de dados subjacente ou nos critérios de correspondência de nomes que você especificar.  
   
  Nos casos em que você está trabalhando com dados de diversas fontes de dados, pode ser necessário definir manualmente relações lógicas na DSV (exibição da fonte de dados) para complementar essas relações que são definidas automaticamente. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] precisa de relações para identificar tabelas de fatos e dimensões, construir consultas para recuperar dados e metadados de fontes de dados subjacentes e aproveitar os recursos avançados de business intelligence.  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  Clique com o botão direito do mouse na relação que você deseja modificar e, em seguida, clique em **Editar Relação**.  
   
-## <a name="see-also"></a>Consulte Também  
- [Exibições de fontes de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+## <a name="see-also"></a>Consulte também  
+ [Exibições da fonte de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

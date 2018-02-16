@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fac07e924fb94ce9901f1aca771b1954b474aaff
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Implantar soluções Power Pivot para SharePoint
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Use as instruções a seguir para implantar manualmente dois pacotes de solução que adicionam [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] recursos em um ambiente do SharePoint Server 2010. Implantar as soluções é uma etapa necessária para configurar o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint em um servidor do SharePoint 2010. Para exibir a lista completa de etapas necessárias, consulte [Administração e configuração de servidor do Power Pivot na Administração Central](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Use as instruções a seguir para implantar manualmente dois pacotes de solução que adicionam recursos do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a um ambiente do SharePoint Server 2010. Implantar as soluções é uma etapa necessária para configurar o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint em um servidor do SharePoint 2010. Para exibir a lista completa de etapas necessárias, consulte [Administração e configuração de servidor do Power Pivot na Administração Central](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
  Como alternativa, você pode usar a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para implantar as soluções. Usar a ferramenta de configuração é mais fácil e mais eficiente para uma única instalação de servidor, mas você pode querer usar a Administração Central e o PowerShell se preferir usar uma ferramenta familiar ou se estiver configurando vários recursos ao mesmo tempo. Para obter mais informações sobre a ferramenta de configuração, consulte [Ferramentas de Configuração do Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
@@ -153,7 +154,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 |Powerpivotfarm.wsp|Adiciona o Microsoft.AnalysisServices.SharePoint.Integration.dll ao assembly global.<br /><br /> Adiciona o Microsoft.AnalysisServices.ChannelTransport.dll ao assembly global.<br /><br /> Instala recursos e arquivos de recurso e registra tipos de conteúdo.<br /><br /> Adiciona modelos de biblioteca para as bibliotecas de Feeds de Dados e da Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Adiciona páginas de aplicativos para configuração de aplicativos de serviço, Painel de Gerenciamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , atualização de dados e Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 |Powerpivotwebapp.wsp|Adiciona arquivos de recursos Microsoft.AnalysisServices.SharePoint.Integration.dll à pasta de extensões no servidor Web front-end.<br /><br /> Adiciona serviço Web do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ao front-end da Web.<br /><br /> Adiciona geração de imagens em miniatura para a Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Atualizar Power Pivot para SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [Administração e configuração de servidor do Power Pivot na Administração Central](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Configuração do Power Pivot usando o Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  

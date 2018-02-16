@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Command Events event category
 - event classes [Analysis Services], command events
 ms.assetid: 23140c9f-3f5b-4755-920e-1246cbf0d1a3
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 71c30e6d930f6dbe7dfcc09d9c8647acff5eb7aa
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="command-events-event-category"></a>categoria Command Events
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A categoria de evento eventos de comando tem as classes de evento descritas na tabela a seguir.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+As classes de evento da categoria de evento Eventos de Comando estão descritas na tabela a seguir.  
   
 |Event Class|ID do evento|Description|  
 |-----------------|--------------|-----------------|  
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/08/2018
   
  Para obter informações sobre as colunas associadas a cada classe de evento Eventos de Comando, consulte [Command Events Data Columns](../../analysis-services/trace-events/command-events-data-columns.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Eventos de rastreamento do Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

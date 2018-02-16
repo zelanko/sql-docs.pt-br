@@ -15,19 +15,20 @@ helpviewer_keywords:
 - databases [Analysis Services], read/write
 - databases [Analysis Services], read-only
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ea794ce008d5e7acc6aa01a23b8ca7629546efc0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-readwritemodes"></a>Banco de dados ReadWriteModes
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Geralmente há situações quando um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrador de banco de dados (dba) deseja alterar um banco de dados de leitura/gravação para um banco de dados somente leitura, ou vice-versa. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como o compartilhamento da mesma pasta do banco de dados com vários servidores para expandir uma solução e melhorar o desempenho. Para estas situações, a propriedade **ReadWriteMode** do banco de dados permite que o DBA do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] altere facilmente o modo de operação do banco de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Existem situações frequentes em que um DBA (administrador de banco de dados) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quer alterar o banco de dados de leitura/gravação para um banco de dados somente leitura ou vice-versa. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como o compartilhamento da mesma pasta do banco de dados com vários servidores para expandir uma solução e melhorar o desempenho. Para estas situações, a propriedade **ReadWriteMode** do banco de dados permite que o DBA do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] altere facilmente o modo de operação do banco de dados.  
   
 ## <a name="readwritemode-database-property"></a>Propriedade ReadWriteMode do banco de dados  
  A propriedade do banco de dados **ReadWriteMode** especifica se o banco de dados está no modo leitura/gravação ou no modo somente leitura. Estes são os únicos dois possíveis valores da propriedade. Quando o banco de dados está no modo somente leitura, nenhuma alteração ou atualização pode ser aplicada a ele. Entretanto, quando o banco de dados está no modo de leitura/gravação, podem ocorrer alterações e atualizações. A propriedade **ReadWriteMode** do banco de dados está definida como uma propriedade somente leitura; ela só pode ser definida por um comando **Attach** .  
@@ -51,7 +52,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Podem ser criados cubos locais a partir de um banco de dados somente leitura.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Anexar e desanexar bancos de dados do Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Mover um banco de dados do Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   

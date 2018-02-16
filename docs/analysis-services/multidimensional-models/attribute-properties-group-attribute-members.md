@@ -24,26 +24,27 @@ helpviewer_keywords:
 - members [Analysis Services], groups
 - names [Analysis Services], member groups
 ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e8b7d2277c53293d0ff0a34b1fa6e04c309e37dd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---group-attribute-members"></a>Propriedades de atributo - membros do grupo de atributo
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um membro do grupo é uma coleção gerada pelo sistema de membros de dimensão consecutivos. No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], é possível agrupar os membros de um atributo em diversos grupos de membros por meio de um processo chamado diferenciação. Um nível em uma hierarquia contém grupos de membro ou membros, mas não ambos. Quando os usuários da empresa procuram um nível que contém grupos de membros, eles veem nomes e valores de célula dos grupos de membros. Os membros gerados pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para oferecer suporte aos grupos de membros são chamados membros do agrupamento e são similares aos membros comuns.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Um grupo de membros é uma coleção gerada pelo sistema de membros da dimensão consecutivos. No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], é possível agrupar os membros de um atributo em diversos grupos de membros por meio de um processo chamado diferenciação. Um nível em uma hierarquia contém grupos de membro ou membros, mas não ambos. Quando os usuários da empresa procuram um nível que contém grupos de membros, eles veem nomes e valores de célula dos grupos de membros. Os membros gerados pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para oferecer suporte aos grupos de membros são chamados membros do agrupamento e são similares aos membros comuns.  
   
  A propriedade **DiscretizationMethod** de um atributo controla como os membros são agrupados.  
   
 |Configuração**DiscretizationMethod** |Description|  
 |--------------------------------------|-----------------|  
 |**Nenhuma**|Exibe os membros.|  
-|**Automático**|Seleciona o método que melhor representa os dados: o método **EqualAreas** ou o método **Clusters** .|  
+|**Automatic**|Seleciona o método que melhor representa os dados: o método **EqualAreas** ou o método **Clusters** .|  
 |**EqualAreas**|Tenta dividir os membros do atributo em grupos com o mesmo número de membros.|  
 |**Clusters**|Tenta dividir os membros do atributo em grupos por meio de amostragem dos dados de treinamento, inicializando um número aleatório de pontos e executando várias interações do algoritmo de clustering Expectation Maximization (EM).<br /><br /> Esse método é útil pois funciona com qualquer curva de distribuição, mas é mais dispendioso em termos de tempo de processamento.|  
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Se a tabela de dimensões de uma dimensão que contém grupos de membros for atualizada e, na sequência, a dimensão for totalmente processada, será gerado um novo conjunto de grupos de membros. Os nomes e os filhos dos novos grupos de membros podem ser diferentes dos anteriores.  
   
-## <a name="see-also"></a>Consulte Também  
- [Atributos e hierarquias de atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
+## <a name="see-also"></a>Consulte também  
+ [Atributos e hierarquias de atributo](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

@@ -25,10 +25,10 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 986e4ed2b436fa94c676c59afd03f1e0a4a32fd3
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>SQLGetInfo valores retornados para arquivos de texto
 A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os valores correspondentes retornados por **SQLGetInfo**. Essas informações podem ser recuperadas passando listada linguagem C# defines **SQLGetInfo** no *fInfoType* argumento. Para obter mais informações sobre os valores retornados por **SQLGetInfo**, consulte o [referência do programador de ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  

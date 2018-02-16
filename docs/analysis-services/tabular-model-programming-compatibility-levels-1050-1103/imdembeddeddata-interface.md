@@ -1,5 +1,5 @@
 ---
-title: Interface IMDEmbeddedData | Microsoft Docs
+title: IMDEmbeddedData Interface | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: analysis-services
@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c35cd0e0174ffc94c498007fff8a314d2094856a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="imdembeddeddata-interface"></a>Interface IMDEmbeddedData
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O IMDEmbeddedData é uma interface pública usada para gerenciar inserida [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] banco de dados ou um modelo de tabela. A interface herda o **IPersistStream** interface. A interface permite as seguintes operações:  
+# <a name="imdembeddeddata-interface"></a>IMDEmbeddedData Interface
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O IMDEmbeddedData é uma interface pública usada para gerenciar inserida [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] banco de dados ou um modelo de tabela. A interface herda o **IPersistStream** interface. A interface permite as seguintes operações:  
   
 -   Obter um identificador do fluxo inserido no documento contêiner.  
   
@@ -105,12 +107,12 @@ HRESULT GetStreamIdentifier (
  **E_FAIL**  
  Erro ao acessar o identificador de fluxo.  
   
-#### <a name="remarks"></a>Remarks  
+#### <a name="remarks"></a>Comentários  
  Para verificar se a conexão atual contém um banco de dados inserido, o usuário deve verificar o valor da propriedade DBPROP_MSMD_EMBEDDED_DATA nas propriedades de conexão OLE DB.  
   
  Os valores possíveis para DBPROP_MSMD_EMBEDDED_DATA são:  
   
-|Nome|Valor|Definição|  
+|Nome|Value|Definição|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|Nenhum banco de dados inserido disponível|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|O aplicativo atual contém o banco de dados inserido|  
@@ -230,7 +232,7 @@ HRESULT Cancel ( void )
  **S_OK**  
  A operação foi cancelada com êxito.  
   
- **DB_E_CANTCANCEL EM**  
+ **DB_E_CANTCANCEL**  
  Nenhuma operação cancelável está em andamento atualmente.  
   
  **E_FAIL**  

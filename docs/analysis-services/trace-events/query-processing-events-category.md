@@ -12,21 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: a94b3198-be85-4935-845d-1cd4e121fc94
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d547a887a05120405f6bf26049a567e1aa8026c8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="query-processing-events-category"></a>Categoria de eventos de processamento de consultas
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A categoria de evento de processamento de consulta tem as classes de evento descritas na tabela a seguir.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+A categoria de evento Processamento de Consulta tem as classes de evento descritas na tabela a seguir.  
   
-|**Event Class**|**ID do evento**|**Descrição**|  
+|**Event Class**|**ID do evento**|**Description**|  
 |---------------------|------------------|---------------------|  
 |Subcubo de consulta|11|Subcubo de consulta, a Otimização Baseada em Uso.|  
 |Subcubo de consulta detalhado|12|Subcubo de consulta com informações detalhadas. Este evento pode ter um impacto negativo no desempenho quando ativado.|  
@@ -49,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
  Para obter informações sobre as colunas associadas a cada classe de evento de Processamento de Consulta, veja [Colunas de dados de Eventos de Consultas](../../analysis-services/trace-events/query-processing-events-data-columns.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Eventos de rastreamento do Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

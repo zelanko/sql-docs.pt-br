@@ -17,19 +17,20 @@ helpviewer_keywords:
 - custom member properties [MDX]
 - IIf function
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1fb9052d74a19941a41a915e12acec04bfc38f1c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-data-manipulation---rollupchildren-function"></a>Manipulação de dados MDX - função RollupChildren
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O MDX (Multidimensional Expressions) [RollupChildren](../../../mdx/rollupchildren-mdx.md) função acumula os filhos de um membro, aplicando um operador unário diferente para cada filho e retorna o valor desse acúmulo como um número. O operador unário pode ser fornecido por uma propriedade do membro associada ao membro filho ou pode ser uma expressão de cadeia de caracteres fornecida diretamente para a função.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+A função MDX [RollupChildren](../../../mdx/rollupchildren-mdx.md) acumula os filhos de um membro, aplicando um operador unário diferente a cada um deles, e retorna o valor desse rollup como um número. O operador unário pode ser fornecido por uma propriedade do membro associada ao membro filho ou pode ser uma expressão de cadeia de caracteres fornecida diretamente para a função.  
   
 ## <a name="rollupchildren-function-examples"></a>Exemplos da função RollupChildren  
  O uso da função **RollupChildren** em instruções MDX é simples de explicar, mas seu efeito sobre as consultas MDX pode ser bem abrangente.  
@@ -78,7 +79,7 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
   
  A instrução MDX analisa o operador unário do membro filho. Se o operador unário for usado em uma subtração (como no caso dos membros dos retornos interno e externo), a função **IIf** substituirá o operador unário til (~). Caso contrário, a função **IIf** utilizará o operador unário do membro filho. Por fim, o total acumulado retornado é então multiplicado por 1,1 para apresentar o valor estimado de vendas brutas internas e exportações.  
   
-## <a name="see-also"></a>Consulte Também  
- [Manipulando dados &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+## <a name="see-also"></a>Consulte também  
+ [Manipulação de dados &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

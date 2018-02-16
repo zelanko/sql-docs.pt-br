@@ -15,19 +15,20 @@ helpviewer_keywords:
 - CREATE MEMBER statement
 - session-scoped calculated members [MDX]
 ms.assetid: 2875ed89-2c26-4645-8ed9-8848479d110f
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 273553132fd9a3cd32900fef28800d28c9f6c1d5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-calculated-members---session-scoped-calculated-members"></a>MDX calculadas membros - membros calculados no escopo da sessão
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Para criar um membro calculado que estará disponível durante uma sessão de MDX (Multidimensional Expressions), use o [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md) instrução. Um membro calculado criado com a instrução CREATE MEMBER não será removido até que a sessão MDX seja encerrada.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Para criar um membro calculado disponível por meio de uma sessão de expressões MDX, use a instrução [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md). Um membro calculado criado com a instrução CREATE MEMBER não será removido até que a sessão MDX seja encerrada.  
   
  Como discutido neste tópico, a sintaxe da instrução CREATE MEMBER é direta e fácil usar.  
   
@@ -57,7 +58,7 @@ sum(([Stores].[ByLocation].Lag(3) :
 [Stores].[ByLocation].NextMember), [Measures].[Units Sold])  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [Criando membros calculados no escopo da consulta &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)  
+## <a name="see-also"></a>Consulte também  
+ [Criando no escopo da consulta calculados membros &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

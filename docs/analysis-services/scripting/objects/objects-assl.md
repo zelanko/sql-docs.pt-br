@@ -11,25 +11,27 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - ASSL, objects
 - objects [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, objects
 ms.assetid: 0f672b93-c317-47e5-b44d-ecea9b587c98
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ea027aba8d0d49c752bd31569f84d0f0cec022bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="objects-assl"></a>Objetos (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Esta seção de referência contém informações de sintaxe e uso para cada elemento que age como um objeto no esquema do Analysis Services Scripting Language (ASSL).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Esta seção de referência contém informações de sintaxe e uso de cada elemento que age como um objeto no esquema ASSL (Analysis Services Scripting Language).  
   
  Embora o esquema ASSL contenha somente elementos XML, do ponto de vista do desenvolvedor, os elementos descritos nessa seção correspondem a objetos, como **banco de dados**, **cubo**, e  **Dimensão** objetos na hierarquia de objetos contidos em uma instância de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
@@ -42,10 +44,10 @@ ms.lasthandoff: 01/08/2018
 |Elemento|Description|  
 |-------------|-----------------|  
 |[Elemento Account &#40; ASSL &#41;](../../../analysis-services/scripting/objects/account-element-assl.md)|Contém detalhes sobre um tipo de conta dentro de um [banco de dados](../../../analysis-services/scripting/objects/database-element-assl.md) elemento.|  
-|[Elemento de ação &#40; ASSL &#41;](../../../analysis-services/scripting/objects/action-element-assl.md)|Contém informações sobre uma ação disponível em um [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md) elemento ou um [perspectiva](../../../analysis-services/scripting/objects/perspective-element-assl.md) elemento.|  
+|[Elemento de ação &#40; ASSL &#41;](../../../analysis-services/scripting/objects/action-element-assl.md)|Contém informações sobre uma ação disponível em um elemento [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) ou um elemento [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) .|  
 |[Elemento Aggregation &#40; ASSL &#41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)|Define uma única agregação para um [partição](../../../analysis-services/scripting/objects/partition-element-assl.md) elemento.|  
 |[Elemento AggregationDesign &#40; ASSL &#41;](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md)|Define um conjunto de definições de agregação que podem ser compartilhadas entre várias partições de um banco de dados.|  
-|[Elemento AggregationInstance &#40; ASSL &#41;](../../../analysis-services/scripting/objects/aggregationinstance-element-assl.md)|Define uma instância de agregação para uma partição.|  
+|[AggregationInstance Element &#40;ASSL&#41;](../../../analysis-services/scripting/objects/aggregationinstance-element-assl.md)|Define uma instância de agregação para uma partição.|  
 |[Elemento AlgorithmParameter &#40; ASSL &#41;](../../../analysis-services/scripting/objects/algorithmparameter-element-assl.md)|Define um parâmetro para o algoritmo usado por um [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) elemento.|  
 |[Elemento AllMemberTranslation &#40; ASSL &#41;](../../../analysis-services/scripting/objects/allmembertranslation-element-assl.md)|Contém uma tradução para a legenda do membro All de um [hierarquia](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) elemento.|  
 |[Elemento de anotação &#40; ASSL &#41;](../../../analysis-services/scripting/objects/annotation-element-assl.md)|Contém elementos que são usados para estender o esquema ASSL.|  
@@ -81,7 +83,7 @@ ms.lasthandoff: 01/08/2018
 |[Elemento Hierarchy &#40; ASSL &#41;](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)|Define uma hierarquia em uma dimensão.|  
 |[Elemento IncrementalProcessingNotification &#40; ASSL &#41;](../../../analysis-services/scripting/objects/incrementalprocessingnotification-element-assl.md)|Contém informações para o [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) elemento sobre uma consulta a ser executada para determinar o andamento do processamento incremental.|  
 |[Elemento KeyColumn &#40; ASSL &#41;](../../../analysis-services/scripting/objects/keycolumn-element-assl.md)|Contém a definição de uma coluna, ou faz parte, a chave para um atributo.|  
-|[Elemento KPI &#40; ASSL &#41;](../../../analysis-services/scripting/objects/kpi-element-assl.md)|Define um indicador chave de desempenho (KPI) em um [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md) elemento ou um [perspectiva](../../../analysis-services/scripting/objects/perspective-element-assl.md) elemento.|  
+|[Elemento KPI &#40; ASSL &#41;](../../../analysis-services/scripting/objects/kpi-element-assl.md)|Define um KPI (indicador chave de desempenho) em um elemento [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) ou em um elemento [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) .|  
 |[Elemento Level &#40; ASSL &#41;](../../../analysis-services/scripting/objects/level-element-assl.md)|Define um nível em uma [hierarquia](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) elemento.|  
 |[Elemento MdxScript &#40; ASSL &#41;](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)|Contém informações sobre um script MDX (Multidimensional Expressions) que está associado com um [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md) elemento.|  
 |[Elemento Measure &#40; ASSL &#41;](../../../analysis-services/scripting/objects/measure-element-assl.md)|Define uma medida.|  
@@ -112,7 +114,7 @@ ms.lasthandoff: 01/08/2018
 |[Elemento UnknownMemberTranslation &#40; ASSL &#41;](../../../analysis-services/scripting/objects/unknownmembertranslation-element-assl.md)|Contém uma tradução para a legenda do [UnknownMember](../../../analysis-services/scripting/properties/unknownmember-element-assl.md) elemento para uma [dimensão](../../../analysis-services/scripting/objects/dimension-element-assl.md) elemento.|  
 |[Elemento ValueColumn &#40; ASSL &#41;](../../../analysis-services/scripting/objects/valuecolumn-element-assl.md)|Identifica a coluna que fornece o valor do elemento pai.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Hierarquia de elementos XML de linguagem de script &#40; do Analysis Services ASSL &#41;](../../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)  
   
   

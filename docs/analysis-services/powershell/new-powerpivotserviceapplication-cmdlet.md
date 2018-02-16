@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7bb2a2d2-04c8-43d4-a0fc-e8339ea22138
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 59b91b7bfc168b0722d5b8d37f74e521557c4416
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-powerpivotserviceapplication-cmdlet"></a>Cmdlet New-PowerPivotServiceApplication
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cria um novo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aplicativo de serviço.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cria um novo aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
 
 >[!NOTE] 
 >Este artigo pode conter informações desatualizadas e exemplos. Use o cmdlet Get-Help para a versão mais recente.
@@ -44,7 +45,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
   
 ## <a name="parameters"></a>Parâmetros  
   
-### <a name="-serviceapplicationname-string"></a>-ServiceApplicationName \<cadeia de caracteres >  
+### <a name="-serviceapplicationname-string"></a>-ServiceApplicationName \<string>  
  Define o nome para exibição do aplicativo de serviço.  
   
 |||  
@@ -55,7 +56,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |Aceitar entrada de pipeline?|false|  
 |Aceitar caracteres curinga?|false|  
   
-### <a name="-databaseservername-string"></a>-DatabaseServerName \<cadeia de caracteres >  
+### <a name="-databaseservername-string"></a>-DatabaseServerName \<string>  
  Especifica uma instância de mecanismo de banco de dados relacional do SQL Server que hospeda o banco de dados de aplicativo. Por padrão, você pode usar o servidor de banco de dados do farm ou pode escolher outro servidor de banco de dados no qual tenha direitos de criação de banco de dados.  
   
 |||  
@@ -77,7 +78,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |Aceitar entrada de pipeline?|false|  
 |Aceitar caracteres curinga?|false|  
   
-### <a name="-addtodefaultproxygroup-switch"></a>-AddToDefaultProxyGroup \<alternar >  
+### <a name="-addtodefaultproxygroup-switch"></a>-AddToDefaultProxyGroup \<switch>  
  Cria uma conexão de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no grupo de conexões de serviço padrão. Associações entre aplicativos Web e aplicativos de serviço são determinadas pela associação nesse grupo. Todos os aplicativos Web que assinam o grupo de conexões de serviço padrão podem usar o aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que você adiciona ao grupo. Embora você possa ter vários aplicativos de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um farm, somente um aplicativo de serviço pode ser membro do grupo de conexões do serviço padrão.  
   
  Se você já tiver um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que seja membro do grupo proxy padrão, deverá definir AddToDefautlProxyGroup:$false para o novo aplicativo que está criando. Você precisará adicionar o novo aplicativo de serviço a um grupo de conexões de serviço personalizado.  Você pode usar cmdlets internos do SharePoint internos para esse propósito.  Get-SPServiceApplicationProxyGroup retorna a lista de grupos de conexões de serviço definidos no farm.  
@@ -90,7 +91,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |Aceitar entrada de pipeline?|false|  
 |Aceitar caracteres curinga?|false|  
   
-### <a name="commonparameters"></a>\<CommonParameters >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  Este cmdlet oferece suporte aos parâmetros comuns: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer e OutVariable. Para obter mais informações, consulte [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
 ## <a name="inputs-and-outputs"></a>Entradas e saídas  
@@ -98,8 +99,8 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
   
 |||  
 |-|-|  
-|Entradas|Nenhum.|  
-|Saídas|Nenhum.|  
+|Entradas|Nenhuma.|  
+|Saídas|Nenhuma.|  
   
 ## <a name="example-1"></a>Exemplo 1  
   

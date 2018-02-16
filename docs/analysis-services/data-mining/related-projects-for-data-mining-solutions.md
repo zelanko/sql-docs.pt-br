@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9376a1f4124a86fa7acc313c7985d0a7f1c450f3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Projetos relacionados a soluções de mineração de dados
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O mínimo necessário para uma solução de mineração de dados é o projeto de mineração de dados que define fontes de dados, exibições da fonte de dados, estruturas de mineração e modelos de mineração. Porém, quando os modelos de mineração de dados são usados no processo diário de tomadas de decisão, é importante que a mineração de dados esteja integrada com outra parte de uma solução de análises preditiva, que pode incluir estes processos e componentes:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O mínimo que é necessário para uma solução de mineração de dados é o projeto de mineração de dados que define fontes de dados, exibições da fonte de dados, estruturas de mineração e modelos de mineração. Porém, quando os modelos de mineração de dados são usados no processo diário de tomadas de decisão, é importante que a mineração de dados esteja integrada com outra parte de uma solução de análises preditiva, que pode incluir estes processos e componentes:  
   
 -   Preparação e seleção de dados e variáveis. Inclui limpeza de dados, gerenciamento de metadados e integração de várias fontes de dados e a conversão, fusão e carregamento de dados em um data warehouse.  
   
@@ -36,7 +37,7 @@ ms.lasthandoff: 01/08/2018
   
  Este tópico descreve os outros recursos do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que geralmente fazem parte de uma solução de análises preditiva, para dar suporte aos processos de preparação de dados e mineração de dados, ou para dar suporte aos usuários fornecendo ferramentas para análise e ação.  
   
- [Serviços de Integração](#bkmk_SSIS)  
+ [Integration Services](#bkmk_SSIS)  
   
  [Reporting Services](#bkmk_SSRS)  
   
@@ -63,17 +64,17 @@ ms.lasthandoff: 01/08/2018
   
  **Componentes de fluxo de controle**  
   
--   [Tarefa Executar DDL do Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
+-   [Executar tarefa DDL do Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
--   [Tarefa Processamento do Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
+-   [Tarefa de processamento do Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
--   [Tarefa Controle de CDC](../../integration-services/control-flow/cdc-control-task.md)  
+-   [Tarefa controle CDC](../../integration-services/control-flow/cdc-control-task.md)  
   
--   [Limpeza de Dados](../../data-quality-services/data-cleansing.md)  
+-   [Limpeza de dados](../../data-quality-services/data-cleansing.md)  
   
--   [Tarefa Consulta de Mineração de Dados](../../integration-services/control-flow/data-mining-query-task.md)  
+-   [Tarefa de consulta de mineração de dados](../../integration-services/control-flow/data-mining-query-task.md)  
   
--   [Tarefa Criação de Perfil de Dados](../../integration-services/control-flow/data-profiling-task.md)  
+-   [Tarefa de criação de perfil de dados](../../integration-services/control-flow/data-profiling-task.md)  
   
  **Componentes de fluxo de dados**  
   
@@ -81,19 +82,19 @@ ms.lasthandoff: 01/08/2018
   
 -   [Transformação Divisão Condicional](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
   
--   [Transformação Conversão de Dados](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
+-   [Transformação de conversão de dados](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
   
 -   [Destino de treinamento do modelo de mineração de dados](../../integration-services/data-flow/data-mining-model-training-destination.md)  
   
--   [Transformação Consulta de Mineração de Dados](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
+-   [Transformação de consulta de mineração de dados](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
   
 -   [Transformação Coluna Derivada](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
 -   [Transformação Amostragem Percentual](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
   
--   [Transformação Extração de Termos](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
+-   [Transformação extração de termos](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   
--   [Transformação Pesquisa de Termo](../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
+-   [Transformação de pesquisa de termo](../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
   
 ##  <a name="bkmk_SSRS"></a> SQL Server Reporting Services  
  Embora o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não seja visto normalmente como um componente crítico de soluções de mineração de dados, ele fornece os recursos a seguir que são úteis para a apresentação de soluções de mineração de dados.  
@@ -108,11 +109,11 @@ ms.lasthandoff: 01/08/2018
   
  Para obter informações sobre como usar o Reporting Services com consultas DMX como fonte de dados, consulte esses links:  
   
- [Recuperar dados de um modelo de Data Mining &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [Recuperar dados de um modelo de mineração de dados &#40; DMX &#41; &#40; SSRS &#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
- [Interface de usuário do Designer de Consulta DMX do Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
+ [Interface de usuário do Designer de consulta DMX do Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Tipo de conexão Analysis Services para DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Tipo de Conexão do Analysis Services para DMX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  Porém, não é necessário usar DMX como a fonte de dados. Os componentes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para mineração de dados também dão suporte a gravar os resultados de uma consulta de previsão em um banco de dados relacional. Se você tiver um fluxo de trabalho estabelecido para atualizar modelos usando o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], persistir previsões e outros resultados da consulta de mineração de dados para o SQL Server permitirá que você use o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] para relatório, assim como outras ferramentas que não fazem interface com DMX.  
   
@@ -206,8 +207,8 @@ ms.lasthandoff: 01/08/2018
   
 -   Nem todos os idiomas de texto completo dão suporte à indexação semântica. Para ver uma lista dos idiomas com suporte, consulte [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
-## <a name="see-also"></a>Consulte Também  
- [Soluções de modelo multidimensional &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Soluções de modelo de tabela &#40;SSAS de tabela&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte também  
+ [Soluções de modelo multidimensional &#40; SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [Soluções de modelo de tabela &#40; SSAS de tabela &#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
   

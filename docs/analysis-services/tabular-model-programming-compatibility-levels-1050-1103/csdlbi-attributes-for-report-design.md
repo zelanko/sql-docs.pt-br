@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 4b2c46d037112cb79502e8d0ce56a5c9c319ec09
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Atributos CSDLBI para design de relatórios
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Esta seção descreve os atributos nas extensões de CSDL para modelagem de tabela que afetam [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] design da consulta.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Esta seção descreve os atributos nas extensões de CSDL para modelagem de tabela que afeta o design de consulta [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
   
 ## <a name="model-attributes"></a>Atributos de Modelo  
  Estes atributos são definidos em um subelemento de um elemento [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) de CSDL.  
@@ -40,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
 |Nome do atributo|Tipo de dados|Description|  
 |--------------------|---------------|-----------------|  
-|**Nome da referência**|Texto|O identificador usado para referenciar essa entidade em uma consulta DAX. Se for omitido, o nome será usado.|  
+|**ReferenceName**|Texto|O identificador usado para referenciar essa entidade em uma consulta DAX. Se for omitido, o nome será usado.|  
 |**Caption**|Texto|O nome para exibição da entidade.|  
 |**Documentação**|Texto|Texto descritivo para ajudar os usuários empresariais a compreenderem o significado dos dados.|  
 |**Oculto**|Booliano|Indica se a entidade deve ser exibida. O padrão é **false**.|  
@@ -57,7 +59,7 @@ ms.lasthandoff: 01/08/2018
   
 |Nome do atributo|Tipo de dados|Description|  
 |--------------------|---------------|-----------------|  
-|**Nome da referência**|Texto|O identificador usado para referenciar essa entidade em uma consulta DAX. Se ele for omitido, o nome do campo será usado.|  
+|**ReferenceName**|Texto|O identificador usado para referenciar essa entidade em uma consulta DAX. Se ele for omitido, o nome do campo será usado.|  
 |**Caption**|Texto|O nome para exibição da entidade. Se ele for omitido, o **ReferenceName** do campo será usado.|  
 |**Documentação**|Texto|Texto descritivo para ajudar os usuários empresariais a compreenderem o significado do campo.|  
 |**Oculto**|Booliano|Indica se o campo deve ser exibido. O padrão é **false**; isso significa que o campo é exibido.|  
@@ -66,7 +68,7 @@ ms.lasthandoff: 01/08/2018
 |**Alinhamento**|Enum|Um valor que indica como os valores de campos devem ser alinhados em uma apresentação de tabela. Os valores possíveis são **Default**, **Center**, **Left**, **Right**. Se ele for omitido, o padrão determina o alinhamento com base no tipo de dados do campo.|  
 |**FormatString**|Texto|Uma cadeia de caracteres no formato .NET que indica como o valor do campo deve ser formatado por padrão. Se for omitida, o seguinte formato será assumido:<br /><br /> Campos - Datetime: data curta regional ou "d"<br /><br /> -Função de agregação de campos ponto flutuante e campos integrais com um padrão: número regional ou "n"<br /><br /> -Função de agregação inteiros sem nenhum padrão: número decimal regional ou "d"<br /><br /> Para todos os outros tipos de campos, nenhuma cadeia de caracteres de formato se aplica.|  
 |**Unidades**|Texto|O símbolo que se aplica a valores de campos para expressar unidades. Se ele for omitido, as unidades são consideradas desconhecidas.|  
-|**Width**|Integer|A largura preferencial em caracteres que deve ser reservada para exibir os valores do campo em uma apresentação de tabela. Se ela for omitida, uma largura padrão se baseará no tipo de dados do campo.|  
+|**Largura**|Integer|A largura preferencial em caracteres que deve ser reservada para exibir os valores do campo em uma apresentação de tabela. Se ela for omitida, uma largura padrão se baseará no tipo de dados do campo.|  
 |**SortDirection**|Enum|Um valor que indica como os valores de campos costumam ser classificados. Os valores possíveis são **Default**, **Ascending**, **Descending**. Se ele for omitido, o valor padrão atribuirá uma direção de classificação com base no tipo de dados do campo.|  
 |**IsRightToLeft**|Booliano|Indica se o campo contém texto que deve ser lido da direita para a esquerda. Se ele for omitido, a configuração do modelo será assumida.|  
 |**OrderBy**|MemberRef|Uma referência a outro campo dentro do modelo que define a ordem de classificação para os valores deste campo. Os valores para os dois campos devem ter um mapeamento 1:1 ou o comportamento de classificação será indefinido. Se ela for omitida, o campo será classificado com base em seu próprio valor.|  

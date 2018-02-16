@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 02baf401-52b0-4a73-8a7b-3b5b5e568626
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 75e41e8d4784d04570eaebafc0efc607a45f40b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovertracecolumns-rowset"></a>Conjunto de linhas DISCOVER_TRACE_COLUMNS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Retorna um documento XML que descreve as colunas disponíveis em um rastreamento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Retorna um documento XML que descreve as colunas disponíveis em um rastreamento.  
   
  **Aplica-se a:** modelos de tabela, modelos multidimensionais  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
 |Nome da coluna|Indicador de tipo|Restrição|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**Data**|**DBTYPE_WSTR**|Sim|Contém a cadeia de caracteres XML codificada que descreve informações sobre as colunas de rastreamento fornecidas pelo provedor de rastreamento.|  
+|**Dados**|**DBTYPE_WSTR**|Sim|Contém a cadeia de caracteres XML codificada que descreve informações sobre as colunas de rastreamento fornecidas pelo provedor de rastreamento.|  
   
  Este conjunto de linhas do esquema não é classificado.  
   
@@ -48,7 +50,7 @@ ms.lasthandoff: 01/08/2018
 |GUID|a07ccd18-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|TraceColumns|  
   
-## <a name="see-also"></a>Consulte Também  
- [Conjunto de linhas de esquema do XML](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+## <a name="see-also"></a>Consulte também  
+ [XML for Analysis conjuntos de linhas de esquema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

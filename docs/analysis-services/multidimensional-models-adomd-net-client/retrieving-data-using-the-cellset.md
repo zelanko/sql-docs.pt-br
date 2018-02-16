@@ -1,7 +1,7 @@
 ---
 title: "Recuperando dados usando o conjunto de células | Microsoft Docs"
 ms.custom: 
-ms.date: 03/03/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - CellSet object
 - retrieving data
 - data retrieval [ADOMD.NET], CellSet object
 ms.assetid: 77e4ee58-882d-4012-91a3-0565f18a4882
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e1552ce0646c48465aac824f40d9f42f8aa4215d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 20dea89569c845332def257d0ae72f9d470dee60
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-data-using-the-cellset"></a>Recuperando dados usando CellSet
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ao recuperar dados analíticos, o <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> objeto fornece o máximo de interatividade e flexibilidade. O objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> é um cache em memória de dados hierárquicos e de metadados que armazena a dimensionalidade original dos dados. O objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> também pode ser atravessado em um estado conectado ou desconectado. Por causa desse recurso de desconexão, o objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> pode ser usado para exibir dados e metadados em qualquer ordem e oferece o modelo de dados mais abrangente para a recuperação de dados. O recurso de desconexão também faça com que o objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> obtenha o máximo de sobrecarga e seja o modelo de objeto de recuperação de dados do ADOMD.NET de preenchimento mais lento.  
+  Ao recuperar dados analíticos, o objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> oferece o máximo de interatividade e de flexibilidade. O objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> é um cache em memória de dados hierárquicos e de metadados que armazena a dimensionalidade original dos dados. O objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> também pode ser atravessado em um estado conectado ou desconectado. Por causa desse recurso de desconexão, o objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> pode ser usado para exibir dados e metadados em qualquer ordem e oferece o modelo de dados mais abrangente para a recuperação de dados. O recurso de desconexão também faça com que o objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> obtenha o máximo de sobrecarga e seja o modelo de objeto de recuperação de dados do ADOMD.NET de preenchimento mais lento.  
   
 ## <a name="retrieving-data-in-a-connected-state"></a>Recuperando dados em um estado conectado  
  Para usar o objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> para recuperar dados, siga estas etapas:  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/08/2018
   
  [!code-cs[Adomd.NetClient#DemonstrateDisconnectedCellset](../../analysis-services/multidimensional-models-adomd-net-client/codesnippet/csharp/retrieving-data-using-th_0_2.cs)]  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Recuperando dados de uma fonte de dados analíticos](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   
  [Recuperando dados usando o AdomdDataReader](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-adomddatareader.md)   
  [Recuperando dados usando o XmlReader](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader.md)  

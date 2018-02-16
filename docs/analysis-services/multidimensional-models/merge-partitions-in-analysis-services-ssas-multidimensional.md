@@ -15,19 +15,20 @@ helpviewer_keywords:
 - partitions [Analysis Services], merging
 - merging partitions [Analysis Services]
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 519136d681c257d27f93894db6a7c2652d273f87
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Mesclar partições no Analysis Services (SSAS - Multidimensional)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]É possível mesclar partições em existente [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados para consolidar dados de fatos de várias partições do mesmo grupo de medidas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+É possível mesclar partições em um banco de dados existente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para consolidar dados de fatos de várias partições do mesmo grupo de medidas.  
   
  [Cenários comuns](#bkmk_Scenario)  
   
@@ -137,13 +138,13 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_partitionsXMLA"></a> Como mesclar partições usando o XMLA  
  Consulte este tópico para obter informações, [Mesclando partições &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
-## <a name="see-also"></a>Consulte Também  
- [Processando objetos do Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
- [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Criar e gerenciar uma partição local &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
+## <a name="see-also"></a>Consulte também  
+ [Processamento do Analysis Services objetos](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
+ [Partições &#40; Analysis Services - dados multidimensionais &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Criar e gerenciar uma partição Local &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
  [Criar e gerenciar uma partição remota &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [Definir o write-back de partição](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
  [Partições habilitadas para gravação](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Configurar armazenamento de cadeia de caracteres para dimensões e partições](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
+ [Configurar o armazenamento de cadeia de caracteres para dimensões e partições.](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
   
   

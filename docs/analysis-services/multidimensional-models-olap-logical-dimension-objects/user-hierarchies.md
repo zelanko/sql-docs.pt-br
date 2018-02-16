@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - members [Analysis Services], hierarchies
 - dimensions [Analysis Services], hierarchies
@@ -28,19 +29,20 @@ helpviewer_keywords:
 - multilevel hierarchies [Analysis Services]
 - unbalanced hierarchies [Analysis Services]
 ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 01f5e5b5a73a8888d24d3ee46127c67327ec75da
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="user-hierarchies"></a>Hierarquias do usuário
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Hierarquias definidas pelo usuário são hierarquias definidas pelo usuário de atributos que são usados em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para organizar os membros de uma dimensão em estruturas hierárquicas e fornecer caminhos de navegação em um cubo. Por exemplo, a tabela a seguir define uma tabela de dimensões para uma dimensão temporal. A tabela de dimensão oferece suporte para três atributos nomeados, Ano, Trimestre e Mês.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Hierarquias definidas pelo usuário são hierarquias definidas pelo usuário de atributos que são usados em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para organizar os membros de uma dimensão em estruturas hierárquicas e fornecer caminhos de navegação em um cubo. Por exemplo, a tabela a seguir define uma tabela de dimensões para uma dimensão temporal. A tabela de dimensão oferece suporte para três atributos nomeados, Ano, Trimestre e Mês.  
   
 |Year|Quarter|Month|  
 |----------|-------------|-----------|  
@@ -99,7 +101,7 @@ ms.lasthandoff: 01/08/2018
   
  Diferentemente de hierarquias definidas pelo usuário, na qual o número de níveis na hierarquia determina o número de níveis que podem ser visualizados por usuários finais, uma hierarquia pai-filho é definida com o único nível de um atributo de hierarquia e os valores nesse único nível produzem os vários níveis visualizados por usuários. O número de níveis exibidos depende do conteúdo das colunas da tabela de dimensões que armazenam as chaves de membro e as chaves de pai. O número de níveis pode ser alterado quando os dados nas tabelas de dimensões alteram. Para obter mais informações, consulte [dimensões pai-filho](../../analysis-services/multidimensional-models/parent-child-dimension.md), e [atributos em hierarquias pai-filho](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Criar hierarquias definidas pelo usuário](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [Propriedades de hierarquia do usuário](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
  [Referência de propriedades de atributo de dimensão](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  

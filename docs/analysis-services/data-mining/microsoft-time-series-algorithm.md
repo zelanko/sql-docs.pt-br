@@ -21,19 +21,20 @@ helpviewer_keywords:
 - series [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
-caps.latest.revision: "75"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 27903370d69462107dffb0aecf56c4312f60a2d1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algoritmo MTS
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo MTS fornece vários algoritmos que são otimizados para previsão de valores contínuos, como vendas de produtos, ao longo do tempo. Enquanto outros algoritmos [!INCLUDE[msCoName](../../includes/msconame-md.md)] , como árvores de decisão, requerem colunas adicionais de novas informações como entrada para prever uma tendência; um modelo de série temporal não requer isso. Um modelo de série temporal pode prever tendências baseadas somente no conjunto de dados original, usado para criar o modelo. Também é possível adicionar novos dados ao modelo quando fizer uma previsão e incorporar automaticamente os novos dados na análise de tendência.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O algoritmo MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) fornece algoritmos múltiplos que são otimizados para previsão de valores contínuos, como vendas de produtos, ao longo do tempo. Enquanto outros algoritmos [!INCLUDE[msCoName](../../includes/msconame-md.md)] , como árvores de decisão, requerem colunas adicionais de novas informações como entrada para prever uma tendência; um modelo de série temporal não requer isso. Um modelo de série temporal pode prever tendências baseadas somente no conjunto de dados original, usado para criar o modelo. Também é possível adicionar novos dados ao modelo quando fizer uma previsão e incorporar automaticamente os novos dados na análise de tendência.  
   
  O diagrama a seguir mostra um modelo típico de previsão de vendas de um produto, em quatro regiões diferentes de vendas no decorrer do tempo. O modelo exibido no diagrama mostra as vendas efetuadas em cada região, plotadas como vermelhas, amarelas, roxas e azuis. A linha para cada região tem duas partes:  
   
@@ -109,8 +110,8 @@ ms.lasthandoff: 01/08/2018
   
 |TimeID|Product|Sales|Volume|  
 |------------|-------------|-----------|------------|  
-|1/2001|Um|1.000|600|  
-|2/2001|Um|1100|500|  
+|1/2001|A|1.000|600|  
+|2/2001|A|1100|500|  
 |1/2001|B|500|900|  
 |2/2001|B|300|890|  
   
@@ -148,7 +149,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Um modelo de série temporal pode fazer previsões que diferem às vezes, significativamente, dependendo do sistema operacional de 64 bits que o servidor usar. Essas diferenças ocorrem devido ao modo como um sistema com base em [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]representa e lida com números para aritmética de ponto flutuante, que difere do modo de um sistema com base em [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] Como os resultados da previsão podem ser específicos para o sistema operacional, recomendamos que você avalie modelos no mesmo sistema operacional que usará na produção.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 -   Não suporta o uso de PMML (Predictive Model Markup Language) para criar modelos de mineração.  
   
@@ -158,11 +159,11 @@ ms.lasthandoff: 01/08/2018
   
 -   Dá suporte ao detalhamento.  
   
-## <a name="see-also"></a>Consulte Também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte também  
+ [Algoritmos de mineração de dados e &#40; Analysis Services – Data Mining e &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Procurar um modelo usando o visualizador MTS](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Referência técnica do algoritmo Microsoft Time Series](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Exemplos de consulta de modelo de série temporal](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de série temporal &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de série temporal &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

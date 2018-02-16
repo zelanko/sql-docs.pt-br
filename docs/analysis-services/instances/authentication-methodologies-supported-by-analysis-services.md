@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 3e3895f402f1e96dc1ea3484b9fb07ddc84118d3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Metodologias de autenticação com suporte no Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Conexões de um aplicativo cliente para uma instância do Analysis Services exigem a autenticação do Windows (integrada). Você pode fornecer uma identidade de usuário do Windows usando qualquer um dos seguintes métodos:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+As conexões de um aplicativo cliente com uma instância do Analysis Services requerem a autenticação do Windows (integrada). Você pode fornecer uma identidade de usuário do Windows usando qualquer um dos seguintes métodos:  
   
 -   NTLM  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
   
  Para obter mais informações sobre credenciais armazenadas, consulte [Criar, modificar e excluir fontes de dados compartilhadas &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) e [Usar os Serviços do Excel com Serviços de Repositório Seguro no SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkID=309869).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Usando a representação com segurança de transporte](http://go.microsoft.com/fwlink/?LinkId=311727)   
  [Configurar o acesso HTTP ao Analysis Services no ISS &#40;Serviços de Informações da Internet &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Configurar o Analysis Services para delegação restrita de Kerberos](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   

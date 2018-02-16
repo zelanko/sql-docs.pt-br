@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 32dfe1b5c7367121bd36dae57d0175304fc2fe14
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="subselects-in-queries"></a>Subseleções em consultas
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Expressões de Subseleção são expressões SELECT aninhadas que são usadas para restringir o espaço do cubo onde o SELECT externo exterior está sendo avaliado. Subseleções permitem definir um novo espaço sobre os quais todos os cálculos são avaliados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Expressões de subseleção são expressões SELECT aninhadas que são usadas para restringir o espaço do cubo onde o SELECT externo exterior está sendo avaliado. Subseleções permitem definir um novo espaço sobre os quais todos os cálculos são avaliados.  
   
 ## <a name="subselects-by-example"></a>Subseleções por exemplo  
  Comecemos com um exemplo de como subseleções podem ajudar a gerar os resultados que nós queremos mostrar. Suponha que lhe peçam para gerar uma tabela que mostra o comportamento de vendas, ao longo de anos, para os 10 principais produtos.  
@@ -344,7 +345,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  Como você pode ver, há diferenças nos resultados entre ambos os conjuntos. A primeira consulta respondeu a pergunta de quais são os melhores produtos de venda nas primeiras 5 regiões, a segunda consulta respondeu a pergunta de onde são as maiores vendas dos 5 principais produtos.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentários  
  As subseleções têm as seguintes restrições e limitações:  
   
 -   A cláusula WHERE não filtra o subespaço.  

@@ -17,19 +17,20 @@ helpviewer_keywords:
 - expressions [MDX], scripts
 - scripts [MDX], about scripts
 ms.assetid: 83d9afda-7d34-42b5-8f28-20172a905f23
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 22da0a7df618db320214f19a73e2047ea4b37922
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="the-basic-mdx-script-mdx"></a>O script básico de MDX (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Um script MDX (Multidimensional Expressions) define o processo de cálculo para um cubo em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Existem dois tipos de scripts MDX:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Um script MDX define o processo de cálculo para um cubo no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Existem dois tipos de scripts MDX:  
   
  **O script MDX padrão**  
  Quando você cria um cubo, o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] cria um script MDX padrão para esse cubo. Esse script define uma passagem de cálculo para o cubo inteiro.  
@@ -58,18 +59,18 @@ ms.lasthandoff: 01/08/2018
  Todas as instruções de script MDX  
  Em scripts MDX, as instruções de script MDX controlam o contexto e o escopo dos cálculos e gerenciam o comportamento de outras instruções do script MDX. Essa categoria inclui as seguintes instruções:  
   
--   [CALCULATE](../../../mdx/mdx-scripting-calculate.md)  
+-   [CALCULAR](../../../mdx/mdx-scripting-calculate.md)  
   
--   [FREEZE](../../../mdx/mdx-scripting-freeze.md)  
+-   [CONGELAR](../../../mdx/mdx-scripting-freeze.md)  
   
--   [SCOPE](../../../mdx/mdx-scripting-scope.md)  
+-   [ESCOPO](../../../mdx/mdx-scripting-scope.md)  
   
  Para obter mais informações sobre instruções de scripts MDX, consulte [Instruções de script MDX &#40;MDX&#41;](../../../mdx/mdx-scripting-statements-mdx.md).  
   
- [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md)  
+ [CRIAR MEMBRO](../../../mdx/mdx-data-definition-create-member.md)  
  Uma instrução CREATE MEMBER cria membros calculados. Para obter mais informações sobre como criar membros calculados, consulte [Criando membros calculados em MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md).  
   
- [CREATE SET](../../../mdx/mdx-data-definition-create-set.md)  
+ [CRIAR CONJUNTO](../../../mdx/mdx-data-definition-create-set.md)  
  A instrução CREATE SET cria conjuntos nomeados. Para obter mais informações sobre como criar conjuntos de nomes, consulte [Criando conjuntos nomeados em MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md).  
   
  Instruções condicionais  
@@ -95,8 +96,8 @@ ms.lasthandoff: 01/08/2018
 <Natural hierarchy member> ::= <Natural hierarchy>.<identifier>[.<identifier>...]  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [Referência da linguagem MDX &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
- [Conceitos básicos do script MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>Consulte também  
+ [Referência de linguagem MDX &#40; MDX &#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [Conceitos básicos de script MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   

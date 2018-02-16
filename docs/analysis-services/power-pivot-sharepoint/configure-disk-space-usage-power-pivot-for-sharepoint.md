@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: cfac3c1160e6889fe51f1b93a4df87a0ed92a302
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>Configurar o uso do espaço em disco (PowerPivot para SharePoint)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint implantação usa o espaço em disco do computador host para cache [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] bancos de dados para agilizar as recargas. Todo banco de dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que é carregado na memória é armazenado primeiro no disco para agilizar a recarga posterior para atender a novas solicitações. Por padrão, o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint usa todo o espaço em disco disponível para armazenar seus bancos de dados, mas pode modificar esse comportamento definindo propriedades que limitam a quantidade de espaço em disco utilizado.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Uma implantação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint usa o espaço em disco do computador host para armazenar em cache bancos de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para agilizar as recargas. Todo banco de dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que é carregado na memória é armazenado primeiro no disco para agilizar a recarga posterior para atender a novas solicitações. Por padrão, o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint usa todo o espaço em disco disponível para armazenar seus bancos de dados, mas pode modificar esse comportamento definindo propriedades que limitam a quantidade de espaço em disco utilizado.  
   
  Este tópico explica como definir os limites sobre o uso de espaço em disco.  
   
@@ -96,10 +97,10 @@ ms.lasthandoff: 01/08/2018
   
 5.  Clique em **OK** para salvar as alterações.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
  Uma instalação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint fornece regras de integridade para que você adote uma ação corretiva ao detectar problemas de integridade do servidor, configuração ou disponibilidade. Algumas dessas regras usam parâmetros de configuração para determinar as condições em que são disparadas regras de integridade. Se você estiver ajustando ativamente o desempenho do servidor, talvez também queira analisar essas configurações para garantir que os padrões sejam a melhor opção para seu sistema. Para obter mais informações, consulte [Configurar regras de integridade do Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Administração e configuração de servidor do Power Pivot na Administração Central](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

@@ -23,19 +23,20 @@ helpviewer_keywords:
 - restoring databases [Analysis Services]
 - recovery [Analysis Services]
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: a3ca95b34e684fa5ec67d0dab4720020a0e4e883
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Backup e restauração de bancos de dados do Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui backup e restauração para que você pode recuperar um banco de dados e seus objetos de um ponto específico no tempo. Backup e restauração também é uma técnica válida por migrar bancos de dados para servidores atualizados, mover bancos de dados entre servidores ou implantar um banco de dados para um servidor de produção. Para fins de recuperação de dados, se você ainda não tem um plano de backup e seus dados são valiosos, deve criar e implementar um plano o mais breve possível.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui backup e restauração de forma que você possa recuperar um banco de dados e seus objetos de um ponto específico no tempo. Backup e restauração também é uma técnica válida por migrar bancos de dados para servidores atualizados, mover bancos de dados entre servidores ou implantar um banco de dados para um servidor de produção. Para fins de recuperação de dados, se você ainda não tem um plano de backup e seus dados são valiosos, deve criar e implementar um plano o mais breve possível.  
   
  Os comandos de backup e restauração são executados em um banco de dados implantado do Analysis Services. Para seus projetos e soluções no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você deve usar o controle do código-fonte para garantir que possa recuperar versões específicas de seus arquivos de origem e, então, criar um plano de recuperação de dados para o repositório do sistema de controle do código-fonte que você estiver usando.  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 01/08/2018
  Os administradores podem fazer backup de um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em um único arquivo de backup (.abf) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , seja qual for o tamanho do banco de dados. Para obter instruções passo a passo, consulte [Como fazer backup de um banco de dados do Analysis Services (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) e [Automatizar o backup de um banco de dados do Analysis Services (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html).  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], usado para carregar e consultar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modelos de dados em um ambiente do SharePoint, carrega seus modelos de bancos de dados de conteúdo do SharePoint. Esses bancos de dados de conteúdo são relacionais e executados no mecanismo de banco de dados relacional do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Como tal, não há backup do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e estratégia de restauração para modelos de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se você tiver um plano de recuperação de desastres em vigor para o conteúdo do SharePoint, esse plano abrangerá os modelos de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] armazenados nos bancos de dados de conteúdo.  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], usado para carregar e consultar modelos de dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um ambiente do SharePoint, carrega seus modelos de bancos de dados de conteúdo do SharePoint. Esses bancos de dados de conteúdo são relacionais e executados no mecanismo de banco de dados relacional do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Como tal, não há backup do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e estratégia de restauração para modelos de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se você tiver um plano de recuperação de desastres em vigor para o conteúdo do SharePoint, esse plano abrangerá os modelos de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] armazenados nos bancos de dados de conteúdo.  
   
  **Partições remotas**  
   
@@ -129,7 +130,7 @@ ms.lasthandoff: 01/08/2018
   
  Para obter mais informações sobre como restaurar um banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , consulte [Opções de restauração](../../analysis-services/multidimensional-models/restore-options.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
 
   

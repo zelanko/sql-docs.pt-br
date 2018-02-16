@@ -1,7 +1,7 @@
 ---
 title: Recuperando dados usando o AdomdDataReader | Microsoft Docs
 ms.custom: 
-ms.date: 03/03/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - retrieving data
 - AdomdDataReader object
 - data retrieval [ADOMD.NET], AdomdDataReader object
 ms.assetid: 8ed7ea26-b5f8-4852-80fc-75dd62df5b3a
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 66058488afc823095c2868b45d4156d723fb6ae6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3e536803b34715bdfc4beb87de40cda0380a589e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>Recuperando dados usando o AdomdDataReader
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ao recuperar dados analíticos, o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> objeto fornece um bom equilíbrio entre sobrecarga e interatividade. O objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> recupera um fluxo dados somente leitura, somente encaminhamento, bidimensional a partir de uma fonte de dados analíticos. Esse fluxo de dados não armazenado permite que a lógica procedural processe com eficiência os resultados de uma fonte de dados analíticos de forma sequencial. Isso faz do <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> uma boa opção para a recuperação de grandes quantidades de dados para fins de exibição, uma vez que os dados não são armazenados em cache em memória.  
+  Na recuperação de dados analíticos, o objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> oferece um bom equilíbrio entre sobrecarga e interatividade. O objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> recupera um fluxo dados somente leitura, somente encaminhamento, bidimensional a partir de uma fonte de dados analíticos. Esse fluxo de dados não armazenado permite que a lógica procedural processe com eficiência os resultados de uma fonte de dados analíticos de forma sequencial. Isso faz do <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> uma boa opção para a recuperação de grandes quantidades de dados para fins de exibição, uma vez que os dados não são armazenados em cache em memória.  
   
  O <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> também pode melhorar o desempenho do aplicativo ao recuperar dados assim que estiverem disponíveis, em vez de aguardar os resultados completos da consulta a ser retornada. O <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> também reduz a sobrecarga do sistema porque, por padrão, este leitor só armazena uma linha de cada vez em memória.  
   
@@ -122,7 +123,7 @@ foreach (DataRow objRow in schemaTable.Rows)
 ## <a name="retrieving-multiple-result-sets"></a>Recuperando vários conjuntos de resultados  
  A mineração de dados dá suporte ao conceito de tabelas aninhadas, exibidas pelo ADOMD.NET como conjuntos de linhas aninhados. Para recuperar o conjunto de linhas aninhado associado a cada linha, você deve chamar o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetDataReader%2A> método.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Recuperando dados de uma fonte de dados analíticos](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   
  [Recuperando dados usando o conjunto de células](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-cellset.md)   
  [Recuperando dados usando o XmlReader](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader.md)  

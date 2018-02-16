@@ -20,19 +20,20 @@ helpviewer_keywords:
 - properties [Analysis Services], configuration
 - properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 4db4d5d2e57f5f4a967a2099ef11efa0ca10ca21
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="server-properties-in-analysis-services"></a>Propriedades do servidor do Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrador pode modificar as propriedades de configuração de servidor padrão de um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância. Cada instância tem suas próprias propriedades de configuração, que são definidas de forma independente de outras instâncias no mesmo servidor.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Um administrador do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode modificar as propriedades padrão de configuração do servidor de uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Cada instância tem suas próprias propriedades de configuração, que são definidas de forma independente de outras instâncias no mesmo servidor.  
   
  Para configurar o servidor, use o SQL Server Management Studio ou edite o arquivo msmdsrv.ini de uma instância específica.  
  
@@ -82,17 +83,17 @@ As páginas de propriedades do SQL Server Management Studio mostram um subconjun
 |[Propriedades de mineração de dados](../../analysis-services/server-properties/data-mining-properties.md)|As propriedades de mineração de dados que controlam quais algoritmos são habilitados e quais são desabilitados. Por padrão, todos os algoritmos são habilitados.| 
 |[Propriedades do DAX](../../analysis-services/server-properties/dax-properties.md)|Define as propriedades relacionadas a consultas DAX.|
 |DSO|DSO não tem mais suporte. Propriedades DSO são ignoradas.|  
-|[Propriedades de recurso](../../analysis-services/server-properties/feature-properties.md)|As propriedades do recurso pertencem aos recursos de produtos, a maioria delas avançadas, inclusive propriedades que controlam vínculos entre instâncias do servidor.|  
-|[Propriedades de armazenamento de arquivos](../../analysis-services/server-properties/filestore-properties.md)|As propriedades de repositório de arquivos são apenas para uso avançado. Elas incluem configurações de gerenciamento de memória avançadas.|  
-|[Propriedades do gerenciador de bloqueio](../../analysis-services/server-properties/lock-manager-properties.md)|As propriedades do gerenciador de bloqueio definem os comportamentos do servidor em relação aos bloqueios e aos tempos limite. A maioria dessas propriedades é apenas para uso avançado.|  
-|[Propriedades do log](../../analysis-services/server-properties/log-properties.md)|As propriedades de log controlam onde e como os eventos são registrados no servidor. Isso inclui log de erros, log de exceções, flight recorder, log de consultas e rastreamentos.|  
+|[Propriedades do recurso](../../analysis-services/server-properties/feature-properties.md)|As propriedades do recurso pertencem aos recursos de produtos, a maioria delas avançadas, inclusive propriedades que controlam vínculos entre instâncias do servidor.|  
+|[Propriedades Filestore](../../analysis-services/server-properties/filestore-properties.md)|As propriedades de repositório de arquivos são apenas para uso avançado. Elas incluem configurações de gerenciamento de memória avançadas.|  
+|[Propriedades do Gerenciador de bloqueio](../../analysis-services/server-properties/lock-manager-properties.md)|As propriedades do gerenciador de bloqueio definem os comportamentos do servidor em relação aos bloqueios e aos tempos limite. A maioria dessas propriedades é apenas para uso avançado.|  
+|[Propriedades de log](../../analysis-services/server-properties/log-properties.md)|As propriedades de log controlam onde e como os eventos são registrados no servidor. Isso inclui log de erros, log de exceções, flight recorder, log de consultas e rastreamentos.|  
 |[Propriedades de memória](../../analysis-services/server-properties/memory-properties.md)|As propriedades de memória controlam como o servidor usa a memória. Eles são principalmente para uso avançado.|  
 |[Propriedades de rede](../../analysis-services/server-properties/network-properties.md)|As propriedades de rede controlam o comportamento do servidor referente ao sistema de rede, inclusive propriedades que controlam a compressão e XML binário. A maioria dessas propriedades é apenas para uso avançado.|  
 |[Propriedades OLAP](../../analysis-services/server-properties/olap-properties.md)|As propriedades OLAP controlam o processamento de dimensões e cubo, processamento lento, cache de dados e comportamento das consultas. Isso inclui propriedades básicas e avançadas.|  
 |[Propriedades de segurança](../../analysis-services/server-properties/security-properties.md)|A seção de segurança contém propriedades básicas e avançadas que definem as permissões de acesso. Isso inclui configurações que pertencem a administradores e usuários.|  
-|[Propriedades de pool de threads](../../analysis-services/server-properties/thread-pool-properties.md)|As propriedades de pool de threads controlam quantos threads o servidor cria. Essas são principalmente propriedades avançadas.|  
+|[Propriedades do Pool de threads](../../analysis-services/server-properties/thread-pool-properties.md)|As propriedades de pool de threads controlam quantos threads o servidor cria. Essas são principalmente propriedades avançadas.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Gerenciamento de instância do Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
  [Especificando definições de configuração para implantação de solução](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   

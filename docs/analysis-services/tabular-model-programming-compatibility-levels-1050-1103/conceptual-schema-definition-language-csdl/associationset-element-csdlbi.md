@@ -11,31 +11,33 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 93e5ac4d-d7e8-490e-b775-28263a48cfcc
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: df59f83d3f2ce978db817369b513c1cc0678368c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="associationset-element-csdlbi"></a>Elemento AssociationSet (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O **AssociationSet** elemento é um tipo complexo que define uma associação. Em um modelo de dados da CSDLBI, uma associação é uma relação entre duas tabelas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+O elemento **AssociationSet** é um tipo complexo que define uma associação. Em um modelo de dados da CSDLBI, uma associação é uma relação entre duas tabelas.  
   
  Um **AssociationSet** deve ser especificado para cada relação exclusiva em um modelo. O **AssociationSet** define os pontos de extremidade usando o elemento **Association** . O elemento **AssociationSet** também define os metadados sobre a relação e seu uso no modelo de dados.  
   
 ## <a name="applicable-attributes"></a>Atributos aplicáveis  
  A tabela a seguir lista os elementos e atributos que definem o elemento **AssociationSet** .  
   
-|Nome|É obrigatório|Description|  
+|Nome|É obrigatório|Descrição|  
 |----------|-----------------|-----------------|  
 |Estado|Sim|Uma cadeia de caracteres que indica se a associação está ativa ou não. O valor é definido pelo elemento State.|  
-|Hidden|não|Um valor booliano que indica se a relação está visível. Por padrão, o valor de Hidden é **false**, o que significa que todas as relações ficam visíveis no modelo.|  
+|Oculto|Não|Um valor booliano que indica se a relação está visível. Por padrão, o valor de Hidden é **false**, o que significa que todas as relações ficam visíveis no modelo.|  
   
 ## <a name="state-element"></a>Elemento State  
  O elemento **State** é um tipo simples que descreve se uma associação está ativa, e deve ser usada em cálculos, ou se ela está inativa, e deve ser explicitamente referenciada nos cálculos.  
@@ -44,13 +46,13 @@ ms.lasthandoff: 01/08/2018
   
  A tabela a seguir lista os valores do elemento **State** .  
   
-|Valor|Description|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |Ativa|A associação está ativa.|  
 |Inativa|A associação está ativa.|  
   
 ## <a name="example"></a>Exemplo  
- **Tabular**  
+ **Tabela**  
   
  O exemplo a seguir mostra uma relação no modelo de tabela da AdventureWorks (na versão 1.1 da CSDLBI). A associação é marcada como Inactive, pois existe uma relação (entre OrderKey e Date).  
   
@@ -80,7 +82,7 @@ ms.lasthandoff: 01/08/2018
 </AssociationSet>  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [Referência técnica para Anotações de BI para CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+## <a name="see-also"></a>Consulte também  
+ [Referência técnica para anotações de BI para CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

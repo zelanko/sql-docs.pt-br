@@ -17,19 +17,20 @@ helpviewer_keywords:
 - accounts [Analysis Services]
 - logon accounts [Analysis Services], about logon accounts
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 090f81a3668e91ce8c18e10a1bb7ee5fccc52365
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurar contas de serviço (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Provisionamento de conta de todo o produto é documentado em [configurar contas de serviço do Windows e permissões](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), um tópico que fornece informações de conta de serviço abrangente para todos os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviços, incluindo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Consulte-o para obter informações sobre tipos de contas válidos, privilégios do Windows atribuídos por configuração, permissões do sistema de arquivo, permissões de registro e muito mais.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O provisionamento de conta de todo o produto é documentado em [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), um tópico que fornece informações abrangentes da conta de serviço para todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluindo o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Consulte-o para obter informações sobre tipos de contas válidos, privilégios do Windows atribuídos por configuração, permissões do sistema de arquivo, permissões de registro e muito mais.  
   
  Este tópico fornece informações complementares para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], incluindo as permissões adicionais necessárias para instalações em tabela e em cluster. Abrange também as permissões necessárias para oferecer suporte às operações do servidor. Por exemplo, você pode configurar operações de processamento e de consulta para serem executadas na conta d serviço, caso no qual você terá de conceder permissões adicionais para funcionar.  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="logon-account-recommendations"></a>Recomendações de conta de logon  
  Em um cluster de failover, todas as instâncias do Analysis Services devem ser configuradas para usar uma conta de usuário de domínio do Windows. Atribua a mesma conta para todas as instâncias. Consulte [Como realizar cluster no Analysis Services](http://msdn.microsoft.com/library/dn736073.aspx) para obter detalhes.  
   
- Instâncias autônomas devem usar a conta virtual padrão, **NT Service\MSSQLServerOLAPService** para a instância padrão, ou **NT Service\MSOLAP$***nome de instância* para uma instância nomeada. Essa recomendação se aplica a instâncias do Analysis Services em todos os modos de servidor, considerando o Windows Server 2008 R2 e posterior para o sistema operacional e o SQL Server 2012 e posterior para o Analysis Services.  
+ Instâncias autônomas devem usar a conta virtual padrão, **NT Service\MSSQLServerOLAPService** para a instância padrão, ou **NT Service\MSOLAP$ * nome de instância* para uma instância nomeada. Essa recomendação se aplica a instâncias do Analysis Services em todos os modos de servidor, considerando o Windows Server 2008 R2 e posterior para o sistema operacional e o SQL Server 2012 e posterior para o Analysis Services.  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Concedendo permissões ao Analysis Services  
  Esta seção explica as permissões exigidas para operações internas e locais do Analysis Services, tais como iniciar o executável, ler o arquivo de configuração e carregar os bancos de dados do diretório de dados. Se você estiver procurando orientação sobre definição de permissões para acesso a dados externos e interoperabilidade com outros serviços e aplicativos, consulte [Concedendo permissões adicionais para operações de servidor específicas](#bkmk_tasks) mais adiante neste tópico.  
@@ -154,13 +155,13 @@ ms.lasthandoff: 01/08/2018
 |Write-back|Adicione a conta de serviço a funções de banco de dados do Analysis Services definidos no servidor remoto|Quando habilitado em aplicativos cliente, o write-back é um recurso de modelos multidimensionais que permite a criação de novos valores de dados durante a análise de dados. Se o write-back estiver habilitado em alguma dimensão ou cubo, a conta de serviço do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deverá ter permissões de gravação na tabela de write-back do banco de dados relacional de origem do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se essa tabela ainda não existir e for necessário criá-la, a conta de serviço do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também deverá ter permissões de criação de tabelas no banco de dados designado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |Grave em uma tabela de log de consultas em um banco de dados relacional do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Crie um logon de banco de dados para a conta de serviço e atribua permissões de gravação na tabela de log de consultas|Você pode habilitar o log de consultas para coletar dados de uso em uma tabela de banco de dados para a análise subsequente. A conta de serviço do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deve ter permissões de gravação na tabela de log de consultas no banco de dados designado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se essa tabela ainda não existir e for necessário criá-la, a conta de logon do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também deve ter permissões de criação de tabelas no banco de dados designado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Melhorar o desempenho do SQL Server Analysis Services com o Assistente de Otimização Baseado no Uso (Blog)](http://www.mssqltips.com/sqlservertip/2876/improve-sql-server-analysis-services-performance-with-the-usage-based-optimization-wizard/) e [Log de consultas no Analysis Services (Blog)](http://weblogs.asp.net/miked/archive/2013/07/31/query-logging-in-analysis-services.aspx).|  
   
-## <a name="see-also"></a>Consulte Também  
- [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [Conta de serviço do SQL Server e o SID por serviço (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
- [SQL Server usa um SID de serviço para fornecer isolamento de serviço (artigo do KB)](http://support.microsoft.com/kb/2620201)   
- [Token de acesso (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
- [Identificadores de segurança (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
- [Token de acesso (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
- [Listas de controle de acesso (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
+## <a name="see-also"></a>Consulte também  
+ [Configurar contas de serviço do Windows e permissões](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
+ [Conta de Serviço do SQL Server e o SID por serviço (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
+ [O SQL Server usa um SID de serviço para fornecer isolamento de serviço (artigo do KB)](http://support.microsoft.com/kb/2620201)   
+ [Token de Acesso (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
+ [Identificadores de Segurança (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
+ [Token de Acesso (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
+ [Listas de Controle de Acesso (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   
   

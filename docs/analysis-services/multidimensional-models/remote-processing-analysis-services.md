@@ -12,27 +12,28 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 498a045c82630fdcd89ca857877d37d07b8b3dd2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="remote-processing-analysis-services"></a>Processamento remoto (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode executar processamento em um controle remoto agendado ou autônomo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância, em que a solicitação de processamento origina-se de um computador, mas é executado em outro computador na mesma rede.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Você pode executar processamento em um controle remoto agendado ou autônomo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância, em que a solicitação de processamento origina-se de um computador, mas é executada em outro computador na mesma rede.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
   
 -   Se você estiver executando versões diferentes do SQL Server em cada computador, as bibliotecas de cliente devem corresponder à versão da instância [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que está processando o modelo.
   
 -   No servidor remoto, a opção **Permitir conexões remotas a este computador** deve estar habilitada e a conta de emitir a solicitação de processamento deve estar listada como um usuário permitido.  
   
--   Regras de Firewall do Windows devem ser configuradas para permitir conexões de entrada para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Verifique se você pode se conectar à instância remota [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Consulte [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+-   Regras de Firewall do Windows devem ser configuradas para permitir conexões de entrada para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Verifique se você pode se conectar à instância remota [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Consulte [Configurar o Firewall do Windows para permitir o acesso ao Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 -   Resolva quaisquer erros de processamento local existentes antes de tentar o processamento remoto. Verifique que quando a solicitação de processamento for local, os dados possam ser recuperados com êxito da fonte de dados relacional externa. Consulte [Definir opções de representação &#40;SSAS – Multidimensional&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md) para obter instruções sobre como especificar as credenciais usadas para recuperar os dados.  
   
@@ -96,8 +97,8 @@ ms.lasthandoff: 01/08/2018
   
 2.  Como etapa final, modifique o trabalho para ser executado em uma agenda que você definir, adicionando quaisquer alertas ou notificações necessários para administrar o trabalho. Você também poderá refinar o script de processamento ou criar várias etapas do trabalho para processar objetos independentemente.  
   
-## <a name="see-also"></a>Consulte Também  
- [SQL Server Agent Components](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
+## <a name="see-also"></a>Consulte também  
+ [Componentes do SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
  [Agendar tarefas administrativas do SSAS com o SQL Server Agent](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [Processamento em lotes &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   

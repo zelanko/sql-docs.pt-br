@@ -1,7 +1,7 @@
 ---
 title: Trabalhando com conjuntos de linhas de esquema no ADOMD.NET | Microsoft Docs
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - metadata [ADOMD.NET]
 - retrieving metadata
 - schema rowsets [ADOMD.NET]
 ms.assetid: 7bf75bf8-f1e1-44f6-ac42-c38a681654cf
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dcb2905c471751275b6dae19737541b798e2b68b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 279cc537776f6c96193026d5f0bccafcbd8f0c8b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-metadata---working-with-schema-rowsets"></a>Recuperando metadados - trabalhando com conjuntos de linhas de esquema
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando você precisar de mais metadados do que está disponível no modelo de objeto do ADOMD.NET, o ADOMD.NET oferece a capacidade de recuperar o intervalo completo de XML para Analysis (XMLA), OLE DB, OLE DB para OLAP e OLE DB para mineração de dados conjuntos de linhas de esquema:  
+  Quando você precisa de mais metadados do que os que estão disponíveis no modelo de objeto do ADOMD.NET, o ADOMD.NET oferece o recurso de recuperação de todo o intervalo de conjuntos de linhas do esquema XMLA (XML for Analysis), OLE DB, OLE DB for OLAP e OLE DB for Data Mining:  
   
  **Metadados XML for Analysis**  
  Os conjuntos de linhas do esquema do XML for Analysis oferecem um método para a recuperação de informações de baixo nível sobre o servidor. As informações disponíveis incluem as fontes de dados disponíveis no servidor, as palavras-chave reservadas pelo provedor, o literais suportados pelo provedor e mais. Você pode até usar um conjunto de linhas do esquema do XML for Analysis para descobrir todos os conjuntos de linhas do esquema suportados pelo provedor.  
@@ -81,7 +82,7 @@ ms.lasthandoff: 01/08/2018
   
  [!code-cs[Adomd.NetClient#GetActions](../../analysis-services/multidimensional-models-adomd-net-client/codesnippet/csharp/retrieving-metadata-work_0_1.cs)]  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Recuperando metadados de uma fonte de dados analíticos](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   
