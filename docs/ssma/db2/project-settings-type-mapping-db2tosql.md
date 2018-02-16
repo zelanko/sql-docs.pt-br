@@ -22,10 +22,10 @@ ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 6ab07bb5ad3932c45dacb7aa1b359083f05ec9bf
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Configurações (mapeamento de tipo) do projeto (DB2ToSQL)
 A página mapeamento de tipo do **configurações de projeto** caixa de diálogo contém configurações que personalizam como o SSMA converte tipos de dados do DB2 em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de dados.  
@@ -44,7 +44,7 @@ A tabela a seguir mostra o **mapeamento de tipo** opções da guia:
 **Tipo de Origem**  
 O tipo de dados DB2 mapeado.  
   
-**Tipo de destino**  
+Tipo de destino  
 O destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de dados para o tipo de dados do DB2 especificado.  
   
 Consulte as tabelas na próxima seção para o padrão do SSMA para mapeamentos de tipo DB2.  

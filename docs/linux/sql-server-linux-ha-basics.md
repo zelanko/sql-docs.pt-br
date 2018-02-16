@@ -15,10 +15,10 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
 ms.openlocfilehash: fd2079b0b0186192fc3b55e7a6ccefd25c1a46bc
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Noções básicas de disponibilidade do SQL Server para implantações do Linux
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 02/13/2018
 
 Começando com [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] tem suporte no Linux e Windows. Baseado no Windows, como [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] implantações, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] instâncias e bancos de dados precisam ser altamente disponível em Linux. Este artigo aborda os aspectos técnicos de planejamento e implantação altamente disponível com base em Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] bancos de dados e instâncias, bem como algumas das diferenças de instalações baseadas em Windows. Porque [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] podem ser novos para profissionais de Linux e Linux podem ser novos para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] profissionais, o artigo às vezes apresenta conceitos que podem ser familiar a algumas e não familiar para outras pessoas.
 
-## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Opções de disponibilidade para implantações do Linux
+## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Opções de disponibilidade para implantações do Linux
 Além de backup e restauração, os mesmos recursos de disponibilidade de três estão disponíveis no Linux para implantações com base no Windows:
 -   Grupos de disponibilidade AlwaysOn (grupos de disponibilidade)
 -   Sempre em instâncias de Cluster de Failover (FCIs)
@@ -43,16 +43,16 @@ No Linux, muitos comandos precisam ser executado com privilégios elevados, bem 
 2. O mais comum e segurança consciente maneira executar coisas é usar `sudo` antes de executar qualquer coisa. Muitos dos exemplos neste artigo use `sudo`.
 
 Alguns comandos comuns, cada um deles tem várias opções que podem ser pesquisadas on-line e opções:
--   `cd`– Altere o diretório
--   `chmod`– alterar as permissões de um arquivo ou diretório
--   `chown`– alterar a propriedade de um arquivo ou diretório
--   `ls`– Mostrar o conteúdo de um diretório
--   `mkdir`– Crie uma pasta (diretório) em uma unidade
--   `mv`– Mover um arquivo de um local para outro
--   `ps`– Mostrar todos os processos de trabalho
--   `rm`– Excluir um arquivo localmente em um servidor
--   `rmdir`– Excluir uma pasta (diretório)
--   `systemctl`– Iniciar, interromper ou habilitar os serviços
+-   `cd` – Altere o diretório
+-   `chmod` – alterar as permissões de um arquivo ou diretório
+-   `chown` – alterar a propriedade de um arquivo ou diretório
+-   `ls` – Mostrar o conteúdo de um diretório
+-   `mkdir` – Crie uma pasta (diretório) em uma unidade
+-   `mv` – Mover um arquivo de um local para outro
+-   `ps` – Mostrar todos os processos de trabalho
+-   `rm` – Excluir um arquivo localmente em um servidor
+-   `rmdir` – Excluir uma pasta (diretório)
+-   `systemctl` – Iniciar, interromper ou habilitar os serviços
 -   Comandos do editor de texto. No Linux, há várias opções de editor de texto, como vi e emacs.
 
 ## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>Tarefas comuns para configurações de disponibilidade de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Linux
@@ -96,9 +96,9 @@ Semelhante ao Windows, distribuições do Linux tem um firewall interno. Se sua 
 | 138         | UDP      | Samba (se usado) – datagrama NetBIOS                                                                                          |
 | 139         | TCP      | Samba (se usado) – sessão NetBIOS                                                                                           |
 | 445         | TCP      | Samba (se usado) – SMB sobre TCP                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – porta; padrão Se desejar, pode alterar com`mssql-conf set network.tcpport <portnumber>`                       |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – porta; padrão Se desejar, pode alterar com `mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP, UDP | NFS (se usado)                                                                                                               |
-| 2224        | TCP      | Pacemaker – usada pelo`pcsd`                                                                                                |
+| 2224        | TCP      | Pacemaker – usada pelo `pcsd`                                                                                                |
 | 3121        | TCP      | Pacemaker – necessário se houver nós remotos Pacemaker                                                                    |
 | 3260        | TCP      | iSCSI Initiator (se usado) – pode ser alterado em `/etc/iscsi/iscsid.config` (RHEL), mas deve coincidir com a porta de destino iSCSI |
 | 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -padrão a porta usada para um ponto de extremidade do grupo de disponibilidade; pode ser alterado durante a criação de ponto de extremidade                                |
@@ -203,15 +203,15 @@ O `corosync.conf` arquivo contém a configuração do cluster. Ele está localiz
 
 #### <a name="cluster-log-location"></a>Local do log de cluster
 Locais de log para clusters de Pacemaker diferem dependendo da distribuição.
--   RHEL e SLES-`/var/log/cluster/corosync.log`
+-   RHEL e SLES- `/var/log/cluster/corosync.log`
 -   Ubuntu – `/var/log/corosync/corosync.log`
 
 Para alterar o local de log padrão, modifique `corosync.conf`.
 
-## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Clusters de Pacemaker de plano para[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Clusters de Pacemaker de plano para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 Esta seção discute os pontos importantes de planejamento para um cluster Pacemaker.
 
-### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Clusters de virtualização Pacemaker baseados em Linux para[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Clusters de virtualização Pacemaker baseados em Linux para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 Usar máquinas virtuais para implantar com base em Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] implantações de grupos de disponibilidade e FCIs é coberto pelas mesmas regras de suas contrapartes baseados no Windows. Há um conjunto básico de regras para dar suporte de virtualizado [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] implantações fornecidas pela Microsoft em [Microsoft suporte KB 956893](https://support.microsoft.com/en-us/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Hipervisores diferentes, como Hyper-V do Microsoft e ESXi do VMware podem ter diferentes variações em cima dessa, devido a diferenças nas plataformas próprios.
 
 Quando se trata de grupos de disponibilidade e FCIs em virtualização, certifique-se de que antiafinidade está definida para os nós de um determinado cluster Pacemaker. Quando configurado para alta disponibilidade em uma configuração de grupo de disponibilidade ou FCI, as VMs hospedando [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] nunca deve estar em execução no mesmo host de hipervisor. Por exemplo, se uma FCI de dois nós for implantada, precisaria ser *pelo menos* três hosts de hipervisor para o que há em algum lugar para uma das VMs hospedando um nó para ir em caso de falha do host, especialmente se o uso de recursos, como ao vivo A migração ou vMotion.
