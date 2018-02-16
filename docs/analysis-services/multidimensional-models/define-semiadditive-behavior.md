@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], semiadditive behavior
 - measures [Analysis Services], semiadditive
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f78bd8b53f358b63393b374594ce76d31791c606
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-semiadditive-behavior"></a>Definir um comportamento semiaditivo
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Medidas semiaditivas, que não agregam uniformemente todas as dimensões, são muito comuns em muitos cenários empresariais. Todo cubo que se baseia em instantâneos de balanços, com o decorrer do tempo, apresenta esse problema. Você encontra esses instantâneos em aplicativos que cuidam de títulos, saldos de contas, orçamentos, recursos humanos, apólices de seguros e sinistros e em vários outros domínios empresariais.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Medidas semiaditivas, que não agregam uniformemente todas as dimensões, são muito comuns em muitos cenários empresariais. Todo cubo que se baseia em instantâneos de balanços, com o decorrer do tempo, apresenta esse problema. Você encontra esses instantâneos em aplicativos que cuidam de títulos, saldos de contas, orçamentos, recursos humanos, apólices de seguros e sinistros e em vários outros domínios empresariais.  
   
  Adicione um comportamento semiaditivo a um cubo para definir um método de agregação para medidas ou membros individuais de um atributo de tipo de conta. Se o cubo contiver uma dimensão de conta, é possível definir automaticamente o comportamento semiaditivo de acordo com o tipo de conta.  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Primeiro Filho Não Vazio  
   
--   Nenhum  
+-   Nenhuma  
   
  Essa opção não altera as medidas com uma função de agregação regular: **Sum**, **Min**, **Max**, **Count**ou **Distinct****Count**.  
   
@@ -83,8 +84,8 @@ ms.lasthandoff: 01/08/2018
 |LastChild|O valor do membro é avaliado como o valor de seu último filho juntamente com a dimensão de tempo.|  
 |LastNonEmpty|O valor do membro é avaliado como o valor de seu último filho juntamente com a dimensão que contém dados.|  
 |Max|A função de agregação máxima é aplicada.|  
-|Mín|A função de agregação mínima é aplicada.|  
-|Nenhum|Nenhuma agregação é aplicada.|  
+|Min|A função de agregação mínima é aplicada.|  
+|Nenhum.|Nenhuma agregação é aplicada.|  
 |SUM|A função de soma padrão é aplicada.|  
   
  Qualquer comportamento semiaditivo existente será substituído quando você concluir o assistente.  

@@ -12,25 +12,26 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c10be134f541434543c43c186181b122188a379f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurar o armazenamento de cadeia de caracteres para dimensões e partições
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode reconfigurar o armazenamento de cadeia de caracteres para acomodar cadeias de caracteres muito grandes em atributos de dimensão ou partições que excedem o limite de tamanho de arquivo de 4 GB para repositórios de cadeia de caracteres. Se suas dimensões ou partições incluírem repositórios de cadeias de caracteres desse tamanho, você poderá contornar a restrição de tamanho do arquivo alterando a propriedade **StringStoresCompatibilityLevel** em nível de dimensão ou de partição para objetos locais e vinculados (locais ou remotos).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Você pode reconfigurar o armazenamento de cadeia de caracteres para acomodar cadeias de caracteres muito grandes em atributos de dimensão ou partições que excedem o limite de tamanho de arquivo do 4 GB para repositórios de cadeias de caracteres. Se suas dimensões ou partições incluírem repositórios de cadeias de caracteres desse tamanho, você poderá contornar a restrição de tamanho do arquivo alterando a propriedade **StringStoresCompatibilityLevel** em nível de dimensão ou de partição para objetos locais e vinculados (locais ou remotos).  
   
  Observe que você pode aumentar o armazenamento de cadeia de caracteres apenas nos objetos que exigem capacidade adicional. Na maioria dos modelos multidimensionais, os dados de cadeia de caracteres são associados às dimensões. No entanto, partições que contêm medidas de contagem distintas sobre cadeias de caracteres também podem aproveitar essa configuração. Como a configuração é para cadeias de caracteres, dados numéricos não são afetados.  
   
  Os valores válidos para essa propriedade incluem os seguintes:  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1050**|Especifica a arquitetura de armazenamento de cadeias de caracteres padrão, sujeita a um tamanho de arquivo máximo de 4 GB por repositório.|  
 |**1100**|Especifica um maior armazenamento de cadeias de caracteres, dá suporte a até quatro bilhões de cadeias de caracteres exclusivas por repositório.|  
@@ -92,9 +93,9 @@ ms.lasthandoff: 01/08/2018
   
  Você deve usar a opção Processar Completo em cada objeto que esteja usando a nova arquitetura de repositório de cadeias de caracteres. Antes de processar, execute uma análise de impacto na dimensão para verificar se objetos dependentes também requerem reprocessamento.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Ferramentas e abordagens para processamento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [Processando opções e configurações &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [Opções de processamento e as configurações de &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
  [Modos de armazenamento de partição e processamento](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [Armazenamento de dimensão](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   

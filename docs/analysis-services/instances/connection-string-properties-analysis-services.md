@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 3fa9fd8e7b7c4722e9acf41f0f7229ee0a1f3ef7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connection-string-properties-analysis-services"></a>Propriedades de cadeia de conexão (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tópico documenta as propriedades de cadeia de caracteres de conexão podem ser definidas em uma das ferramentas de designer ou administração ou ver nas cadeias de conexão criadas por aplicativos cliente que se conectam e consultar dados do Analysis Services. Sendo assim, ele aborda apenas um subconjunto das propriedades disponíveis. A lista completa inclui várias propriedades de servidor e de banco de dados, permitindo que você personalize a conexão de um aplicativo específico, independentemente de como a instância ou o banco de dados está configurado no servidor.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Este tópico documenta as propriedades da cadeia de conexão que você pode definir em uma das ferramentas de designer ou de administração, ou que você pode ver nas cadeias de conexão criadas por aplicativos cliente que se conectam aos dados do Analysis Services ou os consultam. Sendo assim, ele aborda apenas um subconjunto das propriedades disponíveis. A lista completa inclui várias propriedades de servidor e de banco de dados, permitindo que você personalize a conexão de um aplicativo específico, independentemente de como a instância ou o banco de dados está configurado no servidor.  
   
  Os desenvolvedores que criam cadeias de conexão personalizadas no código do aplicativo devem examinar a documentação da API do cliente ADOMD.NET para exibir uma lista mais detalhada: <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
@@ -190,13 +191,13 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_encrypt"></a> Criptografando cadeias de conexão  
  O Analysis Services usa suas próprias chaves de criptografia para criptografar cadeias de conexão. Ela não gera um certificado autoassinado.  
   
- O[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criptografa e armazena as cadeias de conexão usadas para a conexão a cada uma de suas fontes de dados. Se a conexão a uma fonte de dados exigir nome de usuário e senha, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode armazenar o nome e a senha com a cadeia de conexão ou solicitar o nome e a senha sempre que for necessário se conectar a uma fonte de dados. Quando o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solicita informações do usuário, isso indica que essas informações não precisam ser armazenadas e criptografadas. No entanto, se essas informações forem armazenadas na cadeia de conexão, será necessário criptografá-las e protegê-las.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criptografa e armazena as cadeias de conexão usadas para conexão a cada fonte de dados. Se a conexão a uma fonte de dados exigir nome de usuário e senha, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode armazenar o nome e a senha com a cadeia de conexão ou solicitar o nome e a senha sempre que for necessário se conectar a uma fonte de dados. Quando o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solicita informações do usuário, isso indica que essas informações não precisam ser armazenadas e criptografadas. No entanto, se essas informações forem armazenadas na cadeia de conexão, será necessário criptografá-las e protegê-las.  
   
  Para criptografar e proteger as informações da cadeia de conexão, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa a API de Proteção aos Dados.  
   
- O[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa uma chave de criptografia separada para criptografar informações da cadeia de conexão para cada banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . O[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cria essa chave durante a criação de um banco de dados e criptografa as informações da cadeia de conexão com base na conta de inicialização do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Quando o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inicia, a chave criptografada para cada banco de dados é lida, descriptografada e armazenada. Em seguida, o[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa a chave descriptografada adequada para descriptografar as informações da cadeia de conexão da fonte de dados quando o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] precisa se conectar a uma fonte de dados.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa uma chave de criptografia separada para criptografar informações da cadeia de conexão para cada banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . O[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cria essa chave durante a criação de um banco de dados e criptografa as informações da cadeia de conexão com base na conta de inicialização do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Quando o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inicia, a chave criptografada para cada banco de dados é lida, descriptografada e armazenada. Em seguida, o[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa a chave descriptografada adequada para descriptografar as informações da cadeia de conexão da fonte de dados quando o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] precisa se conectar a uma fonte de dados.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Configurar o acesso HTTP ao Analysis Services no ISS &#40;Serviços de Informações da Internet &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Configurar o Analysis Services para delegação restrita de Kerberos](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   
  [Provedores de dados usados em conexões do Analysis Services](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)   

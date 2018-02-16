@@ -18,19 +18,20 @@ helpviewer_keywords:
 - adding member properties
 - member properties [Analysis Services], removing
 ms.assetid: 893a9084-d0fe-425c-b251-7518d3b3b65b
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 158e22518b67117f830ba019860bacb95454a73a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-relationships---define-the-relationship-type"></a>Relações de atributo - definir o tipo de relação
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Definir o tipo de relação de uma relação de atributo usando o **relações de atributo** guia no Designer de dimensão, que pode ser acessada em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Você define o tipo de relação de uma relação de atributo usando a guia **Relações de Atributo** do Designer de Dimensão, que pode ser acessada em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-set-the-relationship-type-of-an-attribute-relationship"></a>Para definir o tipo de relação de uma relação de atributo.  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 01/08/2018
   
      Em uma relação flexível, as relações entre membros mudam com o tempo. Em uma relação rígida, as relações entre membros não mudam com o tempo.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Definir relações de atributo](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
   
   

@@ -16,19 +16,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], creating
 - mining models [Analysis Services], modifying
 ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 42ae87b14d6ddff90b78bb3c23a7d536750d8317
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Adicionar modelos de mineração a uma estrutura (Analysis Services - Mineração de dados)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma estrutura de mineração destina-se a dar suporte a vários modelos de mineração. Portanto, após a finalização do assistente, você poderá abrir a estrutura e adicionar novos modelos de mineração. Cada vez que você cria um modelo, pode usar um algoritmo diferente, alterar os parâmetros ou aplicar filtros para usar com um subconjunto diferente dos dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Uma estrutura de mineração é destinada a dar suporte a diversos modelos de mineração. Portanto, após a finalização do assistente, você poderá abrir a estrutura e adicionar novos modelos de mineração. Cada vez que você cria um modelo, pode usar um algoritmo diferente, alterar os parâmetros ou aplicar filtros para usar com um subconjunto diferente dos dados.  
   
 ## <a name="adding-new-mining-models"></a>Adicionando novos modelos de mineração  
  Ao usar o Assistente de Mineração de Dados para criar um novo modelo de mineração, por padrão você deve sempre criar primeiro uma estrutura de mineração. O assistente em seguida dá a você a opção de adicionar um modelo de mineração inicial à estrutura. No entanto, não é necessário criar um modelo imediatamente. Se apenas a estrutura for criada, você não precisa tomar uma decisão sobre qual coluna deve ser usada como o atributo previsível ou sobre como usar os dados em um modelo específico. Em vez disso, configure a estrutura de dados geral que deseja usar no futuro e, posteriormente, use o [Designer de Mineração de Dados](../../analysis-services/data-mining/data-mining-designer.md) para adicionar novos modelos de mineração baseados na estrutura.  
@@ -63,8 +64,8 @@ ms.lasthandoff: 01/08/2018
 ## <a name="specifying-column-content"></a>Especificando o conteúdo da coluna  
  Para algumas colunas, talvez seja necessário especificar o *conteúdo da coluna*também. Na mineração de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a propriedade Tipo de Conteúdo de cada coluna de dados informa como o algoritmo deve processar os dados da coluna. Por exemplo, se seus dados tiverem uma coluna Receita, você deve especificar que a coluna contém números contínuos definindo o tipo de conteúdo como Contínuo. No entanto, também é possível especificar que os números da coluna Receita sejam agrupados em blocos definindo o tipo de conteúdo como Diferenciado e, opcionalmente, especificando o número exato de blocos. Você pode criar modelos que manipulam colunas de modos diferentes; por exemplo, é possível criar um modelo que agrupa clientes em três faixas etárias e outro modelo que agrupa clientes em 10 faixas etárias.  
   
-## <a name="see-also"></a>Consulte Também  
- [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte também  
+ [Estruturas de mineração &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Criar uma estrutura de mineração relacional](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
  [Propriedades do modelo de mineração](../../analysis-services/data-mining/mining-model-properties.md)   
  [Colunas do modelo de mineração](../../analysis-services/data-mining/mining-model-columns.md)  

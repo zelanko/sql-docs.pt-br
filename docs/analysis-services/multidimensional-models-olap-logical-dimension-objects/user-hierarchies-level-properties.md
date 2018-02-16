@@ -11,24 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - user hierarchies [Analysis Services]
 - hierarchies [Analysis Services], user
 ms.assetid: dabb7335-887b-442a-b67c-4901ba1242b7
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: db94622cfc84d97cb6f8e7578421f4933a63af94
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="user-hierarchies---level-properties"></a>Hierarquias de usuário - propriedades de nível
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A tabela a seguir lista e descreve as propriedades de um nível em uma hierarquia definida pelo usuário.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+A tabela a seguir lista e descreve as propriedades de um nível em uma hierarquia definida pelo usuário.  
   
 |Propriedade|Description|  
 |--------------|-----------------|  
@@ -38,7 +40,7 @@ ms.lasthandoff: 01/08/2018
 |Nome|Contém o nome amigável do nível. Por padrão, o nome de um nível é igual ao nome do atributo de origem.|  
 |SourceAttribute|Contém o nome do atributo de origem no qual o nível tem como base.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Propriedades de hierarquia de usuário](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   
   

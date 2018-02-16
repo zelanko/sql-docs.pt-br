@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: cd17ad086169a53673d7c9ba48f79058dd87769d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>Códigos de tipo de objeto de Analysis Services usados em traços
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Esta página lista o tipo de objeto (um número com seis dígitos) de cada objeto em um modelo de dados do Analysis Services. Estes códigos aparecem em logs de rastreamento e são usados para identificar o tipo de objeto associado a um bloqueio específico. Por exemplo, um tempo limite de bloqueio em um banco de dados indicará o tipo de objeto 100002, que é o tipo de objeto de banco de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Esta página exibe o tipo de objeto (um número com seis dígitos) de cada objeto em um modelo de dados do Analysis Services. Estes códigos aparecem em logs de rastreamento e são usados para identificar o tipo de objeto associado a um bloqueio específico. Por exemplo, um tempo limite de bloqueio em um banco de dados indicará o tipo de objeto 100002, que é o tipo de objeto de banco de dados.  
   
 > [!NOTE]  
 >  Há mais códigos listados abaixo do que realmente aparecerá em um log de rastreamento. A lista abaixo é uma lista abrangente dos códigos de tipo para cada objeto, mas apenas objetos que fazem um bloqueio apresentará um código de tipo de objeto em um log de rastreamento.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 01/08/2018
 |100002|banco de dados|  
 |100003|DataSource|  
 |100004|DataPermission|  
-|100005|Role|  
+|100005|Função|  
 |100006|Dimensão|  
 |100007|DimensionAttribute|  
 |100008|Hierarquia|  
@@ -73,13 +74,13 @@ ms.lasthandoff: 01/08/2018
 |100047|CubeAttributePermission|  
 |100048|CellPermission|  
 |100049|CubeDimensionPermission|  
-|100050|Trace|  
+|100050|Rastreamento|  
 |100051|ServerAssembly|  
 |100052|CubeAssembly|  
 |100053|Comando|  
 |100054|KPI|  
 |100055|DataSourceView|  
-|100056|Perspectiva|  
+|100056|Perspective|  
 |100100|CommandCollection|  
 |100101|DatabaseCollection|  
 |100102|DataSourceCollection|  

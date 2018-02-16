@@ -16,19 +16,20 @@ helpviewer_keywords:
 - name columns [Analysis Services]
 - attributes [Analysis Services], binding
 ms.assetid: 467f0cf3-8691-476d-a7fb-a5df4e374eaf
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 4b17e4ed33f172dd109fdd3aad43269a0daf31b3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>Propriedades de atributo - associar um atributo a uma coluna de nome
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este procedimento descreve como associar um atributo manualmente a uma coluna de nome usando o **atributos** painel no Designer de dimensão e usando o **associação de objetos** caixa de diálogo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Este procedimento descreve como associar um atributo manualmente a uma coluna de nome, usando o painel **Atributos** no Designer de Dimensão e usando a caixa de diálogo **Associação de Objetos** .  
   
 ### <a name="to-bind-an-attribute-to-a-name-column"></a>Para associar um atributo a uma coluna de nome  
   

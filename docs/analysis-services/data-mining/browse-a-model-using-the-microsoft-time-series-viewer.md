@@ -20,19 +20,20 @@ helpviewer_keywords:
 - continuous columns
 - regression algorithms [Analysis Services]
 ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6eaa320911fbba0f46472750bde9293b36430b46
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Procurar um modelo usando o Visualizador MTS
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] visualizador MTS no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exibe os modelos de mineração criados com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo MTS. O algoritmo MTS da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de regressão que cria modelos de mineração de dados para previsão de colunas contínuas, tais como vendas de produtos, em um cenário de previsão. Esses modelos de série temporal podem incluir informações baseadas em diferentes algoritmos:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O Visualizador Time Series da [!INCLUDE[msCoName](../../includes/msconame-md.md)] no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exibe modelos de mineração que são criados com o algoritmo MTS da [!INCLUDE[msCoName](../../includes/msconame-md.md)]. O algoritmo MTS da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de regressão que cria modelos de mineração de dados para previsão de colunas contínuas, tais como vendas de produtos, em um cenário de previsão. Esses modelos de série temporal podem incluir informações baseadas em diferentes algoritmos:  
   
 -   O algoritmo ARTxp foi otimizado para previsão a curto prazo.  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 01/08/2018
  **Observação** As informações indicadas para o conteúdo do modelo e na Legenda de Mineração dependem do algoritmo usado pelo modelo. Porém, as guias **Modelo** e **Gráficos** são as mesmas, independentemente da combinação de algoritmos.  
   
 ###  <a name="BKMK_Tree"></a> Modelo  
- Quando um modelo de série temporal é criado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] apresenta o modelo concluído como uma árvore. Se seus dados tiverem várias séries de casos, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criará uma árvore separada para cada série. Por exemplo, você está prevendo vendas para o Pacífico, América do Norte e regiões da Europa. As previsões para cada uma destas regiões são série de caso. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cria uma árvore separada para cada uma destas séries. Para exibir uma série específica, selecione-a na lista **Árvore** .  
+ Quando um modelo de série temporal é criado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] apresenta o modelo concluído como uma árvore. Se seus dados tiverem várias séries de casos, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criará uma árvore separada para cada série. Por exemplo, você está prevendo vendas para o Pacífico, América do Norte e regiões da Europa. As previsões para cada uma destas regiões são série de caso. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cria uma árvore separada para cada uma destas séries. Para exibir uma série específica, selecione-a na lista **Árvore** .  
   
  Para cada árvore, o modelo de série temporal contém um nó **Todos** e, depois, se divide em vários nós que representam estruturas periódicas identificadas pelo algoritmo. Você pode clicar em cada nó para exibir estatísticas tais como o número de casos e a equação.  
   
@@ -91,10 +92,10 @@ ms.lasthandoff: 01/08/2018
   
  [Voltar ao Início](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>Consulte Também  
- [Tarefas e instruções do visualizador do modelo de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+## <a name="see-also"></a>Consulte também  
+ [Tarefas do Visualizador do modelo e instruções de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Algoritmo MTS](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Exemplos de consulta de modelo de série temporal](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Visualizadores do modelo de Mineração de dados](../../analysis-services/data-mining/data-mining-model-viewers.md)  
+ [Visualizadores do modelo de mineração de dados](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

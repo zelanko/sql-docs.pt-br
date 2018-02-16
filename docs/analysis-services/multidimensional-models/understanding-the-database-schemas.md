@@ -19,19 +19,20 @@ helpviewer_keywords:
 - staging area schema options [Analysis Services]
 - denormalized schemas
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 05f62f6beb2e248fc2e0c3ae405f8893c33c10e9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="understanding-the-database-schemas"></a>Entendendo os esquemas de banco de dados
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O Assistente de geração de esquema gera um esquema relacional não normalizado para o banco de dados de área de assunto com base nas dimensões e grupos de medidas em [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O assistente gera uma tabela relacional para cada dimensão para armazenar dados da dimensão, chamada tabela de dimensões, e uma tabela relacional para cada grupo de medidas para armazenar dados de fatos, chamada tabela de fatos. O assistente ignora dimensões vinculadas, grupos de medidas vinculados e dimensões de tempo de servidor ao gerar essas tabelas relacionais.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+O Assistente de Geração de Esquema gera um esquema relacional não normalizado para o banco de dados da área de assunto com base nas dimensões e nos grupos de medidas do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O assistente gera uma tabela relacional para cada dimensão para armazenar dados da dimensão, chamada tabela de dimensões, e uma tabela relacional para cada grupo de medidas para armazenar dados de fatos, chamada tabela de fatos. O assistente ignora dimensões vinculadas, grupos de medidas vinculados e dimensões de tempo de servidor ao gerar essas tabelas relacionais.  
   
 ## <a name="validation"></a>Validação  
  Antes de começar a gerar o esquema relacional subjacente, o Assistente de Geração de Esquema valida os cubos e dimensões do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se detectar erros, o assistente parará e os reportará na janela Lista de Tarefas do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. São exemplos de erros que impedem a geração:  
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Ocorrerá um erro se mais de uma atributo de chave for especificado na dimensão na qual se baseia a tabela de dimensões.  
   
- Translations  
+ Traduções  
  O assistente gera uma tabela separada para manter os valores traduzidos para qualquer atributo que precise de uma coluna de tradução. O assistente cria também uma coluna separada para cada um dos idiomas necessários.  
   
 ## <a name="fact-tables"></a>Tabelas de fatos  
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
   
  Se você decidir impor a integridade referencial, restrições de integridade referencial serão geradas entre as tabelas de dimensões e as tabelas de fatos sempre que aplicável.  
   
- Translations  
+ Traduções  
  O assistente gera uma tabela separada para manter os valores traduzidos para qualquer propriedade do grupo de medidas que precise de uma coluna de tradução. O assistente cria também uma coluna separada para cada um dos idiomas necessários.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Conversão do tipo de dados e comprimentos padrão  
@@ -100,8 +101,8 @@ ms.lasthandoff: 01/08/2018
 |CustomRollupPropertiesColumn|500|  
 |UnaryOperatorColumn|1|  
   
-## <a name="see-also"></a>Consulte Também  
- [Entendendo a geração com incremento](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
- [Gerenciar alterações em exibições da fonte de dados e em fontes de dados](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
+## <a name="see-also"></a>Consulte também  
+ [Noções básicas sobre geração Incremental](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
+ [Gerenciar alterações em exibições da fonte de dados e fontes de dados](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
   
   

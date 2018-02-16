@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 103d42ffa1f2f4bc823c8b95327347323f0ccf86
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Noções básicas sobre o Power View para modelos multidimensionais
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este artigo descreve o recurso Power View para modelos multidimensionais no SQL Server e fornece informações importantes para profissionais de BI e administradores que pretendem implementar o Power View para modelos multidimensionais na respectiva organização.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Este artigo descreve o recurso Power View para Modelos Multidimensionais no SQL Server e oferece informações importantes para profissionais de BI e administradores que pretendem implementar o Power View para Modelos Multidimensionais na respectiva organização.  
   
  Os modelos multidimensionais oferecem modelagem de dados OLAP, armazenamento e soluções de análise líderes de mercado. Os modelos multidimensionais no SQL Server oferecem suporte à análise de dados ad-hoc, exploração e visualização usando o Microsoft Power View.  
   
@@ -63,12 +64,12 @@ ms.lasthandoff: 01/08/2018
 |-----------------------------|--------------------|  
 |Cube|Modelo|  
 |Dimensão do cubo|Table|  
-|Atributos de dimensão (chave(s), nome)|coluna|  
+|Atributos de dimensão (chave(s), nome)|Coluna|  
 |Grupo de Medidas|Tabela|  
 |Measure|Measure|  
 |Medida sem um grupo de medidas|Em uma tabela chamada Medidas|  
 |Grupo de Medidas Cubo Dimensão Relação|Relação|  
-|Perspectiva|Perspectiva|  
+|Perspective|Perspective|  
 |KPI|KPI|  
 |Hierarquias pai-filho/usuário|Hierarquia|  
 |Exibir Pasta|Exibir Pasta|  

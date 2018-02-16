@@ -23,19 +23,20 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: eb5669b2043c34cb9a960b92abae6b76df36daea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="feature-selection-data-mining"></a>Seleção de recursos (mineração de dados)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Seleção de recursos* é uma parte importante de aprendizado de máquina. Seleção de recursos refere-se ao processo de reduzir as entradas para a análise e processamento ou de localizar as entradas mais significativas. Um termo relacionado, a *engenharia de recursos* (ou *extração de recursos*), refere-se ao processo de extração de informações úteis ou recursos dos dados existentes.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  A *seleção de recursos* é uma parte importante do aprendizado de máquina. Seleção de recursos refere-se ao processo de reduzir as entradas para a análise e processamento ou de localizar as entradas mais significativas. Um termo relacionado, a *engenharia de recursos* (ou *extração de recursos*), refere-se ao processo de extração de informações úteis ou recursos dos dados existentes.  
   
 ## <a name="why-do-feature-selection"></a>O que significa a seleção de recursos?  
  A seleção de recursos é essencial para a criação de um bom modelo por vários motivos. Um deles é que a seleção de recursos implica um certo grau de *redução de cardinalidade*para impor um corte no número de atributos que podem ser considerados ao criar um modelo. Os dados quase sempre contém mais informações do que o necessário para criar o modelo ou o tipo errado de informações. Por exemplo, você pode ter um conjunto de dados com 500 colunas que descrevem as características dos clientes; no entanto, se os dados de algumas das colunas forem muito esparsos, não será muito benéfico adicioná-los ao modelo, e se algumas das colunas forem duplicatas de outras, usar as duas colunas poderá afetar o modelo.  
@@ -114,7 +115,7 @@ ms.lasthandoff: 01/08/2018
   
 |Algoritmo|Método de análise|Comentários|  
 |---------------|------------------------|--------------|  
-|Naive Bayes|Entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|O algoritmo Microsoft Naïve Bayes aceita somente atributos discretos ou diferenciados; portanto, não pode usar a pontuação de interesse.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Naive Bayes Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md).|  
+|Naive Bayes|entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|O algoritmo Microsoft Naïve Bayes aceita somente atributos discretos ou diferenciados; portanto, não pode usar a pontuação de interesse.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Naive Bayes Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md).|  
 |Árvores de decisão|Pontuação de interesse<br /><br /> Entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Se qualquer coluna contiver valores contínuos não binários, a pontuação de interesse será usada em todas as colunas para garantir a consistência. Caso contrário, será usado o método de seleção de recursos padrão ou o método que você especificou quando criou o modelo.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Decision Trees Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md).|  
 |Rede neural|Pontuação de interesse<br /><br /> Entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|O algoritmo Redes Neurais da Microsoft pode usar ambos os métodos Bayesiano e baseado em entropia, desde que os dados contenham colunas contínuas.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md).|  
 |Regressão logística|Pontuação de interesse<br /><br /> Entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Embora o algoritmo de Regressão Logística da Microsoft se baseie no algoritmo Rede Neural da Microsoft, você não pode personalizar modelos de regressão logística para controlar o comportamento de seleção de recursos; portanto, a seleção de recursos sempre usa o método mais apropriado para o atributo por padrão.<br /><br /> Se todos os atributos forem discretos ou diferenciados, o padrão será BDEU.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Logistic Regression Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md).|  
@@ -137,7 +138,7 @@ ms.lasthandoff: 01/08/2018
   
  Além destes métodos para seleção de recursos, você pode melhorar a capacidade de o algoritmo identificar ou promover atributos significativos definindo *sinalizadores de modelagem* no modelo ou definindo *sinalizadores de distribuição* na estrutura. Para obter mais informações sobre esses conceitos, consulte [Sinalizadores de modelagem &#40;Data Mining&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md) e [Distribuições de colunas &#40;Data Mining&#41;](../../analysis-services/data-mining/column-distributions-data-mining.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Personalizar os modelos de mineração e a estrutura](../../analysis-services/data-mining/customize-mining-models-and-structure.md)  
   
   

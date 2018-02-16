@@ -17,19 +17,20 @@ helpviewer_keywords:
 - mining structures [Analysis Services], nested tables
 - adding nested tables
 ms.assetid: 6cf9c701-9cff-4fae-94c2-73796c24ef59
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d5495f39dfd44c27326592f2efe34e66f4392440
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>Adicionar uma tabela aninhada a uma estrutura de mineração
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Use o Designer de mineração de dados para adicionar uma tabela aninhada a uma estrutura de mineração depois que ele foi criado pelo Assistente de mineração de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Use o Designer de Mineração de Dados para adicionar uma tabela aninhada a uma estrutura de mineração após ela ter sido criada pelo Assistente de Mineração de Dados.  
   
 ### <a name="to-add-a-nested-table-to-a-mining-structure"></a>Para adicionar uma tabela aninhada a uma estrutura de mineração  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
      Uma nova coluna de tabela que contém a coluna de chave é adicionada à estrutura de mineração. Para obter mais informações sobre como adicionar colunas extras, consulte [Adicionar colunas a uma estrutura de mineração](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md).  
   
-## <a name="see-also"></a>Consulte Também  
- [Tarefas e instruções da estrutura de mineração](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+## <a name="see-also"></a>Consulte também  
+ [Tarefas de estrutura de mineração e instruções](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

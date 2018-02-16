@@ -18,10 +18,10 @@ ms.author: maghan
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: fca144fd34a3b0e506ab19daba46c16b3760a0e8
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>Escolhendo ferramentas de BI (Business Intelligence) da Microsoft para análise e relatório
 Escolher a ferramenta de business intelligence correta pode ser muito complicado. Saiba mais sobre as diferentes ofertas da Microsoft e encontre a que atende melhor às suas necessidades.

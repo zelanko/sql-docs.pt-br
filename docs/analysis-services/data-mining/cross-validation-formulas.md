@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2d472fce002938f8305d0429937482181cee990d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="cross-validation-formulas"></a>Fórmulas de validação cruzada
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando você gerar um relatório de validação cruzada, ele contém medidas de precisão para cada modelo, dependendo do tipo de modelo de mineração (ou seja, o algoritmo que foi usado para criar o modelo), o tipo de dados do atributo previsível e o atributo previsível valor, se houver.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Quando você gera um relatório de validação cruzada, ele contém medidas de exatidão para cada modelo, dependendo do tipo de modelo de mineração (ou seja, o algoritmo que foi usado para criar o modelo), o tipo de dados do atributo previsível, e o valor do atributo previsível, se qualquer.  
   
  Esta seção lista as medidas usadas no relatório de validação cruzada e descrevem o método de cálculo.  
   
@@ -50,8 +51,8 @@ ms.lasthandoff: 01/08/2018
 |**Erro de quadrado da média de raiz**|Atributos diferenciados. Valor designado pode ser especificado mas não é necessário.|Raiz quadrada da média dos quadrados de complemento da pontuação de probabilidade, dividida pelo número de casos na partição, excluindo as linhas com valores ausentes para o atributo de destino.|  
 |**Erro de quadrado da média de raiz**|Atributo diferenciado, nenhum destino especificado.|Raiz quadrada da média dos quadrados de complemento da pontuação de probabilidade, dividida pelo número de casos na partição, excluindo os casos com valores ausentes para o atributo de destino.|  
   
-## <a name="see-also"></a>Consulte Também  
- [Teste e validação &#40;Mineração de dados&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
+## <a name="see-also"></a>Consulte também  
+ [Teste e validação &#40; mineração de dados &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
  [Validação cruzada &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
   
   

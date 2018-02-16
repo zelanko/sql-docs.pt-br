@@ -18,19 +18,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 - architecture [Analysis Services]
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 3f6e0b1540d9dc1072e7370b50cfa8736894b712
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Arquitetura lógica (Analysis Services – Mineração de Dados)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Mineração de dados é um processo que envolve a interação de vários componentes.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+A mineração de dados é um processo que envolve a interação de vários componentes.  
   
 -   Você acessa fontes de dados em um banco de dados SQL Server ou em qualquer outra fonte de dados para usá-los para treinamento, teste e previsão.  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 01/08/2018
  Para obter mais informações, consulte [Gerenciamento de assemblies de modelo multidimensional](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md).  
   
  **Procedimentos armazenados personalizados**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]mineração de dados oferece suporte ao uso de procedimentos armazenados para trabalhar com objetos de mineração de dados. Você pode criar seus próprios procedimentos armazenados para estender a funcionalidade e trabalhar mais facilmente com dados retornados por consultas de previsão e consultas de conteúdo.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] A mineração de dados dá suporte ao uso de procedimentos armazenados para trabalhar com objetos de mineração de dados. Você pode criar seus próprios procedimentos armazenados para estender a funcionalidade e trabalhar mais facilmente com dados retornados por consultas de previsão e consultas de conteúdo.  
   
  [Definindo procedimentos armazenados](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
@@ -104,15 +105,15 @@ ms.lasthandoff: 01/08/2018
  Além disso, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contém muitos procedimentos armazenados do sistema que são usados internamente para mineração de dados. Embora os procedimentos armazenados do sistema sejam para uso interno, você pode achá-los atalhos úteis. A Microsoft reserva-se o direito de alterar estes procedimentos armazenados conforme o necessário; portanto, para uso de produção, nós recomendamos que você crie consultas usando DMX, AMO ou XMLA.  
   
  **Algoritmos de plug-in personalizado**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Fornece um mecanismo para criar seus próprios algoritmos e, em seguida, adicioná-los como um novo serviço de mineração de dados para a instância do servidor.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece um mecanismo para criar seus próprios algoritmos e, em seguida, adicioná-los como um novo serviço de mineração de dados à instância de servidor.  
   
  O Analysis Services usa interfaces COM para se comunicar com algoritmos de plugin. Para saber mais sobre como implementar novos algoritmos, consulte [Algoritmos de plug-in](../../analysis-services/data-mining/plugin-algorithms.md).  
   
  É necessário registrar cada novo algoritmo antes de poder usá-los. Para registrar um algoritmo, você adiciona os metadados necessários para os algoritmos no arquivo .ini da instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Você deve adicionar as informações a cada instância onde planeja usar o novo algoritmo. Depois de adicionar o algoritmo, você poderá reiniciar a instância e usar o conjunto de linhas de esquema MINING_SERVICES para exibir o novo algoritmo, inclusive as opções e os provedores ao qual o algoritmo dá suporte.  
   
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Referência de DMX &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [Extensões de mineração de dados &#40; DMX &#41; Referência](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

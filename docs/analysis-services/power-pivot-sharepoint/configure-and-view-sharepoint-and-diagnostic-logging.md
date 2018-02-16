@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
 ms.openlocfilehash: ed3dbf6b45af894f4f2f841d7c8b3496a332028f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Configurar e exibir o log de diagnóstico e SharePoint
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] operações de servidor, eventos e mensagens são registradas em arquivos de log do SharePoint. Use as informações deste tópico para configurar informações de níveis de log e do arquivo de log de exibição. Você pode controlar quais eventos de servidor do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] são registrados em log no arquivo. Você também pode controlar a severidade de mensagens que são registradas em log. Para obter mais informações, consulte [Configurar a coleta de dados de uso para o &#40;Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] são registrados em arquivos de log do SharePoint. Use as informações deste tópico para configurar informações de níveis de log e do arquivo de log de exibição. Você pode controlar quais eventos de servidor do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] são registrados em log no arquivo. Você também pode controlar a severidade de mensagens que são registradas em log. Para obter mais informações, consulte [Configurar a coleta de dados de uso para o &#40;Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  Neste tópico:  
   
@@ -124,13 +125,13 @@ ms.lasthandoff: 01/08/2018
   
 |Processar|Área|Categoria|Nível|Mensagem|Detalhes|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
-|w3wp.exe|Serviço do[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] |Uso|Detalhado|Não há nenhuma estatística de solicitação atual, nada para registrar em log.|A intervalos predefinidos, o serviço reporta estatísticas de resposta de consulta como um evento de uso para o sistema de coleta de dados de uso. Esta mensagem indica que não havia nenhuma estatística de consulta para reportar.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Serviço|Uso|Detalhado|Não há nenhuma estatística de solicitação atual, nada para registrar em log.|A intervalos predefinidos, o serviço reporta estatísticas de resposta de consulta como um evento de uso para o sistema de coleta de dados de uso. Esta mensagem indica que não havia nenhuma estatística de consulta para reportar.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Serviço|Front-end da Web|Detalhado|Começando a localizar um servidor de aplicativos para fonte de dados =\<*caminho*>|Quando ele receber uma solicitação de conexão, o serviço [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] identifica um [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] disponível para gerenciar a solicitação. Se houver somente um servidor no farm, o servidor local aceitará a solicitação em todos os casos.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Serviço|Front-end da Web|Detalhado|Localizando o servidor de aplicativos bem-sucedido.|A solicitação foi alocada para um aplicativo de serviço do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Serviço|Front-end da Web|Detalhado|Solicitação de redirecionamento para o \< *origem do PowerPivotdata*> para o [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|A solicitação foi encaminhada para o [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|  
-|w3wp.exe|Serviço do[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] |Processamento de solicitação|Detalhado|Solicitação de redirecionamento para UserName\<*usuário do SharePoint*> para o banco de dados|Uma conexão representada para a fonte de dados do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] foi criada em nome do usuário do SharePoint.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Serviço|Processamento de solicitação|Detalhado|Solicitação de redirecionamento para UserName\<*usuário do SharePoint*> para o banco de dados|Uma conexão representada para a fonte de dados do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] foi criada em nome do usuário do SharePoint.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Coleta de dados de uso do PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)   
  [Exibir e ler arquivos de log da Instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Configurar a coleta de dados de uso para o &#40;Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  

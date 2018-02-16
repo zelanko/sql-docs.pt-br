@@ -18,19 +18,20 @@ helpviewer_keywords:
 - cubes [Analysis Services], actions
 - OLAP objects [Analysis Services], actions
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bd000979f6a7db2ea3da1b449312193edaa2c6ef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Ações (Analysis Services – Dados Multidimensionais)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]As ações podem ser de tipos diferentes e devem ser criadas adequadamente. As ações podem ser:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+As ações podem ser de tipos diferentes e devem ser criadas adequadamente. As ações podem ser:  
   
 -   Ações de detalhamento, que retornam o conjunto de linhas que representa os dados subjacentes das células selecionadas do cubo onde a ação ocorre.  
   
@@ -65,19 +66,19 @@ ms.lasthandoff: 01/08/2018
 |Tipo de ação|Description|  
 |-----------------|-----------------|  
 |CommandLine|Executa um comando no prompt de comando.|  
-|Dataset|Retorna um conjunto de dados a um aplicativo cliente.|  
+|Conjunto de dados|Retorna um conjunto de dados a um aplicativo cliente.|  
 |Detalhamento|Retorna uma instrução de detalhamento como uma expressão e que o cliente executa para retornar um conjunto de dados.|  
 |Html|Executa um script HTML em um navegador de Internet.|  
 |Proprietário|Executa uma operação usando uma interface diferente das listadas nesta tabela.|  
 |Relatório|Envia uma solicitação com base em URL parametrizada para um servidor de relatórios e retorna um relatório a um aplicativo cliente.|  
 |Conjunto de linhas|Retorna um conjunto de linhas a um aplicativo cliente.|  
-|de|Executa um comando OLE DB.|  
+|Instrução|Executa um comando OLE DB.|  
 |URL|Exibe uma página da Web dinâmica em um navegador de Internet.|  
   
 ## <a name="resolving-and-executing-actions"></a>Resolvendo e executando ações  
  Quando um usuário empresarial acessa o objeto pra o qual o objeto de comando está definido, a instrução associada à ação é automaticamente resolvida, o que o torna disponível para o aplicativo cliente, mas a ação não é executada automaticamente. A ação só é executada quando o usuário empresarial executar a operação específica ao cliente que inicia a ação. Por exemplo, um aplicativo cliente pode exibir uma lista de ações como menu pop-up, quando o usuário empresarial clica com o botão direito do mouse em um membro ou célula em particular.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Ações em modelos multidimensionais](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   

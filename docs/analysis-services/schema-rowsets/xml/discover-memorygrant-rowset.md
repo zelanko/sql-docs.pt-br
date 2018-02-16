@@ -1,5 +1,5 @@
 ---
-title: Conjunto de linhas DISCOVER_MEMORYGRANT | Microsoft Docs
+title: DISCOVER_MEMORYGRANT Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: analysis-services
@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: d254e42d-9918-47ce-b6df-47f1f0b432dd
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9bf3896348044d084144fd2276ff31f617b202c3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovermemorygrant-rowset"></a>Conjunto de linhas DISCOVER_MEMORYGRANT
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Retorna uma lista de memória interna concessões de cota que são usadas por trabalhos que estão sendo executados no servidor. Para descobrir se um trabalho está sendo executado no servidor, use `Select * from $System.Discover_Jobs`.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Retorna uma lista de concessões de cota de memória interna que são usadas por trabalhos atualmente em execução no servidor. Para descobrir se um trabalho está sendo executado no servidor, use `Select * from $System.Discover_Jobs`.  
   
  **Aplica-se a:** modelos de tabela, modelos multidimensionais  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 01/08/2018
 |**LastRequestTime**|**DBTYPE_DBTIMESTAMP**||A hora em que a solicitação de cota foi modificada pela última vez.|  
 |**MemoryUsed**|**DBTYPE_I4**||A quantidade de memória usada em associação com a cota.|  
 |**MemoryGranted**|**DBTYPE_I4**||A quantidade de memória concedida para uso pelo trabalho que está obtendo a cota de memória.|  
-|**Bloqueado**|**DBTYPE_BOOL**||Um booliano que indica o status de bloqueio do trabalho. True indica que o trabalho está bloqueado, aguardando que outro trabalho libere uma cota suficiente para conceder sua solicitação de cota. False indica que o trabalho recebeu sua cota e pode ser executado.|  
+|**Blocked**|**DBTYPE_BOOL**||Um booliano que indica o status de bloqueio do trabalho. True indica que o trabalho está bloqueado, aguardando que outro trabalho libere uma cota suficiente para conceder sua solicitação de cota. False indica que o trabalho recebeu sua cota e pode ser executado.|  
   
  Este conjunto de linhas do esquema não é classificado.  
   
@@ -54,7 +56,7 @@ ms.lasthandoff: 01/08/2018
 |GUID|a07ccd23-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|MemoryGrant|  
   
-## <a name="see-also"></a>Consulte Também  
- [Conjunto de linhas de esquema do XML](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+## <a name="see-also"></a>Consulte também  
+ [XML for Analysis conjuntos de linhas de esquema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

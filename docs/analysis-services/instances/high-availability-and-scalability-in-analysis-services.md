@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: ac8292e9319bef3d535ff6f3977b50ac22805e27
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Alta disponibilidade e escalabilidade no Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este artigo descreve as técnicas mais usadas para tornar os bancos de dados do Analysis Services alta disponibilidade e escalonáveis. Embora cada objetivo possa ser atingido separadamente, na realidade, eles muitas vezes ocorrem simultaneamente: uma implantação escalável para grandes cargas de trabalho de processamento ou consulta normalmente é acompanhada por expectativas de alta disponibilidade.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Este artigo descreve as técnicas mais usadas para fazer com que os bancos de dados do Analysis Services sejam de alta disponibilidade e escalonáveis. Embora cada objetivo possa ser atingido separadamente, na realidade, eles muitas vezes ocorrem simultaneamente: uma implantação escalável para grandes cargas de trabalho de processamento ou consulta normalmente é acompanhada por expectativas de alta disponibilidade.  
   
  No entanto, o inverso nem sempre é verdadeiro. A alta disponibilidade, sem escala, pode ser o único objetivo em casos de contratos de nível de serviço rigorosos para cargas de trabalho de consulta de missão crítica, mas moderadas.  
   
@@ -106,7 +107,7 @@ ms.lasthandoff: 01/08/2018
  
  Instruções e informações detalhadas sobre a implantação do Analysis Services em um cluster de failover são fornecidas neste white paper: [Como Clusterizar o SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx). Embora elas tenham sido escritas para o SQL Server 2012, essas diretrizes ainda se aplicam às versões mais recentes do Analysis Services.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Sincronizar bancos de dados do Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
  [Forçar a afinidade para bancos de dados tabulares do Analysis Services](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
  [Um estudo de caso do Analysis Services: Usando modelos de tabela em uma solução comercial em larga escala](https://msdn.microsoft.com/library/dn751533.aspx)  

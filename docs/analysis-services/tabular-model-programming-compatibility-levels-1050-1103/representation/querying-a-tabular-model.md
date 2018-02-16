@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 024fd5fb264f4fce86d0c2f28f2558ccfa9e800a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="querying-a-tabular-model"></a>Consultando um modelo de tabela
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Como um desenvolvedor, consultar um modelo de tabela significa recuperar dados do banco de dados tabular; para atingir essa meta, você tem duas opções: usar consultas de tabela no DAX, ou usar o MDX e recuperar os dados provenientes de um cubo. Entretanto, dependendo do modo subjacente de seu modelo de tabela, você pode ficar restrito a usar apenas consultas de tabela DAX; o modo DirectQuery requer o uso de consultas de tabela DAX.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Como um desenvolvedor, consultar um modelo de tabela significa recuperar dados do banco de dados de tabela; para atingir esta meta, você tem duas opções: usar consultas de tabela no DAX, ou usar o MDX e recuperar os dados como provenientes de um cubo. Entretanto, dependendo do modo subjacente de seu modelo de tabela, você pode ficar restrito a usar apenas consultas de tabela DAX; o modo DirectQuery requer o uso de consultas de tabela DAX.  
   
 ## <a name="querying-with-adomdnet"></a>Consultando com o ADOMD.Net  
  O uso do ADOMD.Net para consultar um modelo de tabela é simples e flexível; você pode enviar instruções MDX ou expressões de consulta de tabela do DAX para o servidor para obter seus resultados.  

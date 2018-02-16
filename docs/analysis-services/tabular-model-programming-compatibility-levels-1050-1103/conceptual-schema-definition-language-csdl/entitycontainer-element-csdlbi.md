@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: e328558e-16b0-4d4a-a79a-fdd3c9493595
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 30b24a87a5d1915b16c18557b93abfabfe99ab12
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="entitycontainer-element-csdlbi"></a>Elemento EntityContainer (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O elemento EntityContainer é um tipo complexo, com base no tipo CSDL, EntityContainer, que define uma coleção de entidades em um único modelo de dados. Em um aplicativo business intelligence, o modelo de dados representado por um EntityContainer pode conter várias tabelas com colunas vinculadas por relações, bem como cálculos, medidas e KPIs. Ele é conceitualmente semelhante a um banco de dados ou uma fonte de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+O elemento EntityContainer é um tipo complexo que se baseia no tipo CSDL, EntityContainer, que define uma coleção de entidades em um único modelo de dados. Em um aplicativo business intelligence, o modelo de dados representado por um EntityContainer pode conter várias tabelas com colunas vinculadas por relações, bem como cálculos, medidas e KPIs. Ele é conceitualmente semelhante a um banco de dados ou uma fonte de dados.  
   
  O EntityContainer deve especificar cada um dos tipos de entidade inclusos no modelo de dados, incluindo tabelas e relações. Informações sobre essas entidades de modelo são especificadas por meio da lista de entidades filho do tipo de elemento Entity. Para obter mais informações, consulte [Elemento EntityType &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entitytype-element-csdlbi.md).  
   
@@ -34,15 +36,15 @@ ms.lasthandoff: 01/08/2018
 ## <a name="elements-and-attributes"></a>Elementos e atributos  
  A tabela abaixo descreve os elementos e atributos que definem o EntityContainer.  
   
-|Nome|É obrigatório|Description|  
+|Nome|É obrigatório|Descrição|  
 |----------|-----------------|-----------------|  
 |Nome|Sim|O nome do modelo de dados.|  
-|Legenda|não|Uma descrição do banco de dados ou do modelo de dados.|  
+|Caption|Não|Uma descrição do banco de dados ou do modelo de dados.|  
 |Cultura|Sim|Uma cadeia de caracteres que contém o LCID da solicitação.|  
 |CompareOptions|Sim|Classificação específica do idioma e opções de comparação de cadeia de caracteres para o modelo.|  
-|DirectQueryMode|não|Uma enumeração que indica o modo de consulta quando o modelo estiver usando o modo DirectQuery.|  
+|DirectQueryMode|Não|Uma enumeração que indica o modo de consulta quando o modelo estiver usando o modo DirectQuery.|  
 |Elemento EntitySet|Sim|[Elemento EntitySet &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)|  
-|Elemento AssociationSet|não|[Elemento AssociationSet &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
+|Elemento AssociationSet|Não|[Elemento AssociationSet &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
   
 ## <a name="compareoptions-element"></a>Elemento CompareOptions  
  O atributo CompareOptions define propriedades de agrupamento que são aplicadas ao modelo de dados. As propriedades definidas por CompareOptions são derivadas das configurações para ordem de classificação, distinção kana e distinção de maiúsculas/minúsculas definidas no banco de dados do Analysis Services em tempo de design de modelo. A tabela a seguir descreve os valores inclusos como parte do atributo CompareOptions.  
@@ -59,7 +61,7 @@ ms.lasthandoff: 01/08/2018
   
  O tipo simples, DirectQueryMode, define o tipo de consulta que é usado por padrão quando o modelo é habilitado para recuperar dados diretamente de uma fonte de dados relacional. Essa propriedade é aplicável somente a modelos de tabela que são executados no modo DirectQuery. A tabela a seguir lista os valores possíveis da enumeração do modo DirectQuery.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |InMemory|Indica se as consultas no modelo usarão dados no cache.|  
 |InMemoryWithDirectQuery|Indica se, por padrão, as consultas no modelo usarão dados da fonte de dados relacional.|  
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/08/2018
 |DirectQuery|Indica se as consultas no modelo usarão dados somente na fonte de dados relacional.|  
   
 ## <a name="example"></a>Exemplo  
- **Tabular**  
+ **Tabela**  
   
  O exemplo a seguir, na versão 1.1 da CSDLBI, representa uma parte do modelo de dados de tabela da AdventureWorks.  
   
@@ -116,7 +118,7 @@ ms.lasthandoff: 01/08/2018
   
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Elemento EntitySet &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)  
   
   

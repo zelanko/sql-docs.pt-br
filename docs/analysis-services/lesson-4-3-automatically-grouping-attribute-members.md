@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 86d4c1dcc16cc97b04a3c228087a9e9793cc5651
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lição 4-3 - agrupando membros de atributo automaticamente
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,10 +33,10 @@ Ao navegar em um cubo, você normalmente dimensiona os membros de uma hierarquia
 A propriedade **DiscretizationMethod** determina se [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria agrupamentos e determina o tipo de agrupamento feito. Por padrão, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não faz nenhum agrupamento. Ao habilitar agrupamentos automáticos, você pode permitir que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] determine automaticamente o melhor método de agrupamento com base na estrutura do atributo ou ainda escolher um dos algoritmos de agrupamento da lista a seguir para especificar o método de agrupamento:  
   
 **EqualAreas**  
-O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria intervalos de grupo de forma que a população total de membros da dimensão seja distribuída igualmente pelos grupos.  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria intervalos de grupo de forma que a população total de membros da dimensão seja distribuída igualmente pelos grupos.  
   
 **Clusters**  
-O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria grupos executando clustering unidimensional nos valores de entrada usando o método de clustering K-means com distribuições gaussianas. Essa opção só é válida para colunas numéricas.  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria grupos executando clustering unidimensional nos valores de entrada usando o método de clustering K-means com distribuições gaussianas. Essa opção só é válida para colunas numéricas.  
   
 Depois de especificar um método de agrupamento, você deve especificar o número de grupos usando a propriedade **DiscretizationBucketCount** . Para obter mais informações, consulte [Agrupar membros de atributo &#40;Discretização&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   

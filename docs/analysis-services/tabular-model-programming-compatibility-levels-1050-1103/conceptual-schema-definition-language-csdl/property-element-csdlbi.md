@@ -11,32 +11,34 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: f0770c5e-6420-4d0c-a5bf-b94eaf6877ca
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1fee5461b3b779227839c3f722c9c75626ed44fe
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="property-element-csdlbi"></a>Elemento Property (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O elemento Property na CSDLBI é um tipo complexo que fornece adições ao elemento CSDL Property, para oferecer suporte a modelos de dados de business intelligence.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+O elemento Property na CSDLBI é um tipo complexo que fornece adições ao elemento CSDL Property, como suporte dos modelos de dados de business intelligence.  
   
 ## <a name="elements-and-attributes"></a>Elementos e atributos  
  A tabela a seguir lista os elementos e atributos que definem o elemento CSDLBI Property.  
   
-|Nome|É obrigatório|Description|  
+|Nome|É obrigatório|Descrição|  
 |----------|-----------------|-----------------|  
-|Sumário|não|Uma cadeia de caracteres que contém o LCID da solicitação.|  
+|Sumário|Não|Uma cadeia de caracteres que contém o LCID da solicitação.|  
 |DefaultAggregationFunction|Sim|Uma cadeia de caracteres que especifica a função de agregação que deverá ser usada se os cálculos forem executados no atributo e nenhuma outra função tiver sido especificada.<br /><br /> Se não for especificada, será usada a agregação padrão do modelo, que geralmente é SUM.|  
-|GroupingBehavior|não|Um valor que especifica como os resultados da consulta são agrupados. O conteúdo do atributo é definido pelo tipo simples TGroupingBehavior (veja a tabela abaixo).|  
-|OrderBy|não|Uma referência a outra propriedade dentro do modelo que define a ordem de classificação para os valores da propriedade em questão.<br /><br /> Os valores para as duas propriedades DEVEM ter um mapeamento de um para um. Caso contrário, o comportamento da classificação será indefinida.<br /><br /> Se esse elemento for omitido, as propriedades serão classificadas com base em seus valores.|  
-|Stability|não|Um atributo que especifica a estabilidade dos valores da propriedade entre operações de atualização.<br /><br /> Esse atributo não é definido pelos usuários, mas é emitido pelo ambiente no tempo de design apenas para valores instáveis. Ele sempre é aplicado a colunas que contêm um número de linha e a colunas que contêm fórmulas que geram resultados indeterminados, como NOW() ou RAND().<br /><br /> Os valores desse atributo são listados na tabela abaixo, que descreve o tipo simples Stability.|  
+|GroupingBehavior|Não|Um valor que especifica como os resultados da consulta são agrupados. O conteúdo do atributo é definido pelo tipo simples TGroupingBehavior (veja a tabela abaixo).|  
+|OrderBy|Não|Uma referência a outra propriedade dentro do modelo que define a ordem de classificação para os valores da propriedade em questão.<br /><br /> Os valores para as duas propriedades DEVEM ter um mapeamento de um para um. Caso contrário, o comportamento da classificação será indefinida.<br /><br /> Se esse elemento for omitido, as propriedades serão classificadas com base em seus valores.|  
+|Stability|Não|Um atributo que especifica a estabilidade dos valores da propriedade entre operações de atualização.<br /><br /> Esse atributo não é definido pelos usuários, mas é emitido pelo ambiente no tempo de design apenas para valores instáveis. Ele sempre é aplicado a colunas que contêm um número de linha e a colunas que contêm fórmulas que geram resultados indeterminados, como NOW() ou RAND().<br /><br /> Os valores desse atributo são listados na tabela abaixo, que descreve o tipo simples Stability.|  
   
 ## <a name="groupingbehavior"></a>GroupingBehavior  
  A tabela a seguir lista os valores do tipo simples GroupingBehavior.  
@@ -55,14 +57,14 @@ ms.lasthandoff: 01/08/2018
 ## <a name="stability"></a>Stability  
  A tabela a seguir lista os valores de **estabilidade** tipo simples.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Stable|A propriedade permanece constante entre operações de atualização.|  
 |RowNumber|A propriedade contém um número de linha.|  
 |Volatile|A propriedade pode não permanecer constante entre operações de atualização.|  
   
 ## <a name="example"></a>Exemplo  
- **Tabular**  
+ **Tabela**  
   
  O XML a seguir mostra a representação, na versão 1.1 da CSDLBI, de algumas propriedades no exemplo de modelo de tabela da AdventureWorks.  
   
@@ -132,7 +134,7 @@ ms.lasthandoff: 01/08/2018
   
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [Referência técnica para Anotações de BI para CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+## <a name="see-also"></a>Consulte também  
+ [Referência técnica para anotações de BI para CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

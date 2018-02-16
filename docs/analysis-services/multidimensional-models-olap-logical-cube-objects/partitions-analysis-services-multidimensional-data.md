@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], partitions
 - incremental updates [Analysis Services]
@@ -26,19 +27,20 @@ helpviewer_keywords:
 - remote partitions [Analysis Services]
 - measure groups [Analysis Services], partitions
 ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 1a44581e828d92756c46b897d9e7c9be69144c5b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>Partições (Analysis Services – Dados Multidimensional)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma partição é um contêiner para uma parte dos dados do grupo de medidas. As partições não são vistas a partir das consultas MDX; todas as consultas refletem o conteúdo completo do grupo de medidas, independentemente de quantas partições são definidas para o grupo de medidas. O conteúdo de dados de uma partição é definido pelas associações de consulta da partição e pela divisão da expressão.   
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Uma partição é um contêiner de uma parte dos dados de grupo de medidas. As partições não são vistas a partir das consultas MDX; todas as consultas refletem o conteúdo completo do grupo de medidas, independentemente de quantas partições são definidas para o grupo de medidas. O conteúdo de dados de uma partição é definido pelas associações de consulta da partição e pela divisão da expressão.   
   
  Um objeto simples <xref:Microsoft.AnalysisServices.Partition> é composto de: informações básicas, definição de divisão, design de agregação e outros. As informações básicas incluem o nome da partição, o modo de armazenamento, o modo de processamento e outros. A definição de divisão é uma expressão MDX que especifica uma tupla ou um conjunto. A definição de divisão tem as mesmas restrições que a função MDX StrToSet. Juntamente com o parâmetro CONSTRAINED, a definição de divisão pode usar dimensão, hierarquia, nomes de nível e de membro, chaves, nomes exclusivos e outros objetos nomeados no cubo, mas não pode usar as funções MDX. O design de agregação é uma coleção de definições de agregação que podem ser compartilhadas por várias partições. O padrão é obtido do design de agregação do cubo pai.  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="incremental-updates"></a>Atualizações incrementais  
  Ao criar e gerenciar partições em grupos de medidas de várias partições, você deve tomar precauções especiais para garantir que os dados do cubo sejam precisos. Apesar dessas precauções não se aplicarem geralmente a grupos de medidas de uma única partição, eles se aplicam quando você atualiza as partições incrementalmente. Quando você atualiza uma partição incrementalmente, uma nova partição temporária é criada com a estrutura idêntica à da partição fonte. A partição temporária é processada e então mesclada com a partição fonte. Portanto, você deve assegurar que a consulta de processamento que popula a partição temporária não duplique os dados já presentes em uma partição existente.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Configurar propriedades de medida](../../analysis-services/multidimensional-models/configure-measure-properties.md)   
  [Cubos em modelos multidimensionais](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   

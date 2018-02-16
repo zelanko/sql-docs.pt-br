@@ -1,5 +1,5 @@
 ---
-title: Conjunto de linhas DISCOVER_MEMORYUSAGE | Microsoft Docs
+title: DISCOVER_MEMORYUSAGE Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: analysis-services
@@ -11,26 +11,28 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: e416ea61-9615-468c-a96f-bbf731f803b1
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bd97d1b2eb02dda3f8add861e6767b7a495a821d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovermemoryusage-rowset"></a>Conjunto de linhas DISCOVER_MEMORYUSAGE
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Retorna as estatísticas DISCOVER_MEMORYUSAGE de vários objetos alocados pelo servidor.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Retorna as estatísticas DISCOVER_MEMORYUSAGE de vários objetos alocados pelo servidor.  
   
 > [!WARNING]  
 >  Este conjunto de linhas pode gerar conjuntos de resultados muito grandes. Se não for possível exibir os resultados porque eles exigem mais memória de exibição do que o permitido pelo SQL Server Management Studio, os resultados serão gravados em um arquivo temporário, no seguinte local padrão:  
 >   
->  '\<unidade >: \Users\\< nome de usuário\>\AppData\Local\Temp\\< fileID\>. XML '.  
+>  '\<drive>:\Users\\<username\>\AppData\Local\Temp\\<fileID\>.xml'.  
   
  **Aplica-se a:** modelos de tabela, modelos multidimensionais  
   
@@ -49,7 +51,7 @@ ms.lasthandoff: 01/08/2018
 |**MemoryAllocBase**|**DBTYPE_UI8**||Os bytes alocados inicialmente para o próprio objeto (excluindo as alocações adicionais para conteúdos de objeto).|  
 |**MemoryAllocFromAlloc**|**DBTYPE_UI8**||A memória alocada para o conteúdo deste objeto.|  
 |**ElementCount**|**DBTYPE_UI4**||Para um objeto contêiner, este é o número de objetos contido por esse objeto.|  
-|**Reduzível**|**DBTYPE_BOOL**|Sim|Um booliano que indica se a memória é reduzível (pode ser removida devido à pressão de memória). Se true, a memória será reduzível; se false, a memória não será reduzível.|  
+|**Shrinkable**|**DBTYPE_BOOL**|Sim|Um booliano que indica se a memória é reduzível (pode ser removida devido à pressão de memória). Se true, a memória será reduzível; se false, a memória não será reduzível.|  
 |**ObjectParentPath**|**DBTYPE_WSTR**||Uma cadeia de caracteres que identifica o caminho completo deste objeto.|  
 |**ObjectID**|**DBTYPE_WSTR**||Uma cadeia de caracteres que identifica o objeto. O caminho completo do objeto é representado pela cadeia de caracteres: (ObjectParentPath + '.' + ObjectId).|  
   
@@ -65,7 +67,7 @@ ms.lasthandoff: 01/08/2018
 |GUID|A07CCD21-8148-11D0-87BB-00C04FC33942|  
 |ADOMDNAME|MemoryUsage|  
   
-## <a name="see-also"></a>Consulte Também  
- [Conjunto de linhas de esquema do XML](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+## <a name="see-also"></a>Consulte também  
+ [XML for Analysis conjuntos de linhas de esquema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

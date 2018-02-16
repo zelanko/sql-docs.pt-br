@@ -16,19 +16,20 @@ helpviewer_keywords:
 - mining model content, logistic regression models
 - regression algorithms [Analysis Services]
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 5490990412aa4883d575a1fc65fee7e29db06dde
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>Conteúdo do modelo de mineração para modelos de regressão logística
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo de regressão logística da Microsoft. Para obter uma explicação de como interpretar as estatísticas e a estrutura compartilhada por todos os tipos de modelos, e definições gerais dos termos relacionados ao conteúdo do modelo de mineração, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo Regressão Logística da Microsoft. Para obter uma explicação de como interpretar as estatísticas e a estrutura compartilhada por todos os tipos de modelos, e definições gerais dos termos relacionados ao conteúdo do modelo de mineração, consulte [Conteúdo do Modelo de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-logistic-regression-model"></a>Entendendo a estrutura de um modelo de regressão logística  
  Um modelo de regressão logística é criado usando o algoritmo Rede Neural da Microsoft com parâmetros que restringem o modelo para eliminar o nó oculto. Portanto, a estrutura geral de um modelo de regressão logística é quase idêntica à de um modelo de rede neural: cada modelo tem um único nó pai que representa o modelo e seus metadados e um nó de estatísticas marginais especial (NODE_TYPE = 24) que fornece estatísticas descritivas sobre as entradas usadas no modelo.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="model-content-for-a-logistic-regression-model"></a>Conteúdo de um modelo de regressão logística  
  Esta seção fornece detalhes e exemplos somente para as colunas do conteúdo do modelo de mineração que são relevantes para a regressão logística. O conteúdo do modelo é praticamente idêntico ao de um modelo de rede neural, porém as descrições que se aplicam aos modelos de rede neural podem ser repetidas aqui por conveniência.  
   
- Para obter informações sobre as colunas de uso general no conjunto de linhas de esquema, como MODEL_CATALOG e MODEL_NAME que não são descritos aqui, ou explicações relacionadas à terminologia do modelo de mineração, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+ Para obter informações sobre as colunas de uso general no conjunto de linhas de esquema, como MODEL_CATALOG e MODEL_NAME que não são descritos aqui, ou explicações relacionadas à terminologia do modelo de mineração, consulte [Conteúdo do Modelo de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nome do banco de dados no qual o modelo é armazenado.  
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/08/2018
 |Estatísticas marginais|Em branco|  
 |Camada de entrada|Em branco|  
 |Nó de entrada|Nome do atributo de entrada|  
-|Camada oculta|Em branco|  
+|hidden layer|Em branco|  
 |Camada de saída|Em branco|  
 |Nó de saída|Nome do atributo de saída|  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 01/08/2018
 |Estatísticas marginais|Em branco|  
 |Camada de entrada|Em branco|  
 |Nó de entrada|Nome do atributo de entrada|  
-|Camada oculta|Em branco|  
+|hidden layer|Em branco|  
 |Camada de saída|Em branco|  
 |Nó de saída|Se o atributo de saída for contínuo, conterá o nome do atributo de saída.<br /><br /> Se o atributo de saída for discreto ou diferenciado, contém o nome do atributo e o valor.|  
   
@@ -189,10 +190,10 @@ ms.lasthandoff: 01/08/2018
   
  Você pode usar essas IDs para determinar como os atributos de saída são relacionados a atributos específicos da camada de entrada exibindo a tabela NODE_DISTRIBUTION no nó de saída. Cada linha nessa tabela contém uma ID que indica um nó de atributo de entrada específico. A tabela NODE_DISTRIBUTION também contém o coeficiente para o par de entrada-saída.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Algoritmo Regressão Logística da Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [Conteúdo do modelo de mineração para modelos de rede Neural &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Conteúdo do modelo de mineração para modelos de rede Neural &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Exemplos de consulta de modelo de regressão logística](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)   
- [Referência técnica do algoritmo Regressão Logística da Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)  
+ [Referência técnica do algoritmo de regressão logística de Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)  
   
   
