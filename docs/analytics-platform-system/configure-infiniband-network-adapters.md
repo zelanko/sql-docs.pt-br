@@ -14,12 +14,12 @@ description: "Descreve como configurar os adaptadores de rede InfiniBand em um s
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
-caps.latest.revision: "15"
+caps.latest.revision: 
 ms.openlocfilehash: 052dfcb32de7fb84acc0ce97c55775944a1d0dc1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurar adaptadores de rede InfiniBand para Analytics Platform System
 Descreve como configurar os adaptadores de rede InfiniBand em um servidor não seja de aplicação de cliente para conectar-se ao nó de controle no SQL Server Parallel Data Warehouse (PDW). Use estas instruções para a conectividade básica e de alta disponibilidade, para que o carregamento, backup e outros processos vai se conectar automaticamente à rede InfiniBand ativa.  
@@ -77,9 +77,9 @@ Para atender a seus requisitos de negócios, você também pode ingressar o serv
   
     ![Conexões do InfiniBand no nó de gerenciamento](media/network-teamib.png "conexões do InfiniBand no nó de gerenciamento")  
   
-4.  Na janela de propriedades de protocolo de Internet versão 4 (TCP/IPv4), anote os valores para o **endereço IP** e **máscara de sub-rede**.  O endereço IP do  ***appliance_domain*-AD01** nó é o endereço IP do servidor DNS de sistema de plataforma de análise.  
+4.  Na janela de propriedades de protocolo de Internet versão 4 (TCP/IPv4), anote os valores para o **endereço IP** e **máscara de sub-rede**.  O endereço IP do ***appliance_domain *-AD01** nó é o endereço IP do servidor DNS de sistema de plataforma de análise.  
   
-5.  Repita as etapas 1 a 5 acima para o adaptador TeamIB1 em  ***appliance_domain*-AD02** server.  
+5.  Repita as etapas 1 a 5 acima para o adaptador TeamIB1 em ***appliance_domain *-AD02** server.  
   
     ![Propriedades de nó InfiniBand 1 do gerenciamento de PDW](media/network-ip1-properties.png "propriedades de nó InfiniBand 1 do gerenciamento do PDW")  
   
@@ -168,7 +168,7 @@ Para atender a seus requisitos de negócios, você também pode ingressar o serv
   
 2.  Clique em avançadas... .  
   
-3.  Na janela de configurações avançadas de TCP/IP, se a acrescentar essas opções de sufixos DNS (em ordem) não está desativada, o chamado da caixa de seleção Acrescentar estes sufixos DNS (em ordem):, selecione o sufixo de domínio do dispositivo e clique em Adicionar... O sufixo de domínio do dispositivo será`appliance_domain.local`  
+3.  Na janela de configurações avançadas de TCP/IP, se a acrescentar essas opções de sufixos DNS (em ordem) não está desativada, o chamado da caixa de seleção Acrescentar estes sufixos DNS (em ordem):, selecione o sufixo de domínio do dispositivo e clique em Adicionar... O sufixo de domínio do dispositivo será `appliance_domain.local`  
   
 4.  Se a Acrescentar estes sufixos DNS (em ordem): opção está desativada, você pode adicionar o domínio de pontos de acesso a este servidor, modificando a chave do registro HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient.  
   
@@ -182,10 +182,10 @@ Para atender a seus requisitos de negócios, você também pode ingressar o serv
   
     Exemplos de um dispositivo denominado chamados MyAPS com uma região PDW MyPDW:  
   
-    -   MyPDW SQLCTL01.MyAPS.local  
+    -   MyPDW-SQLCTL01.MyAPS.local  
   
-    -   MyPDW SQLCTL01  
+    -   MyPDW-SQLCTL01  
   
-## <a name="see-also"></a>Consulte Também  
-[Adquirir e configurar um servidor de carregamento](acquire-and-configure-loading-server.md)  
+## <a name="see-also"></a>Consulte também  
+[Adquirir e configurar um servidor de carregamento ](acquire-and-configure-loading-server.md)  
   

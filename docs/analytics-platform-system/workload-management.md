@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
-caps.latest.revision: "11"
+caps.latest.revision: 
 ms.openlocfilehash: 738818a49491fbf8f8df491cac2f10ebdeedf3bf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="workload-management"></a>Gerenciamento de carga de trabalho
 Recursos de gerenciamento de carga de trabalho do SQL Server PDW permitem que os usuários e administradores para atribuir solicitações pré-definir as configurações de memória e simultaneidade. Use o gerenciamento de carga de trabalho para melhorar o desempenho da carga de trabalho, consistente ou misto, permitindo solicitações para os recursos apropriados sem anteriores em todas as solicitações para sempre.  
@@ -66,7 +66,7 @@ A tabela a seguir descreve as classes de recursos e suas alocações de recursos
 |Classe de recurso|Importância da solicitação|Uso máximo de memória *|Slots de simultaneidade (máximo = 32)|Description|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
 |padrão|Média|400 MB|1|Por padrão, cada logon é permitida uma pequena quantidade de memória e recursos de simultaneidade para suas solicitações.<br /><br />Quando um logon é adicionado a uma classe de recurso, a nova classe terá precedência. Quando um logon é descartado de todas as classes de recursos, o logon voltarão a alocação de recursos padrão.|  
-|MediumRC|Média|1.200 MB|3|Exemplos de solicitações que possam precisar de classe de recurso de mídia:<br /><br />Operações de CTAS que têm grande junções de hash.<br /><br />Selecione as operações que precisam de mais memória para evitar o cache em disco.<br /><br />Carregando dados em índices columnstore clusterizados.<br /><br />Compilando, recriar e reorganizar índices columnstore clusterizados para tabelas menores que 10 a 15 com.|  
+|MediumRC|Média|1200 MB|3|Exemplos de solicitações que possam precisar de classe de recurso de mídia:<br /><br />Operações de CTAS que têm grande junções de hash.<br /><br />Selecione as operações que precisam de mais memória para evitar o cache em disco.<br /><br />Carregando dados em índices columnstore clusterizados.<br /><br />Compilando, recriar e reorganizar índices columnstore clusterizados para tabelas menores que 10 a 15 com.|  
 |largerc|Alta|2.8 GB|7|Exemplos de solicitações que possam precisar de classe de recurso grande:<br /><br />Operações CTAS muito grandes que junções de hash grande ou contenham agregações grandes, como grandes cláusulas ORDER BY ou GROUP BY.<br /><br />Selecione as operações que exigem grandes quantidades de memória para operações como junções de hash ou agregações como cláusulas ORDER BY ou GROUP BY<br /><br />Carregando dados em índices columnstore clusterizados.<br /><br />Compilando, recriar e reorganizar índices columnstore clusterizados para tabelas menores que 10 a 15 com.|  
 |xlargerc|Alta|8.4 GB|22|É a classe de recurso muito grande para solicitações que podem exigir o consumo de recursos muito tempo de execução.|  
   
@@ -132,11 +132,11 @@ Instruções SQL e operações regidas pelas classes de recursos:
   
 -   Carregamento de dados com **dwloader**.  
   
--   INSERT SELECT  
+-   INSERT-SELECT  
   
 -   UPDATE  
   
--   Delete (excluir)  
+-   DELETE  
   
 -   RESTAURAR banco de dados ao restaurar em um dispositivo com mais nós de computação.  
   
