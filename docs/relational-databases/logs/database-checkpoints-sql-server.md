@@ -8,7 +8,8 @@ ms.component: logs
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,19 +29,20 @@ helpviewer_keywords:
 - flushing pages
 - active logs
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
-caps.latest.revision: "74"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3505f3976f56af67a939650d474b85b4adb63c20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b46508013b66ab14175b0edc2710c9c98ed901a9
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-checkpoints-sql-server"></a>Pontos de verificação de banco de dados (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Um *ponto de verificação* cria um ponto íntegro conhecido do qual o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pode começar a aplicar as alterações contidas no log durante a recuperação após um desligamento ou uma falha inesperada.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Um *ponto de verificação* cria um bom ponto conhecido a partir do qual o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pode começar a aplicar as alterações contidas no log durante a recuperação após um desligamento ou uma falha inesperada.  
  
   
 ##  <a name="Overview"></a> Visão geral   
@@ -48,7 +50,7 @@ Por razões de desempenho, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] executa
   
  O [!INCLUDE[ssDE](../../includes/ssde-md.md)] oferece suporte para vários tipos de pontos de verificação: automáticos, indiretos, manuais e internos. A seguinte tabela resume os tipos de **pontos de verificação:**
   
-|Nome|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interface|Descrição|  
+|Nome|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interface|Description|  
 |----------|----------------------------------|-----------------|  
 |Automatic|EXEC sp_configure **'**recovery interval**','***seconds***'**|Emitido automaticamente em segundo plano para seguir de tempo superior sugerido pela opção de configuração de servidor **recovery interval** . Pontos de verificação automáticos executados até a conclusão.  Os pontos de verificação automáticos são limitados com base no número de gravações pendentes e se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] detectar um aumento na latência de gravação acima de 50 milissegundos.<br /><br /> Para obter mais informações, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
 |Indireto.|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|Emitido em segundo plano para cumprir um horário de recuperação de destino especificado pelo usuário para um determinado banco de dados. A partir do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], o valor padrão é de 1 minuto. O padrão é 0 para versões mais antigas, o que indica que o banco de dados usará pontos de verificação automáticos cuja frequência depende da configuração do intervalo de recuperação da instância de servidor.<br /><br /> Para obter mais informações, consulte [Alterar o tempo de recuperação de destino de um banco de dados &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  
@@ -70,7 +72,7 @@ Por razões de desempenho, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] executa
 |target_recovery_time|'recovery interval'|Tipo de ponto de verificação usado|  
 |----------------------------|-------------------------|-----------------------------|  
 |0|0|pontos de verificação automáticos cujo intervalo de recuperação de destino é 1 minuto.|  
-|0|>0|Pontos de verificação automáticos, cujo intervalo de recuperação de destino é especificado pela configuração definida pelo usuário na opção **sp_configurerecovery interval** .|  
+|0|>0|Pontos de verificação automáticos, cujo intervalo de recuperação de destino é especificado pela configuração definida pelo usuário na opção **sp_configurerecovery interval**.|  
 |>0|Não aplicável.|Pontos de verificação indiretos cuja hora de recuperação de destino é determinada pela configuração de TARGET_RECOVERY_TIME, expressa em segundos.|  
   
 ##  <a name="AutomaticChkpt"></a> Pontos de verificação automáticos  
@@ -86,7 +88,7 @@ No modelo de recuperação simples, a menos que algum fator esteja atrasando o t
   
  
 ###  <a name="PerformanceImpact"></a> Impacto do intervalo de recuperação no desempenho de recuperação  
- Para um sistema de processamento de transações online que usa transações curtas (OLTP), o **recovery interval** é o fator primário que determina o tempo de recuperação. No entanto, a opção **recovery interval** não afeta o tempo necessário para desfazer uma transação de longa duração. A recuperação de um banco de dados com uma transação de longa duração pode levar mais tempo do que o especificado na opção **recovery interval** . 
+ Para um sistema de processamento de transações online usando transações curtas (OLTP), o **recovery interval** é o fator primário que determina o tempo da recuperação. No entanto, a opção **recovery interval** não afeta o tempo necessário para desfazer uma transação de longa duração. A recuperação de um banco de dados com uma transação de longa duração pode levar mais tempo do que o especificado na opção **recovery interval** . 
  
  Por exemplo, se uma transação demorada levou duas horas para executar atualizações antes que a instância do servidor fosse desabilitada, a recuperação real levará um tempo consideravelmente mais longo do que o valor de **recovery interval** para recuperar a transação demorada. Para obter mais informações sobre o impacto de uma transação de longa duração em um tempo de recuperação, veja [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
@@ -104,7 +106,7 @@ No modelo de recuperação simples, a menos que algum fator esteja atrasando o t
   
 -   Uma carga de trabalho transacional online em um banco de dados configurado para pontos de verificação indiretos pode apresentar degradação no desempenho. Pontos de verificação indiretos garantem que o número de páginas sujas fica abaixo de determinado limite, para que a recuperação do banco de dados seja concluída dentro da meta do tempo de recuperação. 
 
-A opção de configuração do intervalo de recuperação usa o número de transações para determinar o tempo de recuperação em relação aos pontos de verificação indiretos, que usam o número de páginas sujas. Quando pontos de verificação indiretos são habilitados em um banco de dados que recebe um grande número de operações DML, o gravador em segundo plano pode iniciar eliminação agressiva de buffers sujos no disco para garantir que o tempo necessário para executar a recuperação esteja dentro da meta do tempo de recuperação definido para o banco de dados. Isso pode causar atividade adicional de E/S em determinados sistemas, o que pode contribuir para um afunilamento de desempenho, se o subsistema do disco estiver operando acima ou próximo do limite de E/S.  
+A opção de configuração do intervalo de recuperação usa o número de transações para determinar o tempo de recuperação em relação aos pontos de verificação indiretos, que usam o número de páginas sujas. Quando pontos de verificação indiretos são habilitados em um banco de dados que recebe um grande número de operações DML, o gravador em segundo plano pode iniciar eliminação agressiva de buffers sujos no disco para garantir que o tempo necessário para executar a recuperação esteja dentro da meta do tempo de recuperação definido para o banco de dados. Isso pode causar atividade adicional de E/S em determinados sistemas, o que pode contribuir para um gargalo de desempenho, se o subsistema do disco estiver operando acima ou próximo do limite de E/S.  
   
 -   Pontos de verificação indiretos permitem a você controlar o tempo de recuperação de banco de dados de modo confiável, fatorando no custo de E/S aleatória durante REDO. Isso permite que uma instância de servidor permaneça em um limite superior nos tempos de recuperação para um determinado banco de dados (exceto quando uma transação demorada causa tempos UNDO excessivos).  
   

@@ -8,23 +8,24 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - page and extent architecture guide
 - guide, page and extent architecture
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
-caps.latest.revision: "2"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ccdd2397b21b5a1e5e04b567cec25c0723122a7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b81580d88fc57a88aadd7212c229faf2aa7bcda7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guia de arquitetura de página e extensões
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,7 +95,7 @@ As estruturas de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 ### <a name="managing-extent-allocations"></a>Gerenciando alocações de extensão
 
-O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa dois tipos de mapas de alocação para registrar a alocação de extensões: 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa dois tipos de mapas de alocação para registrar a alocação de extensões: 
 
 - **GAM (Global Allocation Map)**   
   As páginas GAM registram quais extensões foram alocadas. Cada GAM cobre 64.000 extensões ou quase 4 GB de dados. O GAM tem um bit para cada extensão no intervalo que cobre. Se o bit for 1, a extensão será livre; se o bit for 0, a extensão será alocada. 
@@ -162,7 +163,7 @@ O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] só alocará uma ex
 
 ## <a name="tracking-modified-extents"></a>Controlando extensões modificadas 
 
-O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa duas estruturas de dados internas para acompanhar extensões modificadas por operações de cópia em massa e extensões modificadas desde o último backup completo. Essas estruturas de dados aceleram consideravelmente os backups diferenciais. Elas também aceleram o registro de operações de cópia em massa quando um banco de dados está usando o modelo de recuperação bulk logged. Como as páginas GAM (Global Alocação Map) e SGAM (Shared Global Allocation Map), essas estruturas são bitmaps em que cada bit representa uma única extensão. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa duas estruturas de dados internas para acompanhar extensões modificadas por operações de cópia em massa e extensões modificadas desde o último backup completo. Essas estruturas de dados aceleram consideravelmente os backups diferenciais. Elas também aceleram o registro de operações de cópia em massa quando um banco de dados está usando o modelo de recuperação bulk logged. Como as páginas GAM (Global Alocação Map) e SGAM (Shared Global Allocation Map), essas estruturas são bitmaps em que cada bit representa uma única extensão. 
 
 - **DCM (Differential Changed Map)**   
    Acompanha as extensões que foram alteradas desde a última instrução `BACKUP DATABASE`. Se o bit de uma extensão for 1, isso significa que a extensão foi modificada desde a última instrução `BACKUP DATABASE`. Se o bit for 0, a extensão não foi modificada. Os backups diferenciais leem apenas as páginas DCM para determinar quais extensões foram modificadas. Isso reduz significativamente o número de páginas que um backup diferencial deve examinar. O tempo de execução de um backup diferencial é proporcional ao número de extensões modificadas desde a última instrução BACKUP DATABASE, e não ao tamanho geral do banco de dados. 

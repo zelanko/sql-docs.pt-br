@@ -8,7 +8,8 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +24,21 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f1f07cf2c53676a37f2c26dfebfd3ed623ec7a8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a89bec1046eab92432ffa53a8de3618903f7ab6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="network-protocols-and-network-libraries"></a>Protocolos de rede e bibliotecas de rede
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Um servidor pode escutar ou monitorar vários protocolos de rede ao mesmo tempo. Entretanto, cada protocolo deve ser configurado. Se um protocolo específico não for configurado, o servidor não poderá escutar naquele protocolo. Após a instalação, você pode alterar as configurações de protocolo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  Um servidor pode escutar ou monitorar vários protocolos de rede ao mesmo tempo. Entretanto, cada protocolo deve ser configurado. Se um protocolo específico não for configurado, o servidor não poderá escutar naquele protocolo. Após a instalação, você pode alterar as configurações de protocolo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
 ## <a name="default-sql-server-network-configuration"></a>Configuração de rede padrão do SQL Server  
  Uma instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é configurada para a porta TCP/IP 1433 e para o pipe nomeado \\\\.\pipe\sql\query. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são configuradas para portas dinâmicas TCP, com um número de porta atribuído pelo sistema operacional.  
@@ -87,11 +90,11 @@ ms.lasthandoff: 12/05/2017
   
  Para obter mais informações sobre pontos de extremidade, veja [Configurar o Mecanismo de Banco de Dados para escutar em várias portas TCP](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) e [Exibições de catálogo de pontos de extremidade &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md).  
   
- Para obter mais informações sobre configurações de rede do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte os seguintes tópicos nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+ Para obter mais informações sobre configurações de rede do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte os seguintes artigos nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   [Configuração de rede do servidor](../../database-engine/configure-windows/server-network-configuration.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configuração da Área de Superfície](../../relational-databases/security/surface-area-configuration.md)   
  [Considerações sobre segurança para uma instalação do SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [Planejando uma instalação do SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)  

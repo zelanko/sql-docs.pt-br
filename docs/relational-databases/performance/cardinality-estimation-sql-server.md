@@ -8,7 +8,8 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a9b42e4a50685e79ebb88ceee62336eb30e1ae96
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c87819c3d2802e6ded39885e540b0a3fd050aae8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimativa de cardinalidade (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -236,8 +237,8 @@ Suponha que as estatísticas para OrderTable foram coletadas pela última vez em
   
 ```sql  
 SELECT CustomerId, OrderAddedDate  
-    FROM OrderTable  
-    WHERE OrderAddedDate >= '2016-05-01';  
+FROM OrderTable  
+WHERE OrderAddedDate >= '2016-05-01';  
 ```  
   
 ### <a name="example-b-ce-understands-that-filtered-predicates-on-the-same-table-are-often-correlated"></a>Exemplo B. A CE entende que os predicados filtrados na mesma tabela estão frequentemente correlacionados  
@@ -248,30 +249,27 @@ A CE de nível 120 entende que pode haver uma correlação entre as duas colunas
   
 ```sql  
 SELECT Model, Purchase_Price  
-    FROM dbo.Hardware  
-    WHERE  
-        Model  = 'Xbox'  AND  
-        ModelVariant = 'One';  
+FROM dbo.Hardware  
+WHERE Model  = 'Xbox'  AND  
+      ModelVariant = 'One';  
 ```  
   
-### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tablescc"></a>Exemplo C. A CE não pressupõe mais nenhuma correlação entre os predicados filtrados de tabelas diferentes 
+### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tables"></a>Exemplo C. A CE não pressupõe mais nenhuma correlação entre os predicados filtrados de tabelas diferentes 
 Com a nova e ampla pesquisa sobre cargas de trabalho modernas e dados corporativos reais, descobriu-se que, em geral, não há correlação entre os filtros de predicado de diferentes tabelas. Na consulta a seguir, a CE pressupõe que não há nenhuma correlação entre s.type e r.date. Portanto, a CE faz uma estimativa inferior do número de linhas retornadas.  
   
 ```sql  
 SELECT s.ticket, s.customer, r.store  
-    FROM  
-                   dbo.Sales    AS s  
-        CROSS JOIN dbo.Returns  AS r  
-    WHERE  
-        s.ticket = r.ticket  AND  
-        s.type   = 'toy'     AND  
-        r.date   = '2016-05-11';  
+FROM dbo.Sales    AS s  
+CROSS JOIN dbo.Returns  AS r  
+WHERE s.ticket = r.ticket  AND  
+      s.type   = 'toy'     AND  
+      r.date   = '2016-05-11';  
 ```  
   
   
 ## <a name="see-also"></a>Consulte Também  
- [Monitorar e ajustar o desempenho](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
-  [Otimizar os planos de consulta com o avaliador de cardinalidade do SQL Server 2014](http://msdn.microsoft.com/library/dn673537.aspx)  
- [Dicas de consulta](../../t-sql/queries/hints-transact-sql-query.md)  
- [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
- [Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md)
+ [Monitorar e ajustar o desempenho](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
+ [Otimizar os planos de consulta com o avaliador de cardinalidade do SQL Server 2014](http://msdn.microsoft.com/library/dn673537.aspx)  
+ [Dicas de consulta](../../t-sql/queries/hints-transact-sql-query.md)    
+ [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
+ [Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md)   

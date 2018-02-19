@@ -8,24 +8,27 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: full-text indexes [SQL Server], about
+helpviewer_keywords:
+- full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 90bd63c6177591fbc3a92bf88f11f72eca4b2e58
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 25599964a3e210e59fcbb2a1eade782e2109502b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Criar e gerenciar índices de texto completo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Este tópico descreve como criar, popular e gerenciar índices de texto completo no SQL Server.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Este tópico descreve como criar, popular e gerenciar índices de texto completo no SQL Server.
   
 ## <a name="prerequisite---create-a-full-text-catalog"></a>Pré-requisito – Criar um catálogo de texto completo
 Antes de criar um índice de texto completo, é necessário ter um catálogo de texto completo. O catálogo é um contêiner virtual de um ou mais índices de texto completo. Para obter mais informações, consulte [Criar e gerenciar catálogos de texto completo](../../relational-databases/search/create-and-manage-full-text-catalogs.md).
@@ -80,7 +83,7 @@ Para obter mais informações, consulte [Popular índices de texto completo](../
     |**Colunas**|Exibe as colunas da tabela que estão disponíveis para indexação de texto completo. A(s) coluna(s) selecionada(s) tem(têm) índice de texto completo. Você pode selecionar tantas colunas disponíveis quantas desejar para incluí-las no índice de texto completo. Para obter mais informações, consulte [Propriedades do Índice de Texto Completo &#40;página Colunas&#41;](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35).|  
     |**Agendas**|Use esta página para criar ou gerenciar agendas para executar um trabalho do SQL Server Agent que inicia uma população incremental de tabela para as populações de índice de texto completo. Para obter mais informações, consulte [Popular índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Observação: depois que você sair da caixa de diálogo **Propriedades do Índice de Texto Completo** , qualquer agenda recém-criada será associada a um trabalho do SQL Server Agent (Iniciar População Incremental da Tabela em *database_name*.*table_name*).|  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] para salvar quaisquer alterações e sair da caixa de diálogo **Propriedades do índice de texto completo**.  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] para salvar qualquer alteração e sair da caixa de diálogo **Propriedades do Índice de Texto Completo** .  
   
 ##  <a name="props"></a> Exibir as propriedades de colunas e tabelas indexadas  
  Muitas funções [!INCLUDE[tsql](../../includes/tsql-md.md)], como OBJECTPROPERTYEX, podem ser usadas para obter o valor de diversas propriedades de indexação de texto completo. Essas informações são úteis para administrar e solucionar problemas de pesquisa de texto completo.  

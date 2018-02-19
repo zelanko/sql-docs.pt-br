@@ -1,27 +1,28 @@
 ---
 title: "Lição 1: Conectando ao Mecanismo de Banco de Dados | Microsoft Docs"
 ms.custom: 
-ms.date: 08/05/2016
+ms.date: 02/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d58c2e12f7f25a067e643757afa4b86d2b47ff01
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: a7b0242b6c69f2ecb3b9ef077eae956d3f7d3f18
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lição 1: conectando-se ao mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ Esta lição contém as seguintes tarefas:
  -O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] é enviado com uma variedade de ferramentas. Este tópico descreve as primeiras ferramentas das que você precisará e o ajuda a selecionar a ferramenta certa para o trabalho. Todas as ferramentas podem ser acessadas no menu **Iniciar** . Algumas ferramentas, como [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], não são instaladas por padrão. Você deve selecionar as ferramentas como parte dos componentes de cliente durante a instalação. Para obter uma descrição completa das ferramentas descritas abaixo, pesquise-as nos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] contém somente um subconjunto das ferramentas.  
 
 ### <a name="basic-tools"></a>Ferramentas básicas
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) é a principal ferramenta para administrar o [!INCLUDE[ssDE](../includes/ssde-md.md)] e gravar o código [!INCLUDE[tsql](../includes/tsql-md.md)] . Fica hospedado no shell [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . O SSMS está disponível como download gratuito no [Centro de Download da Microsoft](https://msdn.microsoft.com/library/mt238290.aspx). A versão mais recente pode ser usada com versões mais antigas do [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) é a principal ferramenta para administrar o [!INCLUDE[ssDE](../includes/ssde-md.md)] e gravar o código [!INCLUDE[tsql](../includes/tsql-md.md)]. Fica hospedado no shell [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . O SSMS está disponível como download gratuito no [Centro de Download da Microsoft](https://msdn.microsoft.com/library/mt238290.aspx). A versão mais recente pode ser usada com versões mais antigas do [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager é instalado com [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e as ferramentas de cliente. Ela permite que você habilite protocolos de servidor, configure opções de protocolo como portas de TCP, configure serviços de servidor para iniciar automaticamente e configure computadores de cliente para conectar de sua maneira preferida. Esta ferramenta configura os mais avançados elementos de conectividade mas não habilita recursos.  
 
@@ -84,11 +85,12 @@ Pelo menos uma conta de administrador foi selecionada quando o [!INCLUDE[ssNoVer
 
 ![object-explorer](../relational-databases/media/object-explorer.png)
 
-3.  Na caixa **Nome do servidor** , digite o nome da instância do [!INCLUDE[ssDE](../includes/ssde-md.md)]. Para a instância padrão do SQL Server, o nome do servidor é o nome do computador. Para uma instância nomeada do SQL Server, o nome do servidor é *<computer_name>***\\***<instance_name>*, por exemplo, **ACCTG_SRVR\SQLEXPRESS**. A captura de tela a seguir mostra a conexão à instância padrão (sem nome) do [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] em um computador chamado “PracticeComputer”. O usuário conectado no Windows é Marina do domínio Contoso. Ao usar a Autenticação do Windows, não é possível alterar o nome de usuário. 
+3.  Na caixa **Nome do servidor** , digite o nome da instância do [!INCLUDE[ssDE](../includes/ssde-md.md)]. Para a instância padrão do SQL Server, o nome do servidor é o nome do computador. Para uma instância nomeada do SQL Server, o nome do servidor é *<nome_do_computador>***\\***<nome_da_instância>,* por exemplo, **ACCTG_SRVR\SQLEXPRESS**. A captura de tela a seguir mostra a conexão à instância padrão (sem nome) do [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] em um computador chamado “PracticeComputer”. O usuário conectado no Windows é Marina do domínio Contoso. Ao usar a Autenticação do Windows, não é possível alterar o nome de usuário. 
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 
-4.  Clique em **Conectar**.  
+4.  Clique em **Conectar**.
+
 > [!NOTE]
 > Este tutorial presume que você não esteja familiarizado com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e que não tenha problemas especiais em estabelecer a conexão. Isso deve ser suficiente para a maioria das pessoas e mantém este tutorial simples. Para obter as etapas de solução de problemas, consulte [Solucionando problemas de conexão com o Mecanismo de Banco de Dados do SQL Server](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md). 
 

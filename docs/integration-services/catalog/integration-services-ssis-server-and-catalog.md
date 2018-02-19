@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b1ba94eb985130eb7e3f8ad020756c7387df297c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b6451f3d322ff92ee928e6a9ed98759df0bcc2e6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Servidor e Catálogo do SSIS (Integration Services)
   Depois de criar e testar pacotes no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], você pode implantar os projetos que contêm os pacotes no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -39,9 +39,9 @@ ms.lasthandoff: 01/25/2018
  Para obter uma visão geral da funcionalidade de catálogo do SSISDB, confira [Catálogo do SSIS](../../integration-services/catalog/ssis-catalog.md).  
   
 ## <a name="high-availability"></a>Alta disponibilidade  
- Como outros bancos de dados de usuários, o banco de dados **SSISDB** dá suporte a espelhamento de banco de dados e replicação. Para obter mais informações sobre espelhamento e replicação, veja [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
+ Como outros bancos de dados de usuários, o banco de dados **SSISDB** é compatível com espelhamento de banco de dados e replicação. Para obter mais informações sobre espelhamento e replicação, veja [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
- Você também pode fornecer alta disponibilidade do SSISDB e de seu conteúdo utilizando o SSIS e grupos de disponibilidade Always On. Para obter mais informações, confira essa postagem no blog de Matt Masson, [SSIS com Always On](http://go.microsoft.com/fwlink/?LinkId=255873), em blogs.msdn.com.  
+ Você também pode fornecer alta disponibilidade do SSISDB e de seu conteúdo utilizando o SSIS e grupos de disponibilidade Always On. Para obter mais informações, confira [AlwaysOn para Catálogo SSIS (SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb). Veja também essa postagem no blog de Matt Masson, [SSIS com Always On](http://go.microsoft.com/fwlink/?LinkId=255873), em blogs.msdn.com.  
   
 ##  <a name="ssms"></a> Servidor do Integration Services no SQL Server Management Studio  
  Quando você conecta a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que hospeda o banco de dados do **SSISDB** , vê os seguintes objetos no Pesquisador de Objetos:  

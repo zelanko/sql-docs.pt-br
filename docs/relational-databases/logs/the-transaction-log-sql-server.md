@@ -8,7 +8,8 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-transaction-log
+ms.technology:
+- dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cb3c2ded87c3dd16f302aeab8e14c9ba09f92e88
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 24b9cf5cb7fd7a8359b7a946219b5e4a5eb5c037
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="the-transaction-log-sql-server"></a>O log de transações (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Todo banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem um log de transações que registra todas as transações e as modificações de banco de dados feitas por cada transação.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Todo banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem um log de transações que registra todas as transações e as modificações de banco de dados feitas por cada transação.
   
 O log de transações é um componente crítico do banco de dados. Se houver uma falha no sistema, você precisará que o log retorne o seu banco de dados a um estado consistente. 
 

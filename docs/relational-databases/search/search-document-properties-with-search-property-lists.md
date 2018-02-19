@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - search property lists [SQL Server], about
 - property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ade7dbffabb11419e8eeb43f50fa2ecf6d27dc9
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 24c1ffc5cc5f68271343a078cd02296b9d6b42c3
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Pesquisar propriedades de documento com listas de propriedades de pesquisa
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Anteriormente, o conteúdo das propriedades de documento não podia ser diferenciado do conteúdo do corpo do documento. Essa limitação restringia as consultas de texto completo a pesquisas genéricas em documentos inteiros. No entanto, agora você pode configurar um índice de texto completo para dar suporte à pesquisa com escopo de propriedade, como Author e Title, para tipos de documento com suporte em uma coluna de dados binários **varbinary**, **varbinary(max)** (incluindo **FILESTREAM**) ou **image** . Esse formulário de pesquisa é conhecido como *pesquisa de propriedade*.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Anteriormente, o conteúdo das propriedades de documento não podia ser diferenciado do conteúdo do corpo do documento. Essa limitação restringia as consultas de texto completo a pesquisas genéricas em documentos inteiros. No entanto, agora você pode configurar um índice de texto completo para dar suporte à pesquisa com escopo de propriedade, como Author e Title, para tipos de documento com suporte em uma coluna de dados binários **varbinary**, **varbinary(max)** (incluindo **FILESTREAM**) ou **image** . Esse formulário de pesquisa é conhecido como *pesquisa de propriedade*.  
   
  O [filtro](../../relational-databases/search/configure-and-manage-filters-for-search.md) associado (IFilter) determina se a pesquisa de propriedade é possível em um tipo de documento específico. Em alguns tipos de documento, o IFilter associado extrai algumas ou todas as propriedades definidas para esse tipo de documento, bem como o conteúdo do corpo do documento. É possível configurar um índice de texto completo para oferecer suporte à pesquisa de propriedade somente em propriedades que são extraídas por um IFilter durante a indexação de texto completo. Entre os IFilters que extraem várias propriedades de documento estão os IFilters para tipos de documento do Microsoft Office (como .docx, .xlsx e .pptx). Por outro lado, o IFilter de XML não emite propriedades.  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 01/02/2018
   
  ![Índice de texto completo que usa uma lista de propriedades de pesquisa](../../relational-databases/search/media/ifts-spl-and-fti.gif "Índice de texto completo que usa uma lista de propriedades de pesquisa")  
   
- Os termos de pesquisa na propriedade Title — "Favorite", "Biking" e "Trails" — são associados à ID de propriedade interna atribuída a Title para esse índice, 1. Os termos de pesquisa na propriedade Keywords — "biking" e "mountain" — são associados à ID de propriedade interna atribuída a Tags para esse índice, 2. Para os termos de pesquisa na propriedade Author — "Jane" e "Doe" — e termos de pesquisa no corpo do documento, a ID da propriedade interna é 0. Observe que o termo "biking" ocorre na propriedade Title, na propriedade Keywords (Tags) e no corpo do documento. Uma pesquisa de propriedade por "biking" na propriedade Title ou Keywords (Tags) retornaria esse documento nos resultados. Uma consulta genérica de texto completo por "biking" também retornaria esse documento, como se o índice não estivesse configurado para a pesquisa de propriedade. Uma pesquisa de propriedade por "biking" na propriedade Author não retornaria esse documento.  
+ Os termos de pesquisa na propriedade Title — "Favorite", "Biking" e "Trails" — são associados à ID de propriedade interna atribuída a Title para esse índice, 1. Os termos de pesquisa na propriedade Keywords — "biking" e "mountain" — são associados à ID de propriedade interna atribuída a Tags para esse índice, 2. Para os termos de pesquisa na propriedade Author — "Jane" e "Doe" — e termos de pesquisa no corpo do documento, a ID da propriedade interna é 0. O termo "biking" ocorre na propriedade Title, na propriedade Keywords (Tags) e no corpo do documento. Uma pesquisa de propriedade por "biking" na propriedade Title ou Keywords (Tags) retornaria esse documento nos resultados. Uma consulta genérica de texto completo por "biking" também retornaria esse documento, como se o índice não estivesse configurado para a pesquisa de propriedade. Uma pesquisa de propriedade por "biking" na propriedade Author não retornaria esse documento.  
   
  Uma consulta de texto completo com escopo de propriedade usa as IDs de propriedade interna para a lista de propriedades de pesquisa atual do índice de texto completo.  
   
@@ -105,7 +107,7 @@ ms.lasthandoff: 01/02/2018
   
 -   Identificador de inteiro de propriedade  
   
-     Cada propriedade de pesquisa possui um identificador que é exclusivo no conjunto de propriedades. Observe que para uma determinada propriedade, o identificador pode ser um inteiro ou uma cadeia de caracteres. No entanto, a pesquisa de texto completo oferece suporte somente a identificadores de inteiro.  
+     Cada propriedade de pesquisa possui um identificador que é exclusivo no conjunto de propriedades. Para uma determinada propriedade, o identificador pode ser um inteiro ou uma cadeia de caracteres. No entanto, a pesquisa de texto completo é compatível somente com identificadores de inteiro.  
   
 -   Nome da propriedade  
   
@@ -130,7 +132,7 @@ ms.lasthandoff: 01/02/2018
   
  **Para adicionar uma propriedade a uma lista de propriedades de pesquisa com Transact-SQL**  
   
- Use a instrução [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) com os valores obtidos usando um dos métodos descritos no tópico [Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md).  
+ Use a instrução [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) com os valores obtidos usando um dos métodos descritos no artigo [Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md).  
   
  O exemplo a seguir demonstra o uso desses valores ao adicionar uma propriedade a uma lista de propriedades de pesquisa:  
   
@@ -201,7 +203,7 @@ GO
   
 6.  Na caixa de diálogo **Editor da Lista de Pesquisa de Propriedades** , use a grade Propriedades para adicionar ou remover propriedades de pesquisa:  
   
-    1.  Para remover uma propriedade do documento, clique no cabeçalho da linha à esquerda da propriedade e pressione DEL.  
+    1.  Para remover uma propriedade de documento, clique no cabeçalho da linha à esquerda da propriedade e pressione DEL.  
   
     2.  Para adicionar uma propriedade de documento, clique na linha vazia na parte inferior da lista, à direita do **\***, e insira os valores para a nova propriedade.  
   

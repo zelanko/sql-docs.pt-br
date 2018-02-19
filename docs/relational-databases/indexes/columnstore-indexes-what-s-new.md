@@ -8,20 +8,21 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 65aaaf68cd32204b7447807ebce247ba3e977459
-ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.openlocfilehash: 74b0f562bc50496df5fdbf88edac546e503d8718
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Índices columnstore – novidades
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,10 +61,10 @@ ms.lasthandoff: 01/03/2018
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] adiciona esses novos recursos.
 
 ### <a name="functional"></a>Funcional
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] dá suporte a colunas computadas não persistentes em índices columnstore clusterizados. Não há suporte para colunas persistentes em índices columnstore clusterizados. Você não pode criar um índice não clusterizado em um índice columnstore que tenha uma coluna computada. 
+- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] é compatível com colunas computadas não persistentes em índices columnstore clusterizados. Não há suporte para colunas persistentes em índices columnstore clusterizados. Você não pode criar um índice não clusterizado em um índice columnstore que tenha uma coluna computada. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
- O[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] adiciona aprimoramentos importantes para melhorar o desempenho e a flexibilidade dos índices columnstore. Esses aprimoramentos melhoram os cenários de data warehouse e habilitam a análise operacional em tempo real.  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] adiciona aprimoramentos importantes para melhorar o desempenho e a flexibilidade dos índices columnstore. Esses aprimoramentos melhoram os cenários de data warehouse e habilitam a análise operacional em tempo real.  
   
 ### <a name="functional"></a>Funcional  
   
@@ -125,7 +126,7 @@ Esses DMVs baseados em OLTP na memória contêm atualizações para o columnstor
 -   Para tabelas na memória, as consultas em índices columnstore são executadas somente no modo de interoperabilidade, e não no modo nativo na memória. Há suporte para a execução paralela.  
   
 ## [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- O [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] introduziu o índice de columnstore clusterizado como o formato de armazenamento primário. Isso permitiu cargas regulares, bem como operações de atualização, exclusão e inserção.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] introduziu o índice de columnstore clusterizado como o formato de armazenamento primário. Isso permitiu cargas regulares, bem como operações de atualização, exclusão e inserção.  
   
 -   A tabela pode usar um índice de repositório de coluna clusterizado como o armazenamento de tabela primária. Nenhum outro índice tem permissão na tabela, mas o índice de repositório de coluna clusterizado é atualizável, de modo que você possa executar cargas regulares e fazer alterações em linhas individuais.  
 -   O índice de columnstore não clusterizado continua tendo a mesma funcionalidade que tinha no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], exceto no caso de operadores adicionais que, agora, podem ser executados no modo de lote. Ainda não é atualizável, exceto por meio de recompilação e usando a alternância de partição. O índice columnstore não clusterizado tem suporte apenas em tabelas baseadas em disco, e não em tabelas na memória.  
@@ -134,7 +135,7 @@ Esses DMVs baseados em OLTP na memória contêm atualizações para o columnstor
 -   Estes operadores são executados em modo de lote para consultas multithread: verificação, filtro, projeto, união, agrupar por e união de todos.  
   
 ## [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
- O [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] introduziu o índice columnstore não clusterizado como outro tipo de índice em tabelas rowstore e no processamento em lotes para consultas em dados de columnstore.  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] introduziu o índice columnstore não clusterizado como outro tipo de índice em tabelas rowstore e no processamento em lotes para consultas em dados de columnstore.  
   
 -   Uma tabela rowstore pode ter um índice columnstore não clusterizado.  
 -   O índice columnstore é somente leitura. Depois de criar o índice columnstore, não é possível atualizar a tabela com operações `INSERT`, `DELETE` e `UPDATE`; para executar essas operações, é necessário remover o índice, atualizar a tabela e recompilar o índice columnstore. Você pode carregar dados adicionais na tabela usando a alternância de partição. A vantagem da alternância de partição é que você pode carregar dados sem descartar e recompilar o índice columnstore.  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - installing Full-Text Search
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-caps.latest.revision: "106"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e544e5cefe8b935086b93ac7f30acd033a8462aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74e12e9e4b1d6379a0dc8954b2c99d77c99faa55
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="upgrade-full-text-search"></a>Atualizar pesquisa de texto completo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A atualização da pesquisa de texto completo para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é feita durante a instalação e quando os arquivos de banco de dados e os catálogos de texto completo da versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são anexados, restaurados ou copiados por meio do Assistente para Copiar Banco de Dados.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+A atualização da pesquisa de texto completo para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é feita durante a instalação e quando os arquivos de banco de dados e os catálogos de texto completo da versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são anexados, restaurados ou copiados por meio do Assistente para Copiar Banco de Dados.  
   
   
 ##  <a name="Upgrade_Server"></a> Atualizar uma instância do servidor  
@@ -126,7 +128,7 @@ Quando um banco de dados é atualizado do [!INCLUDE[ssCurrent](../../includes/ss
   
  **Para alterar o comportamento de atualização de texto completo em uma instância de servidor**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Usar a ação da **opção\_de atualização** do [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Use a ação **upgrade\_option** do [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Use a **Opção de Atualização de Texto Completo** da caixa de diálogo **Propriedades do Servidor** . Para obter informações, consulte [Gerenciar e monitorar a pesquisa de texto completo em uma instância do servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
@@ -185,6 +187,6 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
 ## <a name="see-also"></a>Consulte também  
  [Iniciar a pesquisa de texto completo](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Configurar e gerenciar separadores de palavras e lematizadores de pesquisa](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [Configurar e gerenciar filtros para pesquisa](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
+ [Configurar e gerenciar filtros de pesquisa](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   
   

@@ -8,26 +8,28 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], filters
 - filters [full-text search]
 ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
-caps.latest.revision: "68"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cca26f3d6479fb798806d5e6ed0cbcbf8b991272
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f4c3a5a90c6dffb76f4569d86615cbb0034f3db5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Configurar e gerenciar filtros para pesquisa
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A indexação de documentos em uma coluna de tipo de dados **varbinary**, **varbinary(max)**, **image** ou **xml** exige processamento extra. Esse processamento deve ser realizado por um filtro. O filtro extrai as informações textuais do documento (removendo a formatação). Em seguida, o filtro envia o texto para o componente separador de palavras do idioma associado à coluna da tabela.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+A indexação de documentos em uma coluna de tipo de dados **varbinary**, **varbinary(max)**, **image** ou **xml** exige processamento extra. Esse processamento deve ser realizado por um filtro. O filtro extrai as informações textuais do documento (removendo a formatação). Em seguida, o filtro envia o texto para o componente separador de palavras do idioma associado à coluna da tabela.  
   
  Um determinado filtro é específico a um determinado tipo de documento (.doc, .pdf, .xls, .xml e assim por diante). Estes filtros implementam a interface IFilter. Para obter mais informações sobre estes tipos de documento, veja a exibição de catálogo [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  
   
@@ -36,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  É possível que um filtro consiga processar objetos incorporados ao objeto pai, dependendo da sua implementação. No entanto o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não configura filtros para seguir links para outros objetos.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala seus próprios filtros XML e HTML. Além disso, qualquer filtro de formatos proprietários do [!INCLUDE[msCoName](../../includes/msconame-md.md)] (.doc, .xdoc, .ppt e assim por diante) que já esteja instalado no sistema operacional também é carregado pelo  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para identificar os filtros que estão carregados atualmente em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use o procedimento armazenado [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) , da seguinte maneira:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala seus próprios filtros XML e HTML. Além disso, qualquer filtro de formatos proprietários do [!INCLUDE[msCoName](../../includes/msconame-md.md)] (.doc, .xdoc, .ppt e assim por diante) que já esteja instalado no sistema operacional também é carregado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para identificar os filtros que estão carregados atualmente em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use o procedimento armazenado [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) , da seguinte maneira:  
   
 ```  
 EXEC sp_help_fulltext_system_components 'filter';   
@@ -48,7 +50,7 @@ EXEC sp_help_fulltext_system_components 'filter';
   
 -   [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
  [Compatibilidade do FILESTREAM com outros recursos do SQL Server](../../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)  
   

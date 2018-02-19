@@ -19,11 +19,11 @@ ms.devlang: na
 ms.topic: article
 ms.date: 01/31/2018
 ms.author: aliceku
-ms.openlocfilehash: 8c192f5d1114ddab7d75761b385e91c0f22e481b
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 1fdb7da4fe1276a66494873fc38aa15ae67bae27
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption com suporte a Bring Your Own Key (VERSÃO PRÉVIA) para o Banco de Dados SQL do Azure e Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -59,9 +59,8 @@ Quando a primeira TDE está configurada para usar um protetor de TDE do Key Vaul
 
 ### <a name="general-guidelines"></a>Instruções gerais
 - Certifique-se de que o Azure Key Vault e o Banco de Dados SQL do Azure estarão no mesmo locatário.  **Não há suporte** para interações de servidor e cofre de chaves entre locatários.
-
 - Decida quais assinaturas serão usadas para os recursos necessários, mover o servidor entre assinaturas posteriormente requer uma nova configuração de TDE com BYOKs.
-- Configure o Azure Key Vault em uma única assinatura exclusivamente para os protetores de TDE do Banco de Dados SQL.  Todos os bancos de dados associados a um servidor lógico usam mesmo protetor de TDE, portanto, o agrupamento de bancos de dados para um servidor lógico deve ser considerado. 
+- Ao configurar a TDE com BYOK, é importante considerar a carga colocada no cofre de chaves por operações repetidas de encapsulamento/desencapsulamento. Por exemplo, já que todos os bancos de dados associados a um servidor lógico usam o mesmo protetor de TDE, um failover desse servidor disparará um número de operações de chave destinadas ao cofre que será equivalente ao número de bancos de dados no servidor. Com base em nossa experiência e nos [limites de serviço do cofre de chaves](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits) documentados, recomendamos associar no máximo 500 bancos de dados Standard ou 200 bancos de dados Premium a um Azure Key Vault em uma assinatura única para garantir alta disponibilidade consistentemente alta ao acessar o protetor de TDE no cofre. 
 - Recomendado: manter uma cópia local do protetor de TDE.  Isso exige um dispositivo HSM para criar um protetor de TDE localmente e um sistema de caução de chave para armazenar uma cópia local do protetor de TDE.
 
 
@@ -86,7 +85,8 @@ Quando a primeira TDE está configurada para usar um protetor de TDE do Key Vaul
 - Efetue a caução da chave em um sistema de caução de chave.  
 - Importe o arquivo de chave de criptografia (.pfx, .byok ou .backup) para o Azure Key Vault. 
     
-    >[!NOTE] 
+
+>[!NOTE] 
     >Para fins de teste, é possível criar uma chave com o Azure Key Vault, no entanto, não é possível efetuar a caução dessa chave, pois a chave privada nunca pode deixar o cofre de chaves.  Sempre faça backup e efetue a caução de chaves usadas para criptografar dados de produção, uma vez que a perda da chave (exclusão acidental no cofre de chaves, expiração etc.) resulta em perda de dados permanente.
     >
     
@@ -148,3 +148,5 @@ Para atenuar isso, execute o cmdlet [Get-AzureRmSqlServerKeyVaultKey](/powershel
    -ResourceGroup <SQLDatabaseResourceGroupName>
    ```
 Para saber mais sobre a recuperação de backup do Banco de Dados SQL, consulte [Recuperar um Banco de dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups). Para saber mais sobre a recuperação de backup do SQL Data Warehouse, consulte [Recuperar um SQL Data Warehouse do Azure](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-restore-database-overview).
+
+Consideração adicional para backup de arquivos de log: o resultado do backup de arquivos de log permanece criptografado com o Criptografador TDE original, mesmo se houve rodízio do protetor de TDE e o banco de dados agora usa um novo protetor de TDE.  No momento da restauração, as duas chaves serão necessárias para restaurar o banco de dados.  Se o arquivo de log estiver usando um protetor de TDE armazenado no Azure Key Vault, essa chave será necessária no momento da restauração mesmo se, durante esse intervalo de tempo, o banco de dados tiver sido alterado para usar o TDE gerenciado por serviços.   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mail
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -41,19 +42,20 @@ f1_keywords:
 - sql13.swb.dbmail.manageexistingprofile.f1
 - sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5a22d5c69dd9e3250f559dc0d08ae639ed2ff2da
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3d88087b9d1142919f844155c805e2284e954e54
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-database-mail"></a>Configurar o Database Mail
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como habilitar e configurar o Database Mail usando o Assistente para Configuração do Database Mail e cria um script de Configuração do Database Mail usando modelos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico descreve como habilitar e configurar o Database Mail usando o Assistente para Configuração do Database Mail e cria um script de Configuração do Database Mail usando modelos.  
   
 -   **Antes de começar:**  [Limitações e restrições](#Restrictions), [Segurança](#Security)  
   
@@ -159,7 +161,7 @@ ms.lasthandoff: 11/17/2017
  Digite o endereço de email que será usado em respostas a mensagens de email enviadas por esta conta. O email de resposta é opcional. Por exemplo, respostas a uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent podem ir para o administrador de banco de dados, danw@Adventure-Works.com.  
   
  **Nome do servidor**  
- Digite o nome ou o endereço IP do servidor SMTP que a conta usa para enviar email. Geralmente, está em um formato semelhante a **smtp.***<your_company>***.com**. Para obter mais ajuda sobre isso, consulte o administrador de mail.  
+ Digite o nome ou o endereço IP do servidor SMTP que a conta usa para enviar email. Geralmente, está em um formato semelhante a **smtp.***<sua_empresa>***.com**. Para obter mais ajuda sobre isso, consulte o administrador de mail.  
   
  **Número da porta**  
  Digite o número da porta do servidor SMTP para a conta. A maioria dos servidores SMTP usa a porta 25.  
@@ -223,7 +225,7 @@ ms.lasthandoff: 11/17/2017
  **Autenticação Básica**  
  Especifique o nome do usuário e a senha exibidos pelo servidor SMTP.  
   
- **Nome de usuário**  
+ **User name**  
  Exiba ou atualize o nome do usuário que o Database Mail usa para fazer logon no servidor SMTP. O nome do usuário será necessário se o servidor SMTP exigir autenticação básica.  
   
  **Senha**  
@@ -367,7 +369,7 @@ ms.lasthandoff: 11/17/2017
   
  Um perfil pode ser um perfil padrão. Nesse caso, usuários ou funções podem enviar e-mails por meio do perfil sem especificá-lo explicitamente. Se o usuário ou função que envia a mensagem de e-mail tiver um perfil privado padrão, o Database Mail irá utilizá-lo. Se o usuário ou função não tiver nenhum perfil privado padrão, **sp_send_dbmail** usará o perfil público padrão para o banco de dados **msdb** . Se não houver nenhum perfil privado padrão para o usuário ou função e nenhum perfil público padrão para o banco de dados, **sp_send_dbmail** retornará um erro.  
   
- **Nome de usuário**  
+ **User name**  
  Selecione o nome de um usuário ou função no banco de dados **msdb** .  
   
  **Acesso**  
@@ -424,7 +426,7 @@ ms.lasthandoff: 11/17/2017
  [Assistente de Configuração do Database](#DBWizard)  
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- Use a página **Enviar Email de Teste de***<instance_name>* para enviar uma mensagem de email usando o perfil especificado do Database Mail. Só os membros da função de servidor fixa **sysadmin** podem enviar email de teste usando essa página.  
+ Use a página **Enviar Email de Teste de***<nome_da_instância>* para enviar uma mensagem de email usando o perfil especificado do Database Mail. Só os membros da função de servidor fixa **sysadmin** podem enviar email de teste usando essa página.  
   
  **Perfil do Database Mail**  
  Selecione um perfil da lista do Database Mail. Esse é um campo obrigatório. Se nenhum perfil for mostrado, não há nenhum perfil ou você não tem permissão para um perfil. Use o **Assistente para Configuração do Database Mail** para criar e configurar perfis. Se nenhum perfil for listado, use o Assistente para Configuração do Database Mail para criar um perfil para seu uso.  

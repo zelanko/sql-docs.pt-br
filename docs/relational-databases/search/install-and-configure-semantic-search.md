@@ -8,26 +8,28 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - semantic search [SQL Server], installing
 - semantic search [SQL Server], configuring
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43cacfe1341c5cb412408696ed4ed136b59f3e8a
-ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
+ms.openlocfilehash: c3e5be07b316f2975a56181e6e58805e88023939
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="install-and-configure-semantic-search"></a>Instalar e configurar a pesquisa semântica
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Descreve os pré-requisitos para a pesquisa semântica estatística e como instalá-los ou verificá-los.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Descreve os pré-requisitos para a pesquisa semântica estatística e como instalá-los ou verificá-los.  
   
 ## <a name="install-semantic-search"></a>Instalar a pesquisa semântica  
   
@@ -150,6 +152,6 @@ GO
 ## <a name="install-optional-support-for-newer-document-types"></a>Instalar suporte opcional para tipos de documento mais novos  
   
 ###  <a name="office"></a> Instalar os filtros mais recentes para Microsoft Office e outros tipos de documento Microsoft  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala os separadores de palavras e lematizadores mais recentes do [!INCLUDE[msCoName](../../includes/msconame-md.md)] , mas não instala os últimos filtros de documentos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office e outros tipos de documento [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Esses filtros são necessários para indexação de documentos criados com versões recentes do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office e outros aplicativos [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para baixar os filtros mais recentes, consulte [Microsoft Office 2010 Filter Packs](http://go.microsoft.com/fwlink/?LinkId=218293). (Não parece haver uma versão do pacote de filtro para Office 2013 ou Office 2016.)
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala os separadores de palavras e lematizadores mais recentes do [!INCLUDE[msCoName](../../includes/msconame-md.md)], mas não instala os últimos filtros de documentos [!INCLUDE[msCoName](../../includes/msconame-md.md)] do Office e outros tipos de documento [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Esses filtros são necessários para indexação de documentos criados com versões recentes do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office e outros aplicativos [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para baixar os filtros mais recentes, consulte [Microsoft Office 2010 Filter Packs](http://go.microsoft.com/fwlink/?LinkId=218293). (Não parece haver uma versão do pacote de filtro para Office 2013 ou Office 2016.)
   
   

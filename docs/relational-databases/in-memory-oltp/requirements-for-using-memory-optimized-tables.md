@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 41c5e5193a9ce056846f935e7663ef33fbb08337
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3482d6e097e77966be39e33b6eb31b7d941c7624
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Requisitos para usar tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/27/2017
     > [!NOTE]
     > O OLTP in-memory exige a versão de 64 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisa de memória suficiente para manter os dados em tabelas e índices com otimização de memória, bem como memória adicional para dar suporte à carga de trabalho online. Consulte [Estimar requisitos de memória para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) para obter mais informações.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisa de memória suficiente para manter os dados em tabelas com otimização de memória e índices, bem como memória adicional para dar suporte à carga de trabalho online. Consulte [Estimar requisitos de memória para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) para obter mais informações.  
 
 -   Ao executar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma VM (máquina virtual), certifique-se de que haja memória suficiente alocada à VM para dar suporte à memória necessária para os índices e tabelas com otimização de memória. Dependendo do aplicativo host da VM, a opção de configuração para garantir a alocação de memória para a VM pode ser chamada de Reserva de Memória ou ao usar Memória Dinâmica, RAM Mínima. Verifique se essas configurações são suficientes para atender às necessidades dos bancos de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/27/2017
   
 -   Se criar um ou vários bancos de dados com tabelas com otimização de memória, você deverá habilitar a IFI (Inicialização Imediata de Arquivo) ao conceder à conta de inicialização do serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o direito de usuário *SE_MANAGE_VOLUME_NAME*. Sem a IFI, os arquivos de armazenamento com otimização de memória (arquivos delta e de dados) serão inicializados após a criação, o que pode ter um impacto negativo no desempenho de sua carga de trabalho. Para obter mais informações sobre a IFI, inclusive sobre como habilitá-la, consulte [Inicialização imediata de arquivo do banco de dados](../../relational-databases/databases/database-instant-file-initialization.md).
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
  [Inicialização imediata de arquivo do banco de dados](../../relational-databases/databases/database-instant-file-initialization.md)  
  [Guia de arquitetura de memória](../../relational-databases/memory-management-architecture-guide.md)

@@ -8,7 +8,8 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,24 +17,26 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 64c02e1d3e2c0304acebd9d8c8c9a60982841c10
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 084fc871f35c8902fab894ad170db57b44f2b824
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurar um computador multihomed para acesso ao SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando um servidor deve fornecer uma conexão a duas ou mais redes ou sub-redes de rede, um cenário típico usa um computador multihomed. Frequentemente este computador está localizado em uma rede de perímetro (também conhecida como DMZ, zona desmilitarizada ou sub-rede filtrada). Este tópico descreve como configurar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o Firewall do Windows com Segurança Avançada para fornecer conexões de rede a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um ambiente multihomed.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  Quando um servidor deve fornecer uma conexão a duas ou mais redes ou sub-redes de rede, um cenário típico usa um computador multihomed. Frequentemente este computador está localizado em uma rede de perímetro (também conhecida como DMZ, zona desmilitarizada ou sub-rede filtrada). Este artigo descreve como configurar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o Firewall do Windows com Segurança Avançada para fornecer conexões de rede a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um ambiente multihomed.  
   
 > [!NOTE]  
 >  Um computador multihomed tem vários adaptadores de rede ou foi configurado para usar vários endereços IP para um único adaptador de rede. Um computador dualhomed tem dois adaptadores de rede ou foi configurado para usar dois endereços IP para um único adaptador de rede.  
   
- Antes de continuar com este tópico, você deve se familiarizar com as informações fornecidas no tópico [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). Esse tópico contém informações básicas sobre como os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funcionam com o firewall.  
+ Antes de continuar com este artigo, você deve se familiarizar com as informações fornecidas no artigo [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). Esse artigo contém informações básicas sobre como os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funcionam com o firewall.  
   
  **Suposições deste exemplo:**  
   
@@ -44,7 +47,7 @@ ms.lasthandoff: 12/05/2017
     > [!NOTE]  
     >  Endereços IPv4 são uma série de quatro números conhecida como octetos. Cada número é menor que 255 e os números são separados por pontos, como 127.0.0.1. Endereços IPv6 são uma série de oito números hexadecimais separados por dois-pontos, como fe80:4898:23:3:49a6:f5c1:2452:b994.  
   
--   As regras de firewall podem permitir acesso por meio de uma porta específica, como a porta 1433. Ou as regras de firewall podem permitir acesso ao programa [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] (sqlservr.exe). Nenhum método é melhor que o outro. Como um servidor em uma rede de perímetro é mais vulnerável a ataques do que servidores em uma intranet, este tópico assume que você deseja ter um controle mais preciso e selecionar individualmente as portas que você abre. Por esse motivo, este tópico assume que você configurará o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para escutar em uma porta fixa. Para obter mais informações sobre as portas usadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , veja [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+-   As regras de firewall podem permitir acesso por meio de uma porta específica, como a porta 1433. Ou as regras de firewall podem permitir acesso ao programa [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] (sqlservr.exe). Nenhum método é melhor que o outro. Como um servidor em uma rede de perímetro é mais vulnerável a ataques do que servidores em uma intranet, este artigo assume que você deseja ter um controle mais preciso e selecionar individualmente as portas que você abre. Por esse motivo, este artigo assume que você configurará o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para escutar em uma porta fixa. Para obter mais informações sobre as portas usadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , veja [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 -   Este exemplo configura o acesso ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a porta TCP 1433. As outras portas que são os diferentes usos dos componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser configuradas usando as mesmas etapas gerais.  
   
@@ -144,7 +147,7 @@ ms.lasthandoff: 12/05/2017
   
 9. Para configurar os outros endereços IP em um computador multihomed, repita esse procedimento usando outro endereço IP e outra regra.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Serviço SQL Server Browser &#40;Mecanismo de Banco de Dados e SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [Conectar-se ao SQL Server com um servidor proxy &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md)  
   

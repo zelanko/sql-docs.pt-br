@@ -8,7 +8,8 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,18 +19,21 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], upgrading databases
 - upgrading replicated databases
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
-caps.latest.revision: "74"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d0e323482ac2d762a24a2ef39f2922764a24d35b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 372c5003b349984098a8d02e6655659e6af3ef58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-replicated-databases"></a>Atualizar bancos de dados replicados
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] dá suporte à atualização de bancos de dados replicados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; não é necessário interromper a atividade de outros nós durante o upgrade de um nó. Verifique se você está em conformidade com as regras que dizem respeito às versões suportadas em uma topologia:  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] é compatível com a atualização de bancos de dados replicados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; não é necessário interromper a atividade de outros nós durante o upgrade de um nó. Verifique se você está em conformidade com as regras que dizem respeito às versões suportadas em uma topologia:  
   
 -   Um Distribuidor pode ser de qualquer versão, desde que ela seja maior ou igual à do Publicador (em muitos casos, o Distribuidor tem a mesma instância que o Publicador).  
   
@@ -42,7 +46,7 @@ ms.lasthandoff: 01/18/2018
     -   Um Assinante de uma publicação de mesclagem pode ser de qualquer versão menor ou igual à do Publicador.  
   
 > [!NOTE]  
->  Esse tópico está disponível na documentação de Ajuda da instalação e nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os links do tópico que aparecem em negrito na documentação da Ajuda da instalação se referem a tópicos que só estão disponíveis nos Manuais Online. **Crie uma estratégia de upgrade para o Publicador, o Assinante e o Distribuidor usando as opções descritas nesta [postagem](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**. 
+>  Esse artigo está disponível na documentação de Ajuda da instalação e nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os links do artigo que aparecem em negrito na documentação da Ajuda da instalação se referem a artigos que só estão disponíveis nos Manuais Online. **Crie uma estratégia de upgrade para o Publicador, o Assinante e o Distribuidor usando as opções descritas nesta [postagem](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**. 
   
 ## <a name="run-the-log-reader-agent-for-transactional-replication-before-upgrade"></a>Executar o Log Reader Agent para replicação transacional antes da atualização  
  Antes de fazer upgrade para o [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)], você deve verificar se todas as transações confirmadas das tabelas publicadas foram processadas pelo Agente de Leitor de Log. Para isso, execute as seguintes etapas para cada banco de dados que contém publicações transacionais:  
@@ -66,7 +70,7 @@ ms.lasthandoff: 01/18/2018
   
  A replicação de mesclagem armazena metadados de publicação e de assinatura em várias tabelas do sistema nos bancos de dados de publicação e de assinatura. Executar o Snapshot Agent atualiza os metadados de publicação, e executar o Merge Agent atualiza os metadados de assinatura. Só é necessário gerar um instantâneo de publicação. Se uma publicação de mesclagem usar filtros com parâmetros, cada partição também terá um instantâneo. Não é necessário atualizar esses instantâneos particionados.  
   
- Execute os agentes do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Replication Monitor ou da linha de comando. Para obter mais informações sobre como executar o Snapshot Agent, consulte os seguintes tópicos:  
+ Execute os agentes do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Replication Monitor ou da linha de comando. Para obter mais informações sobre como executar o Agente de Instantâneo, consulte os seguintes artigos:  
   
 -   [Criar e aplicar o instantâneo inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
@@ -76,7 +80,7 @@ ms.lasthandoff: 01/18/2018
   
 -   [Conceitos dos executáveis do Replication Agent](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
- Para obter mais informações sobre como executar o Merge Agent, consulte os seguintes tópicos:  
+ Para obter mais informações sobre como executar o Agente de Mesclagem, consulte os seguintes artigos:  
   
 -   [Sincronizar uma assinatura pull](../../relational-databases/replication/synchronize-a-pull-subscription.md)  
   

@@ -8,23 +8,25 @@ ms.service:
 ms.component: udf
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-udf
+ms.technology:
+- dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ce501e925db46f69725ef56dbbecbba135630e58
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c7b7c08f7f2a853402fa2f9b8e870a317cb44554
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="modify-user-defined-functions"></a>Modificar funções definidas pelo usuário
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Você pode modificar funções definidas pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Modificar funções definidas pelo usuário como descrito abaixo não alterará as permissões das funções, nem afetará as funções dependentes, procedimentos armazenados ou gatilhos.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Você pode modificar funções definidas pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Modificar funções definidas pelo usuário como descrito abaixo não alterará as permissões das funções, nem afetará as funções dependentes, procedimentos armazenados ou gatilhos.  
   
  **Neste tópico**  
   
@@ -76,9 +78,9 @@ ms.lasthandoff: 11/17/2017
   
 5.  Na Janela de Consulta, faça as alterações necessárias à instrução ALTER FUNCTION.  
   
-6.  No menu **Arquivo** , clique em **Salvar***function_name*.  
+6.  No menu **Arquivo**, clique em **Save***function_name*.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-modify-a-user-defined-function"></a>Para modificar uma função definida pelo usuário  
   

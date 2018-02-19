@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e9fcfd0dfb1171371a8b1ead7543ec14d67035d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e853ee12af38d0a48a448f8d0798fd4b192c110
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lição 2: Conectando de outro computador
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para aumentar a segurança, o [!INCLUDE[ssDE](../includes/ssde-md.md)] das edições Developer, Express e Evaluation do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não pode ser acessado de outro computador quando inicialmente instalado. Esta lição mostra a você como habilitar os protocolos, configurar as portas e configurar o Firewall do Windows para se conectar de outros computadores.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Para aumentar a segurança, o [!INCLUDE[ssDE](../includes/ssde-md.md)] das edições Developer, Express e Evaluation do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não pode ser acessado de outro computador quando inicialmente instalado. Esta lição mostra a você como habilitar os protocolos, configurar as portas e configurar o Firewall do Windows para se conectar de outros computadores.  
   
 Esta lição contém as seguintes tarefas:  
   
@@ -129,10 +132,10 @@ Quando o serviço [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser
   
 2.  Na caixa de diálogo **Conectar ao Servidor** , confirme **Mecanismo de Banco de Dados** na caixa **Tipo de Servidor** .  
   
-3.  Na caixa **Nome do Servidor** , digite **tcp:** para especificar o protocolo, seguido do nome do computador, uma vírgula e o número da porta. Para se conectar à instância padrão, a porta 1433 está implícita e pode ser omitida; portanto, digite **tcp:***<computer_name>*. Em nosso exemplo de uma instância nomeada, digite **tcp:***<computer_name>***,49172**.  
+3.  Na caixa **Nome do Servidor** , digite **tcp:** para especificar o protocolo, seguido do nome do computador, uma vírgula e o número da porta. Para se conectar à instância padrão, a porta 1433 está implícita e pode ser omitida; portanto, digite **tcp:***<nome_do_computador>*. Em nosso exemplo de uma instância nomeada, digite **tcp:***<nome_do_computador>***,49172**.  
   
     > [!NOTE]  
-    > Se você omitir **tcp:** da caixa **Nome do servidor**, o cliente tentará todos os protocolos que estiverem habilitados, na ordem especificada na configuração do cliente.  
+    > Se você omitir **tcp:** da caixa **Nome do servidor** , o cliente tentará todos os protocolos que estiverem habilitados, na ordem especificada na configuração do cliente.  
   
 4.  Na caixa **Autenticação** , confirme **Autenticação do Windows**e clique em **Conectar**.  
   

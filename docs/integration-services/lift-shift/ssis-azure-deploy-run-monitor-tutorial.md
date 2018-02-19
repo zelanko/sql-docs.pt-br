@@ -1,6 +1,6 @@
 ---
 title: Implantar, executar e monitorar um pacote do SSIS no Azure | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 02/05/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,21 +8,22 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bf9df198105549f481dda8472f7142533fa8f23
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: aa1cc5db91745fb7773856a8f66b03c82bba3e9a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Implantar, executar e monitorar um pacote do SSIS no Azure
 Este tutorial mostra como implantar um projeto do SQL Server Integration Services no banco de dados de catálogo do SSISDB no Banco de Dados SQL do Azure, executar um pacote no Azure-SSIS Integration Runtime e monitorar o pacote em execução.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Antes de começar, verifique se você tem a versão 17.2 ou posterior do SQL Server Management Studio. Para baixar a versão mais recente do SSMS, veja [Baixar o SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
@@ -44,8 +45,8 @@ Use o SQL Server Management Studio para se conectar ao catálogo do SSIS no seu 
    | **Tipo de servidor** | Mecanismo de Banco de Dados | Esse valor é necessário. |
    | **Nome do servidor** | O nome do servidor totalmente qualificado | O nome deve estar neste formato: **mysqldbserver.database.windows.net**. Se você precisar do nome do servidor, consulte [Conectar-se ao banco de dados do Catálogo do SSISDB no Azure](ssis-azure-connect-to-catalog-database.md). |
    | **Autenticação** | Autenticação do SQL Server | Este guia de início rápido usa a autenticação do SQL. |
-   | **Logon** | A conta do administrador do servidor | Essa é a conta que você especificou quando criou o servidor. |
-   | **Senha** | A senha de sua conta do administrador do servidor | Essa é a senha que você especificou quando criou o servidor. |
+   | **Logon** | A conta do administrador do servidor | A conta que você especificou quando criou o servidor. |
+   | **Senha** | A senha de sua conta do administrador do servidor | A senha que você especificou quando criou o servidor. |
 
 3. **Conecte-se ao banco de dados SSISDB**. Selecione **Opções** para expandir a caixa de diálogo **Conectar ao Servidor**. Na caixa de diálogo **conectar ao servidor**, selecione a guia **Propriedades de Conexão**. No campo **Conectar-se ao banco de dados**, selecione ou insira `SSISDB`.
 
@@ -53,7 +54,7 @@ Use o SQL Server Management Studio para se conectar ao catálogo do SSIS no seu 
 
 5. No Pesquisador de Objetos, expanda **Catálogos do Integration Services** e, em seguida, expanda **SSISDB** para exibir os objetos no banco de dados do Catálogo do SSIS.
 
-## <a name="deploy-a-project"></a>Implantar um projeto
+## <a name="deploy-a-project-with-the-deployment-wizard"></a>Implantar um projeto com o Assistente de Implantação
 
 ### <a name="start-the-integration-services-deployment-wizard"></a>Iniciar o Assistente de Implantação do Integration Services
 1. No Pesquisador de Objetos no SSMS, com o nó **Catálogos do Integration Services** e o nó **SSISDB** expandidos, expanda a pasta do projeto.
@@ -78,11 +79,75 @@ Use o SQL Server Management Studio para se conectar ao catálogo do SSIS no seu 
 4.  Na página **Examinar**, examine as configurações selecionadas.
     -   Você pode alterar suas seleções selecionando **Anterior** ou selecionando qualquer uma das etapas no painel esquerdo.
     -   Selecione **Implantar** para começar o processo de implantação.
-  
+
+    > ![OBSERVAÇÃO] Se você receber a mensagem de erro **Não há nenhum agente de trabalho ativo. (Provedor de dados do .Net SqlClient)** , verifique se o Azure-SSIS Integration Runtime está em execução. Esse erro ocorre se você tenta implantar enquanto o tempo de execução de integração do Azure-SSIS está em um estado parado.
+
 5.  Após a conclusão do processo de implantação, a página **Resultados** será aberta. Essa página exibe o êxito ou a falha de cada ação.
     -   Se a ação falhou, selecione **Com falha** na coluna **Resultado** para exibir uma explicação do erro.
     -   Opcionalmente, selecione **Salvar Relatório...** para salvar os resultados em um arquivo XML.
     -   Selecione **Fechar** para sair do assistente.
+
+## <a name="deploy-a-project-with-powershell"></a>Implantar um projeto com o PowerShell
+
+Para implantar um projeto com o PowerShell para o SSISDB no Banco de Dados SQL do Azure, adapte o seguinte script aos seus requisitos:
+
+```powershell
+# Variables
+$ProjectFilePath = "C:\<folder>"
+$SSISDBServerEndpoint = "<servername>.database.windows.net"
+$SSISDBServerAdminUserName = "<username>"
+$SSISDBServerAdminPassword = "<password>"
+
+# Load the IntegrationServices Assembly
+[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Management.IntegrationServices") | Out-Null;
+
+# Store the IntegrationServices Assembly namespace to avoid typing it every time
+$ISNamespace = "Microsoft.SqlServer.Management.IntegrationServices"
+
+Write-Host "Connecting to server ..."
+
+# Create a connection to the server
+$sqlConnectionString = "Data Source=" + $SSISDBServerEndpoint + ";User ID="+ $SSISDBServerAdminUserName +";Password="+ $SSISDBServerAdminPassword + ";Initial Catalog=SSISDB"
+$sqlConnection = New-Object System.Data.SqlClient.SqlConnection $sqlConnectionString
+
+# Create the Integration Services object
+$integrationServices = New-Object $ISNamespace".IntegrationServices" $sqlConnection
+
+# Get the catalog
+$catalog = $integrationServices.Catalogs['SSISDB']
+
+write-host "Enumerating all folders..."
+
+$folders = ls -Path $ProjectFilePath -Directory
+
+if ($folders.Count -gt 0)
+{
+    foreach ($filefolder in $folders)
+    {
+        Write-Host "Creating Folder " $filefolder.Name " ..."
+
+        # Create a new folder
+        $folder = New-Object $ISNamespace".CatalogFolder" ($catalog, $filefolder.Name, "Folder description")
+        $folder.Create()
+
+        $projects = ls -Path $filefolder.FullName -File -Filter *.ispac
+        if ($projects.Count -gt 0)
+        {
+            foreach($projectfile in $projects)
+            {
+                $projectfilename = $projectfile.Name.Replace(".ispac", "")
+                Write-Host "Deploying " $projectfilename " project ..."
+
+                # Read the project file, and deploy it to the folder
+                [byte[]] $projectFileContent = [System.IO.File]::ReadAllBytes($projectfile.FullName)
+                $folder.DeployProject($projectfilename, $projectFileContent)
+            }
+        }
+    }
+}
+
+Write-Host "All done." 
+```
 
 ## <a name="run-a-package"></a>Executar um pacote
 

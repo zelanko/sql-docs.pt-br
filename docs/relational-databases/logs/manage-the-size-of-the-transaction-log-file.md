@@ -20,16 +20,17 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 58cbe590d16bba9d74f41dc7499b563a2e0b2499
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e9b13884c2c086265fa0a76dda9f98f4caba2abb
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Gerenciar o tamanho do arquivo de log de transações
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico aborda como monitorar o tamanho de um log de transações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], reduzir o log de transações, adicionar ou aumentar um arquivo de log de transações, otimizar a taxa de crescimento do log de transações de **tempdb** e controlar o crescimento de um arquivo de log de transações.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico aborda como monitorar o tamanho de um log de transações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], reduzir o log de transações, adicionar ou aumentar um arquivo de log de transações, otimizar a taxa de crescimento do log de transações de **tempdb** e controlar o crescimento de um arquivo de log de transações.  
 
 ##  <a name="MonitorSpaceUse"></a>Monitorar o uso do espaço de log  
 Monitore o uso do espaço de log usando [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md). Essa DMV retorna informações sobre a quantidade de espaço de log usada atualmente e indica quando o log de transações precisa de truncamento. 
@@ -102,8 +103,8 @@ Estas são algumas recomendações gerais ao trabalhar com arquivos de log de tr
   
       |Versão|Valores padrão|  
       |-------------|--------------------|  
-      |A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Dados 64 MB. Arquivos de log 64 MB.|  
-      |A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dados 1 MB. Arquivos de log 10%.|  
+      |Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Dados 64 MB. Arquivos de log 64 MB.|  
+      |Começando com o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dados 1 MB. Arquivos de log 10%.|  
       |Antes do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dados 10%. Arquivos de log 10%.|  
 
 -   Um pequeno incremento de aumento pode gerar um número excessivo de [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) pequenos e pode reduzir o desempenho. Para determinar a distribuição ideal de VLF para o tamanho atual do log de transações de todos os bancos de dados em uma instância determinada e os incrementos de crescimento necessários para alcançar o tamanho necessário, consulte este [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).

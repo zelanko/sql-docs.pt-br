@@ -24,11 +24,11 @@ caps.latest.revision:
 author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d291e4ab071aeafd6db43f48749e4e9ff9bcfd25
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: dc562d47b04c20a3878bc0e1b8c63bf5d1151e09
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-indexed-views"></a>Criar exibições indexadas
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,73 +37,73 @@ Este tópico descreve como criar índices em uma exibição. O primeiro índice 
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  As seguintes etapas são necessárias para criar uma exibição indexada e são essenciais para o êxito da implementação da exibição indexada:  
   
-1.  Verifique se as opções SET estão corretas para todas as tabelas existentes que serão referenciadas na exibição.   
-2.  Verifique se as opções SET da sessão estão definidas corretamente antes de criar qualquer tabela nova e a exibição.  
-3.  Verifique se a definição de exibição é determinística.  
-4.  Crie a exibição usando a opção `WITH SCHEMABINDING`.  
-5.  Crie o índice clusterizado exclusivo na exibição.  
+1.  Verifique se as opções SET estão corretas para todas as tabelas existentes que serão referenciadas na exibição.    
+2.  Verifique se as opções SET da sessão estão definidas corretamente antes de criar qualquer tabela nova e a exibição.   
+3.  Verifique se a definição de exibição é determinística.   
+4.  Crie a exibição usando a opção `WITH SCHEMABINDING`.   
+5.  Crie o índice clusterizado exclusivo na exibição.   
 
 > [!IMPORTANT]
-> Ao executar DML<sup>1</sup> em uma tabela referenciada por um grande número de exibições indexadas ou com menos exibições indexadas, mas muito complexas, essas exibições indexadas referenciadas também terão que ser atualizadas. Como resultado, o desempenho da consulta DML poderá diminuir significativamente ou, em alguns casos, um plano de consulta poderá nem mesmo ser produzido.
-> Nesses cenários, teste suas consultas DML antes do uso em produção, analise o plano de consulta e ajuste/simplifique a instrução DML.
->
-> <sup>1</sup> Como as operações UPDATE, DELETE ou INSERT.
+> Ao executar DML<sup>1</sup> em uma tabela referenciada por um grande número de exibições indexadas ou com menos exibições indexadas, mas muito complexas, essas exibições indexadas referenciadas também terão que ser atualizadas. Como resultado, o desempenho da consulta DML poderá diminuir significativamente ou, em alguns casos, um plano de consulta poderá nem mesmo ser produzido.   
+> Nesses cenários, teste suas consultas DML antes do uso em produção, analise o plano de consulta e ajuste/simplifique a instrução DML.   
+>   
+> <sup>1</sup> Como as operações UPDATE, DELETE ou INSERT.   
   
 ###  <a name="Restrictions"></a> Opções SET necessárias para exibições indexadas  
- A avaliação da mesma expressão poderá produzir resultados diferentes no [!INCLUDE[ssDE](../../includes/ssde-md.md)] quando houver diferentes opções SET ativas durante a execução da consulta. Por exemplo, depois que a opção SET `CONCAT_NULL_YIELDS_NULL` for definida como ON, a expressão **'**abc**'** + NULL retornará o valor NULL. Entretanto, depois que `CONCAT_NULL_YIEDS_NULL` for definida como OFF, a mesma expressão produzirá **'**abc**'**.  
+A avaliação da mesma expressão poderá produzir resultados diferentes no [!INCLUDE[ssDE](../../includes/ssde-md.md)] quando houver diferentes opções SET ativas durante a execução da consulta. Por exemplo, depois que a opção SET `CONCAT_NULL_YIELDS_NULL` for definida como ON, a expressão `'abc' + NULL` retornará o valor `NULL`. Entretanto, depois que `CONCAT_NULL_YIEDS_NULL` for definida como OFF, a mesma expressão produzirá `'abc'`.  
   
- Para verificar se as exibições podem ser mantidas corretamente e retornar resultados consistentes, as exibições indexadas requerem valores fixos para várias opções SET. As opções SET da seguinte tabela devem ser definidas com os valores mostrados na coluna **Valor Obrigatório** sempre que ocorrerem as seguintes condições:  
+Para verificar se as exibições podem ser mantidas corretamente e retornar resultados consistentes, as exibições indexadas requerem valores fixos para várias opções SET. As opções SET da seguinte tabela devem ser definidas com os valores mostrados na coluna **Valor Obrigatório** sempre que ocorrerem as seguintes condições:  
   
--   A exibição e os índices subsequentes são criados na exibição.  
+-   A exibição e os índices subsequentes são criados na exibição.    
   
--   As tabelas base referenciadas na exibição quando a tabela é criada.  
+-   As tabelas base referenciadas na exibição quando a tabela é criada.    
   
--   Houver qualquer operação de inserção, atualização ou exclusão executada em qualquer tabela que participe da exibição indexada. Esse requisito inclui operações como cópia em massa, replicação e consultas distribuídas.  
+-   Houver qualquer operação de inserção, atualização ou exclusão executada em qualquer tabela que participe da exibição indexada. Esse requisito inclui operações como cópia em massa, replicação e consultas distribuídas.    
   
--   A exibição indexada for usada pelo otimizador de consulta para produzir o plano de consulta.  
+-   A exibição indexada for usada pelo otimizador de consulta para produzir o plano de consulta.   
   
-    |opções SET|Valor Obrigatório|Valor do servidor padrão|Padrão<br /><br /> Valor OLE DB e ODBC|Padrão<br /><br /> Valor da DB-Library|  
-    |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
-    |ANSI_NULLS|ON|ON|ON|OFF|  
-    |ANSI_PADDING|ON|ON|ON|OFF|  
-    |ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|  
-    |ARITHABORT|ON|ON|OFF|OFF|  
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
-    |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+|opções SET|Valor Obrigatório|Valor do servidor padrão|Padrão<br /><br /> Valor OLE DB e ODBC|Padrão<br /><br /> Valor da DB-Library|  
+|-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
+|ANSI_NULLS|ON|ON|ON|OFF|  
+|ANSI_PADDING|ON|ON|ON|OFF|  
+|ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|  
+|ARITHABORT|ON|ON|OFF|OFF|  
+|CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
+|NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
+|QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
   
-     <sup>1</sup> Configurar `ANSI_WARNINGS` como ON define implicitamente `ARITHABORT` como ON.  
+<sup>1</sup> Configurar `ANSI_WARNINGS` como ON define implicitamente `ARITHABORT` como ON.  
   
- Se você estiver usando uma conexão de servidor OLE DB ou ODBC, o único valor que deverá ser modificado será a configuração `ARITHABORT`. Todos os valores DB-Library devem ser definidos corretamente no nível do servidor usando **sp_configure** ou no aplicativo usando o comando SET.  
+Se você estiver usando uma conexão de servidor OLE DB ou ODBC, o único valor que deverá ser modificado será a configuração `ARITHABORT`. Todos os valores DB-Library devem ser definidos corretamente no nível do servidor usando **sp_configure** ou no aplicativo usando o comando SET.  
   
 > [!IMPORTANT]  
 > É altamente recomendável que você defina a opção de usuário `ARITHABORT` como ON no nível do servidor assim que a primeira exibição indexada ou o índice em uma coluna computada for criado em qualquer banco de dados no servidor.  
   
 ### <a name="deterministic-views"></a>Exibições determinísticas  
- A definição de uma exibição indexada deve ser determinística. Uma exibição será determinística se todas as expressões na lista selecionada, bem como as cláusulas `WHERE` e `GROUP BY`, forem determinísticas. As expressões determinísticas sempre retornam o mesmo resultado sempre que são avaliadas com um conjunto específico de valores de entrada. Somente as funções determinísticas podem participar de expressões determinísticas. Por exemplo, a função `DATEADD` é determinística porque sempre retorna o mesmo resultado para qualquer conjunto específico de valores de argumento para seus três parâmetros. `GETDATE` não é determinística porque sempre é invocada com o mesmo argumento, mas o valor que ela retorna é alterado a cada execução.  
+A definição de uma exibição indexada deve ser determinística. Uma exibição será determinística se todas as expressões na lista selecionada, bem como as cláusulas `WHERE` e `GROUP BY`, forem determinísticas. As expressões determinísticas sempre retornam o mesmo resultado sempre que são avaliadas com um conjunto específico de valores de entrada. Somente as funções determinísticas podem participar de expressões determinísticas. Por exemplo, a função `DATEADD` é determinística porque sempre retorna o mesmo resultado para qualquer conjunto específico de valores de argumento para seus três parâmetros. `GETDATE` não é determinística porque sempre é invocada com o mesmo argumento, mas o valor que ela retorna é alterado a cada execução.  
   
- Para determinar se uma coluna de exibição é determinística, use a propriedade **IsDeterministic** da função [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) . Para determinar se uma coluna determinística em uma exibição com associação de esquema é precisa, use a propriedade **IsPrecise** da função COLUMNPROPERTY. COLUMNPROPERTY retornará 1 se for TRUE, 0 se for FALSE e NULL para entrada inválida. Isso significa que a coluna não é determinística ou não é precisa.  
+Para determinar se uma coluna de exibição é determinística, use a propriedade **IsDeterministic** da função [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) . Para determinar se uma coluna determinística em uma exibição com associação de esquema é precisa, use a propriedade **IsPrecise** da função `COLUMNPROPERTY`. `COLUMNPROPERTY` retornará 1 se for TRUE, 0 se for FALSE e NULL para entrada inválida. Isso significa que a coluna não é determinística ou não é precisa.  
   
- Mesmo que uma expressão seja determinística, se ela contiver expressões flutuantes, o resultado exato poderá depender da arquitetura do processador ou da versão de microcódigo. Para assegurar a integridade dos dados, tais expressões podem participar somente como colunas não chave de exibições indexadas. As expressões determinísticas que não contêm expressões flutuantes são chamadas de precisas. Somente as expressões determinísticas precisas podem participar de colunas de chave e de cláusulas WHERE ou GROUP BY de exibições indexadas.  
+Mesmo que uma expressão seja determinística, se ela contiver expressões flutuantes, o resultado exato poderá depender da arquitetura do processador ou da versão de microcódigo. Para assegurar a integridade dos dados, tais expressões podem participar somente como colunas não chave de exibições indexadas. As expressões determinísticas que não contêm expressões flutuantes são chamadas de precisas. Somente as expressões determinísticas precisas podem participar de colunas de chave e de cláusulas `WHERE` ou `GROUP BY` de exibições indexadas.  
 
 ### <a name="additional-requirements"></a>Requisitos adicionais  
- Além das opções SET e dos requisitos de função determinística, os seguintes requisitos devem ser atendidos:  
+Além das opções SET e dos requisitos de função determinística, os seguintes requisitos devem ser atendidos:  
   
--   O usuário que executa `CREATE INDEX` deve ser o proprietário da exibição.  
+-   O usuário que executa `CREATE INDEX` deve ser o proprietário da exibição.    
   
--   Quando você cria o índice, a opção `IGNORE_DUP_KEY` deve ser definida como OFF (a configuração padrão).  
+-   Quando você cria o índice, a opção `IGNORE_DUP_KEY` deve ser definida como OFF (a configuração padrão).    
   
--   As tabelas devem ser referenciadas por meio de nomes de duas partes, *schema***.***tablename* na definição da exibição.  
+-   As tabelas devem ser referenciadas por meio de nomes de duas partes, *schema***.***tablename* na definição da exibição.    
   
--   Funções definidas pelo usuário referenciadas na exibição devem ser criadas usando a opção `WITH SCHEMABINDING`.  
+-   Funções definidas pelo usuário referenciadas na exibição devem ser criadas usando a opção `WITH SCHEMABINDING`.    
   
--   Qualquer função definida pelo usuário referenciada na exibição deve ser referenciada por nomes de duas partes, *schema***.***function*.  
+-   Qualquer função definida pelo usuário referenciada na exibição deve ser referenciada por nomes de duas partes, *\<esquema>***.***\<função>*.   
   
--   A propriedade de acesso a dados de uma função definida pelo usuário deve ser `NO SQL` e a propriedade de acesso externa deve ser `NO`.  
+-   A propriedade de acesso a dados de uma função definida pelo usuário deve ser `NO SQL` e a propriedade de acesso externa deve ser `NO`.   
   
--   Funções CLR (Common Language Runtime) podem aparecer na lista de seleção da exibição, mas não podem ser parte da definição de uma chave de índice clusterizado. Funções CLR não podem aparecer na cláusula WHERE da exibição ou na cláusula ON de uma operação JOIN na exibição.  
+-   Funções CLR (Common Language Runtime) podem aparecer na lista de seleção da exibição, mas não podem ser parte da definição de uma chave de índice clusterizado. Funções CLR não podem aparecer na cláusula WHERE da exibição ou na cláusula ON de uma operação JOIN na exibição.   
   
--   Funções CLR e métodos de tipos CLR definidos pelo usuário usados na definição da exibição devem ter as propriedades definidas como mostradas na tabela a seguir.  
+-   Funções CLR e métodos de tipos CLR definidos pelo usuário usados na definição da exibição devem ter as propriedades definidas como mostradas na tabela a seguir.   
   
     |Propriedade|Observação|  
     |--------------|----------|  
@@ -138,12 +138,12 @@ Este tópico descreve como criar índices em uma exibição. O primeiro índice 
 -   Se a definição de exibição contiver uma cláusula `GROUP BY`, a chave do índice clusterizado exclusivo poderá referenciar somente as colunas especificadas na cláusula `GROUP BY`.  
   
 > [!IMPORTANT]  
-> Os modos de exibição indexados não são compatíveis nas consultas temporais (consultas que usam cláusula `FOR SYSTEM_TIME`)  
+> As exibições indexadas não são compatíveis sobre consultas temporais (consultas que usam a cláusula `FOR SYSTEM_TIME`).  
 
 ###  <a name="Recommendations"></a> Recomendações  
  Quando você referencia os literais de cadeia de caracteres **datetime** e **smalldatetime** em exibições indexadas, é recomendável converter explicitamente o literal para o tipo de data desejado, usando um estilo de formato de data determinístico. Para obter uma lista de estilos de formato de data determinísticos, veja [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Para obter mais informações sobre expressões determinísticas e não determinísticas, consulte a seção [Considerações](#nondeterministic) nesta página.
 
-Quando você executa DML (como, UPDATE, DELETE ou INSERT) em uma tabela referenciada por um grande número de exibições indexadas, ou menos exibições indexadas, mas muito complexas, essas exibições indexadas também terão que ser atualizadas durante a execução da DML. Como resultado, o desempenho da consulta DML poderá diminuir significativamente ou, em alguns casos, um plano de consulta nem mesmo poderá ser produzido. Nesses cenários, teste suas consultas DML antes do uso em produção, analise o plano de consulta e ajuste/simplifique a instrução DML.
+Quando você executa DML (como `UPDATE`, `DELETE` ou `INSERT`) em uma tabela referenciada por um grande número de exibições indexadas ou menos exibições indexadas, mas muito complexas, essas exibições indexadas também terão que ser atualizadas durante a execução da DML. Como resultado, o desempenho da consulta DML poderá diminuir significativamente ou, em alguns casos, um plano de consulta nem mesmo poderá ser produzido. Nesses cenários, teste suas consultas DML antes do uso em produção, analise o plano de consulta e ajuste/simplifique a instrução DML.
   
 ###  <a name="Considerations"></a> Considerações  
  A configuração da opção **large_value_types_out_of_row** de colunas em uma exibição indexada é herdada da configuração da coluna correspondente na tabela base. Esse valor é definido usando [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). A configuração padrão para colunas formadas de expressões é 0. Isso significa que tipos de valor grandes são armazenados na linha.  
@@ -161,7 +161,7 @@ Quando você executa DML (como, UPDATE, DELETE ou INSERT) em uma tabela referenc
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- Requer a permissão CREATE VIEW no banco de dados e a permissão ALTER no esquema no qual a exibição está sendo criada.  
+ Requer a permissão **CREATE VIEW** no banco de dados e a permissão **ALTER** no esquema no qual a exibição está sendo criada.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
@@ -220,7 +220,7 @@ Quando você executa DML (como, UPDATE, DELETE ou INSERT) em uma tabela referenc
     GO  
     ```  
   
- Para obter mais informações, veja [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
+Para obter mais informações, veja [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   

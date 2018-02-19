@@ -1,6 +1,6 @@
 ---
 title: "Conectar-se a fontes de dados e compartilhamentos de arquivos com a Autenticação do Windows | Microsoft Docs"
-ms.date: 01/12/2018
+ms.date: 02/05/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,16 +8,17 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8dc3c1f39ca65e9616372fee7995dfa41cd89a1
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: 87f8b79fd8e950038658c13b502f5f26ac9a8f87
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Conectar-se às fontes de dados e compartilhamentos de arquivo do Azure locais com a Autenticação do Windows
 Este artigo descreve como configurar o catálogo do SSIS no Banco de Dados SQL do Azure para executar pacotes que usam a autenticação do Windows para se conectar a compartilhamentos de arquivos do Azure e fontes de dados locais. Você pode usar a autenticação do Windows para se conectar a fontes de dados na mesma rede virtual usada pelo Azure SSIS Integration Runtime, tanto localmente quanto em máquinas virtuais do Azure e em Arquivos do Azure.
@@ -25,7 +26,11 @@ Este artigo descreve como configurar o catálogo do SSIS no Banco de Dados SQL d
 > [!WARNING]
 > Se você não fornecer credenciais de domínio válidas para autenticação do Windows ao executar `catalog`.`set_execution_credential` conforme descrito neste artigo, os pacotes que dependem de autenticação do Windows não poderão se conectar a fontes de dados e falhar no tempo de execução.
 
-As credenciais de domínio que você fornece ao seguir as etapas neste artigo se aplicam a todas as execuções de pacote, interativas ou agendadas, na instância do Banco de Dados SQL até você alterar ou remover as credenciais.
+## <a name="you-can-only-use-one-set-of-credentials"></a>Você só pode usar um conjunto de credenciais
+
+Neste momento, você pode usar apenas um conjunto de credenciais em um pacote. As credenciais de domínio que você fornece ao seguir as etapas neste artigo se aplicam a todas as execuções de pacote, interativas ou agendadas, na instância do Banco de Dados SQL até você alterar ou remover as credenciais. Se o pacote deve se conectar a várias fontes de dados com diferentes conjuntos de credenciais, você terá que separar o pacote em vários pacotes.
+
+Se uma das suas fontes de dados é dos Arquivos do Azure, você pode contornar essa limitação montando o compartilhamento de arquivos do Azure em tempo de execução do pacote com `net use` ou equivalente em uma Tarefa Executar Processo. Para obter mais informações, consulte [Montar um compartilhamento de arquivos do Azure e acessar o compartilhamento no Windows](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows).
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Forneça credenciais de domínio para Autenticação do Windows
 Para fornecer credenciais de domínio que permitem que os pacotes usam a autenticação do Windows para se conectar a fontes de dados locais, faça o seguinte:

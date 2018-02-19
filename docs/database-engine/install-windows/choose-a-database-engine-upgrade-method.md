@@ -17,14 +17,17 @@ caps.latest.revision:
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 164c24f5cfd3c4120c75776764221560392ebd4d
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.openlocfilehash: 1cb3ad0fe1c3678799c557cf9c3b66286505276c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Escolher um método de upgrade do mecanismo de banco de dados
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Há várias abordagens a serem consideradas quando você está planejando fazer upgrade do [!INCLUDE[ssDE](../../includes/ssde-md.md)] de uma versão anterior do SQL Server, a fim de minimizar o tempo de inatividade e o risco. Você pode executar uma atualização in-loco, migrar para uma nova instalação ou executar uma atualização sem interrupção. O diagrama a seguir ajudará você a escolher entre essas abordagens. Cada uma das abordagens no diagrama também são discutidas abaixo. Para ajudá-lo com os pontos de decisão no diagrama, veja também [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  Há várias abordagens a serem consideradas quando você está planejando fazer upgrade do [!INCLUDE[ssDE](../../includes/ssde-md.md)] de uma versão anterior do SQL Server, a fim de minimizar o tempo de inatividade e o risco. Você pode executar uma atualização in-loco, migrar para uma nova instalação ou executar uma atualização sem interrupção. O diagrama a seguir ajudará você a escolher entre essas abordagens. Cada uma das abordagens no diagrama também são discutidas abaixo. Para ajudá-lo com os pontos de decisão no diagrama, veja também [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  ![Árvore de decisão do método de upgrade do Mecanismo de Banco de Dados](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Árvore de decisão do método de upgrade do Mecanismo de Banco de Dados")  
   
@@ -35,7 +38,7 @@ ms.lasthandoff: 01/29/2018
 -   Tem uma conta do Azure?  Em seguida, acesse **[aqui](http://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)** para criar uma Máquina Virtual com o [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition já instalado.  
   
 > [!NOTE]  
->  Você também pode atualizar o banco de dados do SQL Azure ou virtualizar seu ambiente SQL Server como parte de seu plano de atualização. Estes tópicos estão fora do escopo deste tópico, mas veja abaixo alguns links:
+>  Você também pode atualizar o banco de dados do SQL Azure ou virtualizar seu ambiente SQL Server como parte de seu plano de atualização. Estes artigos estão fora do escopo deste artigo, mas veja abaixo alguns links:
 >   - [Visão geral do SQL Server nas Máquinas Virtuais do Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
 >   - [Banco de Dados SQL do Azure](https://azure.microsoft.com/en-us/services/sql-database/) 
 >   - [Selecionando uma opção do SQL Server no Azure](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/).  
@@ -105,7 +108,7 @@ ms.lasthandoff: 01/29/2018
      ![Método de upgrade de nova instalação usando desanexar e anexar para o armazenamento da rede SAN](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "Método de upgrade de nova instalação usando desanexar e anexar para o armazenamento da rede SAN")  
   
 ##  <a name="RollingUpgrade"></a> Atualização sem interrupção  
- É necessária uma atualização sem interrupção em ambientes de solução do SQL Server que envolvem várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que devam ser atualizadas em uma determinada ordem para maximizar o tempo de atividade, minimizar os riscos e preservar a funcionalidade. Uma atualização sem interrupção é, em essência, a atualização de várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma ordem específica, com a atualização in-loco de cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou com a atualização de uma nova instalação para facilitar a atualização de hardware e/ou do sistema operacional como parte do projeto de atualização. Há várias situações em que a abordagem de atualização sem interrupção é necessária. Essas situações são documentadas nos seguintes tópicos:  
+ É necessária uma atualização sem interrupção em ambientes de solução do SQL Server que envolvem várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que devam ser atualizadas em uma determinada ordem para maximizar o tempo de atividade, minimizar os riscos e preservar a funcionalidade. Uma atualização sem interrupção é, em essência, a atualização de várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma ordem específica, com a atualização in-loco de cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou com a atualização de uma nova instalação para facilitar a atualização de hardware e/ou do sistema operacional como parte do projeto de atualização. Há várias situações em que a abordagem de atualização sem interrupção é necessária. Essas situações são documentadas nos seguintes artigos:  
   
 -   Grupos de Disponibilidade AlwaysOn: para obter etapas detalhadas para executar uma atualização sem interrupção nesse ambiente, veja [Atualizar instâncias de réplica do Grupo de Disponibilidade AlwaysOn](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).  
   

@@ -8,28 +8,29 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
-caps.latest.revision: "106"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8ca8131b077c7c6b0e38be07cb037a17d42d2d08
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3403b3680edb3aa984def52b514d599c50852127
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP na memória (otimização na memória)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
- O[!INCLUDE[hek_2](../../includes/hek-2-md.md)] pode melhorar significativamente o desempenho de processamento de transações, inclusão de dados e carregamento de dados, e cenários de dados temporário.  Para ir diretamente para o código básico e o conhecimento necessário para testar rapidamente sua própria tabela com otimização de memória e o procedimento armazenado nativamente, veja
+ [!INCLUDE[hek_2](../../includes/hek-2-md.md)] pode melhorar significativamente o desempenho de processamento de transações, ingestão de dados e carregamento de dados, e cenários de dados temporários.  Para ir diretamente para o código básico e o conhecimento necessário para testar rapidamente sua própria tabela com otimização de memória e o procedimento armazenado nativamente, veja
  -  [Início Rápido 1: tecnologias do OLTP in-memory para um desempenho mais rápido do Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md).  
  
 Vídeo de 17 minutos explicando o OLTP in-memory e demonstrando os benefícios de desempenho:
@@ -63,7 +64,7 @@ Para obter uma visão geral mais detalhada do OLTP in-memory e uma análise de c
 |[Visão geral e cenários de uso](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)|Visão geral do que é o OLTP in-memory e quais são os cenários que desfrutam dos benefícios de desempenho.|
 |[Requisitos para usar tabelas com otimização de memória](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)|Aborda os requisitos de hardware e software, e as diretrizes para usar tabelas com otimização de memória.|  
 |[Exemplos de código do OLTP in-memory](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)|Contém exemplos de código que mostram como criar e usar uma tabela com otimização de memória.|  
-|[Tabelas com otimização de memória](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Apresenta tabelas com otimização de memória.|  
+|[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Apresenta tabelas com otimização de memória.|  
 |[Variáveis de tabela com otimização de memória](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|Exemplo de código mostrando como usar uma variável de tabela com otimização de memória em vez de uma variável de tabela tradicional para reduzir o uso de tempdb.|  
 |[Índices em tabelas com otimização de memória](http://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|Incorpora índices com otimização de memória.|  
 |[Procedimentos armazenados compilados nativamente](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)|Apresenta procedimentos armazenados compilados de modo nativo.|  
@@ -91,7 +92,7 @@ Para obter uma visão geral mais detalhada do OLTP in-memory e uma análise de c
   
 -   [Blog do OLTP in-memory](http://go.microsoft.com/fwlink/?LinkId=311696)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos de banco de dados](../../relational-databases/database-features.md)  
   
   

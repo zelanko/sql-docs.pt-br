@@ -8,7 +8,8 @@ ms.service:
 ms.component: collations
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - database international considerations [SQL Server], Transact-SQL
 - dates [SQL Server], international considerations
 ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 902bd0bf1691ceddd1a2a57e11849c00d6047151
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f51a0eeb86e116aa40892b894d4446abec2cd799
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="write-international-transact-sql-statements"></a>Gravar instruções Transact-SQL internacionais
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Os bancos de dados e aplicativos de bancos de dados que usarem instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] se tornarão mais portáteis de uma linguagem de programação para outra ou darão suporte a várias linguagens, se as diretrizes a seguir forem cumpridas:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Os bancos de dados e aplicativos de bancos de dados que usam instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] serão mais portáteis de um idioma para outro, ou darão suporte a vários idiomas, se as diretrizes a seguir forem cumpridas.  
   
 -   Substitua todos os usos dos tipos de dados **char**, **varchar**e **text** por **nchar**, **nvarchar**e **nvarchar(max)**. Fazendo isto, você não deve considerar assuntos relacionados à conversão de página de código. Para obter mais informações, consulte [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
     -   Os aplicativos ODBC, ADO e OLE DB devem usar as cláusulas de fuga ODBC timestamp, data e hora para:  
   
-         **{ ts'**yyyy**-***mm***-***dd**hh***:***mm***:***ss*[**.***fff*] **'}** como: **{ ts'**1998**-**09**-**24 10**:**02**:**20**' }**  
+         **{ ts'**aaaa**-***mm***-***dd**hh***:***mm***:***ss*[**.***fff*] **'}** tal como: **{ ts'**1998**-**09**-**24 10**:**02**:**20**' }**  
   
          **{ d'** *yyyy* **-** *mm* **-** *dd* **'}** como: **{ d'**1998**-**09**-**24**'}**  
   
