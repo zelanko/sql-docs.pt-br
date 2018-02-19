@@ -8,11 +8,12 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
-caps.latest.revision: "80"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
@@ -26,10 +27,10 @@ ms.lasthandoff: 11/18/2017
 # <a name="understanding-xa-transactions"></a>Compreendendo transações XA
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece suporte para plataforma Java, Enterprise Edition/JDBC 2.0 as transações distribuídas opcionais. Conexões JDBC obtidas do [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) classe pode participar de ambientes, como servidores da plataforma Java, Enterprise Edition (Java EE) aplicativo de processamento de transações distribuídas padrão.  
+  O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece suporte para as transações distribuídas opcionais da plataforma Java, Enterprise Edition/JDBC 2.0. As conexões JDBC obtidas através da classe [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) podem participar de ambientes de processamento de transações distribuídas padrão, como servidores de aplicativo da plataforma Java, Enterprise Edition (Java EE).  
   
 > [!WARNING]  
->  Microsoft JDBC Driver 4.2 (e superior) para SQL inclui novas opções de tempo limite para o recurso existente para reversão automática de transações não preparadas. Consulte [definindo as configurações de tempo limite do lado do servidor para reversão automática de transações não preparadas](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide) mais adiante neste tópico para obter mais detalhes.  
+>  O Microsoft JDBC Driver 4.2 (e posterior) para SQL inclui novas opções de tempo limite para o recurso existente para reversão automática de transações não preparadas. Consulte [Definindo as configurações de tempo limite do lado do servidor para reversão automática de transações não preparadas](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide) mais adiante neste tópico para obter mais detalhes.  
   
 ## <a name="remarks"></a>Comentários  
  As classes para a implementação das transações distribuídas são as seguintes:  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/18/2017
   
 5.  Selecione o **habilitar transações XA** caixa de seleção e, em seguida, clique em **Okey**. Isso causará a reinicialização do serviço MS DTC.  
   
-6.  Clique em **Okey** novamente para fechar o **propriedades** caixa de diálogo e, em seguida, feche **serviços de componentes**.  
+6.  Clique em **OK** novamente para fechar a caixa de diálogo **Propriedades** e, em seguida, feche **Serviços de Componentes**.  
   
 7.  Pare e reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] para certificar-se de que ele fique sincronizado com as alterações do MS DTC.  
   
@@ -96,11 +97,11 @@ ms.lasthandoff: 11/18/2017
   
  Há três maneiras de verificar a versão de sqljdbc_xa.dll está instalada no momento a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instância:  
   
-1.  Abra o diretório LOG do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] transações distribuídas do computador que participará. Selecione e abra o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] arquivo "ERRORLOG". Procure a frase "Using 'SQLJDBC_XA.dll' version ..." no arquivo "ERRORLOG".  
+1.  Abra o diretório LOG do computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que participará de transações distribuídas. Selecione e abra o arquivo "ERRORLOG" do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Procure a frase "Using 'SQLJDBC_XA.dll' version ..." no arquivo "ERRORLOG".  
   
-2.  Abra o diretório Binn do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] transações distribuídas do computador que participará. Selecione o assembly sqljdbc_xa.dll.  
+2.  Abra o diretório Binn do computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que participará de transações distribuídas.  
   
-    -   No Windows Vista ou versão posterior: clique com o botão direito do mouse em sqljdbc_xa.dll e selecione Propriedades. Em seguida, clique no **detalhes** guia. O **versão do arquivo** campo mostra a versão de sqljdbc_xa.dll que está instalada no momento a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instância.  
+    -   No Windows Vista ou em versões posteriores: clique com o botão direito do mouse em sqljdbc_xa.dll e selecione Propriedades. Em seguida, clique na guia **Detalhes**. O campo **Versão do Arquivo** mostra a versão de sqljdbc_xa.dll que está instalada atualmente na instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 3.  Defina a funcionalidade de registro em log conforme mostrado no exemplo de código na próxima seção. Procure a frase "Server XA DLL version:..." no arquivo de log de saída.  
   
