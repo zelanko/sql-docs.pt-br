@@ -2,7 +2,7 @@
 title: "Notas de versão do Microsoft SQL operações Studio (visualização) | Microsoft Docs"
 description: "Notas de versão do Microsoft SQL operações Studio (visualização)"
 ms.custom: tools|sos
-ms.date: 01/17/2018
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,15 +14,39 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eded99dffd8029431a127e6cbf4b125ab5e0ac97
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 1b8c5e3cce8f84f0565c764a47d3f3b7c1709454
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Notas de versão do SQL Studio de operações (visualização)
 
-**[Baixe a visualização pública janeiro](download.md)**
+**[Baixe a visualização pública de fevereiro](download.md)**
+
+## <a name="february-2018-february-public-preview"></a>De 2018 fevereiro (fevereiro visualização pública)
+
+Data de lançamento: 15 de fevereiro de 2018  
+versão: 0.26.7
+
+O *visualização pública fevereiro* inclui algumas sugestões de recursos e correções de bug de alta prioridade. Esta versão inclui os seguintes aprimoramentos:
+
+- Introdução de instalação de atualização automática, fornecendo uma notificação quando uma nova versão está disponível para download 
+- O campo de caixa de diálogo de Conexão 'Database' agora é uma lista suspensa preenchida dinamicamente que contém uma lista de bancos de dados preenchida com o servidor especificado.
+- Corrigir [emitir 6](https://github.com/Microsoft/sqlopsstudio/issues/6): manter a conexão e o banco de dados selecionado ao abrir novas guias de consulta.
+- Corrigir [emitir 22](https://github.com/Microsoft/sqlopsstudio/issues/22): 'Nome do servidor' e 'Nome do banco de dados' - esses podem ser suspensos em vez de caixas de texto?
+- Corrigir [emitir 549](https://github.com/Microsoft/sqlopsstudio/issues/549): a instalação silenciosa do modo silencioso/muito resulta em abrir após a instalação do aplicativo.
+- Corrigir [emitir 481](https://github.com/Microsoft/sqlopsstudio/issues/481): adicionar a opção "Verificar atualizações".
+- Editor SQL colorização e correções de preenchimento automático:
+   - Corrigir [emitir 584](https://github.com/Microsoft/sqlopsstudio/issues/584): palavra-chave "Completo" não realçado pelo IntelliSense.
+   - Corrigir [emitir 345](https://github.com/Microsoft/sqlopsstudio/issues/345): funções de SQL colorir dentro do editor.
+   - Corrigir [emitir 300](https://github.com/Microsoft/sqlopsstudio/issues/300): [#tempData] mais recente "]" exibirá a cor verde.
+   - Corrigir [emitir 225](https://github.com/Microsoft/sqlopsstudio/issues/225): palavra-chave de cor não correspondem.
+   - Corrigir [emitir 60](https://github.com/Microsoft/sqlopsstudio/issues/60): sql inválido cor realce de sintaxe ao usar a tabela temporária na cláusula from.
+- Apresente a API de extensibilidade de Conexão.
+- Integração do VS 1.19 do Editor de código.
+- Atualize o componente JustinPealing/html-plano de consulta para coleta várias melhorias de Visualizador de plano de consulta.
+
 
 ## <a name="january-2018-january-public-preview"></a>De 2018 janeiro (janeiro visualização pública)
 

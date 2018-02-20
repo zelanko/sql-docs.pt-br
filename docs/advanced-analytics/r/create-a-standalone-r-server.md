@@ -1,7 +1,7 @@
 ---
 title: "Instale o aprendizado de máquina servidor autônomo ou R Server autônomo | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2017
+ms.date: 02/14/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 275bda79d9c8cb74d871a4d13612847dc58592e8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2ecb60bd02b3fc1ee7ac7101749fa7affc2523bd
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone"></a>Instalar o servidor de aprendizado de máquina (autônomo) ou R Server (autônomo)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ Este artigo descreve como usar a instalação do SQL Server para instalar a vers
 + [Atualizar uma instância existente do Microsoft R Server](#bkmk_upgrade)
 + [Ajude-me a decidir o que instalar](#bkmk_tips)
 
-##  <a name="bkmk_installMLServer"></a>Instalar o servidor (autônomo) de aprendizado de máquina
+##  <a name="bkmk_installMLServer"></a> Instalar o servidor (autônomo) de aprendizado de máquina
 
 Este recurso requer uma licença de empresa ou equivalente para **SQL Server 2017**.
 
@@ -114,7 +114,7 @@ Se você tiver instalado qualquer versão anterior do ferramentas da Revolution 
     
 5.  Na página **Pronto para Instalar** , verifique suas seleções e clique em **Instalar**.
 
-## <a name="bkmk_upgrade"></a>Atualizar uma instância existente do servidor de R
+## <a name="bkmk_upgrade"></a> Atualizar uma instância existente do servidor de R
 
 Se você instalou uma versão anterior do Microsoft R Server (autônomo), você pode atualizar a instância para usar versões mais recentes dos componentes de R. A atualização também altera a política de suporte para usar a diretiva moderno do ciclo de vida de Software de suporte. Isso permite que a instância a ser atualizada com mais frequência, em uma agenda diferente de versões do SQL Server.
 
@@ -125,7 +125,7 @@ Se você instalou uma versão anterior do Microsoft R Server (autônomo), você 
 
 2. Execute o instalador e siga as instruções. Na página onde você pode selecionar os recursos a serem instalados, selecione cada instância do servidor de R que você deseja atualizar.
 
-## <a name ="bkmk_tips"></a>Acompanhamento e dicas de instalação
+## <a name ="bkmk_tips"></a> Acompanhamento e dicas de instalação
 
 Esta seção fornece informações adicionais relacionadas à instalação.
 
@@ -151,11 +151,12 @@ A tabela a seguir lista os caminhos para cada instalação.
 |----|----|----|
 |R Server (Autônomo) |Assistente de instalação do SQL Server 2016|`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |R Server (Autônomo) |Instalador autônomo do Windows|`C:\Program Files\Microsoft\R Server\R_SERVER`|
-|Servidor do Machine Learning (Autônomo) |  Assistente de instalação do SQL Server 2017 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
+|Servidor do Machine Learning (Autônomo) |  Assistente de instalação do SQL Server 2017, com a opção de linguagem R |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
+|Servidor do Machine Learning (Autônomo) |  Assistente de instalação do SQL Server 2017, com a opção de linguagem Python |`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |Servidor do Machine Learning (Autônomo) |  Instalador autônomo do Windows |`C:\Program Files\Microsoft\R Server\R_SERVER`|
 |R Services (no Banco de Dados) |Assistente de instalação do SQL Server 2016|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
-|Serviços de Machine Learning (No Banco de Dados) |Assistente de instalação do SQL Server 2017|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`ou`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
-
+|Serviços de Machine Learning (No Banco de Dados) |Assistente de instalação do SQL Server 2017, com a opção de linguagem R|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  |
+|Serviços de Machine Learning (No Banco de Dados) |Assistente de instalação do SQL Server 2017, com a opção de linguagem Python| `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 ### <a name="development-tools"></a>Ferramentas de desenvolvimento
 
 Um IDE de desenvolvimento não é instalado como parte da instalação. Ferramentas adicionais não são necessárias, como as ferramentas padrão estão incluídas que pode ser fornecida com uma distribuição de R ou Python.
@@ -182,7 +183,7 @@ Na versão RTM do SQL Server 2016, houve um problema conhecido ao adicionar o Mi
 
 Se você encontrar esse problema, você pode aplicar a correção descrita no [KB3164398](https://support.microsoft.com/kb/3164398) para adicionar o recurso de R para a instância existente no Windows Server Core.   Para obter mais informações, consulte [Não é possível instalar o Microsoft R Server (Autônomo) em um sistema operacional Windows Server Core](https://support.microsoft.com/kb/3168691).
 
-###  <a name="bkmk_Uninstall"></a>Atualizando de uma versão mais antiga do Microsoft R Server
+###  <a name="bkmk_Uninstall"></a> Atualizando de uma versão mais antiga do Microsoft R Server
 
 Se você tiver instalado uma versão de pré-lançamento do Microsoft R Server, será necessário desinstalá-la antes de atualizar para uma versão mais nova.
 

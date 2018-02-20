@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 7d41bd73398c016b920fa67244ffea1af865bde2
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f1c7aaf35c0c58e9a7aab3c5b31725f586ffd2ac
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>Instalação autônoma dos serviços de aprendizado de máquina (no banco de dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -49,9 +49,9 @@ Instalação autônoma, queremos dizer que você não usar os recursos interativ
 
 > [!IMPORTANT]
 > 
-> Após a conclusão da instalação para habilitar o recurso, são necessárias etapas adicionais. Esses incluem uma reconfiguração e reiniciar a instância. Se revisar todos os itens na seção [etapas de pós-instalação] (#bkmk_PostInstall) para determinar as ações necessárias após a conclusão da instalação.
+> Após a conclusão da instalação para habilitar o recurso, são necessárias etapas adicionais. Esses incluem uma reconfiguração e reiniciar a instância. Certifique-se de examinar todos os itens na seção [etapas de pós-instalação](#bkmk_PostInstall) para determinar as ações necessárias após a conclusão da instalação.
 
-## <a name="bkmk_NewInstall"></a>Instalação de linha de comando do SQL Server 2017
+## <a name="bkmk_NewInstall"></a>  Instalação de linha de comando do SQL Server 2017
 
 Os exemplos a seguir incluem o **mínimo** recursos necessários.
 
@@ -97,7 +97,7 @@ O exemplo a seguir mostra os argumentos necessários para executar um silencioso
 Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR, SQL_INST_MPY /INSTANCENAME=MSSQLSERVER.ServerName /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONOPENLICENSETERMS
 ```
 
-## <a name="OldInstall"></a>Instalação de linha de comando para o SQL Server 2016
+## <a name="OldInstall"></a> Instalação de linha de comando para o SQL Server 2016
  
 O exemplo a seguir mostra os argumentos necessários para executar um silencioso, autônomo instalação do SQL Server 2016 com a linguagem R adicionada.
 

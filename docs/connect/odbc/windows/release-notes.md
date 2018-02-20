@@ -8,24 +8,47 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: 6b7d1725d60ca59cdfb153e9448a146023f7ac66
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 44c73c4d632fd434fcd296dc6fc2cc70af26086c
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="release-notes"></a>Notas de Versão
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
   Notas de versão do Microsoft ODBC Driver for SQL Server no Windows.  
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>O que há de novo no [!INCLUDE[msCoName](../../../includes/msconame_md.md)] o Driver ODBC 17 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] no Windows
+
+**Recursos adicionados**:
+
+Sempre criptografado suporte para a API BCP
+
+Novo atributo de cadeia de caracteres de conexão UseFMTOnly faz com que o driver usar metadados herdados em casos especiais que exigem a tabelas temporárias.
+
+Suporte para a instância gerenciada do SQL Azure (visualização privada estendida). 
+> [!NOTE]
+> Há algumas diferenças ao usar a instância gerenciada:
+> -   Não há suporte para FILESTREAM 
+> -   Acesso de sistema de arquivos local não tem suporte, mas necessário para coisas como tracefiles 
+> -   Crie a UDT do local não há suporte para o caminho 
+> -   Não há suporte para a autenticação integrada do Windows 
+> -   Não há suporte para o DTC 
+> -   conta 'sa' não está presente (a conta padrão é chamada 'cloudSA')
+> -   Erro de token de TDS (0xAA) retorna o nome de servidor incorreto
+> -   Não há suporte para caracteres especiais no nome do banco de dados 
+> -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] não tem suporte
+> -   As mensagens de erro são sempre mostradas em inglês, independentemente do idioma configurações (mesmo que o Azure) 
   
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>O que há de novo no [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] no Windows  
  ODBC Driver 13.1 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] adiciona suporte para [sempre criptografado](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) e [Active Directory do Azure](../../../connect/odbc/using-azure-active-directory.md) quando usado em conjunto com o Microsoft SQL Server 2016.  Conexão correspondente pooling palavras-chave/atributos são descritos em [Driver Pooling Conexão com suporte no Driver ODBC para SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).

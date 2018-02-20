@@ -2,7 +2,7 @@
 title: "Baixe e instale o Studio de operações do Microsoft SQL (visualização) | Microsoft Docs"
 description: "Baixar e instalar o Microsoft SQL operações Studio (visualização) para Windows, macOS ou Linux"
 ms.custom: tools|sos
-ms.date: 01/17/2018
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8828b5f94c5500aa7ef3bffd48556e599e41124
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: dda75f01b68816c971d31354f08686381597271f
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>Baixe e instale o Studio de operações do SQL (visualização)
 
-[!INCLUDE[name-sos](../includes/name-sos.md)]executa no Linux, Windows e macOS.
+[!INCLUDE[name-sos](../includes/name-sos.md)] executa no Linux, Windows e macOS.
 
-Baixe e instale a versão mais recente, o *visualização pública janeiro*:
+Baixe e instale a versão mais recente, o *visualização pública fevereiro*:
 
-|Plataforma|Download|Data de lançamento|
-|:---|:---|:---|
-|Windows|[Instalador](https://go.microsoft.com/fwlink/?linkid=866480)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=866479)|17 de janeiro de 2018 |
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|17 de janeiro de 2018 |
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=866484)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=866483)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=866482)|17 de janeiro de 2018|
+|Plataforma|Download|Data de lançamento| Versão |
+|:---|:---|:---|:---|
+|Windows|[Instalador](https://go.microsoft.com/fwlink/?linkid=867998)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=867997)|15 de fevereiro de 2018 |0.26.7|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=867999)|15 de fevereiro de 2018 |0.26.7|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=868002)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=868001)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=868000)|15 de fevereiro de 2018|0.26.7|
 
 Para obter detalhes sobre a versão mais recente, consulte o [notas de versão](release-notes.md).
 
@@ -40,27 +40,27 @@ Esta versão do [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclui uma e
 
 **Instalador**
 
-1. Baixe e execute o [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] installer para Windows](https://go.microsoft.com/fwlink/?linkid=866480).
+1. Baixe e execute o [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] installer para Windows](https://go.microsoft.com/fwlink/?linkid=867998).
 1. Iniciar o [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] aplicativo.
 
 
 **arquivo. zip**
 
-1. Baixar [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] . zip para o Windows](https://go.microsoft.com/fwlink/?linkid=866479).
+1. Baixar [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] . zip para o Windows](https://go.microsoft.com/fwlink/?linkid=867997).
 2. Navegue até o arquivo baixado e extraia-o.
 3. Execute `\sqlops-windows\sqlops.exe`
 
 
 ## <a name="get-sql-operations-studio-preview-for-macos"></a>Obter o Studio de operações do SQL (visualização) para macOS
 
-1. Baixar [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] para macOS](https://go.microsoft.com/fwlink/?linkid=866481).
+1. Baixar [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] para macOS](https://go.microsoft.com/fwlink/?linkid=867999).
 2. Para expandir o conteúdo do zip, clique duas vezes nele.
 3. Para fazer [!INCLUDE[name-sos](../includes/name-sos-short.md)] disponíveis no *Launchpad*, arraste *sqlops.app* para o *aplicativos* pasta.
 
 
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Obter o Studio de operações do SQL (visualização) para Linux
 
-1. Baixar [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] para Linux](https://go.microsoft.com/fwlink/?linkid=866482).
+1. Baixar [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] para Linux](https://go.microsoft.com/fwlink/?linkid=868000).
 1. Para extrair o arquivo e inicialização [!INCLUDE[name-sos](../includes/name-sos-short.md)], abra uma nova janela do Terminal e digite os seguintes comandos:
 
    ```bash
@@ -97,7 +97,7 @@ Se você instalou [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] . zi
 
 ## <a name="supported-operating-systems"></a>Sistemas operacionais com suporte
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]executa no Linux, Windows e macOS e é suportado nas seguintes plataformas:
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] executa no Linux, Windows e macOS e é suportado nas seguintes plataformas:
 
 ### <a name="windows"></a>Windows
 - Windows 10 (64 bits)

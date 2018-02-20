@@ -20,11 +20,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: aec87866d4bf22b5e1f685ba5fdf41fd259fc6e3
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: d8bd3c158c40accf191c775f0fe8466c05c32203
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>Criar um modelo de R e salvar para o SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,9 +51,7 @@ O modelo que você cria é um classificador binário que prevê se o driver táx
 
      *Resultados*
 
-     *Resultados de regressão logística para:-Oblíquo ~ passenger_count + trip_distance + trip_time_in_secs +*
-     <br/>*direct_distance*
-     <br/>*Dados: featureDataSource (RxSqlServerData de fonte de dados)*
+     *Resultados de regressão logística para:-Oblíquo ~ passenger_count + trip_distance + trip_time_in_secs +* direct_distance *   <br/>*Dados: featureDataSource (RxSqlServerData de fonte de dados)*
      <br/>*Dependent Variable(s): Oblíquo*
      <br/>*Total de variáveis independentes: 5*
      <br/>*Número de observações válidos: 17068*
@@ -64,7 +62,7 @@ O modelo que você cria é um classificador binário que prevê se o driver táx
      <br/>*(Intercept)       -2.509e-03  3.223e-02  -0.078  0.93793*
      <br/>*passenger_count   -5.753e-02  1.088e-02  -5.289 1.23e-07 \*\*\**
      <br/>*trip_distance     -3.896e-02  1.466e-02  -2.658  0.00786 \*\**
-     <br/>*trip_time_in_secs 2.115e-04 4.336e-05 4.878 1.07e-06\*\*\**
+     <br/>*trip_time_in_secs 2.115e-04 4.336e-05 4.878 1.07e-06 \*\*\**
      <br/>*direct_distance    6.156e-02  2.076e-02   2.966  0.00302 \*\**
      <br/>*---*
      <br/>*Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1*
@@ -210,7 +208,7 @@ Nesta seção, você aprenderá como manter o modelo e como chamá-lo para fazer
     Salvar um modelo em uma tabela exige apenas uma instrução INSERT. No entanto, é mais fácil quando encapsulado em um procedimento armazenado, como _PersistModel_.
 
     > [!NOTE]
-    > Se você receber um erro como "a permissão EXECUTE foi negada no objeto PersistModel", certifique-se de que o logon tenha permissão. Você pode conceder permissões explícitas no procedimento armazenado executando uma instrução T-SQL como esta:`GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
+    > Se você receber um erro como "a permissão EXECUTE foi negada no objeto PersistModel", certifique-se de que o logon tenha permissão. Você pode conceder permissões explícitas no procedimento armazenado executando uma instrução T-SQL como esta: `GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
 
 4. Depois que você criou um modelo e o salvou em um banco de dados, você pode chamá-lo diretamente do [!INCLUDE[tsql](../../includes/tsql-md.md)] de código, usando o procedimento armazenado do sistema, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
