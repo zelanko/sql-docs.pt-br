@@ -1,7 +1,7 @@
 ---
 title: "Lição 1: Definir uma exibição da fonte de dados dentro de um Analysis Services projeto | Microsoft Docs"
 ms.custom: 
-ms.date: 02/02/2018
+ms.date: 02/13/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0bd1ef5ce2bd0c10e025e74e39ffde313b0dfc1f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 840d9f3ad39c2c3488833bdbba3f38e9998fc0b2
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Lição 1: Definindo uma exibição da fonte de dados em um Projeto do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,22 +36,20 @@ Esta lição contém as seguintes tarefas:
 Nesta tarefa, você criará o projeto do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] com base em um modelo multidimensional do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 [Definindo uma fonte de dados](../analysis-services/lesson-1-2-defining-a-data-source.md)  
-Nesta tarefa, você deve especificar o **AdventureWorksDW** banco de dados como fonte de dados para o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dimensões e cubos serão definidos nas lições subsequentes.  
+Nesta tarefa, você deve especificar o **AdventureWorksDW** banco de dados como fonte de dados para o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dimensões e cubos definidos nas lições subsequentes.  
   
 [Definindo uma exibição da fonte de dados](../analysis-services/lesson-1-3-defining-a-data-source-view.md)  
 Nesta tarefa, você define uma exibição unificada exclusiva dos metadados das tabelas selecionadas no **AdventureWorksDW** banco de dados.  
   
 [Modificando nomes de tabela padrão](../analysis-services/lesson-1-4-modifying-default-table-names.md)  
-Nesta tarefa, você modificará os nomes das tabelas na exibição da fonte de dados de forma que os nomes dos objetos subsequentes do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que serão definidos sejam mais fáceis de serem utilizados.  
+Nesta tarefa, você modificar os nomes de tabela na exibição da fonte de dados, para que os nomes dos subsequentes [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objetos que você definir sejam mais amigáveis.  
   
   
 ## <a name="next-lesson"></a>Próxima lição  
 [Lição 2: Definir e implantar um cubo](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>Consulte também  
-[Criar um projeto do Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
-[Fontes de dados com suporte &#40;SSAS Multidimensional&#41;](https://msdn.microsoft.com/library/ms175608(v=sql.110).aspx)  
-[Exibições da fonte de dados em modelos multidimensionais](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
-[Cenário do tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Modelagem multidimensional &#40; Tutorial do Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Exibições da fonte de dados em modelos multidimensionais](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
+
+[Modelagem multidimensional &#40; Tutorial do Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)   
   
