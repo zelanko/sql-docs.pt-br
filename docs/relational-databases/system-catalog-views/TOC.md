@@ -5,11 +5,11 @@
 # [Mensagens (para erros) – sys.messages](messages-for-errors-catalog-views-sys-messages.md)  
 # [Propriedades estendidas – sys.extended_properties](extended-properties-catalog-views-sys-extended-properties.md)  
 
-# Controle de alterações
+# controle de alterações
 ## [sys.change_tracking_databases](change-tracking-catalog-views-sys-change-tracking-databases.md)  
 ## [sys.change_tracking_tables](change-tracking-catalog-views-sys-change-tracking-tables.md)  
 
-# Espelhamento de Banco de Dados
+# Espelhamento de banco de dados
 ## [Testemunha de espelhamento de banco de dados – sys.database_mirroring_witnesses](database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  
 
 # Aplicativos da camada de Dados
@@ -36,9 +36,6 @@
 ## [sys.resource_stats](sys-resource-stats-azure-sql-database.md)  
 ## [sys.resource_usage](sys-resource-usage-azure-sql-database.md)  
 ## [dbo.server_quotas](dbo-server-quotas-azure-sql-database.md)  
-## [dbo.slo_assignment_history](dbo-slo-assignment-history-azure-sql-database.md)  
-## [dbo.slo_database_objectives](dbo-slo-database-objectives-azure-sql-database.md)  
-## [dbo.slo_service_objectives](dbo-slo-service-objectives-azure-sql-database.md)  
 
 # [Assembly CLR](clr-assembly-catalog-views-transact-sql.md)  
 ## [sys.assemblies](sys-assemblies-transact-sql.md)  
@@ -211,7 +208,7 @@
 ## [syspolicy_policy_category_subscriptions](syspolicy-policy-category-subscriptions-transact-sql.md)  
 ## [syspolicy_system_health_state](syspolicy-system-health-state-transact-sql.md)  
 
-# [Administrador de Recursos](resource-governor-catalog-views-transact-sql.md)  
+# [Resource Governor](resource-governor-catalog-views-transact-sql.md)  
 ## [sys.resource_governor_configuration](sys-resource-governor-configuration-transact-sql.md)  
 ## [sys.resource_governor_external_resource_pools](sys-resource-governor-external-resource-pools-transact-sql.md)  
 ## [sys.resource_governor_resource_pools](sys-resource-governor-resource-pools-transact-sql.md)  
