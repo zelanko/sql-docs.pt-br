@@ -1,4 +1,4 @@
-# [Sobre o SQL Server Analysis Services?](analysis-services.md)
+# [Sobre o SQL Server Analysis Services](analysis-services.md)
 
 # Visão geral
 ## [Novidades no SQL Server Analysis Services 2016](what-s-new-in-analysis-services.md)  
@@ -16,8 +16,26 @@
 ### [Conversões de moeda](currency-conversions-analysis-services.md)  
 ### [Dicas e práticas recomendadas](globalization-tips-and-best-practices-analysis-services.md) 
 
-# Tutoriais
-## [Modelagem de tabela (nível de compatibilidade 1200)](tabular-modeling-adventure-works-tutorial.md)  
+# [Tutoriais](analysis-services-tutorials-ssas.md)
+## [Modelagem de tabela (nível de compatibilidade 1400)](tutorial-tabular-1400/as-adventure-works-tutorial.md)
+### [1 - Criar um novo projeto de modelo de tabela](tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)
+### [2 - Obter dados](tutorial-tabular-1400/as-lesson-2-get-data.md)
+### [3 - Marcar como Tabela de Data](tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)
+### [4 - Criar relações](tutorial-tabular-1400/as-lesson-4-create-relationships.md)
+### [5 - Criar colunas calculadas](tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)
+### [6 - Criar medidas](tutorial-tabular-1400/as-lesson-6-create-measures.md)
+### [7 - Criar Indicadores Chave de Desempenho](tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)
+### [8 - Criar perspectivas](tutorial-tabular-1400/as-lesson-8-create-perspectives.md)
+### [9 - Criar hierarquias](tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)
+### [10 - Criar partições](tutorial-tabular-1400/as-lesson-10-create-partitions.md)
+### [11 - Criar funções](tutorial-tabular-1400/as-lesson-11-create-roles.md)
+### [12 - Analisar no Excel](tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md)
+### [13 - Implantar](tutorial-tabular-1400/as-lesson-13-deploy.md)
+### [Lição suplementar - Linhas de detalhes](tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)
+### [Lição suplementar - Segurança dinâmica](tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)
+### [Lição suplementar - Hierarquias desbalanceadas](tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)
+
+## [Modelagem Tabular (nível de compatibilidade 1200)](tabular-modeling-adventure-works-tutorial.md)  
 ### [Lição 1: criar um novo projeto de modelo de tabela](lesson-1-create-a-new-tabular-model-project.md)  
 ### [Lição 2: adicionar dados](lesson-2-add-data.md)  
 ### [Lição 3: marcar como tabela de data](lesson-3-mark-as-date-table.md)  
