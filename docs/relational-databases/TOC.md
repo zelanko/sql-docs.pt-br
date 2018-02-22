@@ -12,7 +12,7 @@
 ## [Arquitetura de processamento de consultas](query-processing-architecture-guide.md)
 ## [Arquitetura de threads e tarefas](thread-and-task-architecture-guide.md)
 ## [Arquitetura e gerenciamento de log de transações](sql-server-transaction-log-architecture-and-management-guide.md)
-## Guia de Controle de Versão de Linha e Bloqueio de Transações
+## [Guia de Controle de Versão de Linha e Bloqueio de Transações](sql-server-transaction-locking-and-row-versioning-guide.md)
 
 # [Backup e restauração](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
 # [Blob](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
@@ -55,6 +55,7 @@
 ## [Gerenciamento de ciclo de vida do banco de dados](database-lifecycle-management.md)  
 ## [Administrar vários servidores usando os Servidores de Gerenciamento Centrais](administer-multiple-servers-using-central-management-servers.md)  
 
+# [Junções](../relational-databases/performance/joins.md)
 # [Partições](../relational-databases/partitions/partitioned-tables-and-indexes.md)
 # [Desempenho](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 # [Gerenciamento baseado em políticas](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)
@@ -71,6 +72,7 @@
 # [Rastreamento do SQL](../relational-databases/sql-trace/sql-trace.md)
 # [Estatísticas](../relational-databases/statistics/statistics.md)
 # [Procedimentos armazenados](../relational-databases/stored-procedures/stored-procedures-database-engine.md)
+# [Subconsultas](../relational-databases/performance/subqueries.md)
 # [Sinônimos](../relational-databases/synonyms/synonyms-database-engine.md)
 # [Exibições de catálogo do sistema](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 # [Exibições de compatibilidade do sistema](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)
