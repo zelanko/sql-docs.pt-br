@@ -75,7 +75,7 @@ ms.lasthandoff: 11/18/2017
   
 4.  Clique o **segurança** guia o **propriedades de DTC Local** caixa de diálogo.  
   
-5.  Selecione o **habilitar transações XA** caixa de seleção e, em seguida, clique em **Okey**. Isso causará a reinicialização do serviço MS DTC.  
+5.  Selecione a caixa de seleção **Habilitar Transações XA** e, em seguida, clique em **OK** para reinicializar o serviço MS DTC. Isso causará a reinicialização do serviço MS DTC.  
   
 6.  Clique em **OK** novamente para fechar a caixa de diálogo **Propriedades** e, em seguida, feche **Serviços de Componentes**.  
   
