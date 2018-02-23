@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 115db2e7cc02805cd41e79363d8ff0a83d1c719e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f545d90cd695eef78f4ae8b33eef7f2f32e9439f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="data-mining-projects"></a>Projetos de mineração de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -220,11 +220,11 @@ Um projeto de mineração de dados faz parte de uma solução do [!INCLUDE[ssASn
 |Fornece links para informações sobre cada um dos visualizadores de modelo de mineração|[Visualizadores do modelo de mineração de dados](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |Saiba criar um gráfico de comparação de precisão, gráfico de ganho ou matriz de classificação ou testar uma estrutura de mineração|[Teste e validação &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |Saiba sobre como processar opções e permissões|[Processar objetos de mineração de dados](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|Fornece mais informações sobre Analysis Services|[Bancos de dados de modelo multidimensional &#40; SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Fornece mais informações sobre Analysis Services|[Bancos de dados de modelo multidimensional ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>Consulte também  
  [Designer de mineração de dados](../../analysis-services/data-mining/data-mining-designer.md)   
  [Criando modelos multidimensionais usando o SQL Server Data Tools &#40; SSDT &#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Banco de dados do espaço de trabalho &#40; SSAS de tabela &#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
+ [Banco de dados do espaço de trabalho](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
   
   

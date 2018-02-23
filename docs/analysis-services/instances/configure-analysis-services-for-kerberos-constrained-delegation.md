@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5b6f6c1561997970811e729a498383cef08f4ac3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f6b199d42dc8273660018d8b0fb4a14606c62559
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Configurar a delegação restrita do Analysis Services para Kerberos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ Ao configurar o Analysis Services para autenticação Kerberos, você provavelme
 ##  <a name="bkmk_delegate"></a> Configurar o Analysis Services para delegação confiável  
  A configuração do Analysis Services para delegação restrita de Kerberos permite que o serviço represente uma identidade de cliente em um serviço de nível inferior, como o mecanismo de banco de dados relacional, de modo que os dados possam ser consultados como se o cliente tivesse sido conectado diretamente.  
   
- Os cenários de delegação do Analysis Services limitam-se a modelos de tabela configurados para o modo **DirectQuery** . Esse é o único cenário em que o Analysis Services pode transmitir credenciais delegadas para outro serviço. Em todos os outros cenários, como os cenários do SharePoint mencionados na seção anterior, o Analysis Services está na extremidade de recebimento da cadeia de delegação. Para obter mais informações sobre o DirectQuery, consulte [Modo DirectQuery &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
+ Os cenários de delegação do Analysis Services limitam-se a modelos de tabela configurados para o modo **DirectQuery** . Esse é o único cenário em que o Analysis Services pode transmitir credenciais delegadas para outro serviço. Em todos os outros cenários, como os cenários do SharePoint mencionados na seção anterior, o Analysis Services está na extremidade de recebimento da cadeia de delegação. Para obter mais informações sobre o DirectQuery, consulte [o modo DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
   
 > [!NOTE]  
 >  Um equívoco comum é o de que o armazenamento ROLAP, operações de processamento ou o acesso a partições remotas de alguma forma cria requisitos para a delegação restrita. Esse não é o caso. Todas essas operações são executadas diretamente pela conta de serviço (também conhecida como a conta de processamento), em seu próprio nome. A delegação não é obrigatória para essas operações no Analysis Services, pois as permissões para elas são concedidas diretamente para a conta de serviço (por exemplo, concedendo permissões db_datareader no banco de dados relacional para que o serviço possa processar os dados). Para obter mais informações sobre operações do servidor e permissões, consulte [Configurar contas de serviço &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md).  

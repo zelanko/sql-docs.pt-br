@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f6645a2a5da1e63050c0d448bc1006c85d85f212
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6ec1299dc5e82e4af6093c914742d456e7897807
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>O que &#39; s no Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -77,7 +77,7 @@ Uma novidade nesta versão é a abordagem interna para habilitar filtros cruzado
  ### <a name="calculated-tables-in-ssdt"></a>Tabelas calculadas no SSDT    
 Uma *tabela calculada* é uma construção exclusivamente de modelos com base em uma expressão DAX ou consulta no SSDT. Quando implantada em um banco de dados, não é possível distinguir uma tabela calculada de tabelas comuns.    
 
- Há vários usos para tabelas calculadas, incluindo a criação de novas tabelas para expor uma tabela existente em uma função específica. O exemplo clássico é uma tabela de data que opera em vários contextos (data do pedido, data de remessa e assim por diante). Criando uma tabela calculada para uma determinada função, agora você pode ativar uma relação de tabela para facilitar consultas ou a interação de dados usando a tabela calculada. Outro uso de tabelas calculadas é combinar partes de tabelas existentes em uma tabela totalmente nova, que existe somente no modelo.  Consulte [Criar uma tabela calculada &&#40;SSAS Tabular&#41;](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md) para saber mais.    
+ Há vários usos para tabelas calculadas, incluindo a criação de novas tabelas para expor uma tabela existente em uma função específica. O exemplo clássico é uma tabela de data que opera em vários contextos (data do pedido, data de remessa e assim por diante). Criando uma tabela calculada para uma determinada função, agora você pode ativar uma relação de tabela para facilitar consultas ou a interação de dados usando a tabela calculada. Outro uso de tabelas calculadas é combinar partes de tabelas existentes em uma tabela totalmente nova, que existe somente no modelo.  Consulte [criar uma tabela calculada](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md) para saber mais.    
  ### <a name="formula-fixup"></a>Correção de fórmulas    
  Com a correção de fórmulas em um modelo de tabela 1200, o SSDT atualizará automaticamente quaisquer medidas que fizerem referência a uma coluna ou tabela que tiver sido renomeada.    
  ### <a name="support-for-visual-studio-configuration-manager"></a>Suporte para o Visual Studio Configuration Manager    
@@ -87,7 +87,7 @@ Uma *tabela calculada* é uma construção exclusivamente de modelos com base em
  ### <a name="administer-tabular-1200-models-in-ssms"></a>Administrar modelos tabulares 1200 no SSMS    
  Nessa versão, uma instância do Analysis Services no modo de servidor de tabela pode executar modelos de tabela em qualquer nível de compatibilidade (1100, 1103, 1200). O [SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) mais recente é atualizado para exibir as propriedades e fornecer administração de modelos de banco de dados para modelos de tabela no nível de compatibilidade 1200.    
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>Processamento paralelo para várias partições de tabela em modelos de tabela    
- Essa versão inclui uma nova funcionalidade de processamento paralelo para tabelas com duas ou mais partições, aumentando o desempenho de processamento. Não há nenhuma configuração para esse recurso. Para obter mais informações sobre como configurar partições e processar tabelas, consulte [Partições de modelo de tabela &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
+ Essa versão inclui uma nova funcionalidade de processamento paralelo para tabelas com duas ou mais partições, aumentando o desempenho de processamento. Não há nenhuma configuração para esse recurso. Para obter mais informações sobre como configurar partições e processar tabelas, consulte [partições de modelo de tabela](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>Adicionar contas de computador como Administradores no SSMS    
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] agora podem usar o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para configurar contas de computador para serem membros do grupo de administradores do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Na caixa de diálogo **Selecionar Usuários ou Grupos** , defina os **Locais** para o domínio dos computadores e, em seguida, adicione o tipo de objeto **Computers** . Para obter mais informações, consulte [Conceder direitos de administração de servidor a uma instância do Analysis Services](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
  ### <a name="dbcc-for-analysis-services"></a>DBCC para Analysis Services    
@@ -206,7 +206,7 @@ Esta versão traz melhorias significativas no DirectQuery para modelos de tabela
 ### <a name="new-data-sources-for-directquery-mode"></a>Novas fontes de dados para o modo DirectQuery    
  Fontes de dados com suporte para modelos de tabela 1200 no modo DirectQuery agora incluem o Oracle, Teradata e plataforma de análise do Microsoft (anteriormente conhecido como Parallel Data Warehouse).    
     
-Para saber mais, consulte [Modo DirectQuery &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).    
+Para obter mais informações, consulte [o modo DirectQuery](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).    
 
 ## <a name="see-also"></a>Consulte também
 [Blog da equipe do Analysis Services](http://blogs.msdn.microsoft.com/analysisservices/)    

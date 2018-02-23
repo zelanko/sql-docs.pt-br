@@ -1,7 +1,7 @@
 ---
-title: "Gerenciamento de instância do Analysis Services | Microsoft Docs"
+title: Gerenciamento de servidor do Analysis Services | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -17,24 +17,24 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1540e9a5422b3a15081b1a25c813ef87ed8d6c0c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 65dbe6b6f19342db449af8c0736743d9a73000d7
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="analysis-services-instance-management"></a>Gerenciamento de instância do Analysis Services
+# <a name="analysis-services-server-management"></a>Gerenciamento de servidor do Analysis Services
 
-  Uma instância do Analysis Services é uma cópia do executável **msmdsrv.exe** que é executada como um serviço do sistema operacional. Cada instância é completamente independente de outras instâncias no mesmo servidor, tendo seus próprios parâmetros de configuração, permissões, portas, contas de inicialização, armazenamento de arquivo e propriedades de modo de servidor.  
+  Uma instância de servidor do Analysis Services é uma cópia do **msmdsrv.exe** executável que é executado como um serviço de sistema operacional. Cada instância é completamente independente de outras instâncias no mesmo servidor, tendo seus próprios parâmetros de configuração, permissões, portas, contas de inicialização, armazenamento de arquivo e propriedades de modo de servidor.  
   
- Cada instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é executada como um serviço do Windows, Msmdsrv.exe, no contexto de segurança de uma conta de logon definida.  
+ Cada instância é executada como serviço do Windows, Msmdsrv.exe, no contexto de segurança de uma conta de logon definida.  
   
--   O nome de serviço da instância padrão do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é MSSQLServerOLAPService.  
+-   O nome do serviço da instância padrão é MSSQLServerOLAPService.  
   
--   O nome de serviço de cada instância nomeada do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é MSOLAP$InstanceName.  
+-   O nome do serviço de cada instância nomeada do é MSOLAP$ InstanceName.  
   
 > [!NOTE]  
->  Se várias instâncias do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] estiverem instaladas, a configuração também instalará um serviço de redirecionamento, que é integrado com o serviço do Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O serviço de redirecionamento é responsável por direcionar os clientes à instância nomeada adequada do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O serviço do Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre é executado no contexto de segurança da conta de Serviço Local, uma conta de usuário limitada usada pelo Windows para serviços que não acessam recursos fora do computador local.  
+>  Se várias instâncias forem instaladas, o programa de instalação também instala um serviço de redirecionamento, que é integrado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço do navegador. O serviço de redirecionamento é responsável por direcionar os clientes à instância nomeada adequada do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O serviço do Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre é executado no contexto de segurança da conta de Serviço Local, uma conta de usuário limitada usada pelo Windows para serviços que não acessam recursos fora do computador local.  
   
  A expressão várias instâncias significa que você pode aumentar a escala instalando várias instâncias de servidor no mesmo hardware. Para o Analysis Services em particular, isso também significa que você pode dar suporte a diferentes modos de servidor tendo várias instâncias no mesmo servidor, cada uma configurada para ser executada em um modo específico.  
   
@@ -47,13 +47,13 @@ ms.lasthandoff: 02/15/2018
  Como regra geral, a maioria das tarefas administrativas que você deve executar não variam por modo. Como administrador de sistema do Analysis Services, você pode usar os mesmos procedimentos e scripts para gerenciar qualquer instância do Analysis Services em sua rede independentemente de como tenha sido instalado.  
   
 > [!NOTE]  
->  A exceção é o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. A administração de servidor de uma implantação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sempre está dentro do contexto de um farm do SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] difere de outros modos de servidor porque sempre é de instância única e sempre gerenciado por meio da Administração Central do SharePoint ou da Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Embora seja possível se conectar ao [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint no SQL Server Management Studio ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], isso não é desejável. Um farm do SharePoint inclui infraestrutura que sincroniza o estado de servidor e supervisiona a disponibilidade do servidor. Usar outras ferramentas pode interferir com estas operações. Para obter mais informações sobre a administração do servidor [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], consulte [Power Pivot para SharePoint &#40;SSAS&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
+>  A exceção é o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. A administração de servidor de uma implantação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sempre está dentro do contexto de um farm do SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] difere de outros modos de servidor porque sempre é de instância única e sempre gerenciado por meio da Administração Central do SharePoint ou da Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Embora seja possível se conectar ao [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint no SQL Server Management Studio ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], isso não é desejável. Um farm do SharePoint inclui infraestrutura que sincroniza o estado de servidor e supervisiona a disponibilidade do servidor. Usar outras ferramentas pode interferir com estas operações. Para obter mais informações sobre [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] administração de servidor, consulte [Power Pivot para SharePoint ](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
 |Link|Descrição da tarefa|  
 |----------|----------------------|  
-|[Configuração de pós-instalação &#40; Analysis Services &#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)|Descreve as tarefas necessárias e opcionais que completam ou modificam uma instalação do Analysis.|  
+|[Configuração de pós-instalação](../../analysis-services/instances/post-install-configuration-analysis-services.md)|Descreve as tarefas necessárias e opcionais que completam ou modificam uma instalação do Analysis.|  
 |[Conectar ao Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)|Descreve as propriedades de cadeia de conexão, as bibliotecas de cliente, as metodologias de autenticação, e as etapas para estabelecer ou limpar conexões.|  
 |[Monitorar uma instância do Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)|Descreve ferramentas e técnicas por monitorar uma instância de servidor, inclusive como usar o Desempenho do Sistema e o SQL Server Profiler.|  
 |[Alta Disponibilidade e Escalabilidade](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)|Descreve as técnicas mais usadas para fazer com que os bancos de dados do Analysis Services sejam de alta disponibilidade e escalonáveis. |  
@@ -62,9 +62,7 @@ ms.lasthandoff: 02/15/2018
   
   
 ## <a name="see-also"></a>Consulte também  
- [Comparando soluções tabulares e multidimensionais &#40;SSAS&#41;](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
- [Ferramentas de configuração do Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)   
- [Administração e configuração de servidor do Power Pivot na Administração Central](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
+ [Comparando soluções tabulares e multidimensionais ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [Determina o Modo de Servidor de uma instância do Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

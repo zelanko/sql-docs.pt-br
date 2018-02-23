@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae5acd43bb7d4bd4956cc5dae36e7dc15787a83f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0077f3a970f872329db9c30e16ae5653a4ccb13f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Criar uma conexão de modelo semântico de BI com um banco de dados de modelo de tabela
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -86,7 +86,7 @@ Use as informações neste tópico para configurar uma conexão de modelo semân
 ##  <a name="bkmk_BISM"></a> Conceder permissões de leitura no banco de dados de modelo de tabela  
  Como o banco de dados está sendo executado em um servidor que é externo ao farm, parte de configurar suas conexões incluirá conceder permissões de usuário de banco de dados no servidor do Analysis Services de back-end. O Analysis Services usa um modelo de permissão baseado em função. Usuários que conectam a bancos de dados modelo devem fazer isso com permissões de leitura ou superiores, através de uma função que conceda acesso de leitura a seus membros.  
   
- Funções, e às vezes associação de função, são definidas quando o modelo é criado no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Você não pode usar o SQL Server Management Studio para criar funções, mas pode usá-lo para adicionar membros a uma função que já esteja definida. Para obter mais informações sobre como criar funções, consulte [Criar e gerenciar funções &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
+ Funções, e às vezes associação de função, são definidas quando o modelo é criado no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Você não pode usar o SQL Server Management Studio para criar funções, mas pode usá-lo para adicionar membros a uma função que já esteja definida. Para obter mais informações sobre como criar funções, consulte [criar e gerenciar funções](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
   
 #### <a name="assign-role-membership"></a>Atribuir associação de função  
   

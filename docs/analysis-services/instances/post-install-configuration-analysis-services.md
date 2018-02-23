@@ -17,17 +17,17 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 58d6481958138346ee40b9815b8209cb41bf2bae
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 92eb00cbcfbc07ebb8b55445a246c1df04c06feb
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="post-install-configuration-analysis-services"></a>Configuração de pós-instalação (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 Após a instalação do Analysis Services, será necessário definir uma configuração adicional para tornar o servidor totalmente operacional e disponível para uso geral. Esta seção apresenta as tarefas adicionais que concluem a instalação. Dependendo dos requisitos de conexão, talvez você também precise configurar a autenticação (consulte [Conectar-se ao Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)).  
   
- Posteriormente, será necessário realizar outras tarefas quando houver bancos de dados prontos para serem implantados. Basicamente, você precisará configurar as associações de função no banco de dados para conceder ao usuário acesso aos dados, criar uma estratégia de backup e recuperação de banco de dados, e determinar se você precisa de uma carga de trabalho de processamento agendado para atualizar dados em intervalos regulares. Mais informações sobre a administração e a implantação de bancos de dados podem ser encontradas nestes links: [Bancos de dados de modelo multidimensional &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) e [Bancos de dados de modelo de tabela &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
+ Posteriormente, será necessário realizar outras tarefas quando houver bancos de dados prontos para serem implantados. Basicamente, você precisará configurar as associações de função no banco de dados para conceder ao usuário acesso aos dados, criar uma estratégia de backup e recuperação de banco de dados, e determinar se você precisa de uma carga de trabalho de processamento agendado para atualizar dados em intervalos regulares. Para obter mais informações sobre a implantação de banco de dados e administração podem ser encontradas nestes links: [bancos de dados modelo multidimensionais ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) e [bancos de dados de modelo Tabular](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
   
 ## <a name="instance-configuration"></a>Configuração da instância  
  O Analysis Services é um serviço replicável, o que significa que você pode instalar várias instâncias do serviço em um único servidor. Cada instância adicional é instalada separadamente como uma instância nomeada, usando a Instalação do SQL Server, e é configurada de forma independente para oferecer suporte conforme pretendido. Por exemplo, um servidor de desenvolvimento poderá executar o Flight Recorder ou usar valores padrão para armazenamento de dados que você poderia alterar em servidores que oferecem suporte a cargas de trabalho de produção. Outro exemplo que requer o ajuste da configuração do sistema é a instalação da instância do Analysis Services no hardware compartilhado por outros serviços. Ao hospedar vários aplicativos com uso intensivo de dados no mesmo hardware, talvez você queira configurar propriedades de servidor que reduzam os limites de memória para otimizar recursos disponíveis em todos os aplicativos.  

@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: db03f796d3271a7141f3cd754dd04d0e312bdc33
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 89fb560797d1fadba703fc84d30c785bec4f0daa
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="analysis-services-features-and-tasks"></a>Recursos e tarefas do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.lasthandoff: 02/15/2018
   A documentação básica do Analysis Services é organizada por tipo de modelo e modo de servidor de forma que você possa se concentrar apenas nas ferramentas, nas tarefas e nos recursos que estão disponíveis no modo instalado. As tarefas de administração de servidor que abrangem vários modos podem ser localizadas no Gerenciamento de Instância.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Comparando soluções tabulares e multidimensionais &#40; SSAS &#41;](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  
+ [Comparando soluções tabulares e multidimensionais ](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  
   
  [Ferramentas e aplicativos usados no Analysis Services](../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   
@@ -39,9 +39,9 @@ ms.lasthandoff: 02/15/2018
 
 [Modelos Multidimensionais](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
   
- [Mineração de Dados &#40;SSAS&#41;](../analysis-services/data-mining/data-mining-ssas.md)  
+ [Mineração de dados ](../analysis-services/data-mining/data-mining-ssas.md)  
   
- [Power Pivot para SharePoint &#40;SSAS&#41;](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
+ [PowerPivot para SharePoint ](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Analysis Services](../analysis-services/analysis-services.md)   
