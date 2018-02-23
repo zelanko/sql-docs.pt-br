@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 213a5cb740899114c13d84305858a499759a8712
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 29a05dfbeea281b2468b95e69b458d4948f7f624
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-13-deploy"></a>Lição 13: implantar
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -42,7 +43,7 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
   
 2.  No **páginas de propriedades de vendas de Internet AW** caixa de diálogo **o servidor de implantação**, no **Server** propriedade, digite o nome de um servidor de serviços de análise do Azure ou um instância de servidor local executando no modo de tabela. Essa será a instância de servidor que seu modelo será implantado.  
 
-    ![aas-implantar--server-propriedade de implantação](../analysis-services/media/aas-deploy-deployment-server-property.png)
+    ![aas-deploy-deployment-server-property](../analysis-services/media/aas-deploy-deployment-server-property.png)
  
     > [!IMPORTANT]  
     > Você deve ter permissões de administrador na remoto do Analysis Services instância em ordem para implantar a ele.  
@@ -63,20 +64,20 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
   
     A caixa de diálogo Implantar aparecerá com o status de implantação dos metadados e cada tabela incluída no modelo.  
     
-    ![status implantar aas](../analysis-services/media/aas-deploy-status.png)
+    ![aas-deploy-status](../analysis-services/media/aas-deploy-status.png)
   
 3. Quando a implantação for concluída com êxito, continue e clique em **Fechar**.  
   
 ## <a name="conclusion"></a>Conclusão  
 Parabéns! Você terminar de criar e implantar seu primeiro modelo de tabela do Analysis Services. Este tutorial ajudou você a concluir as tarefas mais comuns da criação de um modelo de tabela. Agora que o Modelo de Vendas pela Internet do Adventure Works está implantado, você pode usar o SQL Server Management Studio para gerenciar o modelo; crie scripts de processo e um plano de backup. Os usuários agora também podem se conectar ao modelo usando um aplicativo cliente de relatório, como o Microsoft Excel ou Power BI.  
 
-![como-tabela-lesson13-ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
+![as-tabular-lesson13-ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
   
   
 ## <a name="see-also"></a>Consulte também  
-[Modo DirectQuery &#40;SSAS de tabela&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)  
-[Configurar propriedades padrão de implantação e modelagem de dados &#40;SSAS de Tabela&#41;](../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
-[Bancos de dados de modelo de tabela &#40;SSAS de Tabela&#41;](../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)  
+[Modo DirectQuery](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)  
+[Configurar propriedades de implantação e modelagem de dados padrão](../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
+[Bancos de dados de modelo de tabela](../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   
   ## <a name="whats-next"></a>O que vem a seguir?

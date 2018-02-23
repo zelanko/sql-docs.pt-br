@@ -1,7 +1,7 @@
 ---
-title: "Notas de versão | Microsoft Docs"
+title: Notas (Driver ODBC para SQL Server) | Microsoft Docs
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 02/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -17,11 +17,11 @@ caps.latest.revision:
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: 44c73c4d632fd434fcd296dc6fc2cc70af26086c
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: 2b0846781a17fdad4c8cf9e39cab743595a20e7e
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="release-notes"></a>Notas de Versão
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -50,6 +50,7 @@ Suporte para a instância gerenciada do SQL Azure (visualização privada estend
 > -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] não tem suporte
 > -   As mensagens de erro são sempre mostradas em inglês, independentemente do idioma configurações (mesmo que o Azure) 
   
+
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>O que há de novo no [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] no Windows  
  ODBC Driver 13.1 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] adiciona suporte para [sempre criptografado](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) e [Active Directory do Azure](../../../connect/odbc/using-azure-active-directory.md) quando usado em conjunto com o Microsoft SQL Server 2016.  Conexão correspondente pooling palavras-chave/atributos são descritos em [Driver Pooling Conexão com suporte no Driver ODBC para SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).
 

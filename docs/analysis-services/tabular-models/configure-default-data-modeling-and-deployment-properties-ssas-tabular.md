@@ -1,7 +1,7 @@
 ---
-title: "Configurar a modelagem de dados padrão e propriedades de implantação (SSAS Tabular) | Microsoft Docs"
+title: "Configurar propriedades de implantação e modelagem de dados padrão | Microsoft Docs"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -17,19 +17,20 @@ f1_keywords:
 - sql13.asvs.bidtoolset.asoptions.f1
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ac64c706d3f8583d614989214940423d19ce7ccb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 95406a20ad71e7ed95d1d83b2a8cda44fbba3a8c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>Configurar propriedades padrão de implantação e modelagem de dados (SSAS tabular)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Este tópico descreve como configurar o nível de compatibilidade padrão, implantação e configurações de propriedade do espaço de trabalho banco de dados, podem ser pré-definidas para cada modelo de tabela novo projeto que você criam no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Depois que um novo projeto é criado, essas propriedades ainda podem ser alteradas dependendo dos requisitos específicos.  
+# <a name="configure-default-data-modeling-and-deployment-properties"></a>Configurar propriedades de implantação e modelagem de dados padrão 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Este artigo descreve como configurar o nível de compatibilidade padrão, implantação e configurações de propriedade do espaço de trabalho banco de dados, podem ser pré-definidas para cada modelo de tabela novo projeto que você criam no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Depois que um novo projeto é criado, essas propriedades ainda podem ser alteradas dependendo dos requisitos específicos.  
   
 #### <a name="to-configure-the-default-compatibility-level-property-setting-for-new-model-projects"></a>Para definir a configuração de propriedade padrão de Nível de Compatibilidade para novos projetos de modelo  
   
@@ -76,9 +77,9 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  As alterações às propriedades de modelo padrão não afetará as propriedades para modelos existentes criados antes da alteração.  
   
-## <a name="see-also"></a>Consulte Também  
- [Propriedades de projeto &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
- [Propriedades do modelo &#40; SSAS de tabela &#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
- [Nível de compatibilidade para modelos de tabela no Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
+## <a name="see-also"></a>Consulte também  
+ [Propriedades do projeto](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
+ [Propriedades do modelo](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
+ [Nível de compatibilidade](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   

@@ -1,7 +1,7 @@
 ---
-title: Criar e gerenciar KPIs (SSAS Tabular) | Microsoft Docs
+title: Criar e gerenciar KPIs | Microsoft Docs
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -11,36 +11,28 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.kpi.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.kpi.f1
 ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8c8fd81b3f885467db456a4093b56b8e62ef89d5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b16307f79552529c2afc0c1d298c68a85ff1f2a1
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-kpis-ssas-tabular"></a>Criar e Gerenciar KPIs (SSAS tabular)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Este tópico descreve como criar, editar ou excluir um KPI (indicador chave de desempenho) em um modelo de tabela. Para criar um KPI, selecione uma medida que seja avaliada como o valor base do KPI. Use a caixa de diálogo Indicador Chave de Desempenho para selecionar uma segunda medida ou um valor absoluto que seja avaliado para um valor de destino. Em seguida, você pode definir os limites de status que abrangem o desempenho entre as medidas Base e Destino.  
-  
- Este tópico inclui as seguintes tarefas:  
-  
--   [Para criar um KPI](#bkmk_create_KPI)  
-  
--   [Para editar um KPI](#bkmk_edit_KPI)  
-  
--   [Para excluir um KPI e a medida de base](#bkmk_delete)  
-  
--   [Para excluir um KPI, mas manter a medida de base](#bkmk_delete_KPI)  
+# <a name="create-and-manage-kpis"></a>Criar e gerenciar KPIs 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Este artigo descreve como criar, editar ou excluir um KPI (indicador chave de desempenho) em um modelo de tabela. Para criar um KPI, selecione uma medida que seja avaliada como o valor base do KPI. Use a caixa de diálogo Indicador Chave de Desempenho para selecionar uma segunda medida ou um valor absoluto que seja avaliado para um valor de destino. Em seguida, você pode definir os limites de status que abrangem o desempenho entre as medidas Base e Destino.  
   
 ## <a name="tasks"></a>Tarefas  
   
 > [!IMPORTANT]  
->  Antes de criar um KPI, primeiro você deve criar uma Medida base que será avaliada como valor. Em seguida, você estenderá a medida Base para um KPI. A criação de medidas é descrita em outro tópico, [Criar e gerenciar medidas &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md). Um KPI também exige um valor de destino. Este valor pode ser de outra medida pré-definida ou um valor absoluto. Depois de estender uma Medida base para um KPI, você pode selecionar o valor de destino e pode definir limites de status na caixa de diálogo do Indicador chave de desempenho.  
+>  Antes de criar um KPI, primeiro você deve criar uma Medida base que será avaliada como valor. Em seguida, você estenderá a medida Base para um KPI. Como criar medidas são descritos em outro tópico, [criar e gerenciar medidas](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md). Um KPI também exige um valor de destino. Este valor pode ser de outra medida pré-definida ou um valor absoluto. Depois de estender uma Medida base para um KPI, você pode selecionar o valor de destino e pode definir limites de status na caixa de diálogo do Indicador chave de desempenho.  
   
 ###  <a name="bkmk_create_KPI"></a> Para criar um KPI  
   
@@ -59,7 +51,7 @@ ms.lasthandoff: 01/08/2018
 5.  Clique em **Descrições**e digite as descrições para KPI, Valor, Status e Destino.  
   
 > [!TIP]  
->  Você pode usar o recurso Analisar no Excel para testar seu KPI. Para obter mais informações, consulte [Analisar no Excel &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
+>  Você pode usar o recurso Analisar no Excel para testar seu KPI. Para obter mais informações, consulte [analisar no Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
   
 ###  <a name="bkmk_edit_KPI"></a> Para editar um KPI  
   
@@ -87,9 +79,9 @@ ms.lasthandoff: 01/08/2018
 |Descrições|ALT+D|  
 |Tendência|ALT+T|  
   
-## <a name="see-also"></a>Consulte Também  
- [KPIs &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [Medidas &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
- [Criar e gerenciar medidas &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte também  
+ [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [Medidas](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [Criar e managemeasures](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)  
   
   

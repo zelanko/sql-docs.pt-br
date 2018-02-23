@@ -1,7 +1,7 @@
 ---
-title: Adicionar colunas a uma tabela (SSAS Tabular) | Microsoft Docs
+title: Adicionar colunas a uma tabela | Microsoft Docs
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,21 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8f4dc0dc32d94ec793bab4e9912db739c942bb06
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5b5d09c35fcdfa2def6ec78422c1f4d40caa3ef3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="add-columns-to-a-table-ssas-tabular"></a>Adicionar colunas a uma tabela (SSAS tabular)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Este tópico descreve como adicionar colunas a uma tabela existente.  
+# <a name="add-columns-to-a-table"></a>Adicionar colunas a uma tabela
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Este artigo descreve como adicionar colunas a uma tabela existente.  
   
-## <a name="add-columns-from-the-data-source"></a>Adicionar colunas da fonte de dados  
+## <a name="add-columns-from-the-datasource"></a>Adicionar colunas da fonte de dados  
  Ao usar o Assistente de Importação de Tabela para importar dados de uma tabela de fonte de dados, uma nova tabela é criada no modelo que inclui todas as colunas na tabela de origem. Ou, se você escolher filtrar determinadas colunas usando o recurso Visualizar e Filtrar, somente essas colunas e os dados filtrados que você selecionar. Você também pode escrever uma Consulta SQL que especifica somente algumas colunas para importar. Você pode, no entanto, determinar posteriormente uma tabela de origem tem colunas adicionais que você deseja adicionar à tabela modelo ou precisa adicionar uma coluna calculada com valores derivados de uma fórmula DAX.  
   
  Por exemplo, se quando você inicialmente importou de uma fonte de dados, usou o recurso Visualizar e Filtrar no Assistente de Importação de Tabela para selecionar um número limitado de colunas da tabela de origem, você determina posteriormente que precisa adicionar outra coluna que existe na tabela de origem, mas ainda não existe na tabela modelo. Por exemplo, ou uma nova coluna AdjustedProfit foi acrescentada à tabela FactSales na fonte de dados e agora você deseja adicionar a mesma coluna AdjustedProfit e dados à tabela de Vendas no modelo.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 01/08/2018
 2.  Na caixa de diálogo **Editar Propriedades da Tabela** , na janela de visualização de tabela, selecione a coluna de origem que você quer adicionar e clique em OK. As colunas já incluídas na definição de tabela já estarão marcadas.  
   
 ## <a name="add-a-calculated-column"></a>Adicionar uma coluna calculada  
- Em uma coluna calculada, uma fórmula DAX é usada para definir um valor para cada linha. Por exemplo, você pode criar uma coluna calculada com uma fórmula simples (=1) que acrescenta um valor de 1 a cada linha. Colunas calculadas também podem ter mais fórmulas complexas que calculam valores com base em outros dados no modelo. As colunas calculadas são abordadas em mais detalhes em outros tópicos. Para obter mais informações, consulte [Colunas calculadas &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md).  
+ Em uma coluna calculada, uma fórmula DAX é usada para definir um valor para cada linha. Por exemplo, você pode criar uma coluna calculada com uma fórmula simples (=1) que acrescenta um valor de 1 a cada linha. Colunas calculadas também podem ter mais fórmulas complexas que calculam valores com base em outros dados no modelo. As colunas calculadas são abordadas em mais detalhes em outros tópicos. Para obter mais informações, consulte [Colunas calculadas](../../analysis-services/tabular-models/ssas-calculated-columns.md).  
   
 #### <a name="to-create-a-calculated-column"></a>Para criar uma coluna calculada  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/08/2018
 2.  Na barra de fórmulas, digite uma fórmula DAX para adicionar atributos para cada linha.  
   
 ## <a name="add-a-blank-column"></a>Adicionar uma coluna em branco  
- Você pode criar uma coluna nomeada e em branco em uma tabela modelo. Colunas em branco poderão ser úteis se você desejar colar dados de outra origem. Lembre-se de que dados colados são armazenados de maneira diferente de dados importados. Para obter mais informações, consulte [Copiar e colar dados &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md).  
+ Você pode criar uma coluna nomeada e em branco em uma tabela modelo. Colunas em branco poderão ser úteis se você desejar colar dados de outra origem. Lembre-se de que dados colados são armazenados de maneira diferente de dados importados. Para obter mais informações, consulte [copiar e colar dados](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md).  
   
 #### <a name="to-create-a-named-blank-column"></a>Para criar uma coluna nomeada e em branco  
   
@@ -67,8 +68,8 @@ ms.lasthandoff: 01/08/2018
   
 2.  Clique na célula superior, digite um nome e, em seguida, pressione ENTER.  
   
-## <a name="see-also"></a>Consulte Também  
- [Caixa de diálogo Editar Propriedades da Tabela &#40;SSAS&#41;](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
- [Alterar os mapeamentos de tabela, coluna ou filtro de linha &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte também  
+ [Editar caixa de diálogo de propriedades de tabela](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
+ [Alterar os mapeamentos de tabela, de coluna ou de filtro de linha](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

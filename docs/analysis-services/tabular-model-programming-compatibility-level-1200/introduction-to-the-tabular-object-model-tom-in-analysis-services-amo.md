@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 92b6d35f7ad2a4c32b7f9ba6d7dcb1e2fdc8e407
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7efb5e145bbc4b481f73624a4c0d08d9698dc24c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Introdução ao modelo de objeto de tabela (TOM) no Analysis Services AMO
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]O modelo de objeto de tabela (TOM) é uma extensão da biblioteca do cliente de gerenciamento objeto AMO (Analysis Services), criada para dar suporte a cenários de programação para modelos de tabela criados no nível de compatibilidade 1200 e superior. Como com o AMO, TOM fornece uma maneira de lidar com as funções administrativas como criar modelos, importação e atualização de dados e atribuir funções e permissões.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+O modelo de objeto de tabela (TOM) é uma extensão da biblioteca do cliente de gerenciamento objeto AMO (Analysis Services), criada para dar suporte a cenários de programação para modelos de tabela criados no nível de compatibilidade 1200 e superior. Como com o AMO, TOM fornece uma maneira de lidar com as funções administrativas como criar modelos, importação e atualização de dados e atribuir funções e permissões.  
   
 TOM expõe metadados de tabela nativo, como **modelo**, **tabelas**, **colunas**, e **relações** objetos.  Uma exibição de alto nível da árvore de modelo de objeto, fornecida abaixo, ilustra como as partes do componente estão relacionadas.  
   
@@ -53,7 +54,7 @@ Por outro lado, quando você gerencia objetos que fazem parte de metadados de ta
 
 ### <a name="tom-and-xmla"></a>TOM e XMLA
 
-Durante a transmissão, TOM usa o protocolo XMLA para se comunicar com o servidor do Analysis Services e para gerenciar objetos. Ao gerenciar objetos não tabulares, TOM usa [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), a extensão da linguagem de script do Analysis Services do XMLA. Ao gerenciar objetos tabulares, TOM usa o protocolo de tabela do SSAS, também uma extensão do XMLA. Consulte [documentação do protocolo MS-SSAS-T SQL Server Analysis Services Tabular](https://msdn.microsoft.com/library/mt719260.aspx) para obter mais informações.
+Durante a transmissão, TOM usa o protocolo XMLA para se comunicar com o servidor do Analysis Services e para gerenciar objetos. Ao gerenciar objetos não tabulares, TOM usa [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), a extensão da linguagem de script do Analysis Services do XMLA. Ao gerenciar objetos tabulares, TOM usa o protocolo de tabela de MS-SSAS, é também uma extensão do XMLA. Consulte [documentação do protocolo MS-SSAS-T SQL Server Analysis Services Tabular](https://msdn.microsoft.com/library/mt719260.aspx) para obter mais informações.
 
 ### <a name="tom-and-json"></a>TOM e JSON
 
@@ -65,7 +66,7 @@ Como um usuário, você pode optar por gerenciar bancos de dados tabulares por m
 
 A decisão de usar um ou outro ficará às especificações de seus requisitos. A biblioteca de TOM fornece maior funcionalidade em comparação comparada TMSL. Especificamente, ao passo que o TMSL oferece apenas operações de alta granularidade no nível do banco de dados, tabela, partição ou função, TOM permite operações muito mais individualizadas. Para gerar ou atualizar modelos programaticamente, você precisará toda a extensão da API na biblioteca de TOM.
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Programação de modelo de tabela para o nível de compatibilidade 1200](../../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)   
  [Nível de compatibilidade para modelos de tabela no Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
 [O Analysis Services PowerShell](../../analysis-services/powershell/analysis-services-powershell-reference.md)

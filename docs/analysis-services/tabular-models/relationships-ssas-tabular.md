@@ -1,5 +1,5 @@
 ---
-title: "Relações (SSAS Tabular) | Microsoft Docs"
+title: "Relações | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c7f262045697398e2de2dabf01d59f9422191b55
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ff8d2460b53eed9189b230fea270b97e323ac0b9
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="relationships-ssas-tabular"></a>Relações (SSAS tabular)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Em modelos de tabela, uma relação é uma conexão entre duas tabelas de dados. A relação estabelece como os dados nas duas tabelas devem ser correlacionados. Por exemplo, podem ser relacionadas às tabelas Customers e Orders para mostrar o nome do cliente associado a cada ordem.  
+# <a name="relationships"></a>Relações 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Em modelos tabulares, uma relação é uma conexão entre duas tabelas de dados. A relação estabelece como os dados nas duas tabelas devem ser correlacionados. Por exemplo, podem ser relacionadas às tabelas Customers e Orders para mostrar o nome do cliente associado a cada ordem.  
   
  Ao usar o Assistente de Importação de Tabela para importar da mesma fonte de dados, as relações que já existem nas tabelas (na fonte de dados) que você escolhe importar serão recriadas no modelo. Você pode exibir relações que foram detectadas e recriadas automaticamente usando o designer de modelos na Exibição de Diagrama ou usando a caixa de diálogo Gerenciar Relações. Você também pode criar manualmente novas relações entre tabelas usando o designer de modelos na Exibição de Diagrama ou usando a caixa de diálogo Criar Relação ou Gerenciar Relações.  
   
@@ -103,7 +104,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="single-active-relationship-between-tables"></a>Relação ativa única entre tabelas  
  Várias relações podem resultar em dependências ambíguas entre as tabelas. Para criar cálculos exatos, você precisa de um único caminho de uma tabela para a próxima. Por isso, pode haver apenas uma relação ativa entre cada par de tabelas. Por exemplo, no AdventureWorks DW 2012, a tabela, DimDate, contém uma coluna, DateKey, que está relacionada a três colunas diferentes da tabela FactInternetSales: OrderDate, DueDate e ShipDate. Se você tentar importar essas tabelas, a primeira relação será criada com êxito, mas você receberá o seguinte erro em relações sucessivas que envolvam a mesma coluna:  
   
- \*Relação: tabela [column 1] -> tabela [column 2] - Status: error - motivo: não é possível criar uma relação entre tabelas \<tabela 1 > e \<tabela 2 >. Só pode existir uma relação direta ou indireta entre duas tabelas.  
+ \* Relação: tabela [column 1] -> tabela [column 2] - Status: error - motivo: não é possível criar uma relação entre tabelas \<tabela 1 > e \<tabela 2 >. Só pode existir uma relação direta ou indireta entre duas tabelas.  
   
  Se tiver duas tabelas e várias relações entre elas, você precisará importar várias cópias da tabela que contém a coluna de pesquisa e criar uma relação entre cada par de tabelas.  
   

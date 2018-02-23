@@ -1,5 +1,5 @@
 ---
-title: Defina o tipo de dados de uma coluna (SSAS Tabular) | Microsoft Docs
+title: Defina o tipo de dados de uma coluna | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 441bb1316c22d0a701ded998def0b1f94c84e4de
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d40df86ee45154243d854dea65162b49a5e6352e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Definir o tipo de dados de uma coluna (SSAS tabular)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Quando você importa dados ou cola dados em um modelo, o designer de modelo detectará automaticamente e aplicará tipos de dados. Depois que adicionar dados ao modelo, você poderá modificar manualmente o tipo de dados de uma coluna para alterar o modo como os dados são armazenados. Se você deseja apenas alterar o formato de exibição dos dados sem alterar o modo como são armazenados, faça isso.  
+# <a name="set-the-data-type-of-a-column"></a>Definir o tipo de dados de uma coluna 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Quando você importa ou cola dados em um modelo, o designer de modelo detectará automaticamente e aplicará os tipos dos dados. Depois que adicionar dados ao modelo, você poderá modificar manualmente o tipo de dados de uma coluna para alterar o modo como os dados são armazenados. Se você deseja apenas alterar o formato de exibição dos dados sem alterar o modo como são armazenados, faça isso.  
   
 ### <a name="to-change-the-data-type-or-display-format-for-a-column"></a>Para alterar o tipo de dados ou o formato de exibição de uma coluna  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 01/08/2018
   
 -   **TRUE/FALSE**  
   
--   **Date**  
+-   **Data**  
   
  Caso descubra que seus dados têm um tipo de dados errado ou, pelo menos, um tipo diferente do desejado, você terá várias opções:  
   
@@ -79,9 +80,9 @@ ms.lasthandoff: 01/08/2018
   
  Se houver suporte para tipo de dados, mas o designer de modelo encontrar valores sem suporte no novo tipo de dados, você receberá outro erro e precisará corrigir os valores de dados antes de continuar.  
   
- Para obter informações detalhadas sobre os tipos de dados usados em modelos semânticos de business intelligence, como eles são convertidos implicitamente e como tipos de dados diferentes são usados em fórmulas, consulte [Tipos de dados com suporte &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
+ Para obter informações detalhadas sobre os tipos de dados usados em modelos semânticos do business intelligence, como eles são tipos de dados convertidos implicitamente e como as diferentes é usados em fórmulas, consulte [tipos de dados com suporte](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
   
-## <a name="see-also"></a>Consulte Também  
- [Tipos de dados com suporte &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte também  
+ [Tipos de dados com suporte](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
   
   

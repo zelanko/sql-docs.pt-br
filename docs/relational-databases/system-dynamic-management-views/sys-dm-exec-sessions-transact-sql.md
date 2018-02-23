@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: aa248e9733c17b734eb60095f65b462e42e8b0c7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f2cf9c01c280848403ca2998e550213f2de78ad6
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="permissions"></a>Permissões  
 Todos podem ver suas próprias informações de sessão.  
 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** Requer `VIEW SERVER STATE` permissão em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] para ver todas as sessões no servidor.  
-**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Requer `VIEW DATABASE STATE` para ver todas as conexões com o banco de dados atual. `VIEW DATABASE STATE`não podem ser concedidos a `master` banco de dados. 
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Requer `VIEW DATABASE STATE` para ver todas as conexões com o banco de dados atual. `VIEW DATABASE STATE` não podem ser concedidos a `master` banco de dados. 
   
   
 ## <a name="remarks"></a>Remarks  
@@ -114,7 +114,7 @@ Todos podem ver suas próprias informações de sessão.
  Se essa opção não for habilitada, essas colunas retornarão valores nulos. Para obter mais informações sobre como configurar este servidor a opção de configuração, consulte [conformidade de critérios comuns habilitado a opção de configuração de servidor](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md).  
  
  
- Conexões de administrador no banco de dados do SQL Azure serão exibida uma linha por sessão autenticada, enquanto as conexões não-administrador verá somente informações relacionadas às suas sessões de usuário de banco de dados. 
+ Conexões de administrador no banco de dados do SQL Azure serão exibida uma linha por sessão autenticada. As sessões de "sa" que aparecem no conjunto de resultados, não tem qualquer impacto sobre a cota do usuário para sessões. As conexões não-administrador verá somente informações relacionadas às suas sessões de usuário de banco de dados.
  
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relações  

@@ -24,18 +24,21 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3bf21d3debd7c24ea7b2e5ddcea56392e0f33400
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d85d437ce17c04107d85cf444268eb26f1a460e8
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>Modelagem de tabela (nível de compatibilidade 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Este tutorial fornece lições sobre como criar um modelo de tabela do Analysis Services no [nível de compatibilidade 1200](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) usando [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)e implantar seu modelo para um Analysis Services servidor local ou no Azure.  
  
-Se você estiver usando 2017 do SQL Server ou do Azure Analysis Services, e você deseja criar seu modelo na compatibilidade de 1400 nível, use o [Azure Analysis Services – tutorial do Adventure Works](https://review.docs.microsoft.com/azure/analysis-services/tutorials/aas-adventure-works-tutorial?branch=master). Essa versão atualizada usa o recurso obter dados novo e moderno para se conectar e importar dados de origem e usa a linguagem M configurar partições.
+Se você estiver usando 2017 do SQL Server ou do Azure Analysis Services, e você deseja criar seu modelo na compatibilidade de 1400 nível, use o [(nível de compatibilidade 1400) de modelagem de tabela](tutorial-tabular-1400/as-adventure-works-tutorial.md). Essa versão atualizada usa o recurso obter dados moderno para se conectar e importar dados de origem, usa a linguagem M configurar partições e inclui lições suplementares adicionais.
+
+> [!IMPORTANT]
+> Você deve criar seus modelos de tabela no nível de compatibilidade mais recente com suporte pelo servidor. Modelos de nível de compatibilidade mais recente fornecem desempenho aprimorado, recursos adicionais e atualização mais facilmente os níveis de compatibilidade futura.
  
   
 ## <a name="what-you-learn"></a>O que você aprenderá   
@@ -50,14 +53,14 @@ Se você estiver usando 2017 do SQL Server ou do Azure Analysis Services, e voc�
   
 -   Como criar e gerenciar perspectivas e hierarquias que ajudam os usuários mais facilmente procurar dados de modelo, fornecendo pontos de vista específicos do aplicativo e de negócios.  
   
--   Como criar partições que dividem dados de tabela em partes lógicas menores que podem ser processadas independentemente de outras partições.  
+-   Como criar partições para dividir os dados da tabela em partes lógicas menores, que podem ser processadas independentemente de outras partições.  
   
 -   Como proteger dados e objetos de modelo criando funções com membros de usuário.  
   
 -   Como implantar um modelo de tabela para um Analysis Services server no local ou no Azure.  
   
 ## <a name="scenario"></a>Cenário  
-Este tutorial baseia-se em Adventure Works Cycles, uma empresa fictícia. A Adventure Works é uma empresa de grande empresa multinacional de manufatura que produz e distribui Bicicletas de metal e compostas para mercados comerciais na América do Norte, Europa e Ásia. Com sede em Bothell, Washington, emprega 500 funcionários. Além disso, a Adventure Works emprega várias equipes regionais de vendas em toda a sua base de mercado.  
+Este tutorial baseia-se em Adventure Works Cycles, uma empresa fictícia. A Adventure Works é uma empresa de fabricação grande, empresa multinacional que produz Bicicletas, peças e Acessórios para mercados comerciais na América do Norte, Europa e Ásia. Com sede em Bothell, Washington, emprega 500 funcionários. Além disso, a Adventure Works emprega várias equipes regionais de vendas em toda a sua base de mercado.  
   
 Para respaldar melhor as necessidades de análise de dados das equipes de vendas e de marketing e da gerência sênior, você fica encarregado de criar um modelo de tabela para que os usuários analisem dados de vendas pela Internet no banco de dados de exemplo AdventureWorksDW.  
   

@@ -1,39 +1,41 @@
 ---
-title: Instalando o Gerenciador de Driver | Microsoft Docs
+title: Instalando o Gerenciador de Driver (Driver ODBC para SQL Server) | Microsoft Docs
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 02/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Driver Manager, installing
+helpviewer_keywords:
+- Driver Manager, installing
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0a866499618569023ba6839148dd73844d0ddaed
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 36f432e883b56759d46304239715a00c06334d3a
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="installing-the-driver-manager"></a>Instalando o Gerenciador de Driver
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Este tópico contém instruções para instalar o Gerenciador de Driver unixODBC para uso com o Microsoft ODBC Driver 11, 13 ou 13.1 para SQL Server no Linux e macOS.  
+Este artigo contém instruções para instalar o Gerenciador de Driver unixODBC para uso com todas as versões do Microsoft ODBC Driver for SQL Server no Linux e macOS.  
 
 > [!IMPORTANT]  
 > Exclua qualquer pacote de gerenciador de driver instalado em seu computador antes de instalar o Gerenciador de Driver unixODBC. A instalação do Gerenciador de Driver unixODBC pode causar uma falha em um Gerenciador de Driver existente.  
 
-## <a name="installing-the-driver-manager-for-microsoft-odbc-driver-130-and-131"></a>Instalando o Gerenciador de Driver do Microsoft ODBC Driver 13.1 e 13.0
-A dependência de Gerenciador de driver é resolvida automaticamente pelo sistema de gerenciamento de pacote quando você instala o 13.0 do Microsoft ODBC Driver ou 13.1 para SQL Server no Linux ou macOS, seguindo as instruções em [instalando o Microsoft ODBC Driver para o SQL Server no Linux ou macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
+## <a name="installing-the-driver-manager-for-microsoft-odbc-driver-13-131-and-17"></a>Instalando o Gerenciador de Driver do Microsoft ODBC Driver 13 e 13.1 17
+A dependência de Gerenciador de driver é resolvida automaticamente pelo sistema de gerenciamento de pacote quando você instala o Microsoft ODBC Driver 13, 13.1 ou 17 para SQL Server no Linux ou macOS, seguindo as instruções em [instalando o Microsoft ODBC Driver para o SQL Server no Linux ou macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
 
 ## <a name="installing-the-driver-manager-for-microsoft-odbc-driver-11-for-sql-server"></a>Instalando o Gerenciador de Driver para o Microsoft ODBC Driver 11 for SQL Server  
 
@@ -58,11 +60,11 @@ Para instalar o gerenciador de driver:
 
 Se o computador não pode acessar um site externo por meio de FTP, obtenha `unixODBC-2.3.0.tar.gz`. Você pode obter `unixODBC-2.3.0.tar.gz` de [http://www.unixodbc.org](http://www.unixodbc.org/). Clique o **baixar** link no lado esquerdo da página para ir para a página de download. Em seguida, clique no link apropriado para baixar o unixODBC-2.3.0 (não o unixODBC-2.3.1). UnixODBC-2.3.1 não é compatível com esta versão do [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Execute o seguinte comando para iniciar a instalação do Gerenciador de Driver unixODBC: **./build_dm.sh – url de download = file://unixODBC-2.3.0.tar.gz**.  
 
-6.  Tipo **Sim** para prosseguir com a descompactação dos arquivos. Esta parte do processo pode levar até 5 minutos para terminar.  
+6.  Tipo **Sim** para prosseguir com a descompactação dos arquivos. Esta parte do processo pode levar até cinco minutos para ser concluída.  
 
 7.  Depois que o script terminar a execução, siga as instruções na tela para instalar o gerenciador do driver unixODBC.
 
-Agora você pode instalar o driver. Consulte [instalando o Microsoft ODBC Driver for SQL Server no Linux e macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) para obter mais informações.  
+Agora você pode instalar o driver. Para obter mais informações, consulte [instalando o Microsoft ODBC Driver for SQL Server no Linux e macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).  
 
 **Instalação manual**
 
@@ -86,7 +88,7 @@ Se não for possível concluir o script de instalação, configure e compile o g
   
 9. Em um prompt de comando (conectado como raiz), execute o comando: **fazer instalar**.  
 
-Agora você pode instalar o driver. Consulte [instalando o Microsoft ODBC Driver for SQL Server no Linux e macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) para obter mais informações.  
+Agora você pode instalar o driver. Para obter mais informações, consulte [instalando o Microsoft ODBC Driver for SQL Server no Linux e macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).  
   
 ## <a name="see-also"></a>Consulte também
 [Instalando o Microsoft ODBC Driver for SQL Server no Linux e macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)

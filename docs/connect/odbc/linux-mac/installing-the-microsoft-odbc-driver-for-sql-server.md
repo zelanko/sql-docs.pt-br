@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e7f03a55e7be9bba83458b04d11208ed1a65b524
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 883c016829dcf5ba9b7d48f0356a4a6141550e7d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Instalando o Microsoft ODBC Driver for SQL Server no Linux e no macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -32,6 +32,8 @@ ms.lasthandoff: 02/11/2018
 Este tópico explica como instalar o [!INCLUDE[msCoName](../../../includes/msconame_md.md)] o Driver ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] no Linux e macOS, bem como as ferramentas de linha de comando opcionais para o SQL Server (`bcp` e `sqlcmd`) e o unixODBC cabeçalhos de desenvolvimento.
 
 ## <a name="microsoft-odbc-driver-17-for-sql-server"></a>Microsoft ODBC Driver 17 para SQL Server 
+
+**Observação importante:** os pacotes de driver ODBC versão 17 para Mac e Linux estão indisponíveis no momento devido a problemas ao atualizar as instalações existentes. Estamos trabalhando em fornecer os pacotes atualizados assim que possível. Executando os comandos de instalação para a versão 17 atualmente instalará a versão 13.1 do driver.
 
 ### <a name="debian-8-and-9"></a>Debian 8 e 9
 ```
@@ -364,8 +366,8 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ### <a name="offline-installation"></a>Instalação offline
 Se você preferir/exigem o [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 para ser instalado em um computador com nenhuma conexão de internet, será necessário resolver as dependências do pacote manualmente. O [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 tem as seguintes dependências diretas:
 - Ubuntu: libc6 (> = 2.21), libstdc + + 6 (> = 4.9), 3 libkrb5, libcurl3, openssl, debconf (> = 0,5), unixodbc (> = 2.3.1-1)
-- Red Hat:```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
-- SuSE:```glibc, libuuid1, krb5, openssl, unixODBC```
+- Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
+- SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
 Por sua vez, cada um desses pacotes tem suas próprias dependências que podem ou não estar presente no sistema. Para uma solução geral para esse problema, consulte a documentação do Gerenciador de distribuição pacote: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), e [SUSE](https://en.opensuse.org/Portal:Zypper)
 

@@ -1,40 +1,42 @@
 ---
 title: Microsoft ODBC Driver para SQL Server no Windows | Microsoft Docs
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 02/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e32deba2343ac385175760685e50ab10a156017a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 990665bcb7091b61bc8579a1a33e30c3cc56874e
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server no Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-O Microsoft ODBC Driver 13.1, 13 e 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] são drivers ODBC independentes que fornecem uma interface de programação de aplicativo (API) implementando as interfaces ODBC padrão para a Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
+Drivers de ODBC da Microsoft para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] são drivers ODBC independentes que fornecem uma interface de programação de aplicativo (API) implementando as interfaces ODBC padrão para a Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
 
-O Microsoft ODBC Driver for SQL Server pode ser usado para criar novos aplicativos. Você também pode atualizar seus aplicativos mais antigos que usam um driver ODBC mais antigo. O Driver ODBC para SQL Server dá suporte a conexões com o banco de dados do SQL Azure, Azure SQL Data Warehouse, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 e SQL Server 2005.  
+O Microsoft ODBC Driver for SQL Server pode ser usado para criar novos aplicativos. Você também pode atualizar seus aplicativos mais antigos que usam um driver ODBC mais antigo. O Driver ODBC para SQL Server dá suporte a conexões com o banco de dados do SQL Azure, Azure SQL Data Warehouse, 2017 do SQL Server, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 e SQL Server 2005.  
 
 ## <a name="summary"></a>Resumo
 
 | Versão       | Recursos com suporte      |
 | ------------- |---------------| 
-| Microsoft ODBC Driver 13.1 para SQL Server     | <ul><li>Sempre Criptografado</li><li>Autenticação do AD do Azure</li><li>AG (Grupos de Disponibilidade) AlwaysOn</li></ul>   | 
+| Microsoft ODBC Driver 17 para SQL Server | <ul><li>Sempre criptografado suporte para a API BCP</li><li>Novo atributo de cadeia de caracteres de conexão UseFMTONLY faz com que o driver usar metadados herdados em casos especiais que exigem a tabelas temporárias</li>
+| Microsoft ODBC Driver 13.1 para SQL Server     | <ul><li>Always Encrypted</li><li>Autenticação do AD do Azure</li><li>AG (Grupos de Disponibilidade) AlwaysOn</li></ul>   | 
 | Microsoft ODBC Driver 13 para SQL Server      | <ul><li>Nome de domínio internacionalizado (IDN)</li></ul> |
 | Microsoft ODBC Driver 11 para SQL Server | <ul><li>Pool de conexões com reconhecimento de driver</li><li>Resiliência da conexão</li><li>Execução assíncrona (método de sondagem)</li></ul> |    
 

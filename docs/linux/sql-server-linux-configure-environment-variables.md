@@ -4,7 +4,7 @@ description: "Este artigo descreve como usar variáveis de ambiente para configu
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/21/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: c7a04b62625863d9f98521b1a408f572ac79a403
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: e6d21c8f2e7636ee787bbd735b3d69b71ac20671
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurar o SQL Server com variáveis de ambiente no Linux
 
@@ -39,7 +39,7 @@ Você pode usar diversas variáveis de ambiente diferentes para configurar o SQL
 |-----|-----|
 | **ACCEPT_EULA** | Aceite o contrato de licença do SQL Server quando definido como qualquer valor (por exemplo, ' Y'). |
 | **MSSQL_SA_PASSWORD** | Configure a senha do usuário. |
-| **MSSQL_PID** | Defina a chave de produto ou a edição do SQL Server. Os valores possíveis incluem: </br></br>**Evaluation**</br>**Desenvolvedor**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>Uma chave do produto</br></br>Se especificar uma chave de produto, ela deve ser na forma de # # #-# # #-# # #-# # #-# # #, onde '#' é um número ou uma letra.|
+| **MSSQL_PID** | Defina a chave de produto ou a edição do SQL Server. Os valores possíveis incluem: </br></br>**Evaluation**</br>**Desenvolvedor**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Uma chave do produto**</br></br>Se especificar uma chave de produto, ela deve ser na forma de # # #-# # #-# # #-# # #-# # #, onde '#' é um número ou uma letra.|
 | **MSSQL_LCID** | Define a ID do idioma a ser usado para o SQL Server. Por exemplo, 1036 é francês. |
 | **MSSQL_COLLATION** | Define o agrupamento padrão do SQL Server. Isso substitui o mapeamento padrão de id de idioma (LCID) para agrupamento. |
 | **MSSQL_MEMORY_LIMIT_MB** | Define a quantidade máxima de memória (em MB) que pode usar o SQL Server. Por padrão é 80% da memória física total. |
@@ -49,7 +49,11 @@ Você pode usar diversas variáveis de ambiente diferentes para configurar o SQL
 | **MSSQL_DATA_DIR** | Altere o diretório onde os arquivos de dados de banco de dados do SQL Server de novo (. mdf) são criados. |
 | **MSSQL_LOG_DIR** | Altere o diretório em que os novos arquivos de log (. ldf) do banco de dados do SQL Server são criados. |
 | **MSSQL_DUMP_DIR** | Altere o diretório em que a do SQL Server será colocar os despejos de memória e outros arquivos de solução de problemas por padrão. |
-| **MSSQL_ENABLE_HADR** | Habilite grupos de disponibilidade. |
+| **MSSQL_ENABLE_HADR** | Habilitar o grupo de disponibilidade. Por exemplo, '1' está habilitada e '0' está desabilitado |
+| **MSSQL_AGENT_ENABLED** | Habilite o SQL Server Agent. Por exemplo, 'true' está habilitada e 'false' está desabilitado. Por padrão, o agente está desabilitado.  |
+| **MSSQL_MASTER_DATA_FILE** | Define o local do arquivo de dados do banco de dados mestre. |
+| **MSSQL_MASTER_LOG_FILE** | Define o local do arquivo de log do banco de dados mestre. |
+
 
 ## <a name="example-initial-setup"></a>Exemplo: instalação inicial
 
@@ -86,7 +90,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 ```
 
 > [!NOTE]
-> O processo de execução de edições de produção em contêineres é ligeiramente diferente. Para obter mais informações, consulte [executar imagens de contêiner de produção](sql-server-linux-configure-docker.md#production).
+> O processo para executar edições de produção em contêineres é um pouco diferente. Para obter mais informações, veja [Executar imagens de contêiner de produção](sql-server-linux-configure-docker.md#production).
 
 ## <a name="next-steps"></a>Próximas etapas
 
