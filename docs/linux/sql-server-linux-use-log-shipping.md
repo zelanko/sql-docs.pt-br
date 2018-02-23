@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 48f1782ca1da3e730181402ed947453b6eeefc35
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: af88c21dc246238274ab66b47bb76302f0a86f06
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Introdução ao envio de logs no Linux
 
@@ -30,7 +30,7 @@ Envio de Log do SQL Server é uma configuração de alta disponibilidade em um b
   ![Envio de logs](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 
-Conforme descrito na figura acima, uma sessão de envio de logs envolve as seguintes etapas:
+Conforme descrito em essa imagem, uma sessão de envio de logs envolve as seguintes etapas:
 
 - Fazendo backup de arquivo de log de transações na instância primária do SQL Server
 - Copiar o arquivo de backup de log de transações em toda a rede para uma ou mais instâncias do SQL Server secundárias

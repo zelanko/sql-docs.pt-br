@@ -9,18 +9,18 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: 7de515aa08ec73ff6c7b90e9a630e59ca6f71252
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 8644c6e061b0c1cdcd80d8c7cb25b8662eb7ae26
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>Autenticação do Active Directory com o SQL Server no Linux
 
@@ -157,7 +157,7 @@ Use as seguintes etapas para adicionar um [!INCLUDE[ssNoVersion](../includes/ssn
   
 5. Verifique se que você agora pode reunir informações sobre um usuário do domínio e que você pode adquirir um tíquete Kerberos como esse usuário.
 
-   We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
+   O exemplo a seguir usa **id**,  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**, e  **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)**  comandos para isso.
 
    ```bash
    id user@contoso.com
@@ -182,7 +182,7 @@ Para obter mais informações, consulte a documentação do Red Hat para [descob
 ## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>Criar usuário do AD para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e definir o SPN
 
   > [!NOTE]
-  > As próximas etapas, nós usaremos seu [nome de domínio totalmente qualificado](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Se você estiver usando **Azure**, você deve  **[criar um](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  antes de continuar.
+  > Use as etapas na próxima seu [nome de domínio totalmente qualificado](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Se você estiver usando **Azure**, você deve  **[criar um](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  antes de continuar.
 
 1. No controlador de domínio, execute o [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) comando do PowerShell para criar um novo usuário do AD com uma senha que nunca expira. Este exemplo denomina a conta "mssql", mas o nome da conta pode ser qualquer coisa que você deseja. Você será solicitado a inserir uma nova senha para a conta:
 
@@ -195,7 +195,7 @@ Para obter mais informações, consulte a documentação do Red Hat para [descob
    > [!NOTE]
    > É uma prática recomendada de segurança para ter uma conta dedicada do AD para o SQL Server, para que as credenciais do SQL Server não são compartilhadas com outros serviços usando a mesma conta. No entanto, você pode reutilizar uma conta existente do AD se preferir, se você souber a senha da conta (necessária para gerar um arquivo keytab na próxima etapa).
 
-2. Definir o ServicePrincipalName (SPN) para esta conta usando o `setspn.exe` ferramenta. O SPN deve ser formatado exatamente conforme especificado no exemplo a seguir: você pode encontrar o nome de domínio totalmente qualificado de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] máquina host executando `hostname --all-fqdns` no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host e a porta TCP devem ser 1433, a menos que você configurou [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para usar um número de porta diferente.
+2. Definir o ServicePrincipalName (SPN) para esta conta usando o `setspn.exe` ferramenta. O SPN deve ser formatado exatamente conforme especificado no exemplo a seguir. Você pode encontrar o nome de domínio totalmente qualificado de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] máquina host executando `hostname --all-fqdns` no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host e a porta TCP devem ser 1433, a menos que você configurou [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para usar um número de porta diferente.
 
    ```PowerShell
    setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
@@ -218,7 +218,7 @@ Para obter mais informações, consulte a documentação do Red Hat para [descob
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. Crie um arquivo keytab para o usuário do AD que você criou na etapa anterior. Para fazer isso, usamos o  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**. Quando solicitado, insira a senha para essa conta do AD.
+2. Criar um arquivo keytab com  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**  para o usuário do AD que você criou na etapa anterior. Quando solicitado, insira a senha para essa conta do AD.
 
    ```bash
    sudo ktutil
@@ -267,9 +267,9 @@ Para obter mais informações, consulte a documentação do Red Hat para [descob
 
 Faça logon um computador cliente usando suas credenciais de domínio. Agora você pode se conectar ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sem precisar reinserir a senha, usando a autenticação do AD. Se você criar um logon para um grupo do AD, qualquer usuário do AD que seja membro desse grupo pode se conectar da mesma maneira.
 
-O parâmetro de cadeia de caracteres de conexão específicas para os clientes usarem a autenticação do AD depende de qual driver você está usando. A seguir estão alguns exemplos.
+O parâmetro de cadeia de caracteres de conexão específicas para os clientes usarem a autenticação do AD depende de qual driver você está usando. Considere os seguintes exemplos:
 
-* `sqlcmd`em um cliente Linux ingressado no domínio
+* `sqlcmd` em um cliente Linux ingressado no domínio
 
    Faça logon um cliente do Linux de domínio usando `ssh` e suas credenciais de domínio:
 
