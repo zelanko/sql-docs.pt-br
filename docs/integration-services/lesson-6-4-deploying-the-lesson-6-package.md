@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e3a8947b1212aafe5fb3d233400900ab320a80f6
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4fcb9a2ac92213a7e26a39012f8f113a858e7e9e
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="lesson-6-4---deploying-the-lesson-6-package"></a>Lição 6-4 – implantar o pacote da Lição 6
 Implantar o pacote envolve a adição do pacote no catálogo de SSISDB nos Integration Services em uma instância do SQL Server. Nesta lição, você adicionará o pacote da Lição 6 no catálogo SSISDB, definirá o parâmetro e executará o pacote. Nesta lição você usará o SQL Server Management Studio para adicionar o pacote da Lição 6 ao catálogo SSISDB e implantará esse pacote. Depois de implantar o pacote, você modificará o parâmetro para apontar para um novo local e, em seguida, executará o pacote.  
@@ -39,7 +39,7 @@ Nesta lição, você irá:
   
 -   Executar o pacote no SSMS.  
   
-### <a name="to-locate-or-add-the-the-ssisdb-catalog"></a>Para localizar ou adicionar ao catálogo do SSISDB  
+### <a name="to-locate-or-add-the-ssisdb-catalog"></a>Para localizar ou adicionar o catálogo do SSISDB  
   
 1.  Clique em Iniciar, aponte para Todos os programas, aponte para Microsoft SQL Server 2012 e, em seguida, clique em SQL Management Studio.  
   

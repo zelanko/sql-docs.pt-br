@@ -8,7 +8,10 @@
 
 # [SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
+# [mssql-cli (ferramenta de consulta de linha de comando)](mssql-cli.md)
+
 # [Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md)
+# [mssql-conf (Linux)](../linux/sql-server-linux-configure-mssql-conf.md)
 # [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md)
 # [Orientador de Otimização do Mecanismo de Banco de Dados (dta)](../tools/dta/dta-utility.md)
 # [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)
