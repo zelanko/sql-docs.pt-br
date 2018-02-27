@@ -1,5 +1,5 @@
 ---
-title: Conecte-se a um banco de dados do modelo de tabela (SSAS) | Microsoft Docs
+title: Conecte-se a um banco de dados de modelo de tabela | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -12,37 +12,28 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e2911c3a191a0cd41832fc37a3f07bff4735ee54
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e733d7e8964dcdd714ac095dc44a4432ac4835b7
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="connect-to-a-tabular-model-database-ssas"></a>Conectar a um banco de dados de modelo de tabela (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Depois de criar um modelo de tabela e implantá-lo em um servidor de modo de tabela do Analysis Services, você precisa definir permissões que disponibilizam para aplicativos cliente. Este tópico explica como conceder permissões e como conectar-se a um banco de dados de aplicativos cliente.  
+# <a name="connect-to-a-tabular-model-database"></a>Conecte-se a um banco de dados de modelo de tabela  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Após criar um modelo de tabela e implantá-lo em um servidor de modo de tabela do Analysis Services, você precisará definir permissões que o disponibilizem para aplicativos cliente. Este artigo explica como conceder permissões e como se conectar a um banco de dados de aplicativos cliente.  
   
 > [!NOTE]  
 >  Por padrão, conexões remotas ao Analysis Services não estarão disponíveis até que você configure o firewall. Verifique se abriu a porta apropriada se estiver configurando uma instância nomeada ou padrão para conexões de cliente. Para obter mais informações, consulte [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
- Este tópico contém as seguintes seções:  
-  
- [Permissões de usuário no banco de dados](#bkmk_userpermissions)  
-  
- [Permissões administrativas no servidor](#bkmk_admin)  
-  
- [Conectando do Excel ou SharePoint](#bkmk_excelconn)  
-  
- [Solucionando problemas de conexão](#bkmk_Tshoot)  
-  
 ##  <a name="bkmk_userpermissions"></a> Permissões de usuário no banco de dados  
  Usuários que conectam-se a bancos de dados de tabela devem ter associação em uma função de banco de dados que especifica o acesso de leitura.  
   
- Funções, e às vezes associação de função, são definidas quando um modelo é criado no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ou para modelos implantados, usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações sobre como criar funções usando o Gerenciador de Funções no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], consulte [Criar e gerenciar funções &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md). Para obter mais informações sobre como criar e gerenciar funções para um modelo implantado, consulte [Funções de modelo de tabela &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
+ Funções, e às vezes associação de função, são definidas quando um modelo é criado no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ou para modelos implantados, usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações sobre como criar funções usando o Gerenciador de função no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], consulte [criar e gerenciar funções](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md). Para obter mais informações sobre como criar e gerenciar funções para um modelo implantado, consulte [funções de modelo de tabela](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 > [!CAUTION]  
 >  Reimplantar um projeto de modelo de tabela com funções definidas usando o Gerenciador de Função no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] substituirá as funções definidas em um modelo de tabela implantado.  
@@ -95,7 +86,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  Selecione o banco de dados. Uma seleção válida mostrará um único cubo **Modelo** para o banco de dados. Clique em **Avançar** e em **Concluir**.  
   
- Depois que a conexão é estabelecida, você pode usar os dados para criar uma Tabela Dinâmica ou um Gráfico Dinâmico. Para obter mais informações, consulte [Analisar no Excel &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
+ Depois que a conexão é estabelecida, você pode usar os dados para criar uma Tabela Dinâmica ou um Gráfico Dinâmico. Para obter mais informações, consulte [analisar no Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
   
 ##  <a name="bkmk_sharepoint"></a> Conectar do SharePoint  
  Se estiver usando o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para o SharePoint, você poderá criar um arquivo de conexão de modelo semântico de BI no SharePoint que fornece redirecionamento a um banco de dados executado em um servidor de modo tabular do Analysis Services. Uma conexão de modelo semântico de BI fornece um ponto de extremidade HTTP a um banco de dados. Isso também simplifica o acesso a modelo de tabela para trabalhadores do conhecimento que costumam usar documentos em um site do SharePoint. Trabalhadores do conhecimento só precisam saber o local do arquivo de conexão de modelo semântico de BI ou sua URL para acessar bancos de dados de modelo de tabela. Detalhes sobre o local do servidor ou o nome do banco de dados são encapsulados na conexão de modelo semântico de BI. Para obter mais informações sobre como criar e usar arquivos de conexão de modelo semântico de BI, consulte [Conexão de modelo semântico de BI &#40;.bism&#41; do Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) e [Criar uma conexão de modelo semântico de BI com um banco de dados de modelo de tabela](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
@@ -105,7 +96,7 @@ ms.lasthandoff: 01/08/2018
   
  **O Assistente de Conexão de Dados não pode obter uma lista de bancos de dados da fonte de dados especificada.**  
   
- Na importação de dados, este erro do Microsoft Excel ocorre quando você tenta usar o Assistente para se conectar a um banco de dados de modelo de tabela em um servidor remoto do Analysis Services, e você não tem permissões suficientes. Para resolver este erro, você deve ter direitos de acesso de usuário no banco de dados. Consulte as instruções apresentadas antes neste tópico para conceder acesso do usuário aos dados.  
+ Ao importar dados, este erro do Microsoft Excel ocorre quando você tentar usar o Assistente para conectar a um banco de dados de modelo de tabela em um servidor remoto do Analysis Services, e você não tem permissões suficientes. Para resolver este erro, você deve ter direitos de acesso de usuário no banco de dados. Consulte as instruções apresentadas antes neste tópico para conceder acesso do usuário aos dados.  
   
  **Erro ao tentar estabelecer uma conexão com a fonte de dados externa. As seguintes conexões não foram atualizadas: \<nome do modelo > área restrita**  
   
@@ -119,7 +110,7 @@ ms.lasthandoff: 01/08/2018
   
  No SharePoint, este erro do Microsoft Excel ocorre quando você tenta a interação de dados, como a filtragem de dados, em uma Tabela Dinâmica que usa dados modelo. O erro ocorre porque o usuário não tem permissões do SharePoint suficientes na pasta de trabalho. O usuário deve ter permissões de **Leitura** ou superior. Permissões**Exibir Apenas** não são suficientes para o acesso a dados.  
   
-## <a name="see-also"></a>Consulte Também  
- [Implantação de uma solução de modelo de tabela &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte também  
+ [Implantação de solução de modelo tabular](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

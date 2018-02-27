@@ -1,25 +1,25 @@
 ---
 title: Configurar o SQL Server no Linux | Microsoft Docs
-description: "Este tópico descreve como usar a ferramenta mssql conf para definir configurações de 2017 do SQL Server no Linux."
+description: "Este artigo descreve como usar a ferramenta mssql conf para definir configurações de 2017 do SQL Server no Linux."
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 09/20/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
-ms.openlocfilehash: fe0a3bc095e1dcd76f9fdc98e1621974dca6693e
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 7b921f563b769a1a4c6a3edb5089a04050d0df74
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurar o SQL Server no Linux com a ferramenta mssql conf
 
@@ -29,12 +29,16 @@ ms.lasthandoff: 02/01/2018
 
 |||
 |---|---|
+| [Agente](#agent) | Habilitar o SQL Server Agent |
 | [Agrupamento](#collation) | Defina um novo agrupamento do SQL Server no Linux. |
 | [Comentários do cliente](#customerfeedback) | Escolha se ou não o SQL Server envia comentários à Microsoft. |
 | [Perfil do Database Mail](#dbmail) | Definir o perfil de email do banco de dados padrão do SQL Server no Linux |
 | [Diretório de dados padrão](#datadir) | Altere o diretório padrão para novos arquivos de dados de banco de dados do SQL Server (. mdf). |
 | [Diretório de log padrão](#datadir) | Altera o diretório padrão para novos arquivos de log (. ldf) de banco de dados do SQL Server. |
+| [Diretório de arquivos de banco de dados mestre padrão](#masterdatabasedir) | Altera o diretório padrão para os arquivos de banco de dados mestre na instalação existente do SQL.|
+| [Nome de arquivo de banco de dados mestre padrão](#masterdatabasename) | Altera o nome dos arquivos de banco de dados mestre. |
 | [Diretório de despejo padrão](#dumpdir) | Altere o diretório padrão para novos despejos de memória e outros arquivos de solução de problemas. |
+| [Diretório de log de erro padrão](#errorlogdir) | Altera o diretório padrão para novos arquivos de log de erros do SQL Server, rastreamento do criador de perfil padrão, XE de sessão de integridade do sistema e XE de sessão do Hekaton. |
 | [Diretório de backup padrão](#backupdir) | Altere o diretório padrão para novos arquivos de backup. |
 | [Tipo de despejo](#coredump) | Escolha o tipo de arquivo de despejo de memória de despejo para coletar. |
 | [Alta disponibilidade](#hadr) | Habilite grupos de disponibilidade. |
@@ -56,7 +60,25 @@ ms.lasthandoff: 02/01/2018
 
 * Esses exemplos executados mssql-conf por especificam o caminho completo: **/opt/mssql/bin/mssql-conf**. Se você escolher navegar para o caminho em vez disso, execute mssql conf no contexto do diretório atual: **. / conf mssql**.
 
-## <a id="collation"></a>Alterar o agrupamento do SQL Server
+## <a id="agent"></a> Habilitar o SQL Server Agent
+
+O **sqlagent.enabled** configuração habilita [do SQL Server Agent](sql-server-linux-run-sql-server-agent-job.md). Por padrão, o SQL Server Agent está desabilitado.
+
+Para alterar essas configurações, use as seguintes etapas:
+
+1. Habilite o SQL Server Agent:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
+   ```
+
+1. Reinicie o serviço do SQL Server:
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
+## <a id="collation"></a> Alterar o agrupamento do SQL Server
 
 O **definir agrupamento** opção altera o valor de agrupamento para qualquer um dos agrupamentos com suporte.
 
@@ -76,7 +98,7 @@ O **definir agrupamento** opção altera o valor de agrupamento para qualquer um
 
 Para obter uma lista de agrupamentos com suporte, execute o [sys. fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) função: `SELECT Name from sys.fn_helpcollations()`.
 
-## <a id="customerfeedback"></a>Configurar comentários do cliente
+## <a id="customerfeedback"></a> Configurar comentários do cliente
 
 O **telemetry.customerfeedback** alterações de configuração, se o SQL Server envia comentários à Microsoft ou não. Por padrão, esse valor é definido como **true**. Para alterar o valor, execute os seguintes comandos:
 
@@ -94,7 +116,7 @@ O **telemetry.customerfeedback** alterações de configuração, se o SQL Server
 
 Para obter mais informações, consulte [comentários do cliente para o SQL Server no Linux](sql-server-linux-customer-feedback.md).
 
-## <a id="datadir"></a>Alterar o local padrão de diretório de dados ou de log
+## <a id="datadir"></a> Alterar o local padrão de diretório de dados ou de log
 
 O **filelocation.defaultdatadir** e **filelocation.defaultlogdir** configurações alterar o local onde os novo banco de dados e arquivos de log são criados. Por padrão, esse local é /var/opt/mssql/data. Para alterar essas configurações, use as seguintes etapas:
 
@@ -131,7 +153,89 @@ O **filelocation.defaultdatadir** e **filelocation.defaultlogdir** configuraçõ
 
 1. Esse comando também presume que existe um diretório de log/tmp, e que está sob o usuário e grupo **mssql**.
 
-## <a id="dumpdir"></a>Alterar o local do diretório de despejo padrão
+
+## <a id="masterdatabasedir"></a> Alterar o local de diretório do arquivo de banco de dados mestre padrão
+
+O **filelocation.masterdatafile** e **filelocation.masterlogfile** alterações de configuração no local onde o mecanismo do SQL Server procura os arquivos de banco de dados mestre. Por padrão, esse local é /var/opt/mssql/data. 
+
+Para alterar essas configurações, use as seguintes etapas:
+
+1. Crie o diretório de destino para novos arquivos de log de erro. O exemplo a seguir cria um novo **/tmp/masterdatabasedir** diretório:
+
+   ```bash
+   sudo mkdir /tmp/masterdatabasedir
+   ```
+
+1. Alterar o proprietário e o grupo do diretório para o **mssql** usuário:
+
+   ```bash
+   sudo chown mssql /tmp/masterdatabasedir
+   sudo chgrp mssql /tmp/masterdatabasedir
+   ```
+
+1. Use mssql conf para alterar o diretório de banco de dados mestre padrão para os arquivos de log e de dados mestre com o **definir** comando:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /tmp/masterdatabasedir/master.mdf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /tmp/masterdatabasedir/mastlog.ldf
+   ```
+
+1. Interrompa o serviço do SQL Server:
+
+   ```bash
+   sudo systemctl stop mssql-server
+   ```
+
+1. Mova o master.mdf e masterlog.ldf: 
+
+   ```bash
+   sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf 
+   sudo mv /var/opt/mssql/data/mastlog.ldf /tmp/masterdatabasedir/mastlog.ldf
+   ```
+
+1. Inicie o serviço do SQL Server:
+
+   ```bash
+   sudo systemctl start mssql-server
+   ```
+   
+> [!NOTE]
+> Se o SQL Server não pode localizar os arquivos do master.mdf e mastlog.ldf no diretório especificado, uma cópia do modelo de bancos de dados do sistema será automaticamente criada no diretório especificado e do SQL Server será inicializada com êxito. No entanto, metadados, como bancos de dados de usuário, os logons de servidor, certificados de servidor, chaves de criptografia, trabalhos do SQL agent ou antiga senha de logon não serão atualizado no novo banco de dados mestre. Você precisará parar o SQL Server e mover seu antigo master.mdf e mastlog.ldf para o novo local especificado e iniciar o SQL Server para continuar usando os metadados existentes. 
+
+
+## <a id="masterdatabasename"></a> Altere o nome dos arquivos de banco de dados mestre.
+
+O **filelocation.masterdatafile** e **filelocation.masterlogfile** alterações de configuração no local onde o mecanismo do SQL Server procura os arquivos de banco de dados mestre. Por padrão, esse local é /var/opt/mssql/data. Para alterar essas configurações, use as seguintes etapas:
+
+1. Interrompa o serviço do SQL Server:
+
+   ```bash
+   sudo systemctl stop mssql-server
+   ```
+
+1. Use mssql conf para alterar os nomes de banco de dados mestre esperado para os arquivos de log e de dados mestre com o **definir** comando:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /var/opt/mssql/data/masternew.mdf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data /mastlognew.ldf
+   ```
+
+1. Alterar o nome dos arquivos de dados e de log de banco de dados mestre 
+
+   ```bash
+   sudo mv /var/opt/mssql/data/master.mdf /var/opt/mssql/data/masternew.mdf
+   sudo mv /var/opt/mssql/data/mastlog.ldf /var/opt/mssql/data/mastlognew.ldf
+   ```
+
+1. Inicie o serviço do SQL Server:
+
+   ```bash
+   sudo systemctl start mssql-server
+   ```
+
+
+
+## <a id="dumpdir"></a> Alterar o local do diretório de despejo padrão
 
 O **filelocation.defaultdumpdir** o local padrão onde a memória e despejos de memória do SQL são gerados sempre que houver uma falha de alterações de configuração. Por padrão, esses arquivos são gerados no /var/opt/mssql/log.
 
@@ -162,7 +266,39 @@ Para configurar esse novo local, use os seguintes comandos:
    sudo systemctl restart mssql-server
    ```
 
-## <a id="backupdir"></a>Alterar o local do diretório de backup padrão
+## <a id="errorlogdir"></a> Alterar o local de diretório de arquivo de log de erro padrão
+
+O **filelocation.errorlogfile** o local onde o novo log de erros, o rastreamento do criador de perfil padrão, o XE de sessão de integridade do sistema e a arquivos de sessão XE Hekaton são criados de alterações de configuração. Por padrão, esse local é /var/opt/mssql/log. O diretório no qual o arquivo de log de erros do SQL será definido se torna o diretório de log padrão para outros logs.
+
+Para alterar essas configurações:
+
+1. Crie o diretório de destino para novos arquivos de log de erro. O exemplo a seguir cria um novo **/tmp/logs** diretório:
+
+   ```bash
+   sudo mkdir /tmp/logs
+   ```
+
+1. Alterar o proprietário e o grupo do diretório para o **mssql** usuário:
+
+   ```bash
+   sudo chown mssql /tmp/logs
+   sudo chgrp mssql /tmp/logs
+   ```
+
+1. Use mssql conf para alterar o nome do arquivo de log de erros padrão com o **definir** comando:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set filelocation.errorlogfile /tmp/logs/errorlog
+   ```
+
+1. Reinicie o serviço do SQL Server:
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
+
+## <a id="backupdir"></a> Alterar o local do diretório de backup padrão
 
 O **filelocation.defaultbackupdir** o local padrão onde os arquivos de backup são gerados de alterações de configuração. Por padrão, esses arquivos são gerados no /var/opt/mssql/data.
 
@@ -193,7 +329,7 @@ Para configurar esse novo local, use os seguintes comandos:
    sudo systemctl restart mssql-server
    ```
 
-## <a id="coredump"></a>Especifique as configurações de despejo de núcleo
+## <a id="coredump"></a> Especifique as configurações de despejo de núcleo
 
 Se ocorrer uma exceção em um dos processos do SQL Server, SQL Server cria um despejo de memória.
 
@@ -226,14 +362,14 @@ A primeira captura fase é controlada pelo **coredump.coredumptype** configuraç
     | **filtered** | Design filtrado usa uma subtração com base em onde toda a memória do processo é incluída, a menos que especificamente excluído. O design compreende dos recursos internos do SQLPAL e o ambiente de host, exceto determinadas regiões do despejo de memória.
     | **full** | Completo é um despejo de processo completo que inclui todas as regiões localizado em **/proc/.$ pid/mapas**. Isso não é controlado pelo **coredump.captureminiandfull** configuração. |
 
-## <a id="dbmail"></a>Definir o perfil de email do banco de dados padrão do SQL Server no Linux
+## <a id="dbmail"></a> Definir o perfil de email do banco de dados padrão do SQL Server no Linux
 
 O **sqlpagent.databasemailprofile** permite que você defina o perfil de email de banco de dados padrão para alertas de email.
 
 ```bash
 sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 ```
-## <a id="hadr"></a>Alta disponibilidade
+## <a id="hadr"></a> Alta disponibilidade
 
 O **hadr.hadrenabled** opção habilita os grupos de disponibilidade na instância do SQL Server. O comando a seguir habilita os grupos de disponibilidade, definindo **hadr.hadrenabled** como 1. Você deve reiniciar o SQL Server para a configuração entre em vigor.
 
@@ -247,7 +383,7 @@ Para informações sobre como isso é usado com grupos de disponibilidade, consu
 - [Configurar sempre no grupo de disponibilidade para o SQL Server no Linux](sql-server-linux-availability-group-configure-ha.md)
 - [Configurar o grupo de disponibilidade de escala de leitura para o SQL Server no Linux](sql-server-linux-availability-group-configure-rs.md)
 
-## <a id="localaudit"></a>Diretório de conjunto de auditoria local
+## <a id="localaudit"></a> Diretório de conjunto de auditoria local
 
 O **telemetry.userrequestedlocalauditdirectory** configuração habilita a auditoria Local e permite que você defina o diretório onde os logs de auditoria Local é criados.
 
@@ -278,7 +414,7 @@ O **telemetry.userrequestedlocalauditdirectory** configuração habilita a audit
 
 Para obter mais informações, consulte [comentários do cliente para o SQL Server no Linux](sql-server-linux-customer-feedback.md).
 
-## <a id="lcid"></a>Alterar a localidade do SQL Server
+## <a id="lcid"></a> Alterar a localidade do SQL Server
 
 O **language.lcid** alterações de configuração de localidade do SQL Server a qualquer identificador de idioma com suporte (LCID). 
 
@@ -294,7 +430,7 @@ O **language.lcid** alterações de configuração de localidade do SQL Server a
    sudo systemctl restart mssql-server
    ```
 
-## <a id="memorylimit"></a>Definir o limite de memória
+## <a id="memorylimit"></a> Definir o limite de memória
 
 O **memory.memorylimitmb** determina a quantidade memória física (em MB) disponível para o SQL Server. O padrão é 80% da memória física.
 
@@ -310,7 +446,7 @@ O **memory.memorylimitmb** determina a quantidade memória física (em MB) dispo
    sudo systemctl restart mssql-server
    ```
 
-## <a id="tcpport"></a>Alterar a porta TCP
+## <a id="tcpport"></a> Alterar a porta TCP
 
 O **network.tcpport** a porta TCP em que o SQL Server escuta para conexões de alterações de configuração. Por padrão, essa porta é definida como 1433. Para alterar a porta, execute os seguintes comandos:
 
@@ -332,7 +468,7 @@ O **network.tcpport** a porta TCP em que o SQL Server escuta para conexões de a
    sqlcmd -S localhost,<new_tcp_port> -U test -P test
    ```
 
-## <a id="tls"></a>Especificar configurações de TLS
+## <a id="tls"></a> Especificar configurações de TLS
 
 As opções a seguir configurar TLS para uma instância do SQL Server em execução no Linux.
 
@@ -341,13 +477,13 @@ As opções a seguir configurar TLS para uma instância do SQL Server em execuç
 |**network.forceencryption** |Se for 1, em seguida, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] força todas as conexões sejam criptografados. Por padrão, essa opção é 0. |
 |**network.tlscert** |O caminho absoluto para o certificado do arquivo que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa para TLS. Exemplo: `/etc/ssl/certs/mssql.pem` o arquivo de certificado deve ser acessível pela conta mssql. A Microsoft recomenda restringir o acesso ao arquivo usando `chown mssql:mssql <file>; chmod 400 <file>`. |
 |**network.tlskey** |O caminho absoluto para a chave privada do arquivo que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa para TLS. Exemplo: `/etc/ssl/private/mssql.key` o arquivo de certificado deve ser acessível pela conta mssql. A Microsoft recomenda restringir o acesso ao arquivo usando `chown mssql:mssql <file>; chmod 400 <file>`. |
-|**network.tlsprotocols** |Uma lista separada por vírgulas de quais TLS protocolos são permitidos pelo SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]sempre tenta negociar o protocolo permitido mais forte. Se um cliente não oferece suporte a qualquer protocolo permitido, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rejeitará a tentativa de conexão.  Para compatibilidade, todos os protocolos com suporte são permitidos por padrão (1.2, 1.1 e 1.0).  Se os clientes oferecem suporte a TLS 1.2, a Microsoft recomenda permitindo que apenas o protocolo TLS 1.2. |
+|**network.tlsprotocols** |Uma lista separada por vírgulas de quais TLS protocolos são permitidos pelo SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sempre tenta negociar o protocolo permitido mais forte. Se um cliente não oferece suporte a qualquer protocolo permitido, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rejeitará a tentativa de conexão.  Para compatibilidade, todos os protocolos com suporte são permitidos por padrão (1.2, 1.1 e 1.0).  Se os clientes oferecem suporte a TLS 1.2, a Microsoft recomenda permitindo que apenas o protocolo TLS 1.2. |
 |**network.tlsciphers** |Especifica quais codificações são permitidas por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para TLS. Essa cadeia de caracteres deve ser formatada por [formato de lista de codificação do OpenSSL](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). Em geral, você não precisará alterar essa opção. <br /> Por padrão, as seguintes codificações são permitidas: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Caminho para o arquivo keytab Kerberos |
 
 Para obter um exemplo de como usar as configurações de TLS, consulte [criptografando conexões com o SQL Server no Linux](sql-server-linux-encrypted-connections.md).
 
-## <a id="traceflags"></a>Habilitar/desabilitar sinalizadores de rastreamento
+## <a id="traceflags"></a> Habilitar/desabilitar sinalizadores de rastreamento
 
 Isso **traceflag** opção habilita ou desabilita os sinalizadores de rastreamento para a inicialização do serviço do SQL Server. Para ativar/desativar um sinalizador de rastreamento use os seguintes comandos:
 

@@ -1,11 +1,11 @@
 ---
 title: "SQL Server Always On padrões de implantação de grupo de disponibilidade | Microsoft Docs"
-ms.custom: 
+ms.custom: sql-linux
 ms.date: 10/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d0f5fe75b65efbea49df143e573316b50675a93
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 25d20ff22474c8df65184cab9ddd0a9f1efb7a8c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade
 
@@ -70,7 +70,7 @@ Um grupo de disponibilidade com réplicas síncronas três pode fornecer proteç
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
 |Interrupção principal | Failover manual. Pode ocorrer perda de dados. Novo primário é R / w. |Failover automático. Novo primário é R / w. |Failover automático. Novo primário não está disponível para transações de usuário até que o antigo primário recupera e associa o grupo de disponibilidade como secundário. 
 |Interrupção de uma réplica secundária  | É primário R / w. Nenhum failover automático se o principal falhar. |É primário R / w. Nenhum failover automático se primário falha também. | Primário não está disponível para transações de usuário. 
-<sup>*</sup>Padrão
+<sup>*</sup> Padrão
 
 <a name="twoSynch"></a>
 
@@ -87,7 +87,7 @@ Um grupo de disponibilidade com duas réplicas síncronas fornece proteção de 
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |Interrupção principal | Failover manual. Pode ocorrer perda de dados. Novo primário é R / w.| Failover automático. Novo primário não está disponível para transações de usuário até que o antigo primário recupera e associa o grupo de disponibilidade como secundário.
 |Interrupção de uma réplica secundária  |Primário é R/W, em execução exposto a perda de dados. |Primário não está disponível para transações de usuário até que recupera secundária.
-<sup>*</sup>Padrão
+<sup>*</sup> Padrão
 
 >[!NOTE]
 >O cenário anterior é o comportamento antes do SQL Server de 2017 atualização Cumulativa 1. 
@@ -117,7 +117,7 @@ O valor padrão para `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` é 0. A tabel
 |Interrupção de réplica secundária | Primário está R/W, em execução exposto a perda de dados (se o principal falha e não pode ser recuperado). Nenhum failover automático se primário falha também. | Primário não está disponível para transações de usuário. Nenhuma réplica façam failover para se primário falha também. 
 |Interrupção de réplica apenas de configuração | É primário R / w. Nenhum failover automático se primário falha também. | É primário R / w. Nenhum failover automático se primário falha também. 
 |Secundário síncrono + configuração somente paralisação de réplica| Primário não está disponível para transações de usuário. Nenhum failover automático. | Primário não está disponível para transações de usuário. Nenhuma réplica para failover para se primário falha também. 
-<sup>*</sup>Padrão
+<sup>*</sup> Padrão
 
 >[!NOTE]
 >A instância do SQL Server que hospeda a réplica apenas de configuração também pode hospedar outros bancos de dados. Ele também pode participar como um banco de dados somente de configuração para mais de um grupo de disponibilidade. 
@@ -142,7 +142,7 @@ O valor padrão para `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` é 0. A tabel
 
 ## <a name="understand-sql-server-resource-agent-for-pacemaker"></a>Entender o agente de recursos do SQL Server para pacemaker
 
-SQL Server 2017 CTP 1.4 adicionado `sequence_number` para `sys.availability_groups` para permitir Pacemaker identificar secundário atualizado como réplicas estão com a réplica primária. `sequence_number`é um BIGINT aumentando de forma monotônica que representa atualizado como a réplica do grupo de disponibilidade local. Atualizações de pacemaker a `sequence_number` com cada alteração de configuração do grupo de disponibilidade. Exemplos de alterações de configuração incluem o failover, a adição de réplica ou a remoção. O número é atualizado na réplica primária e replicado para réplicas secundárias. Assim, uma réplica secundária que tem a configuração atualizada tem o mesmo número de sequência do primário. 
+SQL Server 2017 CTP 1.4 adicionado `sequence_number` para `sys.availability_groups` para permitir Pacemaker identificar secundário atualizado como réplicas estão com a réplica primária. `sequence_number` é um BIGINT aumentando de forma monotônica que representa atualizado como a réplica do grupo de disponibilidade local. Atualizações de pacemaker a `sequence_number` com cada alteração de configuração do grupo de disponibilidade. Exemplos de alterações de configuração incluem o failover, a adição de réplica ou a remoção. O número é atualizado na réplica primária e replicado para réplicas secundárias. Assim, uma réplica secundária que tem a configuração atualizada tem o mesmo número de sequência do primário. 
 
 Quando decide Pacemaker promover uma réplica primária, ele primeiro envia um *previamente promover* notificação para todas as réplicas. As réplicas de retornam o número de sequência. Em seguida, quando na verdade tenta Pacemaker promover uma réplica primária, a réplica apenas promove próprio se o seu número de sequência é o mais alto de todos os números de sequência. Se o seu próprio número de sequência não coincide com o maior número de sequência, a réplica rejeita a operação de promoção. Dessa maneira, somente a réplica com o maior número de sequência pode ser promovida a primária, garantindo que não haverá perda de dados. 
 
@@ -150,7 +150,7 @@ Esse processo requer pelo menos uma réplica disponível para promoção com o m
 
 Por exemplo, um grupo de disponibilidade com três réplicas síncronas - uma réplica primária e duas réplicas secundárias síncronas.
 
-- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`é 1; (3 / 2 -> 1).
+- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` é 1; (3 / 2 -> 1).
 
 - O número necessário de réplicas para responder para promover previamente a ação é 2; (3 - 1 = 2). 
 

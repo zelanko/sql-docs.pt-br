@@ -1,7 +1,7 @@
 ---
-title: Excluir uma coluna (SSAS Tabular) | Microsoft Docs
+title: Excluir uma coluna | Microsoft Docs
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,24 +12,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 703db83b-e554-450e-813e-23ad08c1cdad
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d413e4bdfffcdf0210f960c34bfafa8dc82946ca
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c18504b3e6430807f124938b60d7f022a8050379
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="delete-a-column-ssas-tabular"></a>Excluir uma coluna (SSAS tabular)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Este tópico descreve como excluir uma coluna de uma tabela de modelo de tabela.  
+# <a name="delete-a-column"></a>Excluir uma coluna 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Este artigo descreve como excluir uma coluna de uma tabela de modelo de tabela.  
   
 ## <a name="delete-a-model-table-column"></a>Excluir uma coluna de tabela modelo  
   
 > [!NOTE]  
->  A exclusão de uma coluna de uma tabela modelo não exclui a coluna de uma definição de consulta de partição. Se a coluna que você está excluindo fizer parte de uma partição, exclua a coluna manualmente da definição de consulta de partição. A falha ao excluir a coluna da definição de consulta de partição causará a consulta da coluna e o retorno dos dados, mas não a população da tabela modelo, durante operações de processamento. Para obter mais informações, consulte [Partições &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
+>  A exclusão de uma coluna de uma tabela modelo não exclui a coluna de uma definição de consulta de partição. Se a coluna que você está excluindo fizer parte de uma partição, exclua a coluna manualmente da definição de consulta de partição. A falha ao excluir a coluna da definição de consulta de partição causará a consulta da coluna e o retorno dos dados, mas não a população da tabela modelo, durante operações de processamento. Para obter mais informações, consulte [partições](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
 #### <a name="to-delete-a-model-table-column"></a>Para excluir uma coluna de tabela modelo  
   
@@ -43,8 +44,8 @@ ms.lasthandoff: 01/08/2018
   
 3.  Na caixa de diálogo **Editar Propriedades da Tabela** , na janela de visualização de tabela, desmarque a coluna a ser excluída e clique em **OK**.  
   
-## <a name="see-also"></a>Consulte Também  
- [Adicionar colunas a uma tabela &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)   
- [Partições &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte também  
+ [Adicionar colunas a uma tabela](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)   
+ [Partições](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
   
   

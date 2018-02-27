@@ -1,7 +1,7 @@
 ---
-title: "Criar uma relação entre duas tabelas (SSAS Tabular) | Microsoft Docs"
+title: "Criar uma relação | Microsoft Docs"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -15,19 +15,20 @@ f1_keywords:
 - sql13.asvs.bidtoolset.createrelatdb.f1
 - sql13.asvs.bidtoolset.managereldb.f1
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4278d13d9bbff216a4b5480382de1c8a565278b0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3936d29e4d547db75e7a92020c82d8c5c5854503
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>Criar uma relação entre duas tabelas (SSAS tabular)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Se as tabelas na fonte de dados não tiverem relações existentes ou adicionar novas tabelas, você pode usar as ferramentas no designer de modelo para criar novas relações. Para obter informações sobre como as relações são usadas em modelos tabulares, consulte [Relações &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
+# <a name="create-a-relationship"></a>Criar uma relação 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Se as tabelas da fonte de dados não tiverem relações existentes ou se você adicionar novas tabelas, será possível usar as ferramentas no designer de modelo para criar novas relações. Para obter informações sobre como as relações são usadas em modelos de tabela, consulte [relações](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
   
 ## <a name="create-a-relationship-between-two-tables"></a>Criar uma relação entre duas tabelas  
   
@@ -75,8 +76,8 @@ ms.lasthandoff: 01/08/2018
   
 6.  Clique em **Criar**.  
   
-## <a name="see-also"></a>Consulte Também  
- [Excluir relações &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
- [Relações &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte também  
+ [Excluir relações](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
+ [Relações](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
   
   

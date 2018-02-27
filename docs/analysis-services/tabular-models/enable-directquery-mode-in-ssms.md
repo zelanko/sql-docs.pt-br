@@ -1,7 +1,7 @@
 ---
 title: Habilitar o modo DirectQuery no SSMS | Microsoft Docs
 ms.custom: 
-ms.date: 07/06/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,23 +12,24 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2779e5f09f447e0499e2eeb87ec89ba698cc8628
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 544725a89521eb86f61fcfd3194c3d56be9da606
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Habilitar o modo DirectQuery no SSMS
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Você pode alterar as propriedades de acesso de dados de um modelo de tabela que já tenha sido implantado, habilitando o modo DirectQuery, onde consultas são executadas em uma fonte de dados relacional de back-end em vez de em cache dados residentes na memória.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Você pode alterar as propriedades de acesso a dados de um modelo de tabela que já tenha sido implantado, habilitando o modo DirectQuery, em que consultas são executadas em uma fonte de dados relacional de back-end em vez de nos dados em cache residentes na memória.  
   
  No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], as etapas de configuração do DirectQuery diferem de acordo com o nível de compatibilidade do modelo. Veja a seguir etapas que funcionam para todos os níveis de compatibilidade.  
   
- Este tópico pressupõe que você tenha criado e validado um modelo de tabela na memória no nível de compatibilidade 1200 ou superior e somente precisa habilitar o acesso DirectQuery e atualizar as cadeias de conexão. Se você estiver começando de um nível de compatibilidade inferior, precisará atualizá-lo manualmente primeiro. Consulte [Atualizar o Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) para encontrar as etapas.  
+ Este artigo pressupõe que você tenha criado e validado um modelo de tabela na memória no nível de compatibilidade 1200 ou superior e somente precisa habilitar o acesso DirectQuery e atualizar as cadeias de conexão. Se você estiver começando de um nível de compatibilidade inferior, precisará atualizá-lo manualmente primeiro. Consulte [Atualizar o Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) para encontrar as etapas.  
   
 > [!IMPORTANT]  
 >  É recomendável usar o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] em vez do Management Studio para alternar entre modos de armazenamento de dados. Quando você usa o  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para alterar o modelo e depois implantar o servidor, o modelo e o banco de dados permanecem em sincronia. Além disso, alterar os modos de armazenamento no modelo permite que você verifique os erros de validação que ocorrem. Ao usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] conforme a descrição neste artigo, os erros de validação não são relatados.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Certifique-se de que o modelo não tenha recursos que possam causar erros de validação no modo DirectQuery e altere o modo de armazenamento de dados no modelo de na memória para DirectQuery.  
   
-     Uma lista de restrições de recursos está documentada em [Modo DirectQuery &#40;SSAS de tabela&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
+     Uma lista de restrições de recursos está documentada em [o modo DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
   
 -   Examine a cadeia de conexão e as credenciais usadas pelo banco de dados implantado para recuperar dados do banco de dados externo de back-end. Certifique-se de que haja apenas uma conexão e que as configurações sejam adequadas para a execução da consulta.  
   
@@ -95,7 +96,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Quando o cache e a fonte de dados relacional estão disponíveis, você pode definir o método de conexão preferencial, mas é o cliente quem controla a fonte a ser usada, usando a propriedade de cadeia de conexão do DirectQueryMode.  
   
--   Você pode configurar partições no cache de modo que a partição primária usada no modo DirectQuery nunca seja processada e sempre faça referência à fonte relacional. Há muitas formas de usar partições para otimizar o design de modelo e a experiência de relatórios. Para obter mais informações, consulte [Definir partições em modelos DirectQuery &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md).  
+-   Você pode configurar partições no cache de modo que a partição primária usada no modo DirectQuery nunca seja processada e sempre faça referência à fonte relacional. Há muitas formas de usar partições para otimizar o design de modelo e a experiência de relatórios. Para obter mais informações, consulte [definir partições em modelos DirectQuery](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md).  
   
 -   Após a implantação do modelo, você pode alterar o método de conexão preferencial. Por exemplo, você pode usar um modo híbrido para testes e alternar o modelo para **apenas DirectQuery** somente depois de testar bem relatórios ou consultas que usam o modelo. Para obter mais informações, consulte [Definir ou alterar o método de conexão preferencial para DirectQuery](http://msdn.microsoft.com/library/f10d5678-d678-4251-8cce-4e30cfe15751).  
   
@@ -106,7 +107,7 @@ ms.lasthandoff: 01/08/2018
   
 1.  No Pesquisador de Objetos, expanda **Conexões** e clique duas vezes em uma conexão para exibir suas propriedades.  
   
-     Para modelos DirectQuery, deve haver apenas uma conexão definida para o banco de dados e a fonte de dados deve ser relacional e de um tipo de banco de dados compatível. Consulte [Fontes de dados com suporte &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
+     Para modelos DirectQuery, deve haver apenas uma conexão definida para o banco de dados e a fonte de dados deve ser relacional e de um tipo de banco de dados compatível. Consulte [fontes de dados suportadas](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
   
 2.  **A cadeia de conexão** deve especificar o servidor, o nome do banco de dados e o método de autenticação usado em operações de DirectQuery. Se você estiver usando a autenticação do SQL Server, pode especificar aqui o login do banco de dados.  
   
@@ -131,8 +132,8 @@ ms.lasthandoff: 01/08/2018
 3.  No rastreamento, você deve ver evidências de execução de consultas no banco de dados relacional.  
   
 ## <a name="see-also"></a>Consulte também  
- [Nível de compatibilidade para modelos de tabela no Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
- [Fontes de dados com suporte &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Nível de compatibilidade](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
+ [Fontes de dados com suporte](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)   
  [Monitorar uma instância do Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   

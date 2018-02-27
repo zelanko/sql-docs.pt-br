@@ -12,24 +12,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e0acafbad6d869b31b7560f059adb0a7a3e8da03
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 24d32bd54651eb173ca6de920d9e457c6331c8ca
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="impersonation"></a>Representação 
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Este tópico fornece a autores de modelo de tabela uma compreensão de como as credenciais de logon são usadas pelo Analysis Services ao conectar-se a uma fonte de dados para importar e processar (Atualizar) dados.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Este artigo fornece a autores de modelo de tabela uma compreensão de como as credenciais de logon são usadas pelo Analysis Services ao conectar-se a uma fonte de dados para importar e processar (Atualizar) dados.  
 
-##  <a name="bkmk_conf_imp_info"></a>Configurando a representação  
+##  <a name="bkmk_conf_imp_info"></a> Configurando a representação  
  Onde e o contexto existe um modelo determina como as informações de representação são configuradas. Ao criar um novo projeto de modelo, a representação está configurada no SQL Server Data Tools (SSDT) quando você se conectar a uma fonte de dados para importar dados. Depois que um modelo é implantado, representação pode ser configurada na propriedade de cadeia de caracteres de conexão de banco de dados de modelo usando o SQL Server Management Studio (SSMS). Para modelos de tabela no Azure Analysis Services, você pode usar o SSMS ou o **exibir como: Script** modo no designer e baseada em navegador para editar o arquivo Model.bim em JSON.
   
-##  <a name="bkmk_how_imper"></a>Como a representação é usada  
+##  <a name="bkmk_how_imper"></a> Como a representação é usada  
  *Representação* é a capacidade de um aplicativo de servidor, como o Analysis Services, de assumir a identidade de um aplicativo cliente. Analysis Services é executado usando uma conta de serviço, no entanto, quando o servidor estabelece uma conexão a uma fonte de dados, ele usa representação para que as verificações de acesso para importação de dados e o processamento pode ser executado.  
   
  As credenciais usadas para representação são diferentes das credenciais do qual com que você fez logon. As credenciais são usadas para operações de cliente específicas ao criar um modelo de usuário conectado.  
@@ -89,6 +90,6 @@ Quando dados são importados ou processados, as credenciais de representação s
 ## <a name="see-also"></a>Consulte também  
  [Modo DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [Fontes de dados](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [Implantação de solução de modelo de tabela](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [Implantação de solução de modelo tabular](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   
