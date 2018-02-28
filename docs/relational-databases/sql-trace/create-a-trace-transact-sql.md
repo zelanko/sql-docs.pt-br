@@ -22,13 +22,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: d56ed4af251bb739c6717afa6373d4eac1ed9105
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-trace-transact-sql"></a>Criar um rastreamento (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como usar procedimentos armazenados para criar um rastreamento.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico descreve como usar procedimentos armazenados para criar um rastreamento.  
   
 ### <a name="to-create-a-trace"></a>Para criar um rastreamento  
   

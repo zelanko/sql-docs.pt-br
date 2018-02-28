@@ -22,13 +22,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c0133d9255da8fd0dfe9d373b717bf813bb17767
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Monitorando o espelhamento de banco de dados (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Esta seção apresenta o Monitor de Espelhamento de Banco de Dados e os procedimentos armazenados do sistema **sp_dbmmonitor**, explica como funciona o monitoramento de espelhamento de banco de dados (incluindo o **Trabalho de Monitor de Espelhamento de Banco de Dados**) e resume as informações sobre as sessões de espelhamento de banco de dados que podem ser monitoradas. Além disso, esta seção apresenta como definir limites de avisos para um conjunto de eventos de espelhamento de banco de dados predefinido e como configurar alertas em qualquer evento de espelhamento de banco de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Esta seção apresenta o Monitor de Espelhamento de Banco de Dados e os procedimentos armazenados do sistema **sp_dbmmonitor** , explica como funciona o monitoramento de espelhamento de banco de dados (incluindo o **Trabalho de Monitor de Espelhamento de Banco de Dados)**e resume as informações sobre as sessões de espelhamento de banco de dados que podem ser monitoradas. Além disso, esta seção apresenta como definir limites de avisos para um conjunto de eventos de espelhamento de banco de dados predefinido e como configurar alertas em qualquer evento de espelhamento de banco de dados.  
   
  Você pode monitorar um banco de dados espelho durante uma sessão de espelhamento para verificar se e como os dados estão fluindo. Para definir e gerenciar o monitoramento de um ou mais dos bancos de dados espelhados em uma instância do servidor, você pode usar o Monitor de Espelhamento de Banco de Dados ou os procedimentos armazenados do sistema **sp_dbmmonitor** .  
   

@@ -29,13 +29,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 036bb0f6375461e5764fb92534d4d8b07e016f52
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrar um banco de dados como um DAC
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use o **Assistente para Registrar o Aplicativo da Camada de Dados** ou um script do Windows PowerShell para compilar uma definição do DAC (aplicativo da camada de dados) que descreva os objetos em um banco de dados existente e registre a definição do DAC no banco de dados do sistema **msdb** (**master** no [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Use o **Assistente para Registrar o Aplicativo da Camada de Dados** ou um script do Windows PowerShell para compilar uma definição do DAC (aplicativo da camada de dados) que descreva os objetos em um banco de dados existente e registre a definição do DAC no banco de dados do sistema **msdb** (**master** no [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   

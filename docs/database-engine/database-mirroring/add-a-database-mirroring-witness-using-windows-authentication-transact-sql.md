@@ -23,13 +23,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5909ba97271614b39e0b899a257f62c1658cfe09
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Adicionar uma testemunha de espelhamento de banco de dados usando a Autenticação do Windows (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para definir uma testemunha para um banco de dados, o proprietário do banco de dados nomeia uma instância do Mecanismo de Banco de Dados para a função de servidor testemunha. A instância do servidor testemunha pode ser executada no mesmo computador que a instância do servidor principal ou espelho, mas isso reduz a robustez de failover automático substancialmente.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Para definir uma testemunha para um banco de dados, o proprietário do banco de dados nomeia uma instância do Mecanismo de Banco de Dados para a função de servidor testemunha. A instância do servidor testemunha pode ser executada no mesmo computador que a instância do servidor principal ou espelho, mas isso reduz a robustez de failover automático substancialmente.  
   
  A localização da testemunha em um computador separado é altamente recomendável. Uma determinada instância do servidor pode participar de várias sessões de espelhamento de banco de dados simultâneos com os mesmos ou diferentes parceiros. Um determinado servidor pode ser um parceiro em algumas sessões e uma testemunha em outras sessões.  
   

@@ -21,13 +21,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b625927cc888ef09f83ada2cae55197d9533ab18
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-warning-thresholds"></a>Configurar limites de aviso
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use essa caixa de diálogo para habilitar e configurar um ou mais limites de aviso para o banco de dados selecionado na árvore de navegação da caixa de diálogo **Monitor de Espelhamento de Banco de Dados**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Use essa caixa de diálogo para habilitar e configurar um ou mais limites de aviso para o banco de dados selecionado na árvore de navegação da caixa de diálogo **Monitor de Espelhamento de Banco de Dados** .  
   
  A caixa de diálogo tenta se conectar a ambas as instâncias do servidor. Essas conexões são assincronamente estabelecidas. A caixa de diálogo mostra o status da conexão de cada parceiro. Se o parceiro não estiver conectado, você poderá clicar em **Conectar**.  
   

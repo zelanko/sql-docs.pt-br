@@ -24,13 +24,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 3f3862958324bbd92c14921c03b0fa76f7dc7fc1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Solução de problemas de configuração de espelhamento de banco de dados (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico fornece informações para ajudá-lo a solucionar problemas ao configurar uma sessão de espelhamento de banco de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico fornece informações para ajudá-lo a solucionar problemas ao configurar uma sessão de espelhamento de banco de dados.  
   
 > [!NOTE]  
 >  Verifique se você atende a todos os [pré-requisitos do espelhamento de banco de dados](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md).  

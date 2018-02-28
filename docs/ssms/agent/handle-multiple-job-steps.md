@@ -25,13 +25,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d193665f6d46a1e21ed397e3fe33c22afa95cc8b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="handle-multiple-job-steps"></a>Manipular várias etapas de trabalho
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Se seu trabalho tiver mais de uma etapa, você precisará especificar a ordem em que as etapas de trabalho devem ser executadas. Isso é chamado *controle de fluxo**.* Você pode adicionar novas etapas de trabalho e reorganizar o fluxo a qualquer hora; as alterações entram em vigor na próxima vez em que o trabalho é executado. Essa ilustração mostra o controle de fluxo para um trabalho de backup de banco de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Se um trabalho tiver mais de uma etapa, você terá que especificar a ordem em que as etapas de trabalho devem ser executadas. Isso é chamado *controle de fluxo**.* Você pode adicionar novas etapas de trabalho e reorganizar o fluxo a qualquer hora; as alterações entram em vigor na próxima vez em que o trabalho é executado. Essa ilustração mostra o controle de fluxo para um trabalho de backup de banco de dados.  
   
 ![Controle de fluxo de etapas de trabalho do SQL Server Agent](../../ssms/agent/media/dbflow01.gif "Controle de fluxo de etapas de trabalho do SQL Server Agent")  
   

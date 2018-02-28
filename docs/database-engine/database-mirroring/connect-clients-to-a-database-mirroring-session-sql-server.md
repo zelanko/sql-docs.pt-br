@@ -24,13 +24,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: ef24aef79874e7ade0c0ed0dc78f88faa366299c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a uma sessão de espelhamento de banco de dados (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para se conectar a uma sessão de espelhamento de banco de dados, um cliente pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ou o .NET Framework Data Provider para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando configurados para um banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , esses provedores de acesso de dados dão suporte completo ao espelhamento de banco de dados. Para obter informações sobre as considerações de programação para usar um banco de dados espelho, consulte [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Além disso, a instância de servidor principal atual deve estar disponível e o logon do cliente deve ter sido criado na instância de servidor. Para obter mais informações, consulte [Solução de problemas de usuários órfãos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). As conexões de cliente com uma sessão de espelhamento de banco de dados não envolvem a instância de servidor testemunha, se essa existir.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Para se conectar a uma sessão de espelhamento de banco de dados, um cliente pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ou o .NET Framework Data Provider para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando configurados para um banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , esses provedores de acesso de dados dão suporte completo ao espelhamento de banco de dados. Para obter informações sobre as considerações de programação para usar um banco de dados espelho, consulte [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Além disso, a instância de servidor principal atual deve estar disponível e o logon do cliente deve ter sido criado na instância de servidor. Para obter mais informações, consulte [Solução de problemas de usuários órfãos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). As conexões de cliente com uma sessão de espelhamento de banco de dados não envolvem a instância de servidor testemunha, se essa existir.  
   
   
 ##  <a name="InitialConnection"></a> Estabelecendo a conexão inicial com uma sessão de espelhamento de banco de dados  
@@ -215,7 +216,7 @@ Server=123.34.45.56,4724;
  A reconexão se assemelha a uma conexão inicial para a qual a cadeia de caracteres de conexão forneceu um nome de parceiro de failover. Se a primeira tentativa de conexão falhar, as tentativas de conexão alternarão seguidamente entre o nome do parceiro inicial e o nome do parceiro de failover até que o cliente conecte ao servidor principal ou o provedor de acesso de dados expire o tempo limite.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Native Client verifica se ele se conecta a uma instância de servidor principal, mas não se essa instância é o parceiro da instância de servidor especificado no nome de parceiro inicial da cadeia de conexão.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Native Client verifica que se conecta a uma instância de servidor principal, mas não se esta instância é o parceiro de instância de servidor especificado no nome de parceiro inicial da cadeia de conexão.  
   
  Se as conexões usarem TCP/IP, o algoritmo de nova tentativa de conexão determinará o período de tempo designado para as tentativas de conexão em cada turno.  
   

@@ -21,13 +21,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: acb78ba1abb462f76dd26cd87062732b386f547e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="back-up-database-general-page"></a>Backup do banco de dados (página Geral)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a página **Geral** da caixa de diálogo **Backup de Banco de Dados** para exibir ou modificar as configurações de uma operação de backup de banco de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Use a página **Geral** da caixa de diálogo **Backup de Banco de Dados** para exibir ou modificar as configurações de uma operação de backup de banco de dados.  
   
  Para obter mais informações sobre os conceitos básicos de backup, veja [Visão geral de Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   

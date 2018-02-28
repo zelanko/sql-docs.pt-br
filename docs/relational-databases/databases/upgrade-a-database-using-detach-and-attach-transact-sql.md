@@ -26,13 +26,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7ebdb4123e449cd024a6dd828364090890138f2c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Atualizar um banco de dados utilizando Desanexar e Anexar (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como usar operações de desanexação e anexação para atualizar um banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Depois de ser anexado ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados estará disponível imediatamente e, em seguida, será atualizado.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico descreve como usar operações de desanexação e anexação para atualizar um banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Depois de ser anexado ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados estará disponível imediatamente e, em seguida, será atualizado.  
   
  **Neste tópico**  
   
