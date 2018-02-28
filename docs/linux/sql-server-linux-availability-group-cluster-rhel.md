@@ -148,7 +148,7 @@ Para obter informações sobre propriedades de cluster Pacemaker, consulte [Pace
 
 ## <a name="create-availability-group-resource"></a>Criar o recurso de grupo de disponibilidade
 
-Para criar o recurso de grupo de disponibilidade, use `pcs resource create` de comando e defina as propriedades do recurso. O comando a seguir cria um `ocf:mssql:ag` mestre/escravo de recursos para o grupo de disponibilidade com o nome `ag1`.
+Para criar o recurso de grupo de disponibilidade, use `pcs resource create` de comando e defina as propriedades do recurso. O comando a seguir cria um `ocf:mssql:ag` primário/secundário de recursos para o grupo de disponibilidade com o nome `ag1`.
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
