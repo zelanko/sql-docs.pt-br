@@ -22,18 +22,18 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c58ad04d7b1574d6954e31f8117ff23827ab1375
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>Espelhamento de Banco de Dados – estabelecer a sessão – Autenticação do Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
   
- Depois que o banco de dados espelho estiver preparado (consulte [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)), você poderá estabelecer uma sessão de espelhamento de banco de dados. As instâncias do servidor principal, espelho e testemunha devem ser instâncias de servidor separadas que deveriam estar em sistemas host separados.  
+ Depois que o banco de dados espelho estiver preparado (consulte [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)), você poderá estabelecer uma sessão de espelhamento de banco de dados. As instâncias do servidor principal, espelho e testemunha devem ser instâncias de servidor separadas que deveriam estar em sistemas host separados.  
   
 > [!IMPORTANT]  
 >  Recomendamos que você configure um espelhamento de banco de dados em períodos de pouca atividade porque a configuração de espelhamento pode comprometer o desempenho.  

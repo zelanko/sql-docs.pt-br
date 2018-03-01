@@ -65,23 +65,23 @@ Especifica a camada de serviço do banco de dados. Para [!INCLUDE[ssSDW](../../i
 *MAXSIZE*  
 O padrão é 245.760 GB (240 TB).  
 
-**Aplica-se a:** nível de desempenho Otimizado para elasticidade
+**Aplica-se a:** nível de desempenho otimizado para elasticidade
 
-O tamanho máximo permitido do banco de dados. O banco de dados não pode ultrapassar MAXSIZE. 
+O tamanho máximo permitido para o banco de dados. O banco de dados não pode ultrapassar o MAXSIZE. 
 
-**Aplica-se a:** nível de desempenho Otimizado para computação
+**Aplica-se a:** nível de desempenho otimizado para computação
 
-O tamanho máximo permitido para dados rowstore no banco de dados. Dados armazenados em tabelas rowstore, um deltastore de um índice columstore ou um índice não clusterizado em um índice columnstore clusterizado não podem exceder o MAXSIZE.  Os dados compactados no formato columnstore não têm um limite de tamanho e não estão restritos pelo MAXSIZE.
+O tamanho máximo permitido para dados de rowstore no banco de dados. Os dados armazenados em tabelas rowstore, um deltastore de um índice columstore ou um índice não clusterizado em um índice columnstore clusterizado não podem exceder o MAXSIZE.  Os dados compactados no formato columnstore não têm um limite de tamanho e não estão restritos pelo MAXSIZE.
   
 SERVICE_OBJECTIVE  
-Especifica o nível de desempenho. Para obter mais informações sobre os objetivos de serviço do [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], consulte [Performance Tiers](https://azure.microsoft.com/documentation/articles/performance-tiers/) (Níveis de desempenho).  
+Especifica o nível de desempenho. Para obter mais informações sobre os objetivos do serviço para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], consulte [Níveis de desempenho](https://azure.microsoft.com/documentation/articles/performance-tiers/).  
   
 ## <a name="general-remarks"></a>Comentários gerais  
 Use [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) para ver as propriedades do banco de dados.  
   
 Use [ALTER DATABASE &#40;SQL Data Warehouse do Azure&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md) para alterar o tamanho máximo ou os valores objetivos de serviço posteriormente.   
 
-O SQL Data Warehouse é definido como COMPATIBILITY_LEVEL 130 e não pode ser alterado. Para obter mais detalhes, consulte [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/) (Melhor desempenho de consulta com nível de compatibilidade 130 no Banco de Dados SQL do Azure).
+O SQL Data Warehouse é definido como COMPATIBILITY_LEVEL 130 e não pode ser alterado. Para obter mais detalhes, confira [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/) (Melhor desempenho de consulta com o nível de compatibilidade 130 no Banco de Dados SQL do Azure).
   
 ## <a name="permissions"></a>Permissões  
 Permissões necessárias:  

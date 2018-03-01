@@ -22,13 +22,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 4a93fde67cfb08245607153afbddaffd1aca6669
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Reverter um banco de dados a um instantâneo do banco de dados
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Se os dados em um banco de dados online forem danificados, em alguns casos, reverter o banco de dados para um instantâneo do banco de dados que preceda o dano pode ser uma alternativa apropriada para restaurar o banco de dados de um backup. Por exemplo, reverter um banco de dados pode ser útil para reverter um erro sério recente de usuário, como uma tabela descartada. Porém, todas as mudanças feitas depois que o instantâneo foi criado serão perdidas.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Se os dados em um banco de dados online forem danificados, em alguns casos, reverter o banco de dados para um instantâneo do banco de dados que preceda o dano pode ser uma alternativa apropriada para restaurar o banco de dados de um backup. Por exemplo, reverter um banco de dados pode ser útil para reverter um erro sério recente de usuário, como uma tabela descartada. Porém, todas as mudanças feitas depois que o instantâneo foi criado serão perdidas.  
   
 -   **Antes de começar:**  
   

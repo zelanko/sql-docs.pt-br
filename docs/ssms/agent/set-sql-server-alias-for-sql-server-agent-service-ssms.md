@@ -22,13 +22,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 34ac8dbca47438f2a551a423a72db455d41298d0
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como definir um alias do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] a ser usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent para se conectar ao [!INCLUDE[ssDE](../../includes/ssde_md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Por padrão, o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent se conecta a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] em pipes nomeados usando nomes dinâmicos de servidor que não exigem configuração adicional de cliente. Só será necessário configurar um alias de conexão com o servidor se você não estiver usando o transporte de rede padrão ou se estiver se conectando a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que escute em um pipe nomeado alternativo.  
+# <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Para definir um Alias do SQL Server para o Serviço do SQL Server Agent usando o SQL Server Management Studio
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tópico descreve como definir um alias do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] a ser usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent para se conectar ao [!INCLUDE[ssDE](../../includes/ssde_md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Por padrão, o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent se conecta a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] em pipes nomeados usando nomes dinâmicos de servidor que não exigem configuração adicional de cliente. Só será necessário configurar um alias de conexão com o servidor se você não estiver usando o transporte de rede padrão ou se estiver se conectando a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que escute em um pipe nomeado alternativo.  
   
 **Neste tópico**  
   

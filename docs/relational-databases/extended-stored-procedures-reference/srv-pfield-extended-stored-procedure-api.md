@@ -64,7 +64,7 @@ len
  *field*  
  Especifica dados na conexão que será retornada.  
   
-|Value|Retorna|  
+|Valor|Retorna|  
 |-----------|-------------|  
 |SRV_APPLNAME|O nome dó aplicativo fornecido pelo cliente quando estabeleceu a conexão.|  
 |SRV_BCPFLAG|Um sinalizador que será TRUE se o cliente estiver se preparando para uma operação de cópia em massa; caso contrário, será FALSE.|  

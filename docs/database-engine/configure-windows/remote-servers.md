@@ -25,13 +25,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c3d9efd513db58e6c0e28060be339ee71ed1e2bd
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="remote-servers"></a>Servidores remotos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Os servidores remotos só têm suporte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para compatibilidade com versões anteriores. Os novos aplicativos devem usar servidores vinculados. Para obter mais informações, veja [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Os servidores remotos só têm suporte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para compatibilidade com versões anteriores. Os novos aplicativos devem usar servidores vinculados. Para obter mais informações, veja [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
  Uma configuração de servidor remoto permite que um cliente conectado a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] execute um procedimento armazenado em outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem estabelecer uma conexão separada. Em vez disso, o servidor ao qual o cliente está conectado aceita a solicitação do cliente e envia a solicitação para o servidor remoto em nome do cliente. O servidor remoto processa a solicitação e retorna todos os resultados ao servidor original. Esse servidor, por sua vez, passa esses resultados para o cliente. Quando você define uma configuração de servidor remoto, deve considerar também como estabelecer a segurança.  
   
