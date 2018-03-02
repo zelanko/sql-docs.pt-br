@@ -1,6 +1,6 @@
 ---
 title: Instalar pacotes R adicionais no SQL Server | Microsoft Docs
-ms.date: 01/04/2018
+ms.date: 02/20/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -15,234 +15,188 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 530745918dfd4808694b401be55e40bac00f3cce
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: a328b07027f61f50df7e3ca2b6ac12b92508688b
+ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>Instalar pacotes R adicionais no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo descreve como instalar novos pacotes de R em uma instância do SQL Server onde o aprendizado de máquina está habilitado.
 
-**Aplica-se a:** 
-+ [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
-+ [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+Há vários métodos para instalar novos pacotes de R, dependendo de qual versão do SQL Server que você tem e se o servidor tem acesso à internet.
 
-## <a name="prerequisites"></a>Prerequisites
++ [Instalar novos pacotes usando ferramentas de R, com acesso à internet](#bkmk_rInstall)
 
-+ Determinar se há uma versão do Windows do pacote: [obter a versão correta do pacote e o formato](#packageVersion)
+    Use comandos de R convencionais para instalar os pacotes da Internet. Este é o método mais simples, mas requer acesso administrativo.
 
-+ Se o servidor não tiver acesso à internet, você deve baixar os binários do Windows com antecedência: [arquivos zip de Download](#bkmk_zipPreparation)
+    **Aplica-se a:**[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)].     Também é necessário para instâncias de [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] onde o gerenciamento de pacotes por meio de DDLs não foi habilitado.
 
-+ Identificar as dependências do pacote. 
++ [Instalar novos pacotes de R em um servidor com **sem** acesso à internet](#bkmk_offlineInstall)
 
-    - Se o servidor tem acesso à internet, você não precisa se preocupar com dependências. todos os pacotes necessários podem ser instalados automaticamente.
+    Se o servidor não tiver acesso à internet, algumas etapas adicionais são necessárias para preparar os pacotes. Esta seção descreve como preparar os arquivos necessários para a instalação do pacote e suas dependências.
 
-    - Se o servidor não **não** tem acesso à internet, você deve identificar todas as dependências e baixar os pacotes necessários com antecedência, em formato compactado. Uma maneira fácil de fazer isso é usar [miniCRAN](create-a-local-package-repository-using-minicran.md) para preparar uma coleção de pacotes com todas as dependências. Esse repositório, em seguida, pode ser copiado para o computador do servidor.
++ [Instalar pacotes usando a instrução Criar biblioteca externa](#bkmk_createlibrary) 
 
-+ Verificar a compatibilidade de pacote. O pacote deve ser compatível com a versão do R que está em execução no SQL Server.
+    A instrução Criar biblioteca externa é fornecida no SQL Server 2017, para possibilitar que um DBA criar uma biblioteca de pacote sem executar código R ou Python diretamente. No entanto, esse método requer que você preparar todos os pacotes necessários com antecedência.  
 
-    Além disso, verifique se o pacote (ou todos os pacotes que ele requer) contém recursos que seriam bloqueados pelo SQL Server ou pela política. Por exemplo, determinados pacotes são uma opção de baixo para um ambiente protegido do SQL Server. Esses pacotes podem incluir pacotes que acessam a rede, que usam o Java ou outras estruturas não geralmente usadas em um ambiente do SQL Server, ou pacotes que exigem acesso de sistema de arquivos com privilégios elevados.
+    **Aplica-se a:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]; outras restrições são aplicáveis  
 
-+ Permissões
+## <a name="bkmk_rInstall"></a> Instalar novos pacotes de R usando a Internet
 
-    É necessário o acesso administrativo ao computador que executa o SQL Server.
+Você pode usar ferramentas padrão de R para instalar novos pacotes em uma instância do SQL Server 2016 ou 2017 do SQL Server. Esse processo exige que você é um administrador no computador.
 
-    Além disso, para executar no SQL Server, os pacotes devem ser instalados na biblioteca padrão que está associada com a instância atual. Para obter instruções sobre como localizar a biblioteca padrão, consulte [pacotes R instalados com o SQL Server](installing-and-managing-r-packages.md).
-    
-    Se você for um usuário experiente do R, talvez seja acostumado a instalação de pacotes da linha de comando sem permissões especiais ou sem baixá-los antecipadamente. No entanto, esse método não funciona no SQL Server. Em muitos casos do SQL Server computadores não têm uma conexão de internet. Além disso, acesso aos arquivos do servidor ou armazenamento externo pode ser restringido. Pacotes instalados em uma biblioteca de usuário não podem ser acessados por runnign de trabalhos de R no SQL Server. 
+> [!IMPORTANT] 
+> Certifique-se de instalar os pacotes para a biblioteca padrão que está associada com a instância atual. Nunca instale pacotes em um diretório de usuário.
 
-    Se você não tem acesso administrativo ao computador do SQL Server, localize um administrador de banco de dados para ajudar com a instalação do pacote.
+Este procedimento descreve como você pode instalar pacotes usando RGui; No entanto, você pode usar o RTerm ou qualquer outra R ferramenta de linha que dá suporte ao acesso com privilégios elevados.
 
-+ Para cada instância em que você precisa usar o pacote, execute a instalação separadamente.
+### <a name="install-a-package-using-rgui-or-rterm"></a>Instalar um pacote usando RGui ou RTerm
 
-     Pacotes não podem ser compartilhados entre instâncias. Você pode usar a mesma fonte de arquivo compactado para instalar o pacote ao separar instâncias, mas uma cópia separada do pacote é adicionada à biblioteca de cada instância.
+1. Navegue até a pasta no servidor em que as bibliotecas de R para a instância estão instaladas.
 
-## <a name="install-packages"></a>Instalar pacotes
-
-Esta seção fornece as etapas de instalação do pacote para os seguintes cenários:
-
-+ [Instalar novos pacotes em um servidor com acesso à Internet](#bkmk_rInstall)
-+ [Executar uma instalação offline de pacotes em um servidor com **sem** acesso à internet](#bkmk_offlineInstall)
-+ [Instalar os pacotes em um contexto de computação do SQL Server usando o RevoScaleR](#bkmk_rAddPackage)
-+ [Instalar pacotes usando a instrução Criar biblioteca externa](#bkmk_createlibrary) (2017 somente do SQL Server; outras restrições que se aplicam)
-
-### <a name="bkmk_rInstall"></a>Instalação online usando ferramentas de R
-
-Você pode usar ferramentas padrão de R para instalar novos pacotes em uma instância do SQL Server 2016 ou 2017 do SQL Server. No entanto, você deve ser um administrador para fazer isso.
-
-1.  Navegue até a pasta no servidor em que as bibliotecas de R para a instância estão instaladas.
-
-    > [!IMPORTANT] 
-    > Certifique-se de instalar os pacotes para a biblioteca padrão que está associada com a instância atual. Nunca instale pacotes em um diretório de usuário.
-
-    Se você não tiver as permissões necessárias, contate o administrador de banco de dados e fornecer uma lista dos pacotes que você precisa.
-
-2.  Abra um prompt de comando de R como administrador.
-
-    Por exemplo, se você estiver usando o prompt de comando do Windows, navegue até o diretório onde estão localizados RTerm.Exe ou RGui.exe. 
-
-    **Instância padrão**
+  **Instância padrão**
 
     SQL Server 2017: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
     
     SQL Server 2016: `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
 
-    **Instância nomeada**
+  **Instância nomeada**
 
     SQL Server 2017: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
     
     SQL Server 2016: `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
 
-    Se você tiver usado a associação para atualizar a componentes de aprendizado de máquina, o caminho pode ter alterado. Sempre verifique o caminho da instância antes de instalar novos pacotes. 
+  Se você tiver usado a associação para atualizar a componentes de aprendizado de máquina, o caminho pode ter alterado. Sempre verifique o caminho da instância antes de instalar novos pacotes. 
 
-3.  Execute o comando de R `install.packages` para instalar o pacote. Por exemplo, a instrução a seguir instala o pacote de e1071 populares. 
+2. RGui.exe e selecione **executar como administrador**.
 
-    ```R
-    install.packages("e1071", lib = lib.SQL)
-    ```
+    Se você não tiver as permissões necessárias, contate o administrador de banco de dados e fornecer uma lista dos pacotes que você precisa.
 
-    Aspas duplas são necessárias para o nome do pacote.
+3. Na linha de comando, se você souber o nome do pacote, você pode digitar: `install.packages("the_package-name")` aspas duplas são necessárias para o nome do pacote.
 
 4. Quando for solicitado para um site de espelhamento, selecione qualquer local que é conveniente para seu local.
 
 5. Se o pacote de destino depender de outros pacotes, o instalador de R automaticamente baixa as dependências e as instala para você.
 
-> [!IMPORTANT]
-> Para cada instância em que você precisa usar o pacote, execute a instalação separadamente. Pacotes não podem ser compartilhados entre instâncias.
+6. Para cada instância em que você precisa usar o pacote, execute a instalação separadamente. Pacotes não podem ser compartilhados entre instâncias.
 
-### <a name = "bkmk_offlineInstall"></a>Instalação offline usando ferramentas de R 
+## <a name = "bkmk_offlineInstall"></a> Instalação offline usando ferramentas de R
 
-Se o pacote que você pretende instalar tem dependências, preparar **todos os** necessário pacotes antecipadamente.  Consulte o [dicas de instalação](#bkmk_tips) seção para obter ajuda sobre como preparar os pacotes.
+Para instalar pacotes de R em um servidor que não tem acesso à internet, você deve:
 
-> [!IMPORTANT]
->  Sempre que você instala pacotes em um servidor que tem sem acesso à internet, é essencial que você analisar dependências completas com antecedência e certifique-se de que você baixou todos os pacotes necessários **antes de** iniciando a instalação. É recomendável [miniCRAN](https://mran.microsoft.com/package/miniCRAN) para esse processo. Este pacote de R usa uma lista de pacotes que você deseja instalar, analisa as dependências e obtém todos os arquivos compactados para você. miniCRAN, em seguida, cria um único repositório que você pode copiar para o computador do servidor.
++ Analise as dependências com antecedência.
++ Baixe o pacote de destino para um computador com acesso à Internet.
++ Baixe os pacotes necessários no mesmo computador e colocar todos os pacotes em um arquivo único pacote.
++ Compacte o arquivo se ele não ainda estiver em formato compactado.
++ Copie o arquivo de pacote para um local no servidor.
++ Instale o pacote de destino, especificando o arquivo como origem.
+
+> [!IMPORTANT] 
+> > Certifique-se de que você analisar todas as dependências e baixar **todos os** pacotes necessários **antes de** iniciando a instalação. É recomendável [miniCRAN](https://mran.microsoft.com/package/miniCRAN) para esse processo. Este pacote de R usa uma lista de pacotes que você deseja instalar, analisa as dependências e obtém todos os arquivos compactados para você. miniCRAN, em seguida, cria um único repositório que você pode copiar para o computador do servidor.
 > 
 > Para obter detalhes, consulte [criar um repositório de pacote local usando miniCRAN](create-a-local-package-repository-using-minicran.md)
 
-1. Copie o pacote ou o repositório em formato compactado para um compartilhamento local ou em outro local que o servidor possa acessar.
+Este procedimento pressupõe que você preparou todos os pacotes que você precisa, em formato compactado e está pronto para copiá-los para o servidor.
 
-2.  Localize a pasta no servidor em que as bibliotecas de R para a instância são instaladas.
+1. Copie o pacote compactado arquivo ou de vários pacotes, o repositório completo que contém todos os pacotes no compactado formato para um local que o servidor possa acessar.
 
-    Por exemplo, se você estiver usando o prompt de comando do Windows, navegue até o diretório onde estão localizados RTerm.Exe ou RGui.exe.
+2. Abra a pasta no servidor em que as bibliotecas de R para a instância são instaladas. Por exemplo, se você estiver usando o prompt de comando do Windows, navegue até o diretório onde estão localizados RTerm.Exe ou RGui.exe.
 
-    **Instância padrão**
+  **Instância padrão**
 
     SQL Server 2017: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
     
     SQL Server 2016: `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
 
-    **Instância nomeada**
+  **Instância nomeada**
 
     SQL Server 2017: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
     
     SQL Server 2016: `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
 
-3. Abra um prompt de comando de R como administrador.
+3. Clique com botão direito no RGui ou o prompt de comando e selecione **executar como administrador**.
 
-4.  Execute o comando de R `install.packages` e especifique o pacote ou o nome do repositório e o local dos arquivos compactados.
+4. Execute o comando de R `install.packages` e especifique o pacote ou o nome do repositório e o local dos arquivos compactados.
 
     ```R
     install.packages("C:\\Temp\\Downloaded packages\\mynewpackage.zip", repos=NULL)
     ```
 
-    Esse comando extrai o pacote R `mynewpackage` de seu arquivo compactado local, supondo que você salvou a cópia no diretório `C:\Temp\Downloaded packages`e instala o pacote no computador local. Se o pacote tiver quaisquer dependências, o instalador verifica se os pacotes existentes na biblioteca. Se você tiver criado um repositório que inclui as dependências, o instalador instala os pacotes de requireed também.
+    Esse comando extrai o pacote R `mynewpackage` de seu arquivo compactado local, supondo que você salvou a cópia no diretório `C:\Temp\Downloaded packages`e instala o pacote no computador local. Se o pacote tiver quaisquer dependências, o instalador verifica se os pacotes existentes na biblioteca. Se você tiver criado um repositório que inclui as dependências, o instalador instalará os pacotes necessários também.
 
     Se os pacotes necessários não estão presentes na biblioteca de instância e não podem ser encontrados em arquivos compactados, a instalação do pacote de destino falha.
 
-### <a name="bkmk_rAddPackage"></a>Instalar pacotes de R em um servidor de um cliente remoto do R
+## <a name="bkmk_createlibrary"></a> Use uma instrução DDL para instalar um pacote 
 
-Em versões recentes do [R Server ou servidor de aprendizado de máquina](https://docs.microsoft.com/machine-learning-server/rebranding-microsoft-r-server), RevoScaleR inclui funções que oferece suporte à instalação de novos pacotes de R em um contexto de computação do SQL Server. 
+No SQL Server de 2017, você pode usar o [criar biblioteca externa](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) instrução para adicionar um pacote ou conjunto de pacotes para uma instância ou um banco de dados específico. Esta instrução DDL e as funções de banco de dados de suporte são destinadas para facilitar a instalação e o gerenciamento de pacotes por um BA sem a necessidade de usar ferramentas de R ou Python.
 
-1. Antes de começar, certifique-se de que essas condições forem atendidas:
+Esse processo requer alguma preparação, em comparação com a instalação de pacotes usando os métodos de R ou Python convencionais.
 
-    + O cliente tem RevoScale 9.0.1 ou posterior.
-    + Uma versão equivalente da RevoScaleR foi instalada na instância do SQL Server.
-    + O [recurso de pacote de gerenciamento](..\r\r-package-how-to-enable-or-disable.md) foi habilitado na instância.
-    + Você é um membro de uma função de banco de dados que permite que você instale os pacotes em um compartilhado ou no contexto de prvate, na instância especificada e ddatabase.
++ Todos os pacotes devem ser disponível como um local compactado do arquivo, em vez de download da internet.
 
-2. Em uma linha de comando de R, definir uma cadeia de caracteres de conexão para a instância e banco de dados e usar a cadeia de conexão com o [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) construtor para criar um contexto de computação do SQL Server.
+    Se você não tiver acesso ao sistema de arquivos no servidor, você também pode passar um pacote completo como uma variável, usando um formato binário. Para obter mais informações, consulte [criar biblioteca externa](../../t-sql/statements/create-external-library-transact-sql.md).
 
-    ```R
-    sqlcc <- RxInSqlServer(connectionString = myConnString, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
-    ```
-3. Crie uma lista dos pacotes que você deseja instalar e salvá-la em uma variável de cadeia de caracteres.
++ A instrução falhará se pacotes requeridos não estão disponíveis. Você deve analisar as dependências do pacote que você deseja instalar e certifique-se de que os pacotes são carregados para o servidor e o banco de dados. É recomendável usar **miniCRAN** ou **igraph** para análise de dependências de pacotes.
 
-    ```R
-    packageList <- c("e1071", "mice")
-    ```
+### <a name="prepare-the-packages-in-archive-format"></a>Prepare os pacotes no formato de arquivo
 
-4. Chamar [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) e passar o contexto de computação e a variável de cadeia de caracteres que contém os nomes de pacote.
+1. Se você estiver instalando um único pacote, baixe o pacote em formato compactado. 
 
-    ```R
-    rxInstallPackages(pkgs = packageList, verbose = TRUE, computeContext = sqlcc)
-    ```
+2. Se o pacote exige que todos os outros pacotes, você deve verificar se os pacotes necessários estão disponíveis. Você pode usar miniCRAN para analisar o pacote de destino e identificar todas as suas dependências. 
 
-    Se os pacotes dependentes forem necessários, eles também são instalados, supondo que uma conexão de internet está disponível.
-    
-    Neste exemplo, porque o proprietário e o escopo não foi especificado, os pacotes são instalados usando as credenciais do usuário que faz a conexão, no escopo padrão para esse usuário.
+3. Copie os arquivos compactados ou miniCRAN repositório que contém todos os pacotes em uma pasta local no servidor.
 
-### <a name="bkmk_createlibrary"></a>Usar um repositório de miniCRAN e criar biblioteca externa para instalar pacotes 
+4. Abra um **consulta** janela, usando uma conta com privilégios administrativos.
 
-SQL Server 2017 fornece novos recursos para instalar e gerenciar os pacotes de R usando o T-SQL. No entanto, esse processo exige que um pacote de estar disponível como um local compactado arquivo, em vez de fazer o download da internet. A instrução falhará se todos os pacotes não são preparados com antecedência.
+5. Execute a instrução T-SQL `CREATE EXTERNAL LIBRARY` para carregar a coleção de pacote compactado para o banco de dados.
 
-Criar biblioteca externa é suportada sob estas condições:
-
-+ Você está instalando um único pacote sem dependências
-+ Você estiver instalando vários pacotes ou pacotes com dependências e preparar todos os pacotes com antecedência. 
-
-**Etapas**
-
-1.  Preparar o pacote em formato compactado ou criar um repositório de miniCRAN que contém o pacote e suas dependências.  
-
-2. Copie o arquivo compactado ou um repositório para uma pasta local no servidor.
-
-     > [!IMPORTANT]
-     > O arquivo que você especificar como a origem deve conter o pacote de destino, bem como os pacotes necessários relacionados.
-
-3. Como administrador, execute a instrução T-SQL `CREATE EXTERNAL LIBRARY` para carregar a coleção de pacote compactado para o banco de dados.
-
-    Por exemplo, a instrução a seguir faz referência a um repositório miniCRAN que contém o pacote de randomForest e suas dependências. 
+    Por exemplo, a instrução a seguir nomes como a origem do pacote um repositório de miniCRAN que contém o **randomForest** pacote, juntamente com suas dependências. 
 
     ```R
     CREATE EXTERNAL LIBRARY randomForest
-    FROM (CONTENT = 'C:\Downloads\Rpackages\randomForest_4.6-12.zip')
+    FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
     WITH (LANGUAGE = 'R');
     ```
 
-    Você não pode usar um nome arbitrário na instrução CREATE; o nome da biblioteca externa deve ter o mesmo nome que você pretende usar ao carregar ou chamar o pacote.
+    Você não pode usar um nome arbitrário; o nome da biblioteca externa deve ter o mesmo nome que você pretende usar ao carregar ou chamar o pacote.
 
-4. Instale o pacote ou pacotes para uso com o SQL Server, executando código em um procedimento armazenado.
+6. Se a biblioteca é criada com êxito, você pode executar o pacote no SQL Server, chamando-o dentro de um procedimento armazenado.
     
     ```SQL
     EXEC sp_execute_external_script
     @language =N'R',
     @script=N'
-    # install randomForest and its dependencies
     library(randomForest)'
     ```
 
-    Se for bem-sucedido, o **mensagens** janela deve relatar uma mensagem, como "o pacote 'randomForest' descompactado com êxito e somas de MD5 verificada" e "Concluído encadeados execução".
+### <a name="known-issues-with-create-external-library"></a>Problemas conhecidos com criar biblioteca externa
 
-    Se a instalação falhar, falham de todos os pacotes de instalação e as tentativas subsequentes ao instalar o pacote de instalação também podem falhar, com esta mensagem: 
+Criar biblioteca externa é suportada sob estas condições:
 
-    "Erro no rxSqlPkgInstallPackages... Falha ao instalar pacotes - examine o log para obter detalhes"
++ Você está instalando um único pacote sem dependências.
++ Você está instalando pacotes com dependências e preparar todos os pacotes com antecedência. 
 
-## <a name="package-installation-tips-and-frequently-asked-questions-faq"></a>Dicas de instalação do pacote e perguntas frequentes (FAQ)
+A instrução DDL falhará se dependências do pacote estão ausentes. Por exemplo, o processo de instalação é conhecido falha nesses casos:
+
++ Você instalou um pacote que possui dependências de segundo nível e a análise não estender pacotes de segundo nível. Por exemplo, você deseja instalar **gglot2**e identificar todos os pacotes listados no manifesto; no entanto, esses pacotes tinham outras dependências que não foram instaladas.
++ Você instalou um conjunto de pacotes que exigem diferentes versões de um pacote de suporte e seu servidor tiver a versão errada.
+
+## <a name="package-installation-tips"></a>Dicas de instalação do pacote
 
 Esta seção fornece dicas variadas e perguntas comuns relacionadas à instalação do pacote de R no SQL Server.
 
-###  <a name="packageVersion"></a>Obter a versão correta do pacote e o formato
+###  <a name="packageVersion"></a> Obter a versão correta do pacote e o formato
 
-Há várias fontes de pacotes R, os mais conhecidos entre eles são CRAN e Bioconductor. O site oficial da linguagem R (<https://www.r-project.org/>) lista vários desses recursos. Muitos pacotes são publicados no GitHub, onde é possível obter o código-fonte. No entanto, você talvez tenha recebido pacotes R desenvolvidos por alguém de sua empresa.
+Há várias origens de pacotes de R, como o CRAN e Bioconductor. O site oficial da linguagem R (<https://www.r-project.org/>) lista vários desses recursos. Muitos pacotes são publicados no GitHub, onde é possível obter o código-fonte. Por fim, talvez tenha recebido pacotes R desenvolvidos por alguém de sua empresa, ou você tiver um pacote personalizado que você tenha escrito.
 
-Independentemente da origem, você deve garantir que o pacote que você deseja instalar tem um formato binário para a plataforma Windows. Caso contrário, o pacote baixado não é possível executar no ambiente do SQL Server.
+Independentemente da origem, antes de tentar instalar o pacote, verifique se você obteve o formato binário para a plataforma Windows. 
 
-### <a name="bkmk_zipPreparation"></a>Baixe o pacote como um arquivo compactado
+### <a name="bkmk_zipPreparation"></a> Baixe o pacote como um arquivo compactado
 
-Para instalação em um servidor sem acesso à internet, você deve baixar uma cópia do pacote no formato de um arquivo compactado para instalação offline. Não descompacte o pacote.
+Para instalação em um servidor sem acesso à internet, você deve baixar uma cópia do pacote no formato de um arquivo compactado para instalação offline. **Não descompacte o pacote.**
 
 Por exemplo, o procedimento a seguir descreve agora para obter a versão correta do [FISHalyseR](http://bioconductor.org/packages/release/bioc/html/FISHalyseR.html) pacote da Bioconductor, supondo que o computador tem acesso à internet.
 
@@ -252,51 +206,23 @@ Por exemplo, o procedimento a seguir descreve agora para obter a versão correta
 
 3.  Navegue até a pasta local onde os pacotes compactados são armazenados e clique em **salvar**.
 
-    Esse processo cria uma cópia local do pacote. Se você receber um erro de download, tente um site diferente do espelho.
+    Esse processo cria uma cópia local do pacote. 
 
-4. Depois que o arquivo de pacote foi baixado, você pode instalar o pacote ou copiar o pacote compactado em um servidor que não tenha acesso à internet.
+4. Se você receber um erro de download, tente um site diferente do espelho.
+
+5. Depois que o arquivo de pacote foi baixado, você pode instalar o pacote ou copiar o pacote compactado em um servidor que não tenha acesso à internet.
 
 > [!TIP]
 > Se por engano, você instalar o pacote em vez de baixar os binários, uma cópia do arquivo compactado baixado também serão salvos em seu computador. Observe as mensagens de status que o pacote for instalado, para determinar o local do arquivo. Você pode copiar o arquivo compactado para o servidor que não tem acesso à internet.
-> Se você baixar o pacote usando esse método, as dependências do pacote não são incluídas. 
+> 
+> No entanto, quando você obter pacotes usando esse método, as dependências não são incluídas. 
 
-Para obter mais informações sobre o conteúdo do formato de arquivo zip e como criar um pacote R, é recomendável neste tutorial, o que pode ser baixado no formato PDF no site do projeto R: [criação de pacotes de R](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf).
-
-### <a name="bkmk_packageDependencies"></a>Obter as dependências do pacote
+### <a name="bkmk_packageDependencies"></a> Obter pacotes necessários
 
 Pacotes de R com frequência dependem de vários pacotes, alguns dos quais podem não estar disponíveis na biblioteca R padrão usada pela instância. Às vezes, um pacote exige uma versão diferente de um pacote dependente que já está instalado.
 
-Se você precisar instalar vários pacotes, ou para garantir que todas as pessoas em sua organização obtém o tipo correto de pacote e versão, é recomendável que você use o [miniCRAN](https://mran.microsoft.com/package/miniCRAN) pacote para criar um repositório local que pode ser compartilhado entre vários usuários ou computador. Para obter mais informações, consulte [criar um repositório de pacote local usando miniCRAN](create-a-local-package-repository-using-minicran.md).
+Se você precisar instalar vários pacotes, ou para garantir que todas as pessoas em sua organização obtém o tipo correto de pacote e versão, é recomendável que você use o [miniCRAN](https://mran.microsoft.com/package/miniCRAN) pacote para analisar a cadeia de dependência completa. minicRAN cria um repositório local que pode ser compartilhado entre vários usuários ou computadores. Para obter mais informações, consulte [criar um repositório de pacote local usando miniCRAN](create-a-local-package-repository-using-minicran.md).
 
-### <a name="permissions"></a>Permissões
-
-Esta seção descreve os diferentes níveis de permissões necessárias para instalar pacotes no SQL Server 2016 e 2017 do SQL Server. A instalação pode ser feita usando as ferramentas de R ou SQL Server, mas o processo e as permissões de um pouco diferem.
-
--   SQL Server 2016
-
-    Nesta versão, somente um administrador no computador pode instalar pacotes para o local desejado. Use ferramentas padrão de R para instalar pacotes, mas você deve executar como administrador e use as ferramentas de R associadas com a instância.
-
--   SQL Server 2017
-
-    Se você tem acesso administrativo, você pode instalar pacotes em toda a instância usando ferramentas de R.
-
-    Se você for um proprietário de banco de dados, você pode instalar pacotes de R de um cliente remoto, se você definir uma conexão e conectar-se à instância usando RxInSqlServer.
-    
-    Esta versão inclui novos recursos para dar suporte à administração de pacotes de R ou Python por administradores de banco de dados em versões futuras. Para usar esse recurso, um DBA deve primeiro habilitar os recursos de gerenciamento de pacotes em uma base por instância. Depois que esse recurso está habilitado, os usuários individuais podem instalar pacotes de um banco de dados específico, dependendo da função de banco de dados. Para obter mais informações, consulte [habilitar ou desabilitar o gerenciamento de pacotes de R para o SQL Server](../r/r-package-how-to-enable-or-disable.md).
-
-> [!IMPORTANT]
-> 
-> Usuários experientes do R estão acostumados a instalação de pacotes em uma biblioteca de usuário e, em seguida, referenciar o pacote na pasta como parte da solução R, especificando um caminho de arquivo. No entanto, essa prática não tem suporte no SQL Server. Para obter mais informações e soluções alternativas, consulte [como usar pacotes nas bibliotecas de usuário](packages-installed-in-user-libraries.md).
-
-### <a name="establish-a-single-mirror-site-as-standard"></a>Estabelecer um site único espelho como padrão
-
-Para evitar ter que selecionar um local de espelhamento sempre que adicionar um novo pacote, configure seu ambiente de desenvolvimento R para usar sempre o mesmo repositório. Para fazer isso, edite o arquivo de configurações global do R, **. Rprofile**e adicione a seguinte linha:
-
-`options(repos=structure(c(CRAN="<mirror site URL>")))`
-
-Espelhos CRAN atuais são listados na [este site](https://cran.r-project.org/mirrors.html).
-
-Para obter informações detalhadas sobre as preferências e outros arquivos carregados quando o tempo de execução de R é iniciado, execute este comando em um console R:`?Startup`
 
 ### <a name="know-which-library-you-are-using-for-installation"></a>Saber qual biblioteca que você está usando para instalação
 
@@ -308,11 +234,7 @@ Esse caminho deve apontar para a pasta R_SERVICES para a instância. Para obter 
 
 Se você tiver instalado o Microsoft Machine Learning Server (autônomo) além de serviços de aprendizado de máquina do SQL Server, o computador deve ter instalações separadas do R para cada um, com as duplicatas de todas as bibliotecas e ferramentas de R.
 
-> [!IMPORTANT]
-> 
-> Pacotes que estão instalados para a biblioteca R_SERVER são usados apenas pelo Microsoft R Server e não podem ser acessados pelo SQL Server.
-> 
-> Certifique-se de usar o `R_SERVICES` biblioteca ao instalar os pacotes que você deseja usar no SQL Server.
+Pacotes que estão instalados para a biblioteca R_SERVER são usados apenas pelo Microsoft R Server e não podem ser acessados pelo SQL Server. Certifique-se de usar o `R_SERVICES` biblioteca ao instalar os pacotes que você deseja usar no SQL Server.
 
 ### <a name="how-to-determine-which-packages-are-already-installed"></a>Como determinar quais pacotes já estão instalados?
 

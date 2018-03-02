@@ -1,27 +1,28 @@
 ---
 title: Modo FIPS | Microsoft Docs
 ms.custom: 
-ms.date: 06/28/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: v-nisidh
 ms.author: v-nisidh
 manager: andrela
 ms.workload: Inactive
-ms.openlocfilehash: 29ddc84524d87b4277b1dc4efc4431c4f9c5f5d5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: e6e60a44f4dbe890683436ea6f6801f504396239
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="fips-mode"></a>Modo FIPS
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -35,13 +36,13 @@ O Microsoft JDBC Driver para SQL Server dá suporte a *o modo compatível com FI
 * Parâmetros de configuração apropriado. 
 
 
-## <a name="fips-configured-jvm"></a>FIPS JVM configurada:
+## <a name="fips-configured-jvm"></a>FIPS configurado da JVM
 
 Para ver os módulos aprovados para a configuração de FIPS, consulte o [validado FIPS 140-1 e os módulos de criptografia FIPS 140-2](http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm). 
 
 Os fornecedores podem ter algumas etapas adicionais para configurar o JVM com FIPS.
 
-### <a name="ensure-your-jvm-is-in-fips-mode"></a>Certifique-se de que sua JVM está no modo FIPS:
+### <a name="ensure-your-jvm-is-in-fips-mode"></a>Certifique-se de que sua JVM está no modo FIPS
 Para garantir que sua JVM é FIPS habilitada, execute o trecho a seguir: 
 
 ````
@@ -51,10 +52,10 @@ public boolean isFIPS() throws Exception {
 }
 ````
 
-## <a name="appropriate-ssl-certificate"></a>Certificado SSL apropriado:
+## <a name="appropriate-ssl-certificate"></a>Certificado SSL apropriado
 Para conectar o SQL Server no modo FIPS, é necessário um certificado SSL válido. Instale ou importe-o repositório de chaves Java no computador cliente (JVM) onde FIPS está habilitado. Se você não importar / instalar o certificado apropriado, pode não ser capaz de se conectar ao SQL Server que não é possível estabelecer uma conexão segura.
 
-### <a name="importing-ssl-certificate-in-java-keystore"></a>Importando o certificado SSL no armazenamento de chaves Java:
+### <a name="importing-ssl-certificate-in-java-keystore"></a>Importar o certificado SSL no armazenamento de chaves Java
 Para FIPS, provavelmente você precisa importar o certificado (. cert na) para qualquer PKCS ou em um formato específico do provedor. Use o trecho a seguir para importar o certificado SSL e armazená-lo em um diretório de trabalho com o formato de armazenamento de chaves apropriado. _TRUST_STORE_PASSWORD_ é a senha para o armazenamento de chaves Java. 
 
 ````
@@ -77,27 +78,27 @@ Para FIPS, provavelmente você precisa importar o certificado (. cert na) para q
 ````
 
 
-No exemplo a seguir, estamos importando um certificado de SSL do Azure no formato PKCS12 com BouncyCastle provedor. O certificado foi importado no diretório de trabalho chamado _MyTrustStore_PKCS12_ usando o trecho a seguir:
+O exemplo a seguir é importar um certificado de SSL do Azure no formato PKCS12 com BouncyCastle provedor. O certificado foi importado no diretório de trabalho chamado _MyTrustStore_PKCS12_ usando o trecho a seguir:
 
 ` saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer"); `
 
-## <a name="appropriate-policy-files"></a>Arquivos de política apropriada: 
+## <a name="appropriate-policy-files"></a>Arquivos de política apropriada
 Para alguns provedores de FIPS, irrestritos jars de política são necessários. Nesses casos, Sun / Oracle, baixar o Java Cryptography Extension (JCE) ilimitado força Policy Files para [JRE 8](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) ou [JRE 7](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html). 
 
-## <a name="appropriate-configuration-parameters"></a>Parâmetros de configuração apropriado: 
+## <a name="appropriate-configuration-parameters"></a>Parâmetros de configuração apropriado
 Para executar o Driver JDBC em modo compatível com FIPS, configure propriedades de conexão, conforme mostrado na tabela a seguir. 
 
 **Propriedades**: 
 
-|Propriedade|Tipo|Default|Description|Observações|
+|Propriedade|Tipo|Padrão|Description|Observações|
 |---|---|---|---|---|
 |encrypt|booliano ["true / false"]|"false"|Para FIPS habilitada JVM criptografar propriedade deve ser **true**||
-|TrustServerCertificate|booliano ["true / false"]|"false"|Para FIPS precisamos para validar a cadeia de certificados, então devemos usar **"false"** valor para essa propriedade. ||
+|TrustServerCertificate|booliano ["true / false"]|"false"|Para FIPS, o usuário precisa validar a cadeia de certificados, então o usuário deve usar **"false"** valor para essa propriedade. ||
 |trustStore|Cadeia de caracteres|nulo|O caminho de arquivo de armazenamento de chaves Java em que você importou o certificado. Se você instalar o certificado em seu sistema, em seguida, há necessidade de passar qualquer coisa. Driver usa cacerts ou jssecacerts arquivos.||
 |trustStorePassword|String|nulo|A senha usada para verificar a integridade dos dados de trustStore.||
-|FIPS|booliano ["true / false"]|"false"|Para fips habilitada JVM essa propriedade deve ser **true**|Adicionado no 6.1.4||
-|fipsProvider|Cadeia de caracteres|nulo|Provedor FIPS configurado na JVM. Por exemplo, BCFIPS ou SunPKCS11 NSS |6.1.2 adicionado no|
-|trustStoreType|Cadeia de caracteres|JKS|Para o tipo de repositório de confiança do conjunto de modo FIPS PKCS12 ou tipo definido pelo provedor FIPS |6.1.2 adicionado no||
+|FIPS|booliano ["true / false"]|"false"|Para fips habilitada JVM essa propriedade deve ser **true**|Adicionado no 6.1.4 (estável versão 6.2.2)||
+|fipsProvider|Cadeia de caracteres|nulo|Provedor FIPS configurado na JVM. Por exemplo, BCFIPS ou SunPKCS11 NSS |Adicionado no 6.1.2 (estável versão 6.2.2), substituído no 6.4.0 - consulte os detalhes [aqui](https://github.com/Microsoft/mssql-jdbc/pull/460).|
+|trustStoreType|Cadeia de caracteres|JKS|Para o tipo de repositório de confiança do conjunto de modo FIPS PKCS12 ou tipo definido pelo provedor FIPS |Adicionado no 6.1.2 (estável versão 6.2.2)||
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: Instalar novos pacotes de Python no SQL Server | Microsoft Docs
-ms.date: 01/04/2018
+ms.date: 02/20/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -16,22 +16,22 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 68c3c0c3699455854ac23fed7befb042eaf17155
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f9ac8a72618cb432134d8fd87b0664b720085730
+ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Instalar novos pacotes de Python no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo descreve como instalar novos pacotes do Python em uma instância do SQL Server 2017.
 
-Ele também descreve como listar os pacotes que estão instalados no ambiente atual.
+Em geral, o processo de instalação de novos pacotes é semelhante ao que em um ambiente padrão do Python. No entanto, algumas etapas adicionais serão necessárias se o servidor não tiver uma conexão de internet.
+
+Para obter ajuda sobre como descobrir quais pacotes estão instalados ou os pacotes que estão instalados, consulte [exibição instalado pacotes de R ou Python](../r/determine-which-packages-are-installed-on-sql-server.md).
 
 ## <a name="prerequisites"></a>Prerequisites
-
-O processo de instalação de novos pacotes é muito parecidos com em um ambiente padrão do Python. No entanto, algumas etapas adicionais serão necessárias se o servidor não tiver uma conexão de internet.
 
 + Você deve ter instalado os serviços de aprendizado de máquina (no banco de dados) com a opção de linguagem Python. Para obter instruções, consulte [configurar serviços de aprendizado de máquina do Python](setup-python-machine-learning-services.md).
 
@@ -39,7 +39,11 @@ O processo de instalação de novos pacotes é muito parecidos com em um ambient
 
 + Determine se o pacote que você pretende usar funcionará com o Python 3.5 e no ambiente do Windows. 
 
-    Em geral, há algumas limitações sobre os pacotes que você pode importar e usar no ambiente do SQL Server. Possíveis problemas incluem os pacotes que usam o recurso de rede que está bloqueado no servidor ou pelo firewall ou pacotes com dependências que não podem ser instalados em um computador com Windows.
++ Avalie se o pacote é uma boa opção para uso no ambiente do SQL Server. Geralmente um servidor de banco de dados oferece suporte a vários serviços e aplicativos e recursos no sistema de arquivos podem ser limitado, bem como conexões para o servidor. Em muitos casos o acesso à Internet está bloqueado completamente.
+
+    Outros problemas comuns incluem o uso da funcionalidade que está bloqueada no servidor ou pelo firewall ou pacotes com dependências que não podem ser instalados em um computador de rede. 
+
+    Alguns pacotes Python populares (como bulbo) executam tarefas como o desenvolvimento da web que executam melhor em um ambiente autônomo. É recomendável que você use Python no banco de dados para tarefas, como o aprendizado de máquina, que exigem processamento intensivo de dados que se beneficiam da integração com o mecanismo de banco de dados, em vez de simplesmente consultar o banco de dados.
 
 + Acesso administrativo ao servidor é necessário para instalar pacotes.
 
@@ -62,28 +66,31 @@ O pacote instalado neste exemplo é [CNTK](https://docs.microsoft.com/cognitive-
 
     Por exemplo, em um computador separado, você pode baixar o arquivo WHL deste site [https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)e, em seguida, copie o arquivo `cntk-2.1-cp35-cp35m-win_amd64.whl` para uma pasta local no computador do SQL Server.
 
-+ SQL Server 2017 uses Python 3.5. Certifique-se de obter a versão do pacote do Windows e uma versão compatível com o Python 3.5.
++ SQL Server 2017 uses Python 3.5. 
+
+> [!IMPORTANT]
+> Certifique-se de que você obtenha a versão do pacote do Windows. Se o arquivo termina em .gz, provavelmente não é a versão correta.
 
 Esta página contém os downloads de várias plataformas e de várias versões de Python: [configurar CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
 
 ### <a name="step-2-open-a-python-command-prompt"></a>Etapa 2. Abra um prompt de comando do Python
 
-Localize o local de biblioteca do Python padrão usado pelo SQL Server. Se você tiver instalado várias instâncias, certifique-se de localizar a pasta PYTHON_SERVICE para a instância onde você deseja adicionar o pacote.
+Localize o local de biblioteca do Python padrão usado pelo SQL Server. Se você tiver instalado várias instâncias, localize a pasta PYTHON_SERVICE para a instância onde você deseja adicionar o pacote.
 
 Por exemplo, se os serviços de aprendizado de máquina foi instalado usando os padrões e aprendizado de máquina está habilitado na instância padrão, o caminho seria da seguinte maneira:
 
-    `C:\Program Files\Microsoft SQL  Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
+    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
 
 Abra o prompt de comando do Python associado à instância.
 
 > [!TIP]
-> É recomendável que você configure um ambiente de Python específicas para o servidor de aprendizado de máquina ou do SQL Server.
+> Para depurar e testar futuras, convém configurar um ambiente de Python específicas para a biblioteca de instância.
 
 ### <a name="step-3-install-the-package-using-pip"></a>Etapa 3. Instale o pacote usando o pip
 
 + Se você estiver acostumado a usar a linha de comando do Python, use PIP.exe para instalar novos pacotes. Você pode encontrar o **pip** instalador no `Scripts` subpasta. 
 
-    Se você receber um erro que **pip** não é reconhecido como um comando interno ou externo, você pode adicionar o caminho do executável Python e a pasta de scripts de Python para a variável de caminho no Windows.
+    Se você receber um erro que `pip` não é reconhecido como um comando interno ou externo, você pode adicionar o caminho do executável Python e a pasta de scripts de Python para a variável de caminho no Windows.
 
     O caminho completo do **Scripts** pasta em uma instalação padrão é o seguinte:
 
@@ -91,9 +98,11 @@ Abra o prompt de comando do Python associado à instância.
 
 + Se você estiver usando o Visual Studio de 2017 ou Visual Studio 2015 com as extensões de Python, você pode executar `pip install` do **Python ambientes** janela. Clique em **pacotes**e na caixa de texto, forneça o nome ou local do pacote para instalar. Você não precisa digitar `pip install`; ele é preenchido para você automaticamente. 
 
-    - Se o computador tiver acesso à Internet, forneça o nome do pacote ou a URL de um pacote específico e a versão. Por exemplo, para instalar a versão do CNTK que tem suporte para Windows e Python 3.5, você pode especificar a URL de download:`https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
+    - Se o computador tiver acesso à Internet, forneça o nome do pacote ou a URL de um pacote específico e a versão. 
+    
+    Por exemplo, para instalar a versão do CNTK que tem suporte para Windows e 3.5 do Python, especifique a URL de download: `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
 
-    - Se o computador não tiver acesso à internet, você deve ter baixado o WHL arquivo antecipadamente. Em seguida, especifique o nome e caminho do arquivo local. Por exemplo, cole o seguinte caminho e arquivo para instalar o arquivo WHL baixado do site:`"C:\Downloads\CNTK\cntk-2.1-cp35-cp35m-win_amd64.whl"`
+    - Se o computador não tiver acesso à internet, você deve baixar o arquivo WHL antes de iniciar a instalação. Em seguida, especifique o nome e caminho do arquivo local. Por exemplo, cole o seguinte caminho e arquivo para instalar o arquivo WHL baixado do site: `"C:\Downloads\CNTK\cntk-2.1-cp35-cp35m-win_amd64.whl"`
 
 Você pode ser solicitado a elevar as permissões para concluir a instalação.
 
@@ -108,7 +117,6 @@ Collecting cntk==2.1 from https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp3
 Installing collected packages: cntk
 Successfully installed cntk-2.1
 ```
-
 
 
 ### <a name="step-4-load-the-package-or-its-functions-as-part-of-your-script"></a>Etapa 4. Carregar o pacote ou suas funções como parte do script
@@ -131,7 +139,7 @@ Há diferentes maneiras como você pode obter uma lista de pacotes instalados. P
 
 Se você estiver usando a linha de comando do Python, você pode usar o **conda** package manager, que está incluído com o ambiente Anaconda Python adicionado pela instalação do SQL Server.
 
-Para exibir pacotes do Python que foram instalados no ambiente atual, execute este comando do windows de prompt de comando:
+Para exibir pacotes do Python que foram instalados no ambiente atual, execute este comando no prompt de comando:
 
 ```python
 conda list

@@ -4,7 +4,7 @@ description: "Este artigo descreve como o SQL Server é executado no Linux e for
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/20/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: 71efe59db9de4b60389f40ee6718627817ecee37
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
-ms.translationtype: HT
+ms.openlocfilehash: faa2898017347f59d415f7f5bf5bd6795a3f9de6
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sql-server-on-linux"></a>SQL Server no Linux
 
@@ -42,7 +42,7 @@ Para começar, instale o SQL Server no Linux usando um dos tutoriais a seguir:
 
 ## <a name="connect"></a>Connect
 
-Após a instalação, conecte-se à instância do SQL Server no computador que esteja executando o Linux. É possivel se conectar de forma local ou remota e usar uma variedade de ferramentas e drivers. Os tutoriais de início rápido demonstram como usar a ferramenta de linha de comando do [sqlcmd](sql-server-linux-setup-tools.md). Outras ferramentas incluem:
+Após a instalação, conecte-se à instância do SQL Server no computador Linux. Você pode se conectar localmente ou remotamente e com uma variedade de ferramentas e drivers. Os tutoriais demonstram como usar o [sqlcmd](sql-server-linux-setup-tools.md) ferramenta de linha de comando. Outras ferramentas incluem o seguinte:
 
 | Ferramenta | Tutorial |
 |-----|-----|
@@ -54,12 +54,9 @@ Após a instalação, conecte-se à instância do SQL Server no computador que e
 
 SQL Server 2017 tem o mesmo mecanismo de banco de dados subjacente em todas as plataformas com suporte, inclusive Linux. Muitos recursos e recursos existentes funcionam da mesma forma no Linux. Esta área da documentação expõe alguns desses recursos de uma perspectiva de Linux. Ele também chama áreas que tem requisitos exclusivos no Linux.
 
-Se você já estiver familiarizado com o SQL Server, examine o [notas de versão](sql-server-linux-release-notes.md) para diretrizes gerais e problemas conhecidos desta versão. Em seguida, examinar [novidades do SQL Server no Linux](sql-server-linux-whats-new.md) , bem como [novidades do SQL Server 2017 geral](../sql-server/what-s-new-in-sql-server-2017.md). Para obter respostas para perguntas frequentes, consulte o [SQL Server nas perguntas frequentes sobre o Linux](sql-server-linux-faq.md).
+Se você já estiver familiarizado com o SQL Server, examine o [notas de versão](sql-server-linux-release-notes.md) para diretrizes gerais e problemas conhecidos desta versão. Em seguida, examinar [novidades do SQL Server no Linux](sql-server-linux-whats-new.md) , bem como [novidades do SQL Server 2017 geral](../sql-server/what-s-new-in-sql-server-2017.md). 
 
-##  <a name="infotipmediageneralinfotippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](./media/general/info_tip.png) Entre em contato com a equipe de engenharia do SQL Server
+> [!TIP]
+> Para obter respostas para perguntas frequentes, consulte o [SQL Server nas perguntas frequentes sobre o Linux](sql-server-linux-faq.md).
 
-- [DBA pilha Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): faça perguntas de administração de banco de dados
-- [Estouro de pilha](http://stackoverflow.com/questions/tagged/sql-server): faça perguntas de desenvolvimento
-- [Fóruns do MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): questões técnicas
-- [Enviar comentários](https://feedback.azure.com/forums/908035-sql-server): relatório de bugs e o recurso de solicitação
-- [Reddit](https://www.reddit.com/r/SQLServer/): discutir do SQL Server
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

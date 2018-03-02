@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 40699608d068895cdcee736c87aa4c2bd405b807
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 87c28ec845a59ea13acce0585bc9b249f100a4a5
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extrair, transformar e carregar dados em Linux com o SSIS
 
@@ -111,7 +111,13 @@ SSIS inclui os seguintes recursos:
 
 Para começar a usar o SSIS, baixe a versão mais recente do [SQL Server Data Tools (SSDT)](../integration-services/ssis-how-to-create-an-etl-package.md).
 
-## <a name="see-also"></a>Consulte também
+Para saber mais sobre o SSIS, consulte os seguintes artigos:
 - [Saiba mais sobre o SQL Server Integration Services](../integration-services/sql-server-integration-services.md)
 - [Ferramentas de gerenciamento e desenvolvimento do SQL Server Integration Services (SSIS)](../integration-services/integration-services-ssis-development-and-management-tools.md)
 - [Tutoriais do SQL Server Integration Services](../integration-services/integration-services-tutorials.md)
+
+## <a name="related-content-about-ssis-on-linux"></a>Conteúdo relacionado sobre SSIS no Linux
+-   [Instalar o SQL Server Integration Services (SSIS) no Linux](sql-server-linux-setup-ssis.md)
+-   [Configurar o SQL Server Integration Services no Linux com conf ssis](sql-server-linux-configure-ssis.md)
+-   [Limitações e problemas conhecidos do SSIS no Linux](sql-server-linux-ssis-known-issues.md)
+-   [A execução no Linux com cron do pacote de agendamento SQL Server Integration Services](sql-server-linux-schedule-ssis-packages.md)

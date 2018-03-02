@@ -1,7 +1,7 @@
 ---
-title: Habilitar ou desabilitar o gerenciamento de pacotes de R para o SQL Server | Microsoft Docs
+title: Habilitar ou desabilitar o gerenciamento remoto do pacote do SQL Server | Microsoft Docs
 ms.custom: 
-ms.date: 01/04/2018
+ms.date: 02/20/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -16,39 +16,31 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 35bcae1e29e9b640d2e04b9adc788e382b18b6e8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: feb30d37f9c22d6620a7c6a734172ef43c15e253
+ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/28/2018
 ---
-# <a name="enable-or-disable-r-package-management-for-sql-server"></a>Habilitar ou desabilitar o gerenciamento de pacotes de R para o SQL Server
+# <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Habilitar ou desabilitar o gerenciamento remoto do pacote do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo descreve um novo recurso de gerenciamento de pacote no SQL Server de 2017, projetado para permitir que o administrador de banco de dados controlar a instalação de pacote na instância usando o T-SQL em vez de R.
-
-Após que o pacote gerenciamento frature está habilitado, você também pode usar comandos de R para instalar os pacotes em um gerenciamento de registros agrupados databae um cliente remoto.
+Este artigo descreve como habilitar o gerenciamento de pacotes de R de uma instância remota do servidor de aprendizado de máquina. Após a habilitação do recurso de gerenciamento de pacote, você pode usar comandos de RevoScaleR para instalar os pacotes em um banco de dados de um cliente remoto.
 
 > [!NOTE]
-> Por padrão, o recurso de gerenciamento do pacote externo para o SQL Server está desabilitado, mesmo se os recursos de aprendizado de máquina foram instalados. 
+> Atualmente há suporte para gerenciamento de bibliotecas de R; suporte para Python em nossos planos.
 
-## <a name="enable-package-management"></a>Habilitar o gerenciamento de pacote
+Por padrão, o recurso de gerenciamento do pacote externo para o SQL Server está desabilitado, mesmo se os recursos de aprendizado de máquina foram instalados. Você deve executar um script separado para habilitar o recurso conforme descrito na próxima seção.
 
-Para [habilitar](#bkmk_enable) esse recurso é um processo de duas etapas, exigindo que um administrador de banco de dados:
-
-1.  Habilitar o gerenciamento de pacotes na instância do SQL Server (uma vez por instância do SQL Server)
-
-2.  Habilitar o gerenciamento de pacotes no banco de dados SQL (uma vez por banco de dados do SQL Server)
-
-Para [desabilitar](#bkmk_disable) o recurso de gerenciamento de pacote, reverter o processo para remover pacotes de nível de banco de dados e permissões e, em seguida, remova as funções do servidor:
-
-1.  Desabilitar o gerenciamento de pacotes em cada banco de dados (uma vez por banco de dados)
-
-2.  Desabilitar o gerenciamento de pacotes na instância do SQL Server (uma vez por instância)
-
-## <a name="bkmk_enable"></a>Habilitar o gerenciamento de pacote
+## <a name="overview-of-process-and-tools"></a>Visão geral do processo e ferramentas
 
 Para habilitar ou desabilitar o gerenciamento de pacote, use o utilitário de linha de comando **RegisterRExt.exe**, que é incluído com o **RevoScaleR** pacote.
+
+[Habilitando](#bkmk_enable) esse recurso é um processo de duas etapas, exigindo que um administrador de banco de dados: habilitar o gerenciamento de pacote na instância do SQL Server (uma vez por instância do SQL Server) e, em seguida, habilitar o gerenciamento de pacote no banco de dados SQL (uma vez por SQL Server banco de dados).
+
+[Desabilitando](#bkmk_disable) o recurso de pacote de gerenciamento também requer etapas multipel: remover pacotes de nível de banco de dados e permissões (uma vez por banco de dados) e, em seguida, remova as funções do servidor (uma vez por instância).
+
+## <a name="bkmk_enable"></a> Habilitar o gerenciamento de pacote
 
 1. Abra um prompt de comando com privilégios elevados e navegue até a pasta que contém o utilitário, RegisterRExt.exe. O local padrão é `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
 
@@ -62,19 +54,19 @@ Para habilitar ou desabilitar o gerenciamento de pacote, use o utilitário de li
 
     `REgisterRExt.exe /installpkgmgmt`
 
-2.  Para adicionar o gerenciamento de pacotes para um banco de dados específico, execute o seguinte comando em um prompt de comando elevado:
+3. Para adicionar o gerenciamento de pacotes para um banco de dados específico, execute o seguinte comando em um prompt de comando elevado:
 
     `RegisterRExt.exe /installpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
    
     Este comando cria alguns artefatos do banco de dados, incluindo as seguintes funções de banco de dados que são usadas para controlar permissões de usuário: `rpkgs-users`, `rpkgs-private`, e `rpkgs-shared`.
 
-    Por exemplo, o comando a seguir permite o gerenciamento de pacote no banco de dados na instância onde RegisterRExt é executado. Se você não especificar um usuário, o contexto de segurança atual será usado. 
+    Por exemplo, o comando a seguir permite o gerenciamento de pacote no banco de dados na instância onde RegisterRExt é executado. Se você não especificar um usuário, o contexto de segurança atual será usado.
 
     `RegisterRExt.exe /installpkgmgmt /database:TestDB`
 
-3. Repita o comando para cada banco de dados em que os pacotes devem ser instalados.
+4. Repita o comando para cada banco de dados em que os pacotes devem ser instalados.
 
-4.  Para verificar se as novas funções foram criadas com êxito, no SQL Server Management Studio, clique em banco de dados, expanda **segurança**e expanda **funções de banco de dados**.
+5. Para verificar se as novas funções foram criadas com êxito, no SQL Server Management Studio, clique em banco de dados, expanda **segurança**e expanda **funções de banco de dados**.
 
     Você também pode executar uma consulta em sys. database_principals como o seguinte:
 
@@ -91,17 +83,17 @@ Para habilitar ou desabilitar o gerenciamento de pacote, use o utilitário de li
         ON o.schema_id = s.schema_id;
     ```
 
-4.  Depois que o recurso foi habilitado, você pode se conectar ao servidor e instalar ou sincronizar os pacotes remotamente, usando os comandos de R. Para obter um exemplo de como isso funciona, consulte [instalar outros pacotes no SQL Server](install-additional-r-packages-on-sql-server.md).
+Depois de habilitar esse recurso, você pode usar a função de RevoScaleR para instalar ou desinstalar os pacotes de um cliente remoto do R.
 
-## <a name="bkmk_disable"></a>Desabilitar o gerenciamento de pacote
+## <a name="bkmk_disable"></a> Desabilitar o gerenciamento de pacote
 
-1.  Em um prompt de comando com privilégios elevados, execute o utilitário RegisterRExt novamente e desabilitar o pacote de gerenciamento no nível do banco de dados:
+1. Em um prompt de comando com privilégios elevados, execute o utilitário RegisterRExt novamente e desabilitar o pacote de gerenciamento no nível do banco de dados:
 
     `RegisterRExt.exe /uninstallpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
 
     Este comando remove objetos de banco de dados relacionados ao gerenciamento de pacotes do banco de dados especificado. Ele também remove todos os pacotes que foram instalados a partir do local de sistema de arquivos protegidos no computador do SQL Server.
 
-2. Execute este comando uma vez para cada banco de dados onde o gerenciamento de pacotes foi usado. 
+2. Repita esse comando em cada banco de dados onde o gerenciamento de pacotes foi usado.
 
 3.  (Opcional) Depois que todos os bancos de dados foi limpo de pacotes usando a etapa anterior, execute o seguinte comando em um prompt de comando elevado:
 
@@ -109,6 +101,3 @@ Para habilitar ou desabilitar o gerenciamento de pacote, use o utilitário de li
 
     Este comando remove o recurso de gerenciamento de pacote da instância. Talvez seja necessário reiniciar manualmente o serviço Launchpad mais uma vez para ver as alterações.
 
-## <a name="see-also"></a>Consulte também
-
-[Gerenciamento de pacotes R para SQL Server](r-package-management-for-sql-server-r-services.md)

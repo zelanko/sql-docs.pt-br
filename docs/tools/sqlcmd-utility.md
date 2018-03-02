@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlcmd
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,22 +29,23 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: "155"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 78bad0a1dfd518bb29c8bbdc5f04d0c173756e9f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 66a5e1f8b450fcc6d7cb13ba8e3d6bff36c46f4a
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > Para SQL Server 2014 e inferior, consulte [utilitário sqlcmd](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx).
 
+ > Para usar o sqlcmd no Linux, consulte [instalar sqlcmd e bcp em Linux](../linux/sql-server-linux-setup-tools.md).
 
   O **sqlcmd** utilitário permite que você insira instruções Transact-SQL, procedimentos do sistema e arquivos de script no prompt de comando, em **Editor de consultas** no modo SQLCMD, em um arquivo de script do Windows ou em uma etapa de trabalho do sistema operacional (Cmd.exe) de um trabalho do SQL Server Agent. Esse utilitário usa ODBC para executar lotes Transact-SQL. 
   
@@ -55,14 +57,14 @@ Você pode tentar o utilitário sqlcmd do Shell de nuvem do Azure, pois ele já 
   Para executar instruções sqlcmd no SSMS, selecione o Modo SQLCMD na lista suspensa Menu de Consulta do painel de navegação superior.  
   
 > [!IMPORTANT] 
-> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)](SSMS) usa o Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient para execução em regular e o modo SQLCMD na **Editor de consultas**. Quando o **sqlcmd** é executado na linha de comando, o **sqlcmd** usa o driver ODBC. Devido às diferentes opções padrão que podem ser aplicadas, é possível observar um comportamento diferente ao executar a mesma consulta no [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] no Modo SQLCMD e no utilitário **sqlcmd** .  
+> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) usa o Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient para execução em regular e o modo SQLCMD na **Editor de consultas**. Quando o **sqlcmd** é executado na linha de comando, o **sqlcmd** usa o driver ODBC. Devido às diferentes opções padrão que podem ser aplicadas, é possível observar um comportamento diferente ao executar a mesma consulta no [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] no Modo SQLCMD e no utilitário **sqlcmd** .  
 >   
   
  Atualmente, o **sqlcmd** não requer um espaço entre a opção de linha de comando e o valor. Porém, em uma versão futura, um espaço pode ser necessário entre a opção de linha de comando e o valor.  
  
  Outros tópicos:
 - [Iniciar o utilitário sqlcmd](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
--  [Usar o utilitário sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+- [Usar o utilitário sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -452,7 +454,7 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
   
  Onde:  
   
- `x`= Número de transações que são processadas pelo SQL Server.  
+ `x` = Número de transações que são processadas pelo SQL Server.  
   
  `t1` = Tempo total para todas as transações.  
   
@@ -688,7 +690,7 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
  GO sinaliza tanto o término de um lote e a execução de qualquer cache instruções Transact-SQL. O lote é executado várias vezes como lotes separados; Você não pode declarar uma variável de mais de uma vez em um único lote.
   
  **Comandos diversos**  
-  **:r \<** *filename***>**  
+  **: r \<**  *nome de arquivo* **>**  
  Analisa instruções Transact-SQL adicionais e **sqlcmd** comandos do arquivo especificado por  **\< ***filename***>**na instrução cache.  
   
  Se o arquivo contém instruções de Transact-SQL que não são seguidas por **VÁ**, você deve inserir **VÁ** na linha que segue **: r**.  
@@ -704,7 +706,7 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
  **:Serverlist**  
  Lista os servidores configurados localmente e os nomes dos servidores que estão transmitindo na rede.  
   
- **: Conectar***nome_do_servidor*[**\\* nome_da_instância*] [-l *timeout*] [-U *user_name* [-P *senha*]]  
+ **: Conectar***nome_do_servidor*[**\\* nome_da_instância*] [-l *timeout*] [-U *user_name* [-P *senha*]]    
  Conecta-se a uma instância do SQL Server. Além disso fecha a conexão atual.  
   
  Opções de tempo limite:  

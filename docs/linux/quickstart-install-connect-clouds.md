@@ -1,6 +1,6 @@
 ---
 title: "Introdução ao SQL Server 2017 na nuvem | Microsoft Docs"
-description: "Este tutorial de início rápido mostra como executar o SQL Server 2017 no Linux na nuvem de sua escolha."
+description: "Este guia de início rápido mostra como executar o SQL Server 2017 no Linux na nuvem de sua escolha."
 author: annashres
 ms.author: annashres
 manager: craigg
@@ -12,17 +12,17 @@ ms.component:
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 613f6e1b0182d5003c68380bb5a5698397db2207
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 3966bb71f4112c12d340ab9780586013d8732206
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="run-the-sql-server-2017-in-the-cloud"></a>Executar o SQL Server 2017 na nuvem
+# <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>Início rápido: Executar o SQL Server 2017 na nuvem
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este tutorial de início rápido, você instalará o SQL Server 2017 no Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) ou Ubuntu na nuvem de sua escolha. Vá para [provisionar uma máquina virtual de SQL Server do Linux no portal do Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) para executar o SQL Server no Linux no Azure.
+Este guia de início rápido, você instalará o SQL Server 2017 no Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) ou Ubuntu na nuvem de sua escolha. Vá para [provisionar uma máquina virtual de SQL Server do Linux no portal do Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) para executar o SQL Server no Linux no Azure.
 
     > [!NOTE]
     > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)

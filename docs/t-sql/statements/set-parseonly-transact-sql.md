@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - SET_PARSEONLY_TSQL
 - PARSEONLY
 - SET PARSEONLY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - parsing [SQL Server], SET PARSEONLY statement
 - checking syntax
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - verifying syntax
 - SET PARSEONLY statement
 ms.assetid: 514ab042-c53e-4d96-be71-fb08fcc6ef3c
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: eb009b23f9d4a751f6850218f4845c6c70c3bbd3
 ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/01/2017
 ---
@@ -50,7 +52,7 @@ ms.lasthandoff: 12/01/2017
 SET PARSEONLY { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando SET PARSEONLY for ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] somente analisará a instrução. Quando SET PARSEONLY for OFF, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compila e executa a instrução.  
   
  A configuração de SET PARSEONLY é definida no momento da análise e não no momento da execução.  
@@ -60,8 +62,8 @@ SET PARSEONLY { ON | OFF }
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [DEFINIR os DESLOCAMENTOS &#40; Transact-SQL &#41;](../../t-sql/statements/set-offsets-transact-sql.md)  
+ [SET OFFSETS &#40;Transact-SQL&#41;](../../t-sql/statements/set-offsets-transact-sql.md)  
   
   

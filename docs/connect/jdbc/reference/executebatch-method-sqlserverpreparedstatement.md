@@ -8,23 +8,26 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname: SQLServerPreparedStatement.executeBatch
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerPreparedStatement.executeBatch
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8418167e-cbd2-464d-b118-73cdd76080ed
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a459eef327f162e362cf5f86fbba1c2a726e78af
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 774a382c6e026094261ec562f21e11ba80dc85fb
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="executebatch-method-sqlserverpreparedstatement"></a>Método executeBatch (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,11 +49,9 @@ public int[] executeBatch()
   
  java.sql.BatchUpdateException  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método executeBatch é especificado pelo método executeBatch na interface Java.SQL. Statement.  
-  
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0 está em conformidade com a recomendação do JDBC 4.0 que uma chamada ao método CallableStatement.executeBatch (herdado de PreparedStatement) lançará um BatchUpdateException se o procedimento armazenado aceita OUT ou INOUT parâmetros ou retorna algo diferente de uma contagem de atualização.  
-  
+    
  Esse método substitui [Executebatch](../../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md).  
   
 ## <a name="see-also"></a>Consulte também  

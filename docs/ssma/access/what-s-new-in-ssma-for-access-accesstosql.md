@@ -5,29 +5,38 @@ ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 03/01/2018
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b159377cfa3ff160d9be60dba91af5561649c4a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 487fa165ce29ae2ae2a7fffe4463e88fb45001c6
+ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/01/2018
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Novidades do SSMA para Access (AccessToSQL)
 Este tópico lista SSMA para alterações de acesso de cada versão.  
+
+## <a name="ssma-v77"></a>O SSMA v7.7
+A versão de v7.7 do SSMA para Access contém as seguintes alterações:
+- O SSMA para Access foi aprimorado com correções de destino que melhoram a métrica de qualidade e a conversão.
+- A versão de 32 bits do SSMA para Access com base na demanda popular, está de volta. Em comparação com a implementação anterior (antes da v 7.4), existem dois pacotes de instalador, mas eles não podem ser instalados lado a lado. Como resultado, você deve escolher a versão mais adequada com base nos componentes de conectividade, que você tem. Sempre é preferível usar a versão de 64 bits, se possível.
+
+> [!IMPORTANT]
+> Com a v 7.4 do SSMA e versões posteriores, o .net 4.5.2 é um pré-requisito de instalação.
 
 ## <a name="ssma-v76"></a>O SSMA v7.6
 A versão de v7.6 do SSMA para Access foi aprimorada com correções de destino que melhoram a qualidade e a conversão de métricas e com suporte para SQL Server 2017 (visualização pública). Suporte para SQL Server 2017 em Windows e Linux está em visualização pública e não deve ser usado para migrações de produção.
@@ -41,7 +50,7 @@ A versão v 7.5 do SSMA para Access foi aprimorada com vários aprimoramentos pa
 > [!IMPORTANT]
 > O .net 4.5.2 é um pré-requisito de instalação v SSMA 7.5. Além disso, começando com v 7.4, a versão de 32 bits do SSMA está sendo descontinuada.
 
-## <a name="ssma-v74"></a>V 7.4 do SSMA
+## <a name="ssma-v74"></a>SSMA v7.4
 A versão v 7.4 do SSMA para Access contém as seguintes alterações:
 - O **tempo limite da consulta** opção agora está disponível durante a descoberta de objeto de esquema na origem e no destino.
 ![opção de tempo limite de consulta](../media/query-timeout_red.png)
@@ -51,7 +60,7 @@ A versão v 7.4 do SSMA para Access contém as seguintes alterações:
 > [!IMPORTANT]
 > O .net 4.5.2 é um pré-requisito de instalação v 7.4 do SSMA. Além disso, começando com v 7.4, a versão de 32 bits do SSMA está sendo descontinuada.
 
-## <a name="ssma-v73"></a>O SSMA 7.3
+## <a name="ssma-v73"></a>SSMA v7.3
 A versão 7.3 do SSMA para Access contém as seguintes alterações:
 - Métrica de qualidade e conversão aprimorada com correções de destino com base nos comentários dos clientes.
 - Estrutura de extensibilidade do SSMA exposta por meio de itens a seguir:
@@ -64,7 +73,7 @@ A versão 7.3 do SSMA para Access contém as seguintes alterações:
       - Instruções sobre como construir um conversor personalizado estão disponíveis nesta postagem de blog, [recursos de conversão do estendendo o SQL Server Migration Assistant](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
       - Projeto de exemplo para a conversão pode ser baixar este [postagem de blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
-## <a name="ssma-v72"></a>V 7.2 do SSMA
+## <a name="ssma-v72"></a>SSMA v7.2
 A versão v 7.2 do SSMA para Access contém as seguintes alterações:
 - Métrica de qualidade e conversão aprimorada com correções de destino com base nos comentários dos clientes.
 - Aprimoramentos de telemetria para fornecer melhor pontos de dados para solucionar problemas do cliente e melhorar as taxas de conversão do SSMA.

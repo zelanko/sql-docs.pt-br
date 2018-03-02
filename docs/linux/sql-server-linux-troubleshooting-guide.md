@@ -4,7 +4,7 @@ description: "Fornece dicas de solução de problemas para usar o SQL Server 201
 author: annashres
 ms.author: anshrest
 manager: craigg
-ms.date: 01/18/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,17 +15,20 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: f56806313075865c53cbd3fc1f80c0d132804c04
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: b3dc37601859ee4125f9f7885592e3a0653e8d0c
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Solucionar problemas do SQL Server no Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este documento descreve como solucionar problemas de Microsoft SQL Server em execução no Linux ou em um contêiner do Docker. Ao solucionar problemas do SQL Server no Linux, lembre-se de examinar os recursos com suporte e as limitações conhecidas no [Linux notas de versão do SQL Server](sql-server-linux-release-notes.md).
+
+> [!TIP]
+> Para obter respostas para perguntas frequentes, consulte o [SQL Server nas perguntas frequentes sobre o Linux](sql-server-linux-faq.md).
 
 ## <a id="connection"></a> Solucionar problemas de falhas de conexão
 Se você estiver tendo dificuldade para se conectar ao seu SQL Server do Linux, há algumas coisas para verificar. 
@@ -200,12 +203,4 @@ Se você acidentalmente iniciou do SQL Server com outro usuário, você deve alt
    Recursos: [caracteres especiais](http://tldp.org/LDP/abs/html/special-chars.html)
    [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
 
-## <a name="support"></a>Suporte
-
-O suporte está disponível por meio da comunidade e monitorados pela equipe de engenharia. Para dúvidas específicas, use os seguintes recursos:
-
-- [DBA pilha Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): faça perguntas de administração de banco de dados
-- [Estouro de pilha](http://stackoverflow.com/questions/tagged/sql-server): faça perguntas de desenvolvimento
-- [Fóruns do MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): questões técnicas
-- [Enviar comentários](https://feedback.azure.com/forums/908035-sql-server): relatório de bugs e o recurso de solicitação
-- [Reddit](https://www.reddit.com/r/SQLServer/): discutir do SQL Server
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

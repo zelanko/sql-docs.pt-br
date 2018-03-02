@@ -8,20 +8,21 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 81176070a9363e54dc469dd050891335edcb92af
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 886dea89a0e3ddd0db19cd9d0f8159cd6becf1b8
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="building-the-connection-url"></a>Construindo a URL de conexão
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -79,7 +80,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>Instâncias nomeadas e várias instâncias do SQL Server  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]permite a instalação de várias instâncias de banco de dados por servidor. Cada instância é identificada por um nome específico. Para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você pode especificar o número da porta da instância nomeada (preferido) ou você pode especificar o nome da instância como uma propriedade URL do JDBC ou uma **datasource** propriedade. Se nenhuma propriedade de nome de instância ou número de porta for especificada, será criada uma conexão com a instância padrão. Consulte os exemplos a seguir:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] O  permite a instalação de várias instâncias de banco de dados por servidor. Cada instância é identificada por um nome específico. Para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você pode especificar o número da porta da instância nomeada (preferido) ou você pode especificar o nome da instância como uma propriedade URL do JDBC ou uma **datasource** propriedade. Se nenhuma propriedade de nome de instância ou número de porta for especificada, será criada uma conexão com a instância padrão. Consulte os exemplos a seguir:  
   
  Para usar um número de porta, faça o seguinte:  
   
@@ -97,7 +98,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 > [!NOTE]  
 >  O espaço em branco dentro das chaves é literal e não é cortado.  
   
-##  <a name="Connectingintegrated"></a>Conectar-se com a autenticação integrada no Windows  
+##  <a name="Connectingintegrated"></a> Conectar-se com a autenticação integrada no Windows  
  O driver JDBC dá suporte ao uso da autenticação integrada do Tipo 2 em sistemas operacionais Windows por meio da propriedade de cadeia de conexão integratedSecurity. Para usar a autenticação integrada, copie o arquivo sqljdbc_auth.dll para um diretório no caminho do sistema Windows no computador em que o driver JDBC está instalado.  
   
  Os arquivos sqljdbc_auth.dll estão instalados no seguinte local:  
@@ -111,7 +112,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  Como alternativa, você pode definir a propriedade do sistema java.libary.path para especificar o diretório de sqljdbc_auth.dll. Por exemplo, se o driver JDBC for instalado no diretório padrão, você poderá especificar o local da DLL usando o seguinte argumento de máquina virtual (VM) quando o aplicativo Java for iniciado:  
   
- `-Djava.library.path=C:\Microsoft JDBC Driver 4.0 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
+ `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   
 ## <a name="connecting-with-ipv6-addresses"></a>Conectando com endereços IPv6  
  O driver JDBC oferece suporte ao uso de endereços IPv6 com a coleção de propriedades de conexão e com a propriedade de cadeia de conexão serverName. O valor de serverName inicial, como jdbc:*sqlserver*://*serverName*, não há suporte para endereços IPv6 em cadeias de caracteres de conexão. Usando um nome para *serverName* em vez de um IPv6 bruto endereço funcionará em todos os casos em que a conexão. Os exemplos a seguir fornecem mais informações.  
