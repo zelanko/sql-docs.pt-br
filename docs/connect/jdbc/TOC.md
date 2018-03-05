@@ -19,6 +19,7 @@
 ## [Localizando informações adicionais sobre o JDBC Driver](finding-additional-jdbc-driver-information.md)
 ## [Matriz de suporte do Microsoft JDBC Driver para SQL Server](microsoft-jdbc-driver-for-sql-server-support-matrix.md)
 ## [Perguntas frequentes (FAQ) para o JDBC Driver](frequently-asked-questions-faq-for-jdbc-driver.md)
+## [Dependências de recurso do Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) 
 
 # [Protegendo aplicativos do JDBC Driver](securing-jdbc-driver-applications.md)
 ## [Protegendo cadeias de conexão](securing-connection-strings.md)
@@ -36,6 +37,7 @@
 ## [Trabalhando com instruções e conjuntos de resultados](working-with-statements-and-result-sets.md)
 ## [Usando buffer adaptável](using-adaptive-buffering.md)
 ## [Colunas esparsas](sparse-columns.md)
+## [Metadados de instrução em cache preparados para o JDBC Driver](prepared-statement-metadata-caching-for-the-jdbc-driver.md)
 
 # [Diagnosticando problemas com o JDBC Driver](diagnosing-problems-with-the-jdbc-driver.md)
 ## [Tratando erros](handling-errors.md)
@@ -63,6 +65,7 @@
 # [Conformidade e legal para o Driver SQL JDBC](compliance-and-legal-for-the-jdbc-sql-driver.md)
 ## [Conformidade do JDBC 4.1 com o JDBC Driver](jdbc-4-1-compliance-for-the-jdbc-driver.md)
 ## [Conformidade do JDBC 4.2 com o JDBC Driver](jdbc-4-2-compliance-for-the-jdbc-driver.md)
+## [Conformidade do JDBC 4.3 com o JDBC Driver](jdbc-4-3-compliance-for-the-jdbc-driver.md)
 
 # [Guia de programação para o driver SQL JDBC](programming-guide-for-jdbc-sql-driver.md)
 ## [Conectando ao SQL Server com o JDBC Driver](connecting-to-sql-server-with-the-jdbc-driver.md)
@@ -125,3 +128,5 @@
 ### [Configurando como os valores de java.sql.Time são enviados ao servidor](configuring-how-java-sql-time-values-are-sent-to-the-server.md)
 ### [Usando sequências de escape do SQL](using-sql-escape-sequences.md)
 ### [Usando instruções com procedimentos armazenados](using-statements-with-stored-procedures.md)
+### [Versão de amostra do Azure Key Vault 6.0.0](azure-key-vault-sample-version-6.0.0.md)
+### [Versão de amostra do Azure Key Vault 6.2.2](azure-key-vault-sample-version-6.2.2.md)
