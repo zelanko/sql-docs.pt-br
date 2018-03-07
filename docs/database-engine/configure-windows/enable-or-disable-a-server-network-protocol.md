@@ -29,19 +29,20 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: cd18129e43db63cf01623e6b5706c34d79f4ba8e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>Habilitar ou desabilitar um protocolo de rede de servidor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Todos os protocolos de rede são instalados pela Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas podem ser habilitados ou não. Este tópico descreve como habilitar ou desabilitar um protocolo de rede de servidor no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou o PowerShell. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve ser interrompido e reiniciado para que a alteração entre em vigor.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Todos os protocolos de rede são instalados pela Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mas podem ou não ser habilitados. Este tópico descreve como habilitar ou desabilitar um protocolo de rede de servidor no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou o PowerShell. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve ser interrompido e reiniciado para que a alteração entre em vigor.  
   
 > [!IMPORTANT]  
 >  Durante instalação do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , é adicionado um logon para o grupo BUILTIN\Users. Assim, todos os usuários autenticados do computador podem acessar a instância do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] como membros da função pública. O logon BUILTIN\Users pode ser removido com segurança para restringir o acesso a [!INCLUDE[ssDE](../../includes/ssde-md.md)] aos usuários do computador que têm logons individuais ou que são membros de outros grupos do Windows com logons.  
   
 > [!WARNING]  
->  Os provedores de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] até o [!INCLUDE[sssql14](../../includes/sssql14-md.md)] somente dão suporte para TLS 1.0 e para SSL 3.0 por padrão. Se você impor um protocolo diferente (como o TLS 1.1 ou o TLS 1.2) fazendo alterações na camada SChannel do sistema operacional, as conexões ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderão falhar, a menos que você tenha instalado a atualização apropriada para adicionar suporte para TLS 1.1 e 1.2 ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está listada <a href="https://support.microsoft.com/en-us/help/3135244/tls-1-2-support-for-microsoft-sql-server">aqui</a>. A começar no [!INCLUDE[sssql15](../../includes/sssql15-md.md)], todas as versões de lançamento do SQL Server incluem suporte para TLS 1.2 sem a necessidade de atualizações adicionais.
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e os provedores de dados [!INCLUDE[msCoName](../../includes/msconame-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] até [!INCLUDE[sssql14](../../includes/sssql14-md.md)] somente são compatíveis com TLS 1.0 e SSL 3.0 por padrão. Se você impor um protocolo diferente (como o TLS 1.1 ou o TLS 1.2) fazendo alterações na camada SChannel do sistema operacional, as conexões ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderão falhar, a menos que você tenha instalado a atualização apropriada para adicionar suporte para TLS 1.1 e 1.2 ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está listada <a href="https://support.microsoft.com/en-us/help/3135244/tls-1-2-support-for-microsoft-sql-server">aqui</a>. A começar no [!INCLUDE[sssql15](../../includes/sssql15-md.md)], todas as versões de lançamento do SQL Server incluem suporte para TLS 1.2 sem a necessidade de atualizações adicionais.
   
  **Neste tópico**  
   

@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 757a6b2aebe68dc32ddc493c3e6649a8b589be3e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 770b33f7fb7fa22d1a2e86d4b5c7a9d3f8c84b35
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-3-2---create-custom-templates"></a>Lição 3-2 – Criar modelos personalizados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/17/2018
 7.  No Editor de Consultas, digite o script a seguir para criar um procedimento armazenado que procura pedidos de uma peça específica, neste caso, a Lâmina. (Você pode copiar e colar o código da janela Tutorial.)  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   
@@ -73,11 +73,11 @@ ms.lasthandoff: 01/17/2018
   
 8.  Pressione F5 para executar esse script, criando o procedimento **WorkOrdersForBlade** .  
   
-9. No Pesquisador de Objetos, clique com o botão direito do mouse no servidor e clique em **Nova Consulta**. Uma nova janela do Editor de Consultas é aberta.  
+9. No Pesquisador de Objetos, clique com o botão direito do mouse no banco de dados **AdventureWorks2012** e, em seguida, clique em **Nova Consulta**. Uma nova janela do Editor de Consultas é aberta.  
   
 10. No Editor de Consultas, digite **EXECUTE dbo.WorkOrdersForBlade**e pressione F5 para executar a consulta. Confirme se o painel **Resultados** retorna uma lista dos pedidos de trabalho nas folhas.  
   
-11. Edite o script de modelo (o script da etapa 7), substituindo o nome de produto Folha pelo parâmetro ***\<*product_name**, **nvarchar(50)**, **name*>***, em quatro locais.  
+11. Edite o script de modelo (o script na etapa 7), substituindo a Folha do nome do produto com o parâmetro **\<product_name, nvarchar(50), name >**, em quatro locais.  
   
     > [!NOTE]  
     > Parâmetros requerem três elementos: o nome do parâmetro que você deseja substituir, o tipo de dados do parâmetro e um valor padrão do parâmetro.  
@@ -85,7 +85,7 @@ ms.lasthandoff: 01/17/2018
 12. Agora o script deve ter a seguinte aparência:  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   
