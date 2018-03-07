@@ -11,18 +11,19 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76dd2b0dd77061e029dc5b7092a21d484ac7f7ed
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 21898c90044ec62c1a7d55fbcfa0cf03d46ba7ce
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-developer-documentation"></a>Documentação do desenvolvedor do Master Data Services
   Localize informações sobre como gravar código para personalizar o modo como você e seus usuários interagem com o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Saiba como:  
@@ -46,14 +47,14 @@ ms.lasthandoff: 01/08/2018
  Uma lista categorizada das operações de serviço Web da classe <xref:Microsoft.MasterDataServices.ServiceClient>.  
   
 ## <a name="custom-workflows"></a>Fluxos de trabalho personalizados  
- O [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] usa regras de negócios para criar soluções de fluxo de trabalho básicas. Você pode atualizar e validar dados automaticamente e pode configurar o envio de notificações por email com base nas condições especificadas. As regras de negócios no [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] devem gerenciar os cenários de fluxo de trabalho mais comuns. Se seu fluxo de trabalho exigir o processamento de eventos mais complexos, como aprovações em várias camadas ou árvores de decisão complexas, você poderá configurar o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para enviar dados a um assembly personalizado criado por você. Para tratar fluxos de trabalho personalizados, você deve configurar e iniciar o Serviço de Integração de Fluxo de Trabalho MDS do SQL Server no computador do aplicativo Web e criar um assembly que implementa a interface <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>.  
+ [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] usa regras de negócios para criar soluções de fluxo de trabalho básicas. Você pode atualizar e validar dados automaticamente e pode configurar o envio de notificações por email com base nas condições especificadas. As regras de negócios no [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] devem gerenciar os cenários de fluxo de trabalho mais comuns. Se seu fluxo de trabalho exigir o processamento de eventos mais complexos, como aprovações em várias camadas ou árvores de decisão complexas, você poderá configurar o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para enviar dados a um assembly personalizado criado por você. Para tratar fluxos de trabalho personalizados, você deve configurar e iniciar o Serviço de Integração de Fluxo de Trabalho MDS do SQL Server no computador do aplicativo Web e criar um assembly que implementa a interface <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>.  
   
 ### <a name="custom-workflow-content"></a>Conteúdo de fluxo de trabalho personalizado  
  [Criar um fluxo de trabalho personalizado &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
  Instruções sobre como criar um assembly de manipulador de fluxo de trabalho, como configurar e iniciar o Serviço de Integração de Fluxo de Trabalho MDS do SQL Server e como criar uma regra de negócio no [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] que inicia um fluxo de trabalho personalizado.  
   
 ## <a name="web-server-namespaces"></a>Namespaces do servidor Web  
- O [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] instala um conjunto de assemblies no computador do servidor Web. Esses assemblies contêm namespaces que podem ser usados para cenários avançados que personalizam o comportamento do computador do servidor Web. A tabela a seguir descreve esses namespaces.  
+ [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] instala um conjunto de assemblies no computador do servidor Web. Esses assemblies contêm namespaces que podem ser usados para cenários avançados que personalizam o comportamento do computador do servidor Web. A tabela a seguir descreve esses namespaces.  
   
 |Namespace|Description|  
 |---------------|-----------------|  

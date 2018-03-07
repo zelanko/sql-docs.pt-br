@@ -8,20 +8,21 @@ ms.service:
 ms.component: installing-mds-in-an-alwayson-group-environment
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
 caps.latest.revision: 
-author: smartysanthosh
-ms.author: nagavo
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2caabcb53e4386927b4103764c8abce34ccdefcd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f8cd77bb7366fb1bb09d8f119a1b740bd8456344
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidade e recuperação de desastres para Master Data Services
 
@@ -96,7 +97,7 @@ Conforme mostrado na Figura 1 na seção anterior, a solução descrita neste ar
 
 O WSFC é um recurso para melhorar a alta disponibilidade de aplicativos e serviços. Ele consiste em um grupo de instâncias do Windows Server independentes com o 	Serviço de Cluster de Failover da Microsoft em execução nessas instâncias. As instâncias do Windows Server (ou nós como são chamadas às vezes) estão conectadas de forma que possam se comunicar entre si e a detecção de falha seja possível. O WSFC fornece as funcionalidades de detecção de falha e failover. Se um nó ou um serviço falhar no cluster, a falha será detectada e outro nó automaticamente ou manualmente começará a fornecer os serviços hospedados no nó com falha. Dessa forma, os usuários sofrem interrupções mínimas nos serviços e a disponibilidade do serviço é melhorada.  
 
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 O sistema operacional Windows Server é instalado em todas as instâncias e todas as atualizações são corrigidas.
 
@@ -215,7 +216,7 @@ O AG melhora a alta disponibilidade do nível do banco de dados. O AG (um conjun
 A FCI melhora a alta disponibilidade no nível da instância. O serviço do SQL Server e os serviços relacionados são registrados como recursos no WSFC. Além disso, a solução FCI exige o armazenamento em disco compartilhado simétrico, como compartilhamentos de arquivo SMB ou SAN, que devem estar disponíveis para todos os nós no cluster WFC.
 
 
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 -   Instalar o SQL Server em todos os nós. Para obter mais informações, veja [Instalar o SQL Server 2016](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server).
 
@@ -319,9 +320,9 @@ O AG pode ser criado apenas em bancos de dados existentes. Portanto, você cria 
 
 8.  Na página **Especificar Réplicas**, clique na guia **Ouvinte** e faça o seguinte. Consulte a Figura 18.
 
-    a.  Clique em **Criar um ouvinte de grupo de disponibilidade** para configurar um ouvinte de grupo de disponibilidade para a conexão de banco de dados MDS.
+    A.  Clique em **Criar um ouvinte de grupo de disponibilidade** para configurar um ouvinte de grupo de disponibilidade para a conexão de banco de dados MDS.
 
-    b.  Insira um **Nome DNS do ouvinte**, como MDSSQLServer.
+    B.  Insira um **Nome DNS do ouvinte**, como MDSSQLServer.
 
     c.  Insira a porta SQL padrão, 1433, na caixa de texto **Porta**.
 
