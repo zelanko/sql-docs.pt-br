@@ -1,6 +1,6 @@
 ---
 title: "Notas de versão do SQL Server 2016 | Microsoft Docs"
-ms.date: 10/30/2017
+ms.date: 02/27/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -8,51 +8,42 @@ ms.component: sql-non-specified
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - build notes
 - release issues
 ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
-caps.latest.revision: "276"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3979b28e6b530ba08641731f811e259168975004
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6485ef83b940ab9d04b9406e461517d5254aec7f
+ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>Notas de Versão do SQL Server 2016.
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] Este artigo descreve as limitações e os problemas com as versões do SQL Server 2016.    
-    
- **Experimente:**    
-   
-[![Baixar no Centro de Avaliação](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Baixar o SQL Server 2016 no **[Centro de Avaliação](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
-    
-[![Máquina Virtual pequena do Azure](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** para criar uma Máquina Virtual com o SQL Server 2016 SP1 já está instalado.
-    
-[![Baixar o SSMS](../includes/media/download2.png)**SSMS:** para obter a última versão do SQL Server Management Studio, consulte **[Baixar o SSMS (SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md)**.   
-    
- Para obter informações sobre as novidades, veja [Novidades no SQL Server 2016](http://msdn.microsoft.com/library/8223c19b-4b0d-4b1d-a042-9a726c18e708).
-    
-##  <a name="bkmk_top"></a> Seções do artigo:    
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+Este artigo descreve as limitações e os problemas com as versões do SQL Server 2016. Para obter informações sobre as novidades, veja [Novidades no SQL Server 2016](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016).
 
--   [SQL Server 2016 Service Pack 1 (SP1) disponível](#bkmk_2016sp1)    
--   [GA (Disponibilidade Geral) do SQL Server 2016](#bkmk_2016_ga) 
--   [SQL Server 2016 Release Candidate 3 (RC3)](#bkmk_2016_rc3)     
+> [![Baixar no Centro de Avaliação](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Baixar o SQL Server 2016 no **[Centro de Avaliação](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
+>
+> [![Máquina Virtual pequena do Azure](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** para criar uma Máquina Virtual com o SQL Server 2016 SP1 já está instalado.
+>
+> [![Baixar o SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Para obter a versão mais recente do SQL Server Management Studio, veja **[Baixar o SSMS (SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md)**.
 
 ## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1) disponível
 ![info_tip](../sql-server/media/info-tip.png) O SQL Server 2016 SP1 atualiza todas as edições e níveis de serviço do SQL Server 2016 para o SQL Server 2016 SP1. Além das correções que estão listadas neste artigo, o SQL Server 2016 SP1 inclui hotfixes que foram incluídos na Atualização Cumulativa 1 do SQL Server 2016 (CU1) para o SQL Server 2016 CU3.
-    
+
 - [Página de download do SQL Server 2016 SP1](https://www.microsoft.com/download/details.aspx?id=54276)
 - [Informações de versão do SQL Server 2016 Service Pack 1](https://support.microsoft.com/kb/3182545) Lista os números dos bug individuais e os problemas que foram corrigidos ou alterados no SP1.
- - ![info_tip](../sql-server/media/info-tip.png) Visite o [Centro de Atualização do SQL Server](https://msdn.microsoft.com/library/ff803383.aspx) para obter links e informações para todas as versões com suporte, incluindo service packs do [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
-    
-    
+ - ![info_tip](../sql-server/media/info-tip.png) Visite o [Centro de Atualização do SQL Server](https://msdn.microsoft.com/library/ff803383.aspx) para obter links e informações para todas as versões compatíveis, incluindo service packs do [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
+
 ##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [Mecanismo de Banco de Dados (GA)](#bkmk_ga_instalpatch) 
 -   [Stretch Database (GA)](#bkmk_ga_stretch)

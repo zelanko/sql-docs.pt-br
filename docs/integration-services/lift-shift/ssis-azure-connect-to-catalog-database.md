@@ -8,16 +8,17 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9b3a63d93d9d1e27147783f6c745addcd31fac8
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: 98aed78b69a108ae5b0c8f914540b385403a60f9
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Conectar-se ao banco de dados do Catálogo do SSISDB no Azure
 
@@ -27,7 +28,7 @@ Obtenha as informações de conexão necessárias para se conectar ao banco de d
 - informações de logon 
 
 > [!IMPORTANT]
-> No momento, não é possível criar o banco de dados do Catálogo do SSISDB no Banco de Dados SQL do Azure, independentemente da criação do Azure-SSIS Integration Runtime no Azure Data Factory versão 2. É o Azure-SSIS IR que executa pacotes do SSIS no Azure. Para obter mais informações e um script de exemplo do PowerShell, consulte [Implantar pacotes do SQL Server Integration Services no Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure). 
+> No momento, não é possível criar o banco de dados do Catálogo do SSISDB no Banco de Dados SQL do Azure, independentemente da criação do Azure-SSIS Integration Runtime no Azure Data Factory versão 2. É o Azure-SSIS IR que executa pacotes do SSIS no Azure. Para obter mais informações, consulte [Implantar pacotes do SSIS para o Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
 
 ## <a name="prerequisites"></a>Prerequisites
 Antes de começar, verifique se você tem a versão 17.2 ou posterior do SQL Server Management Studio. Para baixar a versão mais recente do SSMS, veja [Baixar o SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).

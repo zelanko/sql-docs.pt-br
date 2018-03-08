@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: report servers [Reporting Services], network load balancing
+helpviewer_keywords:
+- report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3576aec75cab9961b6d7423b65c66e885834ff88
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0512371abbf0f958b065363c7b145da0bd915489
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurar um servidor de relatório em um cluster com balanceamento de carga de rede
   Se você estiver configurando uma expansão do servidor de relatório a ser executada em um cluster NLB (Balanceamento de Carga de Rede), deverá fazer o seguinte:  
@@ -49,27 +50,24 @@ ms.lasthandoff: 01/09/2018
 |7|Verifique se é possível acessar os servidores através do nome do host especificado.|[Verificar o acesso ao servidor de relatório](#Verify) neste tópico.|  
   
 ##  <a name="ViewState"></a> Como configurar a validação do estado de exibição  
- Para executar uma implantação em expansão em um cluster NLB, você deve configurar a validação do estado de exibição para que os usuários possam exibir relatórios HTML interativos. Você deve fazer isso para o servidor de relatório e Gerenciador de Relatórios.  
+ Para executar uma implantação em expansão em um cluster NLB, você deve configurar a validação do estado de exibição para que os usuários possam exibir relatórios HTML interativos.
   
  A validação do estado de exibição é controlada pelo ASP .NET. Por padrão, ela fica habilitada e usa a identidade do serviço Web para efetuar a validação. Porém, em um cenário de cluster NLB, existem várias instâncias de serviço e identidades de serviço Web que são executadas em computadores diferentes. Como a identidade do serviço varia para cada nó, não é possível usar uma única identidade de processo para efetuar a validação.  
   
  Para contornar esse problema, você pode gerar uma chave de validação arbitrária para dar suporte à validação do estado de exibição e, depois, configurar manualmente cada nó do servidor de relatório para usar a mesma chave. É possível usar qualquer sequência hexadecimal gerada aleatoriamente. O algoritmo de validação (como SHA1) determina o comprimento da sequência hexadecimal.  
+
+1.  Gere uma chave de validação e uma chave de descriptografia usando a funcionalidade de geração automática fornecida pelo [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. No final, você deve ter uma única entrada \<**MachineKey**> que pode ser colada no arquivo RSReportServer.config de cada instância do servidor de relatório na implantação escalável.
   
-1.  Gere uma chave de validação e uma chave de descriptografia usando a funcionalidade de geração automática fornecida pelo [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. No final, você deve ter uma única entrada \<**machineKey**> que pode ser colada no arquivo Web.config de cada instância do Gerenciador de Relatórios na implantação escalável.  
-  
-     O exemplo a seguir mostra uma ilustração do valor a ser obtido. Não copie o exemplo nos seus arquivos de configuração; os valores de chave não são válidos.  
+     O exemplo a seguir mostra uma ilustração do valor a ser obtido. Não copie o exemplo nos seus arquivos de configuração; os valores de chave não são válidos. O servidor de relatório requer o uso de maiúsculas e minúsculas correto.
   
     ```  
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
-    ```  
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    ```   
+2.  Salve o arquivo.  
   
-2.  Abra o arquivo Web.config do Gerenciador de Relatórios e, na seção \<**system.web**>, cole o elemento \<**machineKey**> gerado. Por padrão, o arquivo Web.config do Gerenciador de Relatórios está localizado em \Arquivos de Programas\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config.  
+3.  Repita a etapa anterior para cada servidor de relatório na implantação em expansão.  
   
-3.  Salve o arquivo.  
-  
-4.  Repita a etapa anterior para cada servidor de relatório na implantação em expansão.  
-  
-5.  Verifique se todos os arquivos Web.config das pastas \Reporting Services\Gerenciador de Relatórios contêm elementos \<**machineKey**> idênticos na seção \<**system.web**>.  
+4.  Verifique se todos os arquivos RSReportServer.config das pastas \Reporting Services\Servidor de Relatório contêm elementos \<**MachineKey**> idênticos.  
   
 ##  <a name="SpecifyingVirtualServerName"></a> Como configurar Hostname e UrlRoot  
  Para configurar uma implantação em expansão do servidor de relatório em um cluster NLB, é necessário definir um único nome de servidor virtual que forneça um único ponto de acesso ao cluster de servidores. Então registre esse nome de servidor virtual com o DNS (Domain Name Server, servidor de nomes de domínio) em seu ambiente.  

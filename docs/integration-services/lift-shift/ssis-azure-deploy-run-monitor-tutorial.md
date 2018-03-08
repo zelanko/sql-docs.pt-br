@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0bfa4f23ea87d7429075d1039df56286b7d4785e
-ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.openlocfilehash: bde92101af0b761df9f37171b35952fa3ab9d25b
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Implantar, executar e monitorar um pacote do SSIS no Azure
 Este tutorial mostra como implantar um projeto do SQL Server Integration Services no banco de dados de catálogo do SSISDB no Banco de Dados SQL do Azure, executar um pacote no Azure-SSIS Integration Runtime e monitorar o pacote em execução.
@@ -27,7 +27,7 @@ Este tutorial mostra como implantar um projeto do SQL Server Integration Service
 
 Antes de começar, verifique se você tem a versão 17.2 ou posterior do SQL Server Management Studio. Para baixar a versão mais recente do SSMS, veja [Baixar o SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Verifique também se você configurou o banco de dados do SSISDB e provisionou o Azure-SSIS Integration Runtime. Para obter informações sobre como provisionar o SSIS no Azure, consulte [Migrar pacotes do SSIS (SQL Server Integration Services) por lift-and-shit para o Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+Verifique também se você configurou o banco de dados do SSISDB e provisionou o Azure-SSIS Integration Runtime. Para obter informações sobre como provisionar o SSIS no Azure, consulte [Implantar pacotes do SSIS para o Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
 ## <a name="connect-to-the-ssisdb-database"></a>Conectar-se ao banco de dados SSISDB
 

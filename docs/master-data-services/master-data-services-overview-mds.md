@@ -8,29 +8,31 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: "O que são dados mestres?"
+keywords:
+- "O que são dados mestres?"
 helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-caps.latest.revision: "28"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 60127dd894485c979e0c79dcde0091119d88ed9a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a60fddbc00fa808590a06bc3263dfe6bc966f18b
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-overview-mds"></a>Visão geral do MDS (Master Data Services)
   Este tópico descreve os principais recursos de organização e gerenciamento de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
- O [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] permite que você gerencie um conjunto mestre de dados da sua organização. Você pode organizar os dados em modelos, criar regras para atualizar os dados e controlar quem atualiza os dados. Com o Excel, você pode compartilhar o conjunto de dados mestre com outras pessoas em sua organização. 
+ [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] permite que você gerencie um conjunto mestre de dados da sua organização. Você pode organizar os dados em modelos, criar regras para atualizar os dados e controlar quem atualiza os dados. Com o Excel, você pode compartilhar o conjunto de dados mestre com outras pessoas em sua organização. 
   
  >  Para ver uma descrição da arquitetura do [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] , consulte o artigo [Master Data Services – The Basics](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) (Master Data Services – Noções básicas) em simple-talk.com. Para obter informações sobre os novos recursos do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consulte [Novidades do MDS &#40;Master Data Services&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
    **Para obter instruções de como instalar o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], configurar o Site e o banco de dados e implantar os modelos de exemplo, consulte** [Instalação e configuração do Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md).  

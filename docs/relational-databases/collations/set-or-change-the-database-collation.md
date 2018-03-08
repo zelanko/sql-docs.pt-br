@@ -17,20 +17,23 @@ helpviewer_keywords:
 - database collations [SQL Server]
 ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
+author: stevestein
+ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e39ed48b206151e6953ab2f49aa469a356162f87
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 025bfc5512c9e53569077749a852191a76e8b7dd
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="set-or-change-the-database-collation"></a>Definir ou alterar o agrupamento de banco de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Este tópico descreve como definir e alterar o agrupamento de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se nenhum agrupamento for especificado, será usado o agrupamento do servidor.  
-  
+ 
+> [!NOTE]
+> Você não pode alterar o agrupamento de um Banco de Dados SQL do Azure depois que ele é criado.
+
  **Neste tópico**  
   
 -   **Antes de começar:**  
