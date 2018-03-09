@@ -20,11 +20,11 @@ ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: 32643cbe6ab7019cbac912eb26fe3e78423bdeb9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35c8de2f1105bbbda05642b993d8fe0c88d76f39
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="language-elements"></a>Elementos de linguagem
 Elementos de linguagem Transact-SQL (T-SQL) para analíticos Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
@@ -32,13 +32,13 @@ Elementos de linguagem Transact-SQL (T-SQL) para analíticos Platform System (AP
 ## <a name="core-elements"></a>Elementos principais
 * [convenções de sintaxe](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [regras de nomenclatura de objeto](../relational-databases/databases/database-identifiers.md)
-* [palavras-chave reservadas](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [agrupamentos](https://msdn.microsoft.com/library/ff848763.aspx)
-* [comentários](../t-sql/language-elements/comment-transact-sql.md)
-* [constantes](../t-sql/data-types/constants-transact-sql.md)
-* [tipos de dados](../t-sql/data-types/data-types-transact-sql.md)
+* [Palavras-chave reservadas](../t-sql/language-elements/reserved-keywords-transact-sql.md)
+* [Agrupamentos](https://msdn.microsoft.com/library/ff848763.aspx)
+* [comments](../t-sql/language-elements/comment-transact-sql.md)
+* [constants](../t-sql/data-types/constants-transact-sql.md)
+* [Tipos de dados](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
-* [expressões](../t-sql/language-elements/expressions-transact-sql.md)
+* [expressions](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
 * [Solução alternativa de propriedade de identidade](../t-sql/statements/create-table-transact-sql-identity-property.md)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
@@ -76,10 +76,10 @@ Elementos de linguagem Transact-SQL (T-SQL) para analíticos Platform System (AP
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
 * [EXISTS](../t-sql/language-elements/exists-transact-sql.md)
 * [IN](../t-sql/language-elements/in-transact-sql.md)
-* [É [NÃO](../t-sql/queries/is-null-transact-sql.md)
+* [NÃO É](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
-* [OR](../t-sql/language-elements/or-transact-sql.md)
+* [OU](../t-sql/language-elements/or-transact-sql.md)
 
 ### <a name="bitwise-operators"></a>Operadores bit a bit
 * [& (AND bit a bit)](../t-sql/language-elements/bitwise-and-transact-sql.md)
@@ -235,7 +235,7 @@ Elementos de linguagem Transact-SQL (T-SQL) para analíticos Platform System (AP
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
 ## <a name="transactions"></a>Transactions
-* [transações](../t-sql/language-elements/transactions-sql-data-warehouse.md)
+* [transactions](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>Sessões de diagnóstico
 * [CREATE DIAGNOSTICS SESSION](../t-sql/language-elements/create-diagnostics-session-transact-sql.md)
@@ -276,9 +276,9 @@ Elementos de linguagem Transact-SQL (T-SQL) para analíticos Platform System (AP
 * [SET DATEFIRST](../t-sql/statements/set-datefirst-transact-sql.md)
 * [SET DATEFORMAT](../t-sql/statements/set-dateformat-transact-sql.md)
 * [SET FMTONLY](../t-sql/statements/set-fmtonly-transact-sql.md)
-* [CONJUNTO IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
+* [SET IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
 * [SET LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)
-* [CONJUNTO NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
+* [SET NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
 * [SET QUOTED_IDENTIFIER](../t-sql/statements/set-quoted-identifier-transact-sql.md)
 * [NÚMERO DE LINHAS DO CONJUNTO](../t-sql/statements/set-rowcount-transact-sql.md)
 * [SET TEXTSIZE](../t-sql/statements/set-textsize-transact-sql.md)

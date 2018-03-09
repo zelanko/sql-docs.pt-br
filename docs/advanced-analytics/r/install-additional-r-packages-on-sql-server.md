@@ -1,6 +1,6 @@
 ---
 title: Instalar pacotes R adicionais no SQL Server | Microsoft Docs
-ms.date: 02/20/2018
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: a328b07027f61f50df7e3ca2b6ac12b92508688b
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: acb1727c85cae1d8176703c93cc77c971980d394
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>Instalar pacotes R adicionais no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +32,7 @@ Há vários métodos para instalar novos pacotes de R, dependendo de qual versã
 
     Use comandos de R convencionais para instalar os pacotes da Internet. Este é o método mais simples, mas requer acesso administrativo.
 
-    **Aplica-se a:**[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)].     Também é necessário para instâncias de [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] onde o gerenciamento de pacotes por meio de DDLs não foi habilitado.
+    **Aplica-se a:**[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]. Também é necessário para instâncias de [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] onde o gerenciamento de pacotes por meio de DDLs não foi habilitado.
 
 + [Instalar novos pacotes de R em um servidor com **sem** acesso à internet](#bkmk_offlineInstall)
 
@@ -40,9 +40,9 @@ Há vários métodos para instalar novos pacotes de R, dependendo de qual versã
 
 + [Instalar pacotes usando a instrução Criar biblioteca externa](#bkmk_createlibrary) 
 
-    A instrução Criar biblioteca externa é fornecida no SQL Server 2017, para possibilitar que um DBA criar uma biblioteca de pacote sem executar código R ou Python diretamente. No entanto, esse método requer que você preparar todos os pacotes necessários com antecedência.  
+    O [criar biblioteca externa](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) instrução é fornecida no SQL Server 2017, para que seja possível criar uma biblioteca de pacote sem executar R ou Python code diretamente. No entanto, esse método requer que você preparar todos os pacotes necessários antecipadamente e exige permissões de banco de dados adicionais.
 
-    **Aplica-se a:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]; outras restrições são aplicáveis  
+    **Aplica-se a:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]; outras restrições são aplicáveis
 
 ## <a name="bkmk_rInstall"></a> Instalar novos pacotes de R usando a Internet
 
@@ -131,7 +131,7 @@ Este procedimento pressupõe que você preparou todos os pacotes que você preci
 
 ## <a name="bkmk_createlibrary"></a> Use uma instrução DDL para instalar um pacote 
 
-No SQL Server de 2017, você pode usar o [criar biblioteca externa](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) instrução para adicionar um pacote ou conjunto de pacotes para uma instância ou um banco de dados específico. Esta instrução DDL e as funções de banco de dados de suporte são destinadas para facilitar a instalação e o gerenciamento de pacotes por um BA sem a necessidade de usar ferramentas de R ou Python.
+No SQL Server de 2017, você pode usar o [criar biblioteca externa](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) instrução para adicionar um pacote ou conjunto de pacotes para uma instância ou um banco de dados específico. Esta instrução DDL e as funções de banco de dados de suporte são destinadas para facilitar a instalação e o gerenciamento de pacotes por um proprietário de banco de dados sem a necessidade de usar ferramentas de R ou Python.
 
 Esse processo requer alguma preparação, em comparação com a instalação de pacotes usando os métodos de R ou Python convencionais.
 
@@ -140,6 +140,8 @@ Esse processo requer alguma preparação, em comparação com a instalação de 
     Se você não tiver acesso ao sistema de arquivos no servidor, você também pode passar um pacote completo como uma variável, usando um formato binário. Para obter mais informações, consulte [criar biblioteca externa](../../t-sql/statements/create-external-library-transact-sql.md).
 
 + A instrução falhará se pacotes requeridos não estão disponíveis. Você deve analisar as dependências do pacote que você deseja instalar e certifique-se de que os pacotes são carregados para o servidor e o banco de dados. É recomendável usar **miniCRAN** ou **igraph** para análise de dependências de pacotes.
+
++ Você deve ter as permissões necessárias no banco de dados. Para obter detalhes, consulte [criar biblioteca externa](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
 
 ### <a name="prepare-the-packages-in-archive-format"></a>Prepare os pacotes no formato de arquivo
 
