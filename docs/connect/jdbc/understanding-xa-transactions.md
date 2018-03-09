@@ -1,4 +1,4 @@
----
+﻿---
 title: "Compreendendo transações XA | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="guidelines-and-limitations-when-using-xa-transactions"></a>Diretrizes e limitações ao usar transações XA  
  As diretrizes adicionais a seguir se aplicam a transações firmemente acopladas:  
   
--   Ao usar transações XA junto com o MS DTC, talvez você observe que a versão atual do MS DTC não oferece suporte ao comportamento de ramificações XA firmemente acopladas. Por exemplo, o MS DTC tem um mapeamento um-para-um entre uma ID de transação de ramificação XA (XID) e uma ID de transação do MS DTC, e as operações executadas por ramificações XA frouxamente acopladas são isoladas uma da outra.  
+-   Ao usar transações XA junto com o MS DTC, talvez você observe que a versão atual do MS DTC não oferece suporte ao comportamento de ramificações XA firmemente acopladas. Por exemplo, o MS DTC tem um mapeamento um-para-um entre uma ID de transação de ramificação XA (XID) e uma ID de transação do MS DTC, e as operações executadas por ramificações XA frouxamente acopladas são isoladas uma da outra. 
   
      O hotfix fornecido em [MSDTC e transações firmemente acopladas](http://support.microsoft.com/kb/938653) habilita o suporte a ramificações XA firmemente acopladas em que várias ramificações XA com a mesma transação global ID (GTRID) são mapeadas para uma única ID de transação de MS DTC. Esse suporte permite que várias ramificações XA firmemente acopladas vejam as alterações uma da outra no Gerenciador de recursos, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/18/2017
   
 4.  Clique o **segurança** guia o **propriedades de DTC Local** caixa de diálogo.  
   
-5.  Selecione a caixa de seleção **Habilitar Transações XA** e, em seguida, clique em **OK** para reinicializar o serviço MS DTC. Isso causará a reinicialização do serviço MS DTC.  
+5. Selecione a caixa de seleção **Habilitar Transações XA** e, em seguida, clique em **OK** para reinicializar o serviço MS DTC.   
   
 6.  Clique em **OK** novamente para fechar a caixa de diálogo **Propriedades** e, em seguida, feche **Serviços de Componentes**.  
   
